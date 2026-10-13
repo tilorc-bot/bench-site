@@ -1,0 +1,117 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,xcolor}
+\usepackage[margin=2cm]{geometry}
+\setlength{\parindent}{0pt}
+\title{assume-eval cases}
+\date{\today}
+\begin{document}
+\maketitle
+\section*{identities}
+\subsection*{\texttt{trig-double-01}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $z \in \mathbb{C}$ \\[4pt]
+\textsc{claim} & $\displaystyle \sin\left(2 \, z\right) = 2 \, \sin z \, \cos z$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+
+\subsection*{\texttt{trig-double-02}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x > 0,\quad x < 1$ \\[4pt]
+\textsc{claim} & $\displaystyle \sin\left(2 \, x\right) \neq 2 \, \sin x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides differ at every admissible point.}}\\
+{\footnotesize\color{gray}witness (false): $x = \frac{1}{2}$}\\
+\emph{sin 2x = 2 sin x iff sin x (cos x - 1) = 0: never on (0, 1).}\\
+
+\subsection*{\texttt{trig-pyth-01}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $z \in \mathbb{C}$ \\[4pt]
+\textsc{claim} & $\displaystyle \sin z \, \sin z + \cos z \, \cos z = 1$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+
+\subsection*{\texttt{trig-sqrt-01}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \sqrt{1 - \sin x \, \sin x} \overset{?}{=} \cos x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 3$}\\
+\emph{sqrt(cos\textasciicircum{}2) is |cos x|, which is cos x only where cos x >= 0.}\\
+
+\subsection*{\texttt{trig-tan-01}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \cos x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \tan x = \frac{\sin x}{\cos x}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+
+\section*{inverse}
+\subsection*{\texttt{trig-acos-01}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x > 0,\quad x < 3$ \\[4pt]
+\textsc{claim} & $\displaystyle \arccos\left(\cos x\right) = x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+
+\subsection*{\texttt{trig-asin-01}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \arcsin\left(\sin x\right) \overset{?}{=} x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 3$}\\
+
+\subsection*{\texttt{trig-asin-02}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x > -1,\quad x < 1$ \\[4pt]
+\textsc{claim} & $\displaystyle \arcsin\left(\sin x\right) = x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+
+\subsection*{\texttt{trig-atan-01}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x > -1,\quad x < 1$ \\[4pt]
+\textsc{claim} & $\displaystyle \arctan\left(\tan x\right) = x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+
+\section*{periodicity}
+\subsection*{\texttt{trig-period-01}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $z \in \mathbb{C}$ \\[4pt]
+\textsc{claim} & $\displaystyle \sin\left(z + 2 \, \pi\right) = \sin z$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+
+\subsection*{\texttt{trig-period-02}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \cos\left(x + \pi\right) \overset{?}{=} \cos x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = \frac{1}{2} \, \pi$}\\
+{\footnotesize\color{gray}witness (false): $x = 0$}\\
+\emph{cos(x + pi) = -cos x, so the claim holds exactly where cos x = 0.}\\
+
+\subsection*{\texttt{trig-period-03}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \cos\left(x + \pi\right) \overset{?}{=} \cos x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = \frac{1}{2} \, \pi$}\\
+{\footnotesize\color{gray}witness (false): $x = 1$}\\
+
+\subsection*{\texttt{trig-shift-01}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \sin\left(x + \pi\right) \overset{?}{=} \sin x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 1$}\\
+
+\end{document}
