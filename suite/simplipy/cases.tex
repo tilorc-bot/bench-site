@@ -1,0 +1,2722 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,xcolor}
+\usepackage[margin=2cm]{geometry}
+\setlength{\parindent}{0pt}
+\title{assume-eval cases}
+\date{\today}
+\begin{document}
+\maketitle
+\section*{simplipy-complex-branch}
+\subsection*{\texttt{sp-acj4-0-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C}$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{arcosh}\left(\cosh x\right) \overset{?}{=} \left|x\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[0]: acosh cosh \_0  ->  abs \_0}\\
+
+\subsection*{\texttt{sp-acj4-102-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C}$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{\left|x\right|}{6} = \left|\frac{x}{-6}\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[102] + rules.json[81]: / abs \_0 6  ->  abs / \_0 (-6)}\\
+
+\subsection*{\texttt{sp-acj4-108-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \neq 0,\quad \left|x\right| \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{\left|x\right|}{x} \overset{?}{=} \frac{x}{\left|x\right|}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[108] + rules.json[87]: / abs \_0 \_0  ->  / \_0 abs \_0}\\
+
+\subsection*{\texttt{sp-acj4-120-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \left|x\right| \neq 0,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{\pi}{\left|x\right|} = \left|\frac{\pi}{x}\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[120] + rules.json[92]: / np.pi abs \_0  ->  abs / np.pi \_0}\\
+
+\subsection*{\texttt{sp-acj4-130-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \cos x \neq 0,\quad \frac{1}{\cos x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|\log\left(\cos x\right)\right| \overset{?}{=} \log\left(\frac{1}{\cos x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[130]: abs log cos \_0  ->  log inv cos \_0}\\
+
+\subsection*{\texttt{sp-acj4-131-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \cosh x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|\log\left(\cosh x\right)\right| \overset{?}{=} \log\left(\cosh x\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[131] + rules.json[99]: abs log cosh \_0  ->  log cosh \_0}\\
+
+\subsection*{\texttt{sp-acj4-132-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \sin x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|\log\left(\sin x\right)\right| \overset{?}{=} -\log\left(\sin x\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[132] + rules.json[100]: abs log sin \_0  ->  neg log sin \_0}\\
+
+\subsection*{\texttt{sp-acj4-133-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \cosh x \neq 0,\quad \tanh x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|\log\left(\tanh x\right)\right| \overset{?}{=} -\log\left(\tanh x\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[133] + rules.json[101]: abs log tanh \_0  ->  neg log tanh \_0}\\
+
+\subsection*{\texttt{sp-acj4-137-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \neq 0 \lor \operatorname{Re}\left(\pi\right) > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|x^{\pi}\right| \overset{?}{=} x^{\pi}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[137] + rules.json[105]: abs pow \_0 np.pi  ->  pow \_0 np.pi}\\
+
+\subsection*{\texttt{sp-acj4-147-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \cosh\left(\operatorname{arsinh}\left(x\right)\right) \neq 0,\quad x \neq 0,\quad \frac{1}{x} \neq i,\quad \frac{1}{x} \neq -i$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|\tanh\left(\operatorname{arsinh}\left(x\right)\right)\right| \overset{?}{=} \cos\left(\arctan\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = 1 + i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[147]: abs tanh asinh \_0  ->  cos atan inv \_0}\\
+
+\subsection*{\texttt{sp-acj4-151-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C}$ \\[4pt]
+\textsc{claim} & $\displaystyle \arccos\left(\cos\left(\arcsin x\right)\right) \overset{?}{=} \left|\arcsin x\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[151]: acos cos asin \_0  ->  abs asin \_0}\\
+
+\subsection*{\texttt{sp-acj4-153-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C}$ \\[4pt]
+\textsc{claim} & $\displaystyle \arccos\left(\cos\left(\cos x\right)\right) \overset{?}{=} \left|\cos x\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 2 \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[153]: acos cos cos \_0  ->  abs cos \_0}\\
+
+\subsection*{\texttt{sp-acj4-154-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C}$ \\[4pt]
+\textsc{claim} & $\displaystyle \arccos\left(\cos\left(\sin x\right)\right) \overset{?}{=} \left|\sin x\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[154]: acos cos sin \_0  ->  abs sin \_0}\\
+
+\subsection*{\texttt{sp-acj4-165-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \neq i,\quad x \neq -i,\quad x \neq 0,\quad \frac{1}{x} \neq i,\quad \frac{1}{x} \neq -i$ \\[4pt]
+\textsc{claim} & $\displaystyle \arcsin\left(\cos\left(\arctan x\right)\right) \overset{?}{=} \left|\arctan\left(\frac{1}{x}\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = 1 + i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[165]: asin cos atan \_0  ->  abs atan inv \_0}\\
+
+\subsection*{\texttt{sp-acj4-173-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \cosh x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \arcsin\left(\tanh\left(\left|x\right|\right)\right) \overset{?}{=} \arccos\left(\frac{1}{\cosh x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[173]: asin tanh abs \_0  ->  acos inv cosh \_0}\\
+
+\subsection*{\texttt{sp-acj4-176-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \cosh x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \arctan\left(\left|\sinh x\right|\right) \overset{?}{=} \arccos\left(\frac{1}{\cosh x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[176]: atan abs sinh \_0  ->  acos inv cosh \_0}\\
+
+\subsection*{\texttt{sp-acj4-177-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \cos x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \arctan\left(\left|\tan x\right|\right) \overset{?}{=} \left|\arcsin\left(\sin x\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[177]: atan abs tan \_0  ->  abs asin sin \_0}\\
+
+\subsection*{\texttt{sp-acj4-180-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \sinh\left(\operatorname{arcosh}\left(x\right)\right) \neq i,\quad \sinh\left(\operatorname{arcosh}\left(x\right)\right) \neq -i,\quad \cosh\left(\operatorname{arcosh}\left(x\right)\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \arctan\left(\sinh\left(\operatorname{arcosh}\left(x\right)\right)\right) \overset{?}{=} \arcsin\left(\tanh\left(\operatorname{arcosh}\left(x\right)\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[180]: atan sinh acosh \_0  ->  asin tanh acosh \_0}\\
+
+\subsection*{\texttt{sp-acj4-183-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \neq 0,\quad \sinh\left(\log x\right) \neq i,\quad \sinh\left(\log x\right) \neq -i,\quad \cosh\left(\log x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \arctan\left(\sinh\left(\log x\right)\right) \overset{?}{=} \arcsin\left(\tanh\left(\log x\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[183]: atan sinh log \_0  ->  asin tanh log \_0}\\
+
+\subsection*{\texttt{sp-acj4-189-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \cos\left(\arcsin x\right) \neq 1,\quad \cos\left(\arcsin x\right) \neq -1,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{artanh}\left(\cos\left(\arcsin x\right)\right) \overset{?}{=} \operatorname{arcosh}\left(\left|\frac{1}{x}\right|\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[189]: atanh cos asin \_0  ->  acosh abs inv \_0}\\
+
+\subsection*{\texttt{sp-acj4-190-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \neq i,\quad x \neq -i,\quad \cos\left(\arctan x\right) \neq 1,\quad \cos\left(\arctan x\right) \neq -1,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{artanh}\left(\cos\left(\arctan x\right)\right) \overset{?}{=} \left|\operatorname{arsinh}\left(\frac{1}{x}\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = \frac{1}{2} \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[190]: atanh cos atan \_0  ->  abs asinh inv \_0}\\
+
+\subsection*{\texttt{sp-acj4-191-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \sin\left(\arccos x\right) \neq 1,\quad \sin\left(\arccos x\right) \neq -1,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{artanh}\left(\sin\left(\arccos x\right)\right) \overset{?}{=} \operatorname{arcosh}\left(\left|\frac{1}{x}\right|\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[191]: atanh sin acos \_0  ->  acosh abs inv \_0}\\
+
+\subsection*{\texttt{sp-acj4-20-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C}$ \\[4pt]
+\textsc{claim} & $\displaystyle \sinh\left(\left|x\right|\right) \overset{?}{=} \left|\sinh x\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[20] + rules.json[15]: sinh abs \_0  ->  abs sinh \_0}\\
+
+\subsection*{\texttt{sp-acj4-203-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \neq 0,\quad \frac{1}{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \cos\left(\log\left(\frac{1}{x}\right)\right) \overset{?}{=} \cos\left(\log x\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[203]: cos log inv \_0  ->  cos log \_0}\\
+
+\subsection*{\texttt{sp-acj4-213-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \neq 0,\quad \frac{-10}{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{1}{\frac{-10}{x}} = \frac{x}{-10}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[213] + rules.json[145]: inv / (-10) !0  ->  / !0 (-10)}\\
+
+\subsection*{\texttt{sp-acj4-216-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \neq 0,\quad \frac{-4}{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{1}{\frac{-4}{x}} = \frac{x}{-4}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[216] + rules.json[148]: inv / (-4) !0  ->  / !0 (-4)}\\
+
+\subsection*{\texttt{sp-acj4-22-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \cosh x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \tanh\left(\left|x\right|\right) \overset{?}{=} \left|\tanh x\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[22] + rules.json[17]: tanh abs \_0  ->  abs tanh \_0}\\
+
+\subsection*{\texttt{sp-acj4-234-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \neq 0 \lor \operatorname{Re}\left(x\right) > 0,\quad x^{x} \neq 0,\quad x \neq 0,\quad \frac{1}{x} \neq 0 \lor \operatorname{Re}\left(x\right) > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{1}{x^{x}} \overset{?}{=} \frac{1}{x}^{x}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -\frac{1}{2}$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[234]: inv pow \_0 \_0  ->  pow inv \_0 \_0}\\
+
+\subsection*{\texttt{sp-acj4-252-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C}$ \\[4pt]
+\textsc{claim} & $\displaystyle -\left|\sinh x\right| \overset{?}{=} \sinh\left(-\left|x\right|\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[252] + rules.json[168]: neg abs sinh \_0  ->  sinh neg abs \_0}\\
+
+\subsection*{\texttt{sp-acj4-253-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \cosh x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle -\left|\tanh x\right| \overset{?}{=} \tanh\left(-\left|x\right|\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[253] + rules.json[169]: neg abs tanh \_0  ->  tanh neg abs \_0}\\
+
+\subsection*{\texttt{sp-acj4-260-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \cos x \neq 0,\quad \frac{1}{\cos x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle -\log\left(\cos x\right) \overset{?}{=} \log\left(\frac{1}{\cos x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[260]: neg log cos \_0  ->  log inv cos \_0}\\
+
+\subsection*{\texttt{sp-acj4-261-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \cosh x \neq 0,\quad \frac{1}{\cosh x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle -\log\left(\cosh x\right) \overset{?}{=} \log\left(\frac{1}{\cosh x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 2 \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[261]: neg log cosh \_0  ->  log inv cosh \_0}\\
+
+\subsection*{\texttt{sp-acj4-266-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \neq 0,\quad \frac{1}{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle -\sin\left(\log x\right) \overset{?}{=} \sin\left(\log\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[266]: neg sin log \_0  ->  sin log inv \_0}\\
+
+\subsection*{\texttt{sp-acj4-267-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \neq 0,\quad \cos\left(\log x\right) \neq 0,\quad \frac{1}{x} \neq 0,\quad \cos\left(\log\left(\frac{1}{x}\right)\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle -\tan\left(\log x\right) \overset{?}{=} \tan\left(\log\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[267]: neg tan log \_0  ->  tan log inv \_0}\\
+
+\subsection*{\texttt{sp-acj4-274-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \left|x\right| \neq 0,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|x\right|^{-2} \overset{?}{=} x^{-2}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[274] + rules.json[183]: pow abs \_0 (-2)  ->  pow \_0 (-2)}\\
+
+\subsection*{\texttt{sp-acj4-278-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \left|x\right| \neq 0,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|x\right|^{-6} \overset{?}{=} x^{-6}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[278] + rules.json[187]: pow abs \_0 (-6)  ->  pow \_0 (-6)}\\
+
+\subsection*{\texttt{sp-acj4-283-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C}$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|x\right|^{2} \overset{?}{=} x \, x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[283] + rules.json[192]: pow abs \_0 2  ->  * \_0 \_0}\\
+
+\subsection*{\texttt{sp-acj4-284-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C}$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|x\right|^{3} = \left|x^{3}\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[284] + rules.json[193]: pow abs \_0 3  ->  abs pow \_0 3}\\
+
+\subsection*{\texttt{sp-acj4-288-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C}$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|x\right|^{7} = \left|x^{7}\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[288] + rules.json[197]: pow abs \_0 7  ->  abs pow \_0 7}\\
+
+\subsection*{\texttt{sp-acj4-30-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C}$ \\[4pt]
+\textsc{claim} & $\displaystyle 4 \, \left|x\right| = \left|-4 \, x\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[30] + rules.json[23]: * 4 abs \_0  ->  abs * (-4) \_0}\\
+
+\subsection*{\texttt{sp-acj4-334-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad e^{x} \neq 0 \lor \operatorname{Re}\left(e^{1}\right) > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left(e^{x}\right)^{e^{1}} \overset{?}{=} e^{e^{1} \, x}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = -\pi \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[334]: pow exp \_0 np.e  ->  exp * np.e \_0}\\
+
+\subsection*{\texttt{sp-acj4-335-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad e^{x} \neq 0 \lor \operatorname{Re}\left(\pi\right) > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left(e^{x}\right)^{\pi} \overset{?}{=} e^{\pi \, x}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = -\pi \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[335]: pow exp \_0 np.pi  ->  exp * np.pi \_0}\\
+
+\subsection*{\texttt{sp-acj4-336-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad e^{x} \neq 0 \lor \operatorname{Re}\left(x\right) > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left(e^{x}\right)^{x} \overset{?}{=} e^{x \, x}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = -\pi \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[336]: pow exp \_0 \_0  ->  exp * \_0 \_0}\\
+
+\subsection*{\texttt{sp-acj4-343-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C}$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{1}{\pi}^{x} = \pi^{-x}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[343]: pow inv np.pi \_0  ->  pow np.pi neg \_0}\\
+
+\subsection*{\texttt{sp-acj4-344-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \neq 0,\quad \frac{1}{x} \neq 0 \lor \operatorname{Re}\left(x\right) > 0,\quad x \neq 0 \lor \operatorname{Re}\left(-x\right) > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{1}{x}^{x} \overset{?}{=} x^{-x}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -\frac{1}{2}$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[344]: pow inv \_0 \_0  ->  pow \_0 neg \_0}\\
+
+\subsection*{\texttt{sp-acj4-368-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \arccos x \in \mathbb{R},\quad \arccos x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{surd}\left(\arccos x, -5\right) = \left(\arccos x\right)^{-\frac{1}{5}}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[368] + rules.json[236]: rootn acos \_0 (-5)  ->  pow acos \_0 -0.2}\\
+
+\subsection*{\texttt{sp-acj4-369-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \arccos x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{surd}\left(\arccos x, 5\right) = \left(\arccos x\right)^{\frac{1}{5}}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[369] + rules.json[237]: rootn acos \_0 5  ->  pow acos \_0 0.2}\\
+
+\subsection*{\texttt{sp-acj4-370-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \operatorname{arcosh}\left(x\right) \in \mathbb{R},\quad \operatorname{arcosh}\left(x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{surd}\left(\operatorname{arcosh}\left(x\right), -5\right) = \operatorname{arcosh}\left(x\right)^{-\frac{1}{5}}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[370] + rules.json[238]: rootn acosh \_0 (-5)  ->  pow acosh \_0 -0.2}\\
+
+\subsection*{\texttt{sp-acj4-371-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \operatorname{arcosh}\left(x\right) \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{surd}\left(\operatorname{arcosh}\left(x\right), 5\right) = \operatorname{arcosh}\left(x\right)^{\frac{1}{5}}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[371] + rules.json[239]: rootn acosh \_0 5  ->  pow acosh \_0 0.2}\\
+
+\subsection*{\texttt{sp-acj4-372-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \cosh x \in \mathbb{R},\quad \cosh x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{surd}\left(\cosh x, -5\right) \overset{?}{=} \left(\cosh x\right)^{-\frac{1}{5}}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 2 \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[372] + rules.json[240]: rootn cosh \_0 (-5)  ->  pow cosh \_0 -0.2}\\
+
+\subsection*{\texttt{sp-acj4-373-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \cosh x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{surd}\left(\cosh x, 5\right) \overset{?}{=} \left(\cosh x\right)^{\frac{1}{5}}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 2 \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[373] + rules.json[241]: rootn cosh \_0 5  ->  pow cosh \_0 0.2}\\
+
+\subsection*{\texttt{sp-acj4-387-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad e^{x} \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{surd}\left(e^{x}, 5\right) \overset{?}{=} e^{\frac{x}{5}}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = \pi \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[387]: rootn exp \_0 5  ->  exp / \_0 5}\\
+
+\subsection*{\texttt{sp-acj4-389-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad e^{x} \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{surd}\left(e^{x}, 7\right) \overset{?}{=} e^{\frac{x}{7}}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = \pi \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[389]: rootn exp \_0 7  ->  exp / \_0 7}\\
+
+\subsection*{\texttt{sp-acj4-396-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C}$ \\[4pt]
+\textsc{claim} & $\displaystyle \sin\left(\left|\sin x\right|\right) \overset{?}{=} \left|\sin\left(\sin x\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[396] + rules.json[244]: sin abs sin \_0  ->  abs sin sin \_0}\\
+
+\subsection*{\texttt{sp-acj4-40-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C}$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|x\right| \, \pi = \left|\pi \, x\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[40] + rules.json[33]: * abs \_0 np.pi  ->  abs * np.pi \_0}\\
+
+\subsection*{\texttt{sp-acj4-403-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \neq 0,\quad \frac{1}{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \sin\left(-\log x\right) \overset{?}{=} \sin\left(\log\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[403]: sin neg log \_0  ->  sin log inv \_0}\\
+
+\subsection*{\texttt{sp-acj4-404-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \cosh x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \sin\left(\tanh\left(\left|x\right|\right)\right) \overset{?}{=} \left|\sin\left(\tanh x\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[404] + rules.json[247]: sin tanh abs \_0  ->  abs sin tanh \_0}\\
+
+\subsection*{\texttt{sp-acj4-414-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \cos\left(\left|\sin x\right|\right) \neq 0,\quad \cos\left(\sin x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \tan\left(\left|\sin x\right|\right) \overset{?}{=} \left|\tan\left(\sin x\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[414] + rules.json[255]: tan abs sin \_0  ->  abs tan sin \_0}\\
+
+\subsection*{\texttt{sp-acj4-415-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \cosh x \neq 0,\quad \cos\left(\left|\tanh x\right|\right) \neq 0,\quad \cos\left(\tanh x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \tan\left(\left|\tanh x\right|\right) \overset{?}{=} \left|\tan\left(\tanh x\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[415] + rules.json[256]: tan abs tanh \_0  ->  abs tan tanh \_0}\\
+
+\subsection*{\texttt{sp-acj4-420-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \neq 0,\quad \cos\left(-\log x\right) \neq 0,\quad \frac{1}{x} \neq 0,\quad \cos\left(\log\left(\frac{1}{x}\right)\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \tan\left(-\log x\right) \overset{?}{=} \tan\left(\log\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[420]: tan neg log \_0  ->  tan log inv \_0}\\
+
+\subsection*{\texttt{sp-acj4-421-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \cos\left(\tanh\left(\left|x\right|\right)\right) \neq 0,\quad \cosh x \neq 0,\quad \cos\left(\tanh x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \tan\left(\tanh\left(\left|x\right|\right)\right) \overset{?}{=} \left|\tan\left(\tanh x\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[421] + rules.json[260]: tan tanh abs \_0  ->  abs tan tanh \_0}\\
+
+\subsection*{\texttt{sp-acj4-422-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \neq 0,\quad \frac{1}{x} \neq i,\quad \frac{1}{x} \neq -i$ \\[4pt]
+\textsc{claim} & $\displaystyle \tanh\left(\left|\operatorname{arsinh}\left(x\right)\right|\right) \overset{?}{=} \cos\left(\arctan\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = 2 \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[422]: tanh abs asinh \_0  ->  cos atan inv \_0}\\
+
+\subsection*{\texttt{sp-acj4-423-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \cosh\left(\operatorname{arcosh}\left(\left|x\right|\right)\right) \neq 0,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \tanh\left(\operatorname{arcosh}\left(\left|x\right|\right)\right) \overset{?}{=} \cos\left(\arcsin\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[423]: tanh acosh abs \_0  ->  cos asin inv \_0}\\
+
+\subsection*{\texttt{sp-acj4-424-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \neq 0,\quad \frac{1}{x} \neq i,\quad \frac{1}{x} \neq -i$ \\[4pt]
+\textsc{claim} & $\displaystyle \tanh\left(\operatorname{arsinh}\left(\left|x\right|\right)\right) \overset{?}{=} \cos\left(\arctan\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = 2 \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[424]: tanh asinh abs \_0  ->  cos atan inv \_0}\\
+
+\subsection*{\texttt{sp-acj4-430-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \neq 0,\quad x \neq 0 \lor \operatorname{Re}\left(x\right) > 0,\quad x^{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \log x \, x \overset{?}{=} \log\left(x^{x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[430]: * log ?0 ?0  ->  log pow ?0 ?0}\\
+
+\subsection*{\texttt{sp-acj4-433-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \neq 0,\quad -\log x \neq i,\quad -\log x \neq -i,\quad \frac{1}{x} \neq 0,\quad \log\left(\frac{1}{x}\right) \neq i,\quad \log\left(\frac{1}{x}\right) \neq -i$ \\[4pt]
+\textsc{claim} & $\displaystyle \arctan\left(-\log x\right) \overset{?}{=} \arctan\left(\log\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[433]: atan neg log !0  ->  atan log inv !0}\\
+
+\subsection*{\texttt{sp-acj4-442-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \neq 0,\quad \log x \neq 0,\quad \frac{1}{\log x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle -\log\left(\log x\right) \overset{?}{=} \log\left(\frac{1}{\log x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = -1$}\\
+{\footnotesize\color{gray}witness (false): $x = \frac{1}{2}$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[442]: neg log log ?0  ->  log inv log ?0}\\
+
+\subsection*{\texttt{sp-acj4-446-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \neq i,\quad x \neq -i,\quad \cos\left(\left|\arctan x\right|\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \tan\left(\left|\arctan x\right|\right) \overset{?}{=} \left|x\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = \frac{1}{2} \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[446]: tan abs atan !0  ->  abs !0}\\
+
+\subsection*{\texttt{sp-acj4-450-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{x}{x} = 1$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[450]: / \$0 \$0  ->  1}\\
+
+\subsection*{\texttt{sp-acj4-451-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{0}{x} = 0$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[451]: / 0 \$0  ->  0}\\
+
+\subsection*{\texttt{sp-acj4-50-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad 6^{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \log 6 \, x \overset{?}{=} \log\left(6^{x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 2 \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[50]: * log 6 \_0  ->  log pow 6 \_0}\\
+
+\subsection*{\texttt{sp-acj4-51-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad 7^{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \log 7 \, x \overset{?}{=} \log\left(7^{x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 2 \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[51]: * log 7 \_0  ->  log pow 7 \_0}\\
+
+\subsection*{\texttt{sp-acj4-55-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \neq 0,\quad x \neq 0 \lor \operatorname{Re}\left(e^{1}\right) > 0,\quad x^{e^{1}} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \log x \, e^{1} \overset{?}{=} \log\left(x^{e^{1}}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[55]: * log \_0 np.e  ->  log pow \_0 np.e}\\
+
+\subsection*{\texttt{sp-acj4-56-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \neq 0,\quad x \neq 0 \lor \operatorname{Re}\left(\pi\right) > 0,\quad x^{\pi} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \log x \, \pi \overset{?}{=} \log\left(x^{\pi}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[56]: * log \_0 np.pi  ->  log pow \_0 np.pi}\\
+
+\subsection*{\texttt{sp-acj4-6-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \cosh x \neq 0,\quad \tanh x \neq 1,\quad \tanh x \neq -1$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{artanh}\left(\tanh x\right) \overset{?}{=} x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 2 \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[6]: atanh tanh !0  ->  !0}\\
+
+\subsection*{\texttt{sp-acj4-7-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \left|x\right| \neq 0,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{1}{\left|x\right|} = \left|\frac{1}{x}\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[7] + rules.json[4]: inv abs \_0  ->  abs inv \_0}\\
+
+\subsection*{\texttt{sp-acj4-9-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad e^{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \log\left(e^{x}\right) \overset{?}{=} x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = -\pi \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[9]: log exp \_0  ->  \_0}\\
+
+\subsection*{\texttt{sp-acj4-90-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \left|x\right| \neq 0,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{3}{\left|x\right|} = \left|\frac{-3}{x}\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[90] + rules.json[69]: / 3 abs \_0  ->  abs / (-3) \_0}\\
+
+\subsection*{\texttt{sp-acj4-94-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \left|x\right| \neq 0,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{7}{\left|x\right|} = \left|\frac{-7}{x}\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[94] + rules.json[73]: / 7 abs \_0  ->  abs / (-7) \_0}\\
+
+\subsection*{\texttt{sp-acj4-99-complex}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C}$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{\left|x\right|}{3} = \left|\frac{x}{-3}\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[99] + rules.json[78]: / abs \_0 3  ->  abs / \_0 (-3)}\\
+
+\section*{simplipy-conditional}
+\subsection*{\texttt{sp-acj4-1-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| \le 1$ \\[4pt]
+\textsc{claim} & $\displaystyle \arcsin\left(\left|x\right|\right) = \left|\arcsin x\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[1] + rules.json[0]: asin abs \_0  ->  abs asin \_0  [weakest assumption found: abs-le-1]}\\
+
+\subsection*{\texttt{sp-acj4-108-condf}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \in i\mathbb{R},\quad x \neq 0,\quad \left|x\right| \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{\left|x\right|}{x} \neq \frac{x}{\left|x\right|}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides differ at every admissible point.}}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[108] + rules.json[87]: / abs \_0 \_0  ->  / \_0 abs \_0  [false under: imaginary]}\\
+
+\subsection*{\texttt{sp-acj4-124-condf}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \in i\mathbb{R},\quad \cosh x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|\arcsin\left(\tanh x\right)\right| \overset{?}{=} \arccos\left(\frac{1}{\cosh x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 2 \, \pi \, i$}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[124]: abs asin tanh !0  ->  acos inv cosh !0  [false under: imaginary]; relabelled contingent: true at x = (* 2 pi i) (a probe the random samples miss)}\\
+
+\subsection*{\texttt{sp-acj4-127-condf}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \operatorname{Re}\left(x\right) \ge 0,\quad e^{x} \neq 1,\quad e^{x} \neq -1$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|\operatorname{artanh}\left(e^{x}\right)\right| \neq \operatorname{artanh}\left(e^{x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides differ at every admissible point.}}\\
+{\footnotesize\color{gray}witness (false): $x = 1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[127] + rules.json[96]: abs atanh exp \_0  ->  atanh exp \_0  [false under: re-nonneg]}\\
+
+\subsection*{\texttt{sp-acj4-128-cond2}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| \le 1$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|\cos\left(\arcsin x\right)\right| = \cos\left(\arcsin x\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[128] + rules.json[97]: abs cos asin \_0  ->  cos asin \_0  [weakest assumption found: abs-le-1]}\\
+
+\subsection*{\texttt{sp-acj4-128-condf}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x > 1$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|\cos\left(\arcsin x\right)\right| \neq \cos\left(\arcsin x\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides differ at every admissible point.}}\\
+{\footnotesize\color{gray}witness (false): $x = 2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[128] + rules.json[97]: abs cos asin \_0  ->  cos asin \_0  [false under: gt-1]}\\
+
+\subsection*{\texttt{sp-acj4-129-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \in i\mathbb{R},\quad x \neq i,\quad x \neq -i$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|\cos\left(\arctan x\right)\right| \overset{?}{=} \cos\left(\arctan x\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = \frac{1}{2} \, i$}\\
+{\footnotesize\color{gray}witness (false): $x = 2 \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[129] + rules.json[98]: abs cos atan \_0  ->  cos atan \_0  [weakest assumption found: imaginary]; relabelled contingent: false at x = (* 2 i) (atan is specified on its branch cuts since harness PR \#19)}\\
+
+\subsection*{\texttt{sp-acj4-130-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| < \frac{\pi}{2},\quad \cos x \neq 0,\quad \frac{1}{\cos x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|\log\left(\cos x\right)\right| = \log\left(\frac{1}{\cos x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[130]: abs log cos \_0  ->  log inv cos \_0  [weakest assumption found: abs-lt-pi2]}\\
+
+\subsection*{\texttt{sp-acj4-131-condf}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \in i\mathbb{R},\quad \cosh x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|\log\left(\cosh x\right)\right| \overset{?}{=} \log\left(\cosh x\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 2 \, \pi \, i$}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[131] + rules.json[99]: abs log cosh \_0  ->  log cosh \_0  [false under: imaginary]; relabelled contingent: true at x = (* 2 pi i) (a probe the random samples miss)}\\
+
+\subsection*{\texttt{sp-acj4-132-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \ge 0,\quad x \le \pi,\quad \sin x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|\log\left(\sin x\right)\right| = -\log\left(\sin x\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[132] + rules.json[100]: abs log sin \_0  ->  neg log sin \_0  [weakest assumption found: zero-pi]}\\
+
+\subsection*{\texttt{sp-acj4-133-condf}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \in i\mathbb{R},\quad \cosh x \neq 0,\quad \tanh x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|\log\left(\tanh x\right)\right| \neq -\log\left(\tanh x\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides differ at every admissible point.}}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[133] + rules.json[101]: abs log tanh \_0  ->  neg log tanh \_0  [false under: imaginary]}\\
+
+\subsection*{\texttt{sp-acj4-136-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \ge 0,\quad x \neq 0 \lor \operatorname{Re}\left(e^{1}\right) > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|x^{e^{1}}\right| = x^{e^{1}}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[136] + rules.json[104]: abs pow \_0 np.e  ->  pow \_0 np.e  [weakest assumption found: nonnegative]}\\
+
+\subsection*{\texttt{sp-acj4-137-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \ge 0,\quad x \neq 0 \lor \operatorname{Re}\left(\pi\right) > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|x^{\pi}\right| = x^{\pi}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[137] + rules.json[105]: abs pow \_0 np.pi  ->  pow \_0 np.pi  [weakest assumption found: nonnegative]}\\
+
+\subsection*{\texttt{sp-acj4-145-cond2}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| \le 1$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|\sin\left(\arccos x\right)\right| = \cos\left(\arcsin x\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[145] + rules.json[113]: abs sin acos \_0  ->  cos asin \_0  [weakest assumption found: abs-le-1]}\\
+
+\subsection*{\texttt{sp-acj4-145-condf}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x > 1$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|\sin\left(\arccos x\right)\right| \neq \cos\left(\arcsin x\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides differ at every admissible point.}}\\
+{\footnotesize\color{gray}witness (false): $x = 2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[145] + rules.json[113]: abs sin acos \_0  ->  cos asin \_0  [false under: gt-1]}\\
+
+\subsection*{\texttt{sp-acj4-147-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \in i\mathbb{R},\quad \cosh\left(\operatorname{arsinh}\left(x\right)\right) \neq 0,\quad x \neq 0,\quad \frac{1}{x} \neq i,\quad \frac{1}{x} \neq -i$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|\tanh\left(\operatorname{arsinh}\left(x\right)\right)\right| \overset{?}{=} \cos\left(\arctan\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 2 \, i$}\\
+{\footnotesize\color{gray}witness (false): $x = \frac{1}{2} \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[147]: abs tanh asinh \_0  ->  cos atan inv \_0  [weakest assumption found: imaginary]; relabelled contingent: false at x = (* 1/2 i) (atan is specified on its branch cuts since harness PR \#19)}\\
+
+\subsection*{\texttt{sp-acj4-151-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| \le 1$ \\[4pt]
+\textsc{claim} & $\displaystyle \arccos\left(\cos\left(\arcsin x\right)\right) = \left|\arcsin x\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[151]: acos cos asin \_0  ->  abs asin \_0  [weakest assumption found: abs-le-1]}\\
+
+\subsection*{\texttt{sp-acj4-156-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| \le 1$ \\[4pt]
+\textsc{claim} & $\displaystyle \arccos\left(\sin\left(\arccos x\right)\right) = \left|\arcsin x\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[156]: acos sin acos \_0  ->  abs asin \_0  [weakest assumption found: abs-le-1]}\\
+
+\subsection*{\texttt{sp-acj4-159-cond2}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \le 1,\quad \cosh x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \arccos\left(\tanh\left(\left|x\right|\right)\right) = \arcsin\left(\frac{1}{\cosh x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[159]: acos tanh abs \_0  ->  asin inv cosh \_0  [weakest assumption found: le-1]}\\
+
+\subsection*{\texttt{sp-acj4-159-cond3}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| \le \frac{\pi}{2},\quad \cosh x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \arccos\left(\tanh\left(\left|x\right|\right)\right) = \arcsin\left(\frac{1}{\cosh x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[159]: acos tanh abs \_0  ->  asin inv cosh \_0  [weakest assumption found: abs-le-pi2]}\\
+
+\subsection*{\texttt{sp-acj4-162-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \operatorname{Re}\left(x\right) \ge 0,\quad x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{arcosh}\left(\operatorname{surd}\left(x, 5\right)\right) = \operatorname{arcosh}\left(x^{\frac{1}{5}}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[162] + rules.json[119]: acosh rootn \_0 5  ->  acosh pow \_0 0.2  [weakest assumption found: re-nonneg]}\\
+
+\subsection*{\texttt{sp-acj4-162-condf}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x < 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{arcosh}\left(\operatorname{surd}\left(x, 5\right)\right) \neq \operatorname{arcosh}\left(x^{\frac{1}{5}}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides differ at every admissible point.}}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[162] + rules.json[119]: acosh rootn \_0 5  ->  acosh pow \_0 0.2  [false under: negative]}\\
+
+\subsection*{\texttt{sp-acj4-171-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \left|\operatorname{Im}\left(x\right)\right| < \pi,\quad \cosh x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \arcsin\left(\sin\left(\tanh x\right)\right) \overset{?}{=} \tanh x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = \frac{1}{2} + \frac{\pi}{2} \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[171] + rules.json[125]: asin sin tanh \_0  ->  tanh \_0  [weakest assumption found: im-lt-pi]; relabelled contingent: false at x = (+ 1/2 (* (/ pi 2) i)) (a probe the random samples miss)}\\
+
+\subsection*{\texttt{sp-acj4-171-cond2}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \in i\mathbb{R},\quad \cosh x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \arcsin\left(\sin\left(\tanh x\right)\right) = \tanh x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[171] + rules.json[125]: asin sin tanh \_0  ->  tanh \_0  [weakest assumption found: imaginary]}\\
+
+\subsection*{\texttt{sp-acj4-179-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| \le \frac{\pi}{2},\quad \sinh\left(\arccos x\right) \neq i,\quad \sinh\left(\arccos x\right) \neq -i,\quad \cosh\left(\arccos x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \arctan\left(\sinh\left(\arccos x\right)\right) = \arcsin\left(\tanh\left(\arccos x\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[179] + rules.json[128]: atan sinh acos \_0  ->  asin tanh acos \_0  [weakest assumption found: abs-le-pi2]}\\
+
+\subsection*{\texttt{sp-acj4-180-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \operatorname{Re}\left(x\right) > 0,\quad \sinh\left(\operatorname{arcosh}\left(x\right)\right) \neq i,\quad \sinh\left(\operatorname{arcosh}\left(x\right)\right) \neq -i,\quad \cosh\left(\operatorname{arcosh}\left(x\right)\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \arctan\left(\sinh\left(\operatorname{arcosh}\left(x\right)\right)\right) = \arcsin\left(\tanh\left(\operatorname{arcosh}\left(x\right)\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[180]: atan sinh acosh \_0  ->  asin tanh acosh \_0  [weakest assumption found: re-pos; was re-nonneg, false at x = i on the atan cut since harness PR \#19]}\\
+
+\subsection*{\texttt{sp-acj4-181-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| \le \frac{\pi}{2},\quad \sinh\left(\arcsin x\right) \neq i,\quad \sinh\left(\arcsin x\right) \neq -i,\quad \cosh\left(\arcsin x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \arctan\left(\sinh\left(\arcsin x\right)\right) = \arcsin\left(\tanh\left(\arcsin x\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[181] + rules.json[129]: atan sinh asin \_0  ->  asin tanh asin \_0  [weakest assumption found: abs-le-pi2]}\\
+
+\subsection*{\texttt{sp-acj4-183-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \operatorname{Re}\left(x\right) > 0,\quad x \neq 0,\quad \sinh\left(\log x\right) \neq i,\quad \sinh\left(\log x\right) \neq -i,\quad \cosh\left(\log x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \arctan\left(\sinh\left(\log x\right)\right) = \arcsin\left(\tanh\left(\log x\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[183]: atan sinh log \_0  ->  asin tanh log \_0  [weakest assumption found: re-pos; was re-nonneg, false at x = (* 2 i) on the atan cut since harness PR \#19]}\\
+
+\subsection*{\texttt{sp-acj4-186-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \in i\mathbb{R},\quad \cos\left(\sin x\right) \neq 0,\quad \tan\left(\sin x\right) \neq i,\quad \tan\left(\sin x\right) \neq -i$ \\[4pt]
+\textsc{claim} & $\displaystyle \arctan\left(\tan\left(\sin x\right)\right) = \sin x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[186] + rules.json[133]: atan tan sin \_0  ->  sin \_0  [weakest assumption found: imaginary]}\\
+
+\subsection*{\texttt{sp-acj4-187-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \in i\mathbb{R},\quad \cosh x \neq 0,\quad \cos\left(\tanh x\right) \neq 0,\quad \tan\left(\tanh x\right) \neq i,\quad \tan\left(\tanh x\right) \neq -i$ \\[4pt]
+\textsc{claim} & $\displaystyle \arctan\left(\tan\left(\tanh x\right)\right) = \tanh x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[187] + rules.json[134]: atan tan tanh \_0  ->  tanh \_0  [weakest assumption found: imaginary]}\\
+
+\subsection*{\texttt{sp-acj4-190-condf}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \in i\mathbb{R},\quad x \neq i,\quad x \neq -i,\quad \cos\left(\arctan x\right) \neq 1,\quad \cos\left(\arctan x\right) \neq -1,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{artanh}\left(\cos\left(\arctan x\right)\right) \neq \left|\operatorname{arsinh}\left(\frac{1}{x}\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides differ at every admissible point.}}\\
+{\footnotesize\color{gray}witness (false): $x = \frac{1}{2} \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[190]: atanh cos atan \_0  ->  abs asinh inv \_0  [false under: imaginary]}\\
+
+\subsection*{\texttt{sp-acj4-191-condf}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \in i\mathbb{R},\quad \sin\left(\arccos x\right) \neq 1,\quad \sin\left(\arccos x\right) \neq -1,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{artanh}\left(\sin\left(\arccos x\right)\right) \neq \operatorname{arcosh}\left(\left|\frac{1}{x}\right|\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides differ at every admissible point.}}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[191]: atanh sin acos \_0  ->  acosh abs inv \_0  [false under: imaginary]}\\
+
+\subsection*{\texttt{sp-acj4-196-cond2}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \in i\mathbb{R},\quad \cosh x \neq 0,\quad \sin\left(\tanh x\right) \neq 1,\quad \sin\left(\tanh x\right) \neq -1,\quad \cos\left(\tanh x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{artanh}\left(\sin\left(\tanh x\right)\right) = \operatorname{arsinh}\left(\tan\left(\tanh x\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[196] + rules.json[138]: atanh sin tanh \_0  ->  asinh tan tanh \_0  [weakest assumption found: imaginary]}\\
+
+\subsection*{\texttt{sp-acj4-20-condf}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \in i\mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \sinh\left(\left|x\right|\right) \neq \left|\sinh x\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides differ at every admissible point.}}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[20] + rules.json[15]: sinh abs \_0  ->  abs sinh \_0  [false under: imaginary]}\\
+
+\subsection*{\texttt{sp-acj4-200-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \in i\mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \cos\left(\arcsin\left(\sin x\right)\right) = \left|\cos x\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[200]: cos asin sin \_0  ->  abs cos \_0  [weakest assumption found: imaginary]}\\
+
+\subsection*{\texttt{sp-acj4-202-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \in i\mathbb{R},\quad \cos x \neq 0,\quad \tan x \neq i,\quad \tan x \neq -i$ \\[4pt]
+\textsc{claim} & $\displaystyle \cos\left(\arctan\left(\tan x\right)\right) = \left|\cos x\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[202]: cos atan tan \_0  ->  abs cos \_0  [weakest assumption found: imaginary]}\\
+
+\subsection*{\texttt{sp-acj4-203-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \operatorname{Re}\left(x\right) \ge 0,\quad x \neq 0,\quad \frac{1}{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \cos\left(\log\left(\frac{1}{x}\right)\right) = \cos\left(\log x\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[203]: cos log inv \_0  ->  cos log \_0  [weakest assumption found: re-nonneg]}\\
+
+\subsection*{\texttt{sp-acj4-205-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \in i\mathbb{R},\quad \cos x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \cosh\left(\operatorname{arsinh}\left(\tan x\right)\right) = \left|\frac{1}{\cos x}\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[205] + rules.json[140]: cosh asinh tan \_0  ->  abs inv cos \_0  [weakest assumption found: imaginary]}\\
+
+\subsection*{\texttt{sp-acj4-234-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \operatorname{Re}\left(x\right) \ge 0,\quad x \neq 0 \lor \operatorname{Re}\left(x\right) > 0,\quad x^{x} \neq 0,\quad x \neq 0,\quad \frac{1}{x} \neq 0 \lor \operatorname{Re}\left(x\right) > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{1}{x^{x}} = \frac{1}{x}^{x}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[234]: inv pow \_0 \_0  ->  pow inv \_0 \_0  [weakest assumption found: re-nonneg]}\\
+
+\subsection*{\texttt{sp-acj4-234-cond2}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{Z},\quad x \neq 0 \lor \operatorname{Re}\left(x\right) > 0,\quad x^{x} \neq 0,\quad x \neq 0,\quad \frac{1}{x} \neq 0 \lor \operatorname{Re}\left(x\right) > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{1}{x^{x}} = \frac{1}{x}^{x}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[234]: inv pow \_0 \_0  ->  pow inv \_0 \_0  [weakest assumption found: integer]}\\
+
+\subsection*{\texttt{sp-acj4-243-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \operatorname{Re}\left(x\right) > 0,\quad x \in \mathbb{R},\quad \operatorname{surd}\left(x, 5\right) \neq 0,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \log\left(\operatorname{surd}\left(x, 5\right)\right) = \frac{\log x}{5}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[243]: log rootn \_0 5  ->  / log \_0 5  [weakest assumption found: re-pos]}\\
+
+\subsection*{\texttt{sp-acj4-245-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \operatorname{Re}\left(x\right) > 0,\quad x \in \mathbb{R},\quad \operatorname{surd}\left(x, 7\right) \neq 0,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \log\left(\operatorname{surd}\left(x, 7\right)\right) = \frac{\log x}{7}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[245]: log rootn \_0 7  ->  / log \_0 7  [weakest assumption found: re-pos]}\\
+
+\subsection*{\texttt{sp-acj4-248-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| \le 1$ \\[4pt]
+\textsc{claim} & $\displaystyle -\left|\arcsin x\right| = \arcsin\left(-\left|x\right|\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[248] + rules.json[164]: neg abs asin \_0  ->  asin neg abs \_0  [weakest assumption found: abs-le-1]}\\
+
+\subsection*{\texttt{sp-acj4-251-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| < 1,\quad x \neq 1,\quad x \neq -1,\quad -\left|x\right| \neq 1,\quad -\left|x\right| \neq -1$ \\[4pt]
+\textsc{claim} & $\displaystyle -\left|\operatorname{artanh}\left(x\right)\right| = \operatorname{artanh}\left(-\left|x\right|\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[251] + rules.json[167]: neg abs atanh \_0  ->  atanh neg abs \_0  [weakest assumption found: abs-lt-1]}\\
+
+\subsection*{\texttt{sp-acj4-260-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \left|\operatorname{Re}\left(x\right)\right| < \frac{\pi}{2},\quad \cos x \neq 0,\quad \frac{1}{\cos x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle -\log\left(\cos x\right) = \log\left(\frac{1}{\cos x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[260]: neg log cos \_0  ->  log inv cos \_0  [weakest assumption found: re-lt-pi2]}\\
+
+\subsection*{\texttt{sp-acj4-261-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \operatorname{Re}\left(x\right) > 0,\quad \cosh x \neq 0,\quad \frac{1}{\cosh x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle -\log\left(\cosh x\right) \overset{?}{=} \log\left(\frac{1}{\cosh x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = \frac{1}{2} + \pi \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[261]: neg log cosh \_0  ->  log inv cosh \_0  [weakest assumption found: re-pos]; relabelled contingent: false at x = (+ 1/2 (* pi i)) (a probe the random samples miss)}\\
+
+\subsection*{\texttt{sp-acj4-266-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \operatorname{Re}\left(x\right) \ge 0,\quad x \neq 0,\quad \frac{1}{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle -\sin\left(\log x\right) = \sin\left(\log\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[266]: neg sin log \_0  ->  sin log inv \_0  [weakest assumption found: re-nonneg]}\\
+
+\subsection*{\texttt{sp-acj4-266-condf}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x < 0,\quad x \neq 0,\quad \frac{1}{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle -\sin\left(\log x\right) \overset{?}{=} \sin\left(\log\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = -e^{\frac{\pi}{2}}$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[266]: neg sin log \_0  ->  sin log inv \_0  [false under: negative]; relabelled contingent: true at x = (- (exp (/ pi 2))) (a probe the random samples miss)}\\
+
+\subsection*{\texttt{sp-acj4-267-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \operatorname{Re}\left(x\right) \ge 0,\quad x \neq 0,\quad \cos\left(\log x\right) \neq 0,\quad \frac{1}{x} \neq 0,\quad \cos\left(\log\left(\frac{1}{x}\right)\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle -\tan\left(\log x\right) = \tan\left(\log\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[267]: neg tan log \_0  ->  tan log inv \_0  [weakest assumption found: re-nonneg]}\\
+
+\subsection*{\texttt{sp-acj4-267-condf}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x < 0,\quad x \neq 0,\quad \cos\left(\log x\right) \neq 0,\quad \frac{1}{x} \neq 0,\quad \cos\left(\log\left(\frac{1}{x}\right)\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle -\tan\left(\log x\right) \neq \tan\left(\log\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides differ at every admissible point.}}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[267]: neg tan log \_0  ->  tan log inv \_0  [false under: negative]}\\
+
+\subsection*{\texttt{sp-acj4-283-condf}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \in i\mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|x\right|^{2} \neq x \, x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides differ at every admissible point.}}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[283] + rules.json[192]: pow abs \_0 2  ->  * \_0 \_0  [false under: imaginary]}\\
+
+\subsection*{\texttt{sp-acj4-287-condf}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \in i\mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|x\right|^{6} \neq x^{6}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides differ at every admissible point.}}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[287] + rules.json[196]: pow abs \_0 6  ->  pow \_0 6  [false under: imaginary]}\\
+
+\subsection*{\texttt{sp-acj4-289-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \in i\mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|x\right|^{8} = x^{8}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[289] + rules.json[198]: pow abs \_0 8  ->  pow \_0 8  [weakest assumption found: imaginary]}\\
+
+\subsection*{\texttt{sp-acj4-29-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x > 0,\quad x \neq 0,\quad x^{3} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle 3 \, \log x = \log\left(x^{3}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[29]: * 3 log \_0  ->  log pow \_0 3  [weakest assumption found: positive]}\\
+
+\subsection*{\texttt{sp-acj4-29-condf}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \in i\mathbb{R},\quad x \neq 0,\quad x^{3} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle 3 \, \log x \neq \log\left(x^{3}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides differ at every admissible point.}}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[29]: * 3 log \_0  ->  log pow \_0 3  [false under: imaginary]}\\
+
+\subsection*{\texttt{sp-acj4-334-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \operatorname{Im}\left(x\right) > -\pi \land \operatorname{Im}\left(x\right) \le \pi,\quad e^{x} \neq 0 \lor \operatorname{Re}\left(e^{1}\right) > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left(e^{x}\right)^{e^{1}} = e^{e^{1} \, x}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[334]: pow exp \_0 np.e  ->  exp * np.e \_0  [weakest assumption found: im-principal]}\\
+
+\subsection*{\texttt{sp-acj4-335-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \operatorname{Im}\left(x\right) > -\pi \land \operatorname{Im}\left(x\right) \le \pi,\quad e^{x} \neq 0 \lor \operatorname{Re}\left(\pi\right) > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left(e^{x}\right)^{\pi} = e^{\pi \, x}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[335]: pow exp \_0 np.pi  ->  exp * np.pi \_0  [weakest assumption found: im-principal]}\\
+
+\subsection*{\texttt{sp-acj4-336-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \operatorname{Im}\left(x\right) > -\pi \land \operatorname{Im}\left(x\right) \le \pi,\quad e^{x} \neq 0 \lor \operatorname{Re}\left(x\right) > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left(e^{x}\right)^{x} = e^{x \, x}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[336]: pow exp \_0 \_0  ->  exp * \_0 \_0  [weakest assumption found: im-principal]}\\
+
+\subsection*{\texttt{sp-acj4-344-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \operatorname{Re}\left(x\right) \ge 0,\quad x \neq 0,\quad \frac{1}{x} \neq 0 \lor \operatorname{Re}\left(x\right) > 0,\quad x \neq 0 \lor \operatorname{Re}\left(-x\right) > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{1}{x}^{x} = x^{-x}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[344]: pow inv \_0 \_0  ->  pow \_0 neg \_0  [weakest assumption found: re-nonneg]}\\
+
+\subsection*{\texttt{sp-acj4-344-cond2}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{Z},\quad x \neq 0,\quad \frac{1}{x} \neq 0 \lor \operatorname{Re}\left(x\right) > 0,\quad x \neq 0 \lor \operatorname{Re}\left(-x\right) > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{1}{x}^{x} = x^{-x}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[344]: pow inv \_0 \_0  ->  pow \_0 neg \_0  [weakest assumption found: integer]}\\
+
+\subsection*{\texttt{sp-acj4-372-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \operatorname{Re}\left(x\right) > 0,\quad \cosh x \in \mathbb{R},\quad \cosh x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{surd}\left(\cosh x, -5\right) \overset{?}{=} \left(\cosh x\right)^{-\frac{1}{5}}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = \frac{1}{2} + \pi \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[372] + rules.json[240]: rootn cosh \_0 (-5)  ->  pow cosh \_0 -0.2  [weakest assumption found: re-pos]; relabelled contingent: false at x = (+ 1/2 (* pi i)) (a probe the random samples miss)}\\
+
+\subsection*{\texttt{sp-acj4-373-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \operatorname{Re}\left(x\right) > 0,\quad \cosh x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{surd}\left(\cosh x, 5\right) \overset{?}{=} \left(\cosh x\right)^{\frac{1}{5}}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = \frac{1}{2} + \pi \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[373] + rules.json[241]: rootn cosh \_0 5  ->  pow cosh \_0 0.2  [weakest assumption found: re-pos]; relabelled contingent: false at x = (+ 1/2 (* pi i)) (a probe the random samples miss)}\\
+
+\subsection*{\texttt{sp-acj4-376-cond2}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \left|\operatorname{Im}\left(x\right)\right| < \pi,\quad e^{x} \in \mathbb{R},\quad e^{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{surd}\left(e^{x}, -3\right) = e^{\frac{x}{-3}}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[376]: rootn exp \_0 (-3)  ->  exp / \_0 (-3)  [weakest assumption found: im-lt-pi]}\\
+
+\subsection*{\texttt{sp-acj4-385-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \operatorname{Re}\left(x\right) > 0,\quad e^{x} \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{surd}\left(e^{x}, 3\right) \overset{?}{=} e^{\frac{x}{3}}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = \frac{1}{2} + \pi \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[385]: rootn exp \_0 3  ->  exp / \_0 3  [weakest assumption found: re-pos]; relabelled contingent: false at x = (+ 1/2 (* pi i)) (a probe the random samples miss)}\\
+
+\subsection*{\texttt{sp-acj4-392-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| \le 1$ \\[4pt]
+\textsc{claim} & $\displaystyle \sin\left(\left|\arcsin x\right|\right) = \left|\cos\left(\arccos x\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[392]: sin abs asin \_0  ->  abs cos acos \_0  [weakest assumption found: abs-le-1]}\\
+
+\subsection*{\texttt{sp-acj4-394-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| < 1,\quad x \neq 1,\quad x \neq -1$ \\[4pt]
+\textsc{claim} & $\displaystyle \sin\left(\left|\operatorname{artanh}\left(x\right)\right|\right) \overset{?}{=} \left|\sin\left(\operatorname{artanh}\left(x\right)\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = \frac{999}{1000}$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[394] + rules.json[242]: sin abs atanh \_0  ->  abs sin atanh \_0  [weakest assumption found: abs-lt-1]; relabelled contingent: false at x = 999/1000 (a probe the random samples miss)}\\
+
+\subsection*{\texttt{sp-acj4-399-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \in i\mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \sin\left(\arccos\left(\sin x\right)\right) = \left|\cos x\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[399]: sin acos sin \_0  ->  abs cos \_0  [weakest assumption found: imaginary]}\\
+
+\subsection*{\texttt{sp-acj4-402-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| < 1,\quad \left|x\right| \neq 1,\quad x \neq 1,\quad x \neq -1$ \\[4pt]
+\textsc{claim} & $\displaystyle \sin\left(\operatorname{artanh}\left(\left|x\right|\right)\right) \overset{?}{=} \left|\sin\left(\operatorname{artanh}\left(x\right)\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = \frac{999}{1000}$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[402] + rules.json[246]: sin atanh abs \_0  ->  abs sin atanh \_0  [weakest assumption found: abs-lt-1]; relabelled contingent: false at x = 999/1000 (a probe the random samples miss)}\\
+
+\subsection*{\texttt{sp-acj4-403-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \operatorname{Re}\left(x\right) \ge 0,\quad x \neq 0,\quad \frac{1}{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \sin\left(-\log x\right) = \sin\left(\log\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[403]: sin neg log \_0  ->  sin log inv \_0  [weakest assumption found: re-nonneg]}\\
+
+\subsection*{\texttt{sp-acj4-403-condf}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x < 0,\quad x \neq 0,\quad \frac{1}{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \sin\left(-\log x\right) \overset{?}{=} \sin\left(\log\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = -e^{\frac{\pi}{2}}$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[403]: sin neg log \_0  ->  sin log inv \_0  [false under: negative]; relabelled contingent: true at x = (- (exp (/ pi 2))) (a probe the random samples miss)}\\
+
+\subsection*{\texttt{sp-acj4-412-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| < 1,\quad \cos\left(\left|\arcsin x\right|\right) \neq 0,\quad \cos\left(\arcsin x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \tan\left(\left|\arcsin x\right|\right) = \left|\tan\left(\arcsin x\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[412] + rules.json[253]: tan abs asin \_0  ->  abs tan asin \_0  [weakest assumption found: abs-lt-1]}\\
+
+\subsection*{\texttt{sp-acj4-416-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| \le 1,\quad \cos\left(\arccos\left(\left|x\right|\right)\right) \neq 0,\quad \cos\left(\arccos x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \tan\left(\arccos\left(\left|x\right|\right)\right) = \left|\tan\left(\arccos x\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[416]: tan acos abs \_0  ->  abs tan acos \_0  [weakest assumption found: abs-le-1]}\\
+
+\subsection*{\texttt{sp-acj4-417-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| < 1,\quad \cos\left(\arcsin\left(\left|x\right|\right)\right) \neq 0,\quad \cos\left(\arcsin x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \tan\left(\arcsin\left(\left|x\right|\right)\right) = \left|\tan\left(\arcsin x\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[417] + rules.json[257]: tan asin abs \_0  ->  abs tan asin \_0  [weakest assumption found: abs-lt-1]}\\
+
+\subsection*{\texttt{sp-acj4-420-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \operatorname{Re}\left(x\right) \ge 0,\quad x \neq 0,\quad \cos\left(-\log x\right) \neq 0,\quad \frac{1}{x} \neq 0,\quad \cos\left(\log\left(\frac{1}{x}\right)\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \tan\left(-\log x\right) = \tan\left(\log\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[420]: tan neg log \_0  ->  tan log inv \_0  [weakest assumption found: re-nonneg]}\\
+
+\subsection*{\texttt{sp-acj4-420-condf}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x < 0,\quad x \neq 0,\quad \cos\left(-\log x\right) \neq 0,\quad \frac{1}{x} \neq 0,\quad \cos\left(\log\left(\frac{1}{x}\right)\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \tan\left(-\log x\right) \neq \tan\left(\log\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides differ at every admissible point.}}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[420]: tan neg log \_0  ->  tan log inv \_0  [false under: negative]}\\
+
+\subsection*{\texttt{sp-acj4-422-condf}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \in i\mathbb{R},\quad x \neq 0,\quad \frac{1}{x} \neq i,\quad \frac{1}{x} \neq -i$ \\[4pt]
+\textsc{claim} & $\displaystyle \tanh\left(\left|\operatorname{arsinh}\left(x\right)\right|\right) \neq \cos\left(\arctan\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides differ at every admissible point.}}\\
+{\footnotesize\color{gray}witness (false): $x = 2 \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[422]: tanh abs asinh \_0  ->  cos atan inv \_0  [false under: imaginary]}\\
+
+\subsection*{\texttt{sp-acj4-424-condf}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \in i\mathbb{R},\quad x \neq 0,\quad \frac{1}{x} \neq i,\quad \frac{1}{x} \neq -i$ \\[4pt]
+\textsc{claim} & $\displaystyle \tanh\left(\operatorname{arsinh}\left(\left|x\right|\right)\right) \neq \cos\left(\arctan\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides differ at every admissible point.}}\\
+{\footnotesize\color{gray}witness (false): $x = 2 \, i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[424]: tanh asinh abs \_0  ->  cos atan inv \_0  [false under: imaginary]}\\
+
+\subsection*{\texttt{sp-acj4-428-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \le 1$ \\[4pt]
+\textsc{claim} & $\displaystyle \arctan\left(\sinh x\right) = \arcsin\left(\tanh x\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[428]: atan sinh !0  ->  asin tanh !0  [weakest assumption found: le-1]}\\
+
+\subsection*{\texttt{sp-acj4-428-cond3}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \ge 0,\quad x \le \pi$ \\[4pt]
+\textsc{claim} & $\displaystyle \arctan\left(\sinh x\right) = \arcsin\left(\tanh x\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[428]: atan sinh !0  ->  asin tanh !0  [weakest assumption found: zero-pi]}\\
+
+\subsection*{\texttt{sp-acj4-430-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x > 0,\quad x \neq 0,\quad x \neq 0 \lor \operatorname{Re}\left(x\right) > 0,\quad x^{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \log x \, x = \log\left(x^{x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[430]: * log ?0 ?0  ->  log pow ?0 ?0  [weakest assumption found: positive]}\\
+
+\subsection*{\texttt{sp-acj4-430-cond2}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| < 1,\quad x \neq 0,\quad x \neq 0 \lor \operatorname{Re}\left(x\right) > 0,\quad x^{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \log x \, x = \log\left(x^{x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[430]: * log ?0 ?0  ->  log pow ?0 ?0  [weakest assumption found: abs-lt-1]}\\
+
+\subsection*{\texttt{sp-acj4-432-cond3}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| \le \frac{\pi}{2},\quad \cosh x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \arccos\left(\left|\tanh x\right|\right) = \arcsin\left(\frac{1}{\cosh x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[432]: acos abs tanh !0  ->  asin inv cosh !0  [weakest assumption found: abs-le-pi2]}\\
+
+\subsection*{\texttt{sp-acj4-433-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \operatorname{Re}\left(x\right) \ge 0,\quad x \neq 0,\quad -\log x \neq i,\quad -\log x \neq -i,\quad \frac{1}{x} \neq 0,\quad \log\left(\frac{1}{x}\right) \neq i,\quad \log\left(\frac{1}{x}\right) \neq -i$ \\[4pt]
+\textsc{claim} & $\displaystyle \arctan\left(-\log x\right) = \arctan\left(\log\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[433]: atan neg log !0  ->  atan log inv !0  [weakest assumption found: re-nonneg]}\\
+
+\subsection*{\texttt{sp-acj4-433-condf}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x < 0,\quad x \neq 0,\quad -\log x \neq i,\quad -\log x \neq -i,\quad \frac{1}{x} \neq 0,\quad \log\left(\frac{1}{x}\right) \neq i,\quad \log\left(\frac{1}{x}\right) \neq -i$ \\[4pt]
+\textsc{claim} & $\displaystyle \arctan\left(-\log x\right) \neq \arctan\left(\log\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides differ at every admissible point.}}\\
+{\footnotesize\color{gray}witness (false): $x = -2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[433]: atan neg log !0  ->  atan log inv !0  [false under: negative]}\\
+
+\subsection*{\texttt{sp-acj4-442-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \in i\mathbb{R},\quad x \neq 0,\quad \log x \neq 0,\quad \frac{1}{\log x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle -\log\left(\log x\right) = \log\left(\frac{1}{\log x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[442]: neg log log ?0  ->  log inv log ?0  [weakest assumption found: imaginary]}\\
+
+\subsection*{\texttt{sp-acj4-442-cond4}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{Z},\quad x \neq 0,\quad \log x \neq 0,\quad \frac{1}{\log x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle -\log\left(\log x\right) = \log\left(\frac{1}{\log x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[442]: neg log log ?0  ->  log inv log ?0  [weakest assumption found: integer]}\\
+
+\subsection*{\texttt{sp-acj4-46-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \operatorname{Im}\left(x\right) > -\pi \land \operatorname{Im}\left(x\right) \le \pi,\quad 2^{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \log 2 \, x = \log\left(2^{x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[46]: * log 2 \_0  ->  log pow 2 \_0  [weakest assumption found: im-principal]}\\
+
+\subsection*{\texttt{sp-acj4-5-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| < 1,\quad \left|x\right| \neq 1,\quad x \neq 1,\quad x \neq -1$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{artanh}\left(\left|x\right|\right) = \left|\operatorname{artanh}\left(x\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[5] + rules.json[3]: atanh abs \_0  ->  abs atanh \_0  [weakest assumption found: abs-lt-1]}\\
+
+\subsection*{\texttt{sp-acj4-55-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x > 0,\quad x \neq 0,\quad x \neq 0 \lor \operatorname{Re}\left(e^{1}\right) > 0,\quad x^{e^{1}} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \log x \, e^{1} = \log\left(x^{e^{1}}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[55]: * log \_0 np.e  ->  log pow \_0 np.e  [weakest assumption found: positive]}\\
+
+\subsection*{\texttt{sp-acj4-56-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x > 0,\quad x \neq 0,\quad x \neq 0 \lor \operatorname{Re}\left(\pi\right) > 0,\quad x^{\pi} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \log x \, \pi = \log\left(x^{\pi}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[56]: * log \_0 np.pi  ->  log pow \_0 np.pi  [weakest assumption found: positive]}\\
+
+\subsection*{\texttt{sp-acj4-56-condf}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \in i\mathbb{R},\quad x \neq 0,\quad x \neq 0 \lor \operatorname{Re}\left(\pi\right) > 0,\quad x^{\pi} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \log x \, \pi \neq \log\left(x^{\pi}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides differ at every admissible point.}}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[56]: * log \_0 np.pi  ->  log pow \_0 np.pi  [false under: imaginary]}\\
+
+\subsection*{\texttt{sp-acj4-9-cond}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad \operatorname{Im}\left(x\right) > -\pi \land \operatorname{Im}\left(x\right) \le \pi,\quad e^{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \log\left(e^{x}\right) = x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[9]: log exp \_0  ->  \_0  [weakest assumption found: im-principal]}\\
+
+\section*{simplipy-f64-edge}
+\subsection*{\texttt{sp-acj4-0-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{arcosh}\left(\cosh x\right) = \left|x\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[0]: acosh cosh \_0  ->  abs \_0}\\
+
+\subsection*{\texttt{sp-acj4-115-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0,\quad x > 0,\quad \operatorname{surd}\left(x, -4\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{\log x}{-4} = \log\left(\operatorname{surd}\left(x, -4\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[115]: / log \_0 (-4)  ->  log rootn \_0 (-4)}\\
+
+\subsection*{\texttt{sp-acj4-116-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0,\quad x > 0,\quad \operatorname{surd}\left(x, -6\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{\log x}{-6} = \log\left(\operatorname{surd}\left(x, -6\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[116]: / log \_0 (-6)  ->  log rootn \_0 (-6)}\\
+
+\subsection*{\texttt{sp-acj4-130-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \cos x \neq 0,\quad \frac{1}{\cos x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|\log\left(\cos x\right)\right| \overset{?}{=} \log\left(\frac{1}{\cos x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[130]: abs log cos \_0  ->  log inv cos \_0}\\
+
+\subsection*{\texttt{sp-acj4-151-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \arccos\left(\cos\left(\arcsin x\right)\right) \overset{?}{=} \left|\arcsin x\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[151]: acos cos asin \_0  ->  abs asin \_0}\\
+
+\subsection*{\texttt{sp-acj4-154-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \arccos\left(\cos\left(\sin x\right)\right) = \left|\sin x\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[154]: acos cos sin \_0  ->  abs sin \_0}\\
+
+\subsection*{\texttt{sp-acj4-156-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \arccos\left(\sin\left(\arccos x\right)\right) \overset{?}{=} \left|\arcsin x\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[156]: acos sin acos \_0  ->  abs asin \_0}\\
+
+\subsection*{\texttt{sp-acj4-180-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \sinh\left(\operatorname{arcosh}\left(x\right)\right) \neq i,\quad \sinh\left(\operatorname{arcosh}\left(x\right)\right) \neq -i,\quad \cosh\left(\operatorname{arcosh}\left(x\right)\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \arctan\left(\sinh\left(\operatorname{arcosh}\left(x\right)\right)\right) \overset{?}{=} \arcsin\left(\tanh\left(\operatorname{arcosh}\left(x\right)\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[180]: atan sinh acosh \_0  ->  asin tanh acosh \_0}\\
+
+\subsection*{\texttt{sp-acj4-183-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0,\quad \sinh\left(\log x\right) \neq i,\quad \sinh\left(\log x\right) \neq -i,\quad \cosh\left(\log x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \arctan\left(\sinh\left(\log x\right)\right) \overset{?}{=} \arcsin\left(\tanh\left(\log x\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[183]: atan sinh log \_0  ->  asin tanh log \_0}\\
+
+\subsection*{\texttt{sp-acj4-189-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \cos\left(\arcsin x\right) \neq 1,\quad \cos\left(\arcsin x\right) \neq -1,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{artanh}\left(\cos\left(\arcsin x\right)\right) = \operatorname{arcosh}\left(\left|\frac{1}{x}\right|\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[189]: atanh cos asin \_0  ->  acosh abs inv \_0}\\
+
+\subsection*{\texttt{sp-acj4-190-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \cos\left(\arctan x\right) \neq 1,\quad \cos\left(\arctan x\right) \neq -1,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{artanh}\left(\cos\left(\arctan x\right)\right) = \left|\operatorname{arsinh}\left(\frac{1}{x}\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[190]: atanh cos atan \_0  ->  abs asinh inv \_0}\\
+
+\subsection*{\texttt{sp-acj4-191-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \sin\left(\arccos x\right) \neq 1,\quad \sin\left(\arccos x\right) \neq -1,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{artanh}\left(\sin\left(\arccos x\right)\right) = \operatorname{arcosh}\left(\left|\frac{1}{x}\right|\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[191]: atanh sin acos \_0  ->  acosh abs inv \_0}\\
+
+\subsection*{\texttt{sp-acj4-203-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0,\quad \frac{1}{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \cos\left(\log\left(\frac{1}{x}\right)\right) \overset{?}{=} \cos\left(\log x\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[203]: cos log inv \_0  ->  cos log \_0}\\
+
+\subsection*{\texttt{sp-acj4-229-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \pi^{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{1}{\pi^{x}} = \frac{1}{\pi}^{x}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[229]: inv pow np.pi \_0  ->  pow inv np.pi \_0}\\
+
+\subsection*{\texttt{sp-acj4-234-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0 \lor \operatorname{Re}\left(x\right) > 0,\quad x^{x} \neq 0,\quad x \neq 0,\quad \frac{1}{x} \neq 0 \lor \operatorname{Re}\left(x\right) > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{1}{x^{x}} \overset{?}{=} \frac{1}{x}^{x}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -\frac{1}{2}$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[234]: inv pow \_0 \_0  ->  pow inv \_0 \_0}\\
+
+\subsection*{\texttt{sp-acj4-241-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \operatorname{surd}\left(x, 3\right) \neq 0,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \log\left(\operatorname{surd}\left(x, 3\right)\right) \overset{?}{=} \frac{\log x}{3}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[241]: log rootn \_0 3  ->  / log \_0 3}\\
+
+\subsection*{\texttt{sp-acj4-247-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \operatorname{surd}\left(x, 9\right) \neq 0,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \log\left(\operatorname{surd}\left(x, 9\right)\right) \overset{?}{=} \frac{\log x}{9}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[247]: log rootn \_0 9  ->  / log \_0 9}\\
+
+\subsection*{\texttt{sp-acj4-260-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \cos x \neq 0,\quad \frac{1}{\cos x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle -\log\left(\cos x\right) \overset{?}{=} \log\left(\frac{1}{\cos x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[260]: neg log cos \_0  ->  log inv cos \_0}\\
+
+\subsection*{\texttt{sp-acj4-261-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \cosh x \neq 0,\quad \frac{1}{\cosh x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle -\log\left(\cosh x\right) = \log\left(\frac{1}{\cosh x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[261]: neg log cosh \_0  ->  log inv cosh \_0}\\
+
+\subsection*{\texttt{sp-acj4-266-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0,\quad \frac{1}{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle -\sin\left(\log x\right) \overset{?}{=} \sin\left(\log\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[266]: neg sin log \_0  ->  sin log inv \_0}\\
+
+\subsection*{\texttt{sp-acj4-267-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0,\quad \cos\left(\log x\right) \neq 0,\quad \frac{1}{x} \neq 0,\quad \cos\left(\log\left(\frac{1}{x}\right)\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle -\tan\left(\log x\right) \overset{?}{=} \tan\left(\log\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[267]: neg tan log \_0  ->  tan log inv \_0}\\
+
+\subsection*{\texttt{sp-acj4-29-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0,\quad x^{3} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle 3 \, \log x \overset{?}{=} \log\left(x^{3}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[29]: * 3 log \_0  ->  log pow \_0 3}\\
+
+\subsection*{\texttt{sp-acj4-3-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{arsinh}\left(\sinh x\right) = x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[3]: asinh sinh \_0  ->  \_0}\\
+
+\subsection*{\texttt{sp-acj4-343-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{1}{\pi}^{x} = \pi^{-x}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[343]: pow inv np.pi \_0  ->  pow np.pi neg \_0}\\
+
+\subsection*{\texttt{sp-acj4-344-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0,\quad \frac{1}{x} \neq 0 \lor \operatorname{Re}\left(x\right) > 0,\quad x \neq 0 \lor \operatorname{Re}\left(-x\right) > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{1}{x}^{x} \overset{?}{=} x^{-x}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -\frac{1}{2}$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[344]: pow inv \_0 \_0  ->  pow \_0 neg \_0}\\
+
+\subsection*{\texttt{sp-acj4-378-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad e^{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{surd}\left(e^{x}, -5\right) = e^{\frac{x}{-5}}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[378]: rootn exp \_0 (-5)  ->  exp / \_0 (-5)}\\
+
+\subsection*{\texttt{sp-acj4-380-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad e^{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{surd}\left(e^{x}, -7\right) = e^{\frac{x}{-7}}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[380]: rootn exp \_0 (-7)  ->  exp / \_0 (-7)}\\
+
+\subsection*{\texttt{sp-acj4-392-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \sin\left(\left|\arcsin x\right|\right) \overset{?}{=} \left|\cos\left(\arccos x\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[392]: sin abs asin \_0  ->  abs cos acos \_0}\\
+
+\subsection*{\texttt{sp-acj4-403-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0,\quad \frac{1}{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \sin\left(-\log x\right) \overset{?}{=} \sin\left(\log\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[403]: sin neg log \_0  ->  sin log inv \_0}\\
+
+\subsection*{\texttt{sp-acj4-410-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0,\quad \sinh x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \sinh\left(e^{\log x}\right) = e^{\log\left(\sinh x\right)}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[410]: sinh exp log \_0  ->  exp log sinh \_0}\\
+
+\subsection*{\texttt{sp-acj4-416-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \cos\left(\arccos\left(\left|x\right|\right)\right) \neq 0,\quad \cos\left(\arccos x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \tan\left(\arccos\left(\left|x\right|\right)\right) \overset{?}{=} \left|\tan\left(\arccos x\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = 2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[416]: tan acos abs \_0  ->  abs tan acos \_0}\\
+
+\subsection*{\texttt{sp-acj4-420-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0,\quad \cos\left(-\log x\right) \neq 0,\quad \frac{1}{x} \neq 0,\quad \cos\left(\log\left(\frac{1}{x}\right)\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \tan\left(-\log x\right) \overset{?}{=} \tan\left(\log\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[420]: tan neg log \_0  ->  tan log inv \_0}\\
+
+\subsection*{\texttt{sp-acj4-430-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0,\quad x \neq 0 \lor \operatorname{Re}\left(x\right) > 0,\quad x^{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \log x \, x \overset{?}{=} \log\left(x^{x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[430]: * log ?0 ?0  ->  log pow ?0 ?0}\\
+
+\subsection*{\texttt{sp-acj4-433-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0,\quad -\log x \neq i,\quad -\log x \neq -i,\quad \frac{1}{x} \neq 0,\quad \log\left(\frac{1}{x}\right) \neq i,\quad \log\left(\frac{1}{x}\right) \neq -i$ \\[4pt]
+\textsc{claim} & $\displaystyle \arctan\left(-\log x\right) \overset{?}{=} \arctan\left(\log\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[433]: atan neg log !0  ->  atan log inv !0}\\
+
+\subsection*{\texttt{sp-acj4-442-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0,\quad \log x \neq 0,\quad \frac{1}{\log x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle -\log\left(\log x\right) \overset{?}{=} \log\left(\frac{1}{\log x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = -1$}\\
+{\footnotesize\color{gray}witness (false): $x = \frac{1}{2}$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[442]: neg log log ?0  ->  log inv log ?0}\\
+
+\subsection*{\texttt{sp-acj4-449-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0,\quad \cosh\left(-\log x\right) \neq 0,\quad \frac{1}{x} \neq 0,\quad \cosh\left(\log\left(\frac{1}{x}\right)\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \tanh\left(-\log x\right) = \tanh\left(\log\left(\frac{1}{x}\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[449]: tanh neg log !0  ->  tanh log inv !0}\\
+
+\subsection*{\texttt{sp-acj4-450-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{x}{x} = 1$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[450]: / \$0 \$0  ->  1}\\
+
+\subsection*{\texttt{sp-acj4-451-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{0}{x} = 0$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[451]: / 0 \$0  ->  0}\\
+
+\subsection*{\texttt{sp-acj4-50-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad 6^{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \log 6 \, x = \log\left(6^{x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[50]: * log 6 \_0  ->  log pow 6 \_0}\\
+
+\subsection*{\texttt{sp-acj4-55-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0,\quad x \neq 0 \lor \operatorname{Re}\left(e^{1}\right) > 0,\quad x^{e^{1}} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \log x \, e^{1} \overset{?}{=} \log\left(x^{e^{1}}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[55]: * log \_0 np.e  ->  log pow \_0 np.e}\\
+
+\subsection*{\texttt{sp-acj4-56-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0,\quad x \neq 0 \lor \operatorname{Re}\left(\pi\right) > 0,\quad x^{\pi} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \log x \, \pi \overset{?}{=} \log\left(x^{\pi}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[56]: * log \_0 np.pi  ->  log pow \_0 np.pi}\\
+
+\subsection*{\texttt{sp-acj4-6-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \tanh x \neq 1,\quad \tanh x \neq -1$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{artanh}\left(\tanh x\right) = x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[6]: atanh tanh !0  ->  !0}\\
+
+\subsection*{\texttt{sp-acj4-806-ground}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $\text{nothing}$ \\[4pt]
+\textsc{claim} & $\displaystyle \cosh 0 = 1$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[806]: cosh 0  ->  1}\\
+
+\subsection*{\texttt{sp-acj4-813-ground}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $\text{nothing}$ \\[4pt]
+\textsc{claim} & $\displaystyle \sinh 0 = 0$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[813]: sinh 0  ->  0}\\
+
+\subsection*{\texttt{sp-acj4-816-ground}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $\text{nothing}$ \\[4pt]
+\textsc{claim} & $\displaystyle \tanh 0 = 0$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[816]: tanh 0  ->  0}\\
+
+\section*{simplipy-ground}
+\subsection*{\texttt{sp-acj4-1007-ground}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $\text{nothing}$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{0}{\sin 5} = 0$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[1007] + rules.json[700]: / 0 sin 5  ->  0}\\
+
+\subsection*{\texttt{sp-acj4-1107-ground}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $\text{nothing}$ \\[4pt]
+\textsc{claim} & $\displaystyle \arcsin\left(\sin\left(\frac{1}{10}\right)\right) = \frac{1}{10}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[1107] + rules.json[800]: asin sin inv 10  ->  0.1}\\
+
+\subsection*{\texttt{sp-acj4-1148-ground}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $\text{nothing}$ \\[4pt]
+\textsc{claim} & $\displaystyle \cosh\left(\log\left(\frac{1}{4}\right)\right) = \frac{17}{8}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[1148] + rules.json[838]: cosh log inv 4  ->  2.125}\\
+
+\subsection*{\texttt{sp-acj4-1149-ground}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $\text{nothing}$ \\[4pt]
+\textsc{claim} & $\displaystyle e^{\left|\log 2\right|} = 2$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[1149] + rules.json[840]: exp abs log 2  ->  2}\\
+
+\subsection*{\texttt{sp-acj4-1177-ground}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $\text{nothing}$ \\[4pt]
+\textsc{claim} & $\displaystyle 0^{\operatorname{arsinh}\left(10\right)} = 0$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[1177] + rules.json[913]: pow 0 asinh 10  ->  0}\\
+
+\subsection*{\texttt{sp-acj4-1195-ground}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $\text{nothing}$ \\[4pt]
+\textsc{claim} & $\displaystyle 0^{\arctan 7} = 0$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[1195] + rules.json[931]: pow 0 atan 7  ->  0}\\
+
+\subsection*{\texttt{sp-acj4-1217-ground}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $\text{nothing}$ \\[4pt]
+\textsc{claim} & $\displaystyle 0^{e^{-1}} = 0$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[1217] + rules.json[953]: pow 0 exp (-1)  ->  0}\\
+
+\subsection*{\texttt{sp-acj4-1238-ground}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $\text{nothing}$ \\[4pt]
+\textsc{claim} & $\displaystyle 0^{\frac{1}{\pi}} = 0$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[1238] + rules.json[974]: pow 0 inv np.pi  ->  0}\\
+
+\subsection*{\texttt{sp-acj4-1247-ground}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $\text{nothing}$ \\[4pt]
+\textsc{claim} & $\displaystyle 0^{\log 9} = 0$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[1247] + rules.json[983]: pow 0 log 9  ->  0}\\
+
+\subsection*{\texttt{sp-acj4-1254-ground}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $\text{nothing}$ \\[4pt]
+\textsc{claim} & $\displaystyle 0^{\sin 2} = 0$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[1254] + rules.json[990]: pow 0 sin 2  ->  0}\\
+
+\subsection*{\texttt{sp-acj4-1258-ground}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $\text{nothing}$ \\[4pt]
+\textsc{claim} & $\displaystyle 0^{\sin 9} = 0$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[1258] + rules.json[994]: pow 0 sin 9  ->  0}\\
+
+\subsection*{\texttt{sp-acj4-5372-ground}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $\text{nothing}$ \\[4pt]
+\textsc{claim} & $\displaystyle \sin\left(\arcsin\left(\frac{1}{-4}\right)\right) = -\frac{1}{4}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[5372] + rules.json[5127]: sin asin inv (-4)  ->  -0.25}\\
+
+\subsection*{\texttt{sp-acj4-5382-ground}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $\text{nothing}$ \\[4pt]
+\textsc{claim} & $\displaystyle \sinh\left(\log\left(\frac{1}{4}\right)\right) = -\frac{15}{8}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[5382] + rules.json[5137]: sinh log inv 4  ->  -1.875}\\
+
+\subsection*{\texttt{sp-acj4-5385-ground}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $\text{nothing}$ \\[4pt]
+\textsc{claim} & $\displaystyle \sinh\left(-\log 4\right) = -\frac{15}{8}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[5385] + rules.json[5140]: sinh neg log 4  ->  -1.875}\\
+
+\subsection*{\texttt{sp-acj4-819-ground}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $\text{nothing}$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{0}{\pi} = 0$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[819] + rules.json[481]: / 0 np.pi  ->  0}\\
+
+\subsection*{\texttt{sp-acj4-837-ground}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $\text{nothing}$ \\[4pt]
+\textsc{claim} & $\displaystyle 0^{\pi} = 0$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[837] + rules.json[502]: pow 0 np.pi  ->  0}\\
+
+\subsection*{\texttt{sp-acj4-848-ground}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $\text{nothing}$ \\[4pt]
+\textsc{claim} & $\displaystyle \sinh\left(\log 4\right) = \frac{15}{8}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[848] + rules.json[512]: sinh log 4  ->  1.875}\\
+
+\subsection*{\texttt{sp-acj4-868-ground}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $\text{nothing}$ \\[4pt]
+\textsc{claim} & $\displaystyle 0 \, \operatorname{arcosh}\left(7\right) = 0$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[868] + rules.json[561]: * 0 acosh 7  ->  0}\\
+
+\subsection*{\texttt{sp-acj4-911-ground}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $\text{nothing}$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{0}{\arcsin\left(-1\right)} = 0$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[911] + rules.json[604]: / 0 asin (-1)  ->  0}\\
+
+\subsection*{\texttt{sp-acj4-927-ground}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $\text{nothing}$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{0}{\operatorname{arsinh}\left(4\right)} = 0$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[927] + rules.json[620]: / 0 asinh 4  ->  0}\\
+
+\section*{simplipy-real}
+\subsection*{\texttt{sp-acj4-1-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \arcsin\left(\left|x\right|\right) \overset{?}{=} \left|\arcsin x\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[1] + rules.json[0]: asin abs \_0  ->  abs asin \_0}\\
+
+\subsection*{\texttt{sp-acj4-102-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{\left|x\right|}{6} = \left|\frac{x}{-6}\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[102] + rules.json[81]: / abs \_0 6  ->  abs / \_0 (-6)}\\
+
+\subsection*{\texttt{sp-acj4-108-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0,\quad \left|x\right| \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{\left|x\right|}{x} = \frac{x}{\left|x\right|}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[108] + rules.json[87]: / abs \_0 \_0  ->  / \_0 abs \_0}\\
+
+\subsection*{\texttt{sp-acj4-120-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| \neq 0,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{\pi}{\left|x\right|} = \left|\frac{\pi}{x}\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[120] + rules.json[92]: / np.pi abs \_0  ->  abs / np.pi \_0}\\
+
+\subsection*{\texttt{sp-acj4-127-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad e^{x} \neq 1,\quad e^{x} \neq -1$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|\operatorname{artanh}\left(e^{x}\right)\right| \overset{?}{=} \operatorname{artanh}\left(e^{x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = -1$}\\
+{\footnotesize\color{gray}witness (false): $x = 1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[127] + rules.json[96]: abs atanh exp \_0  ->  atanh exp \_0}\\
+
+\subsection*{\texttt{sp-acj4-128-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|\cos\left(\arcsin x\right)\right| \overset{?}{=} \cos\left(\arcsin x\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[128] + rules.json[97]: abs cos asin \_0  ->  cos asin \_0}\\
+
+\subsection*{\texttt{sp-acj4-131-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \cosh x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|\log\left(\cosh x\right)\right| = \log\left(\cosh x\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[131] + rules.json[99]: abs log cosh \_0  ->  log cosh \_0}\\
+
+\subsection*{\texttt{sp-acj4-132-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \sin x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|\log\left(\sin x\right)\right| \overset{?}{=} -\log\left(\sin x\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[132] + rules.json[100]: abs log sin \_0  ->  neg log sin \_0}\\
+
+\subsection*{\texttt{sp-acj4-133-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \tanh x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|\log\left(\tanh x\right)\right| \overset{?}{=} -\log\left(\tanh x\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[133] + rules.json[101]: abs log tanh \_0  ->  neg log tanh \_0}\\
+
+\subsection*{\texttt{sp-acj4-136-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0 \lor \operatorname{Re}\left(e^{1}\right) > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|x^{e^{1}}\right| \overset{?}{=} x^{e^{1}}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[136] + rules.json[104]: abs pow \_0 np.e  ->  pow \_0 np.e}\\
+
+\subsection*{\texttt{sp-acj4-137-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0 \lor \operatorname{Re}\left(\pi\right) > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|x^{\pi}\right| \overset{?}{=} x^{\pi}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[137] + rules.json[105]: abs pow \_0 np.pi  ->  pow \_0 np.pi}\\
+
+\subsection*{\texttt{sp-acj4-14-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle -\sin x = \sin\left(-x\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[14] + rules.json[10]: neg sin \_0  ->  sin neg \_0}\\
+
+\subsection*{\texttt{sp-acj4-145-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|\sin\left(\arccos x\right)\right| \overset{?}{=} \cos\left(\arcsin x\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[145] + rules.json[113]: abs sin acos \_0  ->  cos asin \_0}\\
+
+\subsection*{\texttt{sp-acj4-162-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{arcosh}\left(\operatorname{surd}\left(x, 5\right)\right) \overset{?}{=} \operatorname{arcosh}\left(x^{\frac{1}{5}}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[162] + rules.json[119]: acosh rootn \_0 5  ->  acosh pow \_0 0.2}\\
+
+\subsection*{\texttt{sp-acj4-179-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \sinh\left(\arccos x\right) \neq i,\quad \sinh\left(\arccos x\right) \neq -i,\quad \cosh\left(\arccos x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \arctan\left(\sinh\left(\arccos x\right)\right) \overset{?}{=} \arcsin\left(\tanh\left(\arccos x\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 3$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[179] + rules.json[128]: atan sinh acos \_0  ->  asin tanh acos \_0}\\
+
+\subsection*{\texttt{sp-acj4-181-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \sinh\left(\arcsin x\right) \neq i,\quad \sinh\left(\arcsin x\right) \neq -i,\quad \cosh\left(\arcsin x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \arctan\left(\sinh\left(\arcsin x\right)\right) \overset{?}{=} \arcsin\left(\tanh\left(\arcsin x\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 3$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[181] + rules.json[129]: atan sinh asin \_0  ->  asin tanh asin \_0}\\
+
+\subsection*{\texttt{sp-acj4-185-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \cos\left(\cos x\right) \neq 0,\quad \tan\left(\cos x\right) \neq i,\quad \tan\left(\cos x\right) \neq -i$ \\[4pt]
+\textsc{claim} & $\displaystyle \arctan\left(\tan\left(\cos x\right)\right) = \cos x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[185] + rules.json[132]: atan tan cos \_0  ->  cos \_0}\\
+
+\subsection*{\texttt{sp-acj4-194-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \sin\left(\cos x\right) \neq 1,\quad \sin\left(\cos x\right) \neq -1,\quad \cos\left(\cos x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{artanh}\left(\sin\left(\cos x\right)\right) = \operatorname{arsinh}\left(\tan\left(\cos x\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[194] + rules.json[136]: atanh sin cos \_0  ->  asinh tan cos \_0}\\
+
+\subsection*{\texttt{sp-acj4-195-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \sin\left(\sin x\right) \neq 1,\quad \sin\left(\sin x\right) \neq -1,\quad \cos\left(\sin x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{artanh}\left(\sin\left(\sin x\right)\right) = \operatorname{arsinh}\left(\tan\left(\sin x\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[195] + rules.json[137]: atanh sin sin \_0  ->  asinh tan sin \_0}\\
+
+\subsection*{\texttt{sp-acj4-196-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \sin\left(\tanh x\right) \neq 1,\quad \sin\left(\tanh x\right) \neq -1,\quad \cos\left(\tanh x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{artanh}\left(\sin\left(\tanh x\right)\right) = \operatorname{arsinh}\left(\tan\left(\tanh x\right)\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[196] + rules.json[138]: atanh sin tanh \_0  ->  asinh tan tanh \_0}\\
+
+\subsection*{\texttt{sp-acj4-218-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0,\quad \frac{-6}{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{1}{\frac{-6}{x}} = \frac{x}{-6}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[218] + rules.json[150]: inv / (-6) !0  ->  / !0 (-6)}\\
+
+\subsection*{\texttt{sp-acj4-22-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \tanh\left(\left|x\right|\right) = \left|\tanh x\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[22] + rules.json[17]: tanh abs \_0  ->  abs tanh \_0}\\
+
+\subsection*{\texttt{sp-acj4-220-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0,\quad \frac{-8}{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{1}{\frac{-8}{x}} = \frac{x}{-8}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[220] + rules.json[152]: inv / (-8) !0  ->  / !0 (-8)}\\
+
+\subsection*{\texttt{sp-acj4-233-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0 \lor \operatorname{Re}\left(\pi\right) > 0,\quad x^{\pi} \neq 0,\quad x \neq 0 \lor \operatorname{Re}\left(-\pi\right) > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{1}{x^{\pi}} = x^{-\pi}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[233] + rules.json[162]: inv pow \_0 np.pi  ->  pow \_0 neg np.pi}\\
+
+\subsection*{\texttt{sp-acj4-248-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle -\left|\arcsin x\right| \overset{?}{=} \arcsin\left(-\left|x\right|\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[248] + rules.json[164]: neg abs asin \_0  ->  asin neg abs \_0}\\
+
+\subsection*{\texttt{sp-acj4-249-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle -\left|\operatorname{arsinh}\left(x\right)\right| = \operatorname{arsinh}\left(-\left|x\right|\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[249] + rules.json[165]: neg abs asinh \_0  ->  asinh neg abs \_0}\\
+
+\subsection*{\texttt{sp-acj4-251-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 1,\quad x \neq -1,\quad -\left|x\right| \neq 1,\quad -\left|x\right| \neq -1$ \\[4pt]
+\textsc{claim} & $\displaystyle -\left|\operatorname{artanh}\left(x\right)\right| \overset{?}{=} \operatorname{artanh}\left(-\left|x\right|\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[251] + rules.json[167]: neg abs atanh \_0  ->  atanh neg abs \_0}\\
+
+\subsection*{\texttt{sp-acj4-252-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle -\left|\sinh x\right| = \sinh\left(-\left|x\right|\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[252] + rules.json[168]: neg abs sinh \_0  ->  sinh neg abs \_0}\\
+
+\subsection*{\texttt{sp-acj4-253-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle -\left|\tanh x\right| = \tanh\left(-\left|x\right|\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[253] + rules.json[169]: neg abs tanh \_0  ->  tanh neg abs \_0}\\
+
+\subsection*{\texttt{sp-acj4-256-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad -e^{x} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle -e^{-x} = \frac{1}{-e^{x}}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[256] + rules.json[171]: neg exp neg !0  ->  inv neg exp !0}\\
+
+\subsection*{\texttt{sp-acj4-275-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| \neq 0,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|x\right|^{-3} = \left|x^{-3}\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[275] + rules.json[184]: pow abs \_0 (-3)  ->  abs pow \_0 (-3)}\\
+
+\subsection*{\texttt{sp-acj4-276-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| \neq 0,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|x\right|^{-4} = x^{-4}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[276] + rules.json[185]: pow abs \_0 (-4)  ->  pow \_0 (-4)}\\
+
+\subsection*{\texttt{sp-acj4-283-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|x\right|^{2} = x \, x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[283] + rules.json[192]: pow abs \_0 2  ->  * \_0 \_0}\\
+
+\subsection*{\texttt{sp-acj4-286-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|x\right|^{5} = \left|x^{5}\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[286] + rules.json[195]: pow abs \_0 5  ->  abs pow \_0 5}\\
+
+\subsection*{\texttt{sp-acj4-289-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|x\right|^{8} = x^{8}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[289] + rules.json[198]: pow abs \_0 8  ->  pow \_0 8}\\
+
+\subsection*{\texttt{sp-acj4-31-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle 5 \, \left|x\right| = \left|-5 \, x\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[31] + rules.json[24]: * 5 abs \_0  ->  abs * (-5) \_0}\\
+
+\subsection*{\texttt{sp-acj4-326-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \left(e^{x}\right)^{2} = e^{2 \, x}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[326] + rules.json[208]: pow exp \_0 2  ->  exp * 2 \_0}\\
+
+\subsection*{\texttt{sp-acj4-33-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle 6 \, \left|x\right| = \left|-6 \, x\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[33] + rules.json[26]: * 6 abs \_0  ->  abs * (-6) \_0}\\
+
+\subsection*{\texttt{sp-acj4-35-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0,\quad x^{7} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle 7 \, \log x \overset{?}{=} \log\left(x^{7}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[35] + rules.json[28]: * 7 log \_0  ->  log pow \_0 7}\\
+
+\subsection*{\texttt{sp-acj4-354-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0 \lor \operatorname{Re}\left(\log 5\right) > 0,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle x^{\log 5} = 5^{\log x}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[354] + rules.json[224]: pow \_0 log 5  ->  pow 5 log \_0}\\
+
+\subsection*{\texttt{sp-acj4-356-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0 \lor \operatorname{Re}\left(\log 7\right) > 0,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle x^{\log 7} = 7^{\log x}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[356] + rules.json[226]: pow \_0 log 7  ->  pow 7 log \_0}\\
+
+\subsection*{\texttt{sp-acj4-359-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0 \lor \operatorname{Re}\left(\log \pi\right) > 0,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle x^{\log \pi} = \pi^{\log x}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[359] + rules.json[227]: pow \_0 log np.pi  ->  pow np.pi log \_0}\\
+
+\subsection*{\texttt{sp-acj4-364-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{surd}\left(\left|x\right|, 3\right) = \left|\operatorname{surd}\left(x, 3\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[364] + rules.json[232]: rootn abs \_0 3  ->  abs rootn \_0 3}\\
+
+\subsection*{\texttt{sp-acj4-367-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{surd}\left(\left|x\right|, 9\right) = \left|\operatorname{surd}\left(x, 9\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[367] + rules.json[235]: rootn abs \_0 9  ->  abs rootn \_0 9}\\
+
+\subsection*{\texttt{sp-acj4-368-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \arccos x \in \mathbb{R},\quad \arccos x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{surd}\left(\arccos x, -5\right) = \left(\arccos x\right)^{-\frac{1}{5}}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[368] + rules.json[236]: rootn acos \_0 (-5)  ->  pow acos \_0 -0.2}\\
+
+\subsection*{\texttt{sp-acj4-369-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \arccos x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{surd}\left(\arccos x, 5\right) = \left(\arccos x\right)^{\frac{1}{5}}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[369] + rules.json[237]: rootn acos \_0 5  ->  pow acos \_0 0.2}\\
+
+\subsection*{\texttt{sp-acj4-370-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \operatorname{arcosh}\left(x\right) \in \mathbb{R},\quad \operatorname{arcosh}\left(x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{surd}\left(\operatorname{arcosh}\left(x\right), -5\right) = \operatorname{arcosh}\left(x\right)^{-\frac{1}{5}}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[370] + rules.json[238]: rootn acosh \_0 (-5)  ->  pow acosh \_0 -0.2}\\
+
+\subsection*{\texttt{sp-acj4-371-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \operatorname{arcosh}\left(x\right) \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{surd}\left(\operatorname{arcosh}\left(x\right), 5\right) = \operatorname{arcosh}\left(x\right)^{\frac{1}{5}}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[371] + rules.json[239]: rootn acosh \_0 5  ->  pow acosh \_0 0.2}\\
+
+\subsection*{\texttt{sp-acj4-372-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \cosh x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{surd}\left(\cosh x, -5\right) = \left(\cosh x\right)^{-\frac{1}{5}}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[372] + rules.json[240]: rootn cosh \_0 (-5)  ->  pow cosh \_0 -0.2}\\
+
+\subsection*{\texttt{sp-acj4-373-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{surd}\left(\cosh x, 5\right) = \left(\cosh x\right)^{\frac{1}{5}}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[373] + rules.json[241]: rootn cosh \_0 5  ->  pow cosh \_0 0.2}\\
+
+\subsection*{\texttt{sp-acj4-38-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0,\quad x^{9} \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle 9 \, \log x \overset{?}{=} \log\left(x^{9}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[38] + rules.json[31]: * 9 log \_0  ->  log pow \_0 9}\\
+
+\subsection*{\texttt{sp-acj4-394-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 1,\quad x \neq -1$ \\[4pt]
+\textsc{claim} & $\displaystyle \sin\left(\left|\operatorname{artanh}\left(x\right)\right|\right) \overset{?}{=} \left|\sin\left(\operatorname{artanh}\left(x\right)\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[394] + rules.json[242]: sin abs atanh \_0  ->  abs sin atanh \_0}\\
+
+\subsection*{\texttt{sp-acj4-395-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \sin\left(\left|\cos x\right|\right) = \left|\sin\left(\cos x\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[395] + rules.json[243]: sin abs cos \_0  ->  abs sin cos \_0}\\
+
+\subsection*{\texttt{sp-acj4-396-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \sin\left(\left|\sin x\right|\right) = \left|\sin\left(\sin x\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[396] + rules.json[244]: sin abs sin \_0  ->  abs sin sin \_0}\\
+
+\subsection*{\texttt{sp-acj4-397-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \sin\left(\left|\tanh x\right|\right) = \left|\sin\left(\tanh x\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[397] + rules.json[245]: sin abs tanh \_0  ->  abs sin tanh \_0}\\
+
+\subsection*{\texttt{sp-acj4-402-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| \neq 1,\quad x \neq 1,\quad x \neq -1$ \\[4pt]
+\textsc{claim} & $\displaystyle \sin\left(\operatorname{artanh}\left(\left|x\right|\right)\right) \overset{?}{=} \left|\sin\left(\operatorname{artanh}\left(x\right)\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[402] + rules.json[246]: sin atanh abs \_0  ->  abs sin atanh \_0}\\
+
+\subsection*{\texttt{sp-acj4-404-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \sin\left(\tanh\left(\left|x\right|\right)\right) = \left|\sin\left(\tanh x\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[404] + rules.json[247]: sin tanh abs \_0  ->  abs sin tanh \_0}\\
+
+\subsection*{\texttt{sp-acj4-412-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \cos\left(\left|\arcsin x\right|\right) \neq 0,\quad \cos\left(\arcsin x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \tan\left(\left|\arcsin x\right|\right) \overset{?}{=} \left|\tan\left(\arcsin x\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[412] + rules.json[253]: tan abs asin \_0  ->  abs tan asin \_0}\\
+
+\subsection*{\texttt{sp-acj4-413-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \cos\left(\left|\cos x\right|\right) \neq 0,\quad \cos\left(\cos x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \tan\left(\left|\cos x\right|\right) = \left|\tan\left(\cos x\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[413] + rules.json[254]: tan abs cos \_0  ->  abs tan cos \_0}\\
+
+\subsection*{\texttt{sp-acj4-414-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \cos\left(\left|\sin x\right|\right) \neq 0,\quad \cos\left(\sin x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \tan\left(\left|\sin x\right|\right) = \left|\tan\left(\sin x\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[414] + rules.json[255]: tan abs sin \_0  ->  abs tan sin \_0}\\
+
+\subsection*{\texttt{sp-acj4-415-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \cos\left(\left|\tanh x\right|\right) \neq 0,\quad \cos\left(\tanh x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \tan\left(\left|\tanh x\right|\right) = \left|\tan\left(\tanh x\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[415] + rules.json[256]: tan abs tanh \_0  ->  abs tan tanh \_0}\\
+
+\subsection*{\texttt{sp-acj4-417-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \cos\left(\arcsin\left(\left|x\right|\right)\right) \neq 0,\quad \cos\left(\arcsin x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \tan\left(\arcsin\left(\left|x\right|\right)\right) \overset{?}{=} \left|\tan\left(\arcsin x\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[417] + rules.json[257]: tan asin abs \_0  ->  abs tan asin \_0}\\
+
+\subsection*{\texttt{sp-acj4-421-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \cos\left(\tanh\left(\left|x\right|\right)\right) \neq 0,\quad \cos\left(\tanh x\right) \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \tan\left(\tanh\left(\left|x\right|\right)\right) = \left|\tan\left(\tanh x\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[421] + rules.json[260]: tan tanh abs \_0  ->  abs tan tanh \_0}\\
+
+\subsection*{\texttt{sp-acj4-5-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| \neq 1,\quad x \neq 1,\quad x \neq -1$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{artanh}\left(\left|x\right|\right) \overset{?}{=} \left|\operatorname{artanh}\left(x\right)\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 0$}\\
+{\footnotesize\color{gray}witness (false): $x = 2$}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[5] + rules.json[3]: atanh abs \_0  ->  abs atanh \_0}\\
+
+\subsection*{\texttt{sp-acj4-73-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| \neq 0,\quad -\left|x\right| \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{-1}{\left|x\right|} = \frac{1}{-\left|x\right|}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[73] + rules.json[52]: / (-1) abs !0  ->  inv neg abs !0}\\
+
+\subsection*{\texttt{sp-acj4-80-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \cos x \neq 0,\quad -\cos x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{-1}{\cos x} = \frac{1}{-\cos x}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[80] + rules.json[59]: / (-1) cos \_0  ->  inv neg cos \_0}\\
+
+\subsection*{\texttt{sp-acj4-83-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0,\quad \log x \neq 0,\quad -\log x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{-1}{\log x} = \frac{1}{-\log x}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[83] + rules.json[62]: / (-1) log !0  ->  inv neg log !0}\\
+
+\subsection*{\texttt{sp-acj4-86-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \cos x \neq 0,\quad \tan x \neq 0,\quad -\tan x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{-1}{\tan x} = \frac{1}{-\tan x}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[86] + rules.json[65]: / (-1) tan !0  ->  inv neg tan !0}\\
+
+\subsection*{\texttt{sp-acj4-90-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad \left|x\right| \neq 0,\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{3}{\left|x\right|} = \left|\frac{-3}{x}\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[90] + rules.json[69]: / 3 abs \_0  ->  abs / (-3) \_0}\\
+
+\subsection*{\texttt{sp-acj4-99-real}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \frac{\left|x\right|}{3} = \left|\frac{x}{-3}\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{SimpliPy acj-4 (MIT) rules\_real.json[99] + rules.json[78]: / abs \_0 3  ->  abs / \_0 (-3)}\\
+
+\end{document}
