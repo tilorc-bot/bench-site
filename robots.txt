@@ -1,0 +1,4 @@
+# Not indexed: every page has <meta name="robots" content="noindex, nofollow">.
+# Crawling stays allowed so that crawlers can read that tag (a Disallow would hide it).
+User-agent: *
+Disallow:
