@@ -51,6 +51,9 @@ background:color-mix(in srgb,var(--accent) 9%,transparent)}
 .side-list .t1.on{padding-left:8px}.side-list .t1:first-child{margin-top:0}
 .side-list .t2{padding-left:14px}
 .side-list .t3{padding-left:26px;font:12.5px/1.65 ui-monospace,SFMono-Regular,Menlo,monospace}
+.side-list .t3s{display:flex;flex-wrap:wrap;gap:1px 2px;padding:1px 0 3px 18px;border-left:2px solid var(--line)}
+.side-list .t3s a.t3{display:inline-block;border-left:0;padding:0 5px;border-radius:4px;line-height:1.55}
+.side-list .t3s a.t3.on{padding:0 5px}
 @media (max-width:900px){
 .spec{display:block}
 nav.side{position:sticky;top:0;z-index:30;max-height:none;overflow:visible;margin:0 -16px 8px;padding:6px 16px;
@@ -106,8 +109,8 @@ section.card:target,.cc:target{box-shadow:0 0 0 2px var(--accent)}
 .card-h .doc{margin:4px 0 0;max-width:820px}
 .card-h .badge{font-family:system-ui,sans-serif;margin-left:6px}
 .card-b{padding:10px 14px 12px}
-.lean .lbl{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin:0 0 3px}
-.lean .lbl button.term{text-transform:none;letter-spacing:0;font-weight:400}
+.card-b .lbl{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin:0 0 3px}
+.card-b .lbl button.term,.card-b .lbl .z{text-transform:none;letter-spacing:0;font-weight:400}
 .lean pre.src{border:1px solid var(--line);border-radius:6px;background:var(--bg);margin:0 0 10px;padding:8px 12px;
 font-size:12.5px}
 button.info{font:13px system-ui,sans-serif;color:var(--accent);background:none;border:0;padding:0 2px;cursor:help;
@@ -166,6 +169,8 @@ table.pts.only tr.v-ok{display:none}
 table.tcsum td{padding:4px 10px}table.tcsum tr.grp td{background:var(--chip);font-size:11px;font-weight:600;
 letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
 table.tcsum td.fn{font:13px ui-monospace,SFMono-Regular,Menlo,monospace}
+ul.tcl{padding-left:20px;max-width:900px}ul.tcl li{margin:4px 0}
+ul.tcl a.fn{font:12.5px ui-monospace,SFMono-Regular,Menlo,monospace}
 .casepop.tippop{max-width:min(440px,calc(100vw - 16px))}
 .casepop .cp-note code,.casepop table.steps code{font:12px ui-monospace,SFMono-Regular,Menlo,monospace;
 background:var(--chip);padding:0 3px;border-radius:3px}
@@ -247,4 +252,8 @@ border-radius:4px;border:1px solid var(--line);color:var(--fg);background:var(--
 .mk-declined{color:var(--null)}
 .mk{font-weight:700}
 .summary .expect{font-size:1.05em}.casepop .cp-exp{margin:0}
-</style></head><body><main><nav class=top><a href='/spec/'>The spec: how it works · functions · translation checks</a></nav><h1>Not found</h1><p><a href='/'>All suites</a></p></main><script>document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button.copy');if(!b)return;var ids=(b.getAttribute('data-target')||'').split(' '),parts=[];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el)parts.push(el.textContent);}if(!parts.length)return;var text=parts.join('\n');function sel(){var o=b.parentNode.querySelector('textarea');if(o)o.remove();var t=document.createElement('textarea');t.value=text;b.parentNode.appendChild(t);t.select();var ok=false;try{ok=document.execCommand('copy');}catch(x){}if(ok){t.remove();}b.textContent=ok?'Copied':'Selected: press Ctrl/Cmd+C';}if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(function(){b.textContent='Copied';},sel);}else{sel();}setTimeout(function(){b.textContent='Copy';},2500);});</script></body></html>
+details.sec>summary{cursor:pointer;list-style-position:outside;margin-left:1.1em}details.sec>summary h2{display:inline-block;margin-bottom:6px}
+.lemmas{margin:8px 0 0}.lemmas details.more pre.src{white-space:pre-wrap;overflow-wrap:anywhere;padding:8px 12px;font-size:12.5px}
+.lemmas p.sub{margin:6px 0}
+.ans table.mx td.o{text-align:left}tr.cas th button{text-transform:none;letter-spacing:0;font-weight:400}
+</style></head><body><main><nav class=top><a href='/'>Results</a> · <a href='/definitions/'>Definitions</a></nav><h1>Not found</h1><p><a href='/'>All suites</a></p></main><script>document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button.copy');if(!b)return;var ids=(b.getAttribute('data-target')||'').split(' '),parts=[];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el)parts.push(el.textContent);}if(!parts.length)return;var text=parts.join('\n');function sel(){var o=b.parentNode.querySelector('textarea');if(o)o.remove();var t=document.createElement('textarea');t.value=text;b.parentNode.appendChild(t);t.select();var ok=false;try{ok=document.execCommand('copy');}catch(x){}if(ok){t.remove();}b.textContent=ok?'Copied':'Selected: press Ctrl/Cmd+C';}if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(function(){b.textContent='Copied';},sel);}else{sel();}setTimeout(function(){b.textContent='Copy';},2500);});</script></body></html>
