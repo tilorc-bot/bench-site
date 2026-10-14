@@ -260,7 +260,26 @@ details.sec>summary{cursor:pointer;list-style-position:outside;margin-left:1.1em
   (note &quot;SimpliPy acj-4 (MIT) rules_real.json[5385] + rules.json[5140]: sinh neg log 4  -&gt;  -1.875&quot;)
   (ask (= (<a class=ln href='../../../../definitions/index.html#sinh'>sinh</a> (- (log 4))) -15/8))
   (expect true)
-  (lean-proof &quot;refine ⟨by simp, ?_⟩; simp [Complex.sinh, Complex.exp_neg, Complex.exp_log]; norm_num&quot;))</pre></div></details><h2>Answers <span class=sub>(latest run per system and CAS version; open <i>code</i> for the reproducer that ran)</span></h2><div class='wrap ans'><table class=mx><thead><tr><th>system</th><th>outcome</th><th>answer</th><th>steps (from the trace)</th><th class=num>s</th><th>run</th><th>query (as sent)</th><th>detail</th></tr></thead><tbody><tr class=cas><th colspan=8>none</th></tr><tr><td>always-none</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist></td><td class=num>0.0</td><td><a href='../../../../run/always-none-20261013-172118/index.html'>2026-10-13 17:21:18</a> <code>ba9dc4def822</code></td><td class=code>(= (sinh (- (log 4))) -15/8)</td><td class=code>null</td></tr><tr class=cas><th colspan=8>sympy <button class=ox type=button data-g='sympy' aria-expanded=false title='show the other versions of sympy'>older versions 3</button></th></tr><tr class=lead><td>sympy-ask 1.14.0</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist>difference → 15/8 - sinh(log(4)) · ask → None</td><td class=num>0.056</td><td><a href='../../../../run/sympy-ask-20261013-172119/index.html'>2026-10-13 17:21:19</a> <code>ba9dc4def822</code></td><td class=code>Eq(sinh((-log(4))), Rational(-15, 8))</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-30a7a321311f'>from sympy import *
+  (lean-proof &quot;refine ⟨by simp, ?_⟩; simp [Complex.sinh, Complex.exp_neg, Complex.exp_log]; norm_num&quot;))</pre></div></details><h2>Answers <span class=sub>(latest run per system and CAS version; open <i>code</i> for the reproducer that ran)</span></h2><div class='wrap ans'><table class=mx><thead><tr><th>system</th><th>outcome</th><th>answer</th><th>steps (from the trace)</th><th class=num>s</th><th>run</th><th>query (as sent)</th><th>detail</th></tr></thead><tbody><tr class=cas><th colspan=8>none</th></tr><tr><td>always-none</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist></td><td class=num>0.0</td><td><a href='../../../../run/always-none-20261014-174422/index.html'>2026-10-14 17:44:22</a> <code>ba9dc4def822</code></td><td class=code>(= (sinh (- (log 4))) -15/8)</td><td class=code>null</td></tr><tr class=cas><th colspan=8>satrefine</th></tr><tr class=lead><td>satrefine-refine 0.1.0</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist>difference → 15/8 - sinh(log(4)) · satrefine.refine → 15/8 - sinh(log(4))</td><td class=num>0.025</td><td><a href='../../../../run/satrefine-refine-20261014-174730/index.html'>2026-10-14 17:47:30</a> <code>ba9dc4def822</code></td><td class=code>Eq(sinh((-log(4))), Rational(-15, 8))</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-e3cd7af6ab01'>from sympy import *
+import sympy
+
+SympyVersion = sympy.__version__
+import satrefine
+import importlib.metadata
+CasVersion = importlib.metadata.version(&#x27;satrefine&#x27;)
+# warm-up: a fixed generic expression, never case content
+W = Symbol(&#x27;W&#x27;)
+Warmup = satrefine.refine(Abs(W), Q.positive(W))
+# every query then runs in its own forked process, starting from this state:
+# the expression caches are dropped (imported and lazily loaded modules stay)
+sympy.core.cache.clear_cache()
+</pre></div><div class=codebox><button class=copy type=button data-target='setup-e3cd7af6ab01 code-e3cd7af6ab01' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-e3cd7af6ab01'>Assum = And()
+Residual = sinh(-log(4)) - Rational(-15, 8)
+Result = satrefine.refine(Residual, Assum)
+# true iff the result is 0; false only if it is a definite nonzero number
+Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+print(Result, Answer, sep=&#x27;\n&#x27;)
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>sinh(-log(4)) - Rational(-15, 8)</code></td><td>→</td><td><code>15/8 - sinh(log(4))</code></td></tr><tr><td class=lbl>satrefine.refine</td><td><code>satrefine.refine(Residual, Assum)</code></td><td>→</td><td><code>15/8 - sinh(log(4))</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class=cas><th colspan=8>sympy <button class=ox type=button data-g='sympy' aria-expanded=false title='show the other versions of sympy'>older versions 3</button></th></tr><tr class=lead><td>sympy-ask 1.14.0</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist>difference → 15/8 - sinh(log(4)) · ask → None</td><td class=num>0.056</td><td><a href='../../../../run/sympy-ask-20261014-174423/index.html'>2026-10-14 17:44:23</a> <code>ba9dc4def822</code></td><td class=code>Eq(sinh((-log(4))), Rational(-15, 8))</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-98ae90b32d4e'>from sympy import *
 import sympy
 
 SympyVersion = sympy.__version__
@@ -270,12 +289,12 @@ Warmup = ask(Q.positive(W**2 + 1), Q.real(W))
 # every query then runs in its own forked process, starting from this state:
 # the expression caches are dropped (imported and lazily loaded modules stay)
 sympy.core.cache.clear_cache()
-</pre></div><div class=codebox><button class=copy type=button data-target='setup-30a7a321311f code-30a7a321311f' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-30a7a321311f'>Assum = And()
+</pre></div><div class=codebox><button class=copy type=button data-target='setup-98ae90b32d4e code-98ae90b32d4e' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-98ae90b32d4e'>Assum = And()
 Residual = sinh(-log(4)) - Rational(-15, 8)
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
 Answer = ask(Q.zero(Residual), Assum)
 print(Residual, Answer, sep=&#x27;\n&#x27;)
-</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>sinh(-log(4)) - Rational(-15, 8)</code></td><td>→</td><td><code>15/8 - sinh(log(4))</code></td></tr><tr><td class=lbl>ask</td><td><code>Q.zero(Residual)</code></td><td>→</td><td><code>None</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class=lead><td>sympy-refine 1.14.0</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist>difference → 15/8 - sinh(log(4)) · refine → 15/8 - sinh(log(4))</td><td class=num>0.042</td><td><a href='../../../../run/sympy-refine-20261013-172230/index.html'>2026-10-13 17:22:30</a> <code>ba9dc4def822</code></td><td class=code>Eq(sinh((-log(4))), Rational(-15, 8))</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-357964b9f08c'>from sympy import *
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>sinh(-log(4)) - Rational(-15, 8)</code></td><td>→</td><td><code>15/8 - sinh(log(4))</code></td></tr><tr><td class=lbl>ask</td><td><code>Q.zero(Residual)</code></td><td>→</td><td><code>None</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class=lead><td>sympy-refine 1.14.0</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist>difference → 15/8 - sinh(log(4)) · refine → 15/8 - sinh(log(4))</td><td class=num>0.043</td><td><a href='../../../../run/sympy-refine-20261014-174535/index.html'>2026-10-14 17:45:35</a> <code>ba9dc4def822</code></td><td class=code>Eq(sinh((-log(4))), Rational(-15, 8))</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-d444e5a96d02'>from sympy import *
 import sympy
 
 SympyVersion = sympy.__version__
@@ -285,13 +304,13 @@ Warmup = refine(Abs(W), Q.positive(W))
 # every query then runs in its own forked process, starting from this state:
 # the expression caches are dropped (imported and lazily loaded modules stay)
 sympy.core.cache.clear_cache()
-</pre></div><div class=codebox><button class=copy type=button data-target='setup-357964b9f08c code-357964b9f08c' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-357964b9f08c'>Assum = And()
+</pre></div><div class=codebox><button class=copy type=button data-target='setup-d444e5a96d02 code-d444e5a96d02' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-d444e5a96d02'>Assum = And()
 Residual = sinh(-log(4)) - Rational(-15, 8)
 Result = refine(Residual, Assum)
 # true iff the result is 0; false only if it is a definite nonzero number
 Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
 print(Result, Answer, sep=&#x27;\n&#x27;)
-</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>sinh(-log(4)) - Rational(-15, 8)</code></td><td>→</td><td><code>15/8 - sinh(log(4))</code></td></tr><tr><td class=lbl>refine</td><td><code>refine(Residual, Assum)</code></td><td>→</td><td><code>15/8 - sinh(log(4))</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class=lead><td>sympy-simplify 1.14.0</td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → 15/8 - sinh(log(4)) · simplify → 0</td><td class=num>0.093</td><td><a href='../../../../run/sympy-simplify-20261013-172401/index.html'>2026-10-13 17:24:01</a> <code>ba9dc4def822</code></td><td class=code>Eq(sinh((-log(4))), Rational(-15, 8))</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-07fd5612cabe'>from sympy import *
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>sinh(-log(4)) - Rational(-15, 8)</code></td><td>→</td><td><code>15/8 - sinh(log(4))</code></td></tr><tr><td class=lbl>refine</td><td><code>refine(Residual, Assum)</code></td><td>→</td><td><code>15/8 - sinh(log(4))</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class=lead><td>sympy-simplify 1.14.0</td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → 15/8 - sinh(log(4)) · simplify → 0</td><td class=num>0.092</td><td><a href='../../../../run/sympy-simplify-20261014-174713/index.html'>2026-10-14 17:47:13</a> <code>ba9dc4def822</code></td><td class=code>Eq(sinh((-log(4))), Rational(-15, 8))</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-0697b43c84e1'>from sympy import *
 import sympy
 
 SympyVersion = sympy.__version__
@@ -301,7 +320,7 @@ Warmup = simplify(sin(W)**2 + cos(W)**2)
 # every query then runs in its own forked process, starting from this state:
 # the expression caches are dropped (imported and lazily loaded modules stay)
 sympy.core.cache.clear_cache()
-</pre></div><div class=codebox><button class=copy type=button data-target='setup-07fd5612cabe code-07fd5612cabe' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-07fd5612cabe'>Residual = sinh(-log(4)) - Rational(-15, 8)
+</pre></div><div class=codebox><button class=copy type=button data-target='setup-0697b43c84e1 code-0697b43c84e1' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-0697b43c84e1'>Residual = sinh(-log(4)) - Rational(-15, 8)
 Result = simplify(Residual)
 # true iff the result is 0; false only if it is a definite nonzero number
 Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
@@ -352,7 +371,49 @@ Result = simplify(Residual)
 # true iff the result is 0; false only if it is a definite nonzero number
 Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
 print(Result, Answer, sep=&#x27;\n&#x27;)
-</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>sinh(-log(4)) - Rational(-15, 8)</code></td><td>→</td><td><code>15/8 - sinh(log(4))</code></td></tr><tr><td class=lbl>simplify</td><td><code>simplify(Residual)</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>true</code></td></tr></table></details></td></tr><tr class=cas><th colspan=8>wolfram</th></tr><tr class=lead><td>wolfram-fullsimplify 14.3.0 <button type=button class='xchip x-experimental' data-note='0' aria-label='experimental: forked kernel'>experimental</button></td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → 0 · result → 0</td><td class=num>0.02</td><td><a href='../../../../run/wolfram-fullsimplify-20261013-172442/index.html'>2026-10-13 17:24:42</a> <code>ba9dc4def822</code></td><td class=code>(Sinh[(-Log[4])] == (-15/8))</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-0d10363447d9'>(
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>sinh(-log(4)) - Rational(-15, 8)</code></td><td>→</td><td><code>15/8 - sinh(log(4))</code></td></tr><tr><td class=lbl>simplify</td><td><code>simplify(Residual)</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>true</code></td></tr></table></details></td></tr><tr class=cas><th colspan=8>wolfram</th></tr><tr class=lead><td>wolfram-fullsimplify 14.3.0 <button type=button class='xchip x-experimental' data-note='0' aria-label='experimental: forked kernel'>experimental</button></td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → 0 · result → 0</td><td class=num>0.02</td><td><a href='../../../../run/wolfram-fullsimplify-20261014-174815/index.html'>2026-10-14 17:48:15</a> <code>ba9dc4def822</code></td><td class=code>(Sinh[(-Log[4])] == (-15/8))</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-c989b25f2ea3'>(
+  $HistoryLength = 0;
+  $Messages = {};
+  Warmup = FullSimplify[Sin[W]^2 + Cos[W]^2, Element[W, Reals]];
+  GenericWarmup = Quiet[{Simplify[Abs[W] + W, W &lt; 0], Simplify[Sqrt[W^2] - W, W &gt; 0], Refine[Sqrt[W^2], W &gt; 0], Simplify[Log[W V] - Log[W] - Log[V], W &gt; 0 &amp;&amp; V &gt; 0], Simplify[Log[-W] - Log[W] - I Pi, W &lt; 0], Simplify[(-1)^(2 W) - 1, Element[W, Integers]], Simplify[Mod[W + 1, 2], Element[W, Integers] &amp;&amp; Element[(W - 1)/2, Integers]], Simplify[ArcTan[W] + ArcTan[1/W] - Pi/2, W &gt; 0], FullSimplify[ArcCot[W] - ArcTan[1/W], W &gt; 0], Simplify[Abs[Exp[I W]] - 1, Element[W, Reals]], Simplify[Re[W] - (W + Conjugate[W])/2], Simplify[Gamma[W + 1] - W!, Element[W, Integers] &amp;&amp; W &gt; 0], Simplify[Floor[W] - W, Element[W, Integers]], Simplify[Sqrt[W] Sqrt[V] - Sqrt[W V], W &gt; 0 &amp;&amp; V &gt; 0], Simplify[HeavisideTheta[W] - 1, W &gt; 0], Simplify[2^W 2^V - 2^(W + V), Element[W, Reals] &amp;&amp; Element[V, Reals]], Simplify[Sum[V, {V, 1, W}] - W (W + 1)/2, Element[W, Integers] &amp;&amp; W &gt; 0]}];
+  Quiet[Check[Message[General::argx, &quot;W&quot;, 0], Null]];
+  {$Version, Warmup, Length[GenericWarmup]}
+)</pre></div><div class=codebox><button class=copy type=button data-target='setup-c989b25f2ea3 code-c989b25f2ea3' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-c989b25f2ea3'>(* evaluated in a forked copy of the setup kernel: TimeConstrained would not fire here (no timer thread), so the parent enforces a hard timeout of 9 s by killing this process *)
+(
+  Assum = True;
+  Residual = (Sinh[-Log[4]]) - (-15/8);
+  Result = FullSimplify[Residual, Assum];
+  Answer = Which[Result === 0, True, NumericQ[Result] &amp;&amp; TrueQ[Result != 0], False, True, Null];
+  {Residual, Result, Answer}
+)</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>(Sinh[-Log[4]]) - (-15/8)</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>result</td><td><code>FullSimplify[Residual, Assum]</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>true</code></td></tr></table></details></td></tr><tr class=lead><td>wolfram-refine 14.3.0 <button type=button class='xchip x-experimental' data-note='0' aria-label='experimental: forked kernel'>experimental</button></td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → 0 · result → 0</td><td class=num>0.02</td><td><a href='../../../../run/wolfram-refine-20261014-174804/index.html'>2026-10-14 17:48:04</a> <code>ba9dc4def822</code></td><td class=code>(Sinh[(-Log[4])] == (-15/8))</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-40c00a675fe6'>(
+  $HistoryLength = 0;
+  $Messages = {};
+  Warmup = Refine[Sin[W]^2 + Cos[W]^2, Element[W, Reals]];
+  GenericWarmup = Quiet[{Simplify[Abs[W] + W, W &lt; 0], Simplify[Sqrt[W^2] - W, W &gt; 0], Refine[Sqrt[W^2], W &gt; 0], Simplify[Log[W V] - Log[W] - Log[V], W &gt; 0 &amp;&amp; V &gt; 0], Simplify[Log[-W] - Log[W] - I Pi, W &lt; 0], Simplify[(-1)^(2 W) - 1, Element[W, Integers]], Simplify[Mod[W + 1, 2], Element[W, Integers] &amp;&amp; Element[(W - 1)/2, Integers]], Simplify[ArcTan[W] + ArcTan[1/W] - Pi/2, W &gt; 0], FullSimplify[ArcCot[W] - ArcTan[1/W], W &gt; 0], Simplify[Abs[Exp[I W]] - 1, Element[W, Reals]], Simplify[Re[W] - (W + Conjugate[W])/2], Simplify[Gamma[W + 1] - W!, Element[W, Integers] &amp;&amp; W &gt; 0], Simplify[Floor[W] - W, Element[W, Integers]], Simplify[Sqrt[W] Sqrt[V] - Sqrt[W V], W &gt; 0 &amp;&amp; V &gt; 0], Simplify[HeavisideTheta[W] - 1, W &gt; 0], Simplify[2^W 2^V - 2^(W + V), Element[W, Reals] &amp;&amp; Element[V, Reals]], Simplify[Sum[V, {V, 1, W}] - W (W + 1)/2, Element[W, Integers] &amp;&amp; W &gt; 0]}];
+  Quiet[Check[Message[General::argx, &quot;W&quot;, 0], Null]];
+  {$Version, Warmup, Length[GenericWarmup]}
+)</pre></div><div class=codebox><button class=copy type=button data-target='setup-40c00a675fe6 code-40c00a675fe6' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-40c00a675fe6'>(* evaluated in a forked copy of the setup kernel: TimeConstrained would not fire here (no timer thread), so the parent enforces a hard timeout of 9 s by killing this process *)
+(
+  Assum = True;
+  Residual = (Sinh[-Log[4]]) - (-15/8);
+  Result = Refine[Residual, Assum];
+  Answer = Which[Result === 0, True, NumericQ[Result] &amp;&amp; TrueQ[Result != 0], False, True, Null];
+  {Residual, Result, Answer}
+)</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>(Sinh[-Log[4]]) - (-15/8)</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>result</td><td><code>Refine[Residual, Assum]</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>true</code></td></tr></table></details></td></tr><tr class=lead><td>wolfram-simplify 14.3.0 <button type=button class='xchip x-experimental' data-note='0' aria-label='experimental: forked kernel'>experimental</button></td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → 0 · result → 0</td><td class=num>0.02</td><td><a href='../../../../run/wolfram-simplify-20261014-174750/index.html'>2026-10-14 17:47:50</a> <code>ba9dc4def822</code></td><td class=code>(Sinh[(-Log[4])] == (-15/8))</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-af484aa1a4b1'>(
+  $HistoryLength = 0;
+  $Messages = {};
+  Warmup = Simplify[Sin[W]^2 + Cos[W]^2, Element[W, Reals]];
+  GenericWarmup = Quiet[{Simplify[Abs[W] + W, W &lt; 0], Simplify[Sqrt[W^2] - W, W &gt; 0], Refine[Sqrt[W^2], W &gt; 0], Simplify[Log[W V] - Log[W] - Log[V], W &gt; 0 &amp;&amp; V &gt; 0], Simplify[Log[-W] - Log[W] - I Pi, W &lt; 0], Simplify[(-1)^(2 W) - 1, Element[W, Integers]], Simplify[Mod[W + 1, 2], Element[W, Integers] &amp;&amp; Element[(W - 1)/2, Integers]], Simplify[ArcTan[W] + ArcTan[1/W] - Pi/2, W &gt; 0], FullSimplify[ArcCot[W] - ArcTan[1/W], W &gt; 0], Simplify[Abs[Exp[I W]] - 1, Element[W, Reals]], Simplify[Re[W] - (W + Conjugate[W])/2], Simplify[Gamma[W + 1] - W!, Element[W, Integers] &amp;&amp; W &gt; 0], Simplify[Floor[W] - W, Element[W, Integers]], Simplify[Sqrt[W] Sqrt[V] - Sqrt[W V], W &gt; 0 &amp;&amp; V &gt; 0], Simplify[HeavisideTheta[W] - 1, W &gt; 0], Simplify[2^W 2^V - 2^(W + V), Element[W, Reals] &amp;&amp; Element[V, Reals]], Simplify[Sum[V, {V, 1, W}] - W (W + 1)/2, Element[W, Integers] &amp;&amp; W &gt; 0]}];
+  Quiet[Check[Message[General::argx, &quot;W&quot;, 0], Null]];
+  {$Version, Warmup, Length[GenericWarmup]}
+)</pre></div><div class=codebox><button class=copy type=button data-target='setup-af484aa1a4b1 code-af484aa1a4b1' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-af484aa1a4b1'>(* evaluated in a forked copy of the setup kernel: TimeConstrained would not fire here (no timer thread), so the parent enforces a hard timeout of 9 s by killing this process *)
+(
+  Assum = True;
+  Residual = (Sinh[-Log[4]]) - (-15/8);
+  Result = Simplify[Residual, Assum];
+  Answer = Which[Result === 0, True, NumericQ[Result] &amp;&amp; TrueQ[Result != 0], False, True, Null];
+  {Residual, Result, Answer}
+)</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>(Sinh[-Log[4]]) - (-15/8)</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>result</td><td><code>Simplify[Residual, Assum]</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>true</code></td></tr></table></details></td></tr></tbody></table></div><details class=older><summary>Older runs (18)</summary><div class=wrap><table><thead><tr><th>system</th><th>outcome</th><th>answer</th><th>steps (from the trace)</th><th class=num>s</th><th>run</th><th>query (as sent)</th><th>detail</th></tr></thead><tbody><tr class=lead><td>wolfram-fullsimplify 14.3.0 <button type=button class='xchip x-experimental' data-note='0' aria-label='experimental: forked kernel'>experimental</button></td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → 0 · result → 0</td><td class=num>0.02</td><td><a href='../../../../run/wolfram-fullsimplify-20261013-172442/index.html'>2026-10-13 17:24:42</a> <code>ba9dc4def822</code></td><td class=code>(Sinh[(-Log[4])] == (-15/8))</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-0d10363447d9'>(
   $HistoryLength = 0;
   $Messages = {};
   Warmup = FullSimplify[Sin[W]^2 + Cos[W]^2, Element[W, Reals]];
@@ -394,7 +455,53 @@ print(Result, Answer, sep=&#x27;\n&#x27;)
   Result = Simplify[Residual, Assum];
   Answer = Which[Result === 0, True, NumericQ[Result] &amp;&amp; TrueQ[Result != 0], False, True, Null];
   {Residual, Result, Answer}
-)</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>(Sinh[-Log[4]]) - (-15/8)</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>result</td><td><code>Simplify[Residual, Assum]</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>true</code></td></tr></table></details></td></tr></tbody></table></div><details class=older><summary>Older runs (11)</summary><div class=wrap><table><thead><tr><th>system</th><th>outcome</th><th>answer</th><th>steps (from the trace)</th><th class=num>s</th><th>run</th><th>query (as sent)</th><th>detail</th></tr></thead><tbody><tr class=lead><td>wolfram-fullsimplify 14.3.0 <button type=button class='xchip x-experimental' data-note='0' aria-label='experimental: forked kernel'>experimental</button></td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → 0 · result → 0</td><td class=num>0.02</td><td><a href='../../../../run/wolfram-fullsimplify-20261013-164300/index.html'>2026-10-13 16:43:00</a> <code>3ba0dfac4bca</code></td><td class=code>(Sinh[(-Log[4])] == (-15/8))</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-bf57efc8105d'>(
+)</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>(Sinh[-Log[4]]) - (-15/8)</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>result</td><td><code>Simplify[Residual, Assum]</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>true</code></td></tr></table></details></td></tr><tr class=lead><td>sympy-simplify 1.14.0</td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → 15/8 - sinh(log(4)) · simplify → 0</td><td class=num>0.093</td><td><a href='../../../../run/sympy-simplify-20261013-172401/index.html'>2026-10-13 17:24:01</a> <code>ba9dc4def822</code></td><td class=code>Eq(sinh((-log(4))), Rational(-15, 8))</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-07fd5612cabe'>from sympy import *
+import sympy
+
+SympyVersion = sympy.__version__
+# warm-up: a fixed generic expression, never case content
+W = Symbol(&#x27;W&#x27;)
+Warmup = simplify(sin(W)**2 + cos(W)**2)
+# every query then runs in its own forked process, starting from this state:
+# the expression caches are dropped (imported and lazily loaded modules stay)
+sympy.core.cache.clear_cache()
+</pre></div><div class=codebox><button class=copy type=button data-target='setup-07fd5612cabe code-07fd5612cabe' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-07fd5612cabe'>Residual = sinh(-log(4)) - Rational(-15, 8)
+Result = simplify(Residual)
+# true iff the result is 0; false only if it is a definite nonzero number
+Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+print(Result, Answer, sep=&#x27;\n&#x27;)
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>sinh(-log(4)) - Rational(-15, 8)</code></td><td>→</td><td><code>15/8 - sinh(log(4))</code></td></tr><tr><td class=lbl>simplify</td><td><code>simplify(Residual)</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>true</code></td></tr></table></details></td></tr><tr class=lead><td>sympy-refine 1.14.0</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist>difference → 15/8 - sinh(log(4)) · refine → 15/8 - sinh(log(4))</td><td class=num>0.042</td><td><a href='../../../../run/sympy-refine-20261013-172230/index.html'>2026-10-13 17:22:30</a> <code>ba9dc4def822</code></td><td class=code>Eq(sinh((-log(4))), Rational(-15, 8))</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-357964b9f08c'>from sympy import *
+import sympy
+
+SympyVersion = sympy.__version__
+# warm-up: a fixed generic expression, never case content
+W = Symbol(&#x27;W&#x27;)
+Warmup = refine(Abs(W), Q.positive(W))
+# every query then runs in its own forked process, starting from this state:
+# the expression caches are dropped (imported and lazily loaded modules stay)
+sympy.core.cache.clear_cache()
+</pre></div><div class=codebox><button class=copy type=button data-target='setup-357964b9f08c code-357964b9f08c' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-357964b9f08c'>Assum = And()
+Residual = sinh(-log(4)) - Rational(-15, 8)
+Result = refine(Residual, Assum)
+# true iff the result is 0; false only if it is a definite nonzero number
+Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+print(Result, Answer, sep=&#x27;\n&#x27;)
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>sinh(-log(4)) - Rational(-15, 8)</code></td><td>→</td><td><code>15/8 - sinh(log(4))</code></td></tr><tr><td class=lbl>refine</td><td><code>refine(Residual, Assum)</code></td><td>→</td><td><code>15/8 - sinh(log(4))</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class=lead><td>sympy-ask 1.14.0</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist>difference → 15/8 - sinh(log(4)) · ask → None</td><td class=num>0.056</td><td><a href='../../../../run/sympy-ask-20261013-172119/index.html'>2026-10-13 17:21:19</a> <code>ba9dc4def822</code></td><td class=code>Eq(sinh((-log(4))), Rational(-15, 8))</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-30a7a321311f'>from sympy import *
+import sympy
+
+SympyVersion = sympy.__version__
+# warm-up: a fixed generic expression, never case content
+W = Symbol(&#x27;W&#x27;)
+Warmup = ask(Q.positive(W**2 + 1), Q.real(W))
+# every query then runs in its own forked process, starting from this state:
+# the expression caches are dropped (imported and lazily loaded modules stay)
+sympy.core.cache.clear_cache()
+</pre></div><div class=codebox><button class=copy type=button data-target='setup-30a7a321311f code-30a7a321311f' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-30a7a321311f'>Assum = And()
+Residual = sinh(-log(4)) - Rational(-15, 8)
+# not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
+Answer = ask(Q.zero(Residual), Assum)
+print(Residual, Answer, sep=&#x27;\n&#x27;)
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>sinh(-log(4)) - Rational(-15, 8)</code></td><td>→</td><td><code>15/8 - sinh(log(4))</code></td></tr><tr><td class=lbl>ask</td><td><code>Q.zero(Residual)</code></td><td>→</td><td><code>None</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr><td>always-none</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist></td><td class=num>0.0</td><td><a href='../../../../run/always-none-20261013-172118/index.html'>2026-10-13 17:21:18</a> <code>ba9dc4def822</code></td><td class=code>(= (sinh (- (log 4))) -15/8)</td><td class=code>null</td></tr><tr class=lead><td>wolfram-fullsimplify 14.3.0 <button type=button class='xchip x-experimental' data-note='0' aria-label='experimental: forked kernel'>experimental</button></td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → 0 · result → 0</td><td class=num>0.02</td><td><a href='../../../../run/wolfram-fullsimplify-20261013-164300/index.html'>2026-10-13 16:43:00</a> <code>3ba0dfac4bca</code></td><td class=code>(Sinh[(-Log[4])] == (-15/8))</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-bf57efc8105d'>(
   $HistoryLength = 0;
   $Messages = {};
   Warmup = FullSimplify[Sin[W]^2 + Cos[W]^2, Element[W, Reals]];
