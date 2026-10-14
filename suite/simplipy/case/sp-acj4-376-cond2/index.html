@@ -563,7 +563,7 @@ var id=a.getAttribute('data-case');
 if(cache.hasOwnProperty(id))return cache[id];
 var d=data.hasOwnProperty(id)?data[id]:{m:1};
 var out='<div class=cp-head><b>'+h(id)+'</b>'+(d.c?' · '+h(d.c):'')
-+(d.u?' <span class="badge">unofficial</span>':'')+'</div>';
++(d.u?' <span class="badge">unofficial</span>':'')+(d.r?' <span class="badge">unreviewed</span>':'')+(d.a?' <span class="badge">agent-reviewed</span>':'')+'</div>';
 if(d.m||d.q==null){out+='<p class=cp-na>source not available</p>';}
 else{out+='<div class=cp-stmt><div class=cp-lbl>Given</div><div class=cp-given>'
 +(d.g?tex(d.g):'<span class=z>nothing</span>')+'</div><div class=cp-lbl>Claim</div>'
