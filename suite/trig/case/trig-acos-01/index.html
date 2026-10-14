@@ -261,7 +261,27 @@ details.sec>summary{cursor:pointer;list-style-position:outside;margin-left:1.1em
   (var x real)
   (assume (<a class=ln href='../../../../definitions/index.html#positive'>positive</a> x)) (assume (&lt; x 3))
   (ask (= (<a class=ln href='../../../../definitions/index.html#acos'>acos</a> (<a class=ln href='../../../../definitions/index.html#cos'>cos</a> x)) x))
-  (expect true))</pre></div></details><h2>Answers <span class=sub>(latest run per system and CAS version; open <i>code</i> for the reproducer that ran)</span></h2><div class='wrap ans'><table class=mx><thead><tr><th>system</th><th>outcome</th><th>answer</th><th>steps (from the trace)</th><th class=num>s</th><th>run</th><th>query (as sent)</th><th>detail</th></tr></thead><tbody><tr class=cas><th colspan=8>none</th></tr><tr><td>always-none</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist></td><td class=num>0.0</td><td><a href='../../../../run/always-none-20261013-172103/index.html'>2026-10-13 17:21:03</a> <code>7a1dcfa636ed</code></td><td class=code>(real x) ∧ (positive x) ∧ (&lt; x 3)  ⊢  (= (acos (cos x)) x)</td><td class=code>null</td></tr><tr class=cas><th colspan=8>sympy <button class=ox type=button data-g='sympy' aria-expanded=false title='show the other versions of sympy'>older versions 3</button></th></tr><tr class=lead><td>sympy-ask 1.14.0</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist>difference → -x + acos(cos(x)) · ask → None</td><td class=num>0.072</td><td><a href='../../../../run/sympy-ask-20261013-172103/index.html'>2026-10-13 17:21:03</a> <code>7a1dcfa636ed</code></td><td class=code>Q.real(x) ∧ Q.positive(x) ∧ (x &lt; 3)  ⊢  Eq(acos(cos(x)), x)</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-cad5893a71f5'>from sympy import *
+  (expect true))</pre></div></details><h2>Answers <span class=sub>(latest run per system and CAS version; open <i>code</i> for the reproducer that ran)</span></h2><div class='wrap ans'><table class=mx><thead><tr><th>system</th><th>outcome</th><th>answer</th><th>steps (from the trace)</th><th class=num>s</th><th>run</th><th>query (as sent)</th><th>detail</th></tr></thead><tbody><tr class=cas><th colspan=8>none</th></tr><tr><td>always-none</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist></td><td class=num>0.0</td><td><a href='../../../../run/always-none-20261014-174242/index.html'>2026-10-14 17:42:42</a> <code>06360ba68b97</code></td><td class=code>(real x) ∧ (positive x) ∧ (&lt; x 3)  ⊢  (= (acos (cos x)) x)</td><td class=code>null</td></tr><tr class=cas><th colspan=8>satrefine</th></tr><tr class=lead><td>satrefine-refine 0.1.0</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist>difference → -x + acos(cos(x)) · satrefine.refine → -x + acos(cos(x))</td><td class=num>0.076</td><td><a href='../../../../run/satrefine-refine-20261014-174247/index.html'>2026-10-14 17:42:47</a> <code>06360ba68b97</code></td><td class=code>Q.real(x) ∧ Q.positive(x) ∧ (x &lt; 3)  ⊢  Eq(acos(cos(x)), x)</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-baf52cd453f5'>from sympy import *
+import sympy
+
+SympyVersion = sympy.__version__
+import satrefine
+import importlib.metadata
+CasVersion = importlib.metadata.version(&#x27;satrefine&#x27;)
+# warm-up: a fixed generic expression, never case content
+W = Symbol(&#x27;W&#x27;)
+Warmup = satrefine.refine(Abs(W), Q.positive(W))
+# every query then runs in its own forked process, starting from this state:
+# the expression caches are dropped (imported and lazily loaded modules stay)
+sympy.core.cache.clear_cache()
+</pre></div><div class=codebox><button class=copy type=button data-target='setup-baf52cd453f5 code-baf52cd453f5' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-baf52cd453f5'>x = Symbol(&#x27;x&#x27;, real=True)
+Assum = And(Q.real(x), Q.positive(x), x &lt; 3)
+Residual = acos(cos(x)) - x
+Result = satrefine.refine(Residual, Assum)
+# true iff the result is 0; false only if it is a definite nonzero number
+Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+print(Result, Answer, sep=&#x27;\n&#x27;)
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>acos(cos(x)) - x</code></td><td>→</td><td><code>-x + acos(cos(x))</code></td></tr><tr><td class=lbl>satrefine.refine</td><td><code>satrefine.refine(Residual, Assum)</code></td><td>→</td><td><code>-x + acos(cos(x))</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class=cas><th colspan=8>sympy <button class=ox type=button data-g='sympy' aria-expanded=false title='show the other versions of sympy'>older versions 3</button></th></tr><tr class=lead><td>sympy-ask 1.14.0</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist>difference → -x + acos(cos(x)) · ask → None</td><td class=num>0.072</td><td><a href='../../../../run/sympy-ask-20261014-174242/index.html'>2026-10-14 17:42:42</a> <code>06360ba68b97</code></td><td class=code>Q.real(x) ∧ Q.positive(x) ∧ (x &lt; 3)  ⊢  Eq(acos(cos(x)), x)</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-dbb888496bb3'>from sympy import *
 import sympy
 
 SympyVersion = sympy.__version__
@@ -271,13 +291,13 @@ Warmup = ask(Q.positive(W**2 + 1), Q.real(W))
 # every query then runs in its own forked process, starting from this state:
 # the expression caches are dropped (imported and lazily loaded modules stay)
 sympy.core.cache.clear_cache()
-</pre></div><div class=codebox><button class=copy type=button data-target='setup-cad5893a71f5 code-cad5893a71f5' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-cad5893a71f5'>x = Symbol(&#x27;x&#x27;, real=True)
+</pre></div><div class=codebox><button class=copy type=button data-target='setup-dbb888496bb3 code-dbb888496bb3' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-dbb888496bb3'>x = Symbol(&#x27;x&#x27;, real=True)
 Assum = And(Q.real(x), Q.positive(x), x &lt; 3)
 Residual = acos(cos(x)) - x
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
 Answer = ask(Q.zero(Residual), Assum)
 print(Residual, Answer, sep=&#x27;\n&#x27;)
-</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>acos(cos(x)) - x</code></td><td>→</td><td><code>-x + acos(cos(x))</code></td></tr><tr><td class=lbl>ask</td><td><code>Q.zero(Residual)</code></td><td>→</td><td><code>None</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class=lead><td>sympy-refine 1.14.0</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist>difference → -x + acos(cos(x)) · refine → -x + acos(cos(x))</td><td class=num>0.037</td><td><a href='../../../../run/sympy-refine-20261013-172106/index.html'>2026-10-13 17:21:06</a> <code>7a1dcfa636ed</code></td><td class=code>Q.real(x) ∧ Q.positive(x) ∧ (x &lt; 3)  ⊢  Eq(acos(cos(x)), x)</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-d79e9f294769'>from sympy import *
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>acos(cos(x)) - x</code></td><td>→</td><td><code>-x + acos(cos(x))</code></td></tr><tr><td class=lbl>ask</td><td><code>Q.zero(Residual)</code></td><td>→</td><td><code>None</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class=lead><td>sympy-refine 1.14.0</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist>difference → -x + acos(cos(x)) · refine → -x + acos(cos(x))</td><td class=num>0.036</td><td><a href='../../../../run/sympy-refine-20261014-174244/index.html'>2026-10-14 17:42:44</a> <code>06360ba68b97</code></td><td class=code>Q.real(x) ∧ Q.positive(x) ∧ (x &lt; 3)  ⊢  Eq(acos(cos(x)), x)</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-9db3f412ba80'>from sympy import *
 import sympy
 
 SympyVersion = sympy.__version__
@@ -287,14 +307,14 @@ Warmup = refine(Abs(W), Q.positive(W))
 # every query then runs in its own forked process, starting from this state:
 # the expression caches are dropped (imported and lazily loaded modules stay)
 sympy.core.cache.clear_cache()
-</pre></div><div class=codebox><button class=copy type=button data-target='setup-d79e9f294769 code-d79e9f294769' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-d79e9f294769'>x = Symbol(&#x27;x&#x27;, real=True)
+</pre></div><div class=codebox><button class=copy type=button data-target='setup-9db3f412ba80 code-9db3f412ba80' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-9db3f412ba80'>x = Symbol(&#x27;x&#x27;, real=True)
 Assum = And(Q.real(x), Q.positive(x), x &lt; 3)
 Residual = acos(cos(x)) - x
 Result = refine(Residual, Assum)
 # true iff the result is 0; false only if it is a definite nonzero number
 Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
 print(Result, Answer, sep=&#x27;\n&#x27;)
-</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>acos(cos(x)) - x</code></td><td>→</td><td><code>-x + acos(cos(x))</code></td></tr><tr><td class=lbl>refine</td><td><code>refine(Residual, Assum)</code></td><td>→</td><td><code>-x + acos(cos(x))</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class=lead><td>sympy-simplify 1.14.0</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist>difference → -x + acos(cos(x)) · simplify → -x + acos(cos(x))</td><td class=num>0.032</td><td><a href='../../../../run/sympy-simplify-20261013-172107/index.html'>2026-10-13 17:21:07</a> <code>7a1dcfa636ed</code></td><td class=code>Q.real(x) ∧ Q.positive(x) ∧ (x &lt; 3)  ⊢  Eq(acos(cos(x)), x)</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-c1e5132344f5'>from sympy import *
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>acos(cos(x)) - x</code></td><td>→</td><td><code>-x + acos(cos(x))</code></td></tr><tr><td class=lbl>refine</td><td><code>refine(Residual, Assum)</code></td><td>→</td><td><code>-x + acos(cos(x))</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class=lead><td>sympy-simplify 1.14.0</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist>difference → -x + acos(cos(x)) · simplify → -x + acos(cos(x))</td><td class=num>0.032</td><td><a href='../../../../run/sympy-simplify-20261014-174246/index.html'>2026-10-14 17:42:46</a> <code>06360ba68b97</code></td><td class=code>Q.real(x) ∧ Q.positive(x) ∧ (x &lt; 3)  ⊢  Eq(acos(cos(x)), x)</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-f9bc2b36056e'>from sympy import *
 import sympy
 
 SympyVersion = sympy.__version__
@@ -304,7 +324,7 @@ Warmup = simplify(sin(W)**2 + cos(W)**2)
 # every query then runs in its own forked process, starting from this state:
 # the expression caches are dropped (imported and lazily loaded modules stay)
 sympy.core.cache.clear_cache()
-</pre></div><div class=codebox><button class=copy type=button data-target='setup-c1e5132344f5 code-c1e5132344f5' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-c1e5132344f5'>x = Symbol(&#x27;x&#x27;, real=True, positive=True)
+</pre></div><div class=codebox><button class=copy type=button data-target='setup-f9bc2b36056e code-f9bc2b36056e' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-f9bc2b36056e'>x = Symbol(&#x27;x&#x27;, real=True, positive=True)
 # dropped (not a unary fact about one symbol): x &lt; 3
 Residual = acos(cos(x)) - x
 Result = simplify(Residual)
@@ -361,7 +381,49 @@ Result = simplify(Residual)
 # true iff the result is 0; false only if it is a definite nonzero number
 Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
 print(Result, Answer, sep=&#x27;\n&#x27;)
-</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>acos(cos(x)) - x</code></td><td>→</td><td><code>-x + acos(cos(x))</code></td></tr><tr><td class=lbl>simplify</td><td><code>simplify(Residual)</code></td><td>→</td><td><code>-x + acos(cos(x))</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class=cas><th colspan=8>wolfram</th></tr><tr class=lead><td>wolfram-fullsimplify 14.3.0 <button type=button class='xchip x-experimental' data-note='0' aria-label='experimental: forked kernel'>experimental</button></td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → -x + ArcCos[Cos[x]] · result → 0</td><td class=num>0.022</td><td><a href='../../../../run/wolfram-fullsimplify-20261013-172115/index.html'>2026-10-13 17:21:15</a> <code>7a1dcfa636ed</code></td><td class=code>Element[x, Reals] ∧ (Element[x, Reals] &amp;&amp; x &gt; 0) ∧ (x &lt; 3)  ⊢  (ArcCos[Cos[x]] == x)</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-a6cfda5b1e54'>(
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>acos(cos(x)) - x</code></td><td>→</td><td><code>-x + acos(cos(x))</code></td></tr><tr><td class=lbl>simplify</td><td><code>simplify(Residual)</code></td><td>→</td><td><code>-x + acos(cos(x))</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class=cas><th colspan=8>wolfram</th></tr><tr class=lead><td>wolfram-fullsimplify 14.3.0 <button type=button class='xchip x-experimental' data-note='0' aria-label='experimental: forked kernel'>experimental</button></td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → -x + ArcCos[Cos[x]] · result → 0</td><td class=num>0.022</td><td><a href='../../../../run/wolfram-fullsimplify-20261014-174255/index.html'>2026-10-14 17:42:55</a> <code>06360ba68b97</code></td><td class=code>Element[x, Reals] ∧ (Element[x, Reals] &amp;&amp; x &gt; 0) ∧ (x &lt; 3)  ⊢  (ArcCos[Cos[x]] == x)</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-b82de0cc896c'>(
+  $HistoryLength = 0;
+  $Messages = {};
+  Warmup = FullSimplify[Sin[W]^2 + Cos[W]^2, Element[W, Reals]];
+  GenericWarmup = Quiet[{Simplify[Abs[W] + W, W &lt; 0], Simplify[Sqrt[W^2] - W, W &gt; 0], Refine[Sqrt[W^2], W &gt; 0], Simplify[Log[W V] - Log[W] - Log[V], W &gt; 0 &amp;&amp; V &gt; 0], Simplify[Log[-W] - Log[W] - I Pi, W &lt; 0], Simplify[(-1)^(2 W) - 1, Element[W, Integers]], Simplify[Mod[W + 1, 2], Element[W, Integers] &amp;&amp; Element[(W - 1)/2, Integers]], Simplify[ArcTan[W] + ArcTan[1/W] - Pi/2, W &gt; 0], FullSimplify[ArcCot[W] - ArcTan[1/W], W &gt; 0], Simplify[Abs[Exp[I W]] - 1, Element[W, Reals]], Simplify[Re[W] - (W + Conjugate[W])/2], Simplify[Gamma[W + 1] - W!, Element[W, Integers] &amp;&amp; W &gt; 0], Simplify[Floor[W] - W, Element[W, Integers]], Simplify[Sqrt[W] Sqrt[V] - Sqrt[W V], W &gt; 0 &amp;&amp; V &gt; 0], Simplify[HeavisideTheta[W] - 1, W &gt; 0], Simplify[2^W 2^V - 2^(W + V), Element[W, Reals] &amp;&amp; Element[V, Reals]], Simplify[Sum[V, {V, 1, W}] - W (W + 1)/2, Element[W, Integers] &amp;&amp; W &gt; 0]}];
+  Quiet[Check[Message[General::argx, &quot;W&quot;, 0], Null]];
+  {$Version, Warmup, Length[GenericWarmup]}
+)</pre></div><div class=codebox><button class=copy type=button data-target='setup-b82de0cc896c code-b82de0cc896c' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-b82de0cc896c'>(* evaluated in a forked copy of the setup kernel: TimeConstrained would not fire here (no timer thread), so the parent enforces a hard timeout of 9 s by killing this process *)
+(
+  Assum = (Element[x, Reals]) &amp;&amp; ((Element[x, Reals] &amp;&amp; x &gt; 0)) &amp;&amp; ((x &lt; 3));
+  Residual = (ArcCos[Cos[x]]) - (x);
+  Result = FullSimplify[Residual, Assum];
+  Answer = Which[Result === 0, True, NumericQ[Result] &amp;&amp; TrueQ[Result != 0], False, True, Null];
+  {Residual, Result, Answer}
+)</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>(ArcCos[Cos[x]]) - (x)</code></td><td>→</td><td><code>-x + ArcCos[Cos[x]]</code></td></tr><tr><td class=lbl>result</td><td><code>FullSimplify[Residual, Assum]</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>true</code></td></tr></table></details></td></tr><tr class=lead><td>wolfram-refine 14.3.0 <button type=button class='xchip x-experimental' data-note='0' aria-label='experimental: forked kernel'>experimental</button></td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → -x + ArcCos[Cos[x]] · result → 0</td><td class=num>0.022</td><td><a href='../../../../run/wolfram-refine-20261014-174252/index.html'>2026-10-14 17:42:52</a> <code>06360ba68b97</code></td><td class=code>Element[x, Reals] ∧ (Element[x, Reals] &amp;&amp; x &gt; 0) ∧ (x &lt; 3)  ⊢  (ArcCos[Cos[x]] == x)</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-2a8b57f40f43'>(
+  $HistoryLength = 0;
+  $Messages = {};
+  Warmup = Refine[Sin[W]^2 + Cos[W]^2, Element[W, Reals]];
+  GenericWarmup = Quiet[{Simplify[Abs[W] + W, W &lt; 0], Simplify[Sqrt[W^2] - W, W &gt; 0], Refine[Sqrt[W^2], W &gt; 0], Simplify[Log[W V] - Log[W] - Log[V], W &gt; 0 &amp;&amp; V &gt; 0], Simplify[Log[-W] - Log[W] - I Pi, W &lt; 0], Simplify[(-1)^(2 W) - 1, Element[W, Integers]], Simplify[Mod[W + 1, 2], Element[W, Integers] &amp;&amp; Element[(W - 1)/2, Integers]], Simplify[ArcTan[W] + ArcTan[1/W] - Pi/2, W &gt; 0], FullSimplify[ArcCot[W] - ArcTan[1/W], W &gt; 0], Simplify[Abs[Exp[I W]] - 1, Element[W, Reals]], Simplify[Re[W] - (W + Conjugate[W])/2], Simplify[Gamma[W + 1] - W!, Element[W, Integers] &amp;&amp; W &gt; 0], Simplify[Floor[W] - W, Element[W, Integers]], Simplify[Sqrt[W] Sqrt[V] - Sqrt[W V], W &gt; 0 &amp;&amp; V &gt; 0], Simplify[HeavisideTheta[W] - 1, W &gt; 0], Simplify[2^W 2^V - 2^(W + V), Element[W, Reals] &amp;&amp; Element[V, Reals]], Simplify[Sum[V, {V, 1, W}] - W (W + 1)/2, Element[W, Integers] &amp;&amp; W &gt; 0]}];
+  Quiet[Check[Message[General::argx, &quot;W&quot;, 0], Null]];
+  {$Version, Warmup, Length[GenericWarmup]}
+)</pre></div><div class=codebox><button class=copy type=button data-target='setup-2a8b57f40f43 code-2a8b57f40f43' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-2a8b57f40f43'>(* evaluated in a forked copy of the setup kernel: TimeConstrained would not fire here (no timer thread), so the parent enforces a hard timeout of 9 s by killing this process *)
+(
+  Assum = (Element[x, Reals]) &amp;&amp; ((Element[x, Reals] &amp;&amp; x &gt; 0)) &amp;&amp; ((x &lt; 3));
+  Residual = (ArcCos[Cos[x]]) - (x);
+  Result = Refine[Residual, Assum];
+  Answer = Which[Result === 0, True, NumericQ[Result] &amp;&amp; TrueQ[Result != 0], False, True, Null];
+  {Residual, Result, Answer}
+)</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>(ArcCos[Cos[x]]) - (x)</code></td><td>→</td><td><code>-x + ArcCos[Cos[x]]</code></td></tr><tr><td class=lbl>result</td><td><code>Refine[Residual, Assum]</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>true</code></td></tr></table></details></td></tr><tr class=lead><td>wolfram-simplify 14.3.0 <button type=button class='xchip x-experimental' data-note='0' aria-label='experimental: forked kernel'>experimental</button></td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → -x + ArcCos[Cos[x]] · result → 0</td><td class=num>0.022</td><td><a href='../../../../run/wolfram-simplify-20261014-174249/index.html'>2026-10-14 17:42:49</a> <code>06360ba68b97</code></td><td class=code>Element[x, Reals] ∧ (Element[x, Reals] &amp;&amp; x &gt; 0) ∧ (x &lt; 3)  ⊢  (ArcCos[Cos[x]] == x)</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-734f33786824'>(
+  $HistoryLength = 0;
+  $Messages = {};
+  Warmup = Simplify[Sin[W]^2 + Cos[W]^2, Element[W, Reals]];
+  GenericWarmup = Quiet[{Simplify[Abs[W] + W, W &lt; 0], Simplify[Sqrt[W^2] - W, W &gt; 0], Refine[Sqrt[W^2], W &gt; 0], Simplify[Log[W V] - Log[W] - Log[V], W &gt; 0 &amp;&amp; V &gt; 0], Simplify[Log[-W] - Log[W] - I Pi, W &lt; 0], Simplify[(-1)^(2 W) - 1, Element[W, Integers]], Simplify[Mod[W + 1, 2], Element[W, Integers] &amp;&amp; Element[(W - 1)/2, Integers]], Simplify[ArcTan[W] + ArcTan[1/W] - Pi/2, W &gt; 0], FullSimplify[ArcCot[W] - ArcTan[1/W], W &gt; 0], Simplify[Abs[Exp[I W]] - 1, Element[W, Reals]], Simplify[Re[W] - (W + Conjugate[W])/2], Simplify[Gamma[W + 1] - W!, Element[W, Integers] &amp;&amp; W &gt; 0], Simplify[Floor[W] - W, Element[W, Integers]], Simplify[Sqrt[W] Sqrt[V] - Sqrt[W V], W &gt; 0 &amp;&amp; V &gt; 0], Simplify[HeavisideTheta[W] - 1, W &gt; 0], Simplify[2^W 2^V - 2^(W + V), Element[W, Reals] &amp;&amp; Element[V, Reals]], Simplify[Sum[V, {V, 1, W}] - W (W + 1)/2, Element[W, Integers] &amp;&amp; W &gt; 0]}];
+  Quiet[Check[Message[General::argx, &quot;W&quot;, 0], Null]];
+  {$Version, Warmup, Length[GenericWarmup]}
+)</pre></div><div class=codebox><button class=copy type=button data-target='setup-734f33786824 code-734f33786824' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-734f33786824'>(* evaluated in a forked copy of the setup kernel: TimeConstrained would not fire here (no timer thread), so the parent enforces a hard timeout of 9 s by killing this process *)
+(
+  Assum = (Element[x, Reals]) &amp;&amp; ((Element[x, Reals] &amp;&amp; x &gt; 0)) &amp;&amp; ((x &lt; 3));
+  Residual = (ArcCos[Cos[x]]) - (x);
+  Result = Simplify[Residual, Assum];
+  Answer = Which[Result === 0, True, NumericQ[Result] &amp;&amp; TrueQ[Result != 0], False, True, Null];
+  {Residual, Result, Answer}
+)</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>(ArcCos[Cos[x]]) - (x)</code></td><td>→</td><td><code>-x + ArcCos[Cos[x]]</code></td></tr><tr><td class=lbl>result</td><td><code>Simplify[Residual, Assum]</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>true</code></td></tr></table></details></td></tr></tbody></table></div><details class=older><summary>Older runs (18)</summary><div class=wrap><table><thead><tr><th>system</th><th>outcome</th><th>answer</th><th>steps (from the trace)</th><th class=num>s</th><th>run</th><th>query (as sent)</th><th>detail</th></tr></thead><tbody><tr class=lead><td>wolfram-fullsimplify 14.3.0 <button type=button class='xchip x-experimental' data-note='0' aria-label='experimental: forked kernel'>experimental</button></td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → -x + ArcCos[Cos[x]] · result → 0</td><td class=num>0.022</td><td><a href='../../../../run/wolfram-fullsimplify-20261013-172115/index.html'>2026-10-13 17:21:15</a> <code>7a1dcfa636ed</code></td><td class=code>Element[x, Reals] ∧ (Element[x, Reals] &amp;&amp; x &gt; 0) ∧ (x &lt; 3)  ⊢  (ArcCos[Cos[x]] == x)</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-a6cfda5b1e54'>(
   $HistoryLength = 0;
   $Messages = {};
   Warmup = FullSimplify[Sin[W]^2 + Cos[W]^2, Element[W, Reals]];
@@ -403,7 +465,57 @@ print(Result, Answer, sep=&#x27;\n&#x27;)
   Result = Simplify[Residual, Assum];
   Answer = Which[Result === 0, True, NumericQ[Result] &amp;&amp; TrueQ[Result != 0], False, True, Null];
   {Residual, Result, Answer}
-)</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>(ArcCos[Cos[x]]) - (x)</code></td><td>→</td><td><code>-x + ArcCos[Cos[x]]</code></td></tr><tr><td class=lbl>result</td><td><code>Simplify[Residual, Assum]</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>true</code></td></tr></table></details></td></tr></tbody></table></div><details class=older><summary>Older runs (11)</summary><div class=wrap><table><thead><tr><th>system</th><th>outcome</th><th>answer</th><th>steps (from the trace)</th><th class=num>s</th><th>run</th><th>query (as sent)</th><th>detail</th></tr></thead><tbody><tr class=lead><td>wolfram-fullsimplify 14.3.0 <button type=button class='xchip x-experimental' data-note='0' aria-label='experimental: forked kernel'>experimental</button></td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → -x + ArcCos[Cos[x]] · result → 0</td><td class=num>0.022</td><td><a href='../../../../run/wolfram-fullsimplify-20261013-163924/index.html'>2026-10-13 16:39:24</a> <code>1e4dbd2f7d86</code></td><td class=code>Element[x, Reals] ∧ (Element[x, Reals] &amp;&amp; x &gt; 0) ∧ (x &lt; 3)  ⊢  (ArcCos[Cos[x]] == x)</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-4c6ec322eaad'>(
+)</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>(ArcCos[Cos[x]]) - (x)</code></td><td>→</td><td><code>-x + ArcCos[Cos[x]]</code></td></tr><tr><td class=lbl>result</td><td><code>Simplify[Residual, Assum]</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>true</code></td></tr></table></details></td></tr><tr class=lead><td>sympy-simplify 1.14.0</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist>difference → -x + acos(cos(x)) · simplify → -x + acos(cos(x))</td><td class=num>0.032</td><td><a href='../../../../run/sympy-simplify-20261013-172107/index.html'>2026-10-13 17:21:07</a> <code>7a1dcfa636ed</code></td><td class=code>Q.real(x) ∧ Q.positive(x) ∧ (x &lt; 3)  ⊢  Eq(acos(cos(x)), x)</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-c1e5132344f5'>from sympy import *
+import sympy
+
+SympyVersion = sympy.__version__
+# warm-up: a fixed generic expression, never case content
+W = Symbol(&#x27;W&#x27;)
+Warmup = simplify(sin(W)**2 + cos(W)**2)
+# every query then runs in its own forked process, starting from this state:
+# the expression caches are dropped (imported and lazily loaded modules stay)
+sympy.core.cache.clear_cache()
+</pre></div><div class=codebox><button class=copy type=button data-target='setup-c1e5132344f5 code-c1e5132344f5' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-c1e5132344f5'>x = Symbol(&#x27;x&#x27;, real=True, positive=True)
+# dropped (not a unary fact about one symbol): x &lt; 3
+Residual = acos(cos(x)) - x
+Result = simplify(Residual)
+# true iff the result is 0; false only if it is a definite nonzero number
+Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+print(Result, Answer, sep=&#x27;\n&#x27;)
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>acos(cos(x)) - x</code></td><td>→</td><td><code>-x + acos(cos(x))</code></td></tr><tr><td class=lbl>simplify</td><td><code>simplify(Residual)</code></td><td>→</td><td><code>-x + acos(cos(x))</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class=lead><td>sympy-refine 1.14.0</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist>difference → -x + acos(cos(x)) · refine → -x + acos(cos(x))</td><td class=num>0.037</td><td><a href='../../../../run/sympy-refine-20261013-172106/index.html'>2026-10-13 17:21:06</a> <code>7a1dcfa636ed</code></td><td class=code>Q.real(x) ∧ Q.positive(x) ∧ (x &lt; 3)  ⊢  Eq(acos(cos(x)), x)</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-d79e9f294769'>from sympy import *
+import sympy
+
+SympyVersion = sympy.__version__
+# warm-up: a fixed generic expression, never case content
+W = Symbol(&#x27;W&#x27;)
+Warmup = refine(Abs(W), Q.positive(W))
+# every query then runs in its own forked process, starting from this state:
+# the expression caches are dropped (imported and lazily loaded modules stay)
+sympy.core.cache.clear_cache()
+</pre></div><div class=codebox><button class=copy type=button data-target='setup-d79e9f294769 code-d79e9f294769' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-d79e9f294769'>x = Symbol(&#x27;x&#x27;, real=True)
+Assum = And(Q.real(x), Q.positive(x), x &lt; 3)
+Residual = acos(cos(x)) - x
+Result = refine(Residual, Assum)
+# true iff the result is 0; false only if it is a definite nonzero number
+Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+print(Result, Answer, sep=&#x27;\n&#x27;)
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>acos(cos(x)) - x</code></td><td>→</td><td><code>-x + acos(cos(x))</code></td></tr><tr><td class=lbl>refine</td><td><code>refine(Residual, Assum)</code></td><td>→</td><td><code>-x + acos(cos(x))</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr><td>always-none</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist></td><td class=num>0.0</td><td><a href='../../../../run/always-none-20261013-172103/index.html'>2026-10-13 17:21:03</a> <code>7a1dcfa636ed</code></td><td class=code>(real x) ∧ (positive x) ∧ (&lt; x 3)  ⊢  (= (acos (cos x)) x)</td><td class=code>null</td></tr><tr class=lead><td>sympy-ask 1.14.0</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist>difference → -x + acos(cos(x)) · ask → None</td><td class=num>0.072</td><td><a href='../../../../run/sympy-ask-20261013-172103/index.html'>2026-10-13 17:21:03</a> <code>7a1dcfa636ed</code></td><td class=code>Q.real(x) ∧ Q.positive(x) ∧ (x &lt; 3)  ⊢  Eq(acos(cos(x)), x)</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-cad5893a71f5'>from sympy import *
+import sympy
+
+SympyVersion = sympy.__version__
+# warm-up: a fixed generic expression, never case content
+W = Symbol(&#x27;W&#x27;)
+Warmup = ask(Q.positive(W**2 + 1), Q.real(W))
+# every query then runs in its own forked process, starting from this state:
+# the expression caches are dropped (imported and lazily loaded modules stay)
+sympy.core.cache.clear_cache()
+</pre></div><div class=codebox><button class=copy type=button data-target='setup-cad5893a71f5 code-cad5893a71f5' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-cad5893a71f5'>x = Symbol(&#x27;x&#x27;, real=True)
+Assum = And(Q.real(x), Q.positive(x), x &lt; 3)
+Residual = acos(cos(x)) - x
+# not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
+Answer = ask(Q.zero(Residual), Assum)
+print(Residual, Answer, sep=&#x27;\n&#x27;)
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>acos(cos(x)) - x</code></td><td>→</td><td><code>-x + acos(cos(x))</code></td></tr><tr><td class=lbl>ask</td><td><code>Q.zero(Residual)</code></td><td>→</td><td><code>None</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class=lead><td>wolfram-fullsimplify 14.3.0 <button type=button class='xchip x-experimental' data-note='0' aria-label='experimental: forked kernel'>experimental</button></td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → -x + ArcCos[Cos[x]] · result → 0</td><td class=num>0.022</td><td><a href='../../../../run/wolfram-fullsimplify-20261013-163924/index.html'>2026-10-13 16:39:24</a> <code>1e4dbd2f7d86</code></td><td class=code>Element[x, Reals] ∧ (Element[x, Reals] &amp;&amp; x &gt; 0) ∧ (x &lt; 3)  ⊢  (ArcCos[Cos[x]] == x)</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-4c6ec322eaad'>(
   $HistoryLength = 0;
   $Messages = {};
   Warmup = FullSimplify[Sin[W]^2 + Cos[W]^2, Element[W, Reals]];

@@ -261,7 +261,28 @@ details.sec>summary{cursor:pointer;list-style-position:outside;margin-left:1.1em
   (var x real) (var y real)
   (assume (<a class=ln href='../../../../definitions/index.html#positive'>positive</a> x)) (assume (<a class=ln href='../../../../definitions/index.html#positive'>positive</a> y))
   (ask (= (log (* x y)) (+ (log x) (log y))))
-  (expect true))</pre></div></details><h2>Answers <span class=sub>(latest run per system and CAS version; open <i>code</i> for the reproducer that ran)</span></h2><div class='wrap ans'><table class=mx><thead><tr><th>system</th><th>outcome</th><th>answer</th><th>steps (from the trace)</th><th class=num>s</th><th>run</th><th>query (as sent)</th><th>detail</th></tr></thead><tbody><tr class=cas><th colspan=8>none</th></tr><tr><td>always-none</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist></td><td class=num>0.0</td><td><a href='../../../../run/always-none-20261014-174125/index.html'>2026-10-14 17:41:25</a> <code>9d6efdf379b1</code></td><td class=code>(real x) ∧ (real y) ∧ (positive x) ∧ (positive y)  ⊢  (= (log (* x y)) (+ (log x) (log y)))</td><td class=code>null</td></tr><tr class=cas><th colspan=8>sympy <button class=ox type=button data-g='sympy' aria-expanded=false title='show the other versions of sympy'>older versions 3</button></th></tr><tr class=lead><td>sympy-ask 1.14.0</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist>difference → -log(x) - log(y) + log(x*y) · ask → None</td><td class=num>0.148</td><td><a href='../../../../run/sympy-ask-20261013-172046/index.html'>2026-10-13 17:20:46</a> <code>df65d778fc5c</code></td><td class=code>Q.real(x) ∧ Q.real(y) ∧ Q.positive(x) ∧ Q.positive(y)  ⊢  Eq(log((x*y)), (log(x) + log(y)))</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-805a7c427bcd'>from sympy import *
+  (expect true))</pre></div></details><h2>Answers <span class=sub>(latest run per system and CAS version; open <i>code</i> for the reproducer that ran)</span></h2><div class='wrap ans'><table class=mx><thead><tr><th>system</th><th>outcome</th><th>answer</th><th>steps (from the trace)</th><th class=num>s</th><th>run</th><th>query (as sent)</th><th>detail</th></tr></thead><tbody><tr class=cas><th colspan=8>none</th></tr><tr><td>always-none</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist></td><td class=num>0.0</td><td><a href='../../../../run/always-none-20261014-174125/index.html'>2026-10-14 17:41:25</a> <code>9d6efdf379b1</code></td><td class=code>(real x) ∧ (real y) ∧ (positive x) ∧ (positive y)  ⊢  (= (log (* x y)) (+ (log x) (log y)))</td><td class=code>null</td></tr><tr class=cas><th colspan=8>satrefine</th></tr><tr class=lead><td>satrefine-refine 0.1.0</td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → -log(x) - log(y) + log(x*y) · satrefine.refine → 0</td><td class=num>0.018</td><td><a href='../../../../run/satrefine-refine-20261014-174229/index.html'>2026-10-14 17:42:29</a> <code>9d6efdf379b1</code></td><td class=code>Q.real(x) ∧ Q.real(y) ∧ Q.positive(x) ∧ Q.positive(y)  ⊢  Eq(log((x*y)), (log(x) + log(y)))</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-63c5636ad069'>from sympy import *
+import sympy
+
+SympyVersion = sympy.__version__
+import satrefine
+import importlib.metadata
+CasVersion = importlib.metadata.version(&#x27;satrefine&#x27;)
+# warm-up: a fixed generic expression, never case content
+W = Symbol(&#x27;W&#x27;)
+Warmup = satrefine.refine(Abs(W), Q.positive(W))
+# every query then runs in its own forked process, starting from this state:
+# the expression caches are dropped (imported and lazily loaded modules stay)
+sympy.core.cache.clear_cache()
+</pre></div><div class=codebox><button class=copy type=button data-target='setup-63c5636ad069 code-63c5636ad069' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-63c5636ad069'>x = Symbol(&#x27;x&#x27;, real=True)
+y = Symbol(&#x27;y&#x27;, real=True)
+Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
+Residual = log(x * y) - (log(x) + log(y))
+Result = satrefine.refine(Residual, Assum)
+# true iff the result is 0; false only if it is a definite nonzero number
+Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+print(Result, Answer, sep=&#x27;\n&#x27;)
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>log(x * y) - (log(x) + log(y))</code></td><td>→</td><td><code>-log(x) - log(y) + log(x*y)</code></td></tr><tr><td class=lbl>satrefine.refine</td><td><code>satrefine.refine(Residual, Assum)</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>true</code></td></tr></table></details></td></tr><tr class=cas><th colspan=8>sympy <button class=ox type=button data-g='sympy' aria-expanded=false title='show the other versions of sympy'>older versions 3</button></th></tr><tr class=lead><td>sympy-ask 1.14.0</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist>difference → -log(x) - log(y) + log(x*y) · ask → None</td><td class=num>0.149</td><td><a href='../../../../run/sympy-ask-20261014-174223/index.html'>2026-10-14 17:42:23</a> <code>9d6efdf379b1</code></td><td class=code>Q.real(x) ∧ Q.real(y) ∧ Q.positive(x) ∧ Q.positive(y)  ⊢  Eq(log((x*y)), (log(x) + log(y)))</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-1e5983dffece'>from sympy import *
 import sympy
 
 SympyVersion = sympy.__version__
@@ -271,14 +292,14 @@ Warmup = ask(Q.positive(W**2 + 1), Q.real(W))
 # every query then runs in its own forked process, starting from this state:
 # the expression caches are dropped (imported and lazily loaded modules stay)
 sympy.core.cache.clear_cache()
-</pre></div><div class=codebox><button class=copy type=button data-target='setup-805a7c427bcd code-805a7c427bcd' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-805a7c427bcd'>x = Symbol(&#x27;x&#x27;, real=True)
+</pre></div><div class=codebox><button class=copy type=button data-target='setup-1e5983dffece code-1e5983dffece' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-1e5983dffece'>x = Symbol(&#x27;x&#x27;, real=True)
 y = Symbol(&#x27;y&#x27;, real=True)
 Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
 Residual = log(x * y) - (log(x) + log(y))
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
 Answer = ask(Q.zero(Residual), Assum)
 print(Residual, Answer, sep=&#x27;\n&#x27;)
-</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>log(x * y) - (log(x) + log(y))</code></td><td>→</td><td><code>-log(x) - log(y) + log(x*y)</code></td></tr><tr><td class=lbl>ask</td><td><code>Q.zero(Residual)</code></td><td>→</td><td><code>None</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class=lead><td>sympy-refine 1.14.0</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist>difference → -log(x) - log(y) + log(x*y) · refine → -log(x) - log(y) + log(x*y)</td><td class=num>0.037</td><td><a href='../../../../run/sympy-refine-20261013-172049/index.html'>2026-10-13 17:20:49</a> <code>df65d778fc5c</code></td><td class=code>Q.real(x) ∧ Q.real(y) ∧ Q.positive(x) ∧ Q.positive(y)  ⊢  Eq(log((x*y)), (log(x) + log(y)))</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-8609afa55b35'>from sympy import *
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>log(x * y) - (log(x) + log(y))</code></td><td>→</td><td><code>-log(x) - log(y) + log(x*y)</code></td></tr><tr><td class=lbl>ask</td><td><code>Q.zero(Residual)</code></td><td>→</td><td><code>None</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class=lead><td>sympy-refine 1.14.0</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist>difference → -log(x) - log(y) + log(x*y) · refine → -log(x) - log(y) + log(x*y)</td><td class=num>0.036</td><td><a href='../../../../run/sympy-refine-20261014-174225/index.html'>2026-10-14 17:42:25</a> <code>9d6efdf379b1</code></td><td class=code>Q.real(x) ∧ Q.real(y) ∧ Q.positive(x) ∧ Q.positive(y)  ⊢  Eq(log((x*y)), (log(x) + log(y)))</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-d39422098bce'>from sympy import *
 import sympy
 
 SympyVersion = sympy.__version__
@@ -288,7 +309,7 @@ Warmup = refine(Abs(W), Q.positive(W))
 # every query then runs in its own forked process, starting from this state:
 # the expression caches are dropped (imported and lazily loaded modules stay)
 sympy.core.cache.clear_cache()
-</pre></div><div class=codebox><button class=copy type=button data-target='setup-8609afa55b35 code-8609afa55b35' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-8609afa55b35'>x = Symbol(&#x27;x&#x27;, real=True)
+</pre></div><div class=codebox><button class=copy type=button data-target='setup-d39422098bce code-d39422098bce' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-d39422098bce'>x = Symbol(&#x27;x&#x27;, real=True)
 y = Symbol(&#x27;y&#x27;, real=True)
 Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
 Residual = log(x * y) - (log(x) + log(y))
@@ -296,7 +317,7 @@ Result = refine(Residual, Assum)
 # true iff the result is 0; false only if it is a definite nonzero number
 Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
 print(Result, Answer, sep=&#x27;\n&#x27;)
-</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>log(x * y) - (log(x) + log(y))</code></td><td>→</td><td><code>-log(x) - log(y) + log(x*y)</code></td></tr><tr><td class=lbl>refine</td><td><code>refine(Residual, Assum)</code></td><td>→</td><td><code>-log(x) - log(y) + log(x*y)</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class=lead><td>sympy-simplify 1.14.0</td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → -log(x) - log(y) + log(x*y) · simplify → 0</td><td class=num>0.024</td><td><a href='../../../../run/sympy-simplify-20261013-172051/index.html'>2026-10-13 17:20:51</a> <code>df65d778fc5c</code></td><td class=code>Q.real(x) ∧ Q.real(y) ∧ Q.positive(x) ∧ Q.positive(y)  ⊢  Eq(log((x*y)), (log(x) + log(y)))</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-cc1cfc74d580'>from sympy import *
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>log(x * y) - (log(x) + log(y))</code></td><td>→</td><td><code>-log(x) - log(y) + log(x*y)</code></td></tr><tr><td class=lbl>refine</td><td><code>refine(Residual, Assum)</code></td><td>→</td><td><code>-log(x) - log(y) + log(x*y)</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class=lead><td>sympy-simplify 1.14.0</td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → -log(x) - log(y) + log(x*y) · simplify → 0</td><td class=num>0.024</td><td><a href='../../../../run/sympy-simplify-20261014-174228/index.html'>2026-10-14 17:42:28</a> <code>9d6efdf379b1</code></td><td class=code>Q.real(x) ∧ Q.real(y) ∧ Q.positive(x) ∧ Q.positive(y)  ⊢  Eq(log((x*y)), (log(x) + log(y)))</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-1f8305cfd8a5'>from sympy import *
 import sympy
 
 SympyVersion = sympy.__version__
@@ -306,7 +327,7 @@ Warmup = simplify(sin(W)**2 + cos(W)**2)
 # every query then runs in its own forked process, starting from this state:
 # the expression caches are dropped (imported and lazily loaded modules stay)
 sympy.core.cache.clear_cache()
-</pre></div><div class=codebox><button class=copy type=button data-target='setup-cc1cfc74d580 code-cc1cfc74d580' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-cc1cfc74d580'>x = Symbol(&#x27;x&#x27;, real=True, positive=True)
+</pre></div><div class=codebox><button class=copy type=button data-target='setup-1f8305cfd8a5 code-1f8305cfd8a5' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-1f8305cfd8a5'>x = Symbol(&#x27;x&#x27;, real=True, positive=True)
 y = Symbol(&#x27;y&#x27;, real=True, positive=True)
 Residual = log(x * y) - (log(x) + log(y))
 Result = simplify(Residual)
@@ -365,7 +386,49 @@ Result = simplify(Residual)
 # true iff the result is 0; false only if it is a definite nonzero number
 Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
 print(Result, Answer, sep=&#x27;\n&#x27;)
-</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>log(x * y) - (log(x) + log(y))</code></td><td>→</td><td><code>-log(x) - log(y) + log(x*y)</code></td></tr><tr><td class=lbl>simplify</td><td><code>simplify(Residual)</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>true</code></td></tr></table></details></td></tr><tr class=cas><th colspan=8>wolfram</th></tr><tr class=lead><td>wolfram-fullsimplify 14.3.0 <button type=button class='xchip x-experimental' data-note='0' aria-label='experimental: forked kernel'>experimental</button></td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → -Log[x] - Log[y] + Log[x*y] · result → 0</td><td class=num>0.022</td><td><a href='../../../../run/wolfram-fullsimplify-20261013-172059/index.html'>2026-10-13 17:20:59</a> <code>df65d778fc5c</code></td><td class=code>Element[x, Reals] ∧ Element[y, Reals] ∧ (Element[x, Reals] &amp;&amp; x &gt; 0) ∧ (Element[y, Reals] &amp;&amp; y &gt; 0)  ⊢  (Log[(x*y)] == (Log[x] + Log[y]))</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-9dca9e2283a1'>(
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>log(x * y) - (log(x) + log(y))</code></td><td>→</td><td><code>-log(x) - log(y) + log(x*y)</code></td></tr><tr><td class=lbl>simplify</td><td><code>simplify(Residual)</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>true</code></td></tr></table></details></td></tr><tr class=cas><th colspan=8>wolfram</th></tr><tr class=lead><td>wolfram-fullsimplify 14.3.0 <button type=button class='xchip x-experimental' data-note='0' aria-label='experimental: forked kernel'>experimental</button></td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → -Log[x] - Log[y] + Log[x*y] · result → 0</td><td class=num>0.022</td><td><a href='../../../../run/wolfram-fullsimplify-20261014-174238/index.html'>2026-10-14 17:42:38</a> <code>9d6efdf379b1</code></td><td class=code>Element[x, Reals] ∧ Element[y, Reals] ∧ (Element[x, Reals] &amp;&amp; x &gt; 0) ∧ (Element[y, Reals] &amp;&amp; y &gt; 0)  ⊢  (Log[(x*y)] == (Log[x] + Log[y]))</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-38b135145356'>(
+  $HistoryLength = 0;
+  $Messages = {};
+  Warmup = FullSimplify[Sin[W]^2 + Cos[W]^2, Element[W, Reals]];
+  GenericWarmup = Quiet[{Simplify[Abs[W] + W, W &lt; 0], Simplify[Sqrt[W^2] - W, W &gt; 0], Refine[Sqrt[W^2], W &gt; 0], Simplify[Log[W V] - Log[W] - Log[V], W &gt; 0 &amp;&amp; V &gt; 0], Simplify[Log[-W] - Log[W] - I Pi, W &lt; 0], Simplify[(-1)^(2 W) - 1, Element[W, Integers]], Simplify[Mod[W + 1, 2], Element[W, Integers] &amp;&amp; Element[(W - 1)/2, Integers]], Simplify[ArcTan[W] + ArcTan[1/W] - Pi/2, W &gt; 0], FullSimplify[ArcCot[W] - ArcTan[1/W], W &gt; 0], Simplify[Abs[Exp[I W]] - 1, Element[W, Reals]], Simplify[Re[W] - (W + Conjugate[W])/2], Simplify[Gamma[W + 1] - W!, Element[W, Integers] &amp;&amp; W &gt; 0], Simplify[Floor[W] - W, Element[W, Integers]], Simplify[Sqrt[W] Sqrt[V] - Sqrt[W V], W &gt; 0 &amp;&amp; V &gt; 0], Simplify[HeavisideTheta[W] - 1, W &gt; 0], Simplify[2^W 2^V - 2^(W + V), Element[W, Reals] &amp;&amp; Element[V, Reals]], Simplify[Sum[V, {V, 1, W}] - W (W + 1)/2, Element[W, Integers] &amp;&amp; W &gt; 0]}];
+  Quiet[Check[Message[General::argx, &quot;W&quot;, 0], Null]];
+  {$Version, Warmup, Length[GenericWarmup]}
+)</pre></div><div class=codebox><button class=copy type=button data-target='setup-38b135145356 code-38b135145356' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-38b135145356'>(* evaluated in a forked copy of the setup kernel: TimeConstrained would not fire here (no timer thread), so the parent enforces a hard timeout of 9 s by killing this process *)
+(
+  Assum = (Element[x, Reals]) &amp;&amp; (Element[y, Reals]) &amp;&amp; ((Element[x, Reals] &amp;&amp; x &gt; 0)) &amp;&amp; ((Element[y, Reals] &amp;&amp; y &gt; 0));
+  Residual = (Log[x*y]) - (Log[x] + Log[y]);
+  Result = FullSimplify[Residual, Assum];
+  Answer = Which[Result === 0, True, NumericQ[Result] &amp;&amp; TrueQ[Result != 0], False, True, Null];
+  {Residual, Result, Answer}
+)</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>(Log[x*y]) - (Log[x] + Log[y])</code></td><td>→</td><td><code>-Log[x] - Log[y] + Log[x*y]</code></td></tr><tr><td class=lbl>result</td><td><code>FullSimplify[Residual, Assum]</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>true</code></td></tr></table></details></td></tr><tr class=lead><td>wolfram-refine 14.3.0 <button type=button class='xchip x-experimental' data-note='0' aria-label='experimental: forked kernel'>experimental</button></td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist>difference → -Log[x] - Log[y] + Log[x*y] · result → -Log[x] - Log[y] + Log[x*y]</td><td class=num>0.023</td><td><a href='../../../../run/wolfram-refine-20261014-174234/index.html'>2026-10-14 17:42:34</a> <code>9d6efdf379b1</code></td><td class=code>Element[x, Reals] ∧ Element[y, Reals] ∧ (Element[x, Reals] &amp;&amp; x &gt; 0) ∧ (Element[y, Reals] &amp;&amp; y &gt; 0)  ⊢  (Log[(x*y)] == (Log[x] + Log[y]))</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-6fd3f21d697d'>(
+  $HistoryLength = 0;
+  $Messages = {};
+  Warmup = Refine[Sin[W]^2 + Cos[W]^2, Element[W, Reals]];
+  GenericWarmup = Quiet[{Simplify[Abs[W] + W, W &lt; 0], Simplify[Sqrt[W^2] - W, W &gt; 0], Refine[Sqrt[W^2], W &gt; 0], Simplify[Log[W V] - Log[W] - Log[V], W &gt; 0 &amp;&amp; V &gt; 0], Simplify[Log[-W] - Log[W] - I Pi, W &lt; 0], Simplify[(-1)^(2 W) - 1, Element[W, Integers]], Simplify[Mod[W + 1, 2], Element[W, Integers] &amp;&amp; Element[(W - 1)/2, Integers]], Simplify[ArcTan[W] + ArcTan[1/W] - Pi/2, W &gt; 0], FullSimplify[ArcCot[W] - ArcTan[1/W], W &gt; 0], Simplify[Abs[Exp[I W]] - 1, Element[W, Reals]], Simplify[Re[W] - (W + Conjugate[W])/2], Simplify[Gamma[W + 1] - W!, Element[W, Integers] &amp;&amp; W &gt; 0], Simplify[Floor[W] - W, Element[W, Integers]], Simplify[Sqrt[W] Sqrt[V] - Sqrt[W V], W &gt; 0 &amp;&amp; V &gt; 0], Simplify[HeavisideTheta[W] - 1, W &gt; 0], Simplify[2^W 2^V - 2^(W + V), Element[W, Reals] &amp;&amp; Element[V, Reals]], Simplify[Sum[V, {V, 1, W}] - W (W + 1)/2, Element[W, Integers] &amp;&amp; W &gt; 0]}];
+  Quiet[Check[Message[General::argx, &quot;W&quot;, 0], Null]];
+  {$Version, Warmup, Length[GenericWarmup]}
+)</pre></div><div class=codebox><button class=copy type=button data-target='setup-6fd3f21d697d code-6fd3f21d697d' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-6fd3f21d697d'>(* evaluated in a forked copy of the setup kernel: TimeConstrained would not fire here (no timer thread), so the parent enforces a hard timeout of 9 s by killing this process *)
+(
+  Assum = (Element[x, Reals]) &amp;&amp; (Element[y, Reals]) &amp;&amp; ((Element[x, Reals] &amp;&amp; x &gt; 0)) &amp;&amp; ((Element[y, Reals] &amp;&amp; y &gt; 0));
+  Residual = (Log[x*y]) - (Log[x] + Log[y]);
+  Result = Refine[Residual, Assum];
+  Answer = Which[Result === 0, True, NumericQ[Result] &amp;&amp; TrueQ[Result != 0], False, True, Null];
+  {Residual, Result, Answer}
+)</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>(Log[x*y]) - (Log[x] + Log[y])</code></td><td>→</td><td><code>-Log[x] - Log[y] + Log[x*y]</code></td></tr><tr><td class=lbl>result</td><td><code>Refine[Residual, Assum]</code></td><td>→</td><td><code>-Log[x] - Log[y] + Log[x*y]</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class=lead><td>wolfram-simplify 14.3.0 <button type=button class='xchip x-experimental' data-note='0' aria-label='experimental: forked kernel'>experimental</button></td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → -Log[x] - Log[y] + Log[x*y] · result → 0</td><td class=num>0.022</td><td><a href='../../../../run/wolfram-simplify-20261014-174231/index.html'>2026-10-14 17:42:31</a> <code>9d6efdf379b1</code></td><td class=code>Element[x, Reals] ∧ Element[y, Reals] ∧ (Element[x, Reals] &amp;&amp; x &gt; 0) ∧ (Element[y, Reals] &amp;&amp; y &gt; 0)  ⊢  (Log[(x*y)] == (Log[x] + Log[y]))</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-b311c979eb0b'>(
+  $HistoryLength = 0;
+  $Messages = {};
+  Warmup = Simplify[Sin[W]^2 + Cos[W]^2, Element[W, Reals]];
+  GenericWarmup = Quiet[{Simplify[Abs[W] + W, W &lt; 0], Simplify[Sqrt[W^2] - W, W &gt; 0], Refine[Sqrt[W^2], W &gt; 0], Simplify[Log[W V] - Log[W] - Log[V], W &gt; 0 &amp;&amp; V &gt; 0], Simplify[Log[-W] - Log[W] - I Pi, W &lt; 0], Simplify[(-1)^(2 W) - 1, Element[W, Integers]], Simplify[Mod[W + 1, 2], Element[W, Integers] &amp;&amp; Element[(W - 1)/2, Integers]], Simplify[ArcTan[W] + ArcTan[1/W] - Pi/2, W &gt; 0], FullSimplify[ArcCot[W] - ArcTan[1/W], W &gt; 0], Simplify[Abs[Exp[I W]] - 1, Element[W, Reals]], Simplify[Re[W] - (W + Conjugate[W])/2], Simplify[Gamma[W + 1] - W!, Element[W, Integers] &amp;&amp; W &gt; 0], Simplify[Floor[W] - W, Element[W, Integers]], Simplify[Sqrt[W] Sqrt[V] - Sqrt[W V], W &gt; 0 &amp;&amp; V &gt; 0], Simplify[HeavisideTheta[W] - 1, W &gt; 0], Simplify[2^W 2^V - 2^(W + V), Element[W, Reals] &amp;&amp; Element[V, Reals]], Simplify[Sum[V, {V, 1, W}] - W (W + 1)/2, Element[W, Integers] &amp;&amp; W &gt; 0]}];
+  Quiet[Check[Message[General::argx, &quot;W&quot;, 0], Null]];
+  {$Version, Warmup, Length[GenericWarmup]}
+)</pre></div><div class=codebox><button class=copy type=button data-target='setup-b311c979eb0b code-b311c979eb0b' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-b311c979eb0b'>(* evaluated in a forked copy of the setup kernel: TimeConstrained would not fire here (no timer thread), so the parent enforces a hard timeout of 9 s by killing this process *)
+(
+  Assum = (Element[x, Reals]) &amp;&amp; (Element[y, Reals]) &amp;&amp; ((Element[x, Reals] &amp;&amp; x &gt; 0)) &amp;&amp; ((Element[y, Reals] &amp;&amp; y &gt; 0));
+  Residual = (Log[x*y]) - (Log[x] + Log[y]);
+  Result = Simplify[Residual, Assum];
+  Answer = Which[Result === 0, True, NumericQ[Result] &amp;&amp; TrueQ[Result != 0], False, True, Null];
+  {Residual, Result, Answer}
+)</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>(Log[x*y]) - (Log[x] + Log[y])</code></td><td>→</td><td><code>-Log[x] - Log[y] + Log[x*y]</code></td></tr><tr><td class=lbl>result</td><td><code>Simplify[Residual, Assum]</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>true</code></td></tr></table></details></td></tr></tbody></table></div><details class=older><summary>Older runs (18)</summary><div class=wrap><table><thead><tr><th>system</th><th>outcome</th><th>answer</th><th>steps (from the trace)</th><th class=num>s</th><th>run</th><th>query (as sent)</th><th>detail</th></tr></thead><tbody><tr class=lead><td>wolfram-fullsimplify 14.3.0 <button type=button class='xchip x-experimental' data-note='0' aria-label='experimental: forked kernel'>experimental</button></td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → -Log[x] - Log[y] + Log[x*y] · result → 0</td><td class=num>0.022</td><td><a href='../../../../run/wolfram-fullsimplify-20261013-172059/index.html'>2026-10-13 17:20:59</a> <code>df65d778fc5c</code></td><td class=code>Element[x, Reals] ∧ Element[y, Reals] ∧ (Element[x, Reals] &amp;&amp; x &gt; 0) ∧ (Element[y, Reals] &amp;&amp; y &gt; 0)  ⊢  (Log[(x*y)] == (Log[x] + Log[y]))</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-9dca9e2283a1'>(
   $HistoryLength = 0;
   $Messages = {};
   Warmup = FullSimplify[Sin[W]^2 + Cos[W]^2, Element[W, Reals]];
@@ -407,7 +470,59 @@ print(Result, Answer, sep=&#x27;\n&#x27;)
   Result = Simplify[Residual, Assum];
   Answer = Which[Result === 0, True, NumericQ[Result] &amp;&amp; TrueQ[Result != 0], False, True, Null];
   {Residual, Result, Answer}
-)</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>(Log[x*y]) - (Log[x] + Log[y])</code></td><td>→</td><td><code>-Log[x] - Log[y] + Log[x*y]</code></td></tr><tr><td class=lbl>result</td><td><code>Simplify[Residual, Assum]</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>true</code></td></tr></table></details></td></tr></tbody></table></div><details class=older><summary>Older runs (12)</summary><div class=wrap><table><thead><tr><th>system</th><th>outcome</th><th>answer</th><th>steps (from the trace)</th><th class=num>s</th><th>run</th><th>query (as sent)</th><th>detail</th></tr></thead><tbody><tr><td>always-none</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist></td><td class=num>0.0</td><td><a href='../../../../run/always-none-20261013-172005/index.html'>2026-10-13 17:20:05</a> <code>df65d778fc5c</code></td><td class=code>(real x) ∧ (real y) ∧ (positive x) ∧ (positive y)  ⊢  (= (log (* x y)) (+ (log x) (log y)))</td><td class=code>null</td></tr><tr class=lead><td>wolfram-fullsimplify 14.3.0 <button type=button class='xchip x-experimental' data-note='0' aria-label='experimental: forked kernel'>experimental</button></td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → -Log[x] - Log[y] + Log[x*y] · result → 0</td><td class=num>0.023</td><td><a href='../../../../run/wolfram-fullsimplify-20261013-163909/index.html'>2026-10-13 16:39:09</a> <code>03f5149718d0</code></td><td class=code>Element[x, Reals] ∧ Element[y, Reals] ∧ (Element[x, Reals] &amp;&amp; x &gt; 0) ∧ (Element[y, Reals] &amp;&amp; y &gt; 0)  ⊢  (Log[(x*y)] == (Log[x] + Log[y]))</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-203e067ae048'>(
+)</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>(Log[x*y]) - (Log[x] + Log[y])</code></td><td>→</td><td><code>-Log[x] - Log[y] + Log[x*y]</code></td></tr><tr><td class=lbl>result</td><td><code>Simplify[Residual, Assum]</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>true</code></td></tr></table></details></td></tr><tr class=lead><td>sympy-simplify 1.14.0</td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → -log(x) - log(y) + log(x*y) · simplify → 0</td><td class=num>0.024</td><td><a href='../../../../run/sympy-simplify-20261013-172051/index.html'>2026-10-13 17:20:51</a> <code>df65d778fc5c</code></td><td class=code>Q.real(x) ∧ Q.real(y) ∧ Q.positive(x) ∧ Q.positive(y)  ⊢  Eq(log((x*y)), (log(x) + log(y)))</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-cc1cfc74d580'>from sympy import *
+import sympy
+
+SympyVersion = sympy.__version__
+# warm-up: a fixed generic expression, never case content
+W = Symbol(&#x27;W&#x27;)
+Warmup = simplify(sin(W)**2 + cos(W)**2)
+# every query then runs in its own forked process, starting from this state:
+# the expression caches are dropped (imported and lazily loaded modules stay)
+sympy.core.cache.clear_cache()
+</pre></div><div class=codebox><button class=copy type=button data-target='setup-cc1cfc74d580 code-cc1cfc74d580' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-cc1cfc74d580'>x = Symbol(&#x27;x&#x27;, real=True, positive=True)
+y = Symbol(&#x27;y&#x27;, real=True, positive=True)
+Residual = log(x * y) - (log(x) + log(y))
+Result = simplify(Residual)
+# true iff the result is 0; false only if it is a definite nonzero number
+Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+print(Result, Answer, sep=&#x27;\n&#x27;)
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>log(x * y) - (log(x) + log(y))</code></td><td>→</td><td><code>-log(x) - log(y) + log(x*y)</code></td></tr><tr><td class=lbl>simplify</td><td><code>simplify(Residual)</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>true</code></td></tr></table></details></td></tr><tr class=lead><td>sympy-refine 1.14.0</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist>difference → -log(x) - log(y) + log(x*y) · refine → -log(x) - log(y) + log(x*y)</td><td class=num>0.037</td><td><a href='../../../../run/sympy-refine-20261013-172049/index.html'>2026-10-13 17:20:49</a> <code>df65d778fc5c</code></td><td class=code>Q.real(x) ∧ Q.real(y) ∧ Q.positive(x) ∧ Q.positive(y)  ⊢  Eq(log((x*y)), (log(x) + log(y)))</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-8609afa55b35'>from sympy import *
+import sympy
+
+SympyVersion = sympy.__version__
+# warm-up: a fixed generic expression, never case content
+W = Symbol(&#x27;W&#x27;)
+Warmup = refine(Abs(W), Q.positive(W))
+# every query then runs in its own forked process, starting from this state:
+# the expression caches are dropped (imported and lazily loaded modules stay)
+sympy.core.cache.clear_cache()
+</pre></div><div class=codebox><button class=copy type=button data-target='setup-8609afa55b35 code-8609afa55b35' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-8609afa55b35'>x = Symbol(&#x27;x&#x27;, real=True)
+y = Symbol(&#x27;y&#x27;, real=True)
+Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
+Residual = log(x * y) - (log(x) + log(y))
+Result = refine(Residual, Assum)
+# true iff the result is 0; false only if it is a definite nonzero number
+Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+print(Result, Answer, sep=&#x27;\n&#x27;)
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>log(x * y) - (log(x) + log(y))</code></td><td>→</td><td><code>-log(x) - log(y) + log(x*y)</code></td></tr><tr><td class=lbl>refine</td><td><code>refine(Residual, Assum)</code></td><td>→</td><td><code>-log(x) - log(y) + log(x*y)</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class=lead><td>sympy-ask 1.14.0</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist>difference → -log(x) - log(y) + log(x*y) · ask → None</td><td class=num>0.148</td><td><a href='../../../../run/sympy-ask-20261013-172046/index.html'>2026-10-13 17:20:46</a> <code>df65d778fc5c</code></td><td class=code>Q.real(x) ∧ Q.real(y) ∧ Q.positive(x) ∧ Q.positive(y)  ⊢  Eq(log((x*y)), (log(x) + log(y)))</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-805a7c427bcd'>from sympy import *
+import sympy
+
+SympyVersion = sympy.__version__
+# warm-up: a fixed generic expression, never case content
+W = Symbol(&#x27;W&#x27;)
+Warmup = ask(Q.positive(W**2 + 1), Q.real(W))
+# every query then runs in its own forked process, starting from this state:
+# the expression caches are dropped (imported and lazily loaded modules stay)
+sympy.core.cache.clear_cache()
+</pre></div><div class=codebox><button class=copy type=button data-target='setup-805a7c427bcd code-805a7c427bcd' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-805a7c427bcd'>x = Symbol(&#x27;x&#x27;, real=True)
+y = Symbol(&#x27;y&#x27;, real=True)
+Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
+Residual = log(x * y) - (log(x) + log(y))
+# not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
+Answer = ask(Q.zero(Residual), Assum)
+print(Residual, Answer, sep=&#x27;\n&#x27;)
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>log(x * y) - (log(x) + log(y))</code></td><td>→</td><td><code>-log(x) - log(y) + log(x*y)</code></td></tr><tr><td class=lbl>ask</td><td><code>Q.zero(Residual)</code></td><td>→</td><td><code>None</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr><td>always-none</td><td class='o o-no_verdict'>no verdict</td><td class=code>null</td><td class=gist></td><td class=num>0.0</td><td><a href='../../../../run/always-none-20261013-172005/index.html'>2026-10-13 17:20:05</a> <code>df65d778fc5c</code></td><td class=code>(real x) ∧ (real y) ∧ (positive x) ∧ (positive y)  ⊢  (= (log (* x y)) (+ (log x) (log y)))</td><td class=code>null</td></tr><tr class=lead><td>wolfram-fullsimplify 14.3.0 <button type=button class='xchip x-experimental' data-note='0' aria-label='experimental: forked kernel'>experimental</button></td><td class='o o-solved'>solved</td><td class=code>true</td><td class=gist>difference → -Log[x] - Log[y] + Log[x*y] · result → 0</td><td class=num>0.023</td><td><a href='../../../../run/wolfram-fullsimplify-20261013-163909/index.html'>2026-10-13 16:39:09</a> <code>03f5149718d0</code></td><td class=code>Element[x, Reals] ∧ Element[y, Reals] ∧ (Element[x, Reals] &amp;&amp; x &gt; 0) ∧ (Element[y, Reals] &amp;&amp; y &gt; 0)  ⊢  (Log[(x*y)] == (Log[x] + Log[y]))</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><div class='codebox setupbox'><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-203e067ae048'>(
   $HistoryLength = 0;
   $Messages = {};
   Warmup = FullSimplify[Sin[W]^2 + Cos[W]^2, Element[W, Reals]];
