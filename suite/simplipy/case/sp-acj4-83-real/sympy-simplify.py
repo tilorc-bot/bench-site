@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # assume-eval: a runnable script from the results browser
 # case sp-acj4-83-real · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174713 answered true (solved)
+# the run sympy-simplify-20261015-024958 answered true (solved)
 # Runs on its own: python3 this-file.py (or paste it into python).
 
 # setup (the harness's warm-up, version capture and cache clearing left out)
@@ -27,4 +27,4 @@ def _verdict(answer, expected, stored):
     print(f"verdict: {got} (expected {expected}: {outcome}; {stored})")
     return got
 
-_verdict(Answer, 'true', 'the run sympy-simplify-20261014-174713 answered true (solved)')
+_verdict(Answer, 'true', 'the run sympy-simplify-20261015-024958 answered true (solved)')

@@ -46,8 +46,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case sp-acj4-94-complex · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered true (solved)
-_n[_run('sp-acj4-94-complex', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174730 answered true (solved)', _SETUP1, r'''x = Symbol('x', complex=True)
+# the run satrefine-refine-20261015-025015 answered true (solved)
+_n[_run('sp-acj4-94-complex', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-025015 answered true (solved)', _SETUP1, r'''x = Symbol('x', complex=True)
 Assum = And(Q.complex(x), ~Q.zero(Abs(x)), ~Q.zero(x))
 Residual = 7 / Abs(x) - Abs(-7 / x)
 Result = satrefine.refine(Residual, Assum)
@@ -57,8 +57,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-94-complex · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174423 answered true (solved)
-_n[_run('sp-acj4-94-complex', 'sympy-ask', 'true', 'the run sympy-ask-20261014-174423 answered true (solved)', _SETUP2, r'''x = Symbol('x', complex=True)
+# the run sympy-ask-20261015-024703 answered true (solved)
+_n[_run('sp-acj4-94-complex', 'sympy-ask', 'true', 'the run sympy-ask-20261015-024703 answered true (solved)', _SETUP2, r'''x = Symbol('x', complex=True)
 Assum = And(Q.complex(x), ~Q.zero(Abs(x)), ~Q.zero(x))
 Residual = 7 / Abs(x) - Abs(-7 / x)
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
@@ -67,8 +67,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-94-complex · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174535 answered true (solved)
-_n[_run('sp-acj4-94-complex', 'sympy-refine', 'true', 'the run sympy-refine-20261014-174535 answered true (solved)', _SETUP2, r'''x = Symbol('x', complex=True)
+# the run sympy-refine-20261015-024816 answered true (solved)
+_n[_run('sp-acj4-94-complex', 'sympy-refine', 'true', 'the run sympy-refine-20261015-024816 answered true (solved)', _SETUP2, r'''x = Symbol('x', complex=True)
 Assum = And(Q.complex(x), ~Q.zero(Abs(x)), ~Q.zero(x))
 Residual = 7 / Abs(x) - Abs(-7 / x)
 Result = refine(Residual, Assum)
@@ -78,8 +78,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-94-complex · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174713 answered true (solved)
-_n[_run('sp-acj4-94-complex', 'sympy-simplify', 'true', 'the run sympy-simplify-20261014-174713 answered true (solved)', _SETUP2, r'''x = Symbol('x', complex=True, zero=False)
+# the run sympy-simplify-20261015-024958 answered true (solved)
+_n[_run('sp-acj4-94-complex', 'sympy-simplify', 'true', 'the run sympy-simplify-20261015-024958 answered true (solved)', _SETUP2, r'''x = Symbol('x', complex=True, zero=False)
 # dropped (not a unary fact about one symbol): ~Q.zero(Abs(x))
 Residual = 7 / Abs(x) - Abs(-7 / x)
 Result = simplify(Residual)

@@ -46,8 +46,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case sp-acj4-162-condf · expected false · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered null (no verdict)
-_n[_run('sp-acj4-162-condf', 'satrefine-refine', 'false', 'the run satrefine-refine-20261014-174730 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run satrefine-refine-20261015-025015 answered null (no verdict)
+_n[_run('sp-acj4-162-condf', 'satrefine-refine', 'false', 'the run satrefine-refine-20261015-025015 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), Q.negative(x))
 Residual = acosh(real_root(x, 5)) - acosh(Pow(x, Rational(1, 5)))
 Result = satrefine.refine(Residual, Assum)
@@ -57,8 +57,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-162-condf · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174423 answered null (no verdict)
-_n[_run('sp-acj4-162-condf', 'sympy-ask', 'false', 'the run sympy-ask-20261014-174423 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', real=True)
+# the run sympy-ask-20261015-024703 answered null (no verdict)
+_n[_run('sp-acj4-162-condf', 'sympy-ask', 'false', 'the run sympy-ask-20261015-024703 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), Q.negative(x))
 Residual = acosh(real_root(x, 5)) - acosh(Pow(x, Rational(1, 5)))
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
@@ -67,8 +67,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-162-condf · expected false · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174535 answered null (no verdict)
-_n[_run('sp-acj4-162-condf', 'sympy-refine', 'false', 'the run sympy-refine-20261014-174535 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', real=True)
+# the run sympy-refine-20261015-024816 answered null (no verdict)
+_n[_run('sp-acj4-162-condf', 'sympy-refine', 'false', 'the run sympy-refine-20261015-024816 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), Q.negative(x))
 Residual = acosh(real_root(x, 5)) - acosh(Pow(x, Rational(1, 5)))
 Result = refine(Residual, Assum)
@@ -78,8 +78,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-162-condf · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174713 answered null (no verdict)
-_n[_run('sp-acj4-162-condf', 'sympy-simplify', 'false', 'the run sympy-simplify-20261014-174713 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', real=True, negative=True)
+# the run sympy-simplify-20261015-024958 answered null (no verdict)
+_n[_run('sp-acj4-162-condf', 'sympy-simplify', 'false', 'the run sympy-simplify-20261015-024958 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', real=True, negative=True)
 Residual = acosh(real_root(x, 5)) - acosh(Pow(x, Rational(1, 5)))
 Result = simplify(Residual)
 # true iff the result is 0; false only if it is a definite nonzero number

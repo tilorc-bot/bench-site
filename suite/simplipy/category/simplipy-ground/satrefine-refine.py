@@ -40,8 +40,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case sp-acj4-1007-ground · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered true (solved)
-_n[_run('sp-acj4-1007-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174730 answered true (solved)', _SETUP1, r'''Assum = And()
+# the run satrefine-refine-20261015-025015 answered true (solved)
+_n[_run('sp-acj4-1007-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-025015 answered true (solved)', _SETUP1, r'''Assum = And()
 Residual = 0 / sin(5) - 0
 Result = satrefine.refine(Residual, Assum)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -50,8 +50,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-1107-ground · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered true (solved)
-_n[_run('sp-acj4-1107-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174730 answered true (solved)', _SETUP1, r'''Assum = And()
+# the run satrefine-refine-20261015-025015 answered true (solved)
+_n[_run('sp-acj4-1107-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-025015 answered true (solved)', _SETUP1, r'''Assum = And()
 Residual = asin(sin(Integer(1) / 10)) - Rational(1, 10)
 Result = satrefine.refine(Residual, Assum)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -60,8 +60,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-1148-ground · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered null (no verdict)
-_n[_run('sp-acj4-1148-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174730 answered null (no verdict)', _SETUP1, r'''Assum = And()
+# the run satrefine-refine-20261015-025015 answered null (no verdict)
+_n[_run('sp-acj4-1148-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-025015 answered null (no verdict)', _SETUP1, r'''Assum = And()
 Residual = cosh(log(Integer(1) / 4)) - Rational(17, 8)
 Result = satrefine.refine(Residual, Assum)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -70,8 +70,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-1149-ground · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered true (solved)
-_n[_run('sp-acj4-1149-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174730 answered true (solved)', _SETUP1, r'''Assum = And()
+# the run satrefine-refine-20261015-025015 answered true (solved)
+_n[_run('sp-acj4-1149-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-025015 answered true (solved)', _SETUP1, r'''Assum = And()
 Residual = exp(Abs(log(2))) - 2
 Result = satrefine.refine(Residual, Assum)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -80,8 +80,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-1177-ground · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered true (solved)
-_n[_run('sp-acj4-1177-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174730 answered true (solved)', _SETUP1, r'''Assum = And()
+# the run satrefine-refine-20261015-025015 answered true (solved)
+_n[_run('sp-acj4-1177-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-025015 answered true (solved)', _SETUP1, r'''Assum = And()
 Residual = Pow(0, asinh(10)) - 0
 Result = satrefine.refine(Residual, Assum)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -90,8 +90,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-1195-ground · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered true (solved)
-_n[_run('sp-acj4-1195-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174730 answered true (solved)', _SETUP1, r'''Assum = And()
+# the run satrefine-refine-20261015-025015 answered true (solved)
+_n[_run('sp-acj4-1195-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-025015 answered true (solved)', _SETUP1, r'''Assum = And()
 Residual = Pow(0, atan(7)) - 0
 Result = satrefine.refine(Residual, Assum)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -100,8 +100,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-1217-ground · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered true (solved)
-_n[_run('sp-acj4-1217-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174730 answered true (solved)', _SETUP1, r'''Assum = And()
+# the run satrefine-refine-20261015-025015 answered true (solved)
+_n[_run('sp-acj4-1217-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-025015 answered true (solved)', _SETUP1, r'''Assum = And()
 Residual = Pow(0, exp(-1)) - 0
 Result = satrefine.refine(Residual, Assum)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -110,8 +110,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-1238-ground · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered true (solved)
-_n[_run('sp-acj4-1238-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174730 answered true (solved)', _SETUP1, r'''Assum = And()
+# the run satrefine-refine-20261015-025015 answered true (solved)
+_n[_run('sp-acj4-1238-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-025015 answered true (solved)', _SETUP1, r'''Assum = And()
 Residual = Pow(0, 1 / pi) - 0
 Result = satrefine.refine(Residual, Assum)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -120,8 +120,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-1247-ground · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered true (solved)
-_n[_run('sp-acj4-1247-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174730 answered true (solved)', _SETUP1, r'''Assum = And()
+# the run satrefine-refine-20261015-025015 answered true (solved)
+_n[_run('sp-acj4-1247-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-025015 answered true (solved)', _SETUP1, r'''Assum = And()
 Residual = Pow(0, log(9)) - 0
 Result = satrefine.refine(Residual, Assum)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -130,8 +130,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-1254-ground · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered true (solved)
-_n[_run('sp-acj4-1254-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174730 answered true (solved)', _SETUP1, r'''Assum = And()
+# the run satrefine-refine-20261015-025015 answered true (solved)
+_n[_run('sp-acj4-1254-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-025015 answered true (solved)', _SETUP1, r'''Assum = And()
 Residual = Pow(0, sin(2)) - 0
 Result = satrefine.refine(Residual, Assum)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -140,8 +140,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-1258-ground · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered true (solved)
-_n[_run('sp-acj4-1258-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174730 answered true (solved)', _SETUP1, r'''Assum = And()
+# the run satrefine-refine-20261015-025015 answered true (solved)
+_n[_run('sp-acj4-1258-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-025015 answered true (solved)', _SETUP1, r'''Assum = And()
 Residual = Pow(0, sin(9)) - 0
 Result = satrefine.refine(Residual, Assum)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -150,8 +150,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-5372-ground · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered true (solved)
-_n[_run('sp-acj4-5372-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174730 answered true (solved)', _SETUP1, r'''Assum = And()
+# the run satrefine-refine-20261015-025015 answered true (solved)
+_n[_run('sp-acj4-5372-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-025015 answered true (solved)', _SETUP1, r'''Assum = And()
 Residual = sin(asin(Integer(1) / -4)) - Rational(-1, 4)
 Result = satrefine.refine(Residual, Assum)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -160,8 +160,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-5382-ground · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered null (no verdict)
-_n[_run('sp-acj4-5382-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174730 answered null (no verdict)', _SETUP1, r'''Assum = And()
+# the run satrefine-refine-20261015-025015 answered null (no verdict)
+_n[_run('sp-acj4-5382-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-025015 answered null (no verdict)', _SETUP1, r'''Assum = And()
 Residual = sinh(log(Integer(1) / 4)) - Rational(-15, 8)
 Result = satrefine.refine(Residual, Assum)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -170,8 +170,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-5385-ground · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered null (no verdict)
-_n[_run('sp-acj4-5385-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174730 answered null (no verdict)', _SETUP1, r'''Assum = And()
+# the run satrefine-refine-20261015-025015 answered null (no verdict)
+_n[_run('sp-acj4-5385-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-025015 answered null (no verdict)', _SETUP1, r'''Assum = And()
 Residual = sinh(-log(4)) - Rational(-15, 8)
 Result = satrefine.refine(Residual, Assum)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -180,8 +180,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-819-ground · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered true (solved)
-_n[_run('sp-acj4-819-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174730 answered true (solved)', _SETUP1, r'''Assum = And()
+# the run satrefine-refine-20261015-025015 answered true (solved)
+_n[_run('sp-acj4-819-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-025015 answered true (solved)', _SETUP1, r'''Assum = And()
 Residual = 0 / pi - 0
 Result = satrefine.refine(Residual, Assum)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -190,8 +190,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-837-ground · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered true (solved)
-_n[_run('sp-acj4-837-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174730 answered true (solved)', _SETUP1, r'''Assum = And()
+# the run satrefine-refine-20261015-025015 answered true (solved)
+_n[_run('sp-acj4-837-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-025015 answered true (solved)', _SETUP1, r'''Assum = And()
 Residual = Pow(0, pi) - 0
 Result = satrefine.refine(Residual, Assum)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -200,8 +200,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-848-ground · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered null (no verdict)
-_n[_run('sp-acj4-848-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174730 answered null (no verdict)', _SETUP1, r'''Assum = And()
+# the run satrefine-refine-20261015-025015 answered null (no verdict)
+_n[_run('sp-acj4-848-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-025015 answered null (no verdict)', _SETUP1, r'''Assum = And()
 Residual = sinh(log(4)) - Rational(15, 8)
 Result = satrefine.refine(Residual, Assum)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -210,8 +210,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-868-ground · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered true (solved)
-_n[_run('sp-acj4-868-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174730 answered true (solved)', _SETUP1, r'''Assum = And()
+# the run satrefine-refine-20261015-025015 answered true (solved)
+_n[_run('sp-acj4-868-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-025015 answered true (solved)', _SETUP1, r'''Assum = And()
 Residual = 0 * acosh(7) - 0
 Result = satrefine.refine(Residual, Assum)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -220,8 +220,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-911-ground · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered true (solved)
-_n[_run('sp-acj4-911-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174730 answered true (solved)', _SETUP1, r'''Assum = And()
+# the run satrefine-refine-20261015-025015 answered true (solved)
+_n[_run('sp-acj4-911-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-025015 answered true (solved)', _SETUP1, r'''Assum = And()
 Residual = 0 / asin(-1) - 0
 Result = satrefine.refine(Residual, Assum)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -230,8 +230,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-927-ground · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered true (solved)
-_n[_run('sp-acj4-927-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174730 answered true (solved)', _SETUP1, r'''Assum = And()
+# the run satrefine-refine-20261015-025015 answered true (solved)
+_n[_run('sp-acj4-927-ground', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-025015 answered true (solved)', _SETUP1, r'''Assum = And()
 Residual = 0 / asinh(4) - 0
 Result = satrefine.refine(Residual, Assum)
 # true iff the result is 0; false only if it is a definite nonzero number

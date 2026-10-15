@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # assume-eval: a runnable script from the results browser
 # case sp-acj4-392-real · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174713 answered null (declined correctly)
+# the run sympy-simplify-20261015-024958 answered null (declined correctly)
 # Runs on its own: python3 this-file.py (or paste it into python).
 
 # setup (the harness's warm-up, version capture and cache clearing left out)
@@ -25,4 +25,4 @@ def _verdict(answer, expected, stored):
     print(f"verdict: {got} (expected {expected}: {outcome}; {stored})")
     return got
 
-_verdict(Answer, 'contingent', 'the run sympy-simplify-20261014-174713 answered null (declined correctly)')
+_verdict(Answer, 'contingent', 'the run sympy-simplify-20261015-024958 answered null (declined correctly)')

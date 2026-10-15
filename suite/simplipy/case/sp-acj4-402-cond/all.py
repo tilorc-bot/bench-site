@@ -46,8 +46,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case sp-acj4-402-cond · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered null (declined correctly)
-_n[_run('sp-acj4-402-cond', 'satrefine-refine', 'contingent', 'the run satrefine-refine-20261014-174730 answered null (declined correctly)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run satrefine-refine-20261015-025015 answered null (declined correctly)
+_n[_run('sp-acj4-402-cond', 'satrefine-refine', 'contingent', 'the run satrefine-refine-20261015-025015 answered null (declined correctly)', _SETUP1, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), Abs(x) < 1, Ne(Abs(x), 1, evaluate=False), Ne(x, 1, evaluate=False), Ne(x, -1, evaluate=False))
 Residual = sin(atanh(Abs(x))) - Abs(sin(atanh(x)))
 Result = satrefine.refine(Residual, Assum)
@@ -57,8 +57,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-402-cond · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174423 answered null (declined correctly)
-_n[_run('sp-acj4-402-cond', 'sympy-ask', 'contingent', 'the run sympy-ask-20261014-174423 answered null (declined correctly)', _SETUP2, r'''x = Symbol('x', real=True)
+# the run sympy-ask-20261015-024703 answered null (declined correctly)
+_n[_run('sp-acj4-402-cond', 'sympy-ask', 'contingent', 'the run sympy-ask-20261015-024703 answered null (declined correctly)', _SETUP2, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), Abs(x) < 1, Ne(Abs(x), 1, evaluate=False), Ne(x, 1, evaluate=False), Ne(x, -1, evaluate=False))
 Residual = sin(atanh(Abs(x))) - Abs(sin(atanh(x)))
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
@@ -67,8 +67,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-402-cond · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174535 answered null (declined correctly)
-_n[_run('sp-acj4-402-cond', 'sympy-refine', 'contingent', 'the run sympy-refine-20261014-174535 answered null (declined correctly)', _SETUP2, r'''x = Symbol('x', real=True)
+# the run sympy-refine-20261015-024816 answered null (declined correctly)
+_n[_run('sp-acj4-402-cond', 'sympy-refine', 'contingent', 'the run sympy-refine-20261015-024816 answered null (declined correctly)', _SETUP2, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), Abs(x) < 1, Ne(Abs(x), 1, evaluate=False), Ne(x, 1, evaluate=False), Ne(x, -1, evaluate=False))
 Residual = sin(atanh(Abs(x))) - Abs(sin(atanh(x)))
 Result = refine(Residual, Assum)
@@ -78,8 +78,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-402-cond · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174713 answered null (declined correctly)
-_n[_run('sp-acj4-402-cond', 'sympy-simplify', 'contingent', 'the run sympy-simplify-20261014-174713 answered null (declined correctly)', _SETUP2, r'''x = Symbol('x', real=True)
+# the run sympy-simplify-20261015-024958 answered null (declined correctly)
+_n[_run('sp-acj4-402-cond', 'sympy-simplify', 'contingent', 'the run sympy-simplify-20261015-024958 answered null (declined correctly)', _SETUP2, r'''x = Symbol('x', real=True)
 # dropped (not a unary fact about one symbol): Abs(x) < 1
 # dropped (not a unary fact about one symbol): Ne(Abs(x), 1, evaluate=False)
 # dropped (not a unary fact about one symbol): Ne(x, 1, evaluate=False)

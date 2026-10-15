@@ -46,8 +46,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case sp-acj4-0-real · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered true (solved)
-_n[_run('sp-acj4-0-real', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174730 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run satrefine-refine-20261015-025015 answered true (solved)
+_n[_run('sp-acj4-0-real', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-025015 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x))
 Residual = acosh(cosh(x)) - Abs(x)
 Result = satrefine.refine(Residual, Assum)
@@ -57,8 +57,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-0-real · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174423 answered null (no verdict)
-_n[_run('sp-acj4-0-real', 'sympy-ask', 'true', 'the run sympy-ask-20261014-174423 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', real=True)
+# the run sympy-ask-20261015-024703 answered null (no verdict)
+_n[_run('sp-acj4-0-real', 'sympy-ask', 'true', 'the run sympy-ask-20261015-024703 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x))
 Residual = acosh(cosh(x)) - Abs(x)
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
@@ -67,8 +67,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-0-real · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174535 answered null (no verdict)
-_n[_run('sp-acj4-0-real', 'sympy-refine', 'true', 'the run sympy-refine-20261014-174535 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', real=True)
+# the run sympy-refine-20261015-024816 answered null (no verdict)
+_n[_run('sp-acj4-0-real', 'sympy-refine', 'true', 'the run sympy-refine-20261015-024816 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x))
 Residual = acosh(cosh(x)) - Abs(x)
 Result = refine(Residual, Assum)
@@ -78,8 +78,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-0-real · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174713 answered null (no verdict)
-_n[_run('sp-acj4-0-real', 'sympy-simplify', 'true', 'the run sympy-simplify-20261014-174713 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', real=True)
+# the run sympy-simplify-20261015-024958 answered null (no verdict)
+_n[_run('sp-acj4-0-real', 'sympy-simplify', 'true', 'the run sympy-simplify-20261015-024958 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', real=True)
 Residual = acosh(cosh(x)) - Abs(x)
 Result = simplify(Residual)
 # true iff the result is 0; false only if it is a definite nonzero number

@@ -13,7 +13,7 @@ verdict[out_, expected_String, stored_String] := Module[{answer, got, outcome},
 End[];
 
 (* ---- case sp-acj4-56-condf · expected false · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (no verdict) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (no verdict) *)
 Print["== sp-acj4-56-condf · wolfram-fullsimplify · expected false"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -25,10 +25,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "false", "the run wolfram-fullsimplify-20261014-174815 answered null (no verdict)"];
+AEScript`verdict[AEScript`out, "false", "the run wolfram-fullsimplify-20261015-025100 answered null (no verdict)"];
 
 (* ---- case sp-acj4-56-condf · expected false · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (no verdict) *)
+(* the run wolfram-refine-20261015-025050 answered null (no verdict) *)
 Print["== sp-acj4-56-condf · wolfram-refine · expected false"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -40,10 +40,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "false", "the run wolfram-refine-20261014-174804 answered null (no verdict)"];
+AEScript`verdict[AEScript`out, "false", "the run wolfram-refine-20261015-025050 answered null (no verdict)"];
 
 (* ---- case sp-acj4-56-condf · expected false · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (no verdict) *)
+(* the run wolfram-simplify-20261015-025035 answered null (no verdict) *)
 Print["== sp-acj4-56-condf · wolfram-simplify · expected false"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -55,4 +55,4 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "false", "the run wolfram-simplify-20261014-174750 answered null (no verdict)"];
+AEScript`verdict[AEScript`out, "false", "the run wolfram-simplify-20261015-025035 answered null (no verdict)"];

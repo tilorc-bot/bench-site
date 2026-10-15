@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # assume-eval: a runnable script from the results browser
 # case sp-acj4-256-real · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174423 answered true (solved)
+# the run sympy-ask-20261015-024703 answered true (solved)
 # Runs on its own: python3 this-file.py (or paste it into python).
 
 # setup (the harness's warm-up, version capture and cache clearing left out)
@@ -25,4 +25,4 @@ def _verdict(answer, expected, stored):
     print(f"verdict: {got} (expected {expected}: {outcome}; {stored})")
     return got
 
-_verdict(Answer, 'true', 'the run sympy-ask-20261014-174423 answered true (solved)')
+_verdict(Answer, 'true', 'the run sympy-ask-20261015-024703 answered true (solved)')

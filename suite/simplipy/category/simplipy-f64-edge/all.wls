@@ -13,7 +13,7 @@ verdict[out_, expected_String, stored_String] := Module[{answer, got, outcome},
 End[];
 
 (* ---- case sp-acj4-0-real · expected true · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (no verdict) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (no verdict) *)
 Print["== sp-acj4-0-real · wolfram-fullsimplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -25,10 +25,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261014-174815 answered null (no verdict)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261015-025100 answered null (no verdict)"];
 
 (* ---- case sp-acj4-0-real · expected true · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (no verdict) *)
+(* the run wolfram-refine-20261015-025050 answered null (no verdict) *)
 Print["== sp-acj4-0-real · wolfram-refine · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -40,10 +40,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261014-174804 answered null (no verdict)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261015-025050 answered null (no verdict)"];
 
 (* ---- case sp-acj4-0-real · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (no verdict) *)
+(* the run wolfram-simplify-20261015-025035 answered null (no verdict) *)
 Print["== sp-acj4-0-real · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -55,10 +55,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261014-174750 answered null (no verdict)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261015-025035 answered null (no verdict)"];
 
 (* ---- case sp-acj4-115-real · expected true · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered true (solved) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered true (solved) *)
 Print["== sp-acj4-115-real · wolfram-fullsimplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -70,10 +70,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261014-174815 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261015-025100 answered true (solved)"];
 
 (* ---- case sp-acj4-115-real · expected true · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered true (solved) *)
+(* the run wolfram-refine-20261015-025050 answered true (solved) *)
 Print["== sp-acj4-115-real · wolfram-refine · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -85,10 +85,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261014-174804 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261015-025050 answered true (solved)"];
 
 (* ---- case sp-acj4-115-real · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered true (solved) *)
+(* the run wolfram-simplify-20261015-025035 answered true (solved) *)
 Print["== sp-acj4-115-real · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -100,10 +100,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261014-174750 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261015-025035 answered true (solved)"];
 
 (* ---- case sp-acj4-116-real · expected true · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered true (solved) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered true (solved) *)
 Print["== sp-acj4-116-real · wolfram-fullsimplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -115,10 +115,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261014-174815 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261015-025100 answered true (solved)"];
 
 (* ---- case sp-acj4-116-real · expected true · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered true (solved) *)
+(* the run wolfram-refine-20261015-025050 answered true (solved) *)
 Print["== sp-acj4-116-real · wolfram-refine · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -130,10 +130,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261014-174804 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261015-025050 answered true (solved)"];
 
 (* ---- case sp-acj4-116-real · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered true (solved) *)
+(* the run wolfram-simplify-20261015-025035 answered true (solved) *)
 Print["== sp-acj4-116-real · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -145,10 +145,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261014-174750 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261015-025035 answered true (solved)"];
 
 (* ---- case sp-acj4-130-real · expected contingent · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly) *)
 Print["== sp-acj4-130-real · wolfram-fullsimplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -160,10 +160,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-130-real · expected contingent · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (declined correctly) *)
+(* the run wolfram-refine-20261015-025050 answered null (declined correctly) *)
 Print["== sp-acj4-130-real · wolfram-refine · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -175,10 +175,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261014-174804 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261015-025050 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-130-real · expected contingent · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (declined correctly) *)
+(* the run wolfram-simplify-20261015-025035 answered null (declined correctly) *)
 Print["== sp-acj4-130-real · wolfram-simplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -190,10 +190,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261014-174750 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261015-025035 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-151-real · expected contingent · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly) *)
 Print["== sp-acj4-151-real · wolfram-fullsimplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -205,10 +205,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-151-real · expected contingent · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (declined correctly) *)
+(* the run wolfram-refine-20261015-025050 answered null (declined correctly) *)
 Print["== sp-acj4-151-real · wolfram-refine · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -220,10 +220,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261014-174804 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261015-025050 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-151-real · expected contingent · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (declined correctly) *)
+(* the run wolfram-simplify-20261015-025035 answered null (declined correctly) *)
 Print["== sp-acj4-151-real · wolfram-simplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -235,10 +235,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261014-174750 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261015-025035 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-154-real · expected true · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (no verdict) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (no verdict) *)
 Print["== sp-acj4-154-real · wolfram-fullsimplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -250,10 +250,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261014-174815 answered null (no verdict)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261015-025100 answered null (no verdict)"];
 
 (* ---- case sp-acj4-154-real · expected true · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (no verdict) *)
+(* the run wolfram-refine-20261015-025050 answered null (no verdict) *)
 Print["== sp-acj4-154-real · wolfram-refine · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -265,10 +265,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261014-174804 answered null (no verdict)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261015-025050 answered null (no verdict)"];
 
 (* ---- case sp-acj4-154-real · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (no verdict) *)
+(* the run wolfram-simplify-20261015-025035 answered null (no verdict) *)
 Print["== sp-acj4-154-real · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -280,10 +280,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261014-174750 answered null (no verdict)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261015-025035 answered null (no verdict)"];
 
 (* ---- case sp-acj4-156-real · expected contingent · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly) *)
 Print["== sp-acj4-156-real · wolfram-fullsimplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -295,10 +295,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-156-real · expected contingent · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (declined correctly) *)
+(* the run wolfram-refine-20261015-025050 answered null (declined correctly) *)
 Print["== sp-acj4-156-real · wolfram-refine · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -310,10 +310,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261014-174804 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261015-025050 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-156-real · expected contingent · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (declined correctly) *)
+(* the run wolfram-simplify-20261015-025035 answered null (declined correctly) *)
 Print["== sp-acj4-156-real · wolfram-simplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -325,10 +325,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261014-174750 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261015-025035 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-180-real · expected contingent · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly) *)
 Print["== sp-acj4-180-real · wolfram-fullsimplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -340,10 +340,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-180-real · expected contingent · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (declined correctly) *)
+(* the run wolfram-refine-20261015-025050 answered null (declined correctly) *)
 Print["== sp-acj4-180-real · wolfram-refine · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -355,10 +355,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261014-174804 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261015-025050 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-180-real · expected contingent · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (declined correctly) *)
+(* the run wolfram-simplify-20261015-025035 answered null (declined correctly) *)
 Print["== sp-acj4-180-real · wolfram-simplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -370,10 +370,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261014-174750 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261015-025035 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-183-real · expected contingent · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly) *)
 Print["== sp-acj4-183-real · wolfram-fullsimplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -385,10 +385,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-183-real · expected contingent · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (declined correctly) *)
+(* the run wolfram-refine-20261015-025050 answered null (declined correctly) *)
 Print["== sp-acj4-183-real · wolfram-refine · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -400,10 +400,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261014-174804 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261015-025050 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-183-real · expected contingent · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (declined correctly) *)
+(* the run wolfram-simplify-20261015-025035 answered null (declined correctly) *)
 Print["== sp-acj4-183-real · wolfram-simplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -415,10 +415,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261014-174750 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261015-025035 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-189-real · expected true · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (no verdict) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (no verdict) *)
 Print["== sp-acj4-189-real · wolfram-fullsimplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -430,10 +430,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261014-174815 answered null (no verdict)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261015-025100 answered null (no verdict)"];
 
 (* ---- case sp-acj4-189-real · expected true · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (no verdict) *)
+(* the run wolfram-refine-20261015-025050 answered null (no verdict) *)
 Print["== sp-acj4-189-real · wolfram-refine · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -445,10 +445,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261014-174804 answered null (no verdict)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261015-025050 answered null (no verdict)"];
 
 (* ---- case sp-acj4-189-real · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (no verdict) *)
+(* the run wolfram-simplify-20261015-025035 answered null (no verdict) *)
 Print["== sp-acj4-189-real · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -460,10 +460,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261014-174750 answered null (no verdict)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261015-025035 answered null (no verdict)"];
 
 (* ---- case sp-acj4-190-real · expected true · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (no verdict) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (no verdict) *)
 Print["== sp-acj4-190-real · wolfram-fullsimplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -475,10 +475,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261014-174815 answered null (no verdict)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261015-025100 answered null (no verdict)"];
 
 (* ---- case sp-acj4-190-real · expected true · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (no verdict) *)
+(* the run wolfram-refine-20261015-025050 answered null (no verdict) *)
 Print["== sp-acj4-190-real · wolfram-refine · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -490,10 +490,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261014-174804 answered null (no verdict)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261015-025050 answered null (no verdict)"];
 
 (* ---- case sp-acj4-190-real · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (no verdict) *)
+(* the run wolfram-simplify-20261015-025035 answered null (no verdict) *)
 Print["== sp-acj4-190-real · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -505,10 +505,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261014-174750 answered null (no verdict)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261015-025035 answered null (no verdict)"];
 
 (* ---- case sp-acj4-191-real · expected true · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (no verdict) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (no verdict) *)
 Print["== sp-acj4-191-real · wolfram-fullsimplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -520,10 +520,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261014-174815 answered null (no verdict)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261015-025100 answered null (no verdict)"];
 
 (* ---- case sp-acj4-191-real · expected true · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (no verdict) *)
+(* the run wolfram-refine-20261015-025050 answered null (no verdict) *)
 Print["== sp-acj4-191-real · wolfram-refine · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -535,10 +535,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261014-174804 answered null (no verdict)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261015-025050 answered null (no verdict)"];
 
 (* ---- case sp-acj4-191-real · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (no verdict) *)
+(* the run wolfram-simplify-20261015-025035 answered null (no verdict) *)
 Print["== sp-acj4-191-real · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -550,10 +550,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261014-174750 answered null (no verdict)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261015-025035 answered null (no verdict)"];
 
 (* ---- case sp-acj4-203-real · expected contingent · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly) *)
 Print["== sp-acj4-203-real · wolfram-fullsimplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -565,10 +565,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-203-real · expected contingent · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (declined correctly) *)
+(* the run wolfram-refine-20261015-025050 answered null (declined correctly) *)
 Print["== sp-acj4-203-real · wolfram-refine · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -580,10 +580,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261014-174804 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261015-025050 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-203-real · expected contingent · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (declined correctly) *)
+(* the run wolfram-simplify-20261015-025035 answered null (declined correctly) *)
 Print["== sp-acj4-203-real · wolfram-simplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -595,10 +595,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261014-174750 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261015-025035 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-229-real · expected true · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered true (solved) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered true (solved) *)
 Print["== sp-acj4-229-real · wolfram-fullsimplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -610,10 +610,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261014-174815 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261015-025100 answered true (solved)"];
 
 (* ---- case sp-acj4-229-real · expected true · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered true (solved) *)
+(* the run wolfram-refine-20261015-025050 answered true (solved) *)
 Print["== sp-acj4-229-real · wolfram-refine · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -625,10 +625,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261014-174804 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261015-025050 answered true (solved)"];
 
 (* ---- case sp-acj4-229-real · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered true (solved) *)
+(* the run wolfram-simplify-20261015-025035 answered true (solved) *)
 Print["== sp-acj4-229-real · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -640,10 +640,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261014-174750 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261015-025035 answered true (solved)"];
 
 (* ---- case sp-acj4-234-real · expected contingent · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly) *)
 Print["== sp-acj4-234-real · wolfram-fullsimplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -655,10 +655,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-234-real · expected contingent · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (declined correctly) *)
+(* the run wolfram-refine-20261015-025050 answered null (declined correctly) *)
 Print["== sp-acj4-234-real · wolfram-refine · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -670,10 +670,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261014-174804 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261015-025050 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-234-real · expected contingent · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (declined correctly) *)
+(* the run wolfram-simplify-20261015-025035 answered null (declined correctly) *)
 Print["== sp-acj4-234-real · wolfram-simplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -685,10 +685,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261014-174750 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261015-025035 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-241-real · expected contingent · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly) *)
 Print["== sp-acj4-241-real · wolfram-fullsimplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -700,10 +700,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-241-real · expected contingent · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (declined correctly) *)
+(* the run wolfram-refine-20261015-025050 answered null (declined correctly) *)
 Print["== sp-acj4-241-real · wolfram-refine · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -715,10 +715,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261014-174804 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261015-025050 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-241-real · expected contingent · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (declined correctly) *)
+(* the run wolfram-simplify-20261015-025035 answered null (declined correctly) *)
 Print["== sp-acj4-241-real · wolfram-simplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -730,10 +730,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261014-174750 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261015-025035 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-247-real · expected contingent · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly) *)
 Print["== sp-acj4-247-real · wolfram-fullsimplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -745,10 +745,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-247-real · expected contingent · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (declined correctly) *)
+(* the run wolfram-refine-20261015-025050 answered null (declined correctly) *)
 Print["== sp-acj4-247-real · wolfram-refine · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -760,10 +760,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261014-174804 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261015-025050 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-247-real · expected contingent · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (declined correctly) *)
+(* the run wolfram-simplify-20261015-025035 answered null (declined correctly) *)
 Print["== sp-acj4-247-real · wolfram-simplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -775,10 +775,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261014-174750 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261015-025035 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-260-real · expected contingent · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly) *)
 Print["== sp-acj4-260-real · wolfram-fullsimplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -790,10 +790,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-260-real · expected contingent · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (declined correctly) *)
+(* the run wolfram-refine-20261015-025050 answered null (declined correctly) *)
 Print["== sp-acj4-260-real · wolfram-refine · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -805,10 +805,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261014-174804 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261015-025050 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-260-real · expected contingent · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (declined correctly) *)
+(* the run wolfram-simplify-20261015-025035 answered null (declined correctly) *)
 Print["== sp-acj4-260-real · wolfram-simplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -820,10 +820,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261014-174750 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261015-025035 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-261-real · expected true · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered true (solved) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered true (solved) *)
 Print["== sp-acj4-261-real · wolfram-fullsimplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -835,10 +835,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261014-174815 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261015-025100 answered true (solved)"];
 
 (* ---- case sp-acj4-261-real · expected true · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (no verdict) *)
+(* the run wolfram-refine-20261015-025050 answered null (no verdict) *)
 Print["== sp-acj4-261-real · wolfram-refine · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -850,10 +850,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261014-174804 answered null (no verdict)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261015-025050 answered null (no verdict)"];
 
 (* ---- case sp-acj4-261-real · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered true (solved) *)
+(* the run wolfram-simplify-20261015-025035 answered true (solved) *)
 Print["== sp-acj4-261-real · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -865,10 +865,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261014-174750 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261015-025035 answered true (solved)"];
 
 (* ---- case sp-acj4-266-real · expected contingent · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly) *)
 Print["== sp-acj4-266-real · wolfram-fullsimplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -880,10 +880,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-266-real · expected contingent · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (declined correctly) *)
+(* the run wolfram-refine-20261015-025050 answered null (declined correctly) *)
 Print["== sp-acj4-266-real · wolfram-refine · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -895,10 +895,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261014-174804 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261015-025050 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-266-real · expected contingent · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (declined correctly) *)
+(* the run wolfram-simplify-20261015-025035 answered null (declined correctly) *)
 Print["== sp-acj4-266-real · wolfram-simplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -910,10 +910,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261014-174750 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261015-025035 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-267-real · expected contingent · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly) *)
 Print["== sp-acj4-267-real · wolfram-fullsimplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -925,10 +925,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-267-real · expected contingent · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (declined correctly) *)
+(* the run wolfram-refine-20261015-025050 answered null (declined correctly) *)
 Print["== sp-acj4-267-real · wolfram-refine · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -940,10 +940,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261014-174804 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261015-025050 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-267-real · expected contingent · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (declined correctly) *)
+(* the run wolfram-simplify-20261015-025035 answered null (declined correctly) *)
 Print["== sp-acj4-267-real · wolfram-simplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -955,10 +955,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261014-174750 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261015-025035 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-29-real · expected contingent · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly) *)
 Print["== sp-acj4-29-real · wolfram-fullsimplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -970,10 +970,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-29-real · expected contingent · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (declined correctly) *)
+(* the run wolfram-refine-20261015-025050 answered null (declined correctly) *)
 Print["== sp-acj4-29-real · wolfram-refine · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -985,10 +985,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261014-174804 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261015-025050 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-29-real · expected contingent · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (declined correctly) *)
+(* the run wolfram-simplify-20261015-025035 answered null (declined correctly) *)
 Print["== sp-acj4-29-real · wolfram-simplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1000,10 +1000,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261014-174750 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261015-025035 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-3-real · expected true · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered true (solved) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered true (solved) *)
 Print["== sp-acj4-3-real · wolfram-fullsimplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1015,10 +1015,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261014-174815 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261015-025100 answered true (solved)"];
 
 (* ---- case sp-acj4-3-real · expected true · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered true (solved) *)
+(* the run wolfram-refine-20261015-025050 answered true (solved) *)
 Print["== sp-acj4-3-real · wolfram-refine · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1030,10 +1030,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261014-174804 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261015-025050 answered true (solved)"];
 
 (* ---- case sp-acj4-3-real · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered true (solved) *)
+(* the run wolfram-simplify-20261015-025035 answered true (solved) *)
 Print["== sp-acj4-3-real · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1045,10 +1045,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261014-174750 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261015-025035 answered true (solved)"];
 
 (* ---- case sp-acj4-343-real · expected true · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered true (solved) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered true (solved) *)
 Print["== sp-acj4-343-real · wolfram-fullsimplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1060,10 +1060,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261014-174815 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261015-025100 answered true (solved)"];
 
 (* ---- case sp-acj4-343-real · expected true · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered true (solved) *)
+(* the run wolfram-refine-20261015-025050 answered true (solved) *)
 Print["== sp-acj4-343-real · wolfram-refine · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1075,10 +1075,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261014-174804 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261015-025050 answered true (solved)"];
 
 (* ---- case sp-acj4-343-real · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered true (solved) *)
+(* the run wolfram-simplify-20261015-025035 answered true (solved) *)
 Print["== sp-acj4-343-real · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1090,10 +1090,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261014-174750 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261015-025035 answered true (solved)"];
 
 (* ---- case sp-acj4-344-real · expected contingent · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly) *)
 Print["== sp-acj4-344-real · wolfram-fullsimplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1105,10 +1105,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-344-real · expected contingent · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (declined correctly) *)
+(* the run wolfram-refine-20261015-025050 answered null (declined correctly) *)
 Print["== sp-acj4-344-real · wolfram-refine · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1120,10 +1120,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261014-174804 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261015-025050 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-344-real · expected contingent · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (declined correctly) *)
+(* the run wolfram-simplify-20261015-025035 answered null (declined correctly) *)
 Print["== sp-acj4-344-real · wolfram-simplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1135,10 +1135,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261014-174750 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261015-025035 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-378-real · expected true · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered true (solved) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered true (solved) *)
 Print["== sp-acj4-378-real · wolfram-fullsimplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1150,10 +1150,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261014-174815 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261015-025100 answered true (solved)"];
 
 (* ---- case sp-acj4-378-real · expected true · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered true (solved) *)
+(* the run wolfram-refine-20261015-025050 answered true (solved) *)
 Print["== sp-acj4-378-real · wolfram-refine · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1165,10 +1165,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261014-174804 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261015-025050 answered true (solved)"];
 
 (* ---- case sp-acj4-378-real · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered true (solved) *)
+(* the run wolfram-simplify-20261015-025035 answered true (solved) *)
 Print["== sp-acj4-378-real · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1180,10 +1180,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261014-174750 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261015-025035 answered true (solved)"];
 
 (* ---- case sp-acj4-380-real · expected true · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered true (solved) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered true (solved) *)
 Print["== sp-acj4-380-real · wolfram-fullsimplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1195,10 +1195,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261014-174815 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261015-025100 answered true (solved)"];
 
 (* ---- case sp-acj4-380-real · expected true · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered true (solved) *)
+(* the run wolfram-refine-20261015-025050 answered true (solved) *)
 Print["== sp-acj4-380-real · wolfram-refine · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1210,10 +1210,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261014-174804 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261015-025050 answered true (solved)"];
 
 (* ---- case sp-acj4-380-real · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered true (solved) *)
+(* the run wolfram-simplify-20261015-025035 answered true (solved) *)
 Print["== sp-acj4-380-real · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1225,10 +1225,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261014-174750 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261015-025035 answered true (solved)"];
 
 (* ---- case sp-acj4-392-real · expected contingent · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly) *)
 Print["== sp-acj4-392-real · wolfram-fullsimplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1240,10 +1240,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-392-real · expected contingent · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (declined correctly) *)
+(* the run wolfram-refine-20261015-025050 answered null (declined correctly) *)
 Print["== sp-acj4-392-real · wolfram-refine · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1255,10 +1255,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261014-174804 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261015-025050 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-392-real · expected contingent · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (declined correctly) *)
+(* the run wolfram-simplify-20261015-025035 answered null (declined correctly) *)
 Print["== sp-acj4-392-real · wolfram-simplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1270,10 +1270,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261014-174750 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261015-025035 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-403-real · expected contingent · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly) *)
 Print["== sp-acj4-403-real · wolfram-fullsimplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1285,10 +1285,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-403-real · expected contingent · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (declined correctly) *)
+(* the run wolfram-refine-20261015-025050 answered null (declined correctly) *)
 Print["== sp-acj4-403-real · wolfram-refine · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1300,10 +1300,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261014-174804 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261015-025050 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-403-real · expected contingent · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (declined correctly) *)
+(* the run wolfram-simplify-20261015-025035 answered null (declined correctly) *)
 Print["== sp-acj4-403-real · wolfram-simplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1315,10 +1315,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261014-174750 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261015-025035 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-410-real · expected true · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered true (solved) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered true (solved) *)
 Print["== sp-acj4-410-real · wolfram-fullsimplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1330,10 +1330,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261014-174815 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261015-025100 answered true (solved)"];
 
 (* ---- case sp-acj4-410-real · expected true · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered true (solved) *)
+(* the run wolfram-refine-20261015-025050 answered true (solved) *)
 Print["== sp-acj4-410-real · wolfram-refine · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1345,10 +1345,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261014-174804 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261015-025050 answered true (solved)"];
 
 (* ---- case sp-acj4-410-real · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered true (solved) *)
+(* the run wolfram-simplify-20261015-025035 answered true (solved) *)
 Print["== sp-acj4-410-real · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1360,10 +1360,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261014-174750 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261015-025035 answered true (solved)"];
 
 (* ---- case sp-acj4-416-real · expected contingent · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly) *)
 Print["== sp-acj4-416-real · wolfram-fullsimplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1375,10 +1375,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-416-real · expected contingent · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (declined correctly) *)
+(* the run wolfram-refine-20261015-025050 answered null (declined correctly) *)
 Print["== sp-acj4-416-real · wolfram-refine · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1390,10 +1390,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261014-174804 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261015-025050 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-416-real · expected contingent · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (declined correctly) *)
+(* the run wolfram-simplify-20261015-025035 answered null (declined correctly) *)
 Print["== sp-acj4-416-real · wolfram-simplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1405,10 +1405,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261014-174750 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261015-025035 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-420-real · expected contingent · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly) *)
 Print["== sp-acj4-420-real · wolfram-fullsimplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1420,10 +1420,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-420-real · expected contingent · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (declined correctly) *)
+(* the run wolfram-refine-20261015-025050 answered null (declined correctly) *)
 Print["== sp-acj4-420-real · wolfram-refine · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1435,10 +1435,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261014-174804 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261015-025050 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-420-real · expected contingent · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (declined correctly) *)
+(* the run wolfram-simplify-20261015-025035 answered null (declined correctly) *)
 Print["== sp-acj4-420-real · wolfram-simplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1450,10 +1450,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261014-174750 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261015-025035 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-430-real · expected contingent · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly) *)
 Print["== sp-acj4-430-real · wolfram-fullsimplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1465,10 +1465,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-430-real · expected contingent · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (declined correctly) *)
+(* the run wolfram-refine-20261015-025050 answered null (declined correctly) *)
 Print["== sp-acj4-430-real · wolfram-refine · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1480,10 +1480,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261014-174804 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261015-025050 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-430-real · expected contingent · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (declined correctly) *)
+(* the run wolfram-simplify-20261015-025035 answered null (declined correctly) *)
 Print["== sp-acj4-430-real · wolfram-simplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1495,10 +1495,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261014-174750 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261015-025035 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-433-real · expected contingent · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly) *)
 Print["== sp-acj4-433-real · wolfram-fullsimplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1510,10 +1510,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-433-real · expected contingent · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (declined correctly) *)
+(* the run wolfram-refine-20261015-025050 answered null (declined correctly) *)
 Print["== sp-acj4-433-real · wolfram-refine · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1525,10 +1525,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261014-174804 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261015-025050 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-433-real · expected contingent · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (declined correctly) *)
+(* the run wolfram-simplify-20261015-025035 answered null (declined correctly) *)
 Print["== sp-acj4-433-real · wolfram-simplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1540,10 +1540,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261014-174750 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261015-025035 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-442-real · expected contingent · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly) *)
 Print["== sp-acj4-442-real · wolfram-fullsimplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1555,10 +1555,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-442-real · expected contingent · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (declined correctly) *)
+(* the run wolfram-refine-20261015-025050 answered null (declined correctly) *)
 Print["== sp-acj4-442-real · wolfram-refine · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1570,10 +1570,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261014-174804 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261015-025050 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-442-real · expected contingent · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (declined correctly) *)
+(* the run wolfram-simplify-20261015-025035 answered null (declined correctly) *)
 Print["== sp-acj4-442-real · wolfram-simplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1585,10 +1585,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261014-174750 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261015-025035 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-449-real · expected true · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered true (solved) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered true (solved) *)
 Print["== sp-acj4-449-real · wolfram-fullsimplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1600,10 +1600,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261014-174815 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261015-025100 answered true (solved)"];
 
 (* ---- case sp-acj4-449-real · expected true · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (no verdict) *)
+(* the run wolfram-refine-20261015-025050 answered null (no verdict) *)
 Print["== sp-acj4-449-real · wolfram-refine · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1615,10 +1615,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261014-174804 answered null (no verdict)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261015-025050 answered null (no verdict)"];
 
 (* ---- case sp-acj4-449-real · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered true (solved) *)
+(* the run wolfram-simplify-20261015-025035 answered true (solved) *)
 Print["== sp-acj4-449-real · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1630,10 +1630,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261014-174750 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261015-025035 answered true (solved)"];
 
 (* ---- case sp-acj4-450-real · expected true · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered true (solved) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered true (solved) *)
 Print["== sp-acj4-450-real · wolfram-fullsimplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1645,10 +1645,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261014-174815 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261015-025100 answered true (solved)"];
 
 (* ---- case sp-acj4-450-real · expected true · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered true (solved) *)
+(* the run wolfram-refine-20261015-025050 answered true (solved) *)
 Print["== sp-acj4-450-real · wolfram-refine · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1660,10 +1660,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261014-174804 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261015-025050 answered true (solved)"];
 
 (* ---- case sp-acj4-450-real · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered true (solved) *)
+(* the run wolfram-simplify-20261015-025035 answered true (solved) *)
 Print["== sp-acj4-450-real · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1675,10 +1675,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261014-174750 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261015-025035 answered true (solved)"];
 
 (* ---- case sp-acj4-451-real · expected true · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered true (solved) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered true (solved) *)
 Print["== sp-acj4-451-real · wolfram-fullsimplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1690,10 +1690,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261014-174815 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261015-025100 answered true (solved)"];
 
 (* ---- case sp-acj4-451-real · expected true · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered true (solved) *)
+(* the run wolfram-refine-20261015-025050 answered true (solved) *)
 Print["== sp-acj4-451-real · wolfram-refine · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1705,10 +1705,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261014-174804 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261015-025050 answered true (solved)"];
 
 (* ---- case sp-acj4-451-real · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered true (solved) *)
+(* the run wolfram-simplify-20261015-025035 answered true (solved) *)
 Print["== sp-acj4-451-real · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1720,10 +1720,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261014-174750 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261015-025035 answered true (solved)"];
 
 (* ---- case sp-acj4-50-real · expected true · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered true (solved) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered true (solved) *)
 Print["== sp-acj4-50-real · wolfram-fullsimplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1735,10 +1735,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261014-174815 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261015-025100 answered true (solved)"];
 
 (* ---- case sp-acj4-50-real · expected true · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered true (solved) *)
+(* the run wolfram-refine-20261015-025050 answered true (solved) *)
 Print["== sp-acj4-50-real · wolfram-refine · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1750,10 +1750,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261014-174804 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261015-025050 answered true (solved)"];
 
 (* ---- case sp-acj4-50-real · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered true (solved) *)
+(* the run wolfram-simplify-20261015-025035 answered true (solved) *)
 Print["== sp-acj4-50-real · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1765,10 +1765,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261014-174750 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261015-025035 answered true (solved)"];
 
 (* ---- case sp-acj4-55-real · expected contingent · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly) *)
 Print["== sp-acj4-55-real · wolfram-fullsimplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1780,10 +1780,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-55-real · expected contingent · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (declined correctly) *)
+(* the run wolfram-refine-20261015-025050 answered null (declined correctly) *)
 Print["== sp-acj4-55-real · wolfram-refine · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1795,10 +1795,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261014-174804 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261015-025050 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-55-real · expected contingent · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (declined correctly) *)
+(* the run wolfram-simplify-20261015-025035 answered null (declined correctly) *)
 Print["== sp-acj4-55-real · wolfram-simplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1810,10 +1810,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261014-174750 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261015-025035 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-56-real · expected contingent · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly) *)
 Print["== sp-acj4-56-real · wolfram-fullsimplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1825,10 +1825,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261014-174815 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-56-real · expected contingent · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered null (declined correctly) *)
+(* the run wolfram-refine-20261015-025050 answered null (declined correctly) *)
 Print["== sp-acj4-56-real · wolfram-refine · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1840,10 +1840,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261014-174804 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261015-025050 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-56-real · expected contingent · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered null (declined correctly) *)
+(* the run wolfram-simplify-20261015-025035 answered null (declined correctly) *)
 Print["== sp-acj4-56-real · wolfram-simplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1855,10 +1855,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261014-174750 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261015-025035 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-6-real · expected true · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered true (solved) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered true (solved) *)
 Print["== sp-acj4-6-real · wolfram-fullsimplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1870,10 +1870,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261014-174815 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261015-025100 answered true (solved)"];
 
 (* ---- case sp-acj4-6-real · expected true · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered true (solved) *)
+(* the run wolfram-refine-20261015-025050 answered true (solved) *)
 Print["== sp-acj4-6-real · wolfram-refine · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1885,10 +1885,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261014-174804 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261015-025050 answered true (solved)"];
 
 (* ---- case sp-acj4-6-real · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered true (solved) *)
+(* the run wolfram-simplify-20261015-025035 answered true (solved) *)
 Print["== sp-acj4-6-real · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1900,10 +1900,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261014-174750 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261015-025035 answered true (solved)"];
 
 (* ---- case sp-acj4-806-ground · expected true · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered true (solved) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered true (solved) *)
 Print["== sp-acj4-806-ground · wolfram-fullsimplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1915,10 +1915,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261014-174815 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261015-025100 answered true (solved)"];
 
 (* ---- case sp-acj4-806-ground · expected true · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered true (solved) *)
+(* the run wolfram-refine-20261015-025050 answered true (solved) *)
 Print["== sp-acj4-806-ground · wolfram-refine · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1930,10 +1930,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261014-174804 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261015-025050 answered true (solved)"];
 
 (* ---- case sp-acj4-806-ground · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered true (solved) *)
+(* the run wolfram-simplify-20261015-025035 answered true (solved) *)
 Print["== sp-acj4-806-ground · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1945,10 +1945,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261014-174750 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261015-025035 answered true (solved)"];
 
 (* ---- case sp-acj4-813-ground · expected true · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered true (solved) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered true (solved) *)
 Print["== sp-acj4-813-ground · wolfram-fullsimplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1960,10 +1960,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261014-174815 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261015-025100 answered true (solved)"];
 
 (* ---- case sp-acj4-813-ground · expected true · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered true (solved) *)
+(* the run wolfram-refine-20261015-025050 answered true (solved) *)
 Print["== sp-acj4-813-ground · wolfram-refine · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1975,10 +1975,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261014-174804 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261015-025050 answered true (solved)"];
 
 (* ---- case sp-acj4-813-ground · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered true (solved) *)
+(* the run wolfram-simplify-20261015-025035 answered true (solved) *)
 Print["== sp-acj4-813-ground · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -1990,10 +1990,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261014-174750 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261015-025035 answered true (solved)"];
 
 (* ---- case sp-acj4-816-ground · expected true · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174815 answered true (solved) *)
+(* the run wolfram-fullsimplify-20261015-025100 answered true (solved) *)
 Print["== sp-acj4-816-ground · wolfram-fullsimplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -2005,10 +2005,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261014-174815 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261015-025100 answered true (solved)"];
 
 (* ---- case sp-acj4-816-ground · expected true · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174804 answered true (solved) *)
+(* the run wolfram-refine-20261015-025050 answered true (solved) *)
 Print["== sp-acj4-816-ground · wolfram-refine · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -2020,10 +2020,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261014-174804 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261015-025050 answered true (solved)"];
 
 (* ---- case sp-acj4-816-ground · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174750 answered true (solved) *)
+(* the run wolfram-simplify-20261015-025035 answered true (solved) *)
 Print["== sp-acj4-816-ground · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -2035,4 +2035,4 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261014-174750 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261015-025035 answered true (solved)"];

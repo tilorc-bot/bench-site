@@ -46,8 +46,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case sp-acj4-187-cond · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered null (no verdict)
-_n[_run('sp-acj4-187-cond', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174730 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', complex=True)
+# the run satrefine-refine-20261015-025015 answered null (no verdict)
+_n[_run('sp-acj4-187-cond', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-025015 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', complex=True)
 Assum = And(Q.complex(x), Q.imaginary(x), ~Q.zero(cosh(x)), ~Q.zero(cos(tanh(x))), Ne(tan(tanh(x)), I, evaluate=False), Ne(tan(tanh(x)), -I, evaluate=False))
 Residual = atan(tan(tanh(x))) - tanh(x)
 Result = satrefine.refine(Residual, Assum)
@@ -57,8 +57,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-187-cond · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174423 answered null (no verdict)
-_n[_run('sp-acj4-187-cond', 'sympy-ask', 'true', 'the run sympy-ask-20261014-174423 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', complex=True)
+# the run sympy-ask-20261015-024703 answered null (no verdict)
+_n[_run('sp-acj4-187-cond', 'sympy-ask', 'true', 'the run sympy-ask-20261015-024703 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', complex=True)
 Assum = And(Q.complex(x), Q.imaginary(x), ~Q.zero(cosh(x)), ~Q.zero(cos(tanh(x))), Ne(tan(tanh(x)), I, evaluate=False), Ne(tan(tanh(x)), -I, evaluate=False))
 Residual = atan(tan(tanh(x))) - tanh(x)
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
@@ -67,8 +67,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-187-cond · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174535 answered null (no verdict)
-_n[_run('sp-acj4-187-cond', 'sympy-refine', 'true', 'the run sympy-refine-20261014-174535 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', complex=True)
+# the run sympy-refine-20261015-024816 answered null (no verdict)
+_n[_run('sp-acj4-187-cond', 'sympy-refine', 'true', 'the run sympy-refine-20261015-024816 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', complex=True)
 Assum = And(Q.complex(x), Q.imaginary(x), ~Q.zero(cosh(x)), ~Q.zero(cos(tanh(x))), Ne(tan(tanh(x)), I, evaluate=False), Ne(tan(tanh(x)), -I, evaluate=False))
 Residual = atan(tan(tanh(x))) - tanh(x)
 Result = refine(Residual, Assum)
@@ -78,8 +78,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-187-cond · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174713 answered null (no verdict)
-_n[_run('sp-acj4-187-cond', 'sympy-simplify', 'true', 'the run sympy-simplify-20261014-174713 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', complex=True, imaginary=True)
+# the run sympy-simplify-20261015-024958 answered null (no verdict)
+_n[_run('sp-acj4-187-cond', 'sympy-simplify', 'true', 'the run sympy-simplify-20261015-024958 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', complex=True, imaginary=True)
 # dropped (not a unary fact about one symbol): ~Q.zero(cosh(x))
 # dropped (not a unary fact about one symbol): ~Q.zero(cos(tanh(x)))
 # dropped (not a unary fact about one symbol): Ne(tan(tanh(x)), I, evaluate=False)

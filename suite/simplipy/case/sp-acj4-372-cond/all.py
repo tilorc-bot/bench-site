@@ -46,8 +46,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case sp-acj4-372-cond · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174730 answered null (declined correctly)
-_n[_run('sp-acj4-372-cond', 'satrefine-refine', 'contingent', 'the run satrefine-refine-20261014-174730 answered null (declined correctly)', _SETUP1, r'''x = Symbol('x', complex=True)
+# the run satrefine-refine-20261015-025015 answered null (declined correctly)
+_n[_run('sp-acj4-372-cond', 'satrefine-refine', 'contingent', 'the run satrefine-refine-20261015-025015 answered null (declined correctly)', _SETUP1, r'''x = Symbol('x', complex=True)
 Assum = And(Q.complex(x), re(x) > 0, Q.real(cosh(x)), ~Q.zero(cosh(x)))
 Residual = real_root(cosh(x), -5) - Pow(cosh(x), Rational(-1, 5))
 Result = satrefine.refine(Residual, Assum)
@@ -57,8 +57,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-372-cond · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174423 answered null (declined correctly)
-_n[_run('sp-acj4-372-cond', 'sympy-ask', 'contingent', 'the run sympy-ask-20261014-174423 answered null (declined correctly)', _SETUP2, r'''x = Symbol('x', complex=True)
+# the run sympy-ask-20261015-024703 answered null (declined correctly)
+_n[_run('sp-acj4-372-cond', 'sympy-ask', 'contingent', 'the run sympy-ask-20261015-024703 answered null (declined correctly)', _SETUP2, r'''x = Symbol('x', complex=True)
 Assum = And(Q.complex(x), re(x) > 0, Q.real(cosh(x)), ~Q.zero(cosh(x)))
 Residual = real_root(cosh(x), -5) - Pow(cosh(x), Rational(-1, 5))
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
@@ -67,8 +67,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case sp-acj4-372-cond · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174713 answered null (declined correctly)
-_n[_run('sp-acj4-372-cond', 'sympy-simplify', 'contingent', 'the run sympy-simplify-20261014-174713 answered null (declined correctly)', _SETUP2, r'''x = Symbol('x', complex=True)
+# the run sympy-simplify-20261015-024958 answered null (declined correctly)
+_n[_run('sp-acj4-372-cond', 'sympy-simplify', 'contingent', 'the run sympy-simplify-20261015-024958 answered null (declined correctly)', _SETUP2, r'''x = Symbol('x', complex=True)
 # dropped (not a unary fact about one symbol): re(x) > 0
 # dropped (not a unary fact about one symbol): Q.real(cosh(x))
 # dropped (not a unary fact about one symbol): ~Q.zero(cosh(x))
