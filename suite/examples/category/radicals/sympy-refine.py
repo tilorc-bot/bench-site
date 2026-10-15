@@ -39,8 +39,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case demo-eq-abs-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered true (solved)
-_n[_run('demo-eq-abs-01', 'sympy-refine', 'true', 'the run sympy-refine-20261014-174225 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run sympy-refine-20261015-024432 answered true (solved)
+_n[_run('demo-eq-abs-01', 'sympy-refine', 'true', 'the run sympy-refine-20261015-024432 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), Q.negative(x))
 Residual = Abs(x) - (-x)
 Result = refine(Residual, Assum)
@@ -50,8 +50,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-eq-abs-02 · expected false · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered null (no verdict)
-_n[_run('demo-eq-abs-02', 'sympy-refine', 'false', 'the run sympy-refine-20261014-174225 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run sympy-refine-20261015-024432 answered null (no verdict)
+_n[_run('demo-eq-abs-02', 'sympy-refine', 'false', 'the run sympy-refine-20261015-024432 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), Q.negative(x))
 Residual = Abs(x) - x
 Result = refine(Residual, Assum)
@@ -61,8 +61,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-eq-sqrt-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered true (solved)
-_n[_run('demo-eq-sqrt-01', 'sympy-refine', 'true', 'the run sympy-refine-20261014-174225 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run sympy-refine-20261015-024432 answered true (solved)
+_n[_run('demo-eq-sqrt-01', 'sympy-refine', 'true', 'the run sympy-refine-20261015-024432 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), Q.positive(x))
 Residual = sqrt(Pow(x, 2)) - x
 Result = refine(Residual, Assum)
@@ -72,8 +72,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-eq-sqrt-02 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered true (solved)
-_n[_run('demo-eq-sqrt-02', 'sympy-refine', 'true', 'the run sympy-refine-20261014-174225 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run sympy-refine-20261015-024432 answered true (solved)
+_n[_run('demo-eq-sqrt-02', 'sympy-refine', 'true', 'the run sympy-refine-20261015-024432 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x))
 Residual = sqrt(Pow(x, 2)) - Abs(x)
 Result = refine(Residual, Assum)
@@ -83,8 +83,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-eq-sqrt-03 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered null (declined correctly)
-_n[_run('demo-eq-sqrt-03', 'sympy-refine', 'contingent', 'the run sympy-refine-20261014-174225 answered null (declined correctly)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run sympy-refine-20261015-024432 answered null (declined correctly)
+_n[_run('demo-eq-sqrt-03', 'sympy-refine', 'contingent', 'the run sympy-refine-20261015-024432 answered null (declined correctly)', _SETUP1, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x))
 Residual = sqrt(Pow(x, 2)) - x
 Result = refine(Residual, Assum)
@@ -94,8 +94,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-eq-sqrt-04 · expected false · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered false (solved)
-_n[_run('demo-eq-sqrt-04', 'sympy-refine', 'false', 'the run sympy-refine-20261014-174225 answered false (solved)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run sympy-refine-20261015-024432 answered false (solved)
+_n[_run('demo-eq-sqrt-04', 'sympy-refine', 'false', 'the run sympy-refine-20261015-024432 answered false (solved)', _SETUP1, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), Q.positive(x))
 Residual = sqrt(Pow(x, 2)) + 1 - x
 Result = refine(Residual, Assum)

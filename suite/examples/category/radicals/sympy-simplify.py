@@ -39,8 +39,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case demo-eq-abs-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered true (solved)
-_n[_run('demo-eq-abs-01', 'sympy-simplify', 'true', 'the run sympy-simplify-20261014-174228 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True, negative=True)
+# the run sympy-simplify-20261015-024434 answered true (solved)
+_n[_run('demo-eq-abs-01', 'sympy-simplify', 'true', 'the run sympy-simplify-20261015-024434 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True, negative=True)
 Residual = Abs(x) - (-x)
 Result = simplify(Residual)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -49,8 +49,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-eq-abs-02 · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered null (no verdict)
-_n[_run('demo-eq-abs-02', 'sympy-simplify', 'false', 'the run sympy-simplify-20261014-174228 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', real=True, negative=True)
+# the run sympy-simplify-20261015-024434 answered null (no verdict)
+_n[_run('demo-eq-abs-02', 'sympy-simplify', 'false', 'the run sympy-simplify-20261015-024434 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', real=True, negative=True)
 Residual = Abs(x) - x
 Result = simplify(Residual)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -59,8 +59,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-eq-sqrt-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered true (solved)
-_n[_run('demo-eq-sqrt-01', 'sympy-simplify', 'true', 'the run sympy-simplify-20261014-174228 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True, positive=True)
+# the run sympy-simplify-20261015-024434 answered true (solved)
+_n[_run('demo-eq-sqrt-01', 'sympy-simplify', 'true', 'the run sympy-simplify-20261015-024434 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True, positive=True)
 Residual = sqrt(Pow(x, 2)) - x
 Result = simplify(Residual)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -69,8 +69,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-eq-sqrt-02 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered true (solved)
-_n[_run('demo-eq-sqrt-02', 'sympy-simplify', 'true', 'the run sympy-simplify-20261014-174228 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run sympy-simplify-20261015-024434 answered true (solved)
+_n[_run('demo-eq-sqrt-02', 'sympy-simplify', 'true', 'the run sympy-simplify-20261015-024434 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True)
 Residual = sqrt(Pow(x, 2)) - Abs(x)
 Result = simplify(Residual)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -79,8 +79,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-eq-sqrt-03 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered null (declined correctly)
-_n[_run('demo-eq-sqrt-03', 'sympy-simplify', 'contingent', 'the run sympy-simplify-20261014-174228 answered null (declined correctly)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run sympy-simplify-20261015-024434 answered null (declined correctly)
+_n[_run('demo-eq-sqrt-03', 'sympy-simplify', 'contingent', 'the run sympy-simplify-20261015-024434 answered null (declined correctly)', _SETUP1, r'''x = Symbol('x', real=True)
 Residual = sqrt(Pow(x, 2)) - x
 Result = simplify(Residual)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -89,8 +89,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-eq-sqrt-04 · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered false (solved)
-_n[_run('demo-eq-sqrt-04', 'sympy-simplify', 'false', 'the run sympy-simplify-20261014-174228 answered false (solved)', _SETUP1, r'''x = Symbol('x', real=True, positive=True)
+# the run sympy-simplify-20261015-024434 answered false (solved)
+_n[_run('demo-eq-sqrt-04', 'sympy-simplify', 'false', 'the run sympy-simplify-20261015-024434 answered false (solved)', _SETUP1, r'''x = Symbol('x', real=True, positive=True)
 Residual = sqrt(Pow(x, 2)) + 1 - x
 Result = simplify(Residual)
 # true iff the result is 0; false only if it is a definite nonzero number

@@ -39,8 +39,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case demo-parity-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered null (no verdict)
-_n[_run('demo-parity-01', 'sympy-ask', 'true', 'the run sympy-ask-20261014-174223 answered null (no verdict)', _SETUP1, r'''n = Symbol('n', integer=True)
+# the run sympy-ask-20261015-024429 answered null (no verdict)
+_n[_run('demo-parity-01', 'sympy-ask', 'true', 'the run sympy-ask-20261015-024429 answered null (no verdict)', _SETUP1, r'''n = Symbol('n', integer=True)
 Assum = And(Q.integer(n), Q.odd(n))
 Residual = Pow(-1, n + 1) - 1
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
@@ -49,8 +49,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-parity-02 · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered false (solved)
-_n[_run('demo-parity-02', 'sympy-ask', 'false', 'the run sympy-ask-20261014-174223 answered false (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
+# the run sympy-ask-20261015-024429 answered false (solved)
+_n[_run('demo-parity-02', 'sympy-ask', 'false', 'the run sympy-ask-20261015-024429 answered false (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
 m = Symbol('m', integer=True)
 Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
 Residual = Pow(-1, n * m) - 1
@@ -60,8 +60,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-parity-03 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered true (solved)
-_n[_run('demo-parity-03', 'sympy-ask', 'true', 'the run sympy-ask-20261014-174223 answered true (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
+# the run sympy-ask-20261015-024429 answered true (solved)
+_n[_run('demo-parity-03', 'sympy-ask', 'true', 'the run sympy-ask-20261015-024429 answered true (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
 Assum = And(Q.integer(n))
 Residual = Pow(-1, n * (n + 1)) - 1
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
@@ -70,8 +70,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-parity-04 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered null (declined correctly)
-_n[_run('demo-parity-04', 'sympy-ask', 'contingent', 'the run sympy-ask-20261014-174223 answered null (declined correctly)', _SETUP1, r'''n = Symbol('n', integer=True)
+# the run sympy-ask-20261015-024429 answered null (declined correctly)
+_n[_run('demo-parity-04', 'sympy-ask', 'contingent', 'the run sympy-ask-20261015-024429 answered null (declined correctly)', _SETUP1, r'''n = Symbol('n', integer=True)
 Assum = And(Q.integer(n), Q.even(n))
 Residual = Pow(I, n) - 1
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
@@ -80,8 +80,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-parity-05 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered null (no verdict)
-_n[_run('demo-parity-05', 'sympy-ask', 'true', 'the run sympy-ask-20261014-174223 answered null (no verdict)', _SETUP1, r'''n = Symbol('n', integer=True)
+# the run sympy-ask-20261015-024429 answered null (no verdict)
+_n[_run('demo-parity-05', 'sympy-ask', 'true', 'the run sympy-ask-20261015-024429 answered null (no verdict)', _SETUP1, r'''n = Symbol('n', integer=True)
 m = Symbol('m', integer=True)
 Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
 Residual = Pow(-1, n * m) - (-1)

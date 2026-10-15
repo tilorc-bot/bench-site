@@ -39,8 +39,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case demo-eq-log-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered true (solved)
-_n[_run('demo-eq-log-01', 'sympy-ask', 'true', 'the run sympy-ask-20261014-174223 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run sympy-ask-20261015-024429 answered true (solved)
+_n[_run('demo-eq-log-01', 'sympy-ask', 'true', 'the run sympy-ask-20261015-024429 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), Q.positive(x))
 Residual = log(exp(x)) - x
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
@@ -49,8 +49,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-eq-pow-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered true (solved)
-_n[_run('demo-eq-pow-01', 'sympy-ask', 'true', 'the run sympy-ask-20261014-174223 answered true (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
+# the run sympy-ask-20261015-024429 answered true (solved)
+_n[_run('demo-eq-pow-01', 'sympy-ask', 'true', 'the run sympy-ask-20261015-024429 answered true (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
 Assum = And(Q.integer(n))
 Residual = Pow(-1, 2 * n) - 1
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False

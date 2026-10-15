@@ -39,8 +39,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case demo-nonzero-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered null (no verdict)
-_n[_run('demo-nonzero-01', 'sympy-refine', 'true', 'the run sympy-refine-20261014-174225 answered null (no verdict)', _SETUP1, r'''z = Symbol('z', complex=True)
+# the run sympy-refine-20261015-024432 answered null (no verdict)
+_n[_run('demo-nonzero-01', 'sympy-refine', 'true', 'the run sympy-refine-20261015-024432 answered null (no verdict)', _SETUP1, r'''z = Symbol('z', complex=True)
 Assum = And(Q.complex(z), Q.imaginary(z))
 Residual = Abs(sign(z)) - 1
 Result = refine(Residual, Assum)
@@ -50,8 +50,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-sign-02 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered true (solved)
-_n[_run('demo-sign-02', 'sympy-refine', 'true', 'the run sympy-refine-20261014-174225 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run sympy-refine-20261015-024432 answered true (solved)
+_n[_run('demo-sign-02', 'sympy-refine', 'true', 'the run sympy-refine-20261015-024432 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), ~Q.zero(x))
 Residual = sign(Pow(x, 2)) - 1
 Result = refine(Residual, Assum)
@@ -61,8 +61,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-sign-03 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered null (declined correctly)
-_n[_run('demo-sign-03', 'sympy-refine', 'contingent', 'the run sympy-refine-20261014-174225 answered null (declined correctly)', _SETUP1, r'''x = Symbol('x', complex=True)
+# the run sympy-refine-20261015-024432 answered null (declined correctly)
+_n[_run('demo-sign-03', 'sympy-refine', 'contingent', 'the run sympy-refine-20261015-024432 answered null (declined correctly)', _SETUP1, r'''x = Symbol('x', complex=True)
 Assum = And(Q.complex(x), ~Q.zero(x))
 Residual = sign(Pow(x, 2)) - 1
 Result = refine(Residual, Assum)
@@ -72,8 +72,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-sign-04 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered null (no verdict)
-_n[_run('demo-sign-04', 'sympy-refine', 'true', 'the run sympy-refine-20261014-174225 answered null (no verdict)', _SETUP1, r'''z = Symbol('z', complex=True)
+# the run sympy-refine-20261015-024432 answered null (no verdict)
+_n[_run('demo-sign-04', 'sympy-refine', 'true', 'the run sympy-refine-20261015-024432 answered null (no verdict)', _SETUP1, r'''z = Symbol('z', complex=True)
 Assum = And(Q.complex(z))
 Residual = Abs(z * conjugate(z)) - (z * conjugate(z))
 Result = refine(Residual, Assum)
@@ -83,8 +83,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-sign-05 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered true (solved)
-_n[_run('demo-sign-05', 'sympy-refine', 'true', 'the run sympy-refine-20261014-174225 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run sympy-refine-20261015-024432 answered true (solved)
+_n[_run('demo-sign-05', 'sympy-refine', 'true', 'the run sympy-refine-20261015-024432 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True)
 y = Symbol('y', real=True)
 Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.negative(y))
 Residual = Abs(x - y) - (x - y)

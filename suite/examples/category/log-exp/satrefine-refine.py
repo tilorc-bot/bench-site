@@ -40,8 +40,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case demo-eq-log-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174229 answered true (solved)
-_n[_run('demo-eq-log-01', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174229 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run satrefine-refine-20261015-024436 answered true (solved)
+_n[_run('demo-eq-log-01', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-024436 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), Q.positive(x))
 Residual = log(exp(x)) - x
 Result = satrefine.refine(Residual, Assum)
@@ -51,8 +51,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-eq-pow-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174229 answered true (solved)
-_n[_run('demo-eq-pow-01', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174229 answered true (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
+# the run satrefine-refine-20261015-024436 answered true (solved)
+_n[_run('demo-eq-pow-01', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-024436 answered true (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
 Assum = And(Q.integer(n))
 Residual = Pow(-1, 2 * n) - 1
 Result = satrefine.refine(Residual, Assum)

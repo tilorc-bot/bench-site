@@ -39,8 +39,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case demo-prime-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered null (no verdict)
-_n[_run('demo-prime-01', 'sympy-refine', 'true', 'the run sympy-refine-20261014-174225 answered null (no verdict)', _SETUP1, r'''p = Symbol('p', integer=True)
+# the run sympy-refine-20261015-024432 answered null (no verdict)
+_n[_run('demo-prime-01', 'sympy-refine', 'true', 'the run sympy-refine-20261015-024432 answered null (no verdict)', _SETUP1, r'''p = Symbol('p', integer=True)
 Assum = And(Q.integer(p), Q.prime(p), p > 2)
 Residual = Pow(-1, p) - (-1)
 Result = refine(Residual, Assum)
@@ -50,8 +50,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-prime-02 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered null (declined correctly)
-_n[_run('demo-prime-02', 'sympy-refine', 'contingent', 'the run sympy-refine-20261014-174225 answered null (declined correctly)', _SETUP1, r'''p = Symbol('p', integer=True)
+# the run sympy-refine-20261015-024432 answered null (declined correctly)
+_n[_run('demo-prime-02', 'sympy-refine', 'contingent', 'the run sympy-refine-20261015-024432 answered null (declined correctly)', _SETUP1, r'''p = Symbol('p', integer=True)
 Assum = And(Q.integer(p), Q.prime(p))
 Residual = Pow(-1, p) - (-1)
 Result = refine(Residual, Assum)

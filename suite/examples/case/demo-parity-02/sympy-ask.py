@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # assume-eval: a runnable script from the results browser
 # case demo-parity-02 · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered false (solved)
+# the run sympy-ask-20261015-024429 answered false (solved)
 # Runs on its own: python3 this-file.py (or paste it into python).
 
 # setup (the harness's warm-up, version capture and cache clearing left out)
@@ -26,4 +26,4 @@ def _verdict(answer, expected, stored):
     print(f"verdict: {got} (expected {expected}: {outcome}; {stored})")
     return got
 
-_verdict(Answer, 'false', 'the run sympy-ask-20261014-174223 answered false (solved)')
+_verdict(Answer, 'false', 'the run sympy-ask-20261015-024429 answered false (solved)')

@@ -46,8 +46,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case trig-period-03 · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174247 answered null (declined correctly)
-_n[_run('trig-period-03', 'satrefine-refine', 'contingent', 'the run satrefine-refine-20261014-174247 answered null (declined correctly)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run satrefine-refine-20261015-024455 answered null (declined correctly)
+_n[_run('trig-period-03', 'satrefine-refine', 'contingent', 'the run satrefine-refine-20261015-024455 answered null (declined correctly)', _SETUP1, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), Q.positive(x))
 Residual = cos(x + pi) - cos(x)
 Result = satrefine.refine(Residual, Assum)
@@ -57,8 +57,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case trig-period-03 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174242 answered null (declined correctly)
-_n[_run('trig-period-03', 'sympy-ask', 'contingent', 'the run sympy-ask-20261014-174242 answered null (declined correctly)', _SETUP2, r'''x = Symbol('x', real=True)
+# the run sympy-ask-20261015-024450 answered null (declined correctly)
+_n[_run('trig-period-03', 'sympy-ask', 'contingent', 'the run sympy-ask-20261015-024450 answered null (declined correctly)', _SETUP2, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), Q.positive(x))
 Residual = cos(x + pi) - cos(x)
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
@@ -67,8 +67,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case trig-period-03 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174244 answered null (declined correctly)
-_n[_run('trig-period-03', 'sympy-refine', 'contingent', 'the run sympy-refine-20261014-174244 answered null (declined correctly)', _SETUP2, r'''x = Symbol('x', real=True)
+# the run sympy-refine-20261015-024452 answered null (declined correctly)
+_n[_run('trig-period-03', 'sympy-refine', 'contingent', 'the run sympy-refine-20261015-024452 answered null (declined correctly)', _SETUP2, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), Q.positive(x))
 Residual = cos(x + pi) - cos(x)
 Result = refine(Residual, Assum)
@@ -78,8 +78,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case trig-period-03 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174246 answered null (declined correctly)
-_n[_run('trig-period-03', 'sympy-simplify', 'contingent', 'the run sympy-simplify-20261014-174246 answered null (declined correctly)', _SETUP2, r'''x = Symbol('x', real=True, positive=True)
+# the run sympy-simplify-20261015-024453 answered null (declined correctly)
+_n[_run('trig-period-03', 'sympy-simplify', 'contingent', 'the run sympy-simplify-20261015-024453 answered null (declined correctly)', _SETUP2, r'''x = Symbol('x', real=True, positive=True)
 Residual = cos(x + pi) - cos(x)
 Result = simplify(Residual)
 # true iff the result is 0; false only if it is a definite nonzero number

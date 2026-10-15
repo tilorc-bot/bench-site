@@ -39,8 +39,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case demo-eq-trig-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered null (no verdict)
-_n[_run('demo-eq-trig-01', 'sympy-ask', 'true', 'the run sympy-ask-20261014-174223 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', complex=True)
+# the run sympy-ask-20261015-024429 answered null (no verdict)
+_n[_run('demo-eq-trig-01', 'sympy-ask', 'true', 'the run sympy-ask-20261015-024429 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', complex=True)
 Assum = And(Q.complex(x))
 Residual = Pow(sin(x), 2) + Pow(cos(x), 2) - 1
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
@@ -49,8 +49,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-eq-trig-02 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered null (no verdict)
-_n[_run('demo-eq-trig-02', 'sympy-ask', 'true', 'the run sympy-ask-20261014-174223 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', complex=True)
+# the run sympy-ask-20261015-024429 answered null (no verdict)
+_n[_run('demo-eq-trig-02', 'sympy-ask', 'true', 'the run sympy-ask-20261015-024429 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', complex=True)
 Assum = And(Q.complex(x))
 Residual = 2 * sin(x) * cos(x) - sin(2 * x)
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False

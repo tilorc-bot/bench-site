@@ -39,8 +39,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case demo-eq-trig-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered null (no verdict)
-_n[_run('demo-eq-trig-01', 'sympy-refine', 'true', 'the run sympy-refine-20261014-174225 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', complex=True)
+# the run sympy-refine-20261015-024432 answered null (no verdict)
+_n[_run('demo-eq-trig-01', 'sympy-refine', 'true', 'the run sympy-refine-20261015-024432 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', complex=True)
 Assum = And(Q.complex(x))
 Residual = Pow(sin(x), 2) + Pow(cos(x), 2) - 1
 Result = refine(Residual, Assum)
@@ -50,8 +50,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-eq-trig-02 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered null (no verdict)
-_n[_run('demo-eq-trig-02', 'sympy-refine', 'true', 'the run sympy-refine-20261014-174225 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', complex=True)
+# the run sympy-refine-20261015-024432 answered null (no verdict)
+_n[_run('demo-eq-trig-02', 'sympy-refine', 'true', 'the run sympy-refine-20261015-024432 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', complex=True)
 Assum = And(Q.complex(x))
 Residual = 2 * sin(x) * cos(x) - sin(2 * x)
 Result = refine(Residual, Assum)

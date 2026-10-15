@@ -40,8 +40,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case demo-eq-trig-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174229 answered null (no verdict)
-_n[_run('demo-eq-trig-01', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174229 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', complex=True)
+# the run satrefine-refine-20261015-024436 answered null (no verdict)
+_n[_run('demo-eq-trig-01', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-024436 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', complex=True)
 Assum = And(Q.complex(x))
 Residual = Pow(sin(x), 2) + Pow(cos(x), 2) - 1
 Result = satrefine.refine(Residual, Assum)
@@ -51,8 +51,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-eq-trig-02 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174229 answered null (no verdict)
-_n[_run('demo-eq-trig-02', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174229 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', complex=True)
+# the run satrefine-refine-20261015-024436 answered null (no verdict)
+_n[_run('demo-eq-trig-02', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-024436 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', complex=True)
 Assum = And(Q.complex(x))
 Residual = 2 * sin(x) * cos(x) - sin(2 * x)
 Result = satrefine.refine(Residual, Assum)

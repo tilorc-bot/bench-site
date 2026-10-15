@@ -46,8 +46,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case demo-log-02 · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174229 answered null (declined correctly)
-_n[_run('demo-log-02', 'satrefine-refine', 'contingent', 'the run satrefine-refine-20261014-174229 answered null (declined correctly)', _SETUP1, r'''z = Symbol('z', complex=True)
+# the run satrefine-refine-20261015-024436 answered null (declined correctly)
+_n[_run('demo-log-02', 'satrefine-refine', 'contingent', 'the run satrefine-refine-20261015-024436 answered null (declined correctly)', _SETUP1, r'''z = Symbol('z', complex=True)
 w = Symbol('w', complex=True)
 Assum = And(Q.complex(z), Q.complex(w), ~Q.zero(z), ~Q.zero(w))
 Residual = log(z * w) - (log(z) + log(w))
@@ -58,8 +58,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-log-02 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered null (declined correctly)
-_n[_run('demo-log-02', 'sympy-ask', 'contingent', 'the run sympy-ask-20261014-174223 answered null (declined correctly)', _SETUP2, r'''z = Symbol('z', complex=True)
+# the run sympy-ask-20261015-024429 answered null (declined correctly)
+_n[_run('demo-log-02', 'sympy-ask', 'contingent', 'the run sympy-ask-20261015-024429 answered null (declined correctly)', _SETUP2, r'''z = Symbol('z', complex=True)
 w = Symbol('w', complex=True)
 Assum = And(Q.complex(z), Q.complex(w), ~Q.zero(z), ~Q.zero(w))
 Residual = log(z * w) - (log(z) + log(w))
@@ -69,8 +69,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-log-02 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered null (declined correctly)
-_n[_run('demo-log-02', 'sympy-refine', 'contingent', 'the run sympy-refine-20261014-174225 answered null (declined correctly)', _SETUP2, r'''z = Symbol('z', complex=True)
+# the run sympy-refine-20261015-024432 answered null (declined correctly)
+_n[_run('demo-log-02', 'sympy-refine', 'contingent', 'the run sympy-refine-20261015-024432 answered null (declined correctly)', _SETUP2, r'''z = Symbol('z', complex=True)
 w = Symbol('w', complex=True)
 Assum = And(Q.complex(z), Q.complex(w), ~Q.zero(z), ~Q.zero(w))
 Residual = log(z * w) - (log(z) + log(w))
@@ -81,8 +81,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-log-02 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered null (declined correctly)
-_n[_run('demo-log-02', 'sympy-simplify', 'contingent', 'the run sympy-simplify-20261014-174228 answered null (declined correctly)', _SETUP2, r'''z = Symbol('z', complex=True, zero=False)
+# the run sympy-simplify-20261015-024434 answered null (declined correctly)
+_n[_run('demo-log-02', 'sympy-simplify', 'contingent', 'the run sympy-simplify-20261015-024434 answered null (declined correctly)', _SETUP2, r'''z = Symbol('z', complex=True, zero=False)
 w = Symbol('w', complex=True, zero=False)
 Residual = log(z * w) - (log(z) + log(w))
 Result = simplify(Residual)

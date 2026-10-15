@@ -40,8 +40,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case demo-parity-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174229 answered true (solved)
-_n[_run('demo-parity-01', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174229 answered true (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
+# the run satrefine-refine-20261015-024436 answered true (solved)
+_n[_run('demo-parity-01', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-024436 answered true (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
 Assum = And(Q.integer(n), Q.odd(n))
 Residual = Pow(-1, n + 1) - 1
 Result = satrefine.refine(Residual, Assum)
@@ -51,8 +51,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-parity-02 · expected false · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174229 answered false (solved)
-_n[_run('demo-parity-02', 'satrefine-refine', 'false', 'the run satrefine-refine-20261014-174229 answered false (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
+# the run satrefine-refine-20261015-024436 answered false (solved)
+_n[_run('demo-parity-02', 'satrefine-refine', 'false', 'the run satrefine-refine-20261015-024436 answered false (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
 m = Symbol('m', integer=True)
 Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
 Residual = Pow(-1, n * m) - 1
@@ -63,8 +63,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-parity-03 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174229 answered true (solved)
-_n[_run('demo-parity-03', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174229 answered true (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
+# the run satrefine-refine-20261015-024436 answered true (solved)
+_n[_run('demo-parity-03', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-024436 answered true (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
 Assum = And(Q.integer(n))
 Residual = Pow(-1, n * (n + 1)) - 1
 Result = satrefine.refine(Residual, Assum)
@@ -74,8 +74,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-parity-04 · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174229 answered null (declined correctly)
-_n[_run('demo-parity-04', 'satrefine-refine', 'contingent', 'the run satrefine-refine-20261014-174229 answered null (declined correctly)', _SETUP1, r'''n = Symbol('n', integer=True)
+# the run satrefine-refine-20261015-024436 answered null (declined correctly)
+_n[_run('demo-parity-04', 'satrefine-refine', 'contingent', 'the run satrefine-refine-20261015-024436 answered null (declined correctly)', _SETUP1, r'''n = Symbol('n', integer=True)
 Assum = And(Q.integer(n), Q.even(n))
 Residual = Pow(I, n) - 1
 Result = satrefine.refine(Residual, Assum)
@@ -85,8 +85,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-parity-05 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174229 answered true (solved)
-_n[_run('demo-parity-05', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174229 answered true (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
+# the run satrefine-refine-20261015-024436 answered true (solved)
+_n[_run('demo-parity-05', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-024436 answered true (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
 m = Symbol('m', integer=True)
 Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
 Residual = Pow(-1, n * m) - (-1)

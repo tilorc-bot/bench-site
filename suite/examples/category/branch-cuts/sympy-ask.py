@@ -39,8 +39,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case demo-atan2-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered null (no verdict)
-_n[_run('demo-atan2-01', 'sympy-ask', 'true', 'the run sympy-ask-20261014-174223 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run sympy-ask-20261015-024429 answered null (no verdict)
+_n[_run('demo-atan2-01', 'sympy-ask', 'true', 'the run sympy-ask-20261015-024429 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', real=True)
 y = Symbol('y', real=True)
 Assum = And(Q.real(x), Q.real(y), Q.positive(x))
 Residual = atan2(y, x) - atan(y / x)
@@ -50,8 +50,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-atan2-02 · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered null (no verdict)
-_n[_run('demo-atan2-02', 'sympy-ask', 'false', 'the run sympy-ask-20261014-174223 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run sympy-ask-20261015-024429 answered null (no verdict)
+_n[_run('demo-atan2-02', 'sympy-ask', 'false', 'the run sympy-ask-20261015-024429 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', real=True)
 y = Symbol('y', real=True)
 Assum = And(Q.real(x), Q.real(y), Q.negative(x), Q.positive(y))
 Residual = atan2(y, x) - atan(y / x)
@@ -61,8 +61,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-log-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered null (no verdict)
-_n[_run('demo-log-01', 'sympy-ask', 'true', 'the run sympy-ask-20261014-174223 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run sympy-ask-20261015-024429 answered null (no verdict)
+_n[_run('demo-log-01', 'sympy-ask', 'true', 'the run sympy-ask-20261015-024429 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', real=True)
 y = Symbol('y', real=True)
 Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
 Residual = log(x * y) - (log(x) + log(y))
@@ -72,8 +72,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-log-02 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered null (declined correctly)
-_n[_run('demo-log-02', 'sympy-ask', 'contingent', 'the run sympy-ask-20261014-174223 answered null (declined correctly)', _SETUP1, r'''z = Symbol('z', complex=True)
+# the run sympy-ask-20261015-024429 answered null (declined correctly)
+_n[_run('demo-log-02', 'sympy-ask', 'contingent', 'the run sympy-ask-20261015-024429 answered null (declined correctly)', _SETUP1, r'''z = Symbol('z', complex=True)
 w = Symbol('w', complex=True)
 Assum = And(Q.complex(z), Q.complex(w), ~Q.zero(z), ~Q.zero(w))
 Residual = log(z * w) - (log(z) + log(w))
@@ -83,8 +83,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-log-03 · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered false (solved)
-_n[_run('demo-log-03', 'sympy-ask', 'false', 'the run sympy-ask-20261014-174223 answered false (solved)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run sympy-ask-20261015-024429 answered false (solved)
+_n[_run('demo-log-03', 'sympy-ask', 'false', 'the run sympy-ask-20261015-024429 answered false (solved)', _SETUP1, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), Q.negative(x))
 Residual = log(x) - log(-x)
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False

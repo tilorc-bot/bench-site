@@ -40,8 +40,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case demo-prime-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174229 answered null (no verdict)
-_n[_run('demo-prime-01', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174229 answered null (no verdict)', _SETUP1, r'''p = Symbol('p', integer=True)
+# the run satrefine-refine-20261015-024436 answered null (no verdict)
+_n[_run('demo-prime-01', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-024436 answered null (no verdict)', _SETUP1, r'''p = Symbol('p', integer=True)
 Assum = And(Q.integer(p), Q.prime(p), p > 2)
 Residual = Pow(-1, p) - (-1)
 Result = satrefine.refine(Residual, Assum)
@@ -51,8 +51,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-prime-02 · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174229 answered null (declined correctly)
-_n[_run('demo-prime-02', 'satrefine-refine', 'contingent', 'the run satrefine-refine-20261014-174229 answered null (declined correctly)', _SETUP1, r'''p = Symbol('p', integer=True)
+# the run satrefine-refine-20261015-024436 answered null (declined correctly)
+_n[_run('demo-prime-02', 'satrefine-refine', 'contingent', 'the run satrefine-refine-20261015-024436 answered null (declined correctly)', _SETUP1, r'''p = Symbol('p', integer=True)
 Assum = And(Q.integer(p), Q.prime(p))
 Residual = Pow(-1, p) - (-1)
 Result = satrefine.refine(Residual, Assum)

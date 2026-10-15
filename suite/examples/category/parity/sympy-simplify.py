@@ -39,8 +39,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case demo-parity-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered true (solved)
-_n[_run('demo-parity-01', 'sympy-simplify', 'true', 'the run sympy-simplify-20261014-174228 answered true (solved)', _SETUP1, r'''n = Symbol('n', integer=True, odd=True)
+# the run sympy-simplify-20261015-024434 answered true (solved)
+_n[_run('demo-parity-01', 'sympy-simplify', 'true', 'the run sympy-simplify-20261015-024434 answered true (solved)', _SETUP1, r'''n = Symbol('n', integer=True, odd=True)
 Residual = Pow(-1, n + 1) - 1
 Result = simplify(Residual)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -49,8 +49,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-parity-02 · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered false (solved)
-_n[_run('demo-parity-02', 'sympy-simplify', 'false', 'the run sympy-simplify-20261014-174228 answered false (solved)', _SETUP1, r'''n = Symbol('n', integer=True, odd=True)
+# the run sympy-simplify-20261015-024434 answered false (solved)
+_n[_run('demo-parity-02', 'sympy-simplify', 'false', 'the run sympy-simplify-20261015-024434 answered false (solved)', _SETUP1, r'''n = Symbol('n', integer=True, odd=True)
 m = Symbol('m', integer=True, odd=True)
 Residual = Pow(-1, n * m) - 1
 Result = simplify(Residual)
@@ -60,8 +60,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-parity-03 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered true (solved)
-_n[_run('demo-parity-03', 'sympy-simplify', 'true', 'the run sympy-simplify-20261014-174228 answered true (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
+# the run sympy-simplify-20261015-024434 answered true (solved)
+_n[_run('demo-parity-03', 'sympy-simplify', 'true', 'the run sympy-simplify-20261015-024434 answered true (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
 Residual = Pow(-1, n * (n + 1)) - 1
 Result = simplify(Residual)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -70,8 +70,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-parity-04 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered null (declined correctly)
-_n[_run('demo-parity-04', 'sympy-simplify', 'contingent', 'the run sympy-simplify-20261014-174228 answered null (declined correctly)', _SETUP1, r'''n = Symbol('n', integer=True, even=True)
+# the run sympy-simplify-20261015-024434 answered null (declined correctly)
+_n[_run('demo-parity-04', 'sympy-simplify', 'contingent', 'the run sympy-simplify-20261015-024434 answered null (declined correctly)', _SETUP1, r'''n = Symbol('n', integer=True, even=True)
 Residual = Pow(I, n) - 1
 Result = simplify(Residual)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -80,8 +80,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-parity-05 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered true (solved)
-_n[_run('demo-parity-05', 'sympy-simplify', 'true', 'the run sympy-simplify-20261014-174228 answered true (solved)', _SETUP1, r'''n = Symbol('n', integer=True, odd=True)
+# the run sympy-simplify-20261015-024434 answered true (solved)
+_n[_run('demo-parity-05', 'sympy-simplify', 'true', 'the run sympy-simplify-20261015-024434 answered true (solved)', _SETUP1, r'''n = Symbol('n', integer=True, odd=True)
 m = Symbol('m', integer=True, odd=True)
 Residual = Pow(-1, n * m) - (-1)
 Result = simplify(Residual)

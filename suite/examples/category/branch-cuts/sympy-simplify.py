@@ -39,8 +39,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case demo-atan2-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered true (solved)
-_n[_run('demo-atan2-01', 'sympy-simplify', 'true', 'the run sympy-simplify-20261014-174228 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True, positive=True)
+# the run sympy-simplify-20261015-024434 answered true (solved)
+_n[_run('demo-atan2-01', 'sympy-simplify', 'true', 'the run sympy-simplify-20261015-024434 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True, positive=True)
 y = Symbol('y', real=True)
 Residual = atan2(y, x) - atan(y / x)
 Result = simplify(Residual)
@@ -50,8 +50,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-atan2-02 · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered false (solved)
-_n[_run('demo-atan2-02', 'sympy-simplify', 'false', 'the run sympy-simplify-20261014-174228 answered false (solved)', _SETUP1, r'''x = Symbol('x', real=True, negative=True)
+# the run sympy-simplify-20261015-024434 answered false (solved)
+_n[_run('demo-atan2-02', 'sympy-simplify', 'false', 'the run sympy-simplify-20261015-024434 answered false (solved)', _SETUP1, r'''x = Symbol('x', real=True, negative=True)
 y = Symbol('y', real=True, positive=True)
 Residual = atan2(y, x) - atan(y / x)
 Result = simplify(Residual)
@@ -61,8 +61,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-log-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered true (solved)
-_n[_run('demo-log-01', 'sympy-simplify', 'true', 'the run sympy-simplify-20261014-174228 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True, positive=True)
+# the run sympy-simplify-20261015-024434 answered true (solved)
+_n[_run('demo-log-01', 'sympy-simplify', 'true', 'the run sympy-simplify-20261015-024434 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True, positive=True)
 y = Symbol('y', real=True, positive=True)
 Residual = log(x * y) - (log(x) + log(y))
 Result = simplify(Residual)
@@ -72,8 +72,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-log-02 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered null (declined correctly)
-_n[_run('demo-log-02', 'sympy-simplify', 'contingent', 'the run sympy-simplify-20261014-174228 answered null (declined correctly)', _SETUP1, r'''z = Symbol('z', complex=True, zero=False)
+# the run sympy-simplify-20261015-024434 answered null (declined correctly)
+_n[_run('demo-log-02', 'sympy-simplify', 'contingent', 'the run sympy-simplify-20261015-024434 answered null (declined correctly)', _SETUP1, r'''z = Symbol('z', complex=True, zero=False)
 w = Symbol('w', complex=True, zero=False)
 Residual = log(z * w) - (log(z) + log(w))
 Result = simplify(Residual)
@@ -83,8 +83,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-log-03 · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered false (solved)
-_n[_run('demo-log-03', 'sympy-simplify', 'false', 'the run sympy-simplify-20261014-174228 answered false (solved)', _SETUP1, r'''x = Symbol('x', real=True, negative=True)
+# the run sympy-simplify-20261015-024434 answered false (solved)
+_n[_run('demo-log-03', 'sympy-simplify', 'false', 'the run sympy-simplify-20261015-024434 answered false (solved)', _SETUP1, r'''x = Symbol('x', real=True, negative=True)
 Residual = log(x) - log(-x)
 Result = simplify(Residual)
 # true iff the result is 0; false only if it is a definite nonzero number

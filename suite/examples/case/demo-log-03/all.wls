@@ -13,7 +13,7 @@ verdict[out_, expected_String, stored_String] := Module[{answer, got, outcome},
 End[];
 
 (* ---- case demo-log-03 · expected false · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261014-174238 answered false (solved) *)
+(* the run wolfram-fullsimplify-20261015-024445 answered false (solved) *)
 Print["== demo-log-03 · wolfram-fullsimplify · expected false"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -25,10 +25,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "false", "the run wolfram-fullsimplify-20261014-174238 answered false (solved)"];
+AEScript`verdict[AEScript`out, "false", "the run wolfram-fullsimplify-20261015-024445 answered false (solved)"];
 
 (* ---- case demo-log-03 · expected false · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261014-174234 answered false (solved) *)
+(* the run wolfram-refine-20261015-024442 answered false (solved) *)
 Print["== demo-log-03 · wolfram-refine · expected false"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -40,10 +40,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "false", "the run wolfram-refine-20261014-174234 answered false (solved)"];
+AEScript`verdict[AEScript`out, "false", "the run wolfram-refine-20261015-024442 answered false (solved)"];
 
 (* ---- case demo-log-03 · expected false · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261014-174231 answered false (solved) *)
+(* the run wolfram-simplify-20261015-024438 answered false (solved) *)
 Print["== demo-log-03 · wolfram-simplify · expected false"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -55,4 +55,4 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "false", "the run wolfram-simplify-20261014-174231 answered false (solved)"];
+AEScript`verdict[AEScript`out, "false", "the run wolfram-simplify-20261015-024438 answered false (solved)"];

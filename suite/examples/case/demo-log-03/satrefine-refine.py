@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # assume-eval: a runnable script from the results browser
 # case demo-log-03 · expected false · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174229 answered false (solved)
+# the run satrefine-refine-20261015-024436 answered false (solved)
 # Runs on its own: python3 this-file.py (or paste it into python).
 
 # setup (the harness's warm-up, version capture and cache clearing left out)
@@ -27,4 +27,4 @@ def _verdict(answer, expected, stored):
     print(f"verdict: {got} (expected {expected}: {outcome}; {stored})")
     return got
 
-_verdict(Answer, 'false', 'the run satrefine-refine-20261014-174229 answered false (solved)')
+_verdict(Answer, 'false', 'the run satrefine-refine-20261015-024436 answered false (solved)')

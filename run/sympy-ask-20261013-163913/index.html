@@ -302,7 +302,7 @@ details.setupfold>summary{cursor:pointer;color:var(--muted);font-size:12px;width
 width:min(900px,94vw);display:flex;flex-direction:column;gap:8px}
 .cpmodal textarea{width:100%;height:60vh;font:12px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;
 background:var(--bg);color:var(--fg);border:1px solid var(--line)}
-</style></head><body><main><div class='wip' role=note>Early preview (v0.1.0): cases, labels and scoring are still changing; please don&#x27;t cite these numbers.</div><nav class=top><a href='../../index.html'>Results</a> · <a href='../../definitions/index.html'>Definitions</a></nav><p class=sub><a href='../../suite/trig/index.html'>← suite trig</a> · <a class='toggle' href='../../below/run/sympy-ask-20261013-163913/index.html' title='below its source&#x27;s requirement (`require` in suite.toml, e.g. Lean-verified or human-reviewed for agent-written cases): graded, but left out of the totals and the public report until it meets it'>☐ include cases below their source's requirement</a></p><h1>sympy-ask</h1><p class=sub>suite <a href='../../suite/trig/index.html'>trig</a> · 2026-10-13 16:39:13 · CAS sympy 1.14.0, mode fork · machine pi5 · dialect sympy · case set <code>1e4dbd2f7d86</code></p><h2>By category</h2><p class=sub> 13 case(s) below their source's requirement are not shown or counted (13 below requirement); the switch “include … below-requirement cases” shows them.</p><p class=sub><span class=warn>old report format (graded with a combined score): its nulls are shown as no verdict, because an old report cannot tell a correct decline on a contingent case from no verdict</span></p><div class=wrap><table><thead><tr><th>category</th><th class=num>n</th><th class=num>solved</th><th class=num>wrong</th><th class=num>declined correctly</th><th class=num>no verdict</th><th class=num>timeout</th><th class=num>unsupported</th></tr></thead><tbody></tbody><tfoot><tr><td>total</td><td class=num>0</td><td class=num><span class=z title='no true or false cases'>—</span></td><td class=num>0</td><td class=num><span class=z title='no contingent cases'>—</span></td><td class=num>0</td><td class=num>0</td><td class=num>0</td></tr></tfoot></table></div><p class=sub>Solved counts are out of the true and false cases, declined correctly out of the contingent ones (a contingent case is never solved: the right response there is no verdict); <b>—</b>: no such case.</p><h2>Setup <span class=sub>(run once per start, not counted in the per-query times)</span></h2><p class=sub>measured setup time: 0.406 s</p><div class='codebox setupbox'><button class=copy type=button data-target='setup-run-9a1faf5f01a8'>Copy</button><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-run-9a1faf5f01a8'>from sympy import *
+</style><link rel=stylesheet href='https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css'><script defer src='https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js'></script></head><body><main><div class='wip' role=note>Early preview (v0.1.0): cases, labels and scoring are still changing; please don&#x27;t cite these numbers.</div><nav class=top><a href='../../index.html'>Results</a> · <a href='../../definitions/index.html'>Definitions</a></nav><p class=sub><a href='../../suite/trig/index.html'>← suite trig</a></p><h1>sympy-ask</h1><p class=sub>suite <a href='../../suite/trig/index.html'>trig</a> · 2026-10-13 16:39:13 · CAS sympy 1.14.0, mode fork · machine pi5 · dialect sympy · case set <code>1e4dbd2f7d86</code></p><h2>By category</h2><p class=sub><span class=warn>old report format (graded with a combined score): its nulls are shown as no verdict, because an old report cannot tell a correct decline on a contingent case from no verdict</span></p><div class=wrap><table><thead><tr><th>category</th><th class=num>n</th><th class=num>solved</th><th class=num>wrong</th><th class=num>declined correctly</th><th class=num>no verdict</th><th class=num>timeout</th><th class=num>unsupported</th></tr></thead><tbody><tr><td><a href='../../suite/trig/category/identities/index.html'>identities</a> <span class=badge title='Lean-verified: its Lean proofs checked and prove its label (recorded by lean-check --record)'>Lean-verified</span></td><td class=num>5</td><td class=num><span title='solved / true+false cases'>0/4</span></td><td class=num>0</td><td class=num><span title='declined correctly / contingent cases'>0/1</span></td><td class=num>5</td><td class=num>0</td><td class=num>0</td></tr><tr><td><a href='../../suite/trig/category/inverse/index.html'>inverse</a> <span class=badge title='Lean-verified: its Lean proofs checked and prove its label (recorded by lean-check --record)'>Lean-verified</span></td><td class=num>4</td><td class=num><span title='solved / true+false cases'>0/3</span></td><td class=num>0</td><td class=num><span title='declined correctly / contingent cases'>0/1</span></td><td class=num>4</td><td class=num>0</td><td class=num>0</td></tr><tr><td><a href='../../suite/trig/category/periodicity/index.html'>periodicity</a> <span class=badge title='Lean-verified: its Lean proofs checked and prove its label (recorded by lean-check --record)'>Lean-verified</span></td><td class=num>4</td><td class=num><span title='solved / true+false cases'>1/1</span></td><td class=num>0</td><td class=num><span title='declined correctly / contingent cases'>0/3</span></td><td class=num>3</td><td class=num>0</td><td class=num>0</td></tr></tbody><tfoot><tr><td>total <span class=z>(incl. 13 Lean-verified)</span></td><td class=num>13</td><td class=num><span title='solved / true+false cases'>1/8</span></td><td class=num>0</td><td class=num><span title='declined correctly / contingent cases'>0/5</span></td><td class=num>12</td><td class=num>0</td><td class=num>0</td></tr></tfoot></table></div><p class=sub>Solved counts are out of the true and false cases, declined correctly out of the contingent ones (a contingent case is never solved: the right response there is no verdict); <b>—</b>: no such case.</p><h2>Setup <span class=sub>(run once per start, not counted in the per-query times)</span></h2><p class=sub>measured setup time: 0.406 s</p><div class='codebox setupbox'><button class=copy type=button data-target='setup-run-9a1faf5f01a8'>Copy</button><span class=lbl>setup — not timed</span><pre class='repro setup' id='setup-run-9a1faf5f01a8'>from sympy import *
 import sympy
 
 SympyVersion = sympy.__version__
@@ -312,4 +312,303 @@ Warmup = ask(Q.positive(W**2 + 1), Q.real(W))
 # every query then runs in its own forked process, starting from this state:
 # the expression caches are dropped (imported and lazily loaded modules stay)
 sympy.core.cache.clear_cache()
-</pre></div><table class=steps><tr><td class=lbl>sympy</td><td><code>sympy.__version__</code></td><td>→</td><td><code>1.14.0</code></td></tr><tr><td class=lbl>warm-up</td><td><code>ask(Q.positive(W**2 + 1), Q.real(W))</code></td><td>→</td><td><code>True</code></td></tr></table><h2>Cases</h2><div class=wrap><table><thead><tr><th>case</th><th>category</th><th>outcome</th><th>query (as sent)</th><th>answer</th><th>steps (from the trace)</th><th class=num>s</th><th>detail</th></tr></thead><tbody></tbody></table></div><footer class=foot>assume-eval harness v0.1.0 (<code>eddaaef</code>) · suite trig · case set <code>1e4dbd2f7d86</code> · results as of 2026-10-13 16:39</footer></main><script>document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button.copy');if(!b)return;var ids=(b.getAttribute('data-target')||'').split(' '),parts=[];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el)parts.push(el.textContent);}if(!parts.length)return;var text=parts.join('\n');function sel(){var o=b.parentNode.querySelector('textarea');if(o)o.remove();var t=document.createElement('textarea');t.value=text;b.parentNode.appendChild(t);t.select();var ok=false;try{ok=document.execCommand('copy');}catch(x){}if(ok){t.remove();}b.textContent=ok?'Copied':'Selected: press Ctrl/Cmd+C';}if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(function(){b.textContent='Copied';},sel);}else{sel();}setTimeout(function(){b.textContent='Copy';},2500);});</script></body></html>
+</pre></div><table class=steps><tr><td class=lbl>sympy</td><td><code>sympy.__version__</code></td><td>→</td><td><code>1.14.0</code></td></tr><tr><td class=lbl>warm-up</td><td><code>ask(Q.positive(W**2 + 1), Q.real(W))</code></td><td>→</td><td><code>True</code></td></tr></table><h2>Cases</h2><div class=wrap><table><thead><tr><th>case</th><th>category</th><th>outcome</th><th>query (as sent)</th><th>answer</th><th>steps (from the trace)</th><th class=num>s</th><th>detail</th></tr></thead><tbody><tr class='lead'><td><a class=cl data-case='trig-double-01' href='../../suite/trig/case/trig-double-01/index.html'>trig-double-01</a> <span class=badge title='Lean-verified: its Lean proofs checked and prove its label (recorded by lean-check --record)'>Lean-verified</span> <span class='lchip l-true' title='label: true (equal at every admissible point); the correct answer is true'>true</span></td><td><a href='../../suite/trig/category/identities/index.html'>identities</a></td><td class='o o-no_verdict'>no verdict</td><td class=code>Q.complex(z)  ⊢  Eq(sin((2*z)), (2*(sin(z)*cos(z))))</td><td class=code>null</td><td class=gist>difference → -2*sin(z)*cos(z) + sin(2*z) · ask → None</td><td class=num>0.138</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><details class=setupfold><summary>setup — not timed <span class=z>(imports, warm-up, cache clearing: run once per start)</span></summary><div class='codebox setupbox'><pre class='repro setup' id='setup-d74b02077caf'>from sympy import *
+import sympy
+
+SympyVersion = sympy.__version__
+# warm-up: a fixed generic expression, never case content
+W = Symbol(&#x27;W&#x27;)
+Warmup = ask(Q.positive(W**2 + 1), Q.real(W))
+# every query then runs in its own forked process, starting from this state:
+# the expression caches are dropped (imported and lazily loaded modules stay)
+sympy.core.cache.clear_cache()
+</pre></div></details><div class=codebox><button class=copy type=button data-target='setup-d74b02077caf code-d74b02077caf' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-d74b02077caf'>z = Symbol(&#x27;z&#x27;, complex=True)
+Assum = And(Q.complex(z))
+Residual = sin(2 * z) - (2 * (sin(z) * cos(z)))
+# not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
+Answer = ask(Q.zero(Residual), Assum)
+print(Residual, Answer, sep=&#x27;\n&#x27;)
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>sin(2 * z) - (2 * (sin(z) * cos(z)))</code></td><td>→</td><td><code>-2*sin(z)*cos(z) + sin(2*z)</code></td></tr><tr><td class=lbl>ask</td><td><code>Q.zero(Residual)</code></td><td>→</td><td><code>None</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class='lead'><td><a class=cl data-case='trig-double-02' href='../../suite/trig/case/trig-double-02/index.html'>trig-double-02</a> <span class=badge title='Lean-verified: its Lean proofs checked and prove its label (recorded by lean-check --record)'>Lean-verified</span> <span class='lchip l-false' title='label: false (unequal at every admissible point); the correct answer is false'>false</span></td><td><a href='../../suite/trig/category/identities/index.html'>identities</a></td><td class='o o-no_verdict'>no verdict</td><td class=code>Q.real(x) ∧ Q.positive(x) ∧ (x &lt; 1)  ⊢  Eq(sin((2*x)), (2*sin(x)))</td><td class=code>null</td><td class=gist>difference → -2*sin(x) + sin(2*x) · ask → None</td><td class=num>0.089</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><details class=setupfold><summary>setup — not timed <span class=z>(imports, warm-up, cache clearing: run once per start)</span></summary><div class='codebox setupbox'><pre class='repro setup' id='setup-dd9382480c35'>from sympy import *
+import sympy
+
+SympyVersion = sympy.__version__
+# warm-up: a fixed generic expression, never case content
+W = Symbol(&#x27;W&#x27;)
+Warmup = ask(Q.positive(W**2 + 1), Q.real(W))
+# every query then runs in its own forked process, starting from this state:
+# the expression caches are dropped (imported and lazily loaded modules stay)
+sympy.core.cache.clear_cache()
+</pre></div></details><div class=codebox><button class=copy type=button data-target='setup-dd9382480c35 code-dd9382480c35' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-dd9382480c35'>x = Symbol(&#x27;x&#x27;, real=True)
+Assum = And(Q.real(x), Q.positive(x), x &lt; 1)
+Residual = sin(2 * x) - (2 * sin(x))
+# not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
+Answer = ask(Q.zero(Residual), Assum)
+print(Residual, Answer, sep=&#x27;\n&#x27;)
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>sin(2 * x) - (2 * sin(x))</code></td><td>→</td><td><code>-2*sin(x) + sin(2*x)</code></td></tr><tr><td class=lbl>ask</td><td><code>Q.zero(Residual)</code></td><td>→</td><td><code>None</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class='lead'><td><a class=cl data-case='trig-pyth-01' href='../../suite/trig/case/trig-pyth-01/index.html'>trig-pyth-01</a> <span class=badge title='Lean-verified: its Lean proofs checked and prove its label (recorded by lean-check --record)'>Lean-verified</span> <span class='lchip l-true' title='label: true (equal at every admissible point); the correct answer is true'>true</span></td><td><a href='../../suite/trig/category/identities/index.html'>identities</a></td><td class='o o-no_verdict'>no verdict</td><td class=code>Q.complex(z)  ⊢  Eq(((sin(z)*sin(z)) + (cos(z)*cos(z))), 1)</td><td class=code>null</td><td class=gist>difference → sin(z)**2 + cos(z)**2 - 1 · ask → None</td><td class=num>0.088</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><details class=setupfold><summary>setup — not timed <span class=z>(imports, warm-up, cache clearing: run once per start)</span></summary><div class='codebox setupbox'><pre class='repro setup' id='setup-346f7cacfc9a'>from sympy import *
+import sympy
+
+SympyVersion = sympy.__version__
+# warm-up: a fixed generic expression, never case content
+W = Symbol(&#x27;W&#x27;)
+Warmup = ask(Q.positive(W**2 + 1), Q.real(W))
+# every query then runs in its own forked process, starting from this state:
+# the expression caches are dropped (imported and lazily loaded modules stay)
+sympy.core.cache.clear_cache()
+</pre></div></details><div class=codebox><button class=copy type=button data-target='setup-346f7cacfc9a code-346f7cacfc9a' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-346f7cacfc9a'>z = Symbol(&#x27;z&#x27;, complex=True)
+Assum = And(Q.complex(z))
+Residual = sin(z) * sin(z) + cos(z) * cos(z) - 1
+# not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
+Answer = ask(Q.zero(Residual), Assum)
+print(Residual, Answer, sep=&#x27;\n&#x27;)
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>sin(z) * sin(z) + cos(z) * cos(z) - 1</code></td><td>→</td><td><code>sin(z)**2 + cos(z)**2 - 1</code></td></tr><tr><td class=lbl>ask</td><td><code>Q.zero(Residual)</code></td><td>→</td><td><code>None</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class='lead'><td><a class=cl data-case='trig-sqrt-01' href='../../suite/trig/case/trig-sqrt-01/index.html'>trig-sqrt-01</a> <span class=badge title='Lean-verified: its Lean proofs checked and prove its label (recorded by lean-check --record)'>Lean-verified</span> <span class='lchip l-contingent' title='label: contingent (true at some admissible points and false at others: a definite claim, not “unknown”); the correct response is null, because neither true nor false holds'>contingent</span></td><td><a href='../../suite/trig/category/identities/index.html'>identities</a></td><td class='o o-no_verdict'>no verdict</td><td class=code>Q.real(x)  ⊢  Eq(sqrt((1 - (sin(x)*sin(x)))), cos(x))</td><td class=code>null</td><td class=gist>difference → sqrt(1 - sin(x)**2) - cos(x) · ask → None</td><td class=num>0.41</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><details class=setupfold><summary>setup — not timed <span class=z>(imports, warm-up, cache clearing: run once per start)</span></summary><div class='codebox setupbox'><pre class='repro setup' id='setup-2831145cfc75'>from sympy import *
+import sympy
+
+SympyVersion = sympy.__version__
+# warm-up: a fixed generic expression, never case content
+W = Symbol(&#x27;W&#x27;)
+Warmup = ask(Q.positive(W**2 + 1), Q.real(W))
+# every query then runs in its own forked process, starting from this state:
+# the expression caches are dropped (imported and lazily loaded modules stay)
+sympy.core.cache.clear_cache()
+</pre></div></details><div class=codebox><button class=copy type=button data-target='setup-2831145cfc75 code-2831145cfc75' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-2831145cfc75'>x = Symbol(&#x27;x&#x27;, real=True)
+Assum = And(Q.real(x))
+Residual = sqrt(1 - sin(x) * sin(x)) - cos(x)
+# not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
+Answer = ask(Q.zero(Residual), Assum)
+print(Residual, Answer, sep=&#x27;\n&#x27;)
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>sqrt(1 - sin(x) * sin(x)) - cos(x)</code></td><td>→</td><td><code>sqrt(1 - sin(x)**2) - cos(x)</code></td></tr><tr><td class=lbl>ask</td><td><code>Q.zero(Residual)</code></td><td>→</td><td><code>None</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class='lead'><td><a class=cl data-case='trig-tan-01' href='../../suite/trig/case/trig-tan-01/index.html'>trig-tan-01</a> <span class=badge title='Lean-verified: its Lean proofs checked and prove its label (recorded by lean-check --record)'>Lean-verified</span> <span class='lchip l-true' title='label: true (equal at every admissible point); the correct answer is true'>true</span></td><td><a href='../../suite/trig/category/identities/index.html'>identities</a></td><td class='o o-no_verdict'>no verdict</td><td class=code>Q.real(x) ∧ (~Q.zero(cos(x)))  ⊢  Eq(tan(x), (sin(x)/cos(x)))</td><td class=code>null</td><td class=gist>difference → -sin(x)/cos(x) + tan(x) · ask → None</td><td class=num>0.182</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><details class=setupfold><summary>setup — not timed <span class=z>(imports, warm-up, cache clearing: run once per start)</span></summary><div class='codebox setupbox'><pre class='repro setup' id='setup-9704438e098a'>from sympy import *
+import sympy
+
+SympyVersion = sympy.__version__
+# warm-up: a fixed generic expression, never case content
+W = Symbol(&#x27;W&#x27;)
+Warmup = ask(Q.positive(W**2 + 1), Q.real(W))
+# every query then runs in its own forked process, starting from this state:
+# the expression caches are dropped (imported and lazily loaded modules stay)
+sympy.core.cache.clear_cache()
+</pre></div></details><div class=codebox><button class=copy type=button data-target='setup-9704438e098a code-9704438e098a' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-9704438e098a'>x = Symbol(&#x27;x&#x27;, real=True)
+Assum = And(Q.real(x), ~Q.zero(cos(x)))
+Residual = tan(x) - (sin(x) / cos(x))
+# not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
+Answer = ask(Q.zero(Residual), Assum)
+print(Residual, Answer, sep=&#x27;\n&#x27;)
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>tan(x) - (sin(x) / cos(x))</code></td><td>→</td><td><code>-sin(x)/cos(x) + tan(x)</code></td></tr><tr><td class=lbl>ask</td><td><code>Q.zero(Residual)</code></td><td>→</td><td><code>None</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class='lead'><td><a class=cl data-case='trig-acos-01' href='../../suite/trig/case/trig-acos-01/index.html'>trig-acos-01</a> <span class=badge title='Lean-verified: its Lean proofs checked and prove its label (recorded by lean-check --record)'>Lean-verified</span> <span class='lchip l-true' title='label: true (equal at every admissible point); the correct answer is true'>true</span></td><td><a href='../../suite/trig/category/inverse/index.html'>inverse</a></td><td class='o o-no_verdict'>no verdict</td><td class=code>Q.real(x) ∧ Q.positive(x) ∧ (x &lt; 3)  ⊢  Eq(acos(cos(x)), x)</td><td class=code>null</td><td class=gist>difference → -x + acos(cos(x)) · ask → None</td><td class=num>0.072</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><details class=setupfold><summary>setup — not timed <span class=z>(imports, warm-up, cache clearing: run once per start)</span></summary><div class='codebox setupbox'><pre class='repro setup' id='setup-fcda9e93ccfc'>from sympy import *
+import sympy
+
+SympyVersion = sympy.__version__
+# warm-up: a fixed generic expression, never case content
+W = Symbol(&#x27;W&#x27;)
+Warmup = ask(Q.positive(W**2 + 1), Q.real(W))
+# every query then runs in its own forked process, starting from this state:
+# the expression caches are dropped (imported and lazily loaded modules stay)
+sympy.core.cache.clear_cache()
+</pre></div></details><div class=codebox><button class=copy type=button data-target='setup-fcda9e93ccfc code-fcda9e93ccfc' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-fcda9e93ccfc'>x = Symbol(&#x27;x&#x27;, real=True)
+Assum = And(Q.real(x), Q.positive(x), x &lt; 3)
+Residual = acos(cos(x)) - x
+# not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
+Answer = ask(Q.zero(Residual), Assum)
+print(Residual, Answer, sep=&#x27;\n&#x27;)
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>acos(cos(x)) - x</code></td><td>→</td><td><code>-x + acos(cos(x))</code></td></tr><tr><td class=lbl>ask</td><td><code>Q.zero(Residual)</code></td><td>→</td><td><code>None</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class='lead'><td><a class=cl data-case='trig-asin-01' href='../../suite/trig/case/trig-asin-01/index.html'>trig-asin-01</a> <span class=badge title='Lean-verified: its Lean proofs checked and prove its label (recorded by lean-check --record)'>Lean-verified</span> <span class='lchip l-contingent' title='label: contingent (true at some admissible points and false at others: a definite claim, not “unknown”); the correct response is null, because neither true nor false holds'>contingent</span></td><td><a href='../../suite/trig/category/inverse/index.html'>inverse</a></td><td class='o o-no_verdict'>no verdict</td><td class=code>Q.real(x)  ⊢  Eq(asin(sin(x)), x)</td><td class=code>null</td><td class=gist>difference → -x + asin(sin(x)) · ask → None</td><td class=num>0.136</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><details class=setupfold><summary>setup — not timed <span class=z>(imports, warm-up, cache clearing: run once per start)</span></summary><div class='codebox setupbox'><pre class='repro setup' id='setup-9d19b0e0525f'>from sympy import *
+import sympy
+
+SympyVersion = sympy.__version__
+# warm-up: a fixed generic expression, never case content
+W = Symbol(&#x27;W&#x27;)
+Warmup = ask(Q.positive(W**2 + 1), Q.real(W))
+# every query then runs in its own forked process, starting from this state:
+# the expression caches are dropped (imported and lazily loaded modules stay)
+sympy.core.cache.clear_cache()
+</pre></div></details><div class=codebox><button class=copy type=button data-target='setup-9d19b0e0525f code-9d19b0e0525f' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-9d19b0e0525f'>x = Symbol(&#x27;x&#x27;, real=True)
+Assum = And(Q.real(x))
+Residual = asin(sin(x)) - x
+# not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
+Answer = ask(Q.zero(Residual), Assum)
+print(Residual, Answer, sep=&#x27;\n&#x27;)
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>asin(sin(x)) - x</code></td><td>→</td><td><code>-x + asin(sin(x))</code></td></tr><tr><td class=lbl>ask</td><td><code>Q.zero(Residual)</code></td><td>→</td><td><code>None</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class='lead'><td><a class=cl data-case='trig-asin-02' href='../../suite/trig/case/trig-asin-02/index.html'>trig-asin-02</a> <span class=badge title='Lean-verified: its Lean proofs checked and prove its label (recorded by lean-check --record)'>Lean-verified</span> <span class='lchip l-true' title='label: true (equal at every admissible point); the correct answer is true'>true</span></td><td><a href='../../suite/trig/category/inverse/index.html'>inverse</a></td><td class='o o-no_verdict'>no verdict</td><td class=code>Q.real(x) ∧ (x &gt; (-1)) ∧ (x &lt; 1)  ⊢  Eq(asin(sin(x)), x)</td><td class=code>null</td><td class=gist>difference → -x + asin(sin(x)) · ask → None</td><td class=num>0.18</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><details class=setupfold><summary>setup — not timed <span class=z>(imports, warm-up, cache clearing: run once per start)</span></summary><div class='codebox setupbox'><pre class='repro setup' id='setup-11eaa710cf65'>from sympy import *
+import sympy
+
+SympyVersion = sympy.__version__
+# warm-up: a fixed generic expression, never case content
+W = Symbol(&#x27;W&#x27;)
+Warmup = ask(Q.positive(W**2 + 1), Q.real(W))
+# every query then runs in its own forked process, starting from this state:
+# the expression caches are dropped (imported and lazily loaded modules stay)
+sympy.core.cache.clear_cache()
+</pre></div></details><div class=codebox><button class=copy type=button data-target='setup-11eaa710cf65 code-11eaa710cf65' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-11eaa710cf65'>x = Symbol(&#x27;x&#x27;, real=True)
+Assum = And(Q.real(x), x &gt; -1, x &lt; 1)
+Residual = asin(sin(x)) - x
+# not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
+Answer = ask(Q.zero(Residual), Assum)
+print(Residual, Answer, sep=&#x27;\n&#x27;)
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>asin(sin(x)) - x</code></td><td>→</td><td><code>-x + asin(sin(x))</code></td></tr><tr><td class=lbl>ask</td><td><code>Q.zero(Residual)</code></td><td>→</td><td><code>None</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class='lead'><td><a class=cl data-case='trig-atan-01' href='../../suite/trig/case/trig-atan-01/index.html'>trig-atan-01</a> <span class=badge title='Lean-verified: its Lean proofs checked and prove its label (recorded by lean-check --record)'>Lean-verified</span> <span class='lchip l-true' title='label: true (equal at every admissible point); the correct answer is true'>true</span></td><td><a href='../../suite/trig/category/inverse/index.html'>inverse</a></td><td class='o o-no_verdict'>no verdict</td><td class=code>Q.real(x) ∧ (x &gt; (-1)) ∧ (x &lt; 1)  ⊢  Eq(atan(tan(x)), x)</td><td class=code>null</td><td class=gist>difference → -x + atan(tan(x)) · ask → None</td><td class=num>0.109</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><details class=setupfold><summary>setup — not timed <span class=z>(imports, warm-up, cache clearing: run once per start)</span></summary><div class='codebox setupbox'><pre class='repro setup' id='setup-db6ffdc2af6f'>from sympy import *
+import sympy
+
+SympyVersion = sympy.__version__
+# warm-up: a fixed generic expression, never case content
+W = Symbol(&#x27;W&#x27;)
+Warmup = ask(Q.positive(W**2 + 1), Q.real(W))
+# every query then runs in its own forked process, starting from this state:
+# the expression caches are dropped (imported and lazily loaded modules stay)
+sympy.core.cache.clear_cache()
+</pre></div></details><div class=codebox><button class=copy type=button data-target='setup-db6ffdc2af6f code-db6ffdc2af6f' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-db6ffdc2af6f'>x = Symbol(&#x27;x&#x27;, real=True)
+Assum = And(Q.real(x), x &gt; -1, x &lt; 1)
+Residual = atan(tan(x)) - x
+# not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
+Answer = ask(Q.zero(Residual), Assum)
+print(Residual, Answer, sep=&#x27;\n&#x27;)
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>atan(tan(x)) - x</code></td><td>→</td><td><code>-x + atan(tan(x))</code></td></tr><tr><td class=lbl>ask</td><td><code>Q.zero(Residual)</code></td><td>→</td><td><code>None</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class='lead'><td><a class=cl data-case='trig-period-01' href='../../suite/trig/case/trig-period-01/index.html'>trig-period-01</a> <span class=badge title='Lean-verified: its Lean proofs checked and prove its label (recorded by lean-check --record)'>Lean-verified</span> <span class='lchip l-true' title='label: true (equal at every admissible point); the correct answer is true'>true</span></td><td><a href='../../suite/trig/category/periodicity/index.html'>periodicity</a></td><td class='o o-solved'>solved</td><td class=code>Q.complex(z)  ⊢  Eq(sin((z + (2*pi))), sin(z))</td><td class=code>true</td><td class=gist>difference → 0 · ask → True</td><td class=num>0.013</td><td class=code>true</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><details class=setupfold><summary>setup — not timed <span class=z>(imports, warm-up, cache clearing: run once per start)</span></summary><div class='codebox setupbox'><pre class='repro setup' id='setup-63414c61836f'>from sympy import *
+import sympy
+
+SympyVersion = sympy.__version__
+# warm-up: a fixed generic expression, never case content
+W = Symbol(&#x27;W&#x27;)
+Warmup = ask(Q.positive(W**2 + 1), Q.real(W))
+# every query then runs in its own forked process, starting from this state:
+# the expression caches are dropped (imported and lazily loaded modules stay)
+sympy.core.cache.clear_cache()
+</pre></div></details><div class=codebox><button class=copy type=button data-target='setup-63414c61836f code-63414c61836f' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-63414c61836f'>z = Symbol(&#x27;z&#x27;, complex=True)
+Assum = And(Q.complex(z))
+Residual = sin(z + 2 * pi) - sin(z)
+# not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
+Answer = ask(Q.zero(Residual), Assum)
+print(Residual, Answer, sep=&#x27;\n&#x27;)
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>sin(z + 2 * pi) - sin(z)</code></td><td>→</td><td><code>0</code></td></tr><tr><td class=lbl>ask</td><td><code>Q.zero(Residual)</code></td><td>→</td><td><code>True</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>true</code></td></tr></table></details></td></tr><tr class='lead'><td><a class=cl data-case='trig-period-02' href='../../suite/trig/case/trig-period-02/index.html'>trig-period-02</a> <span class=badge title='Lean-verified: its Lean proofs checked and prove its label (recorded by lean-check --record)'>Lean-verified</span> <span class='lchip l-contingent' title='label: contingent (true at some admissible points and false at others: a definite claim, not “unknown”); the correct response is null, because neither true nor false holds'>contingent</span></td><td><a href='../../suite/trig/category/periodicity/index.html'>periodicity</a></td><td class='o o-no_verdict'>no verdict</td><td class=code>Q.real(x)  ⊢  Eq(cos((x + pi)), cos(x))</td><td class=code>null</td><td class=gist>difference → -2*cos(x) · ask → None</td><td class=num>0.033</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><details class=setupfold><summary>setup — not timed <span class=z>(imports, warm-up, cache clearing: run once per start)</span></summary><div class='codebox setupbox'><pre class='repro setup' id='setup-f8f16cf86a60'>from sympy import *
+import sympy
+
+SympyVersion = sympy.__version__
+# warm-up: a fixed generic expression, never case content
+W = Symbol(&#x27;W&#x27;)
+Warmup = ask(Q.positive(W**2 + 1), Q.real(W))
+# every query then runs in its own forked process, starting from this state:
+# the expression caches are dropped (imported and lazily loaded modules stay)
+sympy.core.cache.clear_cache()
+</pre></div></details><div class=codebox><button class=copy type=button data-target='setup-f8f16cf86a60 code-f8f16cf86a60' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-f8f16cf86a60'>x = Symbol(&#x27;x&#x27;, real=True)
+Assum = And(Q.real(x))
+Residual = cos(x + pi) - cos(x)
+# not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
+Answer = ask(Q.zero(Residual), Assum)
+print(Residual, Answer, sep=&#x27;\n&#x27;)
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>cos(x + pi) - cos(x)</code></td><td>→</td><td><code>-2*cos(x)</code></td></tr><tr><td class=lbl>ask</td><td><code>Q.zero(Residual)</code></td><td>→</td><td><code>None</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class='lead'><td><a class=cl data-case='trig-period-03' href='../../suite/trig/case/trig-period-03/index.html'>trig-period-03</a> <span class=badge title='Lean-verified: its Lean proofs checked and prove its label (recorded by lean-check --record)'>Lean-verified</span> <span class='lchip l-contingent' title='label: contingent (true at some admissible points and false at others: a definite claim, not “unknown”); the correct response is null, because neither true nor false holds'>contingent</span></td><td><a href='../../suite/trig/category/periodicity/index.html'>periodicity</a></td><td class='o o-no_verdict'>no verdict</td><td class=code>Q.real(x) ∧ Q.positive(x)  ⊢  Eq(cos((x + pi)), cos(x))</td><td class=code>null</td><td class=gist>difference → -2*cos(x) · ask → None</td><td class=num>0.034</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><details class=setupfold><summary>setup — not timed <span class=z>(imports, warm-up, cache clearing: run once per start)</span></summary><div class='codebox setupbox'><pre class='repro setup' id='setup-132c785e3860'>from sympy import *
+import sympy
+
+SympyVersion = sympy.__version__
+# warm-up: a fixed generic expression, never case content
+W = Symbol(&#x27;W&#x27;)
+Warmup = ask(Q.positive(W**2 + 1), Q.real(W))
+# every query then runs in its own forked process, starting from this state:
+# the expression caches are dropped (imported and lazily loaded modules stay)
+sympy.core.cache.clear_cache()
+</pre></div></details><div class=codebox><button class=copy type=button data-target='setup-132c785e3860 code-132c785e3860' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-132c785e3860'>x = Symbol(&#x27;x&#x27;, real=True)
+Assum = And(Q.real(x), Q.positive(x))
+Residual = cos(x + pi) - cos(x)
+# not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
+Answer = ask(Q.zero(Residual), Assum)
+print(Residual, Answer, sep=&#x27;\n&#x27;)
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>cos(x + pi) - cos(x)</code></td><td>→</td><td><code>-2*cos(x)</code></td></tr><tr><td class=lbl>ask</td><td><code>Q.zero(Residual)</code></td><td>→</td><td><code>None</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr><tr class='lead'><td><a class=cl data-case='trig-shift-01' href='../../suite/trig/case/trig-shift-01/index.html'>trig-shift-01</a> <span class=badge title='Lean-verified: its Lean proofs checked and prove its label (recorded by lean-check --record)'>Lean-verified</span> <span class='lchip l-contingent' title='label: contingent (true at some admissible points and false at others: a definite claim, not “unknown”); the correct response is null, because neither true nor false holds'>contingent</span></td><td><a href='../../suite/trig/category/periodicity/index.html'>periodicity</a></td><td class='o o-no_verdict'>no verdict</td><td class=code>Q.real(x)  ⊢  Eq(sin((x + pi)), sin(x))</td><td class=code>null</td><td class=gist>difference → -2*sin(x) · ask → None</td><td class=num>0.033</td><td class=code>null</td></tr><tr class=tracerow><td colspan=8><details class=trace><summary>code</summary><details class=setupfold><summary>setup — not timed <span class=z>(imports, warm-up, cache clearing: run once per start)</span></summary><div class='codebox setupbox'><pre class='repro setup' id='setup-a80f8c3279f2'>from sympy import *
+import sympy
+
+SympyVersion = sympy.__version__
+# warm-up: a fixed generic expression, never case content
+W = Symbol(&#x27;W&#x27;)
+Warmup = ask(Q.positive(W**2 + 1), Q.real(W))
+# every query then runs in its own forked process, starting from this state:
+# the expression caches are dropped (imported and lazily loaded modules stay)
+sympy.core.cache.clear_cache()
+</pre></div></details><div class=codebox><button class=copy type=button data-target='setup-a80f8c3279f2 code-a80f8c3279f2' title='copies the setup and the query code'>Copy</button><pre class=repro id='code-a80f8c3279f2'>x = Symbol(&#x27;x&#x27;, real=True)
+Assum = And(Q.real(x))
+Residual = sin(x + pi) - sin(x)
+# not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
+Answer = ask(Q.zero(Residual), Assum)
+print(Residual, Answer, sep=&#x27;\n&#x27;)
+</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>sin(x + pi) - sin(x)</code></td><td>→</td><td><code>-2*sin(x)</code></td></tr><tr><td class=lbl>ask</td><td><code>Q.zero(Residual)</code></td><td>→</td><td><code>None</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr></tbody></table></div><footer class=foot>assume-eval harness v0.1.0 (<code>eddaaef</code>) · suite trig · case set <code>1e4dbd2f7d86</code> · results as of 2026-10-13 16:39</footer></main><script>document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button.copy');if(!b)return;var ids=(b.getAttribute('data-target')||'').split(' '),parts=[];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el)parts.push(el.textContent);}if(!parts.length)return;var text=parts.join('\n');function sel(){var o=b.parentNode.querySelector('textarea');if(o)o.remove();var t=document.createElement('textarea');t.value=text;b.parentNode.appendChild(t);t.select();var ok=false;try{ok=document.execCommand('copy');}catch(x){}if(ok){t.remove();}b.textContent=ok?'Copied':'Selected: press Ctrl/Cmd+C';}if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(function(){b.textContent='Copied';},sel);}else{sel();}setTimeout(function(){b.textContent='Copy';},2500);});</script><script type=application/json id=case-data>{"trig-acos-01":{"c":"inverse","e":"true","g":"x \\in \\mathbb{R},\\quad x \u003e 0,\\quad x \u003c 3","l":1,"q":"\\arccos\\left(\\cos x\\right) = x"},"trig-asin-01":{"c":"inverse","e":"contingent","g":"x \\in \\mathbb{R}","l":1,"q":"\\arcsin\\left(\\sin x\\right) \\overset{?}{=} x","wf":"x = 3","wt":"x = 0"},"trig-asin-02":{"c":"inverse","e":"true","g":"x \\in \\mathbb{R},\\quad x \u003e -1,\\quad x \u003c 1","l":1,"q":"\\arcsin\\left(\\sin x\\right) = x"},"trig-atan-01":{"c":"inverse","e":"true","g":"x \\in \\mathbb{R},\\quad x \u003e -1,\\quad x \u003c 1","l":1,"q":"\\arctan\\left(\\tan x\\right) = x"},"trig-double-01":{"c":"identities","e":"true","g":"z \\in \\mathbb{C}","l":1,"q":"\\sin\\left(2 \\, z\\right) = 2 \\, \\sin z \\, \\cos z"},"trig-double-02":{"c":"identities","e":"false","g":"x \\in \\mathbb{R},\\quad x \u003e 0,\\quad x \u003c 1","l":1,"q":"\\sin\\left(2 \\, x\\right) \\neq 2 \\, \\sin x","wf":"x = \\frac{1}{2}"},"trig-period-01":{"c":"periodicity","e":"true","g":"z \\in \\mathbb{C}","l":1,"q":"\\sin\\left(z + 2 \\, \\pi\\right) = \\sin z"},"trig-period-02":{"c":"periodicity","e":"contingent","g":"x \\in \\mathbb{R}","l":1,"q":"\\cos\\left(x + \\pi\\right) \\overset{?}{=} \\cos x","wf":"x = 0","wt":"x = \\frac{1}{2} \\, \\pi"},"trig-period-03":{"c":"periodicity","e":"contingent","g":"x \\in \\mathbb{R},\\quad x \u003e 0","l":1,"q":"\\cos\\left(x + \\pi\\right) \\overset{?}{=} \\cos x","wf":"x = 1","wt":"x = \\frac{1}{2} \\, \\pi"},"trig-pyth-01":{"c":"identities","e":"true","g":"z \\in \\mathbb{C}","l":1,"q":"\\sin z \\, \\sin z + \\cos z \\, \\cos z = 1"},"trig-shift-01":{"c":"periodicity","e":"contingent","g":"x \\in \\mathbb{R}","l":1,"q":"\\sin\\left(x + \\pi\\right) \\overset{?}{=} \\sin x","wf":"x = 1","wt":"x = 0"},"trig-sqrt-01":{"c":"identities","e":"contingent","g":"x \\in \\mathbb{R}","l":1,"q":"\\sqrt{1 - \\sin x \\, \\sin x} \\overset{?}{=} \\cos x","wf":"x = 3","wt":"x = 0"},"trig-tan-01":{"c":"identities","e":"true","g":"x \\in \\mathbb{R},\\quad \\cos x \\neq 0","l":1,"q":"\\tan x = \\frac{\\sin x}{\\cos x}"}}</script><script>(function(){
+function load(id){var el=document.getElementById(id);if(!el)return null;
+try{return JSON.parse(el.textContent);}catch(x){return null;}}
+var data=load('case-data')||{},rdata=load('res-data')||{},ndata=load('note-data')||{},tdata=load('tip-data')||{};
+var pop=document.createElement('div');pop.id='case-pop';pop.className='casepop';
+pop.setAttribute('role','tooltip');pop.hidden=true;document.body.appendChild(pop);
+var cache={},cur=null,timer=null,hideT=null,lastTouch=0;
+function h(s){return String(s).replace(/[&<>"']/g,function(c){
+return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function tex(s){if(window.katex){try{return window.katex.renderToString(s,{throwOnError:false});}catch(x){}}
+return '<code>'+h(s)+'</code>';}
+function ot(o){return o==='no_verdict'?'no verdict':o==='declined_correctly'?'declined correctly':o;}
+function rcontent(k){
+if(cache.hasOwnProperty('r:'+k))return cache['r:'+k];
+var d=rdata.hasOwnProperty(k)?rdata[k]:null,out,i;
+if(!d){out='<p class=cp-na>no result data</p>';}
+else{out='<div class=cp-head><b>'+h(d.s)+'</b>'+(d.x?' <span class=xchip>'+h(d.x)+'</span>':'')
++' · '+h(d.i)+' · <span class="o o-'+h(d.o)+'">'+h(ot(d.o))+'</span>'+(d.e?' · expected <b>'+h(d.e)+'</b>':'')
++(d.t!=null?' · '+h(d.t)+' s':'')+'</div>';
+if(d.r){out+='<table class=steps>';for(i=0;i<d.r.length;i++)
+out+='<tr><td class=lbl>'+h(d.r[i][0])+'</td><td class="o o-'+h(d.r[i][1])+'">'+h(ot(d.r[i][1]))
++'</td><td><code>'+h(d.r[i][2])+'</code></td></tr>';out+='</table>';}
+else{out+='<div class=cp-ans>answer <code>'+h(d.a)+'</code>'+(d.o==='no_verdict'?' <span class=z>(no verdict: the system ran but did not commit to true or false)</span>':
+d.o==='declined_correctly'?' <span class=z>(declined correctly: neither true nor false holds here; not counted as solved)</span>':'')
++(d.d?' <span class=z>· '+h(d.d)+'</span>':'')+'</div>';
+if(d.g&&d.g.length){out+='<table class=steps>';for(i=0;i<d.g.length;i++)
+out+='<tr><td class=lbl>'+h(d.g[i][0])+'</td><td><code>'+h(d.g[i][1])+'</code></td></tr>';out+='</table>';}
+if(d.k!=null){out+='<pre class=cp-code>'+h(d.k)+'</pre>';
+if(d.u)out+='<p class=cp-na>runs after the system\'s setup code; the case page shows both, with a Copy button</p>';}
+else out+='<p class=cp-na>the system sent no trace</p>';}}
+cache['r:'+k]=out;return out;}
+function ncontent(ks){var out='',l=ks.split(' ');
+for(var i=0;i<l.length;i++){var d=ndata.hasOwnProperty(l[i])?ndata[l[i]]:null;if(!d)continue;
+out+='<div class=cp-head><b>'+h(d.k)+'</b> · '+h(d.s)+'</div><p class=cp-note>'
++(d.t?'<b>'+h(d.t.replace(/\.$/,''))+'.</b> ':'')+h(d.x)+'</p>';}
+return out||'<p class=cp-na>no note</p>';}
+var LTIP={'true':'equal at every admissible point','false':'unequal at every admissible point'};
+function expect(d){if(!d.e)return '';var why;
+if(d.e==='contingent'){var w=[];if(d.wt!=null)w.push('true at '+tex(d.wt));if(d.wf!=null)w.push('false at '+tex(d.wf));
+why=w.length?w.join('; '):'true at some admissible points, false at others';}
+else why=LTIP[d.e]+(d.e==='false'&&d.wf!=null?' (e.g. at '+tex(d.wf)+')':'');
+return '<div class=cp-lbl>Expected</div><div class=cp-exp><span class="lchip l-'+h(d.e)+'">'+h(d.e)+'</span> '+why+'</div>';}
+function content(a){
+if(a.hasAttribute('data-tip')){var tk=a.getAttribute('data-tip');
+return tdata.hasOwnProperty(tk)?tdata[tk]:'<p class=cp-na>no details</p>';}
+if(a.hasAttribute('data-res'))return rcontent(a.getAttribute('data-res'));
+if(a.hasAttribute('data-note'))return ncontent(a.getAttribute('data-note'));
+var id=a.getAttribute('data-case');
+if(cache.hasOwnProperty(id))return cache[id];
+var d=data.hasOwnProperty(id)?data[id]:{m:1};
+var out='<div class=cp-head><b>'+h(id)+'</b>'+(d.c?' · '+h(d.c):'')
++(d.u?' <span class="badge">unofficial</span>':'')+(d.r?' <span class="badge">unreviewed</span>':'')+(d.a?' <span class="badge">agent-reviewed</span>':'')+(d.b?' <span class="badge">below requirement</span>':'')+(d.l?' <span class="badge">Lean-verified</span>':'')+'</div>';
+if(d.m||d.q==null){out+='<p class=cp-na>source not available</p>';}
+else{out+='<div class=cp-stmt><div class=cp-lbl>Given</div><div class=cp-given>'
++(d.g?tex(d.g):'<span class=z>nothing</span>')+'</div><div class=cp-lbl>Claim</div>'
++'<div class=cp-claim>'+tex('\\displaystyle '+d.q)+'</div>'+expect(d)+'</div>';}
+if(window.katex||d.m||d.q==null)cache[id]=out;
+return out;}
+function place(a){
+var r=a.getBoundingClientRect(),de=document.documentElement,vw=de.clientWidth,vh=de.clientHeight,m=8,g=6;
+pop.style.maxHeight='';pop.style.left='0px';pop.style.top='0px';
+var w=pop.offsetWidth,ht=pop.offsetHeight,below=vh-r.bottom-g-m,above=r.top-g-m,top;
+if(ht<=below||below>=above){top=r.bottom+g;if(ht>below)pop.style.maxHeight=Math.max(below,40)+'px';}
+else{if(ht>above){ht=above;pop.style.maxHeight=above+'px';}top=r.top-g-ht;}
+var left=Math.min(r.left,vw-m-w);if(left<m)left=m;
+pop.style.left=left+'px';pop.style.top=top+'px';}
+function show(a){clearTimeout(timer);clearTimeout(hideT);
+if(cur&&cur!==a)cur.removeAttribute('aria-describedby');
+pop.className='casepop'+(a.hasAttribute('data-res')?' respop':a.hasAttribute('data-tip')?' tippop':'');
+pop.innerHTML=content(a);pop.hidden=false;cur=a;
+a.setAttribute('aria-describedby','case-pop');place(a);}
+function hide(){clearTimeout(timer);clearTimeout(hideT);
+if(cur)cur.removeAttribute('aria-describedby');cur=null;pop.hidden=true;}
+function link(t){return t&&t.closest?t.closest('a[data-case],a[data-res],[data-note],[data-tip]'):null;}
+document.addEventListener('pointerover',function(e){if(e.pointerType==='touch')return;
+if(pop.contains(e.target)){clearTimeout(hideT);return;}
+var a=link(e.target);if(!a)return;clearTimeout(hideT);if(a===cur)return;
+clearTimeout(timer);timer=setTimeout(function(){show(a);},150);});
+document.addEventListener('pointerout',function(e){if(e.pointerType==='touch')return;
+var a=link(e.target);if(a&&a!==cur){clearTimeout(timer);return;}
+if(cur&&(a===cur||pop.contains(e.target))){clearTimeout(hideT);hideT=setTimeout(hide,120);}});
+document.addEventListener('pointerdown',function(e){if(e.pointerType==='touch')lastTouch=Date.now();},true);
+document.addEventListener('focusin',function(e){var a=link(e.target);
+if(a&&Date.now()-lastTouch>1000)show(a);});
+document.addEventListener('focusout',function(e){if(cur&&link(e.target)===cur)hide();});
+document.addEventListener('click',function(e){var a=link(e.target);
+if(a&&(Date.now()-lastTouch<1000||!a.href)){if(a===cur&&!pop.hidden)return;e.preventDefault();show(a);return;}
+if(cur&&!a&&!pop.contains(e.target))hide();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&cur)hide();});
+window.addEventListener('scroll',function(){if(cur)hide();});
+window.addEventListener('resize',function(){if(cur)hide();});
+})();</script></body></html>

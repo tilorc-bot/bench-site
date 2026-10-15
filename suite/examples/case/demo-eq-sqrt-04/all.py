@@ -46,8 +46,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case demo-eq-sqrt-04 · expected false · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174229 answered false (solved)
-_n[_run('demo-eq-sqrt-04', 'satrefine-refine', 'false', 'the run satrefine-refine-20261014-174229 answered false (solved)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run satrefine-refine-20261015-024436 answered false (solved)
+_n[_run('demo-eq-sqrt-04', 'satrefine-refine', 'false', 'the run satrefine-refine-20261015-024436 answered false (solved)', _SETUP1, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), Q.positive(x))
 Residual = sqrt(Pow(x, 2)) + 1 - x
 Result = satrefine.refine(Residual, Assum)
@@ -57,8 +57,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-eq-sqrt-04 · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered null (no verdict)
-_n[_run('demo-eq-sqrt-04', 'sympy-ask', 'false', 'the run sympy-ask-20261014-174223 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', real=True)
+# the run sympy-ask-20261015-024429 answered null (no verdict)
+_n[_run('demo-eq-sqrt-04', 'sympy-ask', 'false', 'the run sympy-ask-20261015-024429 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), Q.positive(x))
 Residual = sqrt(Pow(x, 2)) + 1 - x
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
@@ -67,8 +67,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-eq-sqrt-04 · expected false · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered false (solved)
-_n[_run('demo-eq-sqrt-04', 'sympy-refine', 'false', 'the run sympy-refine-20261014-174225 answered false (solved)', _SETUP2, r'''x = Symbol('x', real=True)
+# the run sympy-refine-20261015-024432 answered false (solved)
+_n[_run('demo-eq-sqrt-04', 'sympy-refine', 'false', 'the run sympy-refine-20261015-024432 answered false (solved)', _SETUP2, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), Q.positive(x))
 Residual = sqrt(Pow(x, 2)) + 1 - x
 Result = refine(Residual, Assum)
@@ -78,8 +78,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-eq-sqrt-04 · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered false (solved)
-_n[_run('demo-eq-sqrt-04', 'sympy-simplify', 'false', 'the run sympy-simplify-20261014-174228 answered false (solved)', _SETUP2, r'''x = Symbol('x', real=True, positive=True)
+# the run sympy-simplify-20261015-024434 answered false (solved)
+_n[_run('demo-eq-sqrt-04', 'sympy-simplify', 'false', 'the run sympy-simplify-20261015-024434 answered false (solved)', _SETUP2, r'''x = Symbol('x', real=True, positive=True)
 Residual = sqrt(Pow(x, 2)) + 1 - x
 Result = simplify(Residual)
 # true iff the result is 0; false only if it is a definite nonzero number

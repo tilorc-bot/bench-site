@@ -46,8 +46,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case trig-tan-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174247 answered null (no verdict)
-_n[_run('trig-tan-01', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174247 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run satrefine-refine-20261015-024455 answered null (no verdict)
+_n[_run('trig-tan-01', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-024455 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), ~Q.zero(cos(x)))
 Residual = tan(x) - (sin(x) / cos(x))
 Result = satrefine.refine(Residual, Assum)
@@ -57,8 +57,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case trig-tan-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174242 answered null (no verdict)
-_n[_run('trig-tan-01', 'sympy-ask', 'true', 'the run sympy-ask-20261014-174242 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', real=True)
+# the run sympy-ask-20261015-024450 answered null (no verdict)
+_n[_run('trig-tan-01', 'sympy-ask', 'true', 'the run sympy-ask-20261015-024450 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), ~Q.zero(cos(x)))
 Residual = tan(x) - (sin(x) / cos(x))
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
@@ -67,8 +67,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case trig-tan-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174244 answered null (no verdict)
-_n[_run('trig-tan-01', 'sympy-refine', 'true', 'the run sympy-refine-20261014-174244 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', real=True)
+# the run sympy-refine-20261015-024452 answered null (no verdict)
+_n[_run('trig-tan-01', 'sympy-refine', 'true', 'the run sympy-refine-20261015-024452 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), ~Q.zero(cos(x)))
 Residual = tan(x) - (sin(x) / cos(x))
 Result = refine(Residual, Assum)
@@ -78,8 +78,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case trig-tan-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174246 answered true (solved)
-_n[_run('trig-tan-01', 'sympy-simplify', 'true', 'the run sympy-simplify-20261014-174246 answered true (solved)', _SETUP2, r'''x = Symbol('x', real=True)
+# the run sympy-simplify-20261015-024453 answered true (solved)
+_n[_run('trig-tan-01', 'sympy-simplify', 'true', 'the run sympy-simplify-20261015-024453 answered true (solved)', _SETUP2, r'''x = Symbol('x', real=True)
 # dropped (not a unary fact about one symbol): ~Q.zero(cos(x))
 Residual = tan(x) - (sin(x) / cos(x))
 Result = simplify(Residual)

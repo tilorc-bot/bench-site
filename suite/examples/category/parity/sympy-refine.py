@@ -39,8 +39,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case demo-parity-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered true (solved)
-_n[_run('demo-parity-01', 'sympy-refine', 'true', 'the run sympy-refine-20261014-174225 answered true (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
+# the run sympy-refine-20261015-024432 answered true (solved)
+_n[_run('demo-parity-01', 'sympy-refine', 'true', 'the run sympy-refine-20261015-024432 answered true (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
 Assum = And(Q.integer(n), Q.odd(n))
 Residual = Pow(-1, n + 1) - 1
 Result = refine(Residual, Assum)
@@ -50,8 +50,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-parity-02 · expected false · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered false (solved)
-_n[_run('demo-parity-02', 'sympy-refine', 'false', 'the run sympy-refine-20261014-174225 answered false (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
+# the run sympy-refine-20261015-024432 answered false (solved)
+_n[_run('demo-parity-02', 'sympy-refine', 'false', 'the run sympy-refine-20261015-024432 answered false (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
 m = Symbol('m', integer=True)
 Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
 Residual = Pow(-1, n * m) - 1
@@ -62,8 +62,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-parity-03 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered true (solved)
-_n[_run('demo-parity-03', 'sympy-refine', 'true', 'the run sympy-refine-20261014-174225 answered true (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
+# the run sympy-refine-20261015-024432 answered true (solved)
+_n[_run('demo-parity-03', 'sympy-refine', 'true', 'the run sympy-refine-20261015-024432 answered true (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
 Assum = And(Q.integer(n))
 Residual = Pow(-1, n * (n + 1)) - 1
 Result = refine(Residual, Assum)
@@ -73,8 +73,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-parity-04 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered null (declined correctly)
-_n[_run('demo-parity-04', 'sympy-refine', 'contingent', 'the run sympy-refine-20261014-174225 answered null (declined correctly)', _SETUP1, r'''n = Symbol('n', integer=True)
+# the run sympy-refine-20261015-024432 answered null (declined correctly)
+_n[_run('demo-parity-04', 'sympy-refine', 'contingent', 'the run sympy-refine-20261015-024432 answered null (declined correctly)', _SETUP1, r'''n = Symbol('n', integer=True)
 Assum = And(Q.integer(n), Q.even(n))
 Residual = Pow(I, n) - 1
 Result = refine(Residual, Assum)
@@ -84,8 +84,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-parity-05 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered true (solved)
-_n[_run('demo-parity-05', 'sympy-refine', 'true', 'the run sympy-refine-20261014-174225 answered true (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
+# the run sympy-refine-20261015-024432 answered true (solved)
+_n[_run('demo-parity-05', 'sympy-refine', 'true', 'the run sympy-refine-20261015-024432 answered true (solved)', _SETUP1, r'''n = Symbol('n', integer=True)
 m = Symbol('m', integer=True)
 Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
 Residual = Pow(-1, n * m) - (-1)

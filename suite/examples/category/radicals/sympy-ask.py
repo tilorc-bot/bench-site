@@ -39,8 +39,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case demo-eq-abs-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered null (no verdict)
-_n[_run('demo-eq-abs-01', 'sympy-ask', 'true', 'the run sympy-ask-20261014-174223 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run sympy-ask-20261015-024429 answered null (no verdict)
+_n[_run('demo-eq-abs-01', 'sympy-ask', 'true', 'the run sympy-ask-20261015-024429 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), Q.negative(x))
 Residual = Abs(x) - (-x)
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
@@ -49,8 +49,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-eq-abs-02 · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered false (solved)
-_n[_run('demo-eq-abs-02', 'sympy-ask', 'false', 'the run sympy-ask-20261014-174223 answered false (solved)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run sympy-ask-20261015-024429 answered false (solved)
+_n[_run('demo-eq-abs-02', 'sympy-ask', 'false', 'the run sympy-ask-20261015-024429 answered false (solved)', _SETUP1, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), Q.negative(x))
 Residual = Abs(x) - x
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
@@ -59,8 +59,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-eq-sqrt-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered null (no verdict)
-_n[_run('demo-eq-sqrt-01', 'sympy-ask', 'true', 'the run sympy-ask-20261014-174223 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run sympy-ask-20261015-024429 answered null (no verdict)
+_n[_run('demo-eq-sqrt-01', 'sympy-ask', 'true', 'the run sympy-ask-20261015-024429 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), Q.positive(x))
 Residual = sqrt(Pow(x, 2)) - x
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
@@ -69,8 +69,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-eq-sqrt-02 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered true (solved)
-_n[_run('demo-eq-sqrt-02', 'sympy-ask', 'true', 'the run sympy-ask-20261014-174223 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run sympy-ask-20261015-024429 answered true (solved)
+_n[_run('demo-eq-sqrt-02', 'sympy-ask', 'true', 'the run sympy-ask-20261015-024429 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x))
 Residual = sqrt(Pow(x, 2)) - Abs(x)
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
@@ -79,8 +79,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-eq-sqrt-03 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered null (declined correctly)
-_n[_run('demo-eq-sqrt-03', 'sympy-ask', 'contingent', 'the run sympy-ask-20261014-174223 answered null (declined correctly)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run sympy-ask-20261015-024429 answered null (declined correctly)
+_n[_run('demo-eq-sqrt-03', 'sympy-ask', 'contingent', 'the run sympy-ask-20261015-024429 answered null (declined correctly)', _SETUP1, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x))
 Residual = sqrt(Pow(x, 2)) - x
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
@@ -89,8 +89,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-eq-sqrt-04 · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered null (no verdict)
-_n[_run('demo-eq-sqrt-04', 'sympy-ask', 'false', 'the run sympy-ask-20261014-174223 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run sympy-ask-20261015-024429 answered null (no verdict)
+_n[_run('demo-eq-sqrt-04', 'sympy-ask', 'false', 'the run sympy-ask-20261015-024429 answered null (no verdict)', _SETUP1, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), Q.positive(x))
 Residual = sqrt(Pow(x, 2)) + 1 - x
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False

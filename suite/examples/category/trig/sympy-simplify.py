@@ -39,8 +39,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case demo-eq-trig-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered true (solved)
-_n[_run('demo-eq-trig-01', 'sympy-simplify', 'true', 'the run sympy-simplify-20261014-174228 answered true (solved)', _SETUP1, r'''x = Symbol('x', complex=True)
+# the run sympy-simplify-20261015-024434 answered true (solved)
+_n[_run('demo-eq-trig-01', 'sympy-simplify', 'true', 'the run sympy-simplify-20261015-024434 answered true (solved)', _SETUP1, r'''x = Symbol('x', complex=True)
 Residual = Pow(sin(x), 2) + Pow(cos(x), 2) - 1
 Result = simplify(Residual)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -49,8 +49,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-eq-trig-02 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered true (solved)
-_n[_run('demo-eq-trig-02', 'sympy-simplify', 'true', 'the run sympy-simplify-20261014-174228 answered true (solved)', _SETUP1, r'''x = Symbol('x', complex=True)
+# the run sympy-simplify-20261015-024434 answered true (solved)
+_n[_run('demo-eq-trig-02', 'sympy-simplify', 'true', 'the run sympy-simplify-20261015-024434 answered true (solved)', _SETUP1, r'''x = Symbol('x', complex=True)
 Residual = 2 * sin(x) * cos(x) - sin(2 * x)
 Result = simplify(Residual)
 # true iff the result is 0; false only if it is a definite nonzero number

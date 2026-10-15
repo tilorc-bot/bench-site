@@ -39,8 +39,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case demo-prime-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered null (no verdict)
-_n[_run('demo-prime-01', 'sympy-simplify', 'true', 'the run sympy-simplify-20261014-174228 answered null (no verdict)', _SETUP1, r'''p = Symbol('p', integer=True, prime=True)
+# the run sympy-simplify-20261015-024434 answered null (no verdict)
+_n[_run('demo-prime-01', 'sympy-simplify', 'true', 'the run sympy-simplify-20261015-024434 answered null (no verdict)', _SETUP1, r'''p = Symbol('p', integer=True, prime=True)
 # dropped (not a unary fact about one symbol): p > 2
 Residual = Pow(-1, p) - (-1)
 Result = simplify(Residual)
@@ -50,8 +50,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-prime-02 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered null (declined correctly)
-_n[_run('demo-prime-02', 'sympy-simplify', 'contingent', 'the run sympy-simplify-20261014-174228 answered null (declined correctly)', _SETUP1, r'''p = Symbol('p', integer=True, prime=True)
+# the run sympy-simplify-20261015-024434 answered null (declined correctly)
+_n[_run('demo-prime-02', 'sympy-simplify', 'contingent', 'the run sympy-simplify-20261015-024434 answered null (declined correctly)', _SETUP1, r'''p = Symbol('p', integer=True, prime=True)
 Residual = Pow(-1, p) - (-1)
 Result = simplify(Residual)
 # true iff the result is 0; false only if it is a definite nonzero number

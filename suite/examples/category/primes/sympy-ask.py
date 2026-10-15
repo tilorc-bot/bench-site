@@ -39,8 +39,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case demo-prime-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered null (no verdict)
-_n[_run('demo-prime-01', 'sympy-ask', 'true', 'the run sympy-ask-20261014-174223 answered null (no verdict)', _SETUP1, r'''p = Symbol('p', integer=True)
+# the run sympy-ask-20261015-024429 answered null (no verdict)
+_n[_run('demo-prime-01', 'sympy-ask', 'true', 'the run sympy-ask-20261015-024429 answered null (no verdict)', _SETUP1, r'''p = Symbol('p', integer=True)
 Assum = And(Q.integer(p), Q.prime(p), p > 2)
 Residual = Pow(-1, p) - (-1)
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
@@ -49,8 +49,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-prime-02 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered null (declined correctly)
-_n[_run('demo-prime-02', 'sympy-ask', 'contingent', 'the run sympy-ask-20261014-174223 answered null (declined correctly)', _SETUP1, r'''p = Symbol('p', integer=True)
+# the run sympy-ask-20261015-024429 answered null (declined correctly)
+_n[_run('demo-prime-02', 'sympy-ask', 'contingent', 'the run sympy-ask-20261015-024429 answered null (declined correctly)', _SETUP1, r'''p = Symbol('p', integer=True)
 Assum = And(Q.integer(p), Q.prime(p))
 Residual = Pow(-1, p) - (-1)
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False

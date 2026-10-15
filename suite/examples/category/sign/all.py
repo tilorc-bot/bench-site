@@ -46,8 +46,8 @@ _n = {'true': 0, 'false': 0, 'null': 0}
 
 
 # ---- case demo-nonzero-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174229 answered true (solved)
-_n[_run('demo-nonzero-01', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174229 answered true (solved)', _SETUP1, r'''z = Symbol('z', complex=True)
+# the run satrefine-refine-20261015-024436 answered true (solved)
+_n[_run('demo-nonzero-01', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-024436 answered true (solved)', _SETUP1, r'''z = Symbol('z', complex=True)
 Assum = And(Q.complex(z), Q.imaginary(z))
 Residual = Abs(sign(z)) - 1
 Result = satrefine.refine(Residual, Assum)
@@ -57,8 +57,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-nonzero-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered null (no verdict)
-_n[_run('demo-nonzero-01', 'sympy-ask', 'true', 'the run sympy-ask-20261014-174223 answered null (no verdict)', _SETUP2, r'''z = Symbol('z', complex=True)
+# the run sympy-ask-20261015-024429 answered null (no verdict)
+_n[_run('demo-nonzero-01', 'sympy-ask', 'true', 'the run sympy-ask-20261015-024429 answered null (no verdict)', _SETUP2, r'''z = Symbol('z', complex=True)
 Assum = And(Q.complex(z), Q.imaginary(z))
 Residual = Abs(sign(z)) - 1
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
@@ -67,8 +67,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-nonzero-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered null (no verdict)
-_n[_run('demo-nonzero-01', 'sympy-refine', 'true', 'the run sympy-refine-20261014-174225 answered null (no verdict)', _SETUP2, r'''z = Symbol('z', complex=True)
+# the run sympy-refine-20261015-024432 answered null (no verdict)
+_n[_run('demo-nonzero-01', 'sympy-refine', 'true', 'the run sympy-refine-20261015-024432 answered null (no verdict)', _SETUP2, r'''z = Symbol('z', complex=True)
 Assum = And(Q.complex(z), Q.imaginary(z))
 Residual = Abs(sign(z)) - 1
 Result = refine(Residual, Assum)
@@ -78,8 +78,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-nonzero-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered true (solved)
-_n[_run('demo-nonzero-01', 'sympy-simplify', 'true', 'the run sympy-simplify-20261014-174228 answered true (solved)', _SETUP2, r'''z = Symbol('z', complex=True, imaginary=True)
+# the run sympy-simplify-20261015-024434 answered true (solved)
+_n[_run('demo-nonzero-01', 'sympy-simplify', 'true', 'the run sympy-simplify-20261015-024434 answered true (solved)', _SETUP2, r'''z = Symbol('z', complex=True, imaginary=True)
 Residual = Abs(sign(z)) - 1
 Result = simplify(Residual)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -88,8 +88,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-sign-02 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174229 answered true (solved)
-_n[_run('demo-sign-02', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174229 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run satrefine-refine-20261015-024436 answered true (solved)
+_n[_run('demo-sign-02', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-024436 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), ~Q.zero(x))
 Residual = sign(Pow(x, 2)) - 1
 Result = satrefine.refine(Residual, Assum)
@@ -99,8 +99,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-sign-02 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered null (no verdict)
-_n[_run('demo-sign-02', 'sympy-ask', 'true', 'the run sympy-ask-20261014-174223 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', real=True)
+# the run sympy-ask-20261015-024429 answered null (no verdict)
+_n[_run('demo-sign-02', 'sympy-ask', 'true', 'the run sympy-ask-20261015-024429 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), ~Q.zero(x))
 Residual = sign(Pow(x, 2)) - 1
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
@@ -109,8 +109,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-sign-02 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered true (solved)
-_n[_run('demo-sign-02', 'sympy-refine', 'true', 'the run sympy-refine-20261014-174225 answered true (solved)', _SETUP2, r'''x = Symbol('x', real=True)
+# the run sympy-refine-20261015-024432 answered true (solved)
+_n[_run('demo-sign-02', 'sympy-refine', 'true', 'the run sympy-refine-20261015-024432 answered true (solved)', _SETUP2, r'''x = Symbol('x', real=True)
 Assum = And(Q.real(x), ~Q.zero(x))
 Residual = sign(Pow(x, 2)) - 1
 Result = refine(Residual, Assum)
@@ -120,8 +120,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-sign-02 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered true (solved)
-_n[_run('demo-sign-02', 'sympy-simplify', 'true', 'the run sympy-simplify-20261014-174228 answered true (solved)', _SETUP2, r'''x = Symbol('x', real=True, zero=False)
+# the run sympy-simplify-20261015-024434 answered true (solved)
+_n[_run('demo-sign-02', 'sympy-simplify', 'true', 'the run sympy-simplify-20261015-024434 answered true (solved)', _SETUP2, r'''x = Symbol('x', real=True, zero=False)
 Residual = sign(Pow(x, 2)) - 1
 Result = simplify(Residual)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -130,8 +130,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-sign-03 · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174229 answered null (declined correctly)
-_n[_run('demo-sign-03', 'satrefine-refine', 'contingent', 'the run satrefine-refine-20261014-174229 answered null (declined correctly)', _SETUP1, r'''x = Symbol('x', complex=True)
+# the run satrefine-refine-20261015-024436 answered null (declined correctly)
+_n[_run('demo-sign-03', 'satrefine-refine', 'contingent', 'the run satrefine-refine-20261015-024436 answered null (declined correctly)', _SETUP1, r'''x = Symbol('x', complex=True)
 Assum = And(Q.complex(x), ~Q.zero(x))
 Residual = sign(Pow(x, 2)) - 1
 Result = satrefine.refine(Residual, Assum)
@@ -141,8 +141,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-sign-03 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered null (declined correctly)
-_n[_run('demo-sign-03', 'sympy-ask', 'contingent', 'the run sympy-ask-20261014-174223 answered null (declined correctly)', _SETUP2, r'''x = Symbol('x', complex=True)
+# the run sympy-ask-20261015-024429 answered null (declined correctly)
+_n[_run('demo-sign-03', 'sympy-ask', 'contingent', 'the run sympy-ask-20261015-024429 answered null (declined correctly)', _SETUP2, r'''x = Symbol('x', complex=True)
 Assum = And(Q.complex(x), ~Q.zero(x))
 Residual = sign(Pow(x, 2)) - 1
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
@@ -151,8 +151,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-sign-03 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered null (declined correctly)
-_n[_run('demo-sign-03', 'sympy-refine', 'contingent', 'the run sympy-refine-20261014-174225 answered null (declined correctly)', _SETUP2, r'''x = Symbol('x', complex=True)
+# the run sympy-refine-20261015-024432 answered null (declined correctly)
+_n[_run('demo-sign-03', 'sympy-refine', 'contingent', 'the run sympy-refine-20261015-024432 answered null (declined correctly)', _SETUP2, r'''x = Symbol('x', complex=True)
 Assum = And(Q.complex(x), ~Q.zero(x))
 Residual = sign(Pow(x, 2)) - 1
 Result = refine(Residual, Assum)
@@ -162,8 +162,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-sign-03 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered null (declined correctly)
-_n[_run('demo-sign-03', 'sympy-simplify', 'contingent', 'the run sympy-simplify-20261014-174228 answered null (declined correctly)', _SETUP2, r'''x = Symbol('x', complex=True, zero=False)
+# the run sympy-simplify-20261015-024434 answered null (declined correctly)
+_n[_run('demo-sign-03', 'sympy-simplify', 'contingent', 'the run sympy-simplify-20261015-024434 answered null (declined correctly)', _SETUP2, r'''x = Symbol('x', complex=True, zero=False)
 Residual = sign(Pow(x, 2)) - 1
 Result = simplify(Residual)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -172,8 +172,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-sign-04 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174229 answered true (solved)
-_n[_run('demo-sign-04', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174229 answered true (solved)', _SETUP1, r'''z = Symbol('z', complex=True)
+# the run satrefine-refine-20261015-024436 answered true (solved)
+_n[_run('demo-sign-04', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-024436 answered true (solved)', _SETUP1, r'''z = Symbol('z', complex=True)
 Assum = And(Q.complex(z))
 Residual = Abs(z * conjugate(z)) - (z * conjugate(z))
 Result = satrefine.refine(Residual, Assum)
@@ -183,8 +183,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-sign-04 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered null (no verdict)
-_n[_run('demo-sign-04', 'sympy-ask', 'true', 'the run sympy-ask-20261014-174223 answered null (no verdict)', _SETUP2, r'''z = Symbol('z', complex=True)
+# the run sympy-ask-20261015-024429 answered null (no verdict)
+_n[_run('demo-sign-04', 'sympy-ask', 'true', 'the run sympy-ask-20261015-024429 answered null (no verdict)', _SETUP2, r'''z = Symbol('z', complex=True)
 Assum = And(Q.complex(z))
 Residual = Abs(z * conjugate(z)) - (z * conjugate(z))
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
@@ -193,8 +193,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-sign-04 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered null (no verdict)
-_n[_run('demo-sign-04', 'sympy-refine', 'true', 'the run sympy-refine-20261014-174225 answered null (no verdict)', _SETUP2, r'''z = Symbol('z', complex=True)
+# the run sympy-refine-20261015-024432 answered null (no verdict)
+_n[_run('demo-sign-04', 'sympy-refine', 'true', 'the run sympy-refine-20261015-024432 answered null (no verdict)', _SETUP2, r'''z = Symbol('z', complex=True)
 Assum = And(Q.complex(z))
 Residual = Abs(z * conjugate(z)) - (z * conjugate(z))
 Result = refine(Residual, Assum)
@@ -204,8 +204,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-sign-04 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered null (no verdict)
-_n[_run('demo-sign-04', 'sympy-simplify', 'true', 'the run sympy-simplify-20261014-174228 answered null (no verdict)', _SETUP2, r'''z = Symbol('z', complex=True)
+# the run sympy-simplify-20261015-024434 answered null (no verdict)
+_n[_run('demo-sign-04', 'sympy-simplify', 'true', 'the run sympy-simplify-20261015-024434 answered null (no verdict)', _SETUP2, r'''z = Symbol('z', complex=True)
 Residual = Abs(z * conjugate(z)) - (z * conjugate(z))
 Result = simplify(Residual)
 # true iff the result is 0; false only if it is a definite nonzero number
@@ -214,8 +214,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-sign-05 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261014-174229 answered true (solved)
-_n[_run('demo-sign-05', 'satrefine-refine', 'true', 'the run satrefine-refine-20261014-174229 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True)
+# the run satrefine-refine-20261015-024436 answered true (solved)
+_n[_run('demo-sign-05', 'satrefine-refine', 'true', 'the run satrefine-refine-20261015-024436 answered true (solved)', _SETUP1, r'''x = Symbol('x', real=True)
 y = Symbol('y', real=True)
 Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.negative(y))
 Residual = Abs(x - y) - (x - y)
@@ -226,8 +226,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-sign-05 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261014-174223 answered null (no verdict)
-_n[_run('demo-sign-05', 'sympy-ask', 'true', 'the run sympy-ask-20261014-174223 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', real=True)
+# the run sympy-ask-20261015-024429 answered null (no verdict)
+_n[_run('demo-sign-05', 'sympy-ask', 'true', 'the run sympy-ask-20261015-024429 answered null (no verdict)', _SETUP2, r'''x = Symbol('x', real=True)
 y = Symbol('y', real=True)
 Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.negative(y))
 Residual = Abs(x - y) - (x - y)
@@ -237,8 +237,8 @@ print(Residual, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-sign-05 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261014-174225 answered true (solved)
-_n[_run('demo-sign-05', 'sympy-refine', 'true', 'the run sympy-refine-20261014-174225 answered true (solved)', _SETUP2, r'''x = Symbol('x', real=True)
+# the run sympy-refine-20261015-024432 answered true (solved)
+_n[_run('demo-sign-05', 'sympy-refine', 'true', 'the run sympy-refine-20261015-024432 answered true (solved)', _SETUP2, r'''x = Symbol('x', real=True)
 y = Symbol('y', real=True)
 Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.negative(y))
 Residual = Abs(x - y) - (x - y)
@@ -249,8 +249,8 @@ print(Result, Answer, sep='\n')
 ''')] += 1
 
 # ---- case demo-sign-05 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261014-174228 answered true (solved)
-_n[_run('demo-sign-05', 'sympy-simplify', 'true', 'the run sympy-simplify-20261014-174228 answered true (solved)', _SETUP2, r'''x = Symbol('x', real=True, positive=True)
+# the run sympy-simplify-20261015-024434 answered true (solved)
+_n[_run('demo-sign-05', 'sympy-simplify', 'true', 'the run sympy-simplify-20261015-024434 answered true (solved)', _SETUP2, r'''x = Symbol('x', real=True, positive=True)
 y = Symbol('y', real=True, negative=True)
 Residual = Abs(x - y) - (x - y)
 Result = simplify(Residual)
