@@ -1,0 +1,247 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,xcolor}
+\usepackage[margin=2cm]{geometry}
+\setlength{\parindent}{0pt}
+\title{assume-eval cases}
+\date{\today}
+\begin{document}
+\maketitle
+\section*{branch-cuts}
+\subsection*{\texttt{demo-atan2-01}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x, y \in \mathbb{R},\quad x > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{atan2}\left(y, x\right) = \arctan\left(\frac{y}{x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+
+\subsection*{\texttt{demo-atan2-02}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x, y \in \mathbb{R},\quad x < 0,\quad y > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{atan2}\left(y, x\right) \neq \arctan\left(\frac{y}{x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides differ at every admissible point.}}\\
+{\footnotesize\color{gray}witness (false): $y = 1, x = -1$}\\
+
+\subsection*{\texttt{demo-log-01}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x, y \in \mathbb{R},\quad x > 0,\quad y > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \log\left(x \, y\right) = \log x + \log y$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+
+\subsection*{\texttt{demo-log-02}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $z, w \in \mathbb{C},\quad z \neq 0,\quad w \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \log\left(z \, w\right) \overset{?}{=} \log z + \log w$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $z = 1, w = 1$}\\
+{\footnotesize\color{gray}witness (false): $z = -1, w = -1$}\\
+
+\subsection*{\texttt{demo-log-03}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x < 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \log x \neq \log\left(-x\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides differ at every admissible point.}}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{log x has imaginary part pi for x < 0, while log(-x) is real.}\\
+
+\section*{conventions}
+\subsection*{\texttt{demo-acot-01}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{arccot}\left(x\right) = \arctan\left(\frac{1}{x}\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{The acot conventions agree on the positive reals.}\\
+
+\subsection*{\texttt{demo-heaviside-01}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle H\left(x\right) + H\left(-x\right) = 1$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{Holds under every convention for heaviside(0), because x = 0 is excluded.}\\
+
+\section*{log-exp}
+\subsection*{\texttt{demo-eq-log-01}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \log\left(e^{x}\right) = x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{positive x: for very negative x the numeric checker snaps exp(x) to 0, where log is undefined.}\\
+
+\subsection*{\texttt{demo-eq-pow-01}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $n \in \mathbb{Z}$ \\[4pt]
+\textsc{claim} & $\displaystyle \left(-1\right)^{2 \, n} = 1$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+
+\section*{parity}
+\subsection*{\texttt{demo-parity-01}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $n \in \mathbb{Z},\quad n \in 2\mathbb{Z} + 1$ \\[4pt]
+\textsc{claim} & $\displaystyle \left(-1\right)^{n + 1} = 1$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+
+\subsection*{\texttt{demo-parity-02}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $n, m \in \mathbb{Z},\quad n \in 2\mathbb{Z} + 1,\quad m \in 2\mathbb{Z} + 1$ \\[4pt]
+\textsc{claim} & $\displaystyle \left(-1\right)^{n \, m} \neq 1$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides differ at every admissible point.}}\\
+{\footnotesize\color{gray}witness (false): $n = 1, m = 3$}\\
+\emph{n m is odd, so (-1)\textasciicircum{}(n m) = -1: the difference is the constant -2.}\\
+
+\subsection*{\texttt{demo-parity-03}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $n \in \mathbb{Z}$ \\[4pt]
+\textsc{claim} & $\displaystyle \left(-1\right)^{n \, \left(n + 1\right)} = 1$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+
+\subsection*{\texttt{demo-parity-04}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $n \in \mathbb{Z},\quad n \in 2\mathbb{Z}$ \\[4pt]
+\textsc{claim} & $\displaystyle i^{n} \overset{?}{=} 1$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $n = 4$}\\
+{\footnotesize\color{gray}witness (false): $n = 2$}\\
+\emph{i\textasciicircum{}n = (-1)\textasciicircum{}(n/2) for even n.  Written with (pow -1 (/ n 2)) it hits a SymPy 1.14 bug: ask(Q.zero((-1)**(k/2) - 1), Q.integer(k)) is False, though k = 4 gives 0.}\\
+
+\subsection*{\texttt{demo-parity-05}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $n, m \in \mathbb{Z},\quad n \in 2\mathbb{Z} + 1,\quad m \in 2\mathbb{Z} + 1$ \\[4pt]
+\textsc{claim} & $\displaystyle \left(-1\right)^{n \, m} = -1$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+
+\section*{primes}
+\subsection*{\texttt{demo-prime-01}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $p \in \mathbb{Z},\quad p \text{ prime},\quad p > 2$ \\[4pt]
+\textsc{claim} & $\displaystyle \left(-1\right)^{p} = -1$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+
+\subsection*{\texttt{demo-prime-02}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $p \in \mathbb{Z},\quad p \text{ prime}$ \\[4pt]
+\textsc{claim} & $\displaystyle \left(-1\right)^{p} \overset{?}{=} -1$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $p = 3$}\\
+{\footnotesize\color{gray}witness (false): $p = 2$}\\
+\emph{2 is the only even prime, so the equation is neither always true nor always false.}\\
+
+\section*{radicals}
+\subsection*{\texttt{demo-eq-abs-01}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x < 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|x\right| = -x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+
+\subsection*{\texttt{demo-eq-abs-02}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x < 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|x\right| \neq x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides differ at every admissible point.}}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+
+\subsection*{\texttt{demo-eq-sqrt-01}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \sqrt{x^{2}} = x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+
+\subsection*{\texttt{demo-eq-sqrt-02}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \sqrt{x^{2}} = \left|x\right|$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+
+\subsection*{\texttt{demo-eq-sqrt-03}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \sqrt{x^{2}} \overset{?}{=} x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = -1$}\\
+\emph{Without a sign assumption sqrt(x\textasciicircum{}2) = x holds only for x >= 0.}\\
+
+\subsection*{\texttt{demo-eq-sqrt-04}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x > 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \sqrt{x^{2}} + 1 \neq x$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides differ at every admissible point.}}\\
+{\footnotesize\color{gray}witness (false): $x = 1$}\\
+\emph{sqrt(x\textasciicircum{}2) = x for x > 0, so the difference is the constant 1.}\\
+
+\section*{sign}
+\subsection*{\texttt{demo-nonzero-01}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $z \in \mathbb{C},\quad z \in i\mathbb{R}$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|\operatorname{sgn}\left(z\right)\right| = 1$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{|sign z| = 1 says z != 0.  Trap: SymPy's Q.nonzero means real-and-nonzero; our nonzero does not.}\\
+
+\subsection*{\texttt{demo-sign-02}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{R},\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{sgn}\left(x^{2}\right) = 1$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+
+\subsection*{\texttt{demo-sign-03}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C},\quad x \neq 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \operatorname{sgn}\left(x^{2}\right) \overset{?}{=} 1$ \\
+\end{tabular}\\[2pt]
+{\small\emph{equal at some admissible points, different at others.}}\\
+{\footnotesize\color{gray}witness (true): $x = 1$}\\
+{\footnotesize\color{gray}witness (false): $x = i$}\\
+\emph{Same as demo-sign-02 but x is complex: sign(1\textasciicircum{}2) = 1, but sign(i\textasciicircum{}2) = -1.}\\
+
+\subsection*{\texttt{demo-sign-04}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $z \in \mathbb{C}$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|z \, \overline{z}\right| = z \, \overline{z}$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+\emph{z conj(z) = |z|\textasciicircum{}2 is a nonnegative real, so it equals its absolute value.}\\
+
+\subsection*{\texttt{demo-sign-05}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x, y \in \mathbb{R},\quad x > 0,\quad y < 0$ \\[4pt]
+\textsc{claim} & $\displaystyle \left|x - y\right| = x - y$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+
+\section*{trig}
+\subsection*{\texttt{demo-eq-trig-01}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C}$ \\[4pt]
+\textsc{claim} & $\displaystyle \left(\sin x\right)^{2} + \left(\cos x\right)^{2} = 1$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+
+\subsection*{\texttt{demo-eq-trig-02}}
+\begin{tabular}{@{}l@{\quad}l@{}}
+\textsc{given} & $x \in \mathbb{C}$ \\[4pt]
+\textsc{claim} & $\displaystyle 2 \, \sin x \, \cos x = \sin\left(2 \, x\right)$ \\
+\end{tabular}\\[2pt]
+{\small\emph{the two sides are equal at every admissible point.}}\\
+
+\end{document}

@@ -192,7 +192,35 @@ box-shadow:0 6px 24px rgba(0,0,0,.22);padding:8px 12px 10px;font-size:13px;text-
 background:var(--bg);font:12px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap;
 word-break:break-word;max-height:320px;overflow:auto}.casepop .cp-note{margin:4px 0}
 
+:root{--lstr:#0a7d36}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--lstr:#7ee787}}
+:root[data-theme="dark"]{--lstr:#7ee787}
+pre.src .sh{color:var(--lkw)}pre.src .snum{color:var(--lnum)}pre.src .sstr,.lean-c .lstr{color:var(--lstr)}
+pre.src .scom{color:var(--lcom);font-style:italic}.lean-c .ltac{color:var(--lkw)}
+button.lpt{font:inherit;color:var(--lkw);background:var(--chip);border:1px dashed var(--line);border-radius:4px;
+padding:0 4px;cursor:pointer}.lp>.lpx{display:none}.lp.open>.lpx{display:inline}.lp.open>.lpt{margin-right:4px}
+.proofs{display:flex;flex-direction:column;gap:10px;margin:0 0 14px}
+.proof{border:1px solid var(--line);border-radius:8px;background:var(--card);overflow:hidden}
+.proof .plbl{font-size:12px;color:var(--muted);padding:6px 12px 0}
+.proof pre.src{padding:6px 12px 8px;font-size:12.5px;overflow-wrap:break-word}
+.proof pre.stmt{background:var(--chip);border-bottom:1px solid var(--line)}
+.proof .ll{display:block;padding-left:4ch;text-indent:-4ch}
+.lrw{background:var(--chip);border-bottom:1px solid var(--line);padding:6px 12px 6px;font-size:13.5px}
+.lr{display:grid;grid-template-columns:max-content 1fr;column-gap:10px;row-gap:2px}
+.lrl{display:contents}.lrn{color:var(--muted);font-size:12px;text-align:right;padding-top:1px}
+.lrm{overflow-wrap:anywhere;padding-left:2ch;text-indent:-2ch}.lrm a.ln{color:inherit}
+.lrt .lrm{color:var(--muted)}.lrtag{font-size:11px;border:1px solid var(--line);border-radius:4px;padding:0 4px}
+.lrx{color:var(--muted);font-size:11px}.lre{text-decoration:underline dotted var(--muted)}
+.lrnote{font-size:12px;color:var(--muted);margin:0 0 8px}
+details.lrs,details.lraw{margin-top:4px;font-size:12px}details.lrs>summary,details.lraw>summary{color:var(--muted);
+cursor:pointer}details.lrs .lr{font-size:13px;margin:4px 0 2px}
+details.lraw pre.stmt{margin:4px -12px -6px;border-top:1px solid var(--line);border-bottom:0}
+
 th.best{font-style:italic}
+.wip{margin:0 0 6px;padding:3px 10px;border:1px solid var(--unoff);border-radius:6px;background:var(--warnbg);
+color:var(--fg);font-size:13px}.wip.small{display:inline-block;padding:0 6px;font-size:11px;color:var(--muted);
+border-color:var(--line)}
+footer.foot{margin:28px 0 8px;padding-top:8px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
 .lede{margin:4px 0 2px}.desc{margin:0 0 8px;max-width:60em}
 td.suite{white-space:normal;min-width:12em;max-width:34em;overflow-wrap:anywhere}
 dl.cats{margin:6px 0}dl.cats dt{font-weight:600}dl.cats dd{margin:0 0 6px 1.5em;color:var(--muted)}
@@ -256,4 +284,22 @@ details.sec>summary{cursor:pointer;list-style-position:outside;margin-left:1.1em
 .lemmas{margin:8px 0 0}.lemmas details.more pre.src{white-space:pre-wrap;overflow-wrap:anywhere;padding:8px 12px;font-size:12.5px}
 .lemmas p.sub{margin:6px 0}
 .ans table.mx td.o{text-align:left}tr.cas th button{text-transform:none;letter-spacing:0;font-weight:400}
-</style></head><body><main><nav class=top><a href='/'>Results</a> · <a href='/definitions/'>Definitions</a></nav><h1>Not found</h1><p><a href='/'>All suites</a></p></main><script>document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button.copy');if(!b)return;var ids=(b.getAttribute('data-target')||'').split(' '),parts=[];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el)parts.push(el.textContent);}if(!parts.length)return;var text=parts.join('\n');function sel(){var o=b.parentNode.querySelector('textarea');if(o)o.remove();var t=document.createElement('textarea');t.value=text;b.parentNode.appendChild(t);t.select();var ok=false;try{ok=document.execCommand('copy');}catch(x){}if(ok){t.remove();}b.textContent=ok?'Copied':'Selected: press Ctrl/Cmd+C';}if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(function(){b.textContent='Copied';},sel);}else{sel();}setTimeout(function(){b.textContent='Copy';},2500);});</script></body></html>
+.vtag{display:inline-block;font-size:10.5px;font-weight:600;line-height:1.4;padding:0 5px;margin-left:4px;
+border-radius:4px;border:1px solid var(--line);color:var(--muted);vertical-align:1px;cursor:help}
+.vtag.t-robust{color:var(--right);border-color:var(--right)}
+.vtag.t-wrong_on_variant{color:var(--wrong);border-color:var(--wrong)}
+.vtag.t-solved_only_on_variants{border-style:dashed}
+tr.variant td:first-child{padding-left:20px}
+td.deriv{white-space:normal;min-width:220px;max-width:460px;color:var(--muted)}
+table.stats{width:auto;margin:4px 0 10px}
+button.cpb{font:12px system-ui,sans-serif;border:1px solid var(--line);border-radius:5px;background:var(--card);
+color:var(--fg);cursor:pointer;padding:0 6px;margin-left:4px}td button.cpb{color:var(--muted);font-size:11px}
+button.cpb.cps{float:right;margin:2px 0 0 8px}
+.bar select{font:12px system-ui,sans-serif;max-width:16em}
+details.setupfold>summary{cursor:pointer;color:var(--muted);font-size:12px;width:max-content;margin:4px 0}
+.cpmodal{position:fixed;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;z-index:50}
+.cpmodal>div{background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:12px;
+width:min(900px,94vw);display:flex;flex-direction:column;gap:8px}
+.cpmodal textarea{width:100%;height:60vh;font:12px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;
+background:var(--bg);color:var(--fg);border:1px solid var(--line)}
+</style></head><body><main><div class='wip' role=note>Early preview (v0.1.0): cases, labels and scoring are still changing; please don&#x27;t cite these numbers.</div><nav class=top><a href='/'>Results</a> · <a href='/definitions/'>Definitions</a></nav><h1>Not found</h1><p><a href='/'>All suites</a></p><footer class=foot>assume-eval harness v0.1.0 (<code>eddaaef</code>) · no runs</footer></main><script>document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button.copy');if(!b)return;var ids=(b.getAttribute('data-target')||'').split(' '),parts=[];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el)parts.push(el.textContent);}if(!parts.length)return;var text=parts.join('\n');function sel(){var o=b.parentNode.querySelector('textarea');if(o)o.remove();var t=document.createElement('textarea');t.value=text;b.parentNode.appendChild(t);t.select();var ok=false;try{ok=document.execCommand('copy');}catch(x){}if(ok){t.remove();}b.textContent=ok?'Copied':'Selected: press Ctrl/Cmd+C';}if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(function(){b.textContent='Copied';},sel);}else{sel();}setTimeout(function(){b.textContent='Copy';},2500);});</script></body></html>
