@@ -126,7 +126,7 @@ import sympy
 
 
 # ---- case demo-sign-04 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261015-024436 answered true (solved)
+# the run satrefine-refine-20261017-044406 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_04__satrefine_refine():
     z = Symbol('z', complex=True)
@@ -139,7 +139,7 @@ def demo_sign_04__satrefine_refine():
 
 
 # ---- case demo-sign-04 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261015-024429 answered null (no verdict)
+# the run sympy-ask-20261017-044359 answered null (no verdict)
 @_in(_SETUP2)
 def demo_sign_04__sympy_ask():
     z = Symbol('z', complex=True)
@@ -152,7 +152,7 @@ def demo_sign_04__sympy_ask():
 
 
 # ---- case demo-sign-04 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024432 answered null (no verdict)
+# the run sympy-refine-20261017-044402 answered null (no verdict)
 @_in(_SETUP2)
 def demo_sign_04__sympy_refine():
     z = Symbol('z', complex=True)
@@ -165,7 +165,7 @@ def demo_sign_04__sympy_refine():
 
 
 # ---- case demo-sign-04 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261015-024434 answered null (no verdict)
+# the run sympy-simplify-20261017-044405 answered null (no verdict)
 @_in(_SETUP2)
 def demo_sign_04__sympy_simplify():
     z = Symbol('z', complex=True)
@@ -178,10 +178,10 @@ def demo_sign_04__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-sign-04', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261015-024436', demo_sign_04__satrefine_refine),
-    ('demo-sign-04', 'sympy-ask', 'true', 'null', 'sympy-ask-20261015-024429', demo_sign_04__sympy_ask),
-    ('demo-sign-04', 'sympy-refine', 'true', 'null', 'sympy-refine-20261015-024432', demo_sign_04__sympy_refine),
-    ('demo-sign-04', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261015-024434', demo_sign_04__sympy_simplify),
+    ('demo-sign-04', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261017-044406', demo_sign_04__satrefine_refine),
+    ('demo-sign-04', 'sympy-ask', 'true', 'null', 'sympy-ask-20261017-044359', demo_sign_04__sympy_ask),
+    ('demo-sign-04', 'sympy-refine', 'true', 'null', 'sympy-refine-20261017-044402', demo_sign_04__sympy_refine),
+    ('demo-sign-04', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261017-044405', demo_sign_04__sympy_simplify),
 ]
 
 

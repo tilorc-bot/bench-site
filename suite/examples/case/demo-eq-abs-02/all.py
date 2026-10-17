@@ -126,7 +126,7 @@ import sympy
 
 
 # ---- case demo-eq-abs-02 · expected false · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261015-024436 answered null (no verdict)
+# the run satrefine-refine-20261017-044406 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_abs_02__satrefine_refine():
     x = Symbol('x', real=True)
@@ -139,7 +139,7 @@ def demo_eq_abs_02__satrefine_refine():
 
 
 # ---- case demo-eq-abs-02 · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261015-024429 answered false (solved)
+# the run sympy-ask-20261017-044359 answered false (solved)
 @_in(_SETUP2)
 def demo_eq_abs_02__sympy_ask():
     x = Symbol('x', real=True)
@@ -152,7 +152,7 @@ def demo_eq_abs_02__sympy_ask():
 
 
 # ---- case demo-eq-abs-02 · expected false · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024432 answered null (no verdict)
+# the run sympy-refine-20261017-044402 answered null (no verdict)
 @_in(_SETUP2)
 def demo_eq_abs_02__sympy_refine():
     x = Symbol('x', real=True)
@@ -165,7 +165,7 @@ def demo_eq_abs_02__sympy_refine():
 
 
 # ---- case demo-eq-abs-02 · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261015-024434 answered null (no verdict)
+# the run sympy-simplify-20261017-044405 answered null (no verdict)
 @_in(_SETUP2)
 def demo_eq_abs_02__sympy_simplify():
     x = Symbol('x', real=True, negative=True)
@@ -178,10 +178,10 @@ def demo_eq_abs_02__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-abs-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261015-024436', demo_eq_abs_02__satrefine_refine),
-    ('demo-eq-abs-02', 'sympy-ask', 'false', 'false', 'sympy-ask-20261015-024429', demo_eq_abs_02__sympy_ask),
-    ('demo-eq-abs-02', 'sympy-refine', 'false', 'null', 'sympy-refine-20261015-024432', demo_eq_abs_02__sympy_refine),
-    ('demo-eq-abs-02', 'sympy-simplify', 'false', 'null', 'sympy-simplify-20261015-024434', demo_eq_abs_02__sympy_simplify),
+    ('demo-eq-abs-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261017-044406', demo_eq_abs_02__satrefine_refine),
+    ('demo-eq-abs-02', 'sympy-ask', 'false', 'false', 'sympy-ask-20261017-044359', demo_eq_abs_02__sympy_ask),
+    ('demo-eq-abs-02', 'sympy-refine', 'false', 'null', 'sympy-refine-20261017-044402', demo_eq_abs_02__sympy_refine),
+    ('demo-eq-abs-02', 'sympy-simplify', 'false', 'null', 'sympy-simplify-20261017-044405', demo_eq_abs_02__sympy_simplify),
 ]
 
 

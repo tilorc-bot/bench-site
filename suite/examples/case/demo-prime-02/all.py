@@ -126,7 +126,7 @@ import sympy
 
 
 # ---- case demo-prime-02 · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261015-024436 answered null (declined correctly)
+# the run satrefine-refine-20261017-044406 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_prime_02__satrefine_refine():
     p = Symbol('p', integer=True)
@@ -139,7 +139,7 @@ def demo_prime_02__satrefine_refine():
 
 
 # ---- case demo-prime-02 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261015-024429 answered null (declined correctly)
+# the run sympy-ask-20261017-044359 answered null (declined correctly)
 @_in(_SETUP2)
 def demo_prime_02__sympy_ask():
     p = Symbol('p', integer=True)
@@ -152,7 +152,7 @@ def demo_prime_02__sympy_ask():
 
 
 # ---- case demo-prime-02 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024432 answered null (declined correctly)
+# the run sympy-refine-20261017-044402 answered null (declined correctly)
 @_in(_SETUP2)
 def demo_prime_02__sympy_refine():
     p = Symbol('p', integer=True)
@@ -165,7 +165,7 @@ def demo_prime_02__sympy_refine():
 
 
 # ---- case demo-prime-02 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261015-024434 answered null (declined correctly)
+# the run sympy-simplify-20261017-044405 answered null (declined correctly)
 @_in(_SETUP2)
 def demo_prime_02__sympy_simplify():
     p = Symbol('p', integer=True, prime=True)
@@ -178,10 +178,10 @@ def demo_prime_02__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-prime-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261015-024436', demo_prime_02__satrefine_refine),
-    ('demo-prime-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261015-024429', demo_prime_02__sympy_ask),
-    ('demo-prime-02', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261015-024432', demo_prime_02__sympy_refine),
-    ('demo-prime-02', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261015-024434', demo_prime_02__sympy_simplify),
+    ('demo-prime-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044406', demo_prime_02__satrefine_refine),
+    ('demo-prime-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261017-044359', demo_prime_02__sympy_ask),
+    ('demo-prime-02', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261017-044402', demo_prime_02__sympy_refine),
+    ('demo-prime-02', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261017-044405', demo_prime_02__sympy_simplify),
 ]
 
 

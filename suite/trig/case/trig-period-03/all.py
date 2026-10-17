@@ -126,7 +126,7 @@ import sympy
 
 
 # ---- case trig-period-03 · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261015-024455 answered null (declined correctly)
+# the run satrefine-refine-20261017-044447 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_03__satrefine_refine():
     x = Symbol('x', real=True)
@@ -139,7 +139,7 @@ def trig_period_03__satrefine_refine():
 
 
 # ---- case trig-period-03 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261015-024450 answered null (declined correctly)
+# the run sympy-ask-20261017-044441 answered null (declined correctly)
 @_in(_SETUP2)
 def trig_period_03__sympy_ask():
     x = Symbol('x', real=True)
@@ -152,7 +152,7 @@ def trig_period_03__sympy_ask():
 
 
 # ---- case trig-period-03 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024452 answered null (declined correctly)
+# the run sympy-refine-20261017-044444 answered null (declined correctly)
 @_in(_SETUP2)
 def trig_period_03__sympy_refine():
     x = Symbol('x', real=True)
@@ -165,7 +165,7 @@ def trig_period_03__sympy_refine():
 
 
 # ---- case trig-period-03 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261015-024453 answered null (declined correctly)
+# the run sympy-simplify-20261017-044445 answered null (declined correctly)
 @_in(_SETUP2)
 def trig_period_03__sympy_simplify():
     x = Symbol('x', real=True, positive=True)
@@ -178,10 +178,10 @@ def trig_period_03__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-period-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261015-024455', trig_period_03__satrefine_refine),
-    ('trig-period-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261015-024450', trig_period_03__sympy_ask),
-    ('trig-period-03', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261015-024452', trig_period_03__sympy_refine),
-    ('trig-period-03', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261015-024453', trig_period_03__sympy_simplify),
+    ('trig-period-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044447', trig_period_03__satrefine_refine),
+    ('trig-period-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261017-044441', trig_period_03__sympy_ask),
+    ('trig-period-03', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261017-044444', trig_period_03__sympy_refine),
+    ('trig-period-03', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261017-044445', trig_period_03__sympy_simplify),
 ]
 
 

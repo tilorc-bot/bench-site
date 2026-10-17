@@ -126,7 +126,7 @@ import sympy
 
 
 # ---- case trig-double-02 · expected false · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261015-024455 answered null (no verdict)
+# the run satrefine-refine-20261017-044447 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_02__satrefine_refine():
     x = Symbol('x', real=True)
@@ -139,7 +139,7 @@ def trig_double_02__satrefine_refine():
 
 
 # ---- case trig-double-02 · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261015-024450 answered null (no verdict)
+# the run sympy-ask-20261017-044441 answered null (no verdict)
 @_in(_SETUP2)
 def trig_double_02__sympy_ask():
     x = Symbol('x', real=True)
@@ -152,7 +152,7 @@ def trig_double_02__sympy_ask():
 
 
 # ---- case trig-double-02 · expected false · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024452 answered null (no verdict)
+# the run sympy-refine-20261017-044444 answered null (no verdict)
 @_in(_SETUP2)
 def trig_double_02__sympy_refine():
     x = Symbol('x', real=True)
@@ -165,7 +165,7 @@ def trig_double_02__sympy_refine():
 
 
 # ---- case trig-double-02 · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261015-024453 answered null (no verdict)
+# the run sympy-simplify-20261017-044445 answered null (no verdict)
 @_in(_SETUP2)
 def trig_double_02__sympy_simplify():
     x = Symbol('x', real=True, positive=True)
@@ -179,10 +179,10 @@ def trig_double_02__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-double-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261015-024455', trig_double_02__satrefine_refine),
-    ('trig-double-02', 'sympy-ask', 'false', 'null', 'sympy-ask-20261015-024450', trig_double_02__sympy_ask),
-    ('trig-double-02', 'sympy-refine', 'false', 'null', 'sympy-refine-20261015-024452', trig_double_02__sympy_refine),
-    ('trig-double-02', 'sympy-simplify', 'false', 'null', 'sympy-simplify-20261015-024453', trig_double_02__sympy_simplify),
+    ('trig-double-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261017-044447', trig_double_02__satrefine_refine),
+    ('trig-double-02', 'sympy-ask', 'false', 'null', 'sympy-ask-20261017-044441', trig_double_02__sympy_ask),
+    ('trig-double-02', 'sympy-refine', 'false', 'null', 'sympy-refine-20261017-044444', trig_double_02__sympy_refine),
+    ('trig-double-02', 'sympy-simplify', 'false', 'null', 'sympy-simplify-20261017-044445', trig_double_02__sympy_simplify),
 ]
 
 

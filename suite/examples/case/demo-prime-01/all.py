@@ -126,7 +126,7 @@ import sympy
 
 
 # ---- case demo-prime-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261015-024436 answered null (no verdict)
+# the run satrefine-refine-20261017-044406 answered null (no verdict)
 @_in(_SETUP1)
 def demo_prime_01__satrefine_refine():
     p = Symbol('p', integer=True)
@@ -139,7 +139,7 @@ def demo_prime_01__satrefine_refine():
 
 
 # ---- case demo-prime-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261015-024429 answered null (no verdict)
+# the run sympy-ask-20261017-044359 answered null (no verdict)
 @_in(_SETUP2)
 def demo_prime_01__sympy_ask():
     p = Symbol('p', integer=True)
@@ -152,7 +152,7 @@ def demo_prime_01__sympy_ask():
 
 
 # ---- case demo-prime-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024432 answered null (no verdict)
+# the run sympy-refine-20261017-044402 answered null (no verdict)
 @_in(_SETUP2)
 def demo_prime_01__sympy_refine():
     p = Symbol('p', integer=True)
@@ -165,7 +165,7 @@ def demo_prime_01__sympy_refine():
 
 
 # ---- case demo-prime-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261015-024434 answered null (no verdict)
+# the run sympy-simplify-20261017-044405 answered null (no verdict)
 @_in(_SETUP2)
 def demo_prime_01__sympy_simplify():
     p = Symbol('p', integer=True, prime=True)
@@ -179,10 +179,10 @@ def demo_prime_01__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-prime-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261015-024436', demo_prime_01__satrefine_refine),
-    ('demo-prime-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261015-024429', demo_prime_01__sympy_ask),
-    ('demo-prime-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261015-024432', demo_prime_01__sympy_refine),
-    ('demo-prime-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261015-024434', demo_prime_01__sympy_simplify),
+    ('demo-prime-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261017-044406', demo_prime_01__satrefine_refine),
+    ('demo-prime-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261017-044359', demo_prime_01__sympy_ask),
+    ('demo-prime-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261017-044402', demo_prime_01__sympy_refine),
+    ('demo-prime-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261017-044405', demo_prime_01__sympy_simplify),
 ]
 
 

@@ -120,7 +120,7 @@ import sympy
 
 
 # ---- case demo-eq-abs-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261015-024429 answered null (no verdict)
+# the run sympy-ask-20261017-044359 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_abs_01__sympy_ask():
     x = Symbol('x', real=True)
@@ -132,7 +132,7 @@ def demo_eq_abs_01__sympy_ask():
 
 
 # ---- case demo-eq-abs-02 · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261015-024429 answered false (solved)
+# the run sympy-ask-20261017-044359 answered false (solved)
 @_in(_SETUP1)
 def demo_eq_abs_02__sympy_ask():
     x = Symbol('x', real=True)
@@ -144,7 +144,7 @@ def demo_eq_abs_02__sympy_ask():
 
 
 # ---- case demo-eq-sqrt-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261015-024429 answered null (no verdict)
+# the run sympy-ask-20261017-044359 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_sqrt_01__sympy_ask():
     x = Symbol('x', real=True)
@@ -156,7 +156,7 @@ def demo_eq_sqrt_01__sympy_ask():
 
 
 # ---- case demo-eq-sqrt-02 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261015-024429 answered true (solved)
+# the run sympy-ask-20261017-044359 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_02__sympy_ask():
     x = Symbol('x', real=True)
@@ -168,7 +168,7 @@ def demo_eq_sqrt_02__sympy_ask():
 
 
 # ---- case demo-eq-sqrt-03 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261015-024429 answered null (declined correctly)
+# the run sympy-ask-20261017-044359 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_eq_sqrt_03__sympy_ask():
     x = Symbol('x', real=True)
@@ -180,7 +180,7 @@ def demo_eq_sqrt_03__sympy_ask():
 
 
 # ---- case demo-eq-sqrt-04 · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261015-024429 answered null (no verdict)
+# the run sympy-ask-20261017-044359 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_sqrt_04__sympy_ask():
     x = Symbol('x', real=True)
@@ -193,12 +193,12 @@ def demo_eq_sqrt_04__sympy_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-abs-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261015-024429', demo_eq_abs_01__sympy_ask),
-    ('demo-eq-abs-02', 'sympy-ask', 'false', 'false', 'sympy-ask-20261015-024429', demo_eq_abs_02__sympy_ask),
-    ('demo-eq-sqrt-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261015-024429', demo_eq_sqrt_01__sympy_ask),
-    ('demo-eq-sqrt-02', 'sympy-ask', 'true', 'true', 'sympy-ask-20261015-024429', demo_eq_sqrt_02__sympy_ask),
-    ('demo-eq-sqrt-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261015-024429', demo_eq_sqrt_03__sympy_ask),
-    ('demo-eq-sqrt-04', 'sympy-ask', 'false', 'null', 'sympy-ask-20261015-024429', demo_eq_sqrt_04__sympy_ask),
+    ('demo-eq-abs-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261017-044359', demo_eq_abs_01__sympy_ask),
+    ('demo-eq-abs-02', 'sympy-ask', 'false', 'false', 'sympy-ask-20261017-044359', demo_eq_abs_02__sympy_ask),
+    ('demo-eq-sqrt-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261017-044359', demo_eq_sqrt_01__sympy_ask),
+    ('demo-eq-sqrt-02', 'sympy-ask', 'true', 'true', 'sympy-ask-20261017-044359', demo_eq_sqrt_02__sympy_ask),
+    ('demo-eq-sqrt-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261017-044359', demo_eq_sqrt_03__sympy_ask),
+    ('demo-eq-sqrt-04', 'sympy-ask', 'false', 'null', 'sympy-ask-20261017-044359', demo_eq_sqrt_04__sympy_ask),
 ]
 
 

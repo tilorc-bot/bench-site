@@ -126,7 +126,7 @@ import sympy
 
 
 # ---- case trig-period-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261015-024455 answered true (solved)
+# the run satrefine-refine-20261017-044447 answered true (solved)
 @_in(_SETUP1)
 def trig_period_01__satrefine_refine():
     z = Symbol('z', complex=True)
@@ -139,7 +139,7 @@ def trig_period_01__satrefine_refine():
 
 
 # ---- case trig-period-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261015-024450 answered true (solved)
+# the run sympy-ask-20261017-044441 answered true (solved)
 @_in(_SETUP2)
 def trig_period_01__sympy_ask():
     z = Symbol('z', complex=True)
@@ -152,7 +152,7 @@ def trig_period_01__sympy_ask():
 
 
 # ---- case trig-period-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024452 answered true (solved)
+# the run sympy-refine-20261017-044444 answered true (solved)
 @_in(_SETUP2)
 def trig_period_01__sympy_refine():
     z = Symbol('z', complex=True)
@@ -165,7 +165,7 @@ def trig_period_01__sympy_refine():
 
 
 # ---- case trig-period-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261015-024453 answered true (solved)
+# the run sympy-simplify-20261017-044445 answered true (solved)
 @_in(_SETUP2)
 def trig_period_01__sympy_simplify():
     z = Symbol('z', complex=True)
@@ -178,10 +178,10 @@ def trig_period_01__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-period-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261015-024455', trig_period_01__satrefine_refine),
-    ('trig-period-01', 'sympy-ask', 'true', 'true', 'sympy-ask-20261015-024450', trig_period_01__sympy_ask),
-    ('trig-period-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261015-024452', trig_period_01__sympy_refine),
-    ('trig-period-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261015-024453', trig_period_01__sympy_simplify),
+    ('trig-period-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261017-044447', trig_period_01__satrefine_refine),
+    ('trig-period-01', 'sympy-ask', 'true', 'true', 'sympy-ask-20261017-044441', trig_period_01__sympy_ask),
+    ('trig-period-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044444', trig_period_01__sympy_refine),
+    ('trig-period-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261017-044445', trig_period_01__sympy_simplify),
 ]
 
 

@@ -126,7 +126,7 @@ import sympy
 
 
 # ---- case demo-eq-log-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261015-024436 answered true (solved)
+# the run satrefine-refine-20261017-044406 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_log_01__satrefine_refine():
     x = Symbol('x', real=True)
@@ -139,7 +139,7 @@ def demo_eq_log_01__satrefine_refine():
 
 
 # ---- case demo-eq-log-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261015-024429 answered true (solved)
+# the run sympy-ask-20261017-044359 answered true (solved)
 @_in(_SETUP2)
 def demo_eq_log_01__sympy_ask():
     x = Symbol('x', real=True)
@@ -152,7 +152,7 @@ def demo_eq_log_01__sympy_ask():
 
 
 # ---- case demo-eq-log-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024432 answered true (solved)
+# the run sympy-refine-20261017-044402 answered true (solved)
 @_in(_SETUP2)
 def demo_eq_log_01__sympy_refine():
     x = Symbol('x', real=True)
@@ -165,7 +165,7 @@ def demo_eq_log_01__sympy_refine():
 
 
 # ---- case demo-eq-log-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261015-024434 answered true (solved)
+# the run sympy-simplify-20261017-044405 answered true (solved)
 @_in(_SETUP2)
 def demo_eq_log_01__sympy_simplify():
     x = Symbol('x', real=True, positive=True)
@@ -178,10 +178,10 @@ def demo_eq_log_01__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-log-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261015-024436', demo_eq_log_01__satrefine_refine),
-    ('demo-eq-log-01', 'sympy-ask', 'true', 'true', 'sympy-ask-20261015-024429', demo_eq_log_01__sympy_ask),
-    ('demo-eq-log-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261015-024432', demo_eq_log_01__sympy_refine),
-    ('demo-eq-log-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261015-024434', demo_eq_log_01__sympy_simplify),
+    ('demo-eq-log-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261017-044406', demo_eq_log_01__satrefine_refine),
+    ('demo-eq-log-01', 'sympy-ask', 'true', 'true', 'sympy-ask-20261017-044359', demo_eq_log_01__sympy_ask),
+    ('demo-eq-log-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044402', demo_eq_log_01__sympy_refine),
+    ('demo-eq-log-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261017-044405', demo_eq_log_01__sympy_simplify),
 ]
 
 

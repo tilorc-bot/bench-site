@@ -120,7 +120,7 @@ import sympy
 
 
 # ---- case demo-eq-log-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024432 answered true (solved)
+# the run sympy-refine-20261017-044402 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_log_01__sympy_refine():
     x = Symbol('x', real=True)
@@ -133,7 +133,7 @@ def demo_eq_log_01__sympy_refine():
 
 
 # ---- case demo-eq-pow-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024432 answered true (solved)
+# the run sympy-refine-20261017-044402 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_pow_01__sympy_refine():
     n = Symbol('n', integer=True)
@@ -147,8 +147,8 @@ def demo_eq_pow_01__sympy_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-log-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261015-024432', demo_eq_log_01__sympy_refine),
-    ('demo-eq-pow-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261015-024432', demo_eq_pow_01__sympy_refine),
+    ('demo-eq-log-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044402', demo_eq_log_01__sympy_refine),
+    ('demo-eq-pow-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044402', demo_eq_pow_01__sympy_refine),
 ]
 
 

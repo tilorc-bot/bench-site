@@ -1,5 +1,5 @@
 (* assume-eval: case trig-double-02 · expected false · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261015-024457 answered null (no verdict) *)
+(* the run wolfram-simplify-20261017-044449 answered null (no verdict) *)
 (* Run: wolframscript -file this-file.wls.  The harness's setup only warms up the kernel and silences messages: left out. *)
 
 Begin["AEScript`"];
@@ -23,4 +23,4 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "false", "the run wolfram-simplify-20261015-024457 answered null (no verdict)"];
+AEScript`verdict[AEScript`out, "false", "the run wolfram-simplify-20261017-044449 answered null (no verdict)"];
