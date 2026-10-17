@@ -126,7 +126,7 @@ import sympy
 
 
 # ---- case sp-acj4-5385-ground · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261015-025015 answered null (no verdict)
+# the run satrefine-refine-20261017-044950 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_5385_ground__satrefine_refine():
     Assum = And()
@@ -138,7 +138,7 @@ def sp_acj4_5385_ground__satrefine_refine():
 
 
 # ---- case sp-acj4-5385-ground · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261015-024703 answered null (no verdict)
+# the run sympy-ask-20261017-044639 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_5385_ground__sympy_ask():
     Assum = And()
@@ -150,7 +150,7 @@ def sp_acj4_5385_ground__sympy_ask():
 
 
 # ---- case sp-acj4-5385-ground · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024816 answered null (no verdict)
+# the run sympy-refine-20261017-044751 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_5385_ground__sympy_refine():
     Assum = And()
@@ -162,7 +162,7 @@ def sp_acj4_5385_ground__sympy_refine():
 
 
 # ---- case sp-acj4-5385-ground · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261015-024958 answered true (solved)
+# the run sympy-simplify-20261017-044933 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_5385_ground__sympy_simplify():
     Residual = sinh(-log(4)) - Rational(-15, 8)
@@ -174,10 +174,10 @@ def sp_acj4_5385_ground__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-5385-ground', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261015-025015', sp_acj4_5385_ground__satrefine_refine),
-    ('sp-acj4-5385-ground', 'sympy-ask', 'true', 'null', 'sympy-ask-20261015-024703', sp_acj4_5385_ground__sympy_ask),
-    ('sp-acj4-5385-ground', 'sympy-refine', 'true', 'null', 'sympy-refine-20261015-024816', sp_acj4_5385_ground__sympy_refine),
-    ('sp-acj4-5385-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261015-024958', sp_acj4_5385_ground__sympy_simplify),
+    ('sp-acj4-5385-ground', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261017-044950', sp_acj4_5385_ground__satrefine_refine),
+    ('sp-acj4-5385-ground', 'sympy-ask', 'true', 'null', 'sympy-ask-20261017-044639', sp_acj4_5385_ground__sympy_ask),
+    ('sp-acj4-5385-ground', 'sympy-refine', 'true', 'null', 'sympy-refine-20261017-044751', sp_acj4_5385_ground__sympy_refine),
+    ('sp-acj4-5385-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261017-044933', sp_acj4_5385_ground__sympy_simplify),
 ]
 
 

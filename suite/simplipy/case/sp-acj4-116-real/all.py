@@ -126,7 +126,7 @@ import sympy
 
 
 # ---- case sp-acj4-116-real · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261015-025015 answered true (solved)
+# the run satrefine-refine-20261017-044950 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_116_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -139,7 +139,7 @@ def sp_acj4_116_real__satrefine_refine():
 
 
 # ---- case sp-acj4-116-real · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261015-024703 answered null (no verdict)
+# the run sympy-ask-20261017-044639 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_116_real__sympy_ask():
     x = Symbol('x', real=True)
@@ -152,7 +152,7 @@ def sp_acj4_116_real__sympy_ask():
 
 
 # ---- case sp-acj4-116-real · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024816 answered null (no verdict)
+# the run sympy-refine-20261017-044751 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_116_real__sympy_refine():
     x = Symbol('x', real=True)
@@ -165,7 +165,7 @@ def sp_acj4_116_real__sympy_refine():
 
 
 # ---- case sp-acj4-116-real · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261015-024958 answered true (solved)
+# the run sympy-simplify-20261017-044933 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_116_real__sympy_simplify():
     x = Symbol('x', real=True, zero=False)
@@ -180,10 +180,10 @@ def sp_acj4_116_real__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-116-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261015-025015', sp_acj4_116_real__satrefine_refine),
-    ('sp-acj4-116-real', 'sympy-ask', 'true', 'null', 'sympy-ask-20261015-024703', sp_acj4_116_real__sympy_ask),
-    ('sp-acj4-116-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261015-024816', sp_acj4_116_real__sympy_refine),
-    ('sp-acj4-116-real', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261015-024958', sp_acj4_116_real__sympy_simplify),
+    ('sp-acj4-116-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261017-044950', sp_acj4_116_real__satrefine_refine),
+    ('sp-acj4-116-real', 'sympy-ask', 'true', 'null', 'sympy-ask-20261017-044639', sp_acj4_116_real__sympy_ask),
+    ('sp-acj4-116-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261017-044751', sp_acj4_116_real__sympy_refine),
+    ('sp-acj4-116-real', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261017-044933', sp_acj4_116_real__sympy_simplify),
 ]
 
 

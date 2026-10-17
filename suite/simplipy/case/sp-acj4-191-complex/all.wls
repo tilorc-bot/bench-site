@@ -13,7 +13,7 @@ verdict[out_, expected_String, stored_String] := Module[{answer, got, outcome},
 End[];
 
 (* ---- case sp-acj4-191-complex · expected contingent · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly) *)
+(* the run wolfram-fullsimplify-20261017-045037 answered null (declined correctly) *)
 Print["== sp-acj4-191-complex · wolfram-fullsimplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -25,10 +25,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261015-025100 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-fullsimplify-20261017-045037 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-191-complex · expected contingent · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261015-025050 answered null (declined correctly) *)
+(* the run wolfram-refine-20261017-045026 answered null (declined correctly) *)
 Print["== sp-acj4-191-complex · wolfram-refine · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -40,10 +40,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261015-025050 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261017-045026 answered null (declined correctly)"];
 
 (* ---- case sp-acj4-191-complex · expected contingent · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261015-025035 answered null (declined correctly) *)
+(* the run wolfram-simplify-20261017-045011 answered null (declined correctly) *)
 Print["== sp-acj4-191-complex · wolfram-simplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -55,4 +55,4 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261015-025035 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261017-045011 answered null (declined correctly)"];

@@ -120,7 +120,7 @@ import sympy
 
 
 # ---- case sp-acj4-1007-ground · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024816 answered true (solved)
+# the run sympy-refine-20261017-044751 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1007_ground__sympy_refine():
     Assum = And()
@@ -132,7 +132,7 @@ def sp_acj4_1007_ground__sympy_refine():
 
 
 # ---- case sp-acj4-1107-ground · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024816 answered true (solved)
+# the run sympy-refine-20261017-044751 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1107_ground__sympy_refine():
     Assum = And()
@@ -144,7 +144,7 @@ def sp_acj4_1107_ground__sympy_refine():
 
 
 # ---- case sp-acj4-1148-ground · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024816 answered null (no verdict)
+# the run sympy-refine-20261017-044751 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_1148_ground__sympy_refine():
     Assum = And()
@@ -156,7 +156,7 @@ def sp_acj4_1148_ground__sympy_refine():
 
 
 # ---- case sp-acj4-1149-ground · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024816 answered true (solved)
+# the run sympy-refine-20261017-044751 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1149_ground__sympy_refine():
     Assum = And()
@@ -168,7 +168,7 @@ def sp_acj4_1149_ground__sympy_refine():
 
 
 # ---- case sp-acj4-1177-ground · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024816 answered true (solved)
+# the run sympy-refine-20261017-044751 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1177_ground__sympy_refine():
     Assum = And()
@@ -180,7 +180,7 @@ def sp_acj4_1177_ground__sympy_refine():
 
 
 # ---- case sp-acj4-1195-ground · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024816 answered true (solved)
+# the run sympy-refine-20261017-044751 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1195_ground__sympy_refine():
     Assum = And()
@@ -192,7 +192,7 @@ def sp_acj4_1195_ground__sympy_refine():
 
 
 # ---- case sp-acj4-1217-ground · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024816 answered true (solved)
+# the run sympy-refine-20261017-044751 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1217_ground__sympy_refine():
     Assum = And()
@@ -204,7 +204,7 @@ def sp_acj4_1217_ground__sympy_refine():
 
 
 # ---- case sp-acj4-1238-ground · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024816 answered true (solved)
+# the run sympy-refine-20261017-044751 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1238_ground__sympy_refine():
     Assum = And()
@@ -216,7 +216,7 @@ def sp_acj4_1238_ground__sympy_refine():
 
 
 # ---- case sp-acj4-1247-ground · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024816 answered true (solved)
+# the run sympy-refine-20261017-044751 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1247_ground__sympy_refine():
     Assum = And()
@@ -228,7 +228,7 @@ def sp_acj4_1247_ground__sympy_refine():
 
 
 # ---- case sp-acj4-1254-ground · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024816 answered true (solved)
+# the run sympy-refine-20261017-044751 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1254_ground__sympy_refine():
     Assum = And()
@@ -240,7 +240,7 @@ def sp_acj4_1254_ground__sympy_refine():
 
 
 # ---- case sp-acj4-1258-ground · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024816 answered true (solved)
+# the run sympy-refine-20261017-044751 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1258_ground__sympy_refine():
     Assum = And()
@@ -252,7 +252,7 @@ def sp_acj4_1258_ground__sympy_refine():
 
 
 # ---- case sp-acj4-5372-ground · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024816 answered true (solved)
+# the run sympy-refine-20261017-044751 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_5372_ground__sympy_refine():
     Assum = And()
@@ -264,7 +264,7 @@ def sp_acj4_5372_ground__sympy_refine():
 
 
 # ---- case sp-acj4-5382-ground · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024816 answered null (no verdict)
+# the run sympy-refine-20261017-044751 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_5382_ground__sympy_refine():
     Assum = And()
@@ -276,7 +276,7 @@ def sp_acj4_5382_ground__sympy_refine():
 
 
 # ---- case sp-acj4-5385-ground · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024816 answered null (no verdict)
+# the run sympy-refine-20261017-044751 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_5385_ground__sympy_refine():
     Assum = And()
@@ -288,7 +288,7 @@ def sp_acj4_5385_ground__sympy_refine():
 
 
 # ---- case sp-acj4-819-ground · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024816 answered true (solved)
+# the run sympy-refine-20261017-044751 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_819_ground__sympy_refine():
     Assum = And()
@@ -300,7 +300,7 @@ def sp_acj4_819_ground__sympy_refine():
 
 
 # ---- case sp-acj4-837-ground · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024816 answered true (solved)
+# the run sympy-refine-20261017-044751 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_837_ground__sympy_refine():
     Assum = And()
@@ -312,7 +312,7 @@ def sp_acj4_837_ground__sympy_refine():
 
 
 # ---- case sp-acj4-848-ground · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024816 answered null (no verdict)
+# the run sympy-refine-20261017-044751 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_848_ground__sympy_refine():
     Assum = And()
@@ -324,7 +324,7 @@ def sp_acj4_848_ground__sympy_refine():
 
 
 # ---- case sp-acj4-868-ground · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024816 answered true (solved)
+# the run sympy-refine-20261017-044751 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_868_ground__sympy_refine():
     Assum = And()
@@ -336,7 +336,7 @@ def sp_acj4_868_ground__sympy_refine():
 
 
 # ---- case sp-acj4-911-ground · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024816 answered true (solved)
+# the run sympy-refine-20261017-044751 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_911_ground__sympy_refine():
     Assum = And()
@@ -348,7 +348,7 @@ def sp_acj4_911_ground__sympy_refine():
 
 
 # ---- case sp-acj4-927-ground · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261015-024816 answered true (solved)
+# the run sympy-refine-20261017-044751 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_927_ground__sympy_refine():
     Assum = And()
@@ -361,26 +361,26 @@ def sp_acj4_927_ground__sympy_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-1007-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261015-024816', sp_acj4_1007_ground__sympy_refine),
-    ('sp-acj4-1107-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261015-024816', sp_acj4_1107_ground__sympy_refine),
-    ('sp-acj4-1148-ground', 'sympy-refine', 'true', 'null', 'sympy-refine-20261015-024816', sp_acj4_1148_ground__sympy_refine),
-    ('sp-acj4-1149-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261015-024816', sp_acj4_1149_ground__sympy_refine),
-    ('sp-acj4-1177-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261015-024816', sp_acj4_1177_ground__sympy_refine),
-    ('sp-acj4-1195-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261015-024816', sp_acj4_1195_ground__sympy_refine),
-    ('sp-acj4-1217-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261015-024816', sp_acj4_1217_ground__sympy_refine),
-    ('sp-acj4-1238-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261015-024816', sp_acj4_1238_ground__sympy_refine),
-    ('sp-acj4-1247-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261015-024816', sp_acj4_1247_ground__sympy_refine),
-    ('sp-acj4-1254-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261015-024816', sp_acj4_1254_ground__sympy_refine),
-    ('sp-acj4-1258-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261015-024816', sp_acj4_1258_ground__sympy_refine),
-    ('sp-acj4-5372-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261015-024816', sp_acj4_5372_ground__sympy_refine),
-    ('sp-acj4-5382-ground', 'sympy-refine', 'true', 'null', 'sympy-refine-20261015-024816', sp_acj4_5382_ground__sympy_refine),
-    ('sp-acj4-5385-ground', 'sympy-refine', 'true', 'null', 'sympy-refine-20261015-024816', sp_acj4_5385_ground__sympy_refine),
-    ('sp-acj4-819-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261015-024816', sp_acj4_819_ground__sympy_refine),
-    ('sp-acj4-837-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261015-024816', sp_acj4_837_ground__sympy_refine),
-    ('sp-acj4-848-ground', 'sympy-refine', 'true', 'null', 'sympy-refine-20261015-024816', sp_acj4_848_ground__sympy_refine),
-    ('sp-acj4-868-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261015-024816', sp_acj4_868_ground__sympy_refine),
-    ('sp-acj4-911-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261015-024816', sp_acj4_911_ground__sympy_refine),
-    ('sp-acj4-927-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261015-024816', sp_acj4_927_ground__sympy_refine),
+    ('sp-acj4-1007-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044751', sp_acj4_1007_ground__sympy_refine),
+    ('sp-acj4-1107-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044751', sp_acj4_1107_ground__sympy_refine),
+    ('sp-acj4-1148-ground', 'sympy-refine', 'true', 'null', 'sympy-refine-20261017-044751', sp_acj4_1148_ground__sympy_refine),
+    ('sp-acj4-1149-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044751', sp_acj4_1149_ground__sympy_refine),
+    ('sp-acj4-1177-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044751', sp_acj4_1177_ground__sympy_refine),
+    ('sp-acj4-1195-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044751', sp_acj4_1195_ground__sympy_refine),
+    ('sp-acj4-1217-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044751', sp_acj4_1217_ground__sympy_refine),
+    ('sp-acj4-1238-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044751', sp_acj4_1238_ground__sympy_refine),
+    ('sp-acj4-1247-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044751', sp_acj4_1247_ground__sympy_refine),
+    ('sp-acj4-1254-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044751', sp_acj4_1254_ground__sympy_refine),
+    ('sp-acj4-1258-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044751', sp_acj4_1258_ground__sympy_refine),
+    ('sp-acj4-5372-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044751', sp_acj4_5372_ground__sympy_refine),
+    ('sp-acj4-5382-ground', 'sympy-refine', 'true', 'null', 'sympy-refine-20261017-044751', sp_acj4_5382_ground__sympy_refine),
+    ('sp-acj4-5385-ground', 'sympy-refine', 'true', 'null', 'sympy-refine-20261017-044751', sp_acj4_5385_ground__sympy_refine),
+    ('sp-acj4-819-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044751', sp_acj4_819_ground__sympy_refine),
+    ('sp-acj4-837-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044751', sp_acj4_837_ground__sympy_refine),
+    ('sp-acj4-848-ground', 'sympy-refine', 'true', 'null', 'sympy-refine-20261017-044751', sp_acj4_848_ground__sympy_refine),
+    ('sp-acj4-868-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044751', sp_acj4_868_ground__sympy_refine),
+    ('sp-acj4-911-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044751', sp_acj4_911_ground__sympy_refine),
+    ('sp-acj4-927-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044751', sp_acj4_927_ground__sympy_refine),
 ]
 
 
