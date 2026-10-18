@@ -113,8 +113,8 @@ def _fresh():
 # setup 1 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP1 = _Setup(r'''from sympy import *
 import sympy
-import satrefine
-''', ('satrefine', '0.1.0'))
+import satsimp
+''', ('satsimp', '0.1.0'))
 
 # setup 2 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP2 = _Setup(r'''from sympy import *
@@ -127,21 +127,21 @@ import sympy
 # dropped (not a unary fact about one symbol): Ne(1 / x, -I, evaluate=False)
 
 
-# ---- case sp-acj4-422-condf · expected false · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-192437 answered null (no verdict)
+# ---- case sp-acj4-422-condf · expected false · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-213005 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_422_condf__satrefine_refine():
     x = Symbol('x', complex=True)
     Assum = And(Q.complex(x), Q.imaginary(x), ~Q.zero(x), Ne(1 / x, I, evaluate=False), Ne(1 / x, -I, evaluate=False))
     Residual = tanh(Abs(asinh(x))) - cos(atan(1 / x))
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
 # ---- case sp-acj4-422-condf · expected false · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-192123 answered null (no verdict)
+# the run sympy-auto-20261018-212658 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_422_condf__sympy_auto():
     x = Symbol('x', complex=True, imaginary=True, zero=False)
@@ -154,7 +154,7 @@ def sp_acj4_422_condf__sympy_auto():
 
 
 # ---- case sp-acj4-422-condf · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-192128 answered null (no verdict)
+# the run sympy-ask-20261018-212703 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_422_condf__sympy_ask():
     x = Symbol('x', complex=True)
@@ -167,7 +167,7 @@ def sp_acj4_422_condf__sympy_ask():
 
 
 # ---- case sp-acj4-422-condf · expected false · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-192240 answered null (no verdict)
+# the run sympy-refine-20261018-212815 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_422_condf__sympy_refine():
     x = Symbol('x', complex=True)
@@ -180,7 +180,7 @@ def sp_acj4_422_condf__sympy_refine():
 
 
 # ---- case sp-acj4-422-condf · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-192419 answered null (no verdict)
+# the run sympy-simplify-20261018-212948 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_422_condf__sympy_simplify():
     x = Symbol('x', complex=True, imaginary=True, zero=False)
@@ -193,11 +193,11 @@ def sp_acj4_422_condf__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-422-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261018-192437', sp_acj4_422_condf__satrefine_refine),
-    ('sp-acj4-422-condf', 'sympy-auto', 'false', 'null', 'sympy-auto-20261018-192123', sp_acj4_422_condf__sympy_auto),
-    ('sp-acj4-422-condf', 'sympy-ask', 'false', 'null', 'sympy-ask-20261018-192128', sp_acj4_422_condf__sympy_ask),
-    ('sp-acj4-422-condf', 'sympy-refine', 'false', 'null', 'sympy-refine-20261018-192240', sp_acj4_422_condf__sympy_refine),
-    ('sp-acj4-422-condf', 'sympy-simplify', 'false', 'null', 'sympy-simplify-20261018-192419', sp_acj4_422_condf__sympy_simplify),
+    ('sp-acj4-422-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261018-213005', sp_acj4_422_condf__satrefine_refine),
+    ('sp-acj4-422-condf', 'sympy-auto', 'false', 'null', 'sympy-auto-20261018-212658', sp_acj4_422_condf__sympy_auto),
+    ('sp-acj4-422-condf', 'sympy-ask', 'false', 'null', 'sympy-ask-20261018-212703', sp_acj4_422_condf__sympy_ask),
+    ('sp-acj4-422-condf', 'sympy-refine', 'false', 'null', 'sympy-refine-20261018-212815', sp_acj4_422_condf__sympy_refine),
+    ('sp-acj4-422-condf', 'sympy-simplify', 'false', 'null', 'sympy-simplify-20261018-212948', sp_acj4_422_condf__sympy_simplify),
 ]
 
 

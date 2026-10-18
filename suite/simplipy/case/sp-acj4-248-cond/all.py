@@ -113,8 +113,8 @@ def _fresh():
 # setup 1 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP1 = _Setup(r'''from sympy import *
 import sympy
-import satrefine
-''', ('satrefine', '0.1.0'))
+import satsimp
+''', ('satsimp', '0.1.0'))
 
 # setup 2 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP2 = _Setup(r'''from sympy import *
@@ -126,21 +126,21 @@ import sympy
 # dropped (not a unary fact about one symbol): Abs(x) <= 1
 
 
-# ---- case sp-acj4-248-cond · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-192437 answered null (no verdict)
+# ---- case sp-acj4-248-cond · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-213005 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_248_cond__satrefine_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), Abs(x) <= 1)
     Residual = -Abs(asin(x)) - asin(-Abs(x))
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
 # ---- case sp-acj4-248-cond · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-192123 answered null (no verdict)
+# the run sympy-auto-20261018-212658 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_248_cond__sympy_auto():
     x = Symbol('x', real=True)
@@ -153,7 +153,7 @@ def sp_acj4_248_cond__sympy_auto():
 
 
 # ---- case sp-acj4-248-cond · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-192128 answered null (no verdict)
+# the run sympy-ask-20261018-212703 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_248_cond__sympy_ask():
     x = Symbol('x', real=True)
@@ -166,7 +166,7 @@ def sp_acj4_248_cond__sympy_ask():
 
 
 # ---- case sp-acj4-248-cond · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-192240 answered null (no verdict)
+# the run sympy-refine-20261018-212815 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_248_cond__sympy_refine():
     x = Symbol('x', real=True)
@@ -179,7 +179,7 @@ def sp_acj4_248_cond__sympy_refine():
 
 
 # ---- case sp-acj4-248-cond · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-192419 answered null (no verdict)
+# the run sympy-simplify-20261018-212948 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_248_cond__sympy_simplify():
     x = Symbol('x', real=True)
@@ -192,11 +192,11 @@ def sp_acj4_248_cond__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-248-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-192437', sp_acj4_248_cond__satrefine_refine),
-    ('sp-acj4-248-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-192123', sp_acj4_248_cond__sympy_auto),
-    ('sp-acj4-248-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-192128', sp_acj4_248_cond__sympy_ask),
-    ('sp-acj4-248-cond', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-192240', sp_acj4_248_cond__sympy_refine),
-    ('sp-acj4-248-cond', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261018-192419', sp_acj4_248_cond__sympy_simplify),
+    ('sp-acj4-248-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-213005', sp_acj4_248_cond__satrefine_refine),
+    ('sp-acj4-248-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_248_cond__sympy_auto),
+    ('sp-acj4-248-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212703', sp_acj4_248_cond__sympy_ask),
+    ('sp-acj4-248-cond', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212815', sp_acj4_248_cond__sympy_refine),
+    ('sp-acj4-248-cond', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261018-212948', sp_acj4_248_cond__sympy_simplify),
 ]
 
 

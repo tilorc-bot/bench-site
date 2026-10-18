@@ -113,8 +113,8 @@ def _fresh():
 # setup 1 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP1 = _Setup(r'''from sympy import *
 import sympy
-import satrefine
-''', ('satrefine', '0.1.0'))
+import satsimp
+''', ('satsimp', '0.1.0'))
 
 # setup 2 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP2 = _Setup(r'''from sympy import *
@@ -126,21 +126,21 @@ import sympy
 # dropped (not a unary fact about one symbol): ~Q.zero(Pow(pi, x))
 
 
-# ---- case sp-acj4-229-real · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-192437 answered true (solved)
+# ---- case sp-acj4-229-real · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-213005 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_229_real__satrefine_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), ~Q.zero(Pow(pi, x)))
     Residual = 1 / Pow(pi, x) - Pow(1 / pi, x)
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
 # ---- case sp-acj4-229-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-192123 answered true (solved)
+# the run sympy-auto-20261018-212658 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_229_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -153,7 +153,7 @@ def sp_acj4_229_real__sympy_auto():
 
 
 # ---- case sp-acj4-229-real · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-192128 answered true (solved)
+# the run sympy-ask-20261018-212703 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_229_real__sympy_ask():
     x = Symbol('x', real=True)
@@ -166,7 +166,7 @@ def sp_acj4_229_real__sympy_ask():
 
 
 # ---- case sp-acj4-229-real · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-192240 answered true (solved)
+# the run sympy-refine-20261018-212815 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_229_real__sympy_refine():
     x = Symbol('x', real=True)
@@ -179,7 +179,7 @@ def sp_acj4_229_real__sympy_refine():
 
 
 # ---- case sp-acj4-229-real · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-192419 answered true (solved)
+# the run sympy-simplify-20261018-212948 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_229_real__sympy_simplify():
     x = Symbol('x', real=True)
@@ -192,11 +192,11 @@ def sp_acj4_229_real__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-229-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-192437', sp_acj4_229_real__satrefine_refine),
-    ('sp-acj4-229-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-192123', sp_acj4_229_real__sympy_auto),
-    ('sp-acj4-229-real', 'sympy-ask', 'true', 'true', 'sympy-ask-20261018-192128', sp_acj4_229_real__sympy_ask),
-    ('sp-acj4-229-real', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-192240', sp_acj4_229_real__sympy_refine),
-    ('sp-acj4-229-real', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-192419', sp_acj4_229_real__sympy_simplify),
+    ('sp-acj4-229-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-213005', sp_acj4_229_real__satrefine_refine),
+    ('sp-acj4-229-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212658', sp_acj4_229_real__sympy_auto),
+    ('sp-acj4-229-real', 'sympy-ask', 'true', 'true', 'sympy-ask-20261018-212703', sp_acj4_229_real__sympy_ask),
+    ('sp-acj4-229-real', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-212815', sp_acj4_229_real__sympy_refine),
+    ('sp-acj4-229-real', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212948', sp_acj4_229_real__sympy_simplify),
 ]
 
 
