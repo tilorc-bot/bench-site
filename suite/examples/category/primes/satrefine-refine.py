@@ -121,7 +121,7 @@ import satrefine
 
 
 # ---- case demo-prime-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044406 answered null (no verdict)
+# the run satrefine-refine-20261018-191900 answered null (no verdict)
 @_in(_SETUP1)
 def demo_prime_01__satrefine_refine():
     p = Symbol('p', integer=True)
@@ -134,7 +134,7 @@ def demo_prime_01__satrefine_refine():
 
 
 # ---- case demo-prime-02 · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044406 answered null (declined correctly)
+# the run satrefine-refine-20261018-191900 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_prime_02__satrefine_refine():
     p = Symbol('p', integer=True)
@@ -148,8 +148,8 @@ def demo_prime_02__satrefine_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-prime-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261017-044406', demo_prime_01__satrefine_refine),
-    ('demo-prime-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044406', demo_prime_02__satrefine_refine),
+    ('demo-prime-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-191900', demo_prime_01__satrefine_refine),
+    ('demo-prime-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-191900', demo_prime_02__satrefine_refine),
 ]
 
 

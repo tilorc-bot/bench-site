@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite trig · case trig-atan-01 · all Python systems
-# 4 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 5 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -123,10 +123,12 @@ import sympy
 
 # comments that the cases' code repeats, shown once here (left out below):
 # true iff the result is 0; false only if it is a definite nonzero number
+# dropped (not a unary fact about one symbol): x > -1
+# dropped (not a unary fact about one symbol): x < 1
 
 
 # ---- case trig-atan-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044447 answered null (no verdict)
+# the run satrefine-refine-20261018-191923 answered null (no verdict)
 @_in(_SETUP1)
 def trig_atan_01__satrefine_refine():
     x = Symbol('x', real=True)
@@ -138,8 +140,21 @@ def trig_atan_01__satrefine_refine():
     return Answer
 
 
+# ---- case trig-atan-01 · expected true · system sympy-auto (sympy 1.14.0)
+# the run sympy-auto-20261018-191916 answered null (no verdict)
+@_in(_SETUP2)
+def trig_atan_01__sympy_auto():
+    x = Symbol('x', real=True)
+    Residual = atan(tan(x)) - x
+    # automatic evaluation only: no simplify, refine or other function
+    Result = Residual
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case trig-atan-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261017-044441 answered null (no verdict)
+# the run sympy-ask-20261018-191917 answered null (no verdict)
 @_in(_SETUP2)
 def trig_atan_01__sympy_ask():
     x = Symbol('x', real=True)
@@ -152,7 +167,7 @@ def trig_atan_01__sympy_ask():
 
 
 # ---- case trig-atan-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261017-044444 answered null (no verdict)
+# the run sympy-refine-20261018-191920 answered null (no verdict)
 @_in(_SETUP2)
 def trig_atan_01__sympy_refine():
     x = Symbol('x', real=True)
@@ -165,12 +180,10 @@ def trig_atan_01__sympy_refine():
 
 
 # ---- case trig-atan-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261017-044445 answered null (no verdict)
+# the run sympy-simplify-20261018-191921 answered null (no verdict)
 @_in(_SETUP2)
 def trig_atan_01__sympy_simplify():
     x = Symbol('x', real=True)
-    # dropped (not a unary fact about one symbol): x > -1
-    # dropped (not a unary fact about one symbol): x < 1
     Residual = atan(tan(x)) - x
     Result = simplify(Residual)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
@@ -180,10 +193,11 @@ def trig_atan_01__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-atan-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261017-044447', trig_atan_01__satrefine_refine),
-    ('trig-atan-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261017-044441', trig_atan_01__sympy_ask),
-    ('trig-atan-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261017-044444', trig_atan_01__sympy_refine),
-    ('trig-atan-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261017-044445', trig_atan_01__sympy_simplify),
+    ('trig-atan-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-191923', trig_atan_01__satrefine_refine),
+    ('trig-atan-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-191916', trig_atan_01__sympy_auto),
+    ('trig-atan-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-191917', trig_atan_01__sympy_ask),
+    ('trig-atan-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-191920', trig_atan_01__sympy_refine),
+    ('trig-atan-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261018-191921', trig_atan_01__sympy_simplify),
 ]
 
 

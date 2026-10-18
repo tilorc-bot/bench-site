@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite examples · case demo-prime-01 · all Python systems
-# 4 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 5 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -123,10 +123,11 @@ import sympy
 
 # comments that the cases' code repeats, shown once here (left out below):
 # true iff the result is 0; false only if it is a definite nonzero number
+# dropped (not a unary fact about one symbol): p > 2
 
 
 # ---- case demo-prime-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044406 answered null (no verdict)
+# the run satrefine-refine-20261018-191900 answered null (no verdict)
 @_in(_SETUP1)
 def demo_prime_01__satrefine_refine():
     p = Symbol('p', integer=True)
@@ -138,8 +139,21 @@ def demo_prime_01__satrefine_refine():
     return Answer
 
 
+# ---- case demo-prime-01 · expected true · system sympy-auto (sympy 1.14.0)
+# the run sympy-auto-20261018-191852 answered null (no verdict)
+@_in(_SETUP2)
+def demo_prime_01__sympy_auto():
+    p = Symbol('p', integer=True, prime=True)
+    Residual = Pow(-1, p) - (-1)
+    # automatic evaluation only: no simplify, refine or other function
+    Result = Residual
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-prime-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261017-044359 answered null (no verdict)
+# the run sympy-ask-20261018-191853 answered null (no verdict)
 @_in(_SETUP2)
 def demo_prime_01__sympy_ask():
     p = Symbol('p', integer=True)
@@ -152,7 +166,7 @@ def demo_prime_01__sympy_ask():
 
 
 # ---- case demo-prime-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261017-044402 answered null (no verdict)
+# the run sympy-refine-20261018-191856 answered null (no verdict)
 @_in(_SETUP2)
 def demo_prime_01__sympy_refine():
     p = Symbol('p', integer=True)
@@ -165,11 +179,10 @@ def demo_prime_01__sympy_refine():
 
 
 # ---- case demo-prime-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261017-044405 answered null (no verdict)
+# the run sympy-simplify-20261018-191859 answered null (no verdict)
 @_in(_SETUP2)
 def demo_prime_01__sympy_simplify():
     p = Symbol('p', integer=True, prime=True)
-    # dropped (not a unary fact about one symbol): p > 2
     Residual = Pow(-1, p) - (-1)
     Result = simplify(Residual)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
@@ -179,10 +192,11 @@ def demo_prime_01__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-prime-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261017-044406', demo_prime_01__satrefine_refine),
-    ('demo-prime-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261017-044359', demo_prime_01__sympy_ask),
-    ('demo-prime-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261017-044402', demo_prime_01__sympy_refine),
-    ('demo-prime-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261017-044405', demo_prime_01__sympy_simplify),
+    ('demo-prime-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-191900', demo_prime_01__satrefine_refine),
+    ('demo-prime-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-191852', demo_prime_01__sympy_auto),
+    ('demo-prime-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-191853', demo_prime_01__sympy_ask),
+    ('demo-prime-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-191856', demo_prime_01__sympy_refine),
+    ('demo-prime-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261018-191859', demo_prime_01__sympy_simplify),
 ]
 
 

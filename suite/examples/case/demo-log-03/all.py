@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite examples · case demo-log-03 · all Python systems
-# 4 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 5 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -126,7 +126,7 @@ import sympy
 
 
 # ---- case demo-log-03 · expected false · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044406 answered false (solved)
+# the run satrefine-refine-20261018-191900 answered false (solved)
 @_in(_SETUP1)
 def demo_log_03__satrefine_refine():
     x = Symbol('x', real=True)
@@ -138,8 +138,21 @@ def demo_log_03__satrefine_refine():
     return Answer
 
 
+# ---- case demo-log-03 · expected false · system sympy-auto (sympy 1.14.0)
+# the run sympy-auto-20261018-191852 answered null (no verdict)
+@_in(_SETUP2)
+def demo_log_03__sympy_auto():
+    x = Symbol('x', real=True, negative=True)
+    Residual = log(x) - log(-x)
+    # automatic evaluation only: no simplify, refine or other function
+    Result = Residual
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-log-03 · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261017-044359 answered false (solved)
+# the run sympy-ask-20261018-191853 answered false (solved)
 @_in(_SETUP2)
 def demo_log_03__sympy_ask():
     x = Symbol('x', real=True)
@@ -152,7 +165,7 @@ def demo_log_03__sympy_ask():
 
 
 # ---- case demo-log-03 · expected false · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261017-044402 answered null (no verdict)
+# the run sympy-refine-20261018-191856 answered null (no verdict)
 @_in(_SETUP2)
 def demo_log_03__sympy_refine():
     x = Symbol('x', real=True)
@@ -165,7 +178,7 @@ def demo_log_03__sympy_refine():
 
 
 # ---- case demo-log-03 · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261017-044405 answered false (solved)
+# the run sympy-simplify-20261018-191859 answered false (solved)
 @_in(_SETUP2)
 def demo_log_03__sympy_simplify():
     x = Symbol('x', real=True, negative=True)
@@ -178,10 +191,11 @@ def demo_log_03__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-log-03', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261017-044406', demo_log_03__satrefine_refine),
-    ('demo-log-03', 'sympy-ask', 'false', 'false', 'sympy-ask-20261017-044359', demo_log_03__sympy_ask),
-    ('demo-log-03', 'sympy-refine', 'false', 'null', 'sympy-refine-20261017-044402', demo_log_03__sympy_refine),
-    ('demo-log-03', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261017-044405', demo_log_03__sympy_simplify),
+    ('demo-log-03', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261018-191900', demo_log_03__satrefine_refine),
+    ('demo-log-03', 'sympy-auto', 'false', 'null', 'sympy-auto-20261018-191852', demo_log_03__sympy_auto),
+    ('demo-log-03', 'sympy-ask', 'false', 'false', 'sympy-ask-20261018-191853', demo_log_03__sympy_ask),
+    ('demo-log-03', 'sympy-refine', 'false', 'null', 'sympy-refine-20261018-191856', demo_log_03__sympy_refine),
+    ('demo-log-03', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261018-191859', demo_log_03__sympy_simplify),
 ]
 
 

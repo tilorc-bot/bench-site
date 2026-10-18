@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite examples · case demo-parity-02 · all Python systems
-# 4 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 5 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -126,7 +126,7 @@ import sympy
 
 
 # ---- case demo-parity-02 · expected false · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044406 answered false (solved)
+# the run satrefine-refine-20261018-191900 answered false (solved)
 @_in(_SETUP1)
 def demo_parity_02__satrefine_refine():
     n = Symbol('n', integer=True)
@@ -139,8 +139,22 @@ def demo_parity_02__satrefine_refine():
     return Answer
 
 
+# ---- case demo-parity-02 · expected false · system sympy-auto (sympy 1.14.0)
+# the run sympy-auto-20261018-191852 answered false (solved)
+@_in(_SETUP2)
+def demo_parity_02__sympy_auto():
+    n = Symbol('n', integer=True, odd=True)
+    m = Symbol('m', integer=True, odd=True)
+    Residual = Pow(-1, n * m) - 1
+    # automatic evaluation only: no simplify, refine or other function
+    Result = Residual
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-parity-02 · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261017-044359 answered false (solved)
+# the run sympy-ask-20261018-191853 answered false (solved)
 @_in(_SETUP2)
 def demo_parity_02__sympy_ask():
     n = Symbol('n', integer=True)
@@ -154,7 +168,7 @@ def demo_parity_02__sympy_ask():
 
 
 # ---- case demo-parity-02 · expected false · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261017-044402 answered false (solved)
+# the run sympy-refine-20261018-191856 answered false (solved)
 @_in(_SETUP2)
 def demo_parity_02__sympy_refine():
     n = Symbol('n', integer=True)
@@ -168,7 +182,7 @@ def demo_parity_02__sympy_refine():
 
 
 # ---- case demo-parity-02 · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261017-044405 answered false (solved)
+# the run sympy-simplify-20261018-191859 answered false (solved)
 @_in(_SETUP2)
 def demo_parity_02__sympy_simplify():
     n = Symbol('n', integer=True, odd=True)
@@ -182,10 +196,11 @@ def demo_parity_02__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-parity-02', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261017-044406', demo_parity_02__satrefine_refine),
-    ('demo-parity-02', 'sympy-ask', 'false', 'false', 'sympy-ask-20261017-044359', demo_parity_02__sympy_ask),
-    ('demo-parity-02', 'sympy-refine', 'false', 'false', 'sympy-refine-20261017-044402', demo_parity_02__sympy_refine),
-    ('demo-parity-02', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261017-044405', demo_parity_02__sympy_simplify),
+    ('demo-parity-02', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261018-191900', demo_parity_02__satrefine_refine),
+    ('demo-parity-02', 'sympy-auto', 'false', 'false', 'sympy-auto-20261018-191852', demo_parity_02__sympy_auto),
+    ('demo-parity-02', 'sympy-ask', 'false', 'false', 'sympy-ask-20261018-191853', demo_parity_02__sympy_ask),
+    ('demo-parity-02', 'sympy-refine', 'false', 'false', 'sympy-refine-20261018-191856', demo_parity_02__sympy_refine),
+    ('demo-parity-02', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261018-191859', demo_parity_02__sympy_simplify),
 ]
 
 

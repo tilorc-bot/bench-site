@@ -120,7 +120,7 @@ import sympy
 
 
 # ---- case demo-parity-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261017-044402 answered true (solved)
+# the run sympy-refine-20261018-191856 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_01__sympy_refine():
     n = Symbol('n', integer=True)
@@ -133,7 +133,7 @@ def demo_parity_01__sympy_refine():
 
 
 # ---- case demo-parity-02 · expected false · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261017-044402 answered false (solved)
+# the run sympy-refine-20261018-191856 answered false (solved)
 @_in(_SETUP1)
 def demo_parity_02__sympy_refine():
     n = Symbol('n', integer=True)
@@ -147,7 +147,7 @@ def demo_parity_02__sympy_refine():
 
 
 # ---- case demo-parity-03 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261017-044402 answered true (solved)
+# the run sympy-refine-20261018-191856 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_03__sympy_refine():
     n = Symbol('n', integer=True)
@@ -160,7 +160,7 @@ def demo_parity_03__sympy_refine():
 
 
 # ---- case demo-parity-04 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261017-044402 answered null (declined correctly)
+# the run sympy-refine-20261018-191856 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_parity_04__sympy_refine():
     n = Symbol('n', integer=True)
@@ -173,7 +173,7 @@ def demo_parity_04__sympy_refine():
 
 
 # ---- case demo-parity-05 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261017-044402 answered true (solved)
+# the run sympy-refine-20261018-191856 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_05__sympy_refine():
     n = Symbol('n', integer=True)
@@ -188,11 +188,11 @@ def demo_parity_05__sympy_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-parity-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044402', demo_parity_01__sympy_refine),
-    ('demo-parity-02', 'sympy-refine', 'false', 'false', 'sympy-refine-20261017-044402', demo_parity_02__sympy_refine),
-    ('demo-parity-03', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044402', demo_parity_03__sympy_refine),
-    ('demo-parity-04', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261017-044402', demo_parity_04__sympy_refine),
-    ('demo-parity-05', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044402', demo_parity_05__sympy_refine),
+    ('demo-parity-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-191856', demo_parity_01__sympy_refine),
+    ('demo-parity-02', 'sympy-refine', 'false', 'false', 'sympy-refine-20261018-191856', demo_parity_02__sympy_refine),
+    ('demo-parity-03', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-191856', demo_parity_03__sympy_refine),
+    ('demo-parity-04', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-191856', demo_parity_04__sympy_refine),
+    ('demo-parity-05', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-191856', demo_parity_05__sympy_refine),
 ]
 
 

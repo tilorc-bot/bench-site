@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite examples · category log-exp · all Python systems (2 cases listed)
-# 8 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 10 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -123,11 +123,12 @@ import sympy
 
 # comments that the cases' code repeats, shown once here (left out below):
 # true iff the result is 0; false only if it is a definite nonzero number
+# automatic evaluation only: no simplify, refine or other function
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
 
 
 # ---- case demo-eq-log-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044406 answered true (solved)
+# the run satrefine-refine-20261018-191900 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_log_01__satrefine_refine():
     x = Symbol('x', real=True)
@@ -139,8 +140,20 @@ def demo_eq_log_01__satrefine_refine():
     return Answer
 
 
+# ---- case demo-eq-log-01 · expected true · system sympy-auto (sympy 1.14.0)
+# the run sympy-auto-20261018-191852 answered true (solved)
+@_in(_SETUP2)
+def demo_eq_log_01__sympy_auto():
+    x = Symbol('x', real=True, positive=True)
+    Residual = log(exp(x)) - x
+    Result = Residual
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-eq-log-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261017-044359 answered true (solved)
+# the run sympy-ask-20261018-191853 answered true (solved)
 @_in(_SETUP2)
 def demo_eq_log_01__sympy_ask():
     x = Symbol('x', real=True)
@@ -152,7 +165,7 @@ def demo_eq_log_01__sympy_ask():
 
 
 # ---- case demo-eq-log-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261017-044402 answered true (solved)
+# the run sympy-refine-20261018-191856 answered true (solved)
 @_in(_SETUP2)
 def demo_eq_log_01__sympy_refine():
     x = Symbol('x', real=True)
@@ -165,7 +178,7 @@ def demo_eq_log_01__sympy_refine():
 
 
 # ---- case demo-eq-log-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261017-044405 answered true (solved)
+# the run sympy-simplify-20261018-191859 answered true (solved)
 @_in(_SETUP2)
 def demo_eq_log_01__sympy_simplify():
     x = Symbol('x', real=True, positive=True)
@@ -177,7 +190,7 @@ def demo_eq_log_01__sympy_simplify():
 
 
 # ---- case demo-eq-pow-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044406 answered true (solved)
+# the run satrefine-refine-20261018-191900 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_pow_01__satrefine_refine():
     n = Symbol('n', integer=True)
@@ -189,8 +202,20 @@ def demo_eq_pow_01__satrefine_refine():
     return Answer
 
 
+# ---- case demo-eq-pow-01 · expected true · system sympy-auto (sympy 1.14.0)
+# the run sympy-auto-20261018-191852 answered true (solved)
+@_in(_SETUP2)
+def demo_eq_pow_01__sympy_auto():
+    n = Symbol('n', integer=True)
+    Residual = Pow(-1, 2 * n) - 1
+    Result = Residual
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-eq-pow-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261017-044359 answered true (solved)
+# the run sympy-ask-20261018-191853 answered true (solved)
 @_in(_SETUP2)
 def demo_eq_pow_01__sympy_ask():
     n = Symbol('n', integer=True)
@@ -202,7 +227,7 @@ def demo_eq_pow_01__sympy_ask():
 
 
 # ---- case demo-eq-pow-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261017-044402 answered true (solved)
+# the run sympy-refine-20261018-191856 answered true (solved)
 @_in(_SETUP2)
 def demo_eq_pow_01__sympy_refine():
     n = Symbol('n', integer=True)
@@ -215,7 +240,7 @@ def demo_eq_pow_01__sympy_refine():
 
 
 # ---- case demo-eq-pow-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261017-044405 answered true (solved)
+# the run sympy-simplify-20261018-191859 answered true (solved)
 @_in(_SETUP2)
 def demo_eq_pow_01__sympy_simplify():
     n = Symbol('n', integer=True)
@@ -228,14 +253,16 @@ def demo_eq_pow_01__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-log-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261017-044406', demo_eq_log_01__satrefine_refine),
-    ('demo-eq-log-01', 'sympy-ask', 'true', 'true', 'sympy-ask-20261017-044359', demo_eq_log_01__sympy_ask),
-    ('demo-eq-log-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044402', demo_eq_log_01__sympy_refine),
-    ('demo-eq-log-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261017-044405', demo_eq_log_01__sympy_simplify),
-    ('demo-eq-pow-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261017-044406', demo_eq_pow_01__satrefine_refine),
-    ('demo-eq-pow-01', 'sympy-ask', 'true', 'true', 'sympy-ask-20261017-044359', demo_eq_pow_01__sympy_ask),
-    ('demo-eq-pow-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044402', demo_eq_pow_01__sympy_refine),
-    ('demo-eq-pow-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261017-044405', demo_eq_pow_01__sympy_simplify),
+    ('demo-eq-log-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-191900', demo_eq_log_01__satrefine_refine),
+    ('demo-eq-log-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-191852', demo_eq_log_01__sympy_auto),
+    ('demo-eq-log-01', 'sympy-ask', 'true', 'true', 'sympy-ask-20261018-191853', demo_eq_log_01__sympy_ask),
+    ('demo-eq-log-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-191856', demo_eq_log_01__sympy_refine),
+    ('demo-eq-log-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-191859', demo_eq_log_01__sympy_simplify),
+    ('demo-eq-pow-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-191900', demo_eq_pow_01__satrefine_refine),
+    ('demo-eq-pow-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-191852', demo_eq_pow_01__sympy_auto),
+    ('demo-eq-pow-01', 'sympy-ask', 'true', 'true', 'sympy-ask-20261018-191853', demo_eq_pow_01__sympy_ask),
+    ('demo-eq-pow-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-191856', demo_eq_pow_01__sympy_refine),
+    ('demo-eq-pow-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-191859', demo_eq_pow_01__sympy_simplify),
 ]
 
 

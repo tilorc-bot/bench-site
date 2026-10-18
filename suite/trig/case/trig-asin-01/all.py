@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite trig · case trig-asin-01 · all Python systems
-# 4 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 5 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -126,7 +126,7 @@ import sympy
 
 
 # ---- case trig-asin-01 · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044447 answered null (declined correctly)
+# the run satrefine-refine-20261018-191923 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_asin_01__satrefine_refine():
     x = Symbol('x', real=True)
@@ -138,8 +138,21 @@ def trig_asin_01__satrefine_refine():
     return Answer
 
 
+# ---- case trig-asin-01 · expected contingent · system sympy-auto (sympy 1.14.0)
+# the run sympy-auto-20261018-191916 answered null (declined correctly)
+@_in(_SETUP2)
+def trig_asin_01__sympy_auto():
+    x = Symbol('x', real=True)
+    Residual = asin(sin(x)) - x
+    # automatic evaluation only: no simplify, refine or other function
+    Result = Residual
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case trig-asin-01 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261017-044441 answered null (declined correctly)
+# the run sympy-ask-20261018-191917 answered null (declined correctly)
 @_in(_SETUP2)
 def trig_asin_01__sympy_ask():
     x = Symbol('x', real=True)
@@ -152,7 +165,7 @@ def trig_asin_01__sympy_ask():
 
 
 # ---- case trig-asin-01 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261017-044444 answered null (declined correctly)
+# the run sympy-refine-20261018-191920 answered null (declined correctly)
 @_in(_SETUP2)
 def trig_asin_01__sympy_refine():
     x = Symbol('x', real=True)
@@ -165,7 +178,7 @@ def trig_asin_01__sympy_refine():
 
 
 # ---- case trig-asin-01 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261017-044445 answered null (declined correctly)
+# the run sympy-simplify-20261018-191921 answered null (declined correctly)
 @_in(_SETUP2)
 def trig_asin_01__sympy_simplify():
     x = Symbol('x', real=True)
@@ -178,10 +191,11 @@ def trig_asin_01__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-asin-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044447', trig_asin_01__satrefine_refine),
-    ('trig-asin-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261017-044441', trig_asin_01__sympy_ask),
-    ('trig-asin-01', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261017-044444', trig_asin_01__sympy_refine),
-    ('trig-asin-01', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261017-044445', trig_asin_01__sympy_simplify),
+    ('trig-asin-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-191923', trig_asin_01__satrefine_refine),
+    ('trig-asin-01', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-191916', trig_asin_01__sympy_auto),
+    ('trig-asin-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-191917', trig_asin_01__sympy_ask),
+    ('trig-asin-01', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-191920', trig_asin_01__sympy_refine),
+    ('trig-asin-01', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261018-191921', trig_asin_01__sympy_simplify),
 ]
 
 

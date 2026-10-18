@@ -1,5 +1,5 @@
 (* assume-eval: suite examples · case demo-atan2-02 · all Wolfram systems *)
-(* 2 case run(s).  Global` is cleared before each, so no variable carries over; a failing case gives $Failed and the rest still run.  Run: wolframscript -file this-file.wls *)
+(* 3 case run(s).  Global` is cleared before each, so no variable carries over; a failing case gives $Failed and the rest still run.  Run: wolframscript -file this-file.wls *)
 
 Begin["AEScript`"];
 verdict[out_, expected_String, stored_String] := Module[{answer, got, outcome},
@@ -13,7 +13,7 @@ verdict[out_, expected_String, stored_String] := Module[{answer, got, outcome},
 End[];
 
 (* ---- case demo-atan2-02 · expected false · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261017-044436 answered false (solved) *)
+(* the run wolfram-fullsimplify-20261018-191911 answered false (solved) *)
 Print["== demo-atan2-02 · wolfram-fullsimplify · expected false"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -25,10 +25,25 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "false", "the run wolfram-fullsimplify-20261017-044436 answered false (solved)"];
+AEScript`verdict[AEScript`out, "false", "the run wolfram-fullsimplify-20261018-191911 answered false (solved)"];
+
+(* ---- case demo-atan2-02 · expected false · system wolfram-refine (wolfram 14.3.0) *)
+(* the run wolfram-refine-20261018-191907 answered false (solved) *)
+Print["== demo-atan2-02 · wolfram-refine · expected false"];
+Quiet[Remove["Global`*"]];
+AEScript`out = Quiet[Check[
+(
+  Assum = (Element[x, Reals]) && (Element[y, Reals]) && ((Element[x, Reals] && x < 0)) && ((Element[y, Reals] && y > 0));
+  Residual = (ArcTan[x, y]) - (ArcTan[y/x]);
+  Result = Refine[Residual, Assum];
+  Answer = Which[Result === 0, True, NumericQ[Result] && TrueQ[Result != 0], False, True, Null];
+  {Residual, Result, Answer}
+)
+, $Failed]];
+AEScript`verdict[AEScript`out, "false", "the run wolfram-refine-20261018-191907 answered false (solved)"];
 
 (* ---- case demo-atan2-02 · expected false · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261017-044408 answered false (solved) *)
+(* the run wolfram-simplify-20261018-191902 answered false (solved) *)
 Print["== demo-atan2-02 · wolfram-simplify · expected false"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -40,4 +55,4 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "false", "the run wolfram-simplify-20261017-044408 answered false (solved)"];
+AEScript`verdict[AEScript`out, "false", "the run wolfram-simplify-20261018-191902 answered false (solved)"];
