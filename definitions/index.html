@@ -278,6 +278,10 @@ table.mx [data-k=old]{background:color-mix(in srgb,var(--muted) 8%,transparent)}
 border-radius:4px;border:1px solid var(--line);color:var(--fg);background:var(--card);vertical-align:1px;cursor:help}
 .lchip.l-unknown{border-style:dashed;color:var(--muted)}
 .mk-declined{color:var(--null)}
+.mchip{display:inline-block;font-size:10.5px;font-weight:600;line-height:1.4;padding:0 5px;margin-left:4px;
+border-radius:4px;border:1px solid var(--line);color:var(--fg);background:var(--card);vertical-align:1px;cursor:help;
+white-space:nowrap}.mchip.m-untrusted{color:var(--unoff);border-color:var(--unoff);background:var(--warnbg)}
+.mchip.m-none{border-style:dashed;color:var(--muted)}td.time{white-space:nowrap}
 .mk{font-weight:700}
 .summary .expect{font-size:1.05em}.casepop .cp-exp{margin:0}
 details.sec>summary{cursor:pointer;list-style-position:outside;margin-left:1.1em}details.sec>summary h2{display:inline-block;margin-bottom:6px}
@@ -785,7 +789,7 @@ body.querySelector('table.pts').classList.toggle('only',this.checked);});}
 document.addEventListener('toggle',function(e){var d=e.target;if(d.tagName==='DETAILS'&&d.open&&d.hasAttribute('data-pts'))fill(d);},true);
 document.querySelectorAll('details[data-pts][open]').forEach(fill);
 reveal(location.hash.slice(1),false);spy();
-})();</script><footer class=foot>assume-eval harness v0.1.0 (<code>90e5df8</code>) · no runs</footer></main><script>document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button.copy');if(!b)return;var ids=(b.getAttribute('data-target')||'').split(' '),parts=[];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el)parts.push(el.textContent);}if(!parts.length)return;var text=parts.join('\n');function sel(){var o=b.parentNode.querySelector('textarea');if(o)o.remove();var t=document.createElement('textarea');t.value=text;b.parentNode.appendChild(t);t.select();var ok=false;try{ok=document.execCommand('copy');}catch(x){}if(ok){t.remove();}b.textContent=ok?'Copied':'Selected: press Ctrl/Cmd+C';}if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(function(){b.textContent='Copied';},sel);}else{sel();}setTimeout(function(){b.textContent='Copy';},2500);});</script><script>(function(){
+})();</script><footer class=foot>assume-eval harness v0.1.0 (<code>e3e0d31</code>) · no runs</footer></main><script>document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button.copy');if(!b)return;var ids=(b.getAttribute('data-target')||'').split(' '),parts=[];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el)parts.push(el.textContent);}if(!parts.length)return;var text=parts.join('\n');function sel(){var o=b.parentNode.querySelector('textarea');if(o)o.remove();var t=document.createElement('textarea');t.value=text;b.parentNode.appendChild(t);t.select();var ok=false;try{ok=document.execCommand('copy');}catch(x){}if(ok){t.remove();}b.textContent=ok?'Copied':'Selected: press Ctrl/Cmd+C';}if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(function(){b.textContent='Copied';},sel);}else{sel();}setTimeout(function(){b.textContent='Copy';},2500);});</script><script>(function(){
 function load(id){var el=document.getElementById(id);if(!el)return null;
 try{return JSON.parse(el.textContent);}catch(x){return null;}}
 var data=load('case-data')||{},rdata=load('res-data')||{},ndata=load('note-data')||{},tdata=load('tip-data')||{};
@@ -803,7 +807,10 @@ var d=rdata.hasOwnProperty(k)?rdata[k]:null,out,i;
 if(!d){out='<p class=cp-na>no result data</p>';}
 else{out='<div class=cp-head><b>'+h(d.s)+'</b>'+(d.x?' <span class=xchip>'+h(d.x)+'</span>':'')
 +' · '+h(d.i)+' · <span class="o o-'+h(d.o)+'">'+h(ot(d.o))+'</span>'+(d.e?' · expected <b>'+h(d.e)+'</b>':'')
-+(d.t!=null?' · '+h(d.t)+' s':'')+'</div>';
++(d.t!=null?' · '+h(d.t)+' s'
++(d.f?' <span class=z title="measured in an earlier run on the same machine">↺</span>':'')
++(d.m?' <span class=z>('+h(d.m)+')</span>':'')
+:d.n?' · <span class=z title="the run&#39;s total-time cap ran out first">not sent</span>':'')+'</div>';
 if(d.r){out+='<table class=steps>';for(i=0;i<d.r.length;i++)
 out+='<tr><td class=lbl>'+h(d.r[i][0])+'</td><td class="o o-'+h(d.r[i][1])+'">'+h(ot(d.r[i][1]))
 +'</td><td><code>'+h(d.r[i][2])+'</code></td></tr>';out+='</table>';}
