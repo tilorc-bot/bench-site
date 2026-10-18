@@ -121,7 +121,7 @@ import satrefine
 
 
 # ---- case sp-acj4-0-real · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered true (solved)
+# the run satrefine-refine-20261018-192437 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_0_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -134,7 +134,7 @@ def sp_acj4_0_real__satrefine_refine():
 
 
 # ---- case sp-acj4-115-real · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered true (solved)
+# the run satrefine-refine-20261018-192437 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_115_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -147,7 +147,7 @@ def sp_acj4_115_real__satrefine_refine():
 
 
 # ---- case sp-acj4-116-real · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered true (solved)
+# the run satrefine-refine-20261018-192437 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_116_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -160,7 +160,7 @@ def sp_acj4_116_real__satrefine_refine():
 
 
 # ---- case sp-acj4-130-real · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (declined correctly)
+# the run satrefine-refine-20261018-192437 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_130_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -173,7 +173,7 @@ def sp_acj4_130_real__satrefine_refine():
 
 
 # ---- case sp-acj4-151-real · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (declined correctly)
+# the run satrefine-refine-20261018-192437 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_151_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -186,7 +186,7 @@ def sp_acj4_151_real__satrefine_refine():
 
 
 # ---- case sp-acj4-154-real · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (no verdict)
+# the run satrefine-refine-20261018-192437 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_154_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -199,7 +199,7 @@ def sp_acj4_154_real__satrefine_refine():
 
 
 # ---- case sp-acj4-156-real · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (declined correctly)
+# the run satrefine-refine-20261018-192437 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_156_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -212,7 +212,7 @@ def sp_acj4_156_real__satrefine_refine():
 
 
 # ---- case sp-acj4-180-real · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (declined correctly)
+# the run satrefine-refine-20261018-192437 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_180_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -225,7 +225,7 @@ def sp_acj4_180_real__satrefine_refine():
 
 
 # ---- case sp-acj4-183-real · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (declined correctly)
+# the run satrefine-refine-20261018-192437 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_183_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -238,7 +238,7 @@ def sp_acj4_183_real__satrefine_refine():
 
 
 # ---- case sp-acj4-189-real · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (no verdict)
+# the run satrefine-refine-20261018-192437 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_189_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -251,7 +251,7 @@ def sp_acj4_189_real__satrefine_refine():
 
 
 # ---- case sp-acj4-190-real · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (no verdict)
+# the run satrefine-refine-20261018-192437 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_190_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -264,7 +264,7 @@ def sp_acj4_190_real__satrefine_refine():
 
 
 # ---- case sp-acj4-191-real · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (no verdict)
+# the run satrefine-refine-20261018-192437 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_191_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -277,7 +277,7 @@ def sp_acj4_191_real__satrefine_refine():
 
 
 # ---- case sp-acj4-203-real · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (declined correctly)
+# the run satrefine-refine-20261018-192437 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_203_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -290,7 +290,7 @@ def sp_acj4_203_real__satrefine_refine():
 
 
 # ---- case sp-acj4-229-real · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered true (solved)
+# the run satrefine-refine-20261018-192437 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_229_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -303,7 +303,7 @@ def sp_acj4_229_real__satrefine_refine():
 
 
 # ---- case sp-acj4-234-real · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (declined correctly)
+# the run satrefine-refine-20261018-192437 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_234_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -316,7 +316,7 @@ def sp_acj4_234_real__satrefine_refine():
 
 
 # ---- case sp-acj4-241-real · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (declined correctly)
+# the run satrefine-refine-20261018-192437 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_241_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -329,7 +329,7 @@ def sp_acj4_241_real__satrefine_refine():
 
 
 # ---- case sp-acj4-247-real · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (declined correctly)
+# the run satrefine-refine-20261018-192437 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_247_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -342,7 +342,7 @@ def sp_acj4_247_real__satrefine_refine():
 
 
 # ---- case sp-acj4-260-real · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (declined correctly)
+# the run satrefine-refine-20261018-192437 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_260_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -355,7 +355,7 @@ def sp_acj4_260_real__satrefine_refine():
 
 
 # ---- case sp-acj4-261-real · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered true (solved)
+# the run satrefine-refine-20261018-192437 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_261_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -368,7 +368,7 @@ def sp_acj4_261_real__satrefine_refine():
 
 
 # ---- case sp-acj4-266-real · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (declined correctly)
+# the run satrefine-refine-20261018-192437 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_266_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -381,7 +381,7 @@ def sp_acj4_266_real__satrefine_refine():
 
 
 # ---- case sp-acj4-267-real · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (declined correctly)
+# the run satrefine-refine-20261018-192437 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_267_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -394,7 +394,7 @@ def sp_acj4_267_real__satrefine_refine():
 
 
 # ---- case sp-acj4-29-real · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (declined correctly)
+# the run satrefine-refine-20261018-192437 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_29_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -407,7 +407,7 @@ def sp_acj4_29_real__satrefine_refine():
 
 
 # ---- case sp-acj4-3-real · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered true (solved)
+# the run satrefine-refine-20261018-192437 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_3_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -420,7 +420,7 @@ def sp_acj4_3_real__satrefine_refine():
 
 
 # ---- case sp-acj4-343-real · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered true (solved)
+# the run satrefine-refine-20261018-192437 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_343_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -433,7 +433,7 @@ def sp_acj4_343_real__satrefine_refine():
 
 
 # ---- case sp-acj4-344-real · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (declined correctly)
+# the run satrefine-refine-20261018-192437 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_344_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -446,7 +446,7 @@ def sp_acj4_344_real__satrefine_refine():
 
 
 # ---- case sp-acj4-378-real · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered true (solved)
+# the run satrefine-refine-20261018-192437 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_378_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -459,7 +459,7 @@ def sp_acj4_378_real__satrefine_refine():
 
 
 # ---- case sp-acj4-380-real · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered true (solved)
+# the run satrefine-refine-20261018-192437 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_380_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -472,7 +472,7 @@ def sp_acj4_380_real__satrefine_refine():
 
 
 # ---- case sp-acj4-392-real · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (declined correctly)
+# the run satrefine-refine-20261018-192437 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_392_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -485,7 +485,7 @@ def sp_acj4_392_real__satrefine_refine():
 
 
 # ---- case sp-acj4-403-real · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (declined correctly)
+# the run satrefine-refine-20261018-192437 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_403_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -498,7 +498,7 @@ def sp_acj4_403_real__satrefine_refine():
 
 
 # ---- case sp-acj4-410-real · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered true (solved)
+# the run satrefine-refine-20261018-192437 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_410_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -511,7 +511,7 @@ def sp_acj4_410_real__satrefine_refine():
 
 
 # ---- case sp-acj4-416-real · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (declined correctly)
+# the run satrefine-refine-20261018-192437 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_416_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -524,7 +524,7 @@ def sp_acj4_416_real__satrefine_refine():
 
 
 # ---- case sp-acj4-420-real · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (declined correctly)
+# the run satrefine-refine-20261018-192437 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_420_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -537,7 +537,7 @@ def sp_acj4_420_real__satrefine_refine():
 
 
 # ---- case sp-acj4-430-real · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (declined correctly)
+# the run satrefine-refine-20261018-192437 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_430_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -550,7 +550,7 @@ def sp_acj4_430_real__satrefine_refine():
 
 
 # ---- case sp-acj4-433-real · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (declined correctly)
+# the run satrefine-refine-20261018-192437 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_433_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -563,7 +563,7 @@ def sp_acj4_433_real__satrefine_refine():
 
 
 # ---- case sp-acj4-442-real · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (declined correctly)
+# the run satrefine-refine-20261018-192437 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_442_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -576,7 +576,7 @@ def sp_acj4_442_real__satrefine_refine():
 
 
 # ---- case sp-acj4-449-real · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (no verdict)
+# the run satrefine-refine-20261018-192437 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_449_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -589,7 +589,7 @@ def sp_acj4_449_real__satrefine_refine():
 
 
 # ---- case sp-acj4-450-real · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered true (solved)
+# the run satrefine-refine-20261018-192437 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_450_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -602,7 +602,7 @@ def sp_acj4_450_real__satrefine_refine():
 
 
 # ---- case sp-acj4-451-real · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered true (solved)
+# the run satrefine-refine-20261018-192437 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_451_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -615,7 +615,7 @@ def sp_acj4_451_real__satrefine_refine():
 
 
 # ---- case sp-acj4-50-real · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered true (solved)
+# the run satrefine-refine-20261018-192437 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_50_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -628,7 +628,7 @@ def sp_acj4_50_real__satrefine_refine():
 
 
 # ---- case sp-acj4-55-real · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (declined correctly)
+# the run satrefine-refine-20261018-192437 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_55_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -641,7 +641,7 @@ def sp_acj4_55_real__satrefine_refine():
 
 
 # ---- case sp-acj4-56-real · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (declined correctly)
+# the run satrefine-refine-20261018-192437 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_56_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -654,7 +654,7 @@ def sp_acj4_56_real__satrefine_refine():
 
 
 # ---- case sp-acj4-6-real · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered true (solved)
+# the run satrefine-refine-20261018-192437 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_6_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -667,7 +667,7 @@ def sp_acj4_6_real__satrefine_refine():
 
 
 # ---- case sp-acj4-806-ground · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered true (solved)
+# the run satrefine-refine-20261018-192437 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_806_ground__satrefine_refine():
     Assum = And()
@@ -679,7 +679,7 @@ def sp_acj4_806_ground__satrefine_refine():
 
 
 # ---- case sp-acj4-813-ground · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered true (solved)
+# the run satrefine-refine-20261018-192437 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_813_ground__satrefine_refine():
     Assum = And()
@@ -691,7 +691,7 @@ def sp_acj4_813_ground__satrefine_refine():
 
 
 # ---- case sp-acj4-816-ground · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered true (solved)
+# the run satrefine-refine-20261018-192437 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_816_ground__satrefine_refine():
     Assum = And()
@@ -704,51 +704,51 @@ def sp_acj4_816_ground__satrefine_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-0-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261017-044950', sp_acj4_0_real__satrefine_refine),
-    ('sp-acj4-115-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261017-044950', sp_acj4_115_real__satrefine_refine),
-    ('sp-acj4-116-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261017-044950', sp_acj4_116_real__satrefine_refine),
-    ('sp-acj4-130-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044950', sp_acj4_130_real__satrefine_refine),
-    ('sp-acj4-151-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044950', sp_acj4_151_real__satrefine_refine),
-    ('sp-acj4-154-real', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261017-044950', sp_acj4_154_real__satrefine_refine),
-    ('sp-acj4-156-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044950', sp_acj4_156_real__satrefine_refine),
-    ('sp-acj4-180-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044950', sp_acj4_180_real__satrefine_refine),
-    ('sp-acj4-183-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044950', sp_acj4_183_real__satrefine_refine),
-    ('sp-acj4-189-real', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261017-044950', sp_acj4_189_real__satrefine_refine),
-    ('sp-acj4-190-real', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261017-044950', sp_acj4_190_real__satrefine_refine),
-    ('sp-acj4-191-real', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261017-044950', sp_acj4_191_real__satrefine_refine),
-    ('sp-acj4-203-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044950', sp_acj4_203_real__satrefine_refine),
-    ('sp-acj4-229-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261017-044950', sp_acj4_229_real__satrefine_refine),
-    ('sp-acj4-234-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044950', sp_acj4_234_real__satrefine_refine),
-    ('sp-acj4-241-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044950', sp_acj4_241_real__satrefine_refine),
-    ('sp-acj4-247-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044950', sp_acj4_247_real__satrefine_refine),
-    ('sp-acj4-260-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044950', sp_acj4_260_real__satrefine_refine),
-    ('sp-acj4-261-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261017-044950', sp_acj4_261_real__satrefine_refine),
-    ('sp-acj4-266-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044950', sp_acj4_266_real__satrefine_refine),
-    ('sp-acj4-267-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044950', sp_acj4_267_real__satrefine_refine),
-    ('sp-acj4-29-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044950', sp_acj4_29_real__satrefine_refine),
-    ('sp-acj4-3-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261017-044950', sp_acj4_3_real__satrefine_refine),
-    ('sp-acj4-343-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261017-044950', sp_acj4_343_real__satrefine_refine),
-    ('sp-acj4-344-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044950', sp_acj4_344_real__satrefine_refine),
-    ('sp-acj4-378-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261017-044950', sp_acj4_378_real__satrefine_refine),
-    ('sp-acj4-380-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261017-044950', sp_acj4_380_real__satrefine_refine),
-    ('sp-acj4-392-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044950', sp_acj4_392_real__satrefine_refine),
-    ('sp-acj4-403-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044950', sp_acj4_403_real__satrefine_refine),
-    ('sp-acj4-410-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261017-044950', sp_acj4_410_real__satrefine_refine),
-    ('sp-acj4-416-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044950', sp_acj4_416_real__satrefine_refine),
-    ('sp-acj4-420-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044950', sp_acj4_420_real__satrefine_refine),
-    ('sp-acj4-430-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044950', sp_acj4_430_real__satrefine_refine),
-    ('sp-acj4-433-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044950', sp_acj4_433_real__satrefine_refine),
-    ('sp-acj4-442-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044950', sp_acj4_442_real__satrefine_refine),
-    ('sp-acj4-449-real', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261017-044950', sp_acj4_449_real__satrefine_refine),
-    ('sp-acj4-450-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261017-044950', sp_acj4_450_real__satrefine_refine),
-    ('sp-acj4-451-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261017-044950', sp_acj4_451_real__satrefine_refine),
-    ('sp-acj4-50-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261017-044950', sp_acj4_50_real__satrefine_refine),
-    ('sp-acj4-55-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044950', sp_acj4_55_real__satrefine_refine),
-    ('sp-acj4-56-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044950', sp_acj4_56_real__satrefine_refine),
-    ('sp-acj4-6-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261017-044950', sp_acj4_6_real__satrefine_refine),
-    ('sp-acj4-806-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261017-044950', sp_acj4_806_ground__satrefine_refine),
-    ('sp-acj4-813-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261017-044950', sp_acj4_813_ground__satrefine_refine),
-    ('sp-acj4-816-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261017-044950', sp_acj4_816_ground__satrefine_refine),
+    ('sp-acj4-0-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-192437', sp_acj4_0_real__satrefine_refine),
+    ('sp-acj4-115-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-192437', sp_acj4_115_real__satrefine_refine),
+    ('sp-acj4-116-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-192437', sp_acj4_116_real__satrefine_refine),
+    ('sp-acj4-130-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-192437', sp_acj4_130_real__satrefine_refine),
+    ('sp-acj4-151-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-192437', sp_acj4_151_real__satrefine_refine),
+    ('sp-acj4-154-real', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-192437', sp_acj4_154_real__satrefine_refine),
+    ('sp-acj4-156-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-192437', sp_acj4_156_real__satrefine_refine),
+    ('sp-acj4-180-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-192437', sp_acj4_180_real__satrefine_refine),
+    ('sp-acj4-183-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-192437', sp_acj4_183_real__satrefine_refine),
+    ('sp-acj4-189-real', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-192437', sp_acj4_189_real__satrefine_refine),
+    ('sp-acj4-190-real', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-192437', sp_acj4_190_real__satrefine_refine),
+    ('sp-acj4-191-real', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-192437', sp_acj4_191_real__satrefine_refine),
+    ('sp-acj4-203-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-192437', sp_acj4_203_real__satrefine_refine),
+    ('sp-acj4-229-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-192437', sp_acj4_229_real__satrefine_refine),
+    ('sp-acj4-234-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-192437', sp_acj4_234_real__satrefine_refine),
+    ('sp-acj4-241-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-192437', sp_acj4_241_real__satrefine_refine),
+    ('sp-acj4-247-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-192437', sp_acj4_247_real__satrefine_refine),
+    ('sp-acj4-260-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-192437', sp_acj4_260_real__satrefine_refine),
+    ('sp-acj4-261-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-192437', sp_acj4_261_real__satrefine_refine),
+    ('sp-acj4-266-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-192437', sp_acj4_266_real__satrefine_refine),
+    ('sp-acj4-267-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-192437', sp_acj4_267_real__satrefine_refine),
+    ('sp-acj4-29-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-192437', sp_acj4_29_real__satrefine_refine),
+    ('sp-acj4-3-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-192437', sp_acj4_3_real__satrefine_refine),
+    ('sp-acj4-343-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-192437', sp_acj4_343_real__satrefine_refine),
+    ('sp-acj4-344-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-192437', sp_acj4_344_real__satrefine_refine),
+    ('sp-acj4-378-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-192437', sp_acj4_378_real__satrefine_refine),
+    ('sp-acj4-380-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-192437', sp_acj4_380_real__satrefine_refine),
+    ('sp-acj4-392-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-192437', sp_acj4_392_real__satrefine_refine),
+    ('sp-acj4-403-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-192437', sp_acj4_403_real__satrefine_refine),
+    ('sp-acj4-410-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-192437', sp_acj4_410_real__satrefine_refine),
+    ('sp-acj4-416-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-192437', sp_acj4_416_real__satrefine_refine),
+    ('sp-acj4-420-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-192437', sp_acj4_420_real__satrefine_refine),
+    ('sp-acj4-430-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-192437', sp_acj4_430_real__satrefine_refine),
+    ('sp-acj4-433-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-192437', sp_acj4_433_real__satrefine_refine),
+    ('sp-acj4-442-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-192437', sp_acj4_442_real__satrefine_refine),
+    ('sp-acj4-449-real', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-192437', sp_acj4_449_real__satrefine_refine),
+    ('sp-acj4-450-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-192437', sp_acj4_450_real__satrefine_refine),
+    ('sp-acj4-451-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-192437', sp_acj4_451_real__satrefine_refine),
+    ('sp-acj4-50-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-192437', sp_acj4_50_real__satrefine_refine),
+    ('sp-acj4-55-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-192437', sp_acj4_55_real__satrefine_refine),
+    ('sp-acj4-56-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-192437', sp_acj4_56_real__satrefine_refine),
+    ('sp-acj4-6-real', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-192437', sp_acj4_6_real__satrefine_refine),
+    ('sp-acj4-806-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-192437', sp_acj4_806_ground__satrefine_refine),
+    ('sp-acj4-813-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-192437', sp_acj4_813_ground__satrefine_refine),
+    ('sp-acj4-816-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-192437', sp_acj4_816_ground__satrefine_refine),
 ]
 
 

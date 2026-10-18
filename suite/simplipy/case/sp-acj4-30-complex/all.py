@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite simplipy · case sp-acj4-30-complex · all Python systems
-# 4 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 5 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -126,7 +126,7 @@ import sympy
 
 
 # ---- case sp-acj4-30-complex · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered true (solved)
+# the run satrefine-refine-20261018-192437 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_30_complex__satrefine_refine():
     x = Symbol('x', complex=True)
@@ -138,8 +138,21 @@ def sp_acj4_30_complex__satrefine_refine():
     return Answer
 
 
+# ---- case sp-acj4-30-complex · expected true · system sympy-auto (sympy 1.14.0)
+# the run sympy-auto-20261018-192123 answered true (solved)
+@_in(_SETUP2)
+def sp_acj4_30_complex__sympy_auto():
+    x = Symbol('x', complex=True)
+    Residual = 4 * Abs(x) - Abs(-4 * x)
+    # automatic evaluation only: no simplify, refine or other function
+    Result = Residual
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-30-complex · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261017-044639 answered true (solved)
+# the run sympy-ask-20261018-192128 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_30_complex__sympy_ask():
     x = Symbol('x', complex=True)
@@ -152,7 +165,7 @@ def sp_acj4_30_complex__sympy_ask():
 
 
 # ---- case sp-acj4-30-complex · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261017-044751 answered true (solved)
+# the run sympy-refine-20261018-192240 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_30_complex__sympy_refine():
     x = Symbol('x', complex=True)
@@ -165,7 +178,7 @@ def sp_acj4_30_complex__sympy_refine():
 
 
 # ---- case sp-acj4-30-complex · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261017-044933 answered true (solved)
+# the run sympy-simplify-20261018-192419 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_30_complex__sympy_simplify():
     x = Symbol('x', complex=True)
@@ -178,10 +191,11 @@ def sp_acj4_30_complex__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-30-complex', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261017-044950', sp_acj4_30_complex__satrefine_refine),
-    ('sp-acj4-30-complex', 'sympy-ask', 'true', 'true', 'sympy-ask-20261017-044639', sp_acj4_30_complex__sympy_ask),
-    ('sp-acj4-30-complex', 'sympy-refine', 'true', 'true', 'sympy-refine-20261017-044751', sp_acj4_30_complex__sympy_refine),
-    ('sp-acj4-30-complex', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261017-044933', sp_acj4_30_complex__sympy_simplify),
+    ('sp-acj4-30-complex', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-192437', sp_acj4_30_complex__satrefine_refine),
+    ('sp-acj4-30-complex', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-192123', sp_acj4_30_complex__sympy_auto),
+    ('sp-acj4-30-complex', 'sympy-ask', 'true', 'true', 'sympy-ask-20261018-192128', sp_acj4_30_complex__sympy_ask),
+    ('sp-acj4-30-complex', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-192240', sp_acj4_30_complex__sympy_refine),
+    ('sp-acj4-30-complex', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-192419', sp_acj4_30_complex__sympy_simplify),
 ]
 
 

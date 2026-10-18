@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite simplipy · case sp-acj4-414-real · all Python systems
-# 4 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 5 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -123,10 +123,12 @@ import sympy
 
 # comments that the cases' code repeats, shown once here (left out below):
 # true iff the result is 0; false only if it is a definite nonzero number
+# dropped (not a unary fact about one symbol): ~Q.zero(cos(Abs(sin(x))))
+# dropped (not a unary fact about one symbol): ~Q.zero(cos(sin(x)))
 
 
 # ---- case sp-acj4-414-real · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (no verdict)
+# the run satrefine-refine-20261018-192437 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_414_real__satrefine_refine():
     x = Symbol('x', real=True)
@@ -138,8 +140,21 @@ def sp_acj4_414_real__satrefine_refine():
     return Answer
 
 
+# ---- case sp-acj4-414-real · expected true · system sympy-auto (sympy 1.14.0)
+# the run sympy-auto-20261018-192123 answered null (no verdict)
+@_in(_SETUP2)
+def sp_acj4_414_real__sympy_auto():
+    x = Symbol('x', real=True)
+    Residual = tan(Abs(sin(x))) - Abs(tan(sin(x)))
+    # automatic evaluation only: no simplify, refine or other function
+    Result = Residual
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-414-real · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261017-044639 answered null (no verdict)
+# the run sympy-ask-20261018-192128 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_414_real__sympy_ask():
     x = Symbol('x', real=True)
@@ -152,7 +167,7 @@ def sp_acj4_414_real__sympy_ask():
 
 
 # ---- case sp-acj4-414-real · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261017-044751 answered null (no verdict)
+# the run sympy-refine-20261018-192240 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_414_real__sympy_refine():
     x = Symbol('x', real=True)
@@ -165,12 +180,10 @@ def sp_acj4_414_real__sympy_refine():
 
 
 # ---- case sp-acj4-414-real · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261017-044933 answered null (no verdict)
+# the run sympy-simplify-20261018-192419 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_414_real__sympy_simplify():
     x = Symbol('x', real=True)
-    # dropped (not a unary fact about one symbol): ~Q.zero(cos(Abs(sin(x))))
-    # dropped (not a unary fact about one symbol): ~Q.zero(cos(sin(x)))
     Residual = tan(Abs(sin(x))) - Abs(tan(sin(x)))
     Result = simplify(Residual)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
@@ -180,10 +193,11 @@ def sp_acj4_414_real__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-414-real', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261017-044950', sp_acj4_414_real__satrefine_refine),
-    ('sp-acj4-414-real', 'sympy-ask', 'true', 'null', 'sympy-ask-20261017-044639', sp_acj4_414_real__sympy_ask),
-    ('sp-acj4-414-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261017-044751', sp_acj4_414_real__sympy_refine),
-    ('sp-acj4-414-real', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261017-044933', sp_acj4_414_real__sympy_simplify),
+    ('sp-acj4-414-real', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-192437', sp_acj4_414_real__satrefine_refine),
+    ('sp-acj4-414-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-192123', sp_acj4_414_real__sympy_auto),
+    ('sp-acj4-414-real', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-192128', sp_acj4_414_real__sympy_ask),
+    ('sp-acj4-414-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-192240', sp_acj4_414_real__sympy_refine),
+    ('sp-acj4-414-real', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261018-192419', sp_acj4_414_real__sympy_simplify),
 ]
 
 

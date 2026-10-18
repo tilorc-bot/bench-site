@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite simplipy · case sp-acj4-421-complex · all Python systems
-# 4 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 5 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -123,10 +123,13 @@ import sympy
 
 # comments that the cases' code repeats, shown once here (left out below):
 # true iff the result is 0; false only if it is a definite nonzero number
+# dropped (not a unary fact about one symbol): ~Q.zero(cos(tanh(Abs(x))))
+# dropped (not a unary fact about one symbol): ~Q.zero(cosh(x))
+# dropped (not a unary fact about one symbol): ~Q.zero(cos(tanh(x)))
 
 
 # ---- case sp-acj4-421-complex · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261017-044950 answered null (declined correctly)
+# the run satrefine-refine-20261018-192437 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_421_complex__satrefine_refine():
     x = Symbol('x', complex=True)
@@ -138,8 +141,21 @@ def sp_acj4_421_complex__satrefine_refine():
     return Answer
 
 
+# ---- case sp-acj4-421-complex · expected contingent · system sympy-auto (sympy 1.14.0)
+# the run sympy-auto-20261018-192123 answered null (declined correctly)
+@_in(_SETUP2)
+def sp_acj4_421_complex__sympy_auto():
+    x = Symbol('x', complex=True)
+    Residual = tan(tanh(Abs(x))) - Abs(tan(tanh(x)))
+    # automatic evaluation only: no simplify, refine or other function
+    Result = Residual
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-421-complex · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261017-044639 answered null (declined correctly)
+# the run sympy-ask-20261018-192128 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_421_complex__sympy_ask():
     x = Symbol('x', complex=True)
@@ -152,7 +168,7 @@ def sp_acj4_421_complex__sympy_ask():
 
 
 # ---- case sp-acj4-421-complex · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261017-044751 answered null (declined correctly)
+# the run sympy-refine-20261018-192240 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_421_complex__sympy_refine():
     x = Symbol('x', complex=True)
@@ -165,13 +181,10 @@ def sp_acj4_421_complex__sympy_refine():
 
 
 # ---- case sp-acj4-421-complex · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261017-044933 answered null (declined correctly)
+# the run sympy-simplify-20261018-192419 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_421_complex__sympy_simplify():
     x = Symbol('x', complex=True)
-    # dropped (not a unary fact about one symbol): ~Q.zero(cos(tanh(Abs(x))))
-    # dropped (not a unary fact about one symbol): ~Q.zero(cosh(x))
-    # dropped (not a unary fact about one symbol): ~Q.zero(cos(tanh(x)))
     Residual = tan(tanh(Abs(x))) - Abs(tan(tanh(x)))
     Result = simplify(Residual)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
@@ -181,10 +194,11 @@ def sp_acj4_421_complex__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-421-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261017-044950', sp_acj4_421_complex__satrefine_refine),
-    ('sp-acj4-421-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261017-044639', sp_acj4_421_complex__sympy_ask),
-    ('sp-acj4-421-complex', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261017-044751', sp_acj4_421_complex__sympy_refine),
-    ('sp-acj4-421-complex', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261017-044933', sp_acj4_421_complex__sympy_simplify),
+    ('sp-acj4-421-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-192437', sp_acj4_421_complex__satrefine_refine),
+    ('sp-acj4-421-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-192123', sp_acj4_421_complex__sympy_auto),
+    ('sp-acj4-421-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-192128', sp_acj4_421_complex__sympy_ask),
+    ('sp-acj4-421-complex', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-192240', sp_acj4_421_complex__sympy_refine),
+    ('sp-acj4-421-complex', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261018-192419', sp_acj4_421_complex__sympy_simplify),
 ]
 
 
