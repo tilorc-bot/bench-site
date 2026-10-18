@@ -13,7 +13,7 @@ verdict[out_, expected_String, stored_String] := Module[{answer, got, outcome},
 End[];
 
 (* ---- case demo-nonzero-01 · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261018-191902 answered true (solved) *)
+(* the run wolfram-simplify-20261018-212428 answered true (solved) *)
 Print["== demo-nonzero-01 · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -25,10 +25,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261018-191902 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261018-212428 answered true (solved)"];
 
 (* ---- case demo-sign-02 · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261018-191902 answered true (solved) *)
+(* the run wolfram-simplify-20261018-212428 answered true (solved) *)
 Print["== demo-sign-02 · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -40,10 +40,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261018-191902 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261018-212428 answered true (solved)"];
 
 (* ---- case demo-sign-03 · expected contingent · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261018-191902 answered null (declined correctly) *)
+(* the run wolfram-simplify-20261018-212428 answered null (declined correctly) *)
 Print["== demo-sign-03 · wolfram-simplify · expected contingent"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -55,10 +55,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261018-191902 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-simplify-20261018-212428 answered null (declined correctly)"];
 
 (* ---- case demo-sign-04 · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261018-191902 answered null (no verdict) *)
+(* the run wolfram-simplify-20261018-212428 answered null (no verdict) *)
 Print["== demo-sign-04 · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -70,10 +70,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261018-191902 answered null (no verdict)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261018-212428 answered null (no verdict)"];
 
 (* ---- case demo-sign-05 · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261018-191902 answered true (solved) *)
+(* the run wolfram-simplify-20261018-212428 answered true (solved) *)
 Print["== demo-sign-05 · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -85,4 +85,4 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261018-191902 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261018-212428 answered true (solved)"];

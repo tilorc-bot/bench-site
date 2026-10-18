@@ -121,7 +121,7 @@ import sympy
 
 
 # ---- case demo-atan2-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered true (solved)
+# the run sympy-auto-20261018-212418 answered true (solved)
 @_in(_SETUP1)
 def demo_atan2_01__sympy_auto():
     x = Symbol('x', real=True, positive=True)
@@ -134,7 +134,7 @@ def demo_atan2_01__sympy_auto():
 
 
 # ---- case demo-atan2-02 · expected false · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered false (solved)
+# the run sympy-auto-20261018-212418 answered false (solved)
 @_in(_SETUP1)
 def demo_atan2_02__sympy_auto():
     x = Symbol('x', real=True, negative=True)
@@ -147,7 +147,7 @@ def demo_atan2_02__sympy_auto():
 
 
 # ---- case demo-eq-abs-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered true (solved)
+# the run sympy-auto-20261018-212418 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_abs_01__sympy_auto():
     x = Symbol('x', real=True, negative=True)
@@ -159,7 +159,7 @@ def demo_eq_abs_01__sympy_auto():
 
 
 # ---- case demo-eq-abs-02 · expected false · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered null (no verdict)
+# the run sympy-auto-20261018-212418 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_abs_02__sympy_auto():
     x = Symbol('x', real=True, negative=True)
@@ -171,7 +171,7 @@ def demo_eq_abs_02__sympy_auto():
 
 
 # ---- case demo-eq-log-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered true (solved)
+# the run sympy-auto-20261018-212418 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_log_01__sympy_auto():
     x = Symbol('x', real=True, positive=True)
@@ -183,7 +183,7 @@ def demo_eq_log_01__sympy_auto():
 
 
 # ---- case demo-eq-pow-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered true (solved)
+# the run sympy-auto-20261018-212418 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_pow_01__sympy_auto():
     n = Symbol('n', integer=True)
@@ -195,7 +195,7 @@ def demo_eq_pow_01__sympy_auto():
 
 
 # ---- case demo-eq-sqrt-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered true (solved)
+# the run sympy-auto-20261018-212418 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_01__sympy_auto():
     x = Symbol('x', real=True, positive=True)
@@ -207,7 +207,7 @@ def demo_eq_sqrt_01__sympy_auto():
 
 
 # ---- case demo-eq-sqrt-02 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered true (solved)
+# the run sympy-auto-20261018-212418 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_02__sympy_auto():
     x = Symbol('x', real=True)
@@ -219,7 +219,7 @@ def demo_eq_sqrt_02__sympy_auto():
 
 
 # ---- case demo-eq-sqrt-03 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered null (declined correctly)
+# the run sympy-auto-20261018-212418 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_eq_sqrt_03__sympy_auto():
     x = Symbol('x', real=True)
@@ -231,7 +231,7 @@ def demo_eq_sqrt_03__sympy_auto():
 
 
 # ---- case demo-eq-sqrt-04 · expected false · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered false (solved)
+# the run sympy-auto-20261018-212418 answered false (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_04__sympy_auto():
     x = Symbol('x', real=True, positive=True)
@@ -243,7 +243,7 @@ def demo_eq_sqrt_04__sympy_auto():
 
 
 # ---- case demo-eq-trig-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered null (no verdict)
+# the run sympy-auto-20261018-212418 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_trig_01__sympy_auto():
     x = Symbol('x', complex=True)
@@ -255,7 +255,7 @@ def demo_eq_trig_01__sympy_auto():
 
 
 # ---- case demo-eq-trig-02 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered null (no verdict)
+# the run sympy-auto-20261018-212418 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_trig_02__sympy_auto():
     x = Symbol('x', complex=True)
@@ -267,7 +267,7 @@ def demo_eq_trig_02__sympy_auto():
 
 
 # ---- case demo-log-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered null (no verdict)
+# the run sympy-auto-20261018-212418 answered null (no verdict)
 @_in(_SETUP1)
 def demo_log_01__sympy_auto():
     x = Symbol('x', real=True, positive=True)
@@ -280,7 +280,7 @@ def demo_log_01__sympy_auto():
 
 
 # ---- case demo-log-02 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered null (declined correctly)
+# the run sympy-auto-20261018-212418 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_log_02__sympy_auto():
     z = Symbol('z', complex=True, zero=False)
@@ -293,7 +293,7 @@ def demo_log_02__sympy_auto():
 
 
 # ---- case demo-log-03 · expected false · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered null (no verdict)
+# the run sympy-auto-20261018-212418 answered null (no verdict)
 @_in(_SETUP1)
 def demo_log_03__sympy_auto():
     x = Symbol('x', real=True, negative=True)
@@ -305,7 +305,7 @@ def demo_log_03__sympy_auto():
 
 
 # ---- case demo-nonzero-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered true (solved)
+# the run sympy-auto-20261018-212418 answered true (solved)
 @_in(_SETUP1)
 def demo_nonzero_01__sympy_auto():
     z = Symbol('z', complex=True, imaginary=True)
@@ -317,7 +317,7 @@ def demo_nonzero_01__sympy_auto():
 
 
 # ---- case demo-parity-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered true (solved)
+# the run sympy-auto-20261018-212418 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_01__sympy_auto():
     n = Symbol('n', integer=True, odd=True)
@@ -329,7 +329,7 @@ def demo_parity_01__sympy_auto():
 
 
 # ---- case demo-parity-02 · expected false · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered false (solved)
+# the run sympy-auto-20261018-212418 answered false (solved)
 @_in(_SETUP1)
 def demo_parity_02__sympy_auto():
     n = Symbol('n', integer=True, odd=True)
@@ -342,7 +342,7 @@ def demo_parity_02__sympy_auto():
 
 
 # ---- case demo-parity-03 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered true (solved)
+# the run sympy-auto-20261018-212418 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_03__sympy_auto():
     n = Symbol('n', integer=True)
@@ -354,7 +354,7 @@ def demo_parity_03__sympy_auto():
 
 
 # ---- case demo-parity-04 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered null (declined correctly)
+# the run sympy-auto-20261018-212418 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_parity_04__sympy_auto():
     n = Symbol('n', integer=True, even=True)
@@ -366,7 +366,7 @@ def demo_parity_04__sympy_auto():
 
 
 # ---- case demo-parity-05 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered true (solved)
+# the run sympy-auto-20261018-212418 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_05__sympy_auto():
     n = Symbol('n', integer=True, odd=True)
@@ -379,7 +379,7 @@ def demo_parity_05__sympy_auto():
 
 
 # ---- case demo-prime-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered null (no verdict)
+# the run sympy-auto-20261018-212418 answered null (no verdict)
 @_in(_SETUP1)
 def demo_prime_01__sympy_auto():
     p = Symbol('p', integer=True, prime=True)
@@ -392,7 +392,7 @@ def demo_prime_01__sympy_auto():
 
 
 # ---- case demo-prime-02 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered null (declined correctly)
+# the run sympy-auto-20261018-212418 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_prime_02__sympy_auto():
     p = Symbol('p', integer=True, prime=True)
@@ -404,7 +404,7 @@ def demo_prime_02__sympy_auto():
 
 
 # ---- case demo-sign-02 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered true (solved)
+# the run sympy-auto-20261018-212418 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_02__sympy_auto():
     x = Symbol('x', real=True, zero=False)
@@ -416,7 +416,7 @@ def demo_sign_02__sympy_auto():
 
 
 # ---- case demo-sign-03 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered null (declined correctly)
+# the run sympy-auto-20261018-212418 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_sign_03__sympy_auto():
     x = Symbol('x', complex=True, zero=False)
@@ -428,7 +428,7 @@ def demo_sign_03__sympy_auto():
 
 
 # ---- case demo-sign-04 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered null (no verdict)
+# the run sympy-auto-20261018-212418 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_04__sympy_auto():
     z = Symbol('z', complex=True)
@@ -440,7 +440,7 @@ def demo_sign_04__sympy_auto():
 
 
 # ---- case demo-sign-05 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered true (solved)
+# the run sympy-auto-20261018-212418 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_05__sympy_auto():
     x = Symbol('x', real=True, positive=True)
@@ -454,33 +454,33 @@ def demo_sign_05__sympy_auto():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-atan2-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-191852', demo_atan2_01__sympy_auto),
-    ('demo-atan2-02', 'sympy-auto', 'false', 'false', 'sympy-auto-20261018-191852', demo_atan2_02__sympy_auto),
-    ('demo-eq-abs-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-191852', demo_eq_abs_01__sympy_auto),
-    ('demo-eq-abs-02', 'sympy-auto', 'false', 'null', 'sympy-auto-20261018-191852', demo_eq_abs_02__sympy_auto),
-    ('demo-eq-log-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-191852', demo_eq_log_01__sympy_auto),
-    ('demo-eq-pow-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-191852', demo_eq_pow_01__sympy_auto),
-    ('demo-eq-sqrt-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-191852', demo_eq_sqrt_01__sympy_auto),
-    ('demo-eq-sqrt-02', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-191852', demo_eq_sqrt_02__sympy_auto),
-    ('demo-eq-sqrt-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-191852', demo_eq_sqrt_03__sympy_auto),
-    ('demo-eq-sqrt-04', 'sympy-auto', 'false', 'false', 'sympy-auto-20261018-191852', demo_eq_sqrt_04__sympy_auto),
-    ('demo-eq-trig-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-191852', demo_eq_trig_01__sympy_auto),
-    ('demo-eq-trig-02', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-191852', demo_eq_trig_02__sympy_auto),
-    ('demo-log-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-191852', demo_log_01__sympy_auto),
-    ('demo-log-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-191852', demo_log_02__sympy_auto),
-    ('demo-log-03', 'sympy-auto', 'false', 'null', 'sympy-auto-20261018-191852', demo_log_03__sympy_auto),
-    ('demo-nonzero-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-191852', demo_nonzero_01__sympy_auto),
-    ('demo-parity-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-191852', demo_parity_01__sympy_auto),
-    ('demo-parity-02', 'sympy-auto', 'false', 'false', 'sympy-auto-20261018-191852', demo_parity_02__sympy_auto),
-    ('demo-parity-03', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-191852', demo_parity_03__sympy_auto),
-    ('demo-parity-04', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-191852', demo_parity_04__sympy_auto),
-    ('demo-parity-05', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-191852', demo_parity_05__sympy_auto),
-    ('demo-prime-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-191852', demo_prime_01__sympy_auto),
-    ('demo-prime-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-191852', demo_prime_02__sympy_auto),
-    ('demo-sign-02', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-191852', demo_sign_02__sympy_auto),
-    ('demo-sign-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-191852', demo_sign_03__sympy_auto),
-    ('demo-sign-04', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-191852', demo_sign_04__sympy_auto),
-    ('demo-sign-05', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-191852', demo_sign_05__sympy_auto),
+    ('demo-atan2-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_atan2_01__sympy_auto),
+    ('demo-atan2-02', 'sympy-auto', 'false', 'false', 'sympy-auto-20261018-212418', demo_atan2_02__sympy_auto),
+    ('demo-eq-abs-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_eq_abs_01__sympy_auto),
+    ('demo-eq-abs-02', 'sympy-auto', 'false', 'null', 'sympy-auto-20261018-212418', demo_eq_abs_02__sympy_auto),
+    ('demo-eq-log-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_eq_log_01__sympy_auto),
+    ('demo-eq-pow-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_eq_pow_01__sympy_auto),
+    ('demo-eq-sqrt-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_eq_sqrt_01__sympy_auto),
+    ('demo-eq-sqrt-02', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_eq_sqrt_02__sympy_auto),
+    ('demo-eq-sqrt-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212418', demo_eq_sqrt_03__sympy_auto),
+    ('demo-eq-sqrt-04', 'sympy-auto', 'false', 'false', 'sympy-auto-20261018-212418', demo_eq_sqrt_04__sympy_auto),
+    ('demo-eq-trig-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212418', demo_eq_trig_01__sympy_auto),
+    ('demo-eq-trig-02', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212418', demo_eq_trig_02__sympy_auto),
+    ('demo-log-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212418', demo_log_01__sympy_auto),
+    ('demo-log-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212418', demo_log_02__sympy_auto),
+    ('demo-log-03', 'sympy-auto', 'false', 'null', 'sympy-auto-20261018-212418', demo_log_03__sympy_auto),
+    ('demo-nonzero-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_nonzero_01__sympy_auto),
+    ('demo-parity-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_parity_01__sympy_auto),
+    ('demo-parity-02', 'sympy-auto', 'false', 'false', 'sympy-auto-20261018-212418', demo_parity_02__sympy_auto),
+    ('demo-parity-03', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_parity_03__sympy_auto),
+    ('demo-parity-04', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212418', demo_parity_04__sympy_auto),
+    ('demo-parity-05', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_parity_05__sympy_auto),
+    ('demo-prime-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212418', demo_prime_01__sympy_auto),
+    ('demo-prime-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212418', demo_prime_02__sympy_auto),
+    ('demo-sign-02', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_sign_02__sympy_auto),
+    ('demo-sign-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212418', demo_sign_03__sympy_auto),
+    ('demo-sign-04', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212418', demo_sign_04__sympy_auto),
+    ('demo-sign-05', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_sign_05__sympy_auto),
 ]
 
 

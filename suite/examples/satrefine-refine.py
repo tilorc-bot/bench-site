@@ -113,366 +113,366 @@ def _fresh():
 # setup 1 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP1 = _Setup(r'''from sympy import *
 import sympy
-import satrefine
-''', ('satrefine', '0.1.0'))
+import satsimp
+''', ('satsimp', '0.1.0'))
 
 # comments that the cases' code repeats, shown once here (left out below):
 # true iff the result is 0; false only if it is a definite nonzero number
 
 
-# ---- case demo-atan2-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered true (solved)
+# ---- case demo-atan2-01 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered true (solved)
 @_in(_SETUP1)
 def demo_atan2_01__satrefine_refine():
     x = Symbol('x', real=True)
     y = Symbol('y', real=True)
     Assum = And(Q.real(x), Q.real(y), Q.positive(x))
     Residual = atan2(y, x) - atan(y / x)
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-atan2-02 · expected false · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered false (solved)
+# ---- case demo-atan2-02 · expected false · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered false (solved)
 @_in(_SETUP1)
 def demo_atan2_02__satrefine_refine():
     x = Symbol('x', real=True)
     y = Symbol('y', real=True)
     Assum = And(Q.real(x), Q.real(y), Q.negative(x), Q.positive(y))
     Residual = atan2(y, x) - atan(y / x)
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-eq-abs-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered true (solved)
+# ---- case demo-eq-abs-01 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_abs_01__satrefine_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), Q.negative(x))
     Residual = Abs(x) - (-x)
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-eq-abs-02 · expected false · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered null (no verdict)
+# ---- case demo-eq-abs-02 · expected false · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_abs_02__satrefine_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), Q.negative(x))
     Residual = Abs(x) - x
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-eq-log-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered true (solved)
+# ---- case demo-eq-log-01 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_log_01__satrefine_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), Q.positive(x))
     Residual = log(exp(x)) - x
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-eq-pow-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered true (solved)
+# ---- case demo-eq-pow-01 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_pow_01__satrefine_refine():
     n = Symbol('n', integer=True)
     Assum = And(Q.integer(n))
     Residual = Pow(-1, 2 * n) - 1
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-eq-sqrt-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered true (solved)
+# ---- case demo-eq-sqrt-01 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_01__satrefine_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), Q.positive(x))
     Residual = sqrt(Pow(x, 2)) - x
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-eq-sqrt-02 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered true (solved)
+# ---- case demo-eq-sqrt-02 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_02__satrefine_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x))
     Residual = sqrt(Pow(x, 2)) - Abs(x)
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-eq-sqrt-03 · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered null (declined correctly)
+# ---- case demo-eq-sqrt-03 · expected contingent · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_eq_sqrt_03__satrefine_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x))
     Residual = sqrt(Pow(x, 2)) - x
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-eq-sqrt-04 · expected false · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered false (solved)
+# ---- case demo-eq-sqrt-04 · expected false · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered false (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_04__satrefine_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), Q.positive(x))
     Residual = sqrt(Pow(x, 2)) + 1 - x
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-eq-trig-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered null (no verdict)
+# ---- case demo-eq-trig-01 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_trig_01__satrefine_refine():
     x = Symbol('x', complex=True)
     Assum = And(Q.complex(x))
     Residual = Pow(sin(x), 2) + Pow(cos(x), 2) - 1
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-eq-trig-02 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered null (no verdict)
+# ---- case demo-eq-trig-02 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_trig_02__satrefine_refine():
     x = Symbol('x', complex=True)
     Assum = And(Q.complex(x))
     Residual = 2 * sin(x) * cos(x) - sin(2 * x)
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-log-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered true (solved)
+# ---- case demo-log-01 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered true (solved)
 @_in(_SETUP1)
 def demo_log_01__satrefine_refine():
     x = Symbol('x', real=True)
     y = Symbol('y', real=True)
     Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
     Residual = log(x * y) - (log(x) + log(y))
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-log-02 · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered null (declined correctly)
+# ---- case demo-log-02 · expected contingent · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_log_02__satrefine_refine():
     z = Symbol('z', complex=True)
     w = Symbol('w', complex=True)
     Assum = And(Q.complex(z), Q.complex(w), ~Q.zero(z), ~Q.zero(w))
     Residual = log(z * w) - (log(z) + log(w))
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-log-03 · expected false · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered false (solved)
+# ---- case demo-log-03 · expected false · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered false (solved)
 @_in(_SETUP1)
 def demo_log_03__satrefine_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), Q.negative(x))
     Residual = log(x) - log(-x)
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-nonzero-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered true (solved)
+# ---- case demo-nonzero-01 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered true (solved)
 @_in(_SETUP1)
 def demo_nonzero_01__satrefine_refine():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z), Q.imaginary(z))
     Residual = Abs(sign(z)) - 1
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-parity-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered true (solved)
+# ---- case demo-parity-01 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_01__satrefine_refine():
     n = Symbol('n', integer=True)
     Assum = And(Q.integer(n), Q.odd(n))
     Residual = Pow(-1, n + 1) - 1
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-parity-02 · expected false · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered false (solved)
+# ---- case demo-parity-02 · expected false · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered false (solved)
 @_in(_SETUP1)
 def demo_parity_02__satrefine_refine():
     n = Symbol('n', integer=True)
     m = Symbol('m', integer=True)
     Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
     Residual = Pow(-1, n * m) - 1
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-parity-03 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered true (solved)
+# ---- case demo-parity-03 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_03__satrefine_refine():
     n = Symbol('n', integer=True)
     Assum = And(Q.integer(n))
     Residual = Pow(-1, n * (n + 1)) - 1
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-parity-04 · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered null (declined correctly)
+# ---- case demo-parity-04 · expected contingent · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_parity_04__satrefine_refine():
     n = Symbol('n', integer=True)
     Assum = And(Q.integer(n), Q.even(n))
     Residual = Pow(I, n) - 1
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-parity-05 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered true (solved)
+# ---- case demo-parity-05 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_05__satrefine_refine():
     n = Symbol('n', integer=True)
     m = Symbol('m', integer=True)
     Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
     Residual = Pow(-1, n * m) - (-1)
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-prime-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered null (no verdict)
+# ---- case demo-prime-01 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered null (no verdict)
 @_in(_SETUP1)
 def demo_prime_01__satrefine_refine():
     p = Symbol('p', integer=True)
     Assum = And(Q.integer(p), Q.prime(p), p > 2)
     Residual = Pow(-1, p) - (-1)
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-prime-02 · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered null (declined correctly)
+# ---- case demo-prime-02 · expected contingent · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_prime_02__satrefine_refine():
     p = Symbol('p', integer=True)
     Assum = And(Q.integer(p), Q.prime(p))
     Residual = Pow(-1, p) - (-1)
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-sign-02 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered true (solved)
+# ---- case demo-sign-02 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_02__satrefine_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), ~Q.zero(x))
     Residual = sign(Pow(x, 2)) - 1
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-sign-03 · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered null (declined correctly)
+# ---- case demo-sign-03 · expected contingent · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_sign_03__satrefine_refine():
     x = Symbol('x', complex=True)
     Assum = And(Q.complex(x), ~Q.zero(x))
     Residual = sign(Pow(x, 2)) - 1
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-sign-04 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered true (solved)
+# ---- case demo-sign-04 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_04__satrefine_refine():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z))
     Residual = Abs(z * conjugate(z)) - (z * conjugate(z))
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case demo-sign-05 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered true (solved)
+# ---- case demo-sign-05 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_05__satrefine_refine():
     x = Symbol('x', real=True)
     y = Symbol('y', real=True)
     Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.negative(y))
     Residual = Abs(x - y) - (x - y)
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -480,33 +480,33 @@ def demo_sign_05__satrefine_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-atan2-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-191900', demo_atan2_01__satrefine_refine),
-    ('demo-atan2-02', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261018-191900', demo_atan2_02__satrefine_refine),
-    ('demo-eq-abs-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-191900', demo_eq_abs_01__satrefine_refine),
-    ('demo-eq-abs-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261018-191900', demo_eq_abs_02__satrefine_refine),
-    ('demo-eq-log-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-191900', demo_eq_log_01__satrefine_refine),
-    ('demo-eq-pow-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-191900', demo_eq_pow_01__satrefine_refine),
-    ('demo-eq-sqrt-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-191900', demo_eq_sqrt_01__satrefine_refine),
-    ('demo-eq-sqrt-02', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-191900', demo_eq_sqrt_02__satrefine_refine),
-    ('demo-eq-sqrt-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-191900', demo_eq_sqrt_03__satrefine_refine),
-    ('demo-eq-sqrt-04', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261018-191900', demo_eq_sqrt_04__satrefine_refine),
-    ('demo-eq-trig-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-191900', demo_eq_trig_01__satrefine_refine),
-    ('demo-eq-trig-02', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-191900', demo_eq_trig_02__satrefine_refine),
-    ('demo-log-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-191900', demo_log_01__satrefine_refine),
-    ('demo-log-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-191900', demo_log_02__satrefine_refine),
-    ('demo-log-03', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261018-191900', demo_log_03__satrefine_refine),
-    ('demo-nonzero-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-191900', demo_nonzero_01__satrefine_refine),
-    ('demo-parity-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-191900', demo_parity_01__satrefine_refine),
-    ('demo-parity-02', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261018-191900', demo_parity_02__satrefine_refine),
-    ('demo-parity-03', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-191900', demo_parity_03__satrefine_refine),
-    ('demo-parity-04', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-191900', demo_parity_04__satrefine_refine),
-    ('demo-parity-05', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-191900', demo_parity_05__satrefine_refine),
-    ('demo-prime-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-191900', demo_prime_01__satrefine_refine),
-    ('demo-prime-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-191900', demo_prime_02__satrefine_refine),
-    ('demo-sign-02', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-191900', demo_sign_02__satrefine_refine),
-    ('demo-sign-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-191900', demo_sign_03__satrefine_refine),
-    ('demo-sign-04', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-191900', demo_sign_04__satrefine_refine),
-    ('demo-sign-05', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-191900', demo_sign_05__satrefine_refine),
+    ('demo-atan2-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-212426', demo_atan2_01__satrefine_refine),
+    ('demo-atan2-02', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261018-212426', demo_atan2_02__satrefine_refine),
+    ('demo-eq-abs-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-212426', demo_eq_abs_01__satrefine_refine),
+    ('demo-eq-abs-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261018-212426', demo_eq_abs_02__satrefine_refine),
+    ('demo-eq-log-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-212426', demo_eq_log_01__satrefine_refine),
+    ('demo-eq-pow-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-212426', demo_eq_pow_01__satrefine_refine),
+    ('demo-eq-sqrt-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-212426', demo_eq_sqrt_01__satrefine_refine),
+    ('demo-eq-sqrt-02', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-212426', demo_eq_sqrt_02__satrefine_refine),
+    ('demo-eq-sqrt-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-212426', demo_eq_sqrt_03__satrefine_refine),
+    ('demo-eq-sqrt-04', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261018-212426', demo_eq_sqrt_04__satrefine_refine),
+    ('demo-eq-trig-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-212426', demo_eq_trig_01__satrefine_refine),
+    ('demo-eq-trig-02', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-212426', demo_eq_trig_02__satrefine_refine),
+    ('demo-log-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-212426', demo_log_01__satrefine_refine),
+    ('demo-log-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-212426', demo_log_02__satrefine_refine),
+    ('demo-log-03', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261018-212426', demo_log_03__satrefine_refine),
+    ('demo-nonzero-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-212426', demo_nonzero_01__satrefine_refine),
+    ('demo-parity-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-212426', demo_parity_01__satrefine_refine),
+    ('demo-parity-02', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261018-212426', demo_parity_02__satrefine_refine),
+    ('demo-parity-03', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-212426', demo_parity_03__satrefine_refine),
+    ('demo-parity-04', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-212426', demo_parity_04__satrefine_refine),
+    ('demo-parity-05', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-212426', demo_parity_05__satrefine_refine),
+    ('demo-prime-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-212426', demo_prime_01__satrefine_refine),
+    ('demo-prime-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-212426', demo_prime_02__satrefine_refine),
+    ('demo-sign-02', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-212426', demo_sign_02__satrefine_refine),
+    ('demo-sign-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-212426', demo_sign_03__satrefine_refine),
+    ('demo-sign-04', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-212426', demo_sign_04__satrefine_refine),
+    ('demo-sign-05', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-212426', demo_sign_05__satrefine_refine),
 ]
 
 

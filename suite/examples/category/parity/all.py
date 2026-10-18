@@ -113,8 +113,8 @@ def _fresh():
 # setup 1 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP1 = _Setup(r'''from sympy import *
 import sympy
-import satrefine
-''', ('satrefine', '0.1.0'))
+import satsimp
+''', ('satsimp', '0.1.0'))
 
 # setup 2 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP2 = _Setup(r'''from sympy import *
@@ -127,21 +127,21 @@ import sympy
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
 
 
-# ---- case demo-parity-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered true (solved)
+# ---- case demo-parity-01 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_01__satrefine_refine():
     n = Symbol('n', integer=True)
     Assum = And(Q.integer(n), Q.odd(n))
     Residual = Pow(-1, n + 1) - 1
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-parity-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered true (solved)
+# the run sympy-auto-20261018-212418 answered true (solved)
 @_in(_SETUP2)
 def demo_parity_01__sympy_auto():
     n = Symbol('n', integer=True, odd=True)
@@ -153,7 +153,7 @@ def demo_parity_01__sympy_auto():
 
 
 # ---- case demo-parity-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-191853 answered null (no verdict)
+# the run sympy-ask-20261018-212419 answered null (no verdict)
 @_in(_SETUP2)
 def demo_parity_01__sympy_ask():
     n = Symbol('n', integer=True)
@@ -165,7 +165,7 @@ def demo_parity_01__sympy_ask():
 
 
 # ---- case demo-parity-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-191856 answered true (solved)
+# the run sympy-refine-20261018-212422 answered true (solved)
 @_in(_SETUP2)
 def demo_parity_01__sympy_refine():
     n = Symbol('n', integer=True)
@@ -178,7 +178,7 @@ def demo_parity_01__sympy_refine():
 
 
 # ---- case demo-parity-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-191859 answered true (solved)
+# the run sympy-simplify-20261018-212424 answered true (solved)
 @_in(_SETUP2)
 def demo_parity_01__sympy_simplify():
     n = Symbol('n', integer=True, odd=True)
@@ -189,22 +189,22 @@ def demo_parity_01__sympy_simplify():
     return Answer
 
 
-# ---- case demo-parity-02 · expected false · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered false (solved)
+# ---- case demo-parity-02 · expected false · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered false (solved)
 @_in(_SETUP1)
 def demo_parity_02__satrefine_refine():
     n = Symbol('n', integer=True)
     m = Symbol('m', integer=True)
     Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
     Residual = Pow(-1, n * m) - 1
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-parity-02 · expected false · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered false (solved)
+# the run sympy-auto-20261018-212418 answered false (solved)
 @_in(_SETUP2)
 def demo_parity_02__sympy_auto():
     n = Symbol('n', integer=True, odd=True)
@@ -217,7 +217,7 @@ def demo_parity_02__sympy_auto():
 
 
 # ---- case demo-parity-02 · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-191853 answered false (solved)
+# the run sympy-ask-20261018-212419 answered false (solved)
 @_in(_SETUP2)
 def demo_parity_02__sympy_ask():
     n = Symbol('n', integer=True)
@@ -230,7 +230,7 @@ def demo_parity_02__sympy_ask():
 
 
 # ---- case demo-parity-02 · expected false · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-191856 answered false (solved)
+# the run sympy-refine-20261018-212422 answered false (solved)
 @_in(_SETUP2)
 def demo_parity_02__sympy_refine():
     n = Symbol('n', integer=True)
@@ -244,7 +244,7 @@ def demo_parity_02__sympy_refine():
 
 
 # ---- case demo-parity-02 · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-191859 answered false (solved)
+# the run sympy-simplify-20261018-212424 answered false (solved)
 @_in(_SETUP2)
 def demo_parity_02__sympy_simplify():
     n = Symbol('n', integer=True, odd=True)
@@ -256,21 +256,21 @@ def demo_parity_02__sympy_simplify():
     return Answer
 
 
-# ---- case demo-parity-03 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered true (solved)
+# ---- case demo-parity-03 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_03__satrefine_refine():
     n = Symbol('n', integer=True)
     Assum = And(Q.integer(n))
     Residual = Pow(-1, n * (n + 1)) - 1
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-parity-03 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered true (solved)
+# the run sympy-auto-20261018-212418 answered true (solved)
 @_in(_SETUP2)
 def demo_parity_03__sympy_auto():
     n = Symbol('n', integer=True)
@@ -282,7 +282,7 @@ def demo_parity_03__sympy_auto():
 
 
 # ---- case demo-parity-03 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-191853 answered true (solved)
+# the run sympy-ask-20261018-212419 answered true (solved)
 @_in(_SETUP2)
 def demo_parity_03__sympy_ask():
     n = Symbol('n', integer=True)
@@ -294,7 +294,7 @@ def demo_parity_03__sympy_ask():
 
 
 # ---- case demo-parity-03 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-191856 answered true (solved)
+# the run sympy-refine-20261018-212422 answered true (solved)
 @_in(_SETUP2)
 def demo_parity_03__sympy_refine():
     n = Symbol('n', integer=True)
@@ -307,7 +307,7 @@ def demo_parity_03__sympy_refine():
 
 
 # ---- case demo-parity-03 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-191859 answered true (solved)
+# the run sympy-simplify-20261018-212424 answered true (solved)
 @_in(_SETUP2)
 def demo_parity_03__sympy_simplify():
     n = Symbol('n', integer=True)
@@ -318,21 +318,21 @@ def demo_parity_03__sympy_simplify():
     return Answer
 
 
-# ---- case demo-parity-04 · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered null (declined correctly)
+# ---- case demo-parity-04 · expected contingent · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_parity_04__satrefine_refine():
     n = Symbol('n', integer=True)
     Assum = And(Q.integer(n), Q.even(n))
     Residual = Pow(I, n) - 1
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-parity-04 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered null (declined correctly)
+# the run sympy-auto-20261018-212418 answered null (declined correctly)
 @_in(_SETUP2)
 def demo_parity_04__sympy_auto():
     n = Symbol('n', integer=True, even=True)
@@ -344,7 +344,7 @@ def demo_parity_04__sympy_auto():
 
 
 # ---- case demo-parity-04 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-191853 answered null (declined correctly)
+# the run sympy-ask-20261018-212419 answered null (declined correctly)
 @_in(_SETUP2)
 def demo_parity_04__sympy_ask():
     n = Symbol('n', integer=True)
@@ -356,7 +356,7 @@ def demo_parity_04__sympy_ask():
 
 
 # ---- case demo-parity-04 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-191856 answered null (declined correctly)
+# the run sympy-refine-20261018-212422 answered null (declined correctly)
 @_in(_SETUP2)
 def demo_parity_04__sympy_refine():
     n = Symbol('n', integer=True)
@@ -369,7 +369,7 @@ def demo_parity_04__sympy_refine():
 
 
 # ---- case demo-parity-04 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-191859 answered null (declined correctly)
+# the run sympy-simplify-20261018-212424 answered null (declined correctly)
 @_in(_SETUP2)
 def demo_parity_04__sympy_simplify():
     n = Symbol('n', integer=True, even=True)
@@ -380,22 +380,22 @@ def demo_parity_04__sympy_simplify():
     return Answer
 
 
-# ---- case demo-parity-05 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered true (solved)
+# ---- case demo-parity-05 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_05__satrefine_refine():
     n = Symbol('n', integer=True)
     m = Symbol('m', integer=True)
     Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
     Residual = Pow(-1, n * m) - (-1)
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-parity-05 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered true (solved)
+# the run sympy-auto-20261018-212418 answered true (solved)
 @_in(_SETUP2)
 def demo_parity_05__sympy_auto():
     n = Symbol('n', integer=True, odd=True)
@@ -408,7 +408,7 @@ def demo_parity_05__sympy_auto():
 
 
 # ---- case demo-parity-05 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-191853 answered null (no verdict)
+# the run sympy-ask-20261018-212419 answered null (no verdict)
 @_in(_SETUP2)
 def demo_parity_05__sympy_ask():
     n = Symbol('n', integer=True)
@@ -421,7 +421,7 @@ def demo_parity_05__sympy_ask():
 
 
 # ---- case demo-parity-05 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-191856 answered true (solved)
+# the run sympy-refine-20261018-212422 answered true (solved)
 @_in(_SETUP2)
 def demo_parity_05__sympy_refine():
     n = Symbol('n', integer=True)
@@ -435,7 +435,7 @@ def demo_parity_05__sympy_refine():
 
 
 # ---- case demo-parity-05 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-191859 answered true (solved)
+# the run sympy-simplify-20261018-212424 answered true (solved)
 @_in(_SETUP2)
 def demo_parity_05__sympy_simplify():
     n = Symbol('n', integer=True, odd=True)
@@ -449,31 +449,31 @@ def demo_parity_05__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-parity-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-191900', demo_parity_01__satrefine_refine),
-    ('demo-parity-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-191852', demo_parity_01__sympy_auto),
-    ('demo-parity-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-191853', demo_parity_01__sympy_ask),
-    ('demo-parity-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-191856', demo_parity_01__sympy_refine),
-    ('demo-parity-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-191859', demo_parity_01__sympy_simplify),
-    ('demo-parity-02', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261018-191900', demo_parity_02__satrefine_refine),
-    ('demo-parity-02', 'sympy-auto', 'false', 'false', 'sympy-auto-20261018-191852', demo_parity_02__sympy_auto),
-    ('demo-parity-02', 'sympy-ask', 'false', 'false', 'sympy-ask-20261018-191853', demo_parity_02__sympy_ask),
-    ('demo-parity-02', 'sympy-refine', 'false', 'false', 'sympy-refine-20261018-191856', demo_parity_02__sympy_refine),
-    ('demo-parity-02', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261018-191859', demo_parity_02__sympy_simplify),
-    ('demo-parity-03', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-191900', demo_parity_03__satrefine_refine),
-    ('demo-parity-03', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-191852', demo_parity_03__sympy_auto),
-    ('demo-parity-03', 'sympy-ask', 'true', 'true', 'sympy-ask-20261018-191853', demo_parity_03__sympy_ask),
-    ('demo-parity-03', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-191856', demo_parity_03__sympy_refine),
-    ('demo-parity-03', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-191859', demo_parity_03__sympy_simplify),
-    ('demo-parity-04', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-191900', demo_parity_04__satrefine_refine),
-    ('demo-parity-04', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-191852', demo_parity_04__sympy_auto),
-    ('demo-parity-04', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-191853', demo_parity_04__sympy_ask),
-    ('demo-parity-04', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-191856', demo_parity_04__sympy_refine),
-    ('demo-parity-04', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261018-191859', demo_parity_04__sympy_simplify),
-    ('demo-parity-05', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-191900', demo_parity_05__satrefine_refine),
-    ('demo-parity-05', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-191852', demo_parity_05__sympy_auto),
-    ('demo-parity-05', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-191853', demo_parity_05__sympy_ask),
-    ('demo-parity-05', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-191856', demo_parity_05__sympy_refine),
-    ('demo-parity-05', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-191859', demo_parity_05__sympy_simplify),
+    ('demo-parity-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-212426', demo_parity_01__satrefine_refine),
+    ('demo-parity-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_parity_01__sympy_auto),
+    ('demo-parity-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_parity_01__sympy_ask),
+    ('demo-parity-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-212422', demo_parity_01__sympy_refine),
+    ('demo-parity-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_parity_01__sympy_simplify),
+    ('demo-parity-02', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261018-212426', demo_parity_02__satrefine_refine),
+    ('demo-parity-02', 'sympy-auto', 'false', 'false', 'sympy-auto-20261018-212418', demo_parity_02__sympy_auto),
+    ('demo-parity-02', 'sympy-ask', 'false', 'false', 'sympy-ask-20261018-212419', demo_parity_02__sympy_ask),
+    ('demo-parity-02', 'sympy-refine', 'false', 'false', 'sympy-refine-20261018-212422', demo_parity_02__sympy_refine),
+    ('demo-parity-02', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261018-212424', demo_parity_02__sympy_simplify),
+    ('demo-parity-03', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-212426', demo_parity_03__satrefine_refine),
+    ('demo-parity-03', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_parity_03__sympy_auto),
+    ('demo-parity-03', 'sympy-ask', 'true', 'true', 'sympy-ask-20261018-212419', demo_parity_03__sympy_ask),
+    ('demo-parity-03', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-212422', demo_parity_03__sympy_refine),
+    ('demo-parity-03', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_parity_03__sympy_simplify),
+    ('demo-parity-04', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-212426', demo_parity_04__satrefine_refine),
+    ('demo-parity-04', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212418', demo_parity_04__sympy_auto),
+    ('demo-parity-04', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-212419', demo_parity_04__sympy_ask),
+    ('demo-parity-04', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-212422', demo_parity_04__sympy_refine),
+    ('demo-parity-04', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261018-212424', demo_parity_04__sympy_simplify),
+    ('demo-parity-05', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-212426', demo_parity_05__satrefine_refine),
+    ('demo-parity-05', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_parity_05__sympy_auto),
+    ('demo-parity-05', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_parity_05__sympy_ask),
+    ('demo-parity-05', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-212422', demo_parity_05__sympy_refine),
+    ('demo-parity-05', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_parity_05__sympy_simplify),
 ]
 
 

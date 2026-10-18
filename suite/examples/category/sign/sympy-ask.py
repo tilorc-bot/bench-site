@@ -120,7 +120,7 @@ import sympy
 
 
 # ---- case demo-nonzero-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-191853 answered null (no verdict)
+# the run sympy-ask-20261018-212419 answered null (no verdict)
 @_in(_SETUP1)
 def demo_nonzero_01__sympy_ask():
     z = Symbol('z', complex=True)
@@ -132,7 +132,7 @@ def demo_nonzero_01__sympy_ask():
 
 
 # ---- case demo-sign-02 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-191853 answered null (no verdict)
+# the run sympy-ask-20261018-212419 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_02__sympy_ask():
     x = Symbol('x', real=True)
@@ -144,7 +144,7 @@ def demo_sign_02__sympy_ask():
 
 
 # ---- case demo-sign-03 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-191853 answered null (declined correctly)
+# the run sympy-ask-20261018-212419 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_sign_03__sympy_ask():
     x = Symbol('x', complex=True)
@@ -156,7 +156,7 @@ def demo_sign_03__sympy_ask():
 
 
 # ---- case demo-sign-04 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-191853 answered null (no verdict)
+# the run sympy-ask-20261018-212419 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_04__sympy_ask():
     z = Symbol('z', complex=True)
@@ -168,7 +168,7 @@ def demo_sign_04__sympy_ask():
 
 
 # ---- case demo-sign-05 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-191853 answered null (no verdict)
+# the run sympy-ask-20261018-212419 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_05__sympy_ask():
     x = Symbol('x', real=True)
@@ -182,11 +182,11 @@ def demo_sign_05__sympy_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-nonzero-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-191853', demo_nonzero_01__sympy_ask),
-    ('demo-sign-02', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-191853', demo_sign_02__sympy_ask),
-    ('demo-sign-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-191853', demo_sign_03__sympy_ask),
-    ('demo-sign-04', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-191853', demo_sign_04__sympy_ask),
-    ('demo-sign-05', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-191853', demo_sign_05__sympy_ask),
+    ('demo-nonzero-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_nonzero_01__sympy_ask),
+    ('demo-sign-02', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_sign_02__sympy_ask),
+    ('demo-sign-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-212419', demo_sign_03__sympy_ask),
+    ('demo-sign-04', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_sign_04__sympy_ask),
+    ('demo-sign-05', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_sign_05__sympy_ask),
 ]
 
 

@@ -120,7 +120,7 @@ import sympy
 
 
 # ---- case trig-double-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-191920 answered null (no verdict)
+# the run sympy-refine-20261018-212445 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_01__sympy_refine():
     z = Symbol('z', complex=True)
@@ -133,7 +133,7 @@ def trig_double_01__sympy_refine():
 
 
 # ---- case trig-double-02 · expected false · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-191920 answered null (no verdict)
+# the run sympy-refine-20261018-212445 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_02__sympy_refine():
     x = Symbol('x', real=True)
@@ -146,7 +146,7 @@ def trig_double_02__sympy_refine():
 
 
 # ---- case trig-pyth-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-191920 answered null (no verdict)
+# the run sympy-refine-20261018-212445 answered null (no verdict)
 @_in(_SETUP1)
 def trig_pyth_01__sympy_refine():
     z = Symbol('z', complex=True)
@@ -159,7 +159,7 @@ def trig_pyth_01__sympy_refine():
 
 
 # ---- case trig-sqrt-01 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-191920 answered null (declined correctly)
+# the run sympy-refine-20261018-212445 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_sqrt_01__sympy_refine():
     x = Symbol('x', real=True)
@@ -172,7 +172,7 @@ def trig_sqrt_01__sympy_refine():
 
 
 # ---- case trig-tan-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-191920 answered null (no verdict)
+# the run sympy-refine-20261018-212445 answered null (no verdict)
 @_in(_SETUP1)
 def trig_tan_01__sympy_refine():
     x = Symbol('x', real=True)
@@ -186,11 +186,11 @@ def trig_tan_01__sympy_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-double-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-191920', trig_double_01__sympy_refine),
-    ('trig-double-02', 'sympy-refine', 'false', 'null', 'sympy-refine-20261018-191920', trig_double_02__sympy_refine),
-    ('trig-pyth-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-191920', trig_pyth_01__sympy_refine),
-    ('trig-sqrt-01', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-191920', trig_sqrt_01__sympy_refine),
-    ('trig-tan-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-191920', trig_tan_01__sympy_refine),
+    ('trig-double-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212445', trig_double_01__sympy_refine),
+    ('trig-double-02', 'sympy-refine', 'false', 'null', 'sympy-refine-20261018-212445', trig_double_02__sympy_refine),
+    ('trig-pyth-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212445', trig_pyth_01__sympy_refine),
+    ('trig-sqrt-01', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-212445', trig_sqrt_01__sympy_refine),
+    ('trig-tan-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212445', trig_tan_01__sympy_refine),
 ]
 
 

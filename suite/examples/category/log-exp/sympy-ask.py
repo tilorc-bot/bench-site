@@ -120,7 +120,7 @@ import sympy
 
 
 # ---- case demo-eq-log-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-191853 answered true (solved)
+# the run sympy-ask-20261018-212419 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_log_01__sympy_ask():
     x = Symbol('x', real=True)
@@ -132,7 +132,7 @@ def demo_eq_log_01__sympy_ask():
 
 
 # ---- case demo-eq-pow-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-191853 answered true (solved)
+# the run sympy-ask-20261018-212419 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_pow_01__sympy_ask():
     n = Symbol('n', integer=True)
@@ -145,8 +145,8 @@ def demo_eq_pow_01__sympy_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-log-01', 'sympy-ask', 'true', 'true', 'sympy-ask-20261018-191853', demo_eq_log_01__sympy_ask),
-    ('demo-eq-pow-01', 'sympy-ask', 'true', 'true', 'sympy-ask-20261018-191853', demo_eq_pow_01__sympy_ask),
+    ('demo-eq-log-01', 'sympy-ask', 'true', 'true', 'sympy-ask-20261018-212419', demo_eq_log_01__sympy_ask),
+    ('demo-eq-pow-01', 'sympy-ask', 'true', 'true', 'sympy-ask-20261018-212419', demo_eq_pow_01__sympy_ask),
 ]
 
 

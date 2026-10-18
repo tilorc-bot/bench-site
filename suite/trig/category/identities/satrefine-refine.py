@@ -113,73 +113,73 @@ def _fresh():
 # setup 1 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP1 = _Setup(r'''from sympy import *
 import sympy
-import satrefine
-''', ('satrefine', '0.1.0'))
+import satsimp
+''', ('satsimp', '0.1.0'))
 
 # comments that the cases' code repeats, shown once here (left out below):
 # true iff the result is 0; false only if it is a definite nonzero number
 
 
-# ---- case trig-double-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191923 answered null (no verdict)
+# ---- case trig-double-01 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212449 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_01__satrefine_refine():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z))
     Residual = sin(2 * z) - (2 * (sin(z) * cos(z)))
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case trig-double-02 · expected false · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191923 answered null (no verdict)
+# ---- case trig-double-02 · expected false · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212449 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_02__satrefine_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), Q.positive(x), x < 1)
     Residual = sin(2 * x) - (2 * sin(x))
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case trig-pyth-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191923 answered null (no verdict)
+# ---- case trig-pyth-01 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212449 answered null (no verdict)
 @_in(_SETUP1)
 def trig_pyth_01__satrefine_refine():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z))
     Residual = sin(z) * sin(z) + cos(z) * cos(z) - 1
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case trig-sqrt-01 · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191923 answered null (declined correctly)
+# ---- case trig-sqrt-01 · expected contingent · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212449 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_sqrt_01__satrefine_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x))
     Residual = sqrt(1 - sin(x) * sin(x)) - cos(x)
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
-# ---- case trig-tan-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191923 answered null (no verdict)
+# ---- case trig-tan-01 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212449 answered null (no verdict)
 @_in(_SETUP1)
 def trig_tan_01__satrefine_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), ~Q.zero(cos(x)))
     Residual = tan(x) - (sin(x) / cos(x))
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -187,11 +187,11 @@ def trig_tan_01__satrefine_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-double-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-191923', trig_double_01__satrefine_refine),
-    ('trig-double-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261018-191923', trig_double_02__satrefine_refine),
-    ('trig-pyth-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-191923', trig_pyth_01__satrefine_refine),
-    ('trig-sqrt-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-191923', trig_sqrt_01__satrefine_refine),
-    ('trig-tan-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-191923', trig_tan_01__satrefine_refine),
+    ('trig-double-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-212449', trig_double_01__satrefine_refine),
+    ('trig-double-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261018-212449', trig_double_02__satrefine_refine),
+    ('trig-pyth-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-212449', trig_pyth_01__satrefine_refine),
+    ('trig-sqrt-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-212449', trig_sqrt_01__satrefine_refine),
+    ('trig-tan-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-212449', trig_tan_01__satrefine_refine),
 ]
 
 

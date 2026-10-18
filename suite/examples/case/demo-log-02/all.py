@@ -113,8 +113,8 @@ def _fresh():
 # setup 1 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP1 = _Setup(r'''from sympy import *
 import sympy
-import satrefine
-''', ('satrefine', '0.1.0'))
+import satsimp
+''', ('satsimp', '0.1.0'))
 
 # setup 2 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP2 = _Setup(r'''from sympy import *
@@ -125,22 +125,22 @@ import sympy
 # true iff the result is 0; false only if it is a definite nonzero number
 
 
-# ---- case demo-log-02 · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered null (declined correctly)
+# ---- case demo-log-02 · expected contingent · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_log_02__satrefine_refine():
     z = Symbol('z', complex=True)
     w = Symbol('w', complex=True)
     Assum = And(Q.complex(z), Q.complex(w), ~Q.zero(z), ~Q.zero(w))
     Residual = log(z * w) - (log(z) + log(w))
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-log-02 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered null (declined correctly)
+# the run sympy-auto-20261018-212418 answered null (declined correctly)
 @_in(_SETUP2)
 def demo_log_02__sympy_auto():
     z = Symbol('z', complex=True, zero=False)
@@ -154,7 +154,7 @@ def demo_log_02__sympy_auto():
 
 
 # ---- case demo-log-02 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-191853 answered null (declined correctly)
+# the run sympy-ask-20261018-212419 answered null (declined correctly)
 @_in(_SETUP2)
 def demo_log_02__sympy_ask():
     z = Symbol('z', complex=True)
@@ -168,7 +168,7 @@ def demo_log_02__sympy_ask():
 
 
 # ---- case demo-log-02 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-191856 answered null (declined correctly)
+# the run sympy-refine-20261018-212422 answered null (declined correctly)
 @_in(_SETUP2)
 def demo_log_02__sympy_refine():
     z = Symbol('z', complex=True)
@@ -182,7 +182,7 @@ def demo_log_02__sympy_refine():
 
 
 # ---- case demo-log-02 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-191859 answered null (declined correctly)
+# the run sympy-simplify-20261018-212424 answered null (declined correctly)
 @_in(_SETUP2)
 def demo_log_02__sympy_simplify():
     z = Symbol('z', complex=True, zero=False)
@@ -196,11 +196,11 @@ def demo_log_02__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-log-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-191900', demo_log_02__satrefine_refine),
-    ('demo-log-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-191852', demo_log_02__sympy_auto),
-    ('demo-log-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-191853', demo_log_02__sympy_ask),
-    ('demo-log-02', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-191856', demo_log_02__sympy_refine),
-    ('demo-log-02', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261018-191859', demo_log_02__sympy_simplify),
+    ('demo-log-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-212426', demo_log_02__satrefine_refine),
+    ('demo-log-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212418', demo_log_02__sympy_auto),
+    ('demo-log-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-212419', demo_log_02__sympy_ask),
+    ('demo-log-02', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-212422', demo_log_02__sympy_refine),
+    ('demo-log-02', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261018-212424', demo_log_02__sympy_simplify),
 ]
 
 

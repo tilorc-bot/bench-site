@@ -113,8 +113,8 @@ def _fresh():
 # setup 1 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP1 = _Setup(r'''from sympy import *
 import sympy
-import satrefine
-''', ('satrefine', '0.1.0'))
+import satsimp
+''', ('satsimp', '0.1.0'))
 
 # setup 2 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP2 = _Setup(r'''from sympy import *
@@ -126,21 +126,21 @@ import sympy
 # dropped (not a unary fact about one symbol): p > 2
 
 
-# ---- case demo-prime-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered null (no verdict)
+# ---- case demo-prime-01 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered null (no verdict)
 @_in(_SETUP1)
 def demo_prime_01__satrefine_refine():
     p = Symbol('p', integer=True)
     Assum = And(Q.integer(p), Q.prime(p), p > 2)
     Residual = Pow(-1, p) - (-1)
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-prime-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered null (no verdict)
+# the run sympy-auto-20261018-212418 answered null (no verdict)
 @_in(_SETUP2)
 def demo_prime_01__sympy_auto():
     p = Symbol('p', integer=True, prime=True)
@@ -153,7 +153,7 @@ def demo_prime_01__sympy_auto():
 
 
 # ---- case demo-prime-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-191853 answered null (no verdict)
+# the run sympy-ask-20261018-212419 answered null (no verdict)
 @_in(_SETUP2)
 def demo_prime_01__sympy_ask():
     p = Symbol('p', integer=True)
@@ -166,7 +166,7 @@ def demo_prime_01__sympy_ask():
 
 
 # ---- case demo-prime-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-191856 answered null (no verdict)
+# the run sympy-refine-20261018-212422 answered null (no verdict)
 @_in(_SETUP2)
 def demo_prime_01__sympy_refine():
     p = Symbol('p', integer=True)
@@ -179,7 +179,7 @@ def demo_prime_01__sympy_refine():
 
 
 # ---- case demo-prime-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-191859 answered null (no verdict)
+# the run sympy-simplify-20261018-212424 answered null (no verdict)
 @_in(_SETUP2)
 def demo_prime_01__sympy_simplify():
     p = Symbol('p', integer=True, prime=True)
@@ -192,11 +192,11 @@ def demo_prime_01__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-prime-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-191900', demo_prime_01__satrefine_refine),
-    ('demo-prime-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-191852', demo_prime_01__sympy_auto),
-    ('demo-prime-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-191853', demo_prime_01__sympy_ask),
-    ('demo-prime-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-191856', demo_prime_01__sympy_refine),
-    ('demo-prime-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261018-191859', demo_prime_01__sympy_simplify),
+    ('demo-prime-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-212426', demo_prime_01__satrefine_refine),
+    ('demo-prime-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212418', demo_prime_01__sympy_auto),
+    ('demo-prime-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_prime_01__sympy_ask),
+    ('demo-prime-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212422', demo_prime_01__sympy_refine),
+    ('demo-prime-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261018-212424', demo_prime_01__sympy_simplify),
 ]
 
 

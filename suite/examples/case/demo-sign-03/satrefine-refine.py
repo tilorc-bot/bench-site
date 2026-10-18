@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
-# case demo-sign-03 · expected contingent · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered null (declined correctly)
+# case demo-sign-03 · expected contingent · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered null (declined correctly)
 # It prints the CAS version that runs (with a warning if the stored run used another), the
 # verdict, and CHANGED: <stored> -> <got> if the answer is not the stored run's.
 # Exit status: 0 when the answer is the stored run's (a wrong one too; an error answers null,
@@ -75,18 +75,18 @@ def _setup_failed():
 try:
     from sympy import *
     import sympy
-    import satrefine
+    import satsimp
 except Exception:
     _setup_failed()
 
-_version('satrefine', '0.1.0')
+_version('satsimp', '0.1.0')
 
 # the query code, exactly as it ran (an error answers null, as in the harness)
 try:
     x = Symbol('x', complex=True)
     Assum = And(Q.complex(x), ~Q.zero(x))
     Residual = sign(Pow(x, 2)) - 1
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     # true iff the result is 0; false only if it is a definite nonzero number
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
@@ -94,5 +94,5 @@ except (Exception, SystemExit):
     _traceback.print_exc()
     Answer = None
 
-_outcome, _change = _verdict(globals().get('Answer'), 'contingent', 'null', 'satrefine-refine-20261018-191900')
+_outcome, _change = _verdict(globals().get('Answer'), 'contingent', 'null', 'satrefine-refine-20261018-212426')
 _exit(1 if _change else 0)

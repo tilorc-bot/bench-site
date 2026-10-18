@@ -120,7 +120,7 @@ import sympy
 
 
 # ---- case demo-parity-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-191859 answered true (solved)
+# the run sympy-simplify-20261018-212424 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_01__sympy_simplify():
     n = Symbol('n', integer=True, odd=True)
@@ -132,7 +132,7 @@ def demo_parity_01__sympy_simplify():
 
 
 # ---- case demo-parity-02 · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-191859 answered false (solved)
+# the run sympy-simplify-20261018-212424 answered false (solved)
 @_in(_SETUP1)
 def demo_parity_02__sympy_simplify():
     n = Symbol('n', integer=True, odd=True)
@@ -145,7 +145,7 @@ def demo_parity_02__sympy_simplify():
 
 
 # ---- case demo-parity-03 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-191859 answered true (solved)
+# the run sympy-simplify-20261018-212424 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_03__sympy_simplify():
     n = Symbol('n', integer=True)
@@ -157,7 +157,7 @@ def demo_parity_03__sympy_simplify():
 
 
 # ---- case demo-parity-04 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-191859 answered null (declined correctly)
+# the run sympy-simplify-20261018-212424 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_parity_04__sympy_simplify():
     n = Symbol('n', integer=True, even=True)
@@ -169,7 +169,7 @@ def demo_parity_04__sympy_simplify():
 
 
 # ---- case demo-parity-05 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-191859 answered true (solved)
+# the run sympy-simplify-20261018-212424 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_05__sympy_simplify():
     n = Symbol('n', integer=True, odd=True)
@@ -183,11 +183,11 @@ def demo_parity_05__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-parity-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-191859', demo_parity_01__sympy_simplify),
-    ('demo-parity-02', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261018-191859', demo_parity_02__sympy_simplify),
-    ('demo-parity-03', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-191859', demo_parity_03__sympy_simplify),
-    ('demo-parity-04', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261018-191859', demo_parity_04__sympy_simplify),
-    ('demo-parity-05', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-191859', demo_parity_05__sympy_simplify),
+    ('demo-parity-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_parity_01__sympy_simplify),
+    ('demo-parity-02', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261018-212424', demo_parity_02__sympy_simplify),
+    ('demo-parity-03', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_parity_03__sympy_simplify),
+    ('demo-parity-04', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261018-212424', demo_parity_04__sympy_simplify),
+    ('demo-parity-05', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_parity_05__sympy_simplify),
 ]
 
 

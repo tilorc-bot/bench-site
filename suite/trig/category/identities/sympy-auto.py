@@ -121,7 +121,7 @@ import sympy
 
 
 # ---- case trig-double-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191916 answered null (no verdict)
+# the run sympy-auto-20261018-212442 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_01__sympy_auto():
     z = Symbol('z', complex=True)
@@ -133,7 +133,7 @@ def trig_double_01__sympy_auto():
 
 
 # ---- case trig-double-02 · expected false · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191916 answered null (no verdict)
+# the run sympy-auto-20261018-212442 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_02__sympy_auto():
     x = Symbol('x', real=True, positive=True)
@@ -146,7 +146,7 @@ def trig_double_02__sympy_auto():
 
 
 # ---- case trig-pyth-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191916 answered null (no verdict)
+# the run sympy-auto-20261018-212442 answered null (no verdict)
 @_in(_SETUP1)
 def trig_pyth_01__sympy_auto():
     z = Symbol('z', complex=True)
@@ -158,7 +158,7 @@ def trig_pyth_01__sympy_auto():
 
 
 # ---- case trig-sqrt-01 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191916 answered null (declined correctly)
+# the run sympy-auto-20261018-212442 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_sqrt_01__sympy_auto():
     x = Symbol('x', real=True)
@@ -170,7 +170,7 @@ def trig_sqrt_01__sympy_auto():
 
 
 # ---- case trig-tan-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191916 answered null (no verdict)
+# the run sympy-auto-20261018-212442 answered null (no verdict)
 @_in(_SETUP1)
 def trig_tan_01__sympy_auto():
     x = Symbol('x', real=True)
@@ -184,11 +184,11 @@ def trig_tan_01__sympy_auto():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-double-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-191916', trig_double_01__sympy_auto),
-    ('trig-double-02', 'sympy-auto', 'false', 'null', 'sympy-auto-20261018-191916', trig_double_02__sympy_auto),
-    ('trig-pyth-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-191916', trig_pyth_01__sympy_auto),
-    ('trig-sqrt-01', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-191916', trig_sqrt_01__sympy_auto),
-    ('trig-tan-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-191916', trig_tan_01__sympy_auto),
+    ('trig-double-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212442', trig_double_01__sympy_auto),
+    ('trig-double-02', 'sympy-auto', 'false', 'null', 'sympy-auto-20261018-212442', trig_double_02__sympy_auto),
+    ('trig-pyth-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212442', trig_pyth_01__sympy_auto),
+    ('trig-sqrt-01', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212442', trig_sqrt_01__sympy_auto),
+    ('trig-tan-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212442', trig_tan_01__sympy_auto),
 ]
 
 

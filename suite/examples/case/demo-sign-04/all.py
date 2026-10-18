@@ -113,8 +113,8 @@ def _fresh():
 # setup 1 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP1 = _Setup(r'''from sympy import *
 import sympy
-import satrefine
-''', ('satrefine', '0.1.0'))
+import satsimp
+''', ('satsimp', '0.1.0'))
 
 # setup 2 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP2 = _Setup(r'''from sympy import *
@@ -125,21 +125,21 @@ import sympy
 # true iff the result is 0; false only if it is a definite nonzero number
 
 
-# ---- case demo-sign-04 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191900 answered true (solved)
+# ---- case demo-sign-04 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212426 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_04__satrefine_refine():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z))
     Residual = Abs(z * conjugate(z)) - (z * conjugate(z))
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-sign-04 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191852 answered null (no verdict)
+# the run sympy-auto-20261018-212418 answered null (no verdict)
 @_in(_SETUP2)
 def demo_sign_04__sympy_auto():
     z = Symbol('z', complex=True)
@@ -152,7 +152,7 @@ def demo_sign_04__sympy_auto():
 
 
 # ---- case demo-sign-04 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-191853 answered null (no verdict)
+# the run sympy-ask-20261018-212419 answered null (no verdict)
 @_in(_SETUP2)
 def demo_sign_04__sympy_ask():
     z = Symbol('z', complex=True)
@@ -165,7 +165,7 @@ def demo_sign_04__sympy_ask():
 
 
 # ---- case demo-sign-04 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-191856 answered null (no verdict)
+# the run sympy-refine-20261018-212422 answered null (no verdict)
 @_in(_SETUP2)
 def demo_sign_04__sympy_refine():
     z = Symbol('z', complex=True)
@@ -178,7 +178,7 @@ def demo_sign_04__sympy_refine():
 
 
 # ---- case demo-sign-04 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-191859 answered null (no verdict)
+# the run sympy-simplify-20261018-212424 answered null (no verdict)
 @_in(_SETUP2)
 def demo_sign_04__sympy_simplify():
     z = Symbol('z', complex=True)
@@ -191,11 +191,11 @@ def demo_sign_04__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-sign-04', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-191900', demo_sign_04__satrefine_refine),
-    ('demo-sign-04', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-191852', demo_sign_04__sympy_auto),
-    ('demo-sign-04', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-191853', demo_sign_04__sympy_ask),
-    ('demo-sign-04', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-191856', demo_sign_04__sympy_refine),
-    ('demo-sign-04', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261018-191859', demo_sign_04__sympy_simplify),
+    ('demo-sign-04', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-212426', demo_sign_04__satrefine_refine),
+    ('demo-sign-04', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212418', demo_sign_04__sympy_auto),
+    ('demo-sign-04', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_sign_04__sympy_ask),
+    ('demo-sign-04', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212422', demo_sign_04__sympy_refine),
+    ('demo-sign-04', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261018-212424', demo_sign_04__sympy_simplify),
 ]
 
 

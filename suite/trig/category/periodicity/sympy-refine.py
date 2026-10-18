@@ -120,7 +120,7 @@ import sympy
 
 
 # ---- case trig-period-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-191920 answered true (solved)
+# the run sympy-refine-20261018-212445 answered true (solved)
 @_in(_SETUP1)
 def trig_period_01__sympy_refine():
     z = Symbol('z', complex=True)
@@ -133,7 +133,7 @@ def trig_period_01__sympy_refine():
 
 
 # ---- case trig-period-02 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-191920 answered null (declined correctly)
+# the run sympy-refine-20261018-212445 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_02__sympy_refine():
     x = Symbol('x', real=True)
@@ -146,7 +146,7 @@ def trig_period_02__sympy_refine():
 
 
 # ---- case trig-period-03 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-191920 answered null (declined correctly)
+# the run sympy-refine-20261018-212445 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_03__sympy_refine():
     x = Symbol('x', real=True)
@@ -159,7 +159,7 @@ def trig_period_03__sympy_refine():
 
 
 # ---- case trig-shift-01 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-191920 answered null (declined correctly)
+# the run sympy-refine-20261018-212445 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_shift_01__sympy_refine():
     x = Symbol('x', real=True)
@@ -173,10 +173,10 @@ def trig_shift_01__sympy_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-period-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-191920', trig_period_01__sympy_refine),
-    ('trig-period-02', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-191920', trig_period_02__sympy_refine),
-    ('trig-period-03', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-191920', trig_period_03__sympy_refine),
-    ('trig-shift-01', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-191920', trig_shift_01__sympy_refine),
+    ('trig-period-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-212445', trig_period_01__sympy_refine),
+    ('trig-period-02', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-212445', trig_period_02__sympy_refine),
+    ('trig-period-03', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-212445', trig_period_03__sympy_refine),
+    ('trig-shift-01', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-212445', trig_shift_01__sympy_refine),
 ]
 
 

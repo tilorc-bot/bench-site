@@ -120,7 +120,7 @@ import sympy
 
 
 # ---- case demo-nonzero-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-191856 answered null (no verdict)
+# the run sympy-refine-20261018-212422 answered null (no verdict)
 @_in(_SETUP1)
 def demo_nonzero_01__sympy_refine():
     z = Symbol('z', complex=True)
@@ -133,7 +133,7 @@ def demo_nonzero_01__sympy_refine():
 
 
 # ---- case demo-sign-02 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-191856 answered true (solved)
+# the run sympy-refine-20261018-212422 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_02__sympy_refine():
     x = Symbol('x', real=True)
@@ -146,7 +146,7 @@ def demo_sign_02__sympy_refine():
 
 
 # ---- case demo-sign-03 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-191856 answered null (declined correctly)
+# the run sympy-refine-20261018-212422 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_sign_03__sympy_refine():
     x = Symbol('x', complex=True)
@@ -159,7 +159,7 @@ def demo_sign_03__sympy_refine():
 
 
 # ---- case demo-sign-04 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-191856 answered null (no verdict)
+# the run sympy-refine-20261018-212422 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_04__sympy_refine():
     z = Symbol('z', complex=True)
@@ -172,7 +172,7 @@ def demo_sign_04__sympy_refine():
 
 
 # ---- case demo-sign-05 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-191856 answered true (solved)
+# the run sympy-refine-20261018-212422 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_05__sympy_refine():
     x = Symbol('x', real=True)
@@ -187,11 +187,11 @@ def demo_sign_05__sympy_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-nonzero-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-191856', demo_nonzero_01__sympy_refine),
-    ('demo-sign-02', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-191856', demo_sign_02__sympy_refine),
-    ('demo-sign-03', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-191856', demo_sign_03__sympy_refine),
-    ('demo-sign-04', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-191856', demo_sign_04__sympy_refine),
-    ('demo-sign-05', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-191856', demo_sign_05__sympy_refine),
+    ('demo-nonzero-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212422', demo_nonzero_01__sympy_refine),
+    ('demo-sign-02', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-212422', demo_sign_02__sympy_refine),
+    ('demo-sign-03', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-212422', demo_sign_03__sympy_refine),
+    ('demo-sign-04', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212422', demo_sign_04__sympy_refine),
+    ('demo-sign-05', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-212422', demo_sign_05__sympy_refine),
 ]
 
 

@@ -113,8 +113,8 @@ def _fresh():
 # setup 1 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP1 = _Setup(r'''from sympy import *
 import sympy
-import satrefine
-''', ('satrefine', '0.1.0'))
+import satsimp
+''', ('satsimp', '0.1.0'))
 
 # setup 2 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP2 = _Setup(r'''from sympy import *
@@ -127,21 +127,21 @@ import sympy
 # dropped (not a unary fact about one symbol): x < 1
 
 
-# ---- case trig-atan-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191923 answered null (no verdict)
+# ---- case trig-atan-01 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212449 answered null (no verdict)
 @_in(_SETUP1)
 def trig_atan_01__satrefine_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), x > -1, x < 1)
     Residual = atan(tan(x)) - x
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
 # ---- case trig-atan-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191916 answered null (no verdict)
+# the run sympy-auto-20261018-212442 answered null (no verdict)
 @_in(_SETUP2)
 def trig_atan_01__sympy_auto():
     x = Symbol('x', real=True)
@@ -154,7 +154,7 @@ def trig_atan_01__sympy_auto():
 
 
 # ---- case trig-atan-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-191917 answered null (no verdict)
+# the run sympy-ask-20261018-212443 answered null (no verdict)
 @_in(_SETUP2)
 def trig_atan_01__sympy_ask():
     x = Symbol('x', real=True)
@@ -167,7 +167,7 @@ def trig_atan_01__sympy_ask():
 
 
 # ---- case trig-atan-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-191920 answered null (no verdict)
+# the run sympy-refine-20261018-212445 answered null (no verdict)
 @_in(_SETUP2)
 def trig_atan_01__sympy_refine():
     x = Symbol('x', real=True)
@@ -180,7 +180,7 @@ def trig_atan_01__sympy_refine():
 
 
 # ---- case trig-atan-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-191921 answered null (no verdict)
+# the run sympy-simplify-20261018-212447 answered null (no verdict)
 @_in(_SETUP2)
 def trig_atan_01__sympy_simplify():
     x = Symbol('x', real=True)
@@ -193,11 +193,11 @@ def trig_atan_01__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-atan-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-191923', trig_atan_01__satrefine_refine),
-    ('trig-atan-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-191916', trig_atan_01__sympy_auto),
-    ('trig-atan-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-191917', trig_atan_01__sympy_ask),
-    ('trig-atan-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-191920', trig_atan_01__sympy_refine),
-    ('trig-atan-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261018-191921', trig_atan_01__sympy_simplify),
+    ('trig-atan-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-212449', trig_atan_01__satrefine_refine),
+    ('trig-atan-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212442', trig_atan_01__sympy_auto),
+    ('trig-atan-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212443', trig_atan_01__sympy_ask),
+    ('trig-atan-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212445', trig_atan_01__sympy_refine),
+    ('trig-atan-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261018-212447', trig_atan_01__sympy_simplify),
 ]
 
 

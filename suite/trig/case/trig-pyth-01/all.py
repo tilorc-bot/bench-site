@@ -113,8 +113,8 @@ def _fresh():
 # setup 1 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP1 = _Setup(r'''from sympy import *
 import sympy
-import satrefine
-''', ('satrefine', '0.1.0'))
+import satsimp
+''', ('satsimp', '0.1.0'))
 
 # setup 2 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP2 = _Setup(r'''from sympy import *
@@ -125,21 +125,21 @@ import sympy
 # true iff the result is 0; false only if it is a definite nonzero number
 
 
-# ---- case trig-pyth-01 · expected true · system satrefine-refine (satrefine 0.1.0)
-# the run satrefine-refine-20261018-191923 answered null (no verdict)
+# ---- case trig-pyth-01 · expected true · system satrefine-refine (satsimp 0.1.0)
+# the run satrefine-refine-20261018-212449 answered null (no verdict)
 @_in(_SETUP1)
 def trig_pyth_01__satrefine_refine():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z))
     Residual = sin(z) * sin(z) + cos(z) * cos(z) - 1
-    Result = satrefine.refine(Residual, Assum)
+    Result = satsimp.refine(Residual, Assum)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
 # ---- case trig-pyth-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-191916 answered null (no verdict)
+# the run sympy-auto-20261018-212442 answered null (no verdict)
 @_in(_SETUP2)
 def trig_pyth_01__sympy_auto():
     z = Symbol('z', complex=True)
@@ -152,7 +152,7 @@ def trig_pyth_01__sympy_auto():
 
 
 # ---- case trig-pyth-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-191917 answered null (no verdict)
+# the run sympy-ask-20261018-212443 answered null (no verdict)
 @_in(_SETUP2)
 def trig_pyth_01__sympy_ask():
     z = Symbol('z', complex=True)
@@ -165,7 +165,7 @@ def trig_pyth_01__sympy_ask():
 
 
 # ---- case trig-pyth-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-191920 answered null (no verdict)
+# the run sympy-refine-20261018-212445 answered null (no verdict)
 @_in(_SETUP2)
 def trig_pyth_01__sympy_refine():
     z = Symbol('z', complex=True)
@@ -178,7 +178,7 @@ def trig_pyth_01__sympy_refine():
 
 
 # ---- case trig-pyth-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-191921 answered true (solved)
+# the run sympy-simplify-20261018-212447 answered true (solved)
 @_in(_SETUP2)
 def trig_pyth_01__sympy_simplify():
     z = Symbol('z', complex=True)
@@ -191,11 +191,11 @@ def trig_pyth_01__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-pyth-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-191923', trig_pyth_01__satrefine_refine),
-    ('trig-pyth-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-191916', trig_pyth_01__sympy_auto),
-    ('trig-pyth-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-191917', trig_pyth_01__sympy_ask),
-    ('trig-pyth-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-191920', trig_pyth_01__sympy_refine),
-    ('trig-pyth-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-191921', trig_pyth_01__sympy_simplify),
+    ('trig-pyth-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-212449', trig_pyth_01__satrefine_refine),
+    ('trig-pyth-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212442', trig_pyth_01__sympy_auto),
+    ('trig-pyth-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212443', trig_pyth_01__sympy_ask),
+    ('trig-pyth-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212445', trig_pyth_01__sympy_refine),
+    ('trig-pyth-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212447', trig_pyth_01__sympy_simplify),
 ]
 
 
