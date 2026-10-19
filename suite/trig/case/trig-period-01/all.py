@@ -126,7 +126,7 @@ import sympy
 
 
 # ---- case trig-period-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261018-212449 answered true (solved)
+# the run satrefine-refine-20261019-025453 answered true (solved)
 @_in(_SETUP1)
 def trig_period_01__satrefine_refine():
     z = Symbol('z', complex=True)
@@ -191,7 +191,7 @@ def trig_period_01__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-period-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-212449', trig_period_01__satrefine_refine),
+    ('trig-period-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025453', trig_period_01__satrefine_refine),
     ('trig-period-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212442', trig_period_01__sympy_auto),
     ('trig-period-01', 'sympy-ask', 'true', 'true', 'sympy-ask-20261018-212443', trig_period_01__sympy_ask),
     ('trig-period-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-212445', trig_period_01__sympy_refine),

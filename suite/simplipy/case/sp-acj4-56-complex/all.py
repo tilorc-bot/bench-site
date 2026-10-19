@@ -128,7 +128,7 @@ import sympy
 
 
 # ---- case sp-acj4-56-complex · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261018-213005 answered null (declined correctly)
+# the run satrefine-refine-20261019-025455 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_56_complex__satrefine_refine():
     x = Symbol('x', complex=True)
@@ -193,7 +193,7 @@ def sp_acj4_56_complex__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-56-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-213005', sp_acj4_56_complex__satrefine_refine),
+    ('sp-acj4-56-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-025455', sp_acj4_56_complex__satrefine_refine),
     ('sp-acj4-56-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212658', sp_acj4_56_complex__sympy_auto),
     ('sp-acj4-56-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-212703', sp_acj4_56_complex__sympy_ask),
     ('sp-acj4-56-complex', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-212815', sp_acj4_56_complex__sympy_refine),

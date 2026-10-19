@@ -131,7 +131,7 @@ import sympy
 
 
 # ---- case trig-acos-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261018-212449 answered null (no verdict)
+# the run satrefine-refine-20261019-025453 answered null (no verdict)
 @_in(_SETUP1)
 def trig_acos_01__satrefine_refine():
     x = Symbol('x', real=True)
@@ -193,7 +193,7 @@ def trig_acos_01__sympy_simplify():
 
 
 # ---- case trig-asin-01 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261018-212449 answered null (declined correctly)
+# the run satrefine-refine-20261019-025453 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_asin_01__satrefine_refine():
     x = Symbol('x', real=True)
@@ -255,7 +255,7 @@ def trig_asin_01__sympy_simplify():
 
 
 # ---- case trig-asin-02 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261018-212449 answered null (no verdict)
+# the run satrefine-refine-20261019-025453 answered null (no verdict)
 @_in(_SETUP1)
 def trig_asin_02__satrefine_refine():
     x = Symbol('x', real=True)
@@ -317,7 +317,7 @@ def trig_asin_02__sympy_simplify():
 
 
 # ---- case trig-atan-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261018-212449 answered null (no verdict)
+# the run satrefine-refine-20261019-025453 answered null (no verdict)
 @_in(_SETUP1)
 def trig_atan_01__satrefine_refine():
     x = Symbol('x', real=True)
@@ -380,22 +380,22 @@ def trig_atan_01__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-acos-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-212449', trig_acos_01__satrefine_refine),
+    ('trig-acos-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-025453', trig_acos_01__satrefine_refine),
     ('trig-acos-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212442', trig_acos_01__sympy_auto),
     ('trig-acos-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212443', trig_acos_01__sympy_ask),
     ('trig-acos-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212445', trig_acos_01__sympy_refine),
     ('trig-acos-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261018-212447', trig_acos_01__sympy_simplify),
-    ('trig-asin-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-212449', trig_asin_01__satrefine_refine),
+    ('trig-asin-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-025453', trig_asin_01__satrefine_refine),
     ('trig-asin-01', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212442', trig_asin_01__sympy_auto),
     ('trig-asin-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-212443', trig_asin_01__sympy_ask),
     ('trig-asin-01', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-212445', trig_asin_01__sympy_refine),
     ('trig-asin-01', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261018-212447', trig_asin_01__sympy_simplify),
-    ('trig-asin-02', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-212449', trig_asin_02__satrefine_refine),
+    ('trig-asin-02', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-025453', trig_asin_02__satrefine_refine),
     ('trig-asin-02', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212442', trig_asin_02__sympy_auto),
     ('trig-asin-02', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212443', trig_asin_02__sympy_ask),
     ('trig-asin-02', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212445', trig_asin_02__sympy_refine),
     ('trig-asin-02', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261018-212447', trig_asin_02__sympy_simplify),
-    ('trig-atan-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261018-212449', trig_atan_01__satrefine_refine),
+    ('trig-atan-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-025453', trig_atan_01__satrefine_refine),
     ('trig-atan-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212442', trig_atan_01__sympy_auto),
     ('trig-atan-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212443', trig_atan_01__sympy_ask),
     ('trig-atan-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212445', trig_atan_01__sympy_refine),

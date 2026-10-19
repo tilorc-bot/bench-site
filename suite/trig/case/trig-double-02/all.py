@@ -127,7 +127,7 @@ import sympy
 
 
 # ---- case trig-double-02 · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261018-212449 answered null (no verdict)
+# the run satrefine-refine-20261019-025453 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_02__satrefine_refine():
     x = Symbol('x', real=True)
@@ -192,7 +192,7 @@ def trig_double_02__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-double-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261018-212449', trig_double_02__satrefine_refine),
+    ('trig-double-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261019-025453', trig_double_02__satrefine_refine),
     ('trig-double-02', 'sympy-auto', 'false', 'null', 'sympy-auto-20261018-212442', trig_double_02__sympy_auto),
     ('trig-double-02', 'sympy-ask', 'false', 'null', 'sympy-ask-20261018-212443', trig_double_02__sympy_ask),
     ('trig-double-02', 'sympy-refine', 'false', 'null', 'sympy-refine-20261018-212445', trig_double_02__sympy_refine),

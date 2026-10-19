@@ -126,7 +126,7 @@ import sympy
 
 
 # ---- case trig-asin-01 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261018-212449 answered null (declined correctly)
+# the run satrefine-refine-20261019-025453 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_asin_01__satrefine_refine():
     x = Symbol('x', real=True)
@@ -191,7 +191,7 @@ def trig_asin_01__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-asin-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-212449', trig_asin_01__satrefine_refine),
+    ('trig-asin-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-025453', trig_asin_01__satrefine_refine),
     ('trig-asin-01', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212442', trig_asin_01__sympy_auto),
     ('trig-asin-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-212443', trig_asin_01__sympy_ask),
     ('trig-asin-01', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-212445', trig_asin_01__sympy_refine),

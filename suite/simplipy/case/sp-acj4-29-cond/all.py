@@ -127,7 +127,7 @@ import sympy
 
 
 # ---- case sp-acj4-29-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261018-213005 answered true (solved)
+# the run satrefine-refine-20261019-025455 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_29_cond__satrefine_refine():
     x = Symbol('x', real=True)
@@ -192,7 +192,7 @@ def sp_acj4_29_cond__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-29-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-213005', sp_acj4_29_cond__satrefine_refine),
+    ('sp-acj4-29-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025455', sp_acj4_29_cond__satrefine_refine),
     ('sp-acj4-29-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_29_cond__sympy_auto),
     ('sp-acj4-29-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212703', sp_acj4_29_cond__sympy_ask),
     ('sp-acj4-29-cond', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212815', sp_acj4_29_cond__sympy_refine),
