@@ -118,10 +118,10 @@ import satassume.sympy_api
 
 
 # ---- case demo-eq-trig-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032311 answered null (no verdict)
+# the run satassume-ask-20261019-041805 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_trig_01__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x))
     Residual = Pow(sin(x), 2) + Pow(cos(x), 2) - 1
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -130,10 +130,10 @@ def demo_eq_trig_01__satassume_ask():
 
 
 # ---- case demo-eq-trig-02 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032311 answered null (no verdict)
+# the run satassume-ask-20261019-041805 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_trig_02__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x))
     Residual = 2 * sin(x) * cos(x) - sin(2 * x)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -143,8 +143,8 @@ def demo_eq_trig_02__satassume_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-trig-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_eq_trig_01__satassume_ask),
-    ('demo-eq-trig-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_eq_trig_02__satassume_ask),
+    ('demo-eq-trig-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_eq_trig_01__satassume_ask),
+    ('demo-eq-trig-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_eq_trig_02__satassume_ask),
 ]
 
 

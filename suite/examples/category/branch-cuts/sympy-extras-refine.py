@@ -128,7 +128,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-atan2-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-032458 answered true (solved)
+# the run sympy-extras-refine-20261019-041814 answered true (solved)
 @_in(_SETUP1)
 def demo_atan2_01__sympy_extras_refine():
     x = Symbol('x', real=True)
@@ -142,7 +142,7 @@ def demo_atan2_01__sympy_extras_refine():
 
 
 # ---- case demo-atan2-02 · expected false · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-032458 answered false (solved)
+# the run sympy-extras-refine-20261019-041814 answered false (solved)
 @_in(_SETUP1)
 def demo_atan2_02__sympy_extras_refine():
     x = Symbol('x', real=True)
@@ -156,7 +156,7 @@ def demo_atan2_02__sympy_extras_refine():
 
 
 # ---- case demo-log-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-032458 answered null (no verdict)
+# the run sympy-extras-refine-20261019-041814 answered null (no verdict)
 @_in(_SETUP1)
 def demo_log_01__sympy_extras_refine():
     x = Symbol('x', real=True)
@@ -170,7 +170,7 @@ def demo_log_01__sympy_extras_refine():
 
 
 # ---- case demo-log-02 · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-032458 answered null (declined correctly)
+# the run sympy-extras-refine-20261019-041814 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_log_02__sympy_extras_refine():
     z = Symbol('z', complex=True)
@@ -184,7 +184,7 @@ def demo_log_02__sympy_extras_refine():
 
 
 # ---- case demo-log-03 · expected false · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-032458 answered null (no verdict)
+# the run sympy-extras-refine-20261019-041814 answered null (no verdict)
 @_in(_SETUP1)
 def demo_log_03__sympy_extras_refine():
     x = Symbol('x', real=True)
@@ -198,11 +198,11 @@ def demo_log_03__sympy_extras_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-atan2-01', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261019-032458', demo_atan2_01__sympy_extras_refine),
-    ('demo-atan2-02', 'sympy-extras-refine', 'false', 'false', 'sympy-extras-refine-20261019-032458', demo_atan2_02__sympy_extras_refine),
-    ('demo-log-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-032458', demo_log_01__sympy_extras_refine),
-    ('demo-log-02', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-032458', demo_log_02__sympy_extras_refine),
-    ('demo-log-03', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261019-032458', demo_log_03__sympy_extras_refine),
+    ('demo-atan2-01', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261019-041814', demo_atan2_01__sympy_extras_refine),
+    ('demo-atan2-02', 'sympy-extras-refine', 'false', 'false', 'sympy-extras-refine-20261019-041814', demo_atan2_02__sympy_extras_refine),
+    ('demo-log-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-041814', demo_log_01__sympy_extras_refine),
+    ('demo-log-02', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-041814', demo_log_02__sympy_extras_refine),
+    ('demo-log-03', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261019-041814', demo_log_03__sympy_extras_refine),
 ]
 
 

@@ -118,10 +118,10 @@ import satassume.sympy_api
 
 
 # ---- case trig-acos-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032505 answered null (no verdict)
+# the run satassume-ask-20261019-041821 answered null (no verdict)
 @_in(_SETUP1)
 def trig_acos_01__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x), x < 3)
     Residual = acos(cos(x)) - x
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -130,10 +130,10 @@ def trig_acos_01__satassume_ask():
 
 
 # ---- case trig-asin-01 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032505 answered null (declined correctly)
+# the run satassume-ask-20261019-041821 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_asin_01__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = asin(sin(x)) - x
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -142,10 +142,10 @@ def trig_asin_01__satassume_ask():
 
 
 # ---- case trig-asin-02 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032505 answered null (no verdict)
+# the run satassume-ask-20261019-041821 answered null (no verdict)
 @_in(_SETUP1)
 def trig_asin_02__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), x > -1, x < 1)
     Residual = asin(sin(x)) - x
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -154,10 +154,10 @@ def trig_asin_02__satassume_ask():
 
 
 # ---- case trig-atan-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032505 answered null (no verdict)
+# the run satassume-ask-20261019-041821 answered null (no verdict)
 @_in(_SETUP1)
 def trig_atan_01__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), x > -1, x < 1)
     Residual = atan(tan(x)) - x
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -166,10 +166,10 @@ def trig_atan_01__satassume_ask():
 
 
 # ---- case trig-double-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032505 answered null (no verdict)
+# the run satassume-ask-20261019-041821 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_01__satassume_ask():
-    z = Symbol('z', complex=True)
+    z = Symbol('z')
     Assum = And(Q.complex(z))
     Residual = sin(2 * z) - (2 * (sin(z) * cos(z)))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -178,10 +178,10 @@ def trig_double_01__satassume_ask():
 
 
 # ---- case trig-double-02 · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032505 answered null (no verdict)
+# the run satassume-ask-20261019-041821 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_02__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x), x < 1)
     Residual = sin(2 * x) - (2 * sin(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -190,10 +190,10 @@ def trig_double_02__satassume_ask():
 
 
 # ---- case trig-period-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032505 answered true (solved)
+# the run satassume-ask-20261019-041821 answered true (solved)
 @_in(_SETUP1)
 def trig_period_01__satassume_ask():
-    z = Symbol('z', complex=True)
+    z = Symbol('z')
     Assum = And(Q.complex(z))
     Residual = sin(z + 2 * pi) - sin(z)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -202,10 +202,10 @@ def trig_period_01__satassume_ask():
 
 
 # ---- case trig-period-02 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032505 answered null (declined correctly)
+# the run satassume-ask-20261019-041821 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_02__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = cos(x + pi) - cos(x)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -214,10 +214,10 @@ def trig_period_02__satassume_ask():
 
 
 # ---- case trig-period-03 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032505 answered null (declined correctly)
+# the run satassume-ask-20261019-041821 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_03__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x))
     Residual = cos(x + pi) - cos(x)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -226,10 +226,10 @@ def trig_period_03__satassume_ask():
 
 
 # ---- case trig-pyth-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032505 answered null (no verdict)
+# the run satassume-ask-20261019-041821 answered null (no verdict)
 @_in(_SETUP1)
 def trig_pyth_01__satassume_ask():
-    z = Symbol('z', complex=True)
+    z = Symbol('z')
     Assum = And(Q.complex(z))
     Residual = sin(z) * sin(z) + cos(z) * cos(z) - 1
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -238,10 +238,10 @@ def trig_pyth_01__satassume_ask():
 
 
 # ---- case trig-shift-01 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032505 answered null (declined correctly)
+# the run satassume-ask-20261019-041821 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_shift_01__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sin(x + pi) - sin(x)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -250,10 +250,10 @@ def trig_shift_01__satassume_ask():
 
 
 # ---- case trig-sqrt-01 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032505 answered null (declined correctly)
+# the run satassume-ask-20261019-041821 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_sqrt_01__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sqrt(1 - sin(x) * sin(x)) - cos(x)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -262,10 +262,10 @@ def trig_sqrt_01__satassume_ask():
 
 
 # ---- case trig-tan-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032505 answered null (no verdict)
+# the run satassume-ask-20261019-041821 answered null (no verdict)
 @_in(_SETUP1)
 def trig_tan_01__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(cos(x)))
     Residual = tan(x) - (sin(x) / cos(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -275,19 +275,19 @@ def trig_tan_01__satassume_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-acos-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032505', trig_acos_01__satassume_ask),
-    ('trig-asin-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032505', trig_asin_01__satassume_ask),
-    ('trig-asin-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032505', trig_asin_02__satassume_ask),
-    ('trig-atan-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032505', trig_atan_01__satassume_ask),
-    ('trig-double-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032505', trig_double_01__satassume_ask),
-    ('trig-double-02', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-032505', trig_double_02__satassume_ask),
-    ('trig-period-01', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-032505', trig_period_01__satassume_ask),
-    ('trig-period-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032505', trig_period_02__satassume_ask),
-    ('trig-period-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032505', trig_period_03__satassume_ask),
-    ('trig-pyth-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032505', trig_pyth_01__satassume_ask),
-    ('trig-shift-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032505', trig_shift_01__satassume_ask),
-    ('trig-sqrt-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032505', trig_sqrt_01__satassume_ask),
-    ('trig-tan-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032505', trig_tan_01__satassume_ask),
+    ('trig-acos-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041821', trig_acos_01__satassume_ask),
+    ('trig-asin-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041821', trig_asin_01__satassume_ask),
+    ('trig-asin-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041821', trig_asin_02__satassume_ask),
+    ('trig-atan-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041821', trig_atan_01__satassume_ask),
+    ('trig-double-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041821', trig_double_01__satassume_ask),
+    ('trig-double-02', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-041821', trig_double_02__satassume_ask),
+    ('trig-period-01', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-041821', trig_period_01__satassume_ask),
+    ('trig-period-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041821', trig_period_02__satassume_ask),
+    ('trig-period-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041821', trig_period_03__satassume_ask),
+    ('trig-pyth-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041821', trig_pyth_01__satassume_ask),
+    ('trig-shift-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041821', trig_shift_01__satassume_ask),
+    ('trig-sqrt-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041821', trig_sqrt_01__satassume_ask),
+    ('trig-tan-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041821', trig_tan_01__satassume_ask),
 ]
 
 

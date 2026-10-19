@@ -121,10 +121,10 @@ import satsimp
 
 
 # ---- case demo-eq-abs-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-032451 answered true (solved)
+# the run satrefine-simplify-20261019-041807 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_abs_01__satrefine_simplify():
-    x = Symbol('x', real=True, negative=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.negative(x))
     Residual = Abs(x) - (-x)
     Result = simplify(satsimp.refine(Residual, Assum))
@@ -134,10 +134,10 @@ def demo_eq_abs_01__satrefine_simplify():
 
 
 # ---- case demo-eq-abs-02 · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-032451 answered null (no verdict)
+# the run satrefine-simplify-20261019-041807 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_abs_02__satrefine_simplify():
-    x = Symbol('x', real=True, negative=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.negative(x))
     Residual = Abs(x) - x
     Result = simplify(satsimp.refine(Residual, Assum))
@@ -147,10 +147,10 @@ def demo_eq_abs_02__satrefine_simplify():
 
 
 # ---- case demo-eq-sqrt-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-032451 answered true (solved)
+# the run satrefine-simplify-20261019-041807 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_01__satrefine_simplify():
-    x = Symbol('x', real=True, positive=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x))
     Residual = sqrt(Pow(x, 2)) - x
     Result = simplify(satsimp.refine(Residual, Assum))
@@ -160,10 +160,10 @@ def demo_eq_sqrt_01__satrefine_simplify():
 
 
 # ---- case demo-eq-sqrt-02 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-032451 answered true (solved)
+# the run satrefine-simplify-20261019-041807 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_02__satrefine_simplify():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sqrt(Pow(x, 2)) - Abs(x)
     Result = simplify(satsimp.refine(Residual, Assum))
@@ -173,10 +173,10 @@ def demo_eq_sqrt_02__satrefine_simplify():
 
 
 # ---- case demo-eq-sqrt-03 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-032451 answered null (declined correctly)
+# the run satrefine-simplify-20261019-041807 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_eq_sqrt_03__satrefine_simplify():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sqrt(Pow(x, 2)) - x
     Result = simplify(satsimp.refine(Residual, Assum))
@@ -186,10 +186,10 @@ def demo_eq_sqrt_03__satrefine_simplify():
 
 
 # ---- case demo-eq-sqrt-04 · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-032451 answered false (solved)
+# the run satrefine-simplify-20261019-041807 answered false (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_04__satrefine_simplify():
-    x = Symbol('x', real=True, positive=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x))
     Residual = sqrt(Pow(x, 2)) + 1 - x
     Result = simplify(satsimp.refine(Residual, Assum))
@@ -200,12 +200,12 @@ def demo_eq_sqrt_04__satrefine_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-abs-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-032451', demo_eq_abs_01__satrefine_simplify),
-    ('demo-eq-abs-02', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261019-032451', demo_eq_abs_02__satrefine_simplify),
-    ('demo-eq-sqrt-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-032451', demo_eq_sqrt_01__satrefine_simplify),
-    ('demo-eq-sqrt-02', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-032451', demo_eq_sqrt_02__satrefine_simplify),
-    ('demo-eq-sqrt-03', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-032451', demo_eq_sqrt_03__satrefine_simplify),
-    ('demo-eq-sqrt-04', 'satrefine-simplify', 'false', 'false', 'satrefine-simplify-20261019-032451', demo_eq_sqrt_04__satrefine_simplify),
+    ('demo-eq-abs-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-041807', demo_eq_abs_01__satrefine_simplify),
+    ('demo-eq-abs-02', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261019-041807', demo_eq_abs_02__satrefine_simplify),
+    ('demo-eq-sqrt-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-041807', demo_eq_sqrt_01__satrefine_simplify),
+    ('demo-eq-sqrt-02', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-041807', demo_eq_sqrt_02__satrefine_simplify),
+    ('demo-eq-sqrt-03', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-041807', demo_eq_sqrt_03__satrefine_simplify),
+    ('demo-eq-sqrt-04', 'satrefine-simplify', 'false', 'false', 'satrefine-simplify-20261019-041807', demo_eq_sqrt_04__satrefine_simplify),
 ]
 
 

@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # case demo-log-02 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-032451 answered null (declined correctly)
+# the run satrefine-simplify-20261019-041807 answered null (declined correctly)
 # It prints the CAS version that runs (with a warning if the stored run used another), the
 # verdict, and CHANGED: <stored> -> <got> if the answer is not the stored run's.
 # Exit status: 0 when the answer is the stored run's (a wrong one too; an error answers null,
@@ -83,8 +83,8 @@ _version('satsimp', '0.1.0')
 
 # the query code, exactly as it ran (an error answers null, as in the harness)
 try:
-    z = Symbol('z', complex=True, zero=False)
-    w = Symbol('w', complex=True, zero=False)
+    z = Symbol('z')
+    w = Symbol('w')
     Assum = And(Q.complex(z), Q.complex(w), ~Q.zero(z), ~Q.zero(w))
     Residual = log(z * w) - (log(z) + log(w))
     Result = simplify(satsimp.refine(Residual, Assum))
@@ -95,5 +95,5 @@ except (Exception, SystemExit):
     _traceback.print_exc()
     Answer = None
 
-_outcome, _change = _verdict(globals().get('Answer'), 'contingent', 'null', 'satrefine-simplify-20261019-032451')
+_outcome, _change = _verdict(globals().get('Answer'), 'contingent', 'null', 'satrefine-simplify-20261019-041807')
 _exit(1 if _change else 0)

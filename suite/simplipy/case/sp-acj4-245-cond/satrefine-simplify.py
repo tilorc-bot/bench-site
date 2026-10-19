@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # case sp-acj4-245-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-032549 answered true (solved)
+# the run satrefine-simplify-20261019-041906 answered true (solved)
 # It prints the CAS version that runs (with a warning if the stored run used another), the
 # verdict, and CHANGED: <stored> -> <got> if the answer is not the stored run's.
 # Exit status: 0 when the answer is the stored run's (a wrong one too; an error answers null,
@@ -83,9 +83,7 @@ _version('satsimp', '0.1.0')
 
 # the query code, exactly as it ran (an error answers null, as in the harness)
 try:
-    x = Symbol('x', complex=True, real=True, zero=False)
-    # dropped (not a unary fact about one symbol): re(x) > 0
-    # dropped (not a unary fact about one symbol): ~Q.zero(real_root(x, 7))
+    x = Symbol('x')
     Assum = And(Q.complex(x), re(x) > 0, Q.real(x), ~Q.zero(real_root(x, 7)), ~Q.zero(x))
     Residual = log(real_root(x, 7)) - (log(x) / 7)
     Result = simplify(satsimp.refine(Residual, Assum))
@@ -96,5 +94,5 @@ except (Exception, SystemExit):
     _traceback.print_exc()
     Answer = None
 
-_outcome, _change = _verdict(globals().get('Answer'), 'true', 'true', 'satrefine-simplify-20261019-032549')
+_outcome, _change = _verdict(globals().get('Answer'), 'true', 'true', 'satrefine-simplify-20261019-041906')
 _exit(1 if _change else 0)

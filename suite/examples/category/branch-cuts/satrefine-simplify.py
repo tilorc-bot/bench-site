@@ -121,11 +121,11 @@ import satsimp
 
 
 # ---- case demo-atan2-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-032451 answered true (solved)
+# the run satrefine-simplify-20261019-041807 answered true (solved)
 @_in(_SETUP1)
 def demo_atan2_01__satrefine_simplify():
-    x = Symbol('x', real=True, positive=True)
-    y = Symbol('y', real=True)
+    x = Symbol('x')
+    y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.positive(x))
     Residual = atan2(y, x) - atan(y / x)
     Result = simplify(satsimp.refine(Residual, Assum))
@@ -135,11 +135,11 @@ def demo_atan2_01__satrefine_simplify():
 
 
 # ---- case demo-atan2-02 · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-032451 answered false (solved)
+# the run satrefine-simplify-20261019-041807 answered false (solved)
 @_in(_SETUP1)
 def demo_atan2_02__satrefine_simplify():
-    x = Symbol('x', real=True, negative=True)
-    y = Symbol('y', real=True, positive=True)
+    x = Symbol('x')
+    y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.negative(x), Q.positive(y))
     Residual = atan2(y, x) - atan(y / x)
     Result = simplify(satsimp.refine(Residual, Assum))
@@ -149,11 +149,11 @@ def demo_atan2_02__satrefine_simplify():
 
 
 # ---- case demo-log-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-032451 answered true (solved)
+# the run satrefine-simplify-20261019-041807 answered true (solved)
 @_in(_SETUP1)
 def demo_log_01__satrefine_simplify():
-    x = Symbol('x', real=True, positive=True)
-    y = Symbol('y', real=True, positive=True)
+    x = Symbol('x')
+    y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
     Residual = log(x * y) - (log(x) + log(y))
     Result = simplify(satsimp.refine(Residual, Assum))
@@ -163,11 +163,11 @@ def demo_log_01__satrefine_simplify():
 
 
 # ---- case demo-log-02 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-032451 answered null (declined correctly)
+# the run satrefine-simplify-20261019-041807 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_log_02__satrefine_simplify():
-    z = Symbol('z', complex=True, zero=False)
-    w = Symbol('w', complex=True, zero=False)
+    z = Symbol('z')
+    w = Symbol('w')
     Assum = And(Q.complex(z), Q.complex(w), ~Q.zero(z), ~Q.zero(w))
     Residual = log(z * w) - (log(z) + log(w))
     Result = simplify(satsimp.refine(Residual, Assum))
@@ -177,10 +177,10 @@ def demo_log_02__satrefine_simplify():
 
 
 # ---- case demo-log-03 · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-032451 answered false (solved)
+# the run satrefine-simplify-20261019-041807 answered false (solved)
 @_in(_SETUP1)
 def demo_log_03__satrefine_simplify():
-    x = Symbol('x', real=True, negative=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.negative(x))
     Residual = log(x) - log(-x)
     Result = simplify(satsimp.refine(Residual, Assum))
@@ -191,11 +191,11 @@ def demo_log_03__satrefine_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-atan2-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-032451', demo_atan2_01__satrefine_simplify),
-    ('demo-atan2-02', 'satrefine-simplify', 'false', 'false', 'satrefine-simplify-20261019-032451', demo_atan2_02__satrefine_simplify),
-    ('demo-log-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-032451', demo_log_01__satrefine_simplify),
-    ('demo-log-02', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-032451', demo_log_02__satrefine_simplify),
-    ('demo-log-03', 'satrefine-simplify', 'false', 'false', 'satrefine-simplify-20261019-032451', demo_log_03__satrefine_simplify),
+    ('demo-atan2-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-041807', demo_atan2_01__satrefine_simplify),
+    ('demo-atan2-02', 'satrefine-simplify', 'false', 'false', 'satrefine-simplify-20261019-041807', demo_atan2_02__satrefine_simplify),
+    ('demo-log-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-041807', demo_log_01__satrefine_simplify),
+    ('demo-log-02', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-041807', demo_log_02__satrefine_simplify),
+    ('demo-log-03', 'satrefine-simplify', 'false', 'false', 'satrefine-simplify-20261019-041807', demo_log_03__satrefine_simplify),
 ]
 
 

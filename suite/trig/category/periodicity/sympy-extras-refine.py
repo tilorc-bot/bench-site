@@ -128,7 +128,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case trig-period-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-032520 answered true (solved)
+# the run sympy-extras-refine-20261019-041836 answered true (solved)
 @_in(_SETUP1)
 def trig_period_01__sympy_extras_refine():
     z = Symbol('z', complex=True)
@@ -141,7 +141,7 @@ def trig_period_01__sympy_extras_refine():
 
 
 # ---- case trig-period-02 · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-032520 answered null (declined correctly)
+# the run sympy-extras-refine-20261019-041836 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_02__sympy_extras_refine():
     x = Symbol('x', real=True)
@@ -154,7 +154,7 @@ def trig_period_02__sympy_extras_refine():
 
 
 # ---- case trig-period-03 · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-032520 answered null (declined correctly)
+# the run sympy-extras-refine-20261019-041836 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_03__sympy_extras_refine():
     x = Symbol('x', real=True)
@@ -167,7 +167,7 @@ def trig_period_03__sympy_extras_refine():
 
 
 # ---- case trig-shift-01 · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-032520 answered null (declined correctly)
+# the run sympy-extras-refine-20261019-041836 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_shift_01__sympy_extras_refine():
     x = Symbol('x', real=True)
@@ -181,10 +181,10 @@ def trig_shift_01__sympy_extras_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-period-01', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261019-032520', trig_period_01__sympy_extras_refine),
-    ('trig-period-02', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-032520', trig_period_02__sympy_extras_refine),
-    ('trig-period-03', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-032520', trig_period_03__sympy_extras_refine),
-    ('trig-shift-01', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-032520', trig_shift_01__sympy_extras_refine),
+    ('trig-period-01', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261019-041836', trig_period_01__sympy_extras_refine),
+    ('trig-period-02', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-041836', trig_period_02__sympy_extras_refine),
+    ('trig-period-03', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-041836', trig_period_03__sympy_extras_refine),
+    ('trig-shift-01', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-041836', trig_shift_01__sympy_extras_refine),
 ]
 
 

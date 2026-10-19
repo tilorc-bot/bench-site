@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite simplipy · case sp-acj4-373-cond · all Python systems
-# 9 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 10 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -147,10 +147,10 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case sp-acj4-373-cond · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (declined correctly)
+# the run satassume-ask-20261019-041856 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_373_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), re(x) > 0, Q.real(cosh(x)))
     Residual = real_root(cosh(x), 5) - Pow(cosh(x), Rational(1, 5))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -159,10 +159,10 @@ def sp_acj4_373_cond__satassume_ask():
 
 
 # ---- case sp-acj4-373-cond · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025455 answered null (declined correctly)
+# the run satrefine-refine-20261019-041555 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_373_cond__satrefine_refine():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), re(x) > 0, Q.real(cosh(x)))
     Residual = real_root(cosh(x), 5) - Pow(cosh(x), Rational(1, 5))
     Result = satsimp.refine(Residual, Assum)
@@ -172,10 +172,10 @@ def sp_acj4_373_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-373-cond · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-032549 answered null (declined correctly)
+# the run satrefine-simplify-20261019-041906 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_373_cond__satrefine_simplify():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), re(x) > 0, Q.real(cosh(x)))
     Residual = real_root(cosh(x), 5) - Pow(cosh(x), Rational(1, 5))
     Result = simplify(satsimp.refine(Residual, Assum))
@@ -185,7 +185,7 @@ def sp_acj4_373_cond__satrefine_simplify():
 
 
 # ---- case sp-acj4-373-cond · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (declined correctly)
+# the run sympy-auto-20261019-041248 answered null (declined correctly)
 @_in(_SETUP3)
 def sp_acj4_373_cond__sympy_auto():
     x = Symbol('x', complex=True)
@@ -198,7 +198,7 @@ def sp_acj4_373_cond__sympy_auto():
 
 
 # ---- case sp-acj4-373-cond · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-212703 answered null (declined correctly)
+# the run sympy-ask-20261019-041253 answered null (declined correctly)
 @_in(_SETUP3)
 def sp_acj4_373_cond__sympy_ask():
     x = Symbol('x', complex=True)
@@ -210,8 +210,21 @@ def sp_acj4_373_cond__sympy_ask():
     return Answer
 
 
+# ---- case sp-acj4-373-cond · expected contingent · system sympy-refine (sympy 1.14.0)
+# the run sympy-refine-20261019-041405 answered null (declined correctly)
+@_in(_SETUP3)
+def sp_acj4_373_cond__sympy_refine():
+    x = Symbol('x', complex=True)
+    Assum = And(Q.complex(x), re(x) > 0, Q.real(cosh(x)))
+    Residual = real_root(cosh(x), 5) - Pow(cosh(x), Rational(1, 5))
+    Result = refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-373-cond · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-212948 answered null (declined correctly)
+# the run sympy-simplify-20261019-041538 answered null (declined correctly)
 @_in(_SETUP3)
 def sp_acj4_373_cond__sympy_simplify():
     x = Symbol('x', complex=True)
@@ -223,7 +236,7 @@ def sp_acj4_373_cond__sympy_simplify():
 
 
 # ---- case sp-acj4-373-cond · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-032626 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-041945 answered null (declined correctly)
 @_in(_SETUP4)
 def sp_acj4_373_cond__sympy_extras_ask():
     x = Symbol('x', complex=True)
@@ -236,7 +249,7 @@ def sp_acj4_373_cond__sympy_extras_ask():
 
 
 # ---- case sp-acj4-373-cond · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-033002 answered true (wrong)
+# the run sympy-extras-refine-20261019-042323 answered true (wrong)
 @_in(_SETUP4)
 def sp_acj4_373_cond__sympy_extras_refine():
     x = Symbol('x', complex=True)
@@ -249,7 +262,7 @@ def sp_acj4_373_cond__sympy_extras_refine():
 
 
 # ---- case sp-acj4-373-cond · expected contingent · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-033408 answered true (wrong)
+# the run sympy-extras-simplify-20261019-042726 answered true (wrong)
 @_in(_SETUP4)
 def sp_acj4_373_cond__sympy_extras_simplify():
     x = Symbol('x', complex=True)
@@ -263,15 +276,16 @@ def sp_acj4_373_cond__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-373-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032540', sp_acj4_373_cond__satassume_ask),
-    ('sp-acj4-373-cond', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-025455', sp_acj4_373_cond__satrefine_refine),
-    ('sp-acj4-373-cond', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-032549', sp_acj4_373_cond__satrefine_simplify),
-    ('sp-acj4-373-cond', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212658', sp_acj4_373_cond__sympy_auto),
-    ('sp-acj4-373-cond', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-212703', sp_acj4_373_cond__sympy_ask),
-    ('sp-acj4-373-cond', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261018-212948', sp_acj4_373_cond__sympy_simplify),
-    ('sp-acj4-373-cond', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-032626', sp_acj4_373_cond__sympy_extras_ask),
-    ('sp-acj4-373-cond', 'sympy-extras-refine', 'contingent', 'true', 'sympy-extras-refine-20261019-033002', sp_acj4_373_cond__sympy_extras_refine),
-    ('sp-acj4-373-cond', 'sympy-extras-simplify', 'contingent', 'true', 'sympy-extras-simplify-20261019-033408', sp_acj4_373_cond__sympy_extras_simplify),
+    ('sp-acj4-373-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041856', sp_acj4_373_cond__satassume_ask),
+    ('sp-acj4-373-cond', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-041555', sp_acj4_373_cond__satrefine_refine),
+    ('sp-acj4-373-cond', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-041906', sp_acj4_373_cond__satrefine_simplify),
+    ('sp-acj4-373-cond', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-041248', sp_acj4_373_cond__sympy_auto),
+    ('sp-acj4-373-cond', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-041253', sp_acj4_373_cond__sympy_ask),
+    ('sp-acj4-373-cond', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-041405', sp_acj4_373_cond__sympy_refine),
+    ('sp-acj4-373-cond', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-041538', sp_acj4_373_cond__sympy_simplify),
+    ('sp-acj4-373-cond', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-041945', sp_acj4_373_cond__sympy_extras_ask),
+    ('sp-acj4-373-cond', 'sympy-extras-refine', 'contingent', 'true', 'sympy-extras-refine-20261019-042323', sp_acj4_373_cond__sympy_extras_refine),
+    ('sp-acj4-373-cond', 'sympy-extras-simplify', 'contingent', 'true', 'sympy-extras-simplify-20261019-042726', sp_acj4_373_cond__sympy_extras_simplify),
 ]
 
 

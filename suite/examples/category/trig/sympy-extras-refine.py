@@ -128,7 +128,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-eq-trig-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-032458 answered null (no verdict)
+# the run sympy-extras-refine-20261019-041814 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_trig_01__sympy_extras_refine():
     x = Symbol('x', complex=True)
@@ -141,7 +141,7 @@ def demo_eq_trig_01__sympy_extras_refine():
 
 
 # ---- case demo-eq-trig-02 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-032458 answered null (no verdict)
+# the run sympy-extras-refine-20261019-041814 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_trig_02__sympy_extras_refine():
     x = Symbol('x', complex=True)
@@ -155,8 +155,8 @@ def demo_eq_trig_02__sympy_extras_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-trig-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-032458', demo_eq_trig_01__sympy_extras_refine),
-    ('demo-eq-trig-02', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-032458', demo_eq_trig_02__sympy_extras_refine),
+    ('demo-eq-trig-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-041814', demo_eq_trig_01__sympy_extras_refine),
+    ('demo-eq-trig-02', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-041814', demo_eq_trig_02__sympy_extras_refine),
 ]
 
 

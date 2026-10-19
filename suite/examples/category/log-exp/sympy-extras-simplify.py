@@ -128,7 +128,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-eq-log-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-032501 answered true (solved)
+# the run sympy-extras-simplify-20261019-041817 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_log_01__sympy_extras_simplify():
     x = Symbol('x', real=True)
@@ -141,7 +141,7 @@ def demo_eq_log_01__sympy_extras_simplify():
 
 
 # ---- case demo-eq-pow-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-032501 answered true (solved)
+# the run sympy-extras-simplify-20261019-041817 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_pow_01__sympy_extras_simplify():
     n = Symbol('n', integer=True)
@@ -155,8 +155,8 @@ def demo_eq_pow_01__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-log-01', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-032501', demo_eq_log_01__sympy_extras_simplify),
-    ('demo-eq-pow-01', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-032501', demo_eq_pow_01__sympy_extras_simplify),
+    ('demo-eq-log-01', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-041817', demo_eq_log_01__sympy_extras_simplify),
+    ('demo-eq-pow-01', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-041817', demo_eq_pow_01__sympy_extras_simplify),
 ]
 
 

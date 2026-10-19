@@ -145,10 +145,10 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-sign-03 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032311 answered null (declined correctly)
+# the run satassume-ask-20261019-041805 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_sign_03__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), ~Q.zero(x))
     Residual = sign(Pow(x, 2)) - 1
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -170,10 +170,10 @@ def demo_sign_03__satrefine_refine():
 
 
 # ---- case demo-sign-03 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-032451 answered null (declined correctly)
+# the run satrefine-simplify-20261019-041807 answered null (declined correctly)
 @_in(_SETUP2)
 def demo_sign_03__satrefine_simplify():
-    x = Symbol('x', complex=True, zero=False)
+    x = Symbol('x')
     Assum = And(Q.complex(x), ~Q.zero(x))
     Residual = sign(Pow(x, 2)) - 1
     Result = simplify(satsimp.refine(Residual, Assum))
@@ -234,7 +234,7 @@ def demo_sign_03__sympy_simplify():
 
 
 # ---- case demo-sign-03 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-032454 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-041809 answered null (declined correctly)
 @_in(_SETUP4)
 def demo_sign_03__sympy_extras_ask():
     x = Symbol('x', complex=True)
@@ -247,7 +247,7 @@ def demo_sign_03__sympy_extras_ask():
 
 
 # ---- case demo-sign-03 · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-032458 answered null (declined correctly)
+# the run sympy-extras-refine-20261019-041814 answered null (declined correctly)
 @_in(_SETUP4)
 def demo_sign_03__sympy_extras_refine():
     x = Symbol('x', complex=True)
@@ -260,7 +260,7 @@ def demo_sign_03__sympy_extras_refine():
 
 
 # ---- case demo-sign-03 · expected contingent · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-032501 answered null (declined correctly)
+# the run sympy-extras-simplify-20261019-041817 answered null (declined correctly)
 @_in(_SETUP4)
 def demo_sign_03__sympy_extras_simplify():
     x = Symbol('x', complex=True)
@@ -274,16 +274,16 @@ def demo_sign_03__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-sign-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032311', demo_sign_03__satassume_ask),
+    ('demo-sign-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041805', demo_sign_03__satassume_ask),
     ('demo-sign-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-040947', demo_sign_03__satrefine_refine),
-    ('demo-sign-03', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-032451', demo_sign_03__satrefine_simplify),
+    ('demo-sign-03', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-041807', demo_sign_03__satrefine_simplify),
     ('demo-sign-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-040938', demo_sign_03__sympy_auto),
     ('demo-sign-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-040940', demo_sign_03__sympy_ask),
     ('demo-sign-03', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-040943', demo_sign_03__sympy_refine),
     ('demo-sign-03', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-040945', demo_sign_03__sympy_simplify),
-    ('demo-sign-03', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-032454', demo_sign_03__sympy_extras_ask),
-    ('demo-sign-03', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-032458', demo_sign_03__sympy_extras_refine),
-    ('demo-sign-03', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261019-032501', demo_sign_03__sympy_extras_simplify),
+    ('demo-sign-03', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-041809', demo_sign_03__sympy_extras_ask),
+    ('demo-sign-03', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-041814', demo_sign_03__sympy_extras_refine),
+    ('demo-sign-03', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261019-041817', demo_sign_03__sympy_extras_simplify),
 ]
 
 

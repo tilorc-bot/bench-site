@@ -128,7 +128,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-prime-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-032454 answered null (no verdict)
+# the run sympy-extras-ask-20261019-041809 answered null (no verdict)
 @_in(_SETUP1)
 def demo_prime_01__sympy_extras_ask():
     p = Symbol('p', integer=True)
@@ -140,7 +140,7 @@ def demo_prime_01__sympy_extras_ask():
 
 
 # ---- case demo-prime-02 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-032454 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-041809 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_prime_02__sympy_extras_ask():
     p = Symbol('p', integer=True)
@@ -153,8 +153,8 @@ def demo_prime_02__sympy_extras_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-prime-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-032454', demo_prime_01__sympy_extras_ask),
-    ('demo-prime-02', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-032454', demo_prime_02__sympy_extras_ask),
+    ('demo-prime-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-041809', demo_prime_01__sympy_extras_ask),
+    ('demo-prime-02', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-041809', demo_prime_02__sympy_extras_ask),
 ]
 
 

@@ -118,11 +118,11 @@ import satassume.sympy_api
 
 
 # ---- case demo-atan2-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032311 answered null (no verdict)
+# the run satassume-ask-20261019-041805 answered null (no verdict)
 @_in(_SETUP1)
 def demo_atan2_01__satassume_ask():
-    x = Symbol('x', real=True)
-    y = Symbol('y', real=True)
+    x = Symbol('x')
+    y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.positive(x))
     Residual = atan2(y, x) - atan(y / x)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -131,11 +131,11 @@ def demo_atan2_01__satassume_ask():
 
 
 # ---- case demo-atan2-02 · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032311 answered null (no verdict)
+# the run satassume-ask-20261019-041805 answered null (no verdict)
 @_in(_SETUP1)
 def demo_atan2_02__satassume_ask():
-    x = Symbol('x', real=True)
-    y = Symbol('y', real=True)
+    x = Symbol('x')
+    y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.negative(x), Q.positive(y))
     Residual = atan2(y, x) - atan(y / x)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -144,11 +144,11 @@ def demo_atan2_02__satassume_ask():
 
 
 # ---- case demo-log-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032311 answered null (no verdict)
+# the run satassume-ask-20261019-041805 answered null (no verdict)
 @_in(_SETUP1)
 def demo_log_01__satassume_ask():
-    x = Symbol('x', real=True)
-    y = Symbol('y', real=True)
+    x = Symbol('x')
+    y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
     Residual = log(x * y) - (log(x) + log(y))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -157,11 +157,11 @@ def demo_log_01__satassume_ask():
 
 
 # ---- case demo-log-02 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032311 answered null (declined correctly)
+# the run satassume-ask-20261019-041805 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_log_02__satassume_ask():
-    z = Symbol('z', complex=True)
-    w = Symbol('w', complex=True)
+    z = Symbol('z')
+    w = Symbol('w')
     Assum = And(Q.complex(z), Q.complex(w), ~Q.zero(z), ~Q.zero(w))
     Residual = log(z * w) - (log(z) + log(w))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -170,10 +170,10 @@ def demo_log_02__satassume_ask():
 
 
 # ---- case demo-log-03 · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032311 answered false (solved)
+# the run satassume-ask-20261019-041805 answered false (solved)
 @_in(_SETUP1)
 def demo_log_03__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.negative(x))
     Residual = log(x) - log(-x)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -183,11 +183,11 @@ def demo_log_03__satassume_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-atan2-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_atan2_01__satassume_ask),
-    ('demo-atan2-02', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-032311', demo_atan2_02__satassume_ask),
-    ('demo-log-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_log_01__satassume_ask),
-    ('demo-log-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032311', demo_log_02__satassume_ask),
-    ('demo-log-03', 'satassume-ask', 'false', 'false', 'satassume-ask-20261019-032311', demo_log_03__satassume_ask),
+    ('demo-atan2-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_atan2_01__satassume_ask),
+    ('demo-atan2-02', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-041805', demo_atan2_02__satassume_ask),
+    ('demo-log-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_log_01__satassume_ask),
+    ('demo-log-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041805', demo_log_02__satassume_ask),
+    ('demo-log-03', 'satassume-ask', 'false', 'false', 'satassume-ask-20261019-041805', demo_log_03__satassume_ask),
 ]
 
 

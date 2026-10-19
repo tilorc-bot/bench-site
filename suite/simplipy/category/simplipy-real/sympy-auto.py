@@ -134,7 +134,7 @@ import sympy
 
 
 # ---- case sp-acj4-1-real · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (declined correctly)
+# the run sympy-auto-20261019-041248 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_1_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -146,7 +146,7 @@ def sp_acj4_1_real__sympy_auto():
 
 
 # ---- case sp-acj4-102-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered true (solved)
+# the run sympy-auto-20261019-041248 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_102_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -158,7 +158,7 @@ def sp_acj4_102_real__sympy_auto():
 
 
 # ---- case sp-acj4-108-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_108_real__sympy_auto():
     x = Symbol('x', real=True, zero=False)
@@ -170,7 +170,7 @@ def sp_acj4_108_real__sympy_auto():
 
 
 # ---- case sp-acj4-120-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered true (solved)
+# the run sympy-auto-20261019-041248 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_120_real__sympy_auto():
     x = Symbol('x', real=True, zero=False)
@@ -182,7 +182,7 @@ def sp_acj4_120_real__sympy_auto():
 
 
 # ---- case sp-acj4-127-real · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (declined correctly)
+# the run sympy-auto-20261019-041248 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_127_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -196,7 +196,7 @@ def sp_acj4_127_real__sympy_auto():
 
 
 # ---- case sp-acj4-128-real · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (declined correctly)
+# the run sympy-auto-20261019-041248 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_128_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -208,7 +208,7 @@ def sp_acj4_128_real__sympy_auto():
 
 
 # ---- case sp-acj4-131-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_131_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -220,7 +220,7 @@ def sp_acj4_131_real__sympy_auto():
 
 
 # ---- case sp-acj4-132-real · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (declined correctly)
+# the run sympy-auto-20261019-041248 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_132_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -233,7 +233,7 @@ def sp_acj4_132_real__sympy_auto():
 
 
 # ---- case sp-acj4-133-real · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (declined correctly)
+# the run sympy-auto-20261019-041248 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_133_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -246,7 +246,7 @@ def sp_acj4_133_real__sympy_auto():
 
 
 # ---- case sp-acj4-136-real · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (declined correctly)
+# the run sympy-auto-20261019-041248 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_136_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -259,7 +259,7 @@ def sp_acj4_136_real__sympy_auto():
 
 
 # ---- case sp-acj4-137-real · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (declined correctly)
+# the run sympy-auto-20261019-041248 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_137_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -271,7 +271,7 @@ def sp_acj4_137_real__sympy_auto():
 
 
 # ---- case sp-acj4-14-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered true (solved)
+# the run sympy-auto-20261019-041248 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_14_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -283,7 +283,7 @@ def sp_acj4_14_real__sympy_auto():
 
 
 # ---- case sp-acj4-145-real · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (declined correctly)
+# the run sympy-auto-20261019-041248 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_145_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -295,7 +295,7 @@ def sp_acj4_145_real__sympy_auto():
 
 
 # ---- case sp-acj4-162-real · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (declined correctly)
+# the run sympy-auto-20261019-041248 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_162_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -307,7 +307,7 @@ def sp_acj4_162_real__sympy_auto():
 
 
 # ---- case sp-acj4-179-real · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (declined correctly)
+# the run sympy-auto-20261019-041248 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_179_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -322,7 +322,7 @@ def sp_acj4_179_real__sympy_auto():
 
 
 # ---- case sp-acj4-181-real · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (declined correctly)
+# the run sympy-auto-20261019-041248 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_181_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -337,7 +337,7 @@ def sp_acj4_181_real__sympy_auto():
 
 
 # ---- case sp-acj4-185-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_185_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -351,7 +351,7 @@ def sp_acj4_185_real__sympy_auto():
 
 
 # ---- case sp-acj4-194-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_194_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -365,7 +365,7 @@ def sp_acj4_194_real__sympy_auto():
 
 
 # ---- case sp-acj4-195-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_195_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -379,7 +379,7 @@ def sp_acj4_195_real__sympy_auto():
 
 
 # ---- case sp-acj4-196-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_196_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -393,7 +393,7 @@ def sp_acj4_196_real__sympy_auto():
 
 
 # ---- case sp-acj4-218-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered true (solved)
+# the run sympy-auto-20261019-041248 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_218_real__sympy_auto():
     x = Symbol('x', real=True, zero=False)
@@ -406,7 +406,7 @@ def sp_acj4_218_real__sympy_auto():
 
 
 # ---- case sp-acj4-22-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_22_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -418,7 +418,7 @@ def sp_acj4_22_real__sympy_auto():
 
 
 # ---- case sp-acj4-220-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered true (solved)
+# the run sympy-auto-20261019-041248 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_220_real__sympy_auto():
     x = Symbol('x', real=True, zero=False)
@@ -431,7 +431,7 @@ def sp_acj4_220_real__sympy_auto():
 
 
 # ---- case sp-acj4-233-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered true (solved)
+# the run sympy-auto-20261019-041248 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_233_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -445,7 +445,7 @@ def sp_acj4_233_real__sympy_auto():
 
 
 # ---- case sp-acj4-248-real · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (declined correctly)
+# the run sympy-auto-20261019-041248 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_248_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -457,7 +457,7 @@ def sp_acj4_248_real__sympy_auto():
 
 
 # ---- case sp-acj4-249-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_249_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -469,7 +469,7 @@ def sp_acj4_249_real__sympy_auto():
 
 
 # ---- case sp-acj4-251-real · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (declined correctly)
+# the run sympy-auto-20261019-041248 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_251_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -483,7 +483,7 @@ def sp_acj4_251_real__sympy_auto():
 
 
 # ---- case sp-acj4-252-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_252_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -495,7 +495,7 @@ def sp_acj4_252_real__sympy_auto():
 
 
 # ---- case sp-acj4-253-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_253_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -507,7 +507,7 @@ def sp_acj4_253_real__sympy_auto():
 
 
 # ---- case sp-acj4-256-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered true (solved)
+# the run sympy-auto-20261019-041248 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_256_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -520,7 +520,7 @@ def sp_acj4_256_real__sympy_auto():
 
 
 # ---- case sp-acj4-275-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_275_real__sympy_auto():
     x = Symbol('x', real=True, zero=False)
@@ -532,7 +532,7 @@ def sp_acj4_275_real__sympy_auto():
 
 
 # ---- case sp-acj4-276-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered true (solved)
+# the run sympy-auto-20261019-041248 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_276_real__sympy_auto():
     x = Symbol('x', real=True, zero=False)
@@ -544,7 +544,7 @@ def sp_acj4_276_real__sympy_auto():
 
 
 # ---- case sp-acj4-283-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered true (solved)
+# the run sympy-auto-20261019-041248 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_283_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -556,7 +556,7 @@ def sp_acj4_283_real__sympy_auto():
 
 
 # ---- case sp-acj4-286-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered true (solved)
+# the run sympy-auto-20261019-041248 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_286_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -568,7 +568,7 @@ def sp_acj4_286_real__sympy_auto():
 
 
 # ---- case sp-acj4-289-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered true (solved)
+# the run sympy-auto-20261019-041248 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_289_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -580,7 +580,7 @@ def sp_acj4_289_real__sympy_auto():
 
 
 # ---- case sp-acj4-31-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered true (solved)
+# the run sympy-auto-20261019-041248 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_31_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -592,7 +592,7 @@ def sp_acj4_31_real__sympy_auto():
 
 
 # ---- case sp-acj4-326-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered true (solved)
+# the run sympy-auto-20261019-041248 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_326_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -604,7 +604,7 @@ def sp_acj4_326_real__sympy_auto():
 
 
 # ---- case sp-acj4-33-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered true (solved)
+# the run sympy-auto-20261019-041248 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_33_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -616,7 +616,7 @@ def sp_acj4_33_real__sympy_auto():
 
 
 # ---- case sp-acj4-35-real · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (declined correctly)
+# the run sympy-auto-20261019-041248 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_35_real__sympy_auto():
     x = Symbol('x', real=True, zero=False)
@@ -629,7 +629,7 @@ def sp_acj4_35_real__sympy_auto():
 
 
 # ---- case sp-acj4-354-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_354_real__sympy_auto():
     x = Symbol('x', real=True, zero=False)
@@ -642,7 +642,7 @@ def sp_acj4_354_real__sympy_auto():
 
 
 # ---- case sp-acj4-356-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_356_real__sympy_auto():
     x = Symbol('x', real=True, zero=False)
@@ -655,7 +655,7 @@ def sp_acj4_356_real__sympy_auto():
 
 
 # ---- case sp-acj4-359-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_359_real__sympy_auto():
     x = Symbol('x', real=True, zero=False)
@@ -668,7 +668,7 @@ def sp_acj4_359_real__sympy_auto():
 
 
 # ---- case sp-acj4-364-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_364_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -680,7 +680,7 @@ def sp_acj4_364_real__sympy_auto():
 
 
 # ---- case sp-acj4-367-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_367_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -692,7 +692,7 @@ def sp_acj4_367_real__sympy_auto():
 
 
 # ---- case sp-acj4-368-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_368_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -705,7 +705,7 @@ def sp_acj4_368_real__sympy_auto():
 
 
 # ---- case sp-acj4-369-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_369_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -717,7 +717,7 @@ def sp_acj4_369_real__sympy_auto():
 
 
 # ---- case sp-acj4-370-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_370_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -730,7 +730,7 @@ def sp_acj4_370_real__sympy_auto():
 
 
 # ---- case sp-acj4-371-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_371_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -742,7 +742,7 @@ def sp_acj4_371_real__sympy_auto():
 
 
 # ---- case sp-acj4-372-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered true (solved)
+# the run sympy-auto-20261019-041248 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_372_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -754,7 +754,7 @@ def sp_acj4_372_real__sympy_auto():
 
 
 # ---- case sp-acj4-373-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered true (solved)
+# the run sympy-auto-20261019-041248 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_373_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -766,7 +766,7 @@ def sp_acj4_373_real__sympy_auto():
 
 
 # ---- case sp-acj4-38-real · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (declined correctly)
+# the run sympy-auto-20261019-041248 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_38_real__sympy_auto():
     x = Symbol('x', real=True, zero=False)
@@ -779,7 +779,7 @@ def sp_acj4_38_real__sympy_auto():
 
 
 # ---- case sp-acj4-394-real · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (declined correctly)
+# the run sympy-auto-20261019-041248 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_394_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -791,7 +791,7 @@ def sp_acj4_394_real__sympy_auto():
 
 
 # ---- case sp-acj4-395-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_395_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -803,7 +803,7 @@ def sp_acj4_395_real__sympy_auto():
 
 
 # ---- case sp-acj4-396-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_396_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -815,7 +815,7 @@ def sp_acj4_396_real__sympy_auto():
 
 
 # ---- case sp-acj4-397-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_397_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -827,7 +827,7 @@ def sp_acj4_397_real__sympy_auto():
 
 
 # ---- case sp-acj4-402-real · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (declined correctly)
+# the run sympy-auto-20261019-041248 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_402_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -839,7 +839,7 @@ def sp_acj4_402_real__sympy_auto():
 
 
 # ---- case sp-acj4-404-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_404_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -851,7 +851,7 @@ def sp_acj4_404_real__sympy_auto():
 
 
 # ---- case sp-acj4-412-real · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (declined correctly)
+# the run sympy-auto-20261019-041248 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_412_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -864,7 +864,7 @@ def sp_acj4_412_real__sympy_auto():
 
 
 # ---- case sp-acj4-413-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_413_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -877,7 +877,7 @@ def sp_acj4_413_real__sympy_auto():
 
 
 # ---- case sp-acj4-414-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_414_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -890,7 +890,7 @@ def sp_acj4_414_real__sympy_auto():
 
 
 # ---- case sp-acj4-415-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_415_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -903,7 +903,7 @@ def sp_acj4_415_real__sympy_auto():
 
 
 # ---- case sp-acj4-417-real · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (declined correctly)
+# the run sympy-auto-20261019-041248 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_417_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -916,7 +916,7 @@ def sp_acj4_417_real__sympy_auto():
 
 
 # ---- case sp-acj4-421-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (no verdict)
+# the run sympy-auto-20261019-041248 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_421_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -929,7 +929,7 @@ def sp_acj4_421_real__sympy_auto():
 
 
 # ---- case sp-acj4-5-real · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered null (declined correctly)
+# the run sympy-auto-20261019-041248 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_5_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -941,7 +941,7 @@ def sp_acj4_5_real__sympy_auto():
 
 
 # ---- case sp-acj4-73-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered true (solved)
+# the run sympy-auto-20261019-041248 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_73_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -954,7 +954,7 @@ def sp_acj4_73_real__sympy_auto():
 
 
 # ---- case sp-acj4-80-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered true (solved)
+# the run sympy-auto-20261019-041248 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_80_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -967,7 +967,7 @@ def sp_acj4_80_real__sympy_auto():
 
 
 # ---- case sp-acj4-83-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered true (solved)
+# the run sympy-auto-20261019-041248 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_83_real__sympy_auto():
     x = Symbol('x', real=True, zero=False)
@@ -981,7 +981,7 @@ def sp_acj4_83_real__sympy_auto():
 
 
 # ---- case sp-acj4-86-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered true (solved)
+# the run sympy-auto-20261019-041248 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_86_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -995,7 +995,7 @@ def sp_acj4_86_real__sympy_auto():
 
 
 # ---- case sp-acj4-90-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered true (solved)
+# the run sympy-auto-20261019-041248 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_90_real__sympy_auto():
     x = Symbol('x', real=True, zero=False)
@@ -1007,7 +1007,7 @@ def sp_acj4_90_real__sympy_auto():
 
 
 # ---- case sp-acj4-99-real · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212658 answered true (solved)
+# the run sympy-auto-20261019-041248 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_99_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -1020,76 +1020,76 @@ def sp_acj4_99_real__sympy_auto():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-1-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212658', sp_acj4_1_real__sympy_auto),
-    ('sp-acj4-102-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212658', sp_acj4_102_real__sympy_auto),
-    ('sp-acj4-108-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_108_real__sympy_auto),
-    ('sp-acj4-120-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212658', sp_acj4_120_real__sympy_auto),
-    ('sp-acj4-127-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212658', sp_acj4_127_real__sympy_auto),
-    ('sp-acj4-128-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212658', sp_acj4_128_real__sympy_auto),
-    ('sp-acj4-131-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_131_real__sympy_auto),
-    ('sp-acj4-132-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212658', sp_acj4_132_real__sympy_auto),
-    ('sp-acj4-133-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212658', sp_acj4_133_real__sympy_auto),
-    ('sp-acj4-136-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212658', sp_acj4_136_real__sympy_auto),
-    ('sp-acj4-137-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212658', sp_acj4_137_real__sympy_auto),
-    ('sp-acj4-14-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212658', sp_acj4_14_real__sympy_auto),
-    ('sp-acj4-145-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212658', sp_acj4_145_real__sympy_auto),
-    ('sp-acj4-162-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212658', sp_acj4_162_real__sympy_auto),
-    ('sp-acj4-179-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212658', sp_acj4_179_real__sympy_auto),
-    ('sp-acj4-181-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212658', sp_acj4_181_real__sympy_auto),
-    ('sp-acj4-185-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_185_real__sympy_auto),
-    ('sp-acj4-194-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_194_real__sympy_auto),
-    ('sp-acj4-195-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_195_real__sympy_auto),
-    ('sp-acj4-196-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_196_real__sympy_auto),
-    ('sp-acj4-218-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212658', sp_acj4_218_real__sympy_auto),
-    ('sp-acj4-22-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_22_real__sympy_auto),
-    ('sp-acj4-220-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212658', sp_acj4_220_real__sympy_auto),
-    ('sp-acj4-233-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212658', sp_acj4_233_real__sympy_auto),
-    ('sp-acj4-248-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212658', sp_acj4_248_real__sympy_auto),
-    ('sp-acj4-249-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_249_real__sympy_auto),
-    ('sp-acj4-251-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212658', sp_acj4_251_real__sympy_auto),
-    ('sp-acj4-252-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_252_real__sympy_auto),
-    ('sp-acj4-253-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_253_real__sympy_auto),
-    ('sp-acj4-256-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212658', sp_acj4_256_real__sympy_auto),
-    ('sp-acj4-275-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_275_real__sympy_auto),
-    ('sp-acj4-276-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212658', sp_acj4_276_real__sympy_auto),
-    ('sp-acj4-283-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212658', sp_acj4_283_real__sympy_auto),
-    ('sp-acj4-286-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212658', sp_acj4_286_real__sympy_auto),
-    ('sp-acj4-289-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212658', sp_acj4_289_real__sympy_auto),
-    ('sp-acj4-31-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212658', sp_acj4_31_real__sympy_auto),
-    ('sp-acj4-326-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212658', sp_acj4_326_real__sympy_auto),
-    ('sp-acj4-33-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212658', sp_acj4_33_real__sympy_auto),
-    ('sp-acj4-35-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212658', sp_acj4_35_real__sympy_auto),
-    ('sp-acj4-354-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_354_real__sympy_auto),
-    ('sp-acj4-356-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_356_real__sympy_auto),
-    ('sp-acj4-359-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_359_real__sympy_auto),
-    ('sp-acj4-364-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_364_real__sympy_auto),
-    ('sp-acj4-367-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_367_real__sympy_auto),
-    ('sp-acj4-368-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_368_real__sympy_auto),
-    ('sp-acj4-369-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_369_real__sympy_auto),
-    ('sp-acj4-370-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_370_real__sympy_auto),
-    ('sp-acj4-371-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_371_real__sympy_auto),
-    ('sp-acj4-372-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212658', sp_acj4_372_real__sympy_auto),
-    ('sp-acj4-373-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212658', sp_acj4_373_real__sympy_auto),
-    ('sp-acj4-38-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212658', sp_acj4_38_real__sympy_auto),
-    ('sp-acj4-394-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212658', sp_acj4_394_real__sympy_auto),
-    ('sp-acj4-395-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_395_real__sympy_auto),
-    ('sp-acj4-396-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_396_real__sympy_auto),
-    ('sp-acj4-397-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_397_real__sympy_auto),
-    ('sp-acj4-402-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212658', sp_acj4_402_real__sympy_auto),
-    ('sp-acj4-404-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_404_real__sympy_auto),
-    ('sp-acj4-412-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212658', sp_acj4_412_real__sympy_auto),
-    ('sp-acj4-413-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_413_real__sympy_auto),
-    ('sp-acj4-414-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_414_real__sympy_auto),
-    ('sp-acj4-415-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_415_real__sympy_auto),
-    ('sp-acj4-417-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212658', sp_acj4_417_real__sympy_auto),
-    ('sp-acj4-421-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212658', sp_acj4_421_real__sympy_auto),
-    ('sp-acj4-5-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212658', sp_acj4_5_real__sympy_auto),
-    ('sp-acj4-73-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212658', sp_acj4_73_real__sympy_auto),
-    ('sp-acj4-80-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212658', sp_acj4_80_real__sympy_auto),
-    ('sp-acj4-83-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212658', sp_acj4_83_real__sympy_auto),
-    ('sp-acj4-86-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212658', sp_acj4_86_real__sympy_auto),
-    ('sp-acj4-90-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212658', sp_acj4_90_real__sympy_auto),
-    ('sp-acj4-99-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212658', sp_acj4_99_real__sympy_auto),
+    ('sp-acj4-1-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-041248', sp_acj4_1_real__sympy_auto),
+    ('sp-acj4-102-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-041248', sp_acj4_102_real__sympy_auto),
+    ('sp-acj4-108-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_108_real__sympy_auto),
+    ('sp-acj4-120-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-041248', sp_acj4_120_real__sympy_auto),
+    ('sp-acj4-127-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-041248', sp_acj4_127_real__sympy_auto),
+    ('sp-acj4-128-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-041248', sp_acj4_128_real__sympy_auto),
+    ('sp-acj4-131-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_131_real__sympy_auto),
+    ('sp-acj4-132-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-041248', sp_acj4_132_real__sympy_auto),
+    ('sp-acj4-133-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-041248', sp_acj4_133_real__sympy_auto),
+    ('sp-acj4-136-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-041248', sp_acj4_136_real__sympy_auto),
+    ('sp-acj4-137-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-041248', sp_acj4_137_real__sympy_auto),
+    ('sp-acj4-14-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-041248', sp_acj4_14_real__sympy_auto),
+    ('sp-acj4-145-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-041248', sp_acj4_145_real__sympy_auto),
+    ('sp-acj4-162-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-041248', sp_acj4_162_real__sympy_auto),
+    ('sp-acj4-179-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-041248', sp_acj4_179_real__sympy_auto),
+    ('sp-acj4-181-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-041248', sp_acj4_181_real__sympy_auto),
+    ('sp-acj4-185-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_185_real__sympy_auto),
+    ('sp-acj4-194-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_194_real__sympy_auto),
+    ('sp-acj4-195-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_195_real__sympy_auto),
+    ('sp-acj4-196-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_196_real__sympy_auto),
+    ('sp-acj4-218-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-041248', sp_acj4_218_real__sympy_auto),
+    ('sp-acj4-22-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_22_real__sympy_auto),
+    ('sp-acj4-220-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-041248', sp_acj4_220_real__sympy_auto),
+    ('sp-acj4-233-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-041248', sp_acj4_233_real__sympy_auto),
+    ('sp-acj4-248-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-041248', sp_acj4_248_real__sympy_auto),
+    ('sp-acj4-249-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_249_real__sympy_auto),
+    ('sp-acj4-251-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-041248', sp_acj4_251_real__sympy_auto),
+    ('sp-acj4-252-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_252_real__sympy_auto),
+    ('sp-acj4-253-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_253_real__sympy_auto),
+    ('sp-acj4-256-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-041248', sp_acj4_256_real__sympy_auto),
+    ('sp-acj4-275-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_275_real__sympy_auto),
+    ('sp-acj4-276-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-041248', sp_acj4_276_real__sympy_auto),
+    ('sp-acj4-283-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-041248', sp_acj4_283_real__sympy_auto),
+    ('sp-acj4-286-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-041248', sp_acj4_286_real__sympy_auto),
+    ('sp-acj4-289-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-041248', sp_acj4_289_real__sympy_auto),
+    ('sp-acj4-31-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-041248', sp_acj4_31_real__sympy_auto),
+    ('sp-acj4-326-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-041248', sp_acj4_326_real__sympy_auto),
+    ('sp-acj4-33-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-041248', sp_acj4_33_real__sympy_auto),
+    ('sp-acj4-35-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-041248', sp_acj4_35_real__sympy_auto),
+    ('sp-acj4-354-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_354_real__sympy_auto),
+    ('sp-acj4-356-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_356_real__sympy_auto),
+    ('sp-acj4-359-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_359_real__sympy_auto),
+    ('sp-acj4-364-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_364_real__sympy_auto),
+    ('sp-acj4-367-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_367_real__sympy_auto),
+    ('sp-acj4-368-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_368_real__sympy_auto),
+    ('sp-acj4-369-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_369_real__sympy_auto),
+    ('sp-acj4-370-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_370_real__sympy_auto),
+    ('sp-acj4-371-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_371_real__sympy_auto),
+    ('sp-acj4-372-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-041248', sp_acj4_372_real__sympy_auto),
+    ('sp-acj4-373-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-041248', sp_acj4_373_real__sympy_auto),
+    ('sp-acj4-38-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-041248', sp_acj4_38_real__sympy_auto),
+    ('sp-acj4-394-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-041248', sp_acj4_394_real__sympy_auto),
+    ('sp-acj4-395-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_395_real__sympy_auto),
+    ('sp-acj4-396-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_396_real__sympy_auto),
+    ('sp-acj4-397-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_397_real__sympy_auto),
+    ('sp-acj4-402-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-041248', sp_acj4_402_real__sympy_auto),
+    ('sp-acj4-404-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_404_real__sympy_auto),
+    ('sp-acj4-412-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-041248', sp_acj4_412_real__sympy_auto),
+    ('sp-acj4-413-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_413_real__sympy_auto),
+    ('sp-acj4-414-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_414_real__sympy_auto),
+    ('sp-acj4-415-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_415_real__sympy_auto),
+    ('sp-acj4-417-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-041248', sp_acj4_417_real__sympy_auto),
+    ('sp-acj4-421-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041248', sp_acj4_421_real__sympy_auto),
+    ('sp-acj4-5-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-041248', sp_acj4_5_real__sympy_auto),
+    ('sp-acj4-73-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-041248', sp_acj4_73_real__sympy_auto),
+    ('sp-acj4-80-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-041248', sp_acj4_80_real__sympy_auto),
+    ('sp-acj4-83-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-041248', sp_acj4_83_real__sympy_auto),
+    ('sp-acj4-86-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-041248', sp_acj4_86_real__sympy_auto),
+    ('sp-acj4-90-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-041248', sp_acj4_90_real__sympy_auto),
+    ('sp-acj4-99-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-041248', sp_acj4_99_real__sympy_auto),
 ]
 
 

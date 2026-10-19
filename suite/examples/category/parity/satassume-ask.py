@@ -118,10 +118,10 @@ import satassume.sympy_api
 
 
 # ---- case demo-parity-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032311 answered null (no verdict)
+# the run satassume-ask-20261019-041805 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_01__satassume_ask():
-    n = Symbol('n', integer=True)
+    n = Symbol('n')
     Assum = And(Q.integer(n), Q.odd(n))
     Residual = Pow(-1, n + 1) - 1
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -130,11 +130,11 @@ def demo_parity_01__satassume_ask():
 
 
 # ---- case demo-parity-02 · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032311 answered false (solved)
+# the run satassume-ask-20261019-041805 answered false (solved)
 @_in(_SETUP1)
 def demo_parity_02__satassume_ask():
-    n = Symbol('n', integer=True)
-    m = Symbol('m', integer=True)
+    n = Symbol('n')
+    m = Symbol('m')
     Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
     Residual = Pow(-1, n * m) - 1
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -143,10 +143,10 @@ def demo_parity_02__satassume_ask():
 
 
 # ---- case demo-parity-03 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032311 answered true (solved)
+# the run satassume-ask-20261019-041805 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_03__satassume_ask():
-    n = Symbol('n', integer=True)
+    n = Symbol('n')
     Assum = And(Q.integer(n))
     Residual = Pow(-1, n * (n + 1)) - 1
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -155,10 +155,10 @@ def demo_parity_03__satassume_ask():
 
 
 # ---- case demo-parity-04 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032311 answered null (declined correctly)
+# the run satassume-ask-20261019-041805 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_parity_04__satassume_ask():
-    n = Symbol('n', integer=True)
+    n = Symbol('n')
     Assum = And(Q.integer(n), Q.even(n))
     Residual = Pow(I, n) - 1
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -167,11 +167,11 @@ def demo_parity_04__satassume_ask():
 
 
 # ---- case demo-parity-05 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032311 answered null (no verdict)
+# the run satassume-ask-20261019-041805 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_05__satassume_ask():
-    n = Symbol('n', integer=True)
-    m = Symbol('m', integer=True)
+    n = Symbol('n')
+    m = Symbol('m')
     Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
     Residual = Pow(-1, n * m) - (-1)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -181,11 +181,11 @@ def demo_parity_05__satassume_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-parity-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_parity_01__satassume_ask),
-    ('demo-parity-02', 'satassume-ask', 'false', 'false', 'satassume-ask-20261019-032311', demo_parity_02__satassume_ask),
-    ('demo-parity-03', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-032311', demo_parity_03__satassume_ask),
-    ('demo-parity-04', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032311', demo_parity_04__satassume_ask),
-    ('demo-parity-05', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_parity_05__satassume_ask),
+    ('demo-parity-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_parity_01__satassume_ask),
+    ('demo-parity-02', 'satassume-ask', 'false', 'false', 'satassume-ask-20261019-041805', demo_parity_02__satassume_ask),
+    ('demo-parity-03', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_parity_03__satassume_ask),
+    ('demo-parity-04', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041805', demo_parity_04__satassume_ask),
+    ('demo-parity-05', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_parity_05__satassume_ask),
 ]
 
 

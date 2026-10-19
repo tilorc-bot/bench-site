@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
-# case sp-acj4-372-cond · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-212815 answered null (declined correctly)
+# case sp-acj4-396-real · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-042726 answered null (no verdict)
 # It prints the CAS version that runs (with a warning if the stored run used another), the
 # verdict, and CHANGED: <stored> -> <got> if the answer is not the stored run's.
 # Exit status: 0 when the answer is the stored run's (a wrong one too; an error answers null,
@@ -75,17 +75,25 @@ def _setup_failed():
 try:
     from sympy import *
     import sympy
+    import sympy_extras.assumptions
+    import sympy_extras.settings
+    import importlib.metadata
+    import json as Json, re as Regex
+    Source = Json.loads(importlib.metadata.distribution('sympy-extras').read_text('direct_url.json') or '{}')
+    Archive = Regex.match('https://[^#]*/archive/([0-9a-f]{40})[.](tar[.]gz|zip)(#|$)', Source.get('url', '')) if 'archive_info' in Source else None
+    Commit = Source.get('vcs_info', {}).get('commit_id') or (Archive and Archive.group(1))
+    Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settings.settings.time_scale}'
 except Exception:
     _setup_failed()
 
-_version('sympy', '1.14.0')
+_version('sympy-extras', '0.0.3 (commit 2d60199620ac)')
 
 # the query code, exactly as it ran (an error answers null, as in the harness)
 try:
-    x = Symbol('x', complex=True)
-    Assum = And(Q.complex(x), re(x) > 0, Q.real(cosh(x)), ~Q.zero(cosh(x)))
-    Residual = real_root(cosh(x), -5) - Pow(cosh(x), Rational(-1, 5))
-    Result = refine(Residual, Assum)
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x))
+    Residual = sin(Abs(sin(x))) - Abs(sin(sin(x)))
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
     # true iff the result is 0; false only if it is a definite nonzero number
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
@@ -93,5 +101,5 @@ except (Exception, SystemExit):
     _traceback.print_exc()
     Answer = None
 
-_outcome, _change = _verdict(globals().get('Answer'), 'contingent', 'null', 'sympy-refine-20261018-212815')
+_outcome, _change = _verdict(globals().get('Answer'), 'true', 'null', 'sympy-extras-simplify-20261019-042726')
 _exit(1 if _change else 0)

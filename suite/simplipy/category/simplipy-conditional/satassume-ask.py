@@ -118,10 +118,10 @@ import satassume.sympy_api
 
 
 # ---- case sp-acj4-1-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_1_cond__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Abs(x) <= 1)
     Residual = asin(Abs(x)) - Abs(asin(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -130,10 +130,10 @@ def sp_acj4_1_cond__satassume_ask():
 
 
 # ---- case sp-acj4-108-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_108_condf__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x), ~Q.zero(x), ~Q.zero(Abs(x)))
     Residual = Abs(x) / x - (x / Abs(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -142,10 +142,10 @@ def sp_acj4_108_condf__satassume_ask():
 
 
 # ---- case sp-acj4-124-condf · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (declined correctly)
+# the run satassume-ask-20261019-041856 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_124_condf__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x), ~Q.zero(cosh(x)))
     Residual = Abs(asin(tanh(x))) - acos(1 / cosh(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -154,10 +154,10 @@ def sp_acj4_124_condf__satassume_ask():
 
 
 # ---- case sp-acj4-127-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_127_condf__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), re(x) >= 0, Ne(exp(x), 1, evaluate=False), Ne(exp(x), -1, evaluate=False))
     Residual = Abs(atanh(exp(x))) - atanh(exp(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -166,10 +166,10 @@ def sp_acj4_127_condf__satassume_ask():
 
 
 # ---- case sp-acj4-128-cond2 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_128_cond2__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Abs(x) <= 1)
     Residual = Abs(cos(asin(x))) - cos(asin(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -178,10 +178,10 @@ def sp_acj4_128_cond2__satassume_ask():
 
 
 # ---- case sp-acj4-128-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_128_condf__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), x > 1)
     Residual = Abs(cos(asin(x))) - cos(asin(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -190,10 +190,10 @@ def sp_acj4_128_condf__satassume_ask():
 
 
 # ---- case sp-acj4-129-cond · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (declined correctly)
+# the run satassume-ask-20261019-041856 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_129_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x), Ne(x, I, evaluate=False), Ne(x, -I, evaluate=False))
     Residual = Abs(cos(atan(x))) - cos(atan(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -202,10 +202,10 @@ def sp_acj4_129_cond__satassume_ask():
 
 
 # ---- case sp-acj4-130-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_130_cond__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Abs(x) < pi / 2, ~Q.zero(cos(x)), ~Q.zero(1 / cos(x)))
     Residual = Abs(log(cos(x))) - log(1 / cos(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -214,10 +214,10 @@ def sp_acj4_130_cond__satassume_ask():
 
 
 # ---- case sp-acj4-131-condf · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (declined correctly)
+# the run satassume-ask-20261019-041856 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_131_condf__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x), ~Q.zero(cosh(x)))
     Residual = Abs(log(cosh(x))) - log(cosh(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -226,10 +226,10 @@ def sp_acj4_131_condf__satassume_ask():
 
 
 # ---- case sp-acj4-132-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_132_cond__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), x >= 0, x <= pi, ~Q.zero(sin(x)))
     Residual = Abs(log(sin(x))) - (-log(sin(x)))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -238,10 +238,10 @@ def sp_acj4_132_cond__satassume_ask():
 
 
 # ---- case sp-acj4-133-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_133_condf__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x), ~Q.zero(cosh(x)), ~Q.zero(tanh(x)))
     Residual = Abs(log(tanh(x))) - (-log(tanh(x)))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -250,10 +250,10 @@ def sp_acj4_133_condf__satassume_ask():
 
 
 # ---- case sp-acj4-136-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_136_cond__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.nonnegative(x), Or(~Q.zero(x), re(exp(1)) > 0))
     Residual = Abs(Pow(x, exp(1))) - Pow(x, exp(1))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -262,10 +262,10 @@ def sp_acj4_136_cond__satassume_ask():
 
 
 # ---- case sp-acj4-137-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_137_cond__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.nonnegative(x), Or(~Q.zero(x), re(pi) > 0))
     Residual = Abs(Pow(x, pi)) - Pow(x, pi)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -274,10 +274,10 @@ def sp_acj4_137_cond__satassume_ask():
 
 
 # ---- case sp-acj4-145-cond2 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_145_cond2__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Abs(x) <= 1)
     Residual = Abs(sin(acos(x))) - cos(asin(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -286,10 +286,10 @@ def sp_acj4_145_cond2__satassume_ask():
 
 
 # ---- case sp-acj4-145-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_145_condf__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), x > 1)
     Residual = Abs(sin(acos(x))) - cos(asin(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -298,10 +298,10 @@ def sp_acj4_145_condf__satassume_ask():
 
 
 # ---- case sp-acj4-147-cond · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (declined correctly)
+# the run satassume-ask-20261019-041856 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_147_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x), ~Q.zero(cosh(asinh(x))), ~Q.zero(x), Ne(1 / x, I, evaluate=False), Ne(1 / x, -I, evaluate=False))
     Residual = Abs(tanh(asinh(x))) - cos(atan(1 / x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -310,10 +310,10 @@ def sp_acj4_147_cond__satassume_ask():
 
 
 # ---- case sp-acj4-151-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_151_cond__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Abs(x) <= 1)
     Residual = acos(cos(asin(x))) - Abs(asin(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -322,10 +322,10 @@ def sp_acj4_151_cond__satassume_ask():
 
 
 # ---- case sp-acj4-156-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_156_cond__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Abs(x) <= 1)
     Residual = acos(sin(acos(x))) - Abs(asin(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -334,10 +334,10 @@ def sp_acj4_156_cond__satassume_ask():
 
 
 # ---- case sp-acj4-159-cond2 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_159_cond2__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), x <= 1, ~Q.zero(cosh(x)))
     Residual = acos(tanh(Abs(x))) - asin(1 / cosh(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -346,10 +346,10 @@ def sp_acj4_159_cond2__satassume_ask():
 
 
 # ---- case sp-acj4-159-cond3 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_159_cond3__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Abs(x) <= pi / 2, ~Q.zero(cosh(x)))
     Residual = acos(tanh(Abs(x))) - asin(1 / cosh(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -358,10 +358,10 @@ def sp_acj4_159_cond3__satassume_ask():
 
 
 # ---- case sp-acj4-162-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_162_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), re(x) >= 0, Q.real(x))
     Residual = acosh(real_root(x, 5)) - acosh(Pow(x, Rational(1, 5)))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -370,10 +370,10 @@ def sp_acj4_162_cond__satassume_ask():
 
 
 # ---- case sp-acj4-162-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_162_condf__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.negative(x))
     Residual = acosh(real_root(x, 5)) - acosh(Pow(x, Rational(1, 5)))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -382,10 +382,10 @@ def sp_acj4_162_condf__satassume_ask():
 
 
 # ---- case sp-acj4-171-cond · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (declined correctly)
+# the run satassume-ask-20261019-041856 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_171_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Abs(im(x)) < pi, ~Q.zero(cosh(x)))
     Residual = asin(sin(tanh(x))) - tanh(x)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -394,10 +394,10 @@ def sp_acj4_171_cond__satassume_ask():
 
 
 # ---- case sp-acj4-171-cond2 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_171_cond2__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x), ~Q.zero(cosh(x)))
     Residual = asin(sin(tanh(x))) - tanh(x)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -406,10 +406,10 @@ def sp_acj4_171_cond2__satassume_ask():
 
 
 # ---- case sp-acj4-179-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_179_cond__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Abs(x) <= pi / 2, Ne(sinh(acos(x)), I, evaluate=False), Ne(sinh(acos(x)), -I, evaluate=False), ~Q.zero(cosh(acos(x))))
     Residual = atan(sinh(acos(x))) - asin(tanh(acos(x)))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -418,10 +418,10 @@ def sp_acj4_179_cond__satassume_ask():
 
 
 # ---- case sp-acj4-180-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_180_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), re(x) > 0, Ne(sinh(acosh(x)), I, evaluate=False), Ne(sinh(acosh(x)), -I, evaluate=False), ~Q.zero(cosh(acosh(x))))
     Residual = atan(sinh(acosh(x))) - asin(tanh(acosh(x)))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -430,10 +430,10 @@ def sp_acj4_180_cond__satassume_ask():
 
 
 # ---- case sp-acj4-181-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_181_cond__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Abs(x) <= pi / 2, Ne(sinh(asin(x)), I, evaluate=False), Ne(sinh(asin(x)), -I, evaluate=False), ~Q.zero(cosh(asin(x))))
     Residual = atan(sinh(asin(x))) - asin(tanh(asin(x)))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -442,10 +442,10 @@ def sp_acj4_181_cond__satassume_ask():
 
 
 # ---- case sp-acj4-183-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_183_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), re(x) > 0, ~Q.zero(x), Ne(sinh(log(x)), I, evaluate=False), Ne(sinh(log(x)), -I, evaluate=False), ~Q.zero(cosh(log(x))))
     Residual = atan(sinh(log(x))) - asin(tanh(log(x)))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -454,10 +454,10 @@ def sp_acj4_183_cond__satassume_ask():
 
 
 # ---- case sp-acj4-186-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_186_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x), ~Q.zero(cos(sin(x))), Ne(tan(sin(x)), I, evaluate=False), Ne(tan(sin(x)), -I, evaluate=False))
     Residual = atan(tan(sin(x))) - sin(x)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -466,10 +466,10 @@ def sp_acj4_186_cond__satassume_ask():
 
 
 # ---- case sp-acj4-187-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_187_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x), ~Q.zero(cosh(x)), ~Q.zero(cos(tanh(x))), Ne(tan(tanh(x)), I, evaluate=False), Ne(tan(tanh(x)), -I, evaluate=False))
     Residual = atan(tan(tanh(x))) - tanh(x)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -478,10 +478,10 @@ def sp_acj4_187_cond__satassume_ask():
 
 
 # ---- case sp-acj4-190-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_190_condf__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x), Ne(x, I, evaluate=False), Ne(x, -I, evaluate=False), Ne(cos(atan(x)), 1, evaluate=False), Ne(cos(atan(x)), -1, evaluate=False), ~Q.zero(x))
     Residual = atanh(cos(atan(x))) - Abs(asinh(1 / x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -490,10 +490,10 @@ def sp_acj4_190_condf__satassume_ask():
 
 
 # ---- case sp-acj4-191-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_191_condf__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x), Ne(sin(acos(x)), 1, evaluate=False), Ne(sin(acos(x)), -1, evaluate=False), ~Q.zero(x))
     Residual = atanh(sin(acos(x))) - acosh(Abs(1 / x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -502,10 +502,10 @@ def sp_acj4_191_condf__satassume_ask():
 
 
 # ---- case sp-acj4-196-cond2 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_196_cond2__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x), ~Q.zero(cosh(x)), Ne(sin(tanh(x)), 1, evaluate=False), Ne(sin(tanh(x)), -1, evaluate=False), ~Q.zero(cos(tanh(x))))
     Residual = atanh(sin(tanh(x))) - asinh(tan(tanh(x)))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -514,10 +514,10 @@ def sp_acj4_196_cond2__satassume_ask():
 
 
 # ---- case sp-acj4-20-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_20_condf__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x))
     Residual = sinh(Abs(x)) - Abs(sinh(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -526,10 +526,10 @@ def sp_acj4_20_condf__satassume_ask():
 
 
 # ---- case sp-acj4-200-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_200_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x))
     Residual = cos(asin(sin(x))) - Abs(cos(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -538,10 +538,10 @@ def sp_acj4_200_cond__satassume_ask():
 
 
 # ---- case sp-acj4-202-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_202_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x), ~Q.zero(cos(x)), Ne(tan(x), I, evaluate=False), Ne(tan(x), -I, evaluate=False))
     Residual = cos(atan(tan(x))) - Abs(cos(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -550,10 +550,10 @@ def sp_acj4_202_cond__satassume_ask():
 
 
 # ---- case sp-acj4-203-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_203_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), re(x) >= 0, ~Q.zero(x), ~Q.zero(1 / x))
     Residual = cos(log(1 / x)) - cos(log(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -562,10 +562,10 @@ def sp_acj4_203_cond__satassume_ask():
 
 
 # ---- case sp-acj4-205-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_205_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x), ~Q.zero(cos(x)))
     Residual = cosh(asinh(tan(x))) - Abs(1 / cos(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -574,10 +574,10 @@ def sp_acj4_205_cond__satassume_ask():
 
 
 # ---- case sp-acj4-234-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_234_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), re(x) >= 0, Or(~Q.zero(x), re(x) > 0), ~Q.zero(Pow(x, x)), ~Q.zero(x), Or(~Q.zero(1 / x), re(x) > 0))
     Residual = 1 / Pow(x, x) - Pow(1 / x, x)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -586,10 +586,10 @@ def sp_acj4_234_cond__satassume_ask():
 
 
 # ---- case sp-acj4-234-cond2 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered true (solved)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_234_cond2__satassume_ask():
-    x = Symbol('x', integer=True)
+    x = Symbol('x')
     Assum = And(Q.integer(x), Or(~Q.zero(x), re(x) > 0), ~Q.zero(Pow(x, x)), ~Q.zero(x), Or(~Q.zero(1 / x), re(x) > 0))
     Residual = 1 / Pow(x, x) - Pow(1 / x, x)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -598,10 +598,10 @@ def sp_acj4_234_cond2__satassume_ask():
 
 
 # ---- case sp-acj4-243-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_243_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), re(x) > 0, Q.real(x), ~Q.zero(real_root(x, 5)), ~Q.zero(x))
     Residual = log(real_root(x, 5)) - (log(x) / 5)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -610,10 +610,10 @@ def sp_acj4_243_cond__satassume_ask():
 
 
 # ---- case sp-acj4-245-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_245_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), re(x) > 0, Q.real(x), ~Q.zero(real_root(x, 7)), ~Q.zero(x))
     Residual = log(real_root(x, 7)) - (log(x) / 7)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -622,10 +622,10 @@ def sp_acj4_245_cond__satassume_ask():
 
 
 # ---- case sp-acj4-248-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_248_cond__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Abs(x) <= 1)
     Residual = -Abs(asin(x)) - asin(-Abs(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -634,10 +634,10 @@ def sp_acj4_248_cond__satassume_ask():
 
 
 # ---- case sp-acj4-251-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_251_cond__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Abs(x) < 1, Ne(x, 1, evaluate=False), Ne(x, -1, evaluate=False), Ne(-Abs(x), 1, evaluate=False), Ne(-Abs(x), -1, evaluate=False))
     Residual = -Abs(atanh(x)) - atanh(-Abs(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -646,10 +646,10 @@ def sp_acj4_251_cond__satassume_ask():
 
 
 # ---- case sp-acj4-260-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_260_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Abs(re(x)) < pi / 2, ~Q.zero(cos(x)), ~Q.zero(1 / cos(x)))
     Residual = -log(cos(x)) - log(1 / cos(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -658,10 +658,10 @@ def sp_acj4_260_cond__satassume_ask():
 
 
 # ---- case sp-acj4-261-cond · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (declined correctly)
+# the run satassume-ask-20261019-041856 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_261_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), re(x) > 0, ~Q.zero(cosh(x)), ~Q.zero(1 / cosh(x)))
     Residual = -log(cosh(x)) - log(1 / cosh(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -670,10 +670,10 @@ def sp_acj4_261_cond__satassume_ask():
 
 
 # ---- case sp-acj4-266-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_266_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), re(x) >= 0, ~Q.zero(x), ~Q.zero(1 / x))
     Residual = -sin(log(x)) - sin(log(1 / x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -682,10 +682,10 @@ def sp_acj4_266_cond__satassume_ask():
 
 
 # ---- case sp-acj4-266-condf · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (declined correctly)
+# the run satassume-ask-20261019-041856 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_266_condf__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.negative(x), ~Q.zero(x), ~Q.zero(1 / x))
     Residual = -sin(log(x)) - sin(log(1 / x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -694,10 +694,10 @@ def sp_acj4_266_condf__satassume_ask():
 
 
 # ---- case sp-acj4-267-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_267_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), re(x) >= 0, ~Q.zero(x), ~Q.zero(cos(log(x))), ~Q.zero(1 / x), ~Q.zero(cos(log(1 / x))))
     Residual = -tan(log(x)) - tan(log(1 / x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -706,10 +706,10 @@ def sp_acj4_267_cond__satassume_ask():
 
 
 # ---- case sp-acj4-267-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_267_condf__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.negative(x), ~Q.zero(x), ~Q.zero(cos(log(x))), ~Q.zero(1 / x), ~Q.zero(cos(log(1 / x))))
     Residual = -tan(log(x)) - tan(log(1 / x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -718,10 +718,10 @@ def sp_acj4_267_condf__satassume_ask():
 
 
 # ---- case sp-acj4-283-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_283_condf__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x))
     Residual = Pow(Abs(x), 2) - (x * x)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -730,10 +730,10 @@ def sp_acj4_283_condf__satassume_ask():
 
 
 # ---- case sp-acj4-287-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_287_condf__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x))
     Residual = Pow(Abs(x), 6) - Pow(x, 6)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -742,10 +742,10 @@ def sp_acj4_287_condf__satassume_ask():
 
 
 # ---- case sp-acj4-289-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_289_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x))
     Residual = Pow(Abs(x), 8) - Pow(x, 8)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -754,10 +754,10 @@ def sp_acj4_289_cond__satassume_ask():
 
 
 # ---- case sp-acj4-29-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_29_cond__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x), ~Q.zero(x), ~Q.zero(Pow(x, 3)))
     Residual = 3 * log(x) - log(Pow(x, 3))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -766,10 +766,10 @@ def sp_acj4_29_cond__satassume_ask():
 
 
 # ---- case sp-acj4-29-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_29_condf__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x), ~Q.zero(x), ~Q.zero(Pow(x, 3)))
     Residual = 3 * log(x) - log(Pow(x, 3))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -778,10 +778,10 @@ def sp_acj4_29_condf__satassume_ask():
 
 
 # ---- case sp-acj4-334-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_334_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), And(im(x) > -pi, im(x) <= pi), Or(~Q.zero(exp(x)), re(exp(1)) > 0))
     Residual = Pow(exp(x), exp(1)) - exp(exp(1) * x)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -790,10 +790,10 @@ def sp_acj4_334_cond__satassume_ask():
 
 
 # ---- case sp-acj4-335-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_335_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), And(im(x) > -pi, im(x) <= pi), Or(~Q.zero(exp(x)), re(pi) > 0))
     Residual = Pow(exp(x), pi) - exp(pi * x)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -802,10 +802,10 @@ def sp_acj4_335_cond__satassume_ask():
 
 
 # ---- case sp-acj4-336-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_336_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), And(im(x) > -pi, im(x) <= pi), Or(~Q.zero(exp(x)), re(x) > 0))
     Residual = Pow(exp(x), x) - exp(x * x)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -814,10 +814,10 @@ def sp_acj4_336_cond__satassume_ask():
 
 
 # ---- case sp-acj4-344-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_344_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), re(x) >= 0, ~Q.zero(x), Or(~Q.zero(1 / x), re(x) > 0), Or(~Q.zero(x), re(-x) > 0))
     Residual = Pow(1 / x, x) - Pow(x, -x)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -826,10 +826,10 @@ def sp_acj4_344_cond__satassume_ask():
 
 
 # ---- case sp-acj4-344-cond2 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered true (solved)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_344_cond2__satassume_ask():
-    x = Symbol('x', integer=True)
+    x = Symbol('x')
     Assum = And(Q.integer(x), ~Q.zero(x), Or(~Q.zero(1 / x), re(x) > 0), Or(~Q.zero(x), re(-x) > 0))
     Residual = Pow(1 / x, x) - Pow(x, -x)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -838,10 +838,10 @@ def sp_acj4_344_cond2__satassume_ask():
 
 
 # ---- case sp-acj4-372-cond · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (declined correctly)
+# the run satassume-ask-20261019-041856 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_372_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), re(x) > 0, Q.real(cosh(x)), ~Q.zero(cosh(x)))
     Residual = real_root(cosh(x), -5) - Pow(cosh(x), Rational(-1, 5))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -850,10 +850,10 @@ def sp_acj4_372_cond__satassume_ask():
 
 
 # ---- case sp-acj4-373-cond · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (declined correctly)
+# the run satassume-ask-20261019-041856 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_373_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), re(x) > 0, Q.real(cosh(x)))
     Residual = real_root(cosh(x), 5) - Pow(cosh(x), Rational(1, 5))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -862,10 +862,10 @@ def sp_acj4_373_cond__satassume_ask():
 
 
 # ---- case sp-acj4-376-cond2 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_376_cond2__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Abs(im(x)) < pi, Q.real(exp(x)), ~Q.zero(exp(x)))
     Residual = real_root(exp(x), -3) - exp(x / -3)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -874,10 +874,10 @@ def sp_acj4_376_cond2__satassume_ask():
 
 
 # ---- case sp-acj4-385-cond · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (declined correctly)
+# the run satassume-ask-20261019-041856 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_385_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), re(x) > 0, Q.real(exp(x)))
     Residual = real_root(exp(x), 3) - exp(x / 3)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -886,10 +886,10 @@ def sp_acj4_385_cond__satassume_ask():
 
 
 # ---- case sp-acj4-392-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_392_cond__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Abs(x) <= 1)
     Residual = sin(Abs(asin(x))) - Abs(cos(acos(x)))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -898,10 +898,10 @@ def sp_acj4_392_cond__satassume_ask():
 
 
 # ---- case sp-acj4-394-cond · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (declined correctly)
+# the run satassume-ask-20261019-041856 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_394_cond__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Abs(x) < 1, Ne(x, 1, evaluate=False), Ne(x, -1, evaluate=False))
     Residual = sin(Abs(atanh(x))) - Abs(sin(atanh(x)))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -910,10 +910,10 @@ def sp_acj4_394_cond__satassume_ask():
 
 
 # ---- case sp-acj4-399-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_399_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x))
     Residual = sin(acos(sin(x))) - Abs(cos(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -922,10 +922,10 @@ def sp_acj4_399_cond__satassume_ask():
 
 
 # ---- case sp-acj4-402-cond · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (declined correctly)
+# the run satassume-ask-20261019-041856 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_402_cond__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Abs(x) < 1, Ne(Abs(x), 1, evaluate=False), Ne(x, 1, evaluate=False), Ne(x, -1, evaluate=False))
     Residual = sin(atanh(Abs(x))) - Abs(sin(atanh(x)))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -934,10 +934,10 @@ def sp_acj4_402_cond__satassume_ask():
 
 
 # ---- case sp-acj4-403-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_403_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), re(x) >= 0, ~Q.zero(x), ~Q.zero(1 / x))
     Residual = sin(-log(x)) - sin(log(1 / x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -946,10 +946,10 @@ def sp_acj4_403_cond__satassume_ask():
 
 
 # ---- case sp-acj4-403-condf · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (declined correctly)
+# the run satassume-ask-20261019-041856 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_403_condf__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.negative(x), ~Q.zero(x), ~Q.zero(1 / x))
     Residual = sin(-log(x)) - sin(log(1 / x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -958,10 +958,10 @@ def sp_acj4_403_condf__satassume_ask():
 
 
 # ---- case sp-acj4-412-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_412_cond__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Abs(x) < 1, ~Q.zero(cos(Abs(asin(x)))), ~Q.zero(cos(asin(x))))
     Residual = tan(Abs(asin(x))) - Abs(tan(asin(x)))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -970,10 +970,10 @@ def sp_acj4_412_cond__satassume_ask():
 
 
 # ---- case sp-acj4-416-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_416_cond__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Abs(x) <= 1, ~Q.zero(cos(acos(Abs(x)))), ~Q.zero(cos(acos(x))))
     Residual = tan(acos(Abs(x))) - Abs(tan(acos(x)))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -982,10 +982,10 @@ def sp_acj4_416_cond__satassume_ask():
 
 
 # ---- case sp-acj4-417-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_417_cond__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Abs(x) < 1, ~Q.zero(cos(asin(Abs(x)))), ~Q.zero(cos(asin(x))))
     Residual = tan(asin(Abs(x))) - Abs(tan(asin(x)))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -994,10 +994,10 @@ def sp_acj4_417_cond__satassume_ask():
 
 
 # ---- case sp-acj4-420-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_420_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), re(x) >= 0, ~Q.zero(x), ~Q.zero(cos(-log(x))), ~Q.zero(1 / x), ~Q.zero(cos(log(1 / x))))
     Residual = tan(-log(x)) - tan(log(1 / x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -1006,10 +1006,10 @@ def sp_acj4_420_cond__satassume_ask():
 
 
 # ---- case sp-acj4-420-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_420_condf__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.negative(x), ~Q.zero(x), ~Q.zero(cos(-log(x))), ~Q.zero(1 / x), ~Q.zero(cos(log(1 / x))))
     Residual = tan(-log(x)) - tan(log(1 / x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -1018,10 +1018,10 @@ def sp_acj4_420_condf__satassume_ask():
 
 
 # ---- case sp-acj4-422-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_422_condf__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x), ~Q.zero(x), Ne(1 / x, I, evaluate=False), Ne(1 / x, -I, evaluate=False))
     Residual = tanh(Abs(asinh(x))) - cos(atan(1 / x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -1030,10 +1030,10 @@ def sp_acj4_422_condf__satassume_ask():
 
 
 # ---- case sp-acj4-424-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_424_condf__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x), ~Q.zero(x), Ne(1 / x, I, evaluate=False), Ne(1 / x, -I, evaluate=False))
     Residual = tanh(asinh(Abs(x))) - cos(atan(1 / x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -1042,10 +1042,10 @@ def sp_acj4_424_condf__satassume_ask():
 
 
 # ---- case sp-acj4-428-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_428_cond__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), x <= 1)
     Residual = atan(sinh(x)) - asin(tanh(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -1054,10 +1054,10 @@ def sp_acj4_428_cond__satassume_ask():
 
 
 # ---- case sp-acj4-428-cond3 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_428_cond3__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), x >= 0, x <= pi)
     Residual = atan(sinh(x)) - asin(tanh(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -1066,10 +1066,10 @@ def sp_acj4_428_cond3__satassume_ask():
 
 
 # ---- case sp-acj4-430-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_430_cond__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x), ~Q.zero(x), Or(~Q.zero(x), re(x) > 0), ~Q.zero(Pow(x, x)))
     Residual = log(x) * x - log(Pow(x, x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -1078,10 +1078,10 @@ def sp_acj4_430_cond__satassume_ask():
 
 
 # ---- case sp-acj4-430-cond2 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_430_cond2__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Abs(x) < 1, ~Q.zero(x), Or(~Q.zero(x), re(x) > 0), ~Q.zero(Pow(x, x)))
     Residual = log(x) * x - log(Pow(x, x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -1090,10 +1090,10 @@ def sp_acj4_430_cond2__satassume_ask():
 
 
 # ---- case sp-acj4-432-cond3 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_432_cond3__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Abs(x) <= pi / 2, ~Q.zero(cosh(x)))
     Residual = acos(Abs(tanh(x))) - asin(1 / cosh(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -1102,10 +1102,10 @@ def sp_acj4_432_cond3__satassume_ask():
 
 
 # ---- case sp-acj4-433-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_433_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), re(x) >= 0, ~Q.zero(x), Ne(-log(x), I, evaluate=False), Ne(-log(x), -I, evaluate=False), ~Q.zero(1 / x), Ne(log(1 / x), I, evaluate=False), Ne(log(1 / x), -I, evaluate=False))
     Residual = atan(-log(x)) - atan(log(1 / x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -1114,10 +1114,10 @@ def sp_acj4_433_cond__satassume_ask():
 
 
 # ---- case sp-acj4-433-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_433_condf__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.negative(x), ~Q.zero(x), Ne(-log(x), I, evaluate=False), Ne(-log(x), -I, evaluate=False), ~Q.zero(1 / x), Ne(log(1 / x), I, evaluate=False), Ne(log(1 / x), -I, evaluate=False))
     Residual = atan(-log(x)) - atan(log(1 / x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -1126,10 +1126,10 @@ def sp_acj4_433_condf__satassume_ask():
 
 
 # ---- case sp-acj4-442-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_442_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x), ~Q.zero(x), ~Q.zero(log(x)), ~Q.zero(1 / log(x)))
     Residual = -log(log(x)) - log(1 / log(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -1138,10 +1138,10 @@ def sp_acj4_442_cond__satassume_ask():
 
 
 # ---- case sp-acj4-442-cond4 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_442_cond4__satassume_ask():
-    x = Symbol('x', integer=True)
+    x = Symbol('x')
     Assum = And(Q.integer(x), ~Q.zero(x), ~Q.zero(log(x)), ~Q.zero(1 / log(x)))
     Residual = -log(log(x)) - log(1 / log(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -1150,10 +1150,10 @@ def sp_acj4_442_cond4__satassume_ask():
 
 
 # ---- case sp-acj4-46-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_46_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), And(im(x) > -pi, im(x) <= pi), ~Q.zero(Pow(2, x)))
     Residual = log(2) * x - log(Pow(2, x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -1162,10 +1162,10 @@ def sp_acj4_46_cond__satassume_ask():
 
 
 # ---- case sp-acj4-5-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_5_cond__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Abs(x) < 1, Ne(Abs(x), 1, evaluate=False), Ne(x, 1, evaluate=False), Ne(x, -1, evaluate=False))
     Residual = atanh(Abs(x)) - Abs(atanh(x))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -1174,10 +1174,10 @@ def sp_acj4_5_cond__satassume_ask():
 
 
 # ---- case sp-acj4-55-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_55_cond__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x), ~Q.zero(x), Or(~Q.zero(x), re(exp(1)) > 0), ~Q.zero(Pow(x, exp(1))))
     Residual = log(x) * exp(1) - log(Pow(x, exp(1)))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -1186,10 +1186,10 @@ def sp_acj4_55_cond__satassume_ask():
 
 
 # ---- case sp-acj4-56-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_56_cond__satassume_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x), ~Q.zero(x), Or(~Q.zero(x), re(pi) > 0), ~Q.zero(Pow(x, pi)))
     Residual = log(x) * pi - log(Pow(x, pi))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -1198,10 +1198,10 @@ def sp_acj4_56_cond__satassume_ask():
 
 
 # ---- case sp-acj4-56-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_56_condf__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x), ~Q.zero(x), Or(~Q.zero(x), re(pi) > 0), ~Q.zero(Pow(x, pi)))
     Residual = log(x) * pi - log(Pow(x, pi))
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -1210,10 +1210,10 @@ def sp_acj4_56_condf__satassume_ask():
 
 
 # ---- case sp-acj4-9-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032540 answered null (no verdict)
+# the run satassume-ask-20261019-041856 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_9_cond__satassume_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), And(im(x) > -pi, im(x) <= pi), ~Q.zero(exp(x)))
     Residual = log(exp(x)) - x
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -1223,98 +1223,98 @@ def sp_acj4_9_cond__satassume_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-1-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_1_cond__satassume_ask),
-    ('sp-acj4-108-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-032540', sp_acj4_108_condf__satassume_ask),
-    ('sp-acj4-124-condf', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032540', sp_acj4_124_condf__satassume_ask),
-    ('sp-acj4-127-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-032540', sp_acj4_127_condf__satassume_ask),
-    ('sp-acj4-128-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_128_cond2__satassume_ask),
-    ('sp-acj4-128-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-032540', sp_acj4_128_condf__satassume_ask),
-    ('sp-acj4-129-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032540', sp_acj4_129_cond__satassume_ask),
-    ('sp-acj4-130-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_130_cond__satassume_ask),
-    ('sp-acj4-131-condf', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032540', sp_acj4_131_condf__satassume_ask),
-    ('sp-acj4-132-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_132_cond__satassume_ask),
-    ('sp-acj4-133-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-032540', sp_acj4_133_condf__satassume_ask),
-    ('sp-acj4-136-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_136_cond__satassume_ask),
-    ('sp-acj4-137-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_137_cond__satassume_ask),
-    ('sp-acj4-145-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_145_cond2__satassume_ask),
-    ('sp-acj4-145-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-032540', sp_acj4_145_condf__satassume_ask),
-    ('sp-acj4-147-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032540', sp_acj4_147_cond__satassume_ask),
-    ('sp-acj4-151-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_151_cond__satassume_ask),
-    ('sp-acj4-156-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_156_cond__satassume_ask),
-    ('sp-acj4-159-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_159_cond2__satassume_ask),
-    ('sp-acj4-159-cond3', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_159_cond3__satassume_ask),
-    ('sp-acj4-162-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_162_cond__satassume_ask),
-    ('sp-acj4-162-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-032540', sp_acj4_162_condf__satassume_ask),
-    ('sp-acj4-171-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032540', sp_acj4_171_cond__satassume_ask),
-    ('sp-acj4-171-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_171_cond2__satassume_ask),
-    ('sp-acj4-179-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_179_cond__satassume_ask),
-    ('sp-acj4-180-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_180_cond__satassume_ask),
-    ('sp-acj4-181-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_181_cond__satassume_ask),
-    ('sp-acj4-183-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_183_cond__satassume_ask),
-    ('sp-acj4-186-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_186_cond__satassume_ask),
-    ('sp-acj4-187-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_187_cond__satassume_ask),
-    ('sp-acj4-190-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-032540', sp_acj4_190_condf__satassume_ask),
-    ('sp-acj4-191-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-032540', sp_acj4_191_condf__satassume_ask),
-    ('sp-acj4-196-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_196_cond2__satassume_ask),
-    ('sp-acj4-20-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-032540', sp_acj4_20_condf__satassume_ask),
-    ('sp-acj4-200-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_200_cond__satassume_ask),
-    ('sp-acj4-202-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_202_cond__satassume_ask),
-    ('sp-acj4-203-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_203_cond__satassume_ask),
-    ('sp-acj4-205-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_205_cond__satassume_ask),
-    ('sp-acj4-234-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_234_cond__satassume_ask),
-    ('sp-acj4-234-cond2', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-032540', sp_acj4_234_cond2__satassume_ask),
-    ('sp-acj4-243-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_243_cond__satassume_ask),
-    ('sp-acj4-245-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_245_cond__satassume_ask),
-    ('sp-acj4-248-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_248_cond__satassume_ask),
-    ('sp-acj4-251-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_251_cond__satassume_ask),
-    ('sp-acj4-260-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_260_cond__satassume_ask),
-    ('sp-acj4-261-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032540', sp_acj4_261_cond__satassume_ask),
-    ('sp-acj4-266-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_266_cond__satassume_ask),
-    ('sp-acj4-266-condf', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032540', sp_acj4_266_condf__satassume_ask),
-    ('sp-acj4-267-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_267_cond__satassume_ask),
-    ('sp-acj4-267-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-032540', sp_acj4_267_condf__satassume_ask),
-    ('sp-acj4-283-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-032540', sp_acj4_283_condf__satassume_ask),
-    ('sp-acj4-287-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-032540', sp_acj4_287_condf__satassume_ask),
-    ('sp-acj4-289-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_289_cond__satassume_ask),
-    ('sp-acj4-29-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_29_cond__satassume_ask),
-    ('sp-acj4-29-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-032540', sp_acj4_29_condf__satassume_ask),
-    ('sp-acj4-334-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_334_cond__satassume_ask),
-    ('sp-acj4-335-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_335_cond__satassume_ask),
-    ('sp-acj4-336-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_336_cond__satassume_ask),
-    ('sp-acj4-344-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_344_cond__satassume_ask),
-    ('sp-acj4-344-cond2', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-032540', sp_acj4_344_cond2__satassume_ask),
-    ('sp-acj4-372-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032540', sp_acj4_372_cond__satassume_ask),
-    ('sp-acj4-373-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032540', sp_acj4_373_cond__satassume_ask),
-    ('sp-acj4-376-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_376_cond2__satassume_ask),
-    ('sp-acj4-385-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032540', sp_acj4_385_cond__satassume_ask),
-    ('sp-acj4-392-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_392_cond__satassume_ask),
-    ('sp-acj4-394-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032540', sp_acj4_394_cond__satassume_ask),
-    ('sp-acj4-399-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_399_cond__satassume_ask),
-    ('sp-acj4-402-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032540', sp_acj4_402_cond__satassume_ask),
-    ('sp-acj4-403-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_403_cond__satassume_ask),
-    ('sp-acj4-403-condf', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032540', sp_acj4_403_condf__satassume_ask),
-    ('sp-acj4-412-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_412_cond__satassume_ask),
-    ('sp-acj4-416-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_416_cond__satassume_ask),
-    ('sp-acj4-417-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_417_cond__satassume_ask),
-    ('sp-acj4-420-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_420_cond__satassume_ask),
-    ('sp-acj4-420-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-032540', sp_acj4_420_condf__satassume_ask),
-    ('sp-acj4-422-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-032540', sp_acj4_422_condf__satassume_ask),
-    ('sp-acj4-424-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-032540', sp_acj4_424_condf__satassume_ask),
-    ('sp-acj4-428-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_428_cond__satassume_ask),
-    ('sp-acj4-428-cond3', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_428_cond3__satassume_ask),
-    ('sp-acj4-430-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_430_cond__satassume_ask),
-    ('sp-acj4-430-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_430_cond2__satassume_ask),
-    ('sp-acj4-432-cond3', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_432_cond3__satassume_ask),
-    ('sp-acj4-433-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_433_cond__satassume_ask),
-    ('sp-acj4-433-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-032540', sp_acj4_433_condf__satassume_ask),
-    ('sp-acj4-442-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_442_cond__satassume_ask),
-    ('sp-acj4-442-cond4', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_442_cond4__satassume_ask),
-    ('sp-acj4-46-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_46_cond__satassume_ask),
-    ('sp-acj4-5-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_5_cond__satassume_ask),
-    ('sp-acj4-55-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_55_cond__satassume_ask),
-    ('sp-acj4-56-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_56_cond__satassume_ask),
-    ('sp-acj4-56-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-032540', sp_acj4_56_condf__satassume_ask),
-    ('sp-acj4-9-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032540', sp_acj4_9_cond__satassume_ask),
+    ('sp-acj4-1-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_1_cond__satassume_ask),
+    ('sp-acj4-108-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-041856', sp_acj4_108_condf__satassume_ask),
+    ('sp-acj4-124-condf', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041856', sp_acj4_124_condf__satassume_ask),
+    ('sp-acj4-127-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-041856', sp_acj4_127_condf__satassume_ask),
+    ('sp-acj4-128-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_128_cond2__satassume_ask),
+    ('sp-acj4-128-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-041856', sp_acj4_128_condf__satassume_ask),
+    ('sp-acj4-129-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041856', sp_acj4_129_cond__satassume_ask),
+    ('sp-acj4-130-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_130_cond__satassume_ask),
+    ('sp-acj4-131-condf', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041856', sp_acj4_131_condf__satassume_ask),
+    ('sp-acj4-132-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_132_cond__satassume_ask),
+    ('sp-acj4-133-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-041856', sp_acj4_133_condf__satassume_ask),
+    ('sp-acj4-136-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_136_cond__satassume_ask),
+    ('sp-acj4-137-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_137_cond__satassume_ask),
+    ('sp-acj4-145-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_145_cond2__satassume_ask),
+    ('sp-acj4-145-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-041856', sp_acj4_145_condf__satassume_ask),
+    ('sp-acj4-147-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041856', sp_acj4_147_cond__satassume_ask),
+    ('sp-acj4-151-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_151_cond__satassume_ask),
+    ('sp-acj4-156-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_156_cond__satassume_ask),
+    ('sp-acj4-159-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_159_cond2__satassume_ask),
+    ('sp-acj4-159-cond3', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_159_cond3__satassume_ask),
+    ('sp-acj4-162-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_162_cond__satassume_ask),
+    ('sp-acj4-162-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-041856', sp_acj4_162_condf__satassume_ask),
+    ('sp-acj4-171-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041856', sp_acj4_171_cond__satassume_ask),
+    ('sp-acj4-171-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_171_cond2__satassume_ask),
+    ('sp-acj4-179-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_179_cond__satassume_ask),
+    ('sp-acj4-180-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_180_cond__satassume_ask),
+    ('sp-acj4-181-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_181_cond__satassume_ask),
+    ('sp-acj4-183-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_183_cond__satassume_ask),
+    ('sp-acj4-186-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_186_cond__satassume_ask),
+    ('sp-acj4-187-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_187_cond__satassume_ask),
+    ('sp-acj4-190-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-041856', sp_acj4_190_condf__satassume_ask),
+    ('sp-acj4-191-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-041856', sp_acj4_191_condf__satassume_ask),
+    ('sp-acj4-196-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_196_cond2__satassume_ask),
+    ('sp-acj4-20-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-041856', sp_acj4_20_condf__satassume_ask),
+    ('sp-acj4-200-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_200_cond__satassume_ask),
+    ('sp-acj4-202-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_202_cond__satassume_ask),
+    ('sp-acj4-203-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_203_cond__satassume_ask),
+    ('sp-acj4-205-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_205_cond__satassume_ask),
+    ('sp-acj4-234-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_234_cond__satassume_ask),
+    ('sp-acj4-234-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_234_cond2__satassume_ask),
+    ('sp-acj4-243-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_243_cond__satassume_ask),
+    ('sp-acj4-245-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_245_cond__satassume_ask),
+    ('sp-acj4-248-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_248_cond__satassume_ask),
+    ('sp-acj4-251-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_251_cond__satassume_ask),
+    ('sp-acj4-260-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_260_cond__satassume_ask),
+    ('sp-acj4-261-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041856', sp_acj4_261_cond__satassume_ask),
+    ('sp-acj4-266-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_266_cond__satassume_ask),
+    ('sp-acj4-266-condf', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041856', sp_acj4_266_condf__satassume_ask),
+    ('sp-acj4-267-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_267_cond__satassume_ask),
+    ('sp-acj4-267-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-041856', sp_acj4_267_condf__satassume_ask),
+    ('sp-acj4-283-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-041856', sp_acj4_283_condf__satassume_ask),
+    ('sp-acj4-287-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-041856', sp_acj4_287_condf__satassume_ask),
+    ('sp-acj4-289-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_289_cond__satassume_ask),
+    ('sp-acj4-29-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_29_cond__satassume_ask),
+    ('sp-acj4-29-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-041856', sp_acj4_29_condf__satassume_ask),
+    ('sp-acj4-334-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_334_cond__satassume_ask),
+    ('sp-acj4-335-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_335_cond__satassume_ask),
+    ('sp-acj4-336-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_336_cond__satassume_ask),
+    ('sp-acj4-344-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_344_cond__satassume_ask),
+    ('sp-acj4-344-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_344_cond2__satassume_ask),
+    ('sp-acj4-372-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041856', sp_acj4_372_cond__satassume_ask),
+    ('sp-acj4-373-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041856', sp_acj4_373_cond__satassume_ask),
+    ('sp-acj4-376-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_376_cond2__satassume_ask),
+    ('sp-acj4-385-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041856', sp_acj4_385_cond__satassume_ask),
+    ('sp-acj4-392-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_392_cond__satassume_ask),
+    ('sp-acj4-394-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041856', sp_acj4_394_cond__satassume_ask),
+    ('sp-acj4-399-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_399_cond__satassume_ask),
+    ('sp-acj4-402-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041856', sp_acj4_402_cond__satassume_ask),
+    ('sp-acj4-403-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_403_cond__satassume_ask),
+    ('sp-acj4-403-condf', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041856', sp_acj4_403_condf__satassume_ask),
+    ('sp-acj4-412-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_412_cond__satassume_ask),
+    ('sp-acj4-416-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_416_cond__satassume_ask),
+    ('sp-acj4-417-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_417_cond__satassume_ask),
+    ('sp-acj4-420-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_420_cond__satassume_ask),
+    ('sp-acj4-420-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-041856', sp_acj4_420_condf__satassume_ask),
+    ('sp-acj4-422-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-041856', sp_acj4_422_condf__satassume_ask),
+    ('sp-acj4-424-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-041856', sp_acj4_424_condf__satassume_ask),
+    ('sp-acj4-428-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_428_cond__satassume_ask),
+    ('sp-acj4-428-cond3', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_428_cond3__satassume_ask),
+    ('sp-acj4-430-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_430_cond__satassume_ask),
+    ('sp-acj4-430-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_430_cond2__satassume_ask),
+    ('sp-acj4-432-cond3', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_432_cond3__satassume_ask),
+    ('sp-acj4-433-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_433_cond__satassume_ask),
+    ('sp-acj4-433-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-041856', sp_acj4_433_condf__satassume_ask),
+    ('sp-acj4-442-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_442_cond__satassume_ask),
+    ('sp-acj4-442-cond4', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_442_cond4__satassume_ask),
+    ('sp-acj4-46-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_46_cond__satassume_ask),
+    ('sp-acj4-5-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_5_cond__satassume_ask),
+    ('sp-acj4-55-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_55_cond__satassume_ask),
+    ('sp-acj4-56-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_56_cond__satassume_ask),
+    ('sp-acj4-56-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-041856', sp_acj4_56_condf__satassume_ask),
+    ('sp-acj4-9-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_9_cond__satassume_ask),
 ]
 
 

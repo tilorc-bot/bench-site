@@ -146,10 +146,10 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-prime-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-032311 answered null (no verdict)
+# the run satassume-ask-20261019-041805 answered null (no verdict)
 @_in(_SETUP1)
 def demo_prime_01__satassume_ask():
-    p = Symbol('p', integer=True)
+    p = Symbol('p')
     Assum = And(Q.integer(p), Q.prime(p), p > 2)
     Residual = Pow(-1, p) - (-1)
     Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
@@ -171,10 +171,10 @@ def demo_prime_01__satrefine_refine():
 
 
 # ---- case demo-prime-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-032451 answered null (no verdict)
+# the run satrefine-simplify-20261019-041807 answered null (no verdict)
 @_in(_SETUP2)
 def demo_prime_01__satrefine_simplify():
-    p = Symbol('p', integer=True, prime=True)
+    p = Symbol('p')
     Assum = And(Q.integer(p), Q.prime(p), p > 2)
     Residual = Pow(-1, p) - (-1)
     Result = simplify(satsimp.refine(Residual, Assum))
@@ -235,7 +235,7 @@ def demo_prime_01__sympy_simplify():
 
 
 # ---- case demo-prime-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-032454 answered null (no verdict)
+# the run sympy-extras-ask-20261019-041809 answered null (no verdict)
 @_in(_SETUP4)
 def demo_prime_01__sympy_extras_ask():
     p = Symbol('p', integer=True)
@@ -248,7 +248,7 @@ def demo_prime_01__sympy_extras_ask():
 
 
 # ---- case demo-prime-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-032458 answered null (no verdict)
+# the run sympy-extras-refine-20261019-041814 answered null (no verdict)
 @_in(_SETUP4)
 def demo_prime_01__sympy_extras_refine():
     p = Symbol('p', integer=True)
@@ -261,7 +261,7 @@ def demo_prime_01__sympy_extras_refine():
 
 
 # ---- case demo-prime-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-032501 answered null (no verdict)
+# the run sympy-extras-simplify-20261019-041817 answered null (no verdict)
 @_in(_SETUP4)
 def demo_prime_01__sympy_extras_simplify():
     p = Symbol('p', integer=True)
@@ -275,16 +275,16 @@ def demo_prime_01__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-prime-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_prime_01__satassume_ask),
+    ('demo-prime-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_prime_01__satassume_ask),
     ('demo-prime-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-040947', demo_prime_01__satrefine_refine),
-    ('demo-prime-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261019-032451', demo_prime_01__satrefine_simplify),
+    ('demo-prime-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261019-041807', demo_prime_01__satrefine_simplify),
     ('demo-prime-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-040938', demo_prime_01__sympy_auto),
     ('demo-prime-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-040940', demo_prime_01__sympy_ask),
     ('demo-prime-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-040943', demo_prime_01__sympy_refine),
     ('demo-prime-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261019-040945', demo_prime_01__sympy_simplify),
-    ('demo-prime-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-032454', demo_prime_01__sympy_extras_ask),
-    ('demo-prime-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-032458', demo_prime_01__sympy_extras_refine),
-    ('demo-prime-01', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261019-032501', demo_prime_01__sympy_extras_simplify),
+    ('demo-prime-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-041809', demo_prime_01__sympy_extras_ask),
+    ('demo-prime-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-041814', demo_prime_01__sympy_extras_refine),
+    ('demo-prime-01', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261019-041817', demo_prime_01__sympy_extras_simplify),
 ]
 
 
