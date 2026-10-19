@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite examples · case demo-log-03 · all Python systems
-# 5 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 6 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -113,11 +113,17 @@ def _fresh():
 # setup 1 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP1 = _Setup(r'''from sympy import *
 import sympy
-import satsimp
-''', ('satsimp', '0.1.0'))
+import satassume.sympy_api
+''', ('satassume', '0.0.1'))
 
 # setup 2 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP2 = _Setup(r'''from sympy import *
+import sympy
+import satsimp
+''', ('satsimp', '0.1.0'))
+
+# setup 3 (the harness's warm-up, version capture and cache clearing left out)
+_SETUP3 = _Setup(r'''from sympy import *
 import sympy
 ''', ('sympy', '1.14.0'))
 
@@ -125,9 +131,21 @@ import sympy
 # true iff the result is 0; false only if it is a definite nonzero number
 
 
+# ---- case demo-log-03 · expected false · system satassume-ask (satassume 0.0.1)
+# the run satassume-ask-20261019-032311 answered false (solved)
+@_in(_SETUP1)
+def demo_log_03__satassume_ask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.negative(x))
+    Residual = log(x) - log(-x)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-log-03 · expected false · system satrefine-refine (satsimp 0.1.0)
 # the run satrefine-refine-20261019-025311 answered false (solved)
-@_in(_SETUP1)
+@_in(_SETUP2)
 def demo_log_03__satrefine_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), Q.negative(x))
@@ -140,7 +158,7 @@ def demo_log_03__satrefine_refine():
 
 # ---- case demo-log-03 · expected false · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261018-212418 answered null (no verdict)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_log_03__sympy_auto():
     x = Symbol('x', real=True, negative=True)
     Residual = log(x) - log(-x)
@@ -153,7 +171,7 @@ def demo_log_03__sympy_auto():
 
 # ---- case demo-log-03 · expected false · system sympy-ask (sympy 1.14.0)
 # the run sympy-ask-20261018-212419 answered false (solved)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_log_03__sympy_ask():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), Q.negative(x))
@@ -166,7 +184,7 @@ def demo_log_03__sympy_ask():
 
 # ---- case demo-log-03 · expected false · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261018-212422 answered null (no verdict)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_log_03__sympy_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), Q.negative(x))
@@ -179,7 +197,7 @@ def demo_log_03__sympy_refine():
 
 # ---- case demo-log-03 · expected false · system sympy-simplify (sympy 1.14.0)
 # the run sympy-simplify-20261018-212424 answered false (solved)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_log_03__sympy_simplify():
     x = Symbol('x', real=True, negative=True)
     Residual = log(x) - log(-x)
@@ -191,6 +209,7 @@ def demo_log_03__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
+    ('demo-log-03', 'satassume-ask', 'false', 'false', 'satassume-ask-20261019-032311', demo_log_03__satassume_ask),
     ('demo-log-03', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261019-025311', demo_log_03__satrefine_refine),
     ('demo-log-03', 'sympy-auto', 'false', 'null', 'sympy-auto-20261018-212418', demo_log_03__sympy_auto),
     ('demo-log-03', 'sympy-ask', 'false', 'false', 'sympy-ask-20261018-212419', demo_log_03__sympy_ask),

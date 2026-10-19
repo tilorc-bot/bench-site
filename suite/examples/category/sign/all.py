@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite examples · category sign · all Python systems (5 cases listed)
-# 25 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 30 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -113,11 +113,17 @@ def _fresh():
 # setup 1 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP1 = _Setup(r'''from sympy import *
 import sympy
-import satsimp
-''', ('satsimp', '0.1.0'))
+import satassume.sympy_api
+''', ('satassume', '0.0.1'))
 
 # setup 2 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP2 = _Setup(r'''from sympy import *
+import sympy
+import satsimp
+''', ('satsimp', '0.1.0'))
+
+# setup 3 (the harness's warm-up, version capture and cache clearing left out)
+_SETUP3 = _Setup(r'''from sympy import *
 import sympy
 ''', ('sympy', '1.14.0'))
 
@@ -127,9 +133,21 @@ import sympy
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
 
 
+# ---- case demo-nonzero-01 · expected true · system satassume-ask (satassume 0.0.1)
+# the run satassume-ask-20261019-032311 answered null (no verdict)
+@_in(_SETUP1)
+def demo_nonzero_01__satassume_ask():
+    z = Symbol('z', complex=True)
+    Assum = And(Q.complex(z), Q.imaginary(z))
+    Residual = Abs(sign(z)) - 1
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-nonzero-01 · expected true · system satrefine-refine (satsimp 0.1.0)
 # the run satrefine-refine-20261019-025311 answered true (solved)
-@_in(_SETUP1)
+@_in(_SETUP2)
 def demo_nonzero_01__satrefine_refine():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z), Q.imaginary(z))
@@ -142,7 +160,7 @@ def demo_nonzero_01__satrefine_refine():
 
 # ---- case demo-nonzero-01 · expected true · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261018-212418 answered true (solved)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_nonzero_01__sympy_auto():
     z = Symbol('z', complex=True, imaginary=True)
     Residual = Abs(sign(z)) - 1
@@ -154,7 +172,7 @@ def demo_nonzero_01__sympy_auto():
 
 # ---- case demo-nonzero-01 · expected true · system sympy-ask (sympy 1.14.0)
 # the run sympy-ask-20261018-212419 answered null (no verdict)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_nonzero_01__sympy_ask():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z), Q.imaginary(z))
@@ -166,7 +184,7 @@ def demo_nonzero_01__sympy_ask():
 
 # ---- case demo-nonzero-01 · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261018-212422 answered null (no verdict)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_nonzero_01__sympy_refine():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z), Q.imaginary(z))
@@ -179,7 +197,7 @@ def demo_nonzero_01__sympy_refine():
 
 # ---- case demo-nonzero-01 · expected true · system sympy-simplify (sympy 1.14.0)
 # the run sympy-simplify-20261018-212424 answered true (solved)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_nonzero_01__sympy_simplify():
     z = Symbol('z', complex=True, imaginary=True)
     Residual = Abs(sign(z)) - 1
@@ -189,9 +207,21 @@ def demo_nonzero_01__sympy_simplify():
     return Answer
 
 
+# ---- case demo-sign-02 · expected true · system satassume-ask (satassume 0.0.1)
+# the run satassume-ask-20261019-032311 answered null (no verdict)
+@_in(_SETUP1)
+def demo_sign_02__satassume_ask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), ~Q.zero(x))
+    Residual = sign(Pow(x, 2)) - 1
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-sign-02 · expected true · system satrefine-refine (satsimp 0.1.0)
 # the run satrefine-refine-20261019-025311 answered true (solved)
-@_in(_SETUP1)
+@_in(_SETUP2)
 def demo_sign_02__satrefine_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), ~Q.zero(x))
@@ -204,7 +234,7 @@ def demo_sign_02__satrefine_refine():
 
 # ---- case demo-sign-02 · expected true · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261018-212418 answered true (solved)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_sign_02__sympy_auto():
     x = Symbol('x', real=True, zero=False)
     Residual = sign(Pow(x, 2)) - 1
@@ -216,7 +246,7 @@ def demo_sign_02__sympy_auto():
 
 # ---- case demo-sign-02 · expected true · system sympy-ask (sympy 1.14.0)
 # the run sympy-ask-20261018-212419 answered null (no verdict)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_sign_02__sympy_ask():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), ~Q.zero(x))
@@ -228,7 +258,7 @@ def demo_sign_02__sympy_ask():
 
 # ---- case demo-sign-02 · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261018-212422 answered true (solved)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_sign_02__sympy_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), ~Q.zero(x))
@@ -241,7 +271,7 @@ def demo_sign_02__sympy_refine():
 
 # ---- case demo-sign-02 · expected true · system sympy-simplify (sympy 1.14.0)
 # the run sympy-simplify-20261018-212424 answered true (solved)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_sign_02__sympy_simplify():
     x = Symbol('x', real=True, zero=False)
     Residual = sign(Pow(x, 2)) - 1
@@ -251,9 +281,21 @@ def demo_sign_02__sympy_simplify():
     return Answer
 
 
+# ---- case demo-sign-03 · expected contingent · system satassume-ask (satassume 0.0.1)
+# the run satassume-ask-20261019-032311 answered null (declined correctly)
+@_in(_SETUP1)
+def demo_sign_03__satassume_ask():
+    x = Symbol('x', complex=True)
+    Assum = And(Q.complex(x), ~Q.zero(x))
+    Residual = sign(Pow(x, 2)) - 1
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-sign-03 · expected contingent · system satrefine-refine (satsimp 0.1.0)
 # the run satrefine-refine-20261019-025311 answered null (declined correctly)
-@_in(_SETUP1)
+@_in(_SETUP2)
 def demo_sign_03__satrefine_refine():
     x = Symbol('x', complex=True)
     Assum = And(Q.complex(x), ~Q.zero(x))
@@ -266,7 +308,7 @@ def demo_sign_03__satrefine_refine():
 
 # ---- case demo-sign-03 · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261018-212418 answered null (declined correctly)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_sign_03__sympy_auto():
     x = Symbol('x', complex=True, zero=False)
     Residual = sign(Pow(x, 2)) - 1
@@ -278,7 +320,7 @@ def demo_sign_03__sympy_auto():
 
 # ---- case demo-sign-03 · expected contingent · system sympy-ask (sympy 1.14.0)
 # the run sympy-ask-20261018-212419 answered null (declined correctly)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_sign_03__sympy_ask():
     x = Symbol('x', complex=True)
     Assum = And(Q.complex(x), ~Q.zero(x))
@@ -290,7 +332,7 @@ def demo_sign_03__sympy_ask():
 
 # ---- case demo-sign-03 · expected contingent · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261018-212422 answered null (declined correctly)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_sign_03__sympy_refine():
     x = Symbol('x', complex=True)
     Assum = And(Q.complex(x), ~Q.zero(x))
@@ -303,7 +345,7 @@ def demo_sign_03__sympy_refine():
 
 # ---- case demo-sign-03 · expected contingent · system sympy-simplify (sympy 1.14.0)
 # the run sympy-simplify-20261018-212424 answered null (declined correctly)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_sign_03__sympy_simplify():
     x = Symbol('x', complex=True, zero=False)
     Residual = sign(Pow(x, 2)) - 1
@@ -313,9 +355,21 @@ def demo_sign_03__sympy_simplify():
     return Answer
 
 
+# ---- case demo-sign-04 · expected true · system satassume-ask (satassume 0.0.1)
+# the run satassume-ask-20261019-032311 answered null (no verdict)
+@_in(_SETUP1)
+def demo_sign_04__satassume_ask():
+    z = Symbol('z', complex=True)
+    Assum = And(Q.complex(z))
+    Residual = Abs(z * conjugate(z)) - (z * conjugate(z))
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-sign-04 · expected true · system satrefine-refine (satsimp 0.1.0)
 # the run satrefine-refine-20261019-025311 answered true (solved)
-@_in(_SETUP1)
+@_in(_SETUP2)
 def demo_sign_04__satrefine_refine():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z))
@@ -328,7 +382,7 @@ def demo_sign_04__satrefine_refine():
 
 # ---- case demo-sign-04 · expected true · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261018-212418 answered null (no verdict)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_sign_04__sympy_auto():
     z = Symbol('z', complex=True)
     Residual = Abs(z * conjugate(z)) - (z * conjugate(z))
@@ -340,7 +394,7 @@ def demo_sign_04__sympy_auto():
 
 # ---- case demo-sign-04 · expected true · system sympy-ask (sympy 1.14.0)
 # the run sympy-ask-20261018-212419 answered null (no verdict)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_sign_04__sympy_ask():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z))
@@ -352,7 +406,7 @@ def demo_sign_04__sympy_ask():
 
 # ---- case demo-sign-04 · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261018-212422 answered null (no verdict)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_sign_04__sympy_refine():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z))
@@ -365,7 +419,7 @@ def demo_sign_04__sympy_refine():
 
 # ---- case demo-sign-04 · expected true · system sympy-simplify (sympy 1.14.0)
 # the run sympy-simplify-20261018-212424 answered null (no verdict)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_sign_04__sympy_simplify():
     z = Symbol('z', complex=True)
     Residual = Abs(z * conjugate(z)) - (z * conjugate(z))
@@ -375,9 +429,22 @@ def demo_sign_04__sympy_simplify():
     return Answer
 
 
+# ---- case demo-sign-05 · expected true · system satassume-ask (satassume 0.0.1)
+# the run satassume-ask-20261019-032311 answered null (no verdict)
+@_in(_SETUP1)
+def demo_sign_05__satassume_ask():
+    x = Symbol('x', real=True)
+    y = Symbol('y', real=True)
+    Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.negative(y))
+    Residual = Abs(x - y) - (x - y)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-sign-05 · expected true · system satrefine-refine (satsimp 0.1.0)
 # the run satrefine-refine-20261019-025311 answered true (solved)
-@_in(_SETUP1)
+@_in(_SETUP2)
 def demo_sign_05__satrefine_refine():
     x = Symbol('x', real=True)
     y = Symbol('y', real=True)
@@ -391,7 +458,7 @@ def demo_sign_05__satrefine_refine():
 
 # ---- case demo-sign-05 · expected true · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261018-212418 answered true (solved)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_sign_05__sympy_auto():
     x = Symbol('x', real=True, positive=True)
     y = Symbol('y', real=True, negative=True)
@@ -404,7 +471,7 @@ def demo_sign_05__sympy_auto():
 
 # ---- case demo-sign-05 · expected true · system sympy-ask (sympy 1.14.0)
 # the run sympy-ask-20261018-212419 answered null (no verdict)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_sign_05__sympy_ask():
     x = Symbol('x', real=True)
     y = Symbol('y', real=True)
@@ -417,7 +484,7 @@ def demo_sign_05__sympy_ask():
 
 # ---- case demo-sign-05 · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261018-212422 answered true (solved)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_sign_05__sympy_refine():
     x = Symbol('x', real=True)
     y = Symbol('y', real=True)
@@ -431,7 +498,7 @@ def demo_sign_05__sympy_refine():
 
 # ---- case demo-sign-05 · expected true · system sympy-simplify (sympy 1.14.0)
 # the run sympy-simplify-20261018-212424 answered true (solved)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_sign_05__sympy_simplify():
     x = Symbol('x', real=True, positive=True)
     y = Symbol('y', real=True, negative=True)
@@ -444,26 +511,31 @@ def demo_sign_05__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
+    ('demo-nonzero-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_nonzero_01__satassume_ask),
     ('demo-nonzero-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_nonzero_01__satrefine_refine),
     ('demo-nonzero-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_nonzero_01__sympy_auto),
     ('demo-nonzero-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_nonzero_01__sympy_ask),
     ('demo-nonzero-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212422', demo_nonzero_01__sympy_refine),
     ('demo-nonzero-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_nonzero_01__sympy_simplify),
+    ('demo-sign-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_sign_02__satassume_ask),
     ('demo-sign-02', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_sign_02__satrefine_refine),
     ('demo-sign-02', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_sign_02__sympy_auto),
     ('demo-sign-02', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_sign_02__sympy_ask),
     ('demo-sign-02', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-212422', demo_sign_02__sympy_refine),
     ('demo-sign-02', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_sign_02__sympy_simplify),
+    ('demo-sign-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032311', demo_sign_03__satassume_ask),
     ('demo-sign-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-025311', demo_sign_03__satrefine_refine),
     ('demo-sign-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212418', demo_sign_03__sympy_auto),
     ('demo-sign-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-212419', demo_sign_03__sympy_ask),
     ('demo-sign-03', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-212422', demo_sign_03__sympy_refine),
     ('demo-sign-03', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261018-212424', demo_sign_03__sympy_simplify),
+    ('demo-sign-04', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_sign_04__satassume_ask),
     ('demo-sign-04', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_sign_04__satrefine_refine),
     ('demo-sign-04', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212418', demo_sign_04__sympy_auto),
     ('demo-sign-04', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_sign_04__sympy_ask),
     ('demo-sign-04', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212422', demo_sign_04__sympy_refine),
     ('demo-sign-04', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261018-212424', demo_sign_04__sympy_simplify),
+    ('demo-sign-05', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_sign_05__satassume_ask),
     ('demo-sign-05', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_sign_05__satrefine_refine),
     ('demo-sign-05', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_sign_05__sympy_auto),
     ('demo-sign-05', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_sign_05__sympy_ask),

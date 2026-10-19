@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite examples · case demo-log-02 · all Python systems
-# 5 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 6 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -113,11 +113,17 @@ def _fresh():
 # setup 1 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP1 = _Setup(r'''from sympy import *
 import sympy
-import satsimp
-''', ('satsimp', '0.1.0'))
+import satassume.sympy_api
+''', ('satassume', '0.0.1'))
 
 # setup 2 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP2 = _Setup(r'''from sympy import *
+import sympy
+import satsimp
+''', ('satsimp', '0.1.0'))
+
+# setup 3 (the harness's warm-up, version capture and cache clearing left out)
+_SETUP3 = _Setup(r'''from sympy import *
 import sympy
 ''', ('sympy', '1.14.0'))
 
@@ -125,9 +131,22 @@ import sympy
 # true iff the result is 0; false only if it is a definite nonzero number
 
 
+# ---- case demo-log-02 · expected contingent · system satassume-ask (satassume 0.0.1)
+# the run satassume-ask-20261019-032311 answered null (declined correctly)
+@_in(_SETUP1)
+def demo_log_02__satassume_ask():
+    z = Symbol('z', complex=True)
+    w = Symbol('w', complex=True)
+    Assum = And(Q.complex(z), Q.complex(w), ~Q.zero(z), ~Q.zero(w))
+    Residual = log(z * w) - (log(z) + log(w))
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-log-02 · expected contingent · system satrefine-refine (satsimp 0.1.0)
 # the run satrefine-refine-20261019-025311 answered null (declined correctly)
-@_in(_SETUP1)
+@_in(_SETUP2)
 def demo_log_02__satrefine_refine():
     z = Symbol('z', complex=True)
     w = Symbol('w', complex=True)
@@ -141,7 +160,7 @@ def demo_log_02__satrefine_refine():
 
 # ---- case demo-log-02 · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261018-212418 answered null (declined correctly)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_log_02__sympy_auto():
     z = Symbol('z', complex=True, zero=False)
     w = Symbol('w', complex=True, zero=False)
@@ -155,7 +174,7 @@ def demo_log_02__sympy_auto():
 
 # ---- case demo-log-02 · expected contingent · system sympy-ask (sympy 1.14.0)
 # the run sympy-ask-20261018-212419 answered null (declined correctly)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_log_02__sympy_ask():
     z = Symbol('z', complex=True)
     w = Symbol('w', complex=True)
@@ -169,7 +188,7 @@ def demo_log_02__sympy_ask():
 
 # ---- case demo-log-02 · expected contingent · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261018-212422 answered null (declined correctly)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_log_02__sympy_refine():
     z = Symbol('z', complex=True)
     w = Symbol('w', complex=True)
@@ -183,7 +202,7 @@ def demo_log_02__sympy_refine():
 
 # ---- case demo-log-02 · expected contingent · system sympy-simplify (sympy 1.14.0)
 # the run sympy-simplify-20261018-212424 answered null (declined correctly)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def demo_log_02__sympy_simplify():
     z = Symbol('z', complex=True, zero=False)
     w = Symbol('w', complex=True, zero=False)
@@ -196,6 +215,7 @@ def demo_log_02__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
+    ('demo-log-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032311', demo_log_02__satassume_ask),
     ('demo-log-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-025311', demo_log_02__satrefine_refine),
     ('demo-log-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212418', demo_log_02__sympy_auto),
     ('demo-log-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-212419', demo_log_02__sympy_ask),
