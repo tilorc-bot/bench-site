@@ -233,8 +233,8 @@ padding:10px 0 4px;overflow-x:auto}
 .summary .given{color:var(--muted)}.summary .claim{font-size:1.2em}
 .verdict{color:var(--muted);font-size:12px;margin:2px 0 6px!important;padding-top:6px;border-top:1px solid var(--line)}.note{color:var(--muted);font-style:italic}
 .summary .witness{color:var(--muted);font-size:12px;margin:2px 0!important}
-.o{font-weight:600}.o-solved{color:var(--right)}.o-wrong{color:var(--wrong)}
-.o-declined_correctly,.o-no_verdict{color:var(--fg)}.o-timeout,.o-unsupported{color:var(--null)}.z{color:var(--null)}
+.o{font-weight:600}.o-solved{color:var(--right)}.o-wrong{color:var(--wrong)}a.wl{color:inherit}
+.o-declined_correctly,.o-no_verdict{color:var(--fg)}.o-error{color:var(--wrong)}.o-timeout,.o-not_sent,.o-unsupported{color:var(--null)}.z{color:var(--null)}
 tfoot td{font-weight:600}
 td.gist{font:12px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:normal;
 word-break:break-word;min-width:200px;max-width:520px;color:var(--muted)}
@@ -1869,7 +1869,7 @@ print(Residual, Answer, sep=&#x27;\n&#x27;)
   Result = Simplify[Residual, Assum];
   Answer = Which[Result === 0, True, NumericQ[Result] &amp;&amp; TrueQ[Result != 0], False, True, Null];
   {Residual, Result, Answer}
-)</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>(Tan[Abs[ArcSin[x]]]) - (Abs[Tan[ArcSin[x]]])</code></td><td>→</td><td><code>-Abs[x/Sqrt[1 - x^2]] + Tan[Abs[ArcSin[x]]]</code></td></tr><tr><td class=lbl>result</td><td><code>Simplify[Residual, Assum]</code></td><td>→</td><td><code>-(Abs[x]/Sqrt[1 - x^2]) + Tan[Abs[ArcSin[x]]]</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr></tbody></table></div></details><script type=application/json id=note-data>{"0":{"k":"Warning","s":"maxima-auto, maxima-ask, maxima-refine, maxima-simplify","t":"Sign-patched Maxima","x":"Maxima with assume-eval's sign patch (constants' signs from 40/80-digit values), not stock Maxima. The patch also keeps float stand-ins of irrational constants out of the facts and checks floor and ceiling of constants the same way (maxima_sign.lisp)."},"1":{"k":"Experimental","s":"wolfram-fullsimplify, wolfram-refine, wolfram-simplify","t":"forked kernel","x":"Each query runs in a fork() of one warmed-up Wolfram kernel (experimental; avoids the ~2 s kernel startup per query). TimeConstrained and Wolfram's internal time limits (e.g. inside Integrate, Sum, FullSimplify) do not fire in a forked kernel, so some queries run longer or answer differently than in a normal kernel (seen: Integrate/Sum claims that a normal kernel decides in about 2 s run into the time limit); the time limit is enforced by killing the child process."}}</script><footer class=foot>assume-eval harness v0.1.0 (<code>d1b8dba</code>) · suite simplipy · case set <code>ba9dc4def822</code> · results as of 2026-10-19 07:52</footer></main><script>document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button.copy');if(!b)return;var ids=(b.getAttribute('data-target')||'').split(' '),parts=[];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el)parts.push(el.textContent);}if(!parts.length)return;var text=parts.join('\n');function sel(){var o=b.parentNode.querySelector('textarea');if(o)o.remove();var t=document.createElement('textarea');t.value=text;b.parentNode.appendChild(t);t.select();var ok=false;try{ok=document.execCommand('copy');}catch(x){}if(ok){t.remove();}b.textContent=ok?'Copied':'Selected: press Ctrl/Cmd+C';}if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(function(){b.textContent='Copied';},sel);}else{sel();}setTimeout(function(){b.textContent='Copy';},2500);});</script><script>(function(){
+)</pre></div><table class=steps><tr><td class=lbl>difference</td><td><code>(Tan[Abs[ArcSin[x]]]) - (Abs[Tan[ArcSin[x]]])</code></td><td>→</td><td><code>-Abs[x/Sqrt[1 - x^2]] + Tan[Abs[ArcSin[x]]]</code></td></tr><tr><td class=lbl>result</td><td><code>Simplify[Residual, Assum]</code></td><td>→</td><td><code>-(Abs[x]/Sqrt[1 - x^2]) + Tan[Abs[ArcSin[x]]]</code></td></tr><tr><td class=lbl>answer</td><td></td><td></td><td><code>null</code></td></tr></table></details></td></tr></tbody></table></div></details><script type=application/json id=note-data>{"0":{"k":"Warning","s":"maxima-auto, maxima-ask, maxima-refine, maxima-simplify","t":"Sign-patched Maxima","x":"Maxima with assume-eval's sign patch (constants' signs from 40/80-digit values), not stock Maxima. The patch also keeps float stand-ins of irrational constants out of the facts and checks floor and ceiling of constants the same way (maxima_sign.lisp)."},"1":{"k":"Experimental","s":"wolfram-fullsimplify, wolfram-refine, wolfram-simplify","t":"forked kernel","x":"Each query runs in a fork() of one warmed-up Wolfram kernel (experimental; avoids the ~2 s kernel startup per query). TimeConstrained and Wolfram's internal time limits (e.g. inside Integrate, Sum, FullSimplify) do not fire in a forked kernel, so some queries run longer or answer differently than in a normal kernel (seen: Integrate/Sum claims that a normal kernel decides in about 2 s run into the time limit); the time limit is enforced by killing the child process."}}</script><footer class=foot>assume-eval harness v0.1.0 (<code>be9a6cc</code>) · suite simplipy · case set <code>ba9dc4def822</code> · results as of 2026-10-19 07:52</footer></main><script>document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button.copy');if(!b)return;var ids=(b.getAttribute('data-target')||'').split(' '),parts=[];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el)parts.push(el.textContent);}if(!parts.length)return;var text=parts.join('\n');function sel(){var o=b.parentNode.querySelector('textarea');if(o)o.remove();var t=document.createElement('textarea');t.value=text;b.parentNode.appendChild(t);t.select();var ok=false;try{ok=document.execCommand('copy');}catch(x){}if(ok){t.remove();}b.textContent=ok?'Copied':'Selected: press Ctrl/Cmd+C';}if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(function(){b.textContent='Copied';},sel);}else{sel();}setTimeout(function(){b.textContent='Copy';},2500);});</script><script>(function(){
 function load(id){var el=document.getElementById(id);if(!el)return null;
 try{return JSON.parse(el.textContent);}catch(x){return null;}}
 var data=load('case-data')||{},rdata=load('res-data')||{},ndata=load('note-data')||{},tdata=load('tip-data')||{};
@@ -1880,7 +1880,7 @@ function h(s){return String(s).replace(/[&<>"']/g,function(c){
 return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 function tex(s){if(window.katex){try{return window.katex.renderToString(s,{throwOnError:false});}catch(x){}}
 return '<code>'+h(s)+'</code>';}
-function ot(o){return o==='no_verdict'?'no verdict':o==='declined_correctly'?'declined correctly':o;}
+function ot(o){return o==='no_verdict'?'no verdict':o==='declined_correctly'?'declined correctly':o==='not_sent'?'not sent':o;}
 function rcontent(k){
 if(cache.hasOwnProperty('r:'+k))return cache['r:'+k];
 var d=rdata.hasOwnProperty(k)?rdata[k]:null,out,i;
@@ -1906,7 +1906,7 @@ cache['r:'+k]=out;return out;}
 function ncontent(ks){var out='',l=ks.split(' ');
 for(var i=0;i<l.length;i++){var d=ndata.hasOwnProperty(l[i])?ndata[l[i]]:null;if(!d)continue;
 out+='<div class=cp-head><b>'+h(d.k)+'</b> · '+h(d.s)+'</div><p class=cp-note>'
-+(d.t?'<b>'+h(d.t.replace(/\.$/,''))+'.</b> ':'')+h(d.x)+'</p>';}
++(d.t?'<b>'+h(d.t.replace(/\.$/,''))+':</b> ':'')+h(d.x)+'</p>';}
 return out||'<p class=cp-na>no note</p>';}
 var LTIP={'true':'equal at every admissible point','false':'unequal at every admissible point'};
 function expect(d){if(!d.e)return '';var why;
@@ -1987,7 +1987,10 @@ r.hidden=on?((st.f&&(r.getAttribute('data-f')||'').split(' ').indexOf(st.f)<0)||
 :!has('c',r.getAttribute('data-cat'));});
 document.querySelectorAll('.bar button.fx').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-f')===st.f);});
 document.querySelectorAll('.bar button.lx').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-l')===st.l);});}
-document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button');if(!b)return;
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a.wl'),r=a&&document.getElementById(a.getAttribute('href').slice(1));
+if(r){e.preventDefault();st.f='';st.l='';a.getAttribute('data-cats').split(',').forEach(function(c){if(!has('c',c))st.c.push(c);});
+wr();apply();r.scrollIntoView({block:'center'});return;}
+var b=e.target.closest&&e.target.closest('button');if(!b)return;
 if(b.classList.contains('gx')){flip('g',b.getAttribute('data-g'),all('table.mx button.gx','data-g'));}
 else if(b.classList.contains('ox')){var g=b.getAttribute('data-g');flip('o',g,all('table.mx button.ox','data-g'));
 if(has('o',g)&&!has('g',g)&&document.querySelector('table.mx button.gx[data-g="'+g.replace(/"/g,'\\"')+'"]'))st.g.push(g);}

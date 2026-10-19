@@ -103,11 +103,14 @@ def _in(setup):
 
 
 def _fresh():
-    """SymPy's cache cleared, as the harness clears it before each query."""
+    """SymPy's cache cleared, as the harness clears it before each query (an
+    error doing so is no answer, so bisect never counts it bad: a one-line
+    warning on stderr, and the case runs with the cache as it is)."""
     try:
         _sys.modules['sympy'].core.cache.clear_cache()
-    except (KeyError, AttributeError):
-        pass
+    except Exception as e:
+        print(f'warning: clearing the SymPy cache failed ({type(e).__name__}: {e}); '
+              'this case runs with a warm cache', file=_sys.stderr)
 
 
 # setup 1 (the harness's warm-up, version capture and cache clearing left out)
