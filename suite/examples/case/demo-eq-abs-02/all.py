@@ -126,7 +126,7 @@ import sympy
 
 
 # ---- case demo-eq-abs-02 · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261018-212426 answered null (no verdict)
+# the run satrefine-refine-20261019-025311 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_abs_02__satrefine_refine():
     x = Symbol('x', real=True)
@@ -191,7 +191,7 @@ def demo_eq_abs_02__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-abs-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261018-212426', demo_eq_abs_02__satrefine_refine),
+    ('demo-eq-abs-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261019-025311', demo_eq_abs_02__satrefine_refine),
     ('demo-eq-abs-02', 'sympy-auto', 'false', 'null', 'sympy-auto-20261018-212418', demo_eq_abs_02__sympy_auto),
     ('demo-eq-abs-02', 'sympy-ask', 'false', 'false', 'sympy-ask-20261018-212419', demo_eq_abs_02__sympy_ask),
     ('demo-eq-abs-02', 'sympy-refine', 'false', 'null', 'sympy-refine-20261018-212422', demo_eq_abs_02__sympy_refine),

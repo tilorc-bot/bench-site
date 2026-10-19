@@ -126,7 +126,7 @@ import sympy
 
 
 # ---- case demo-sign-03 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261018-212426 answered null (declined correctly)
+# the run satrefine-refine-20261019-025311 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_sign_03__satrefine_refine():
     x = Symbol('x', complex=True)
@@ -191,7 +191,7 @@ def demo_sign_03__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-sign-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-212426', demo_sign_03__satrefine_refine),
+    ('demo-sign-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-025311', demo_sign_03__satrefine_refine),
     ('demo-sign-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212418', demo_sign_03__sympy_auto),
     ('demo-sign-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-212419', demo_sign_03__sympy_ask),
     ('demo-sign-03', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-212422', demo_sign_03__sympy_refine),

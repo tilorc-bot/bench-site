@@ -128,7 +128,7 @@ import sympy
 
 
 # ---- case demo-nonzero-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261018-212426 answered true (solved)
+# the run satrefine-refine-20261019-025311 answered true (solved)
 @_in(_SETUP1)
 def demo_nonzero_01__satrefine_refine():
     z = Symbol('z', complex=True)
@@ -190,7 +190,7 @@ def demo_nonzero_01__sympy_simplify():
 
 
 # ---- case demo-sign-02 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261018-212426 answered true (solved)
+# the run satrefine-refine-20261019-025311 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_02__satrefine_refine():
     x = Symbol('x', real=True)
@@ -252,7 +252,7 @@ def demo_sign_02__sympy_simplify():
 
 
 # ---- case demo-sign-03 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261018-212426 answered null (declined correctly)
+# the run satrefine-refine-20261019-025311 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_sign_03__satrefine_refine():
     x = Symbol('x', complex=True)
@@ -314,7 +314,7 @@ def demo_sign_03__sympy_simplify():
 
 
 # ---- case demo-sign-04 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261018-212426 answered true (solved)
+# the run satrefine-refine-20261019-025311 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_04__satrefine_refine():
     z = Symbol('z', complex=True)
@@ -376,7 +376,7 @@ def demo_sign_04__sympy_simplify():
 
 
 # ---- case demo-sign-05 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261018-212426 answered true (solved)
+# the run satrefine-refine-20261019-025311 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_05__satrefine_refine():
     x = Symbol('x', real=True)
@@ -444,27 +444,27 @@ def demo_sign_05__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-nonzero-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-212426', demo_nonzero_01__satrefine_refine),
+    ('demo-nonzero-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_nonzero_01__satrefine_refine),
     ('demo-nonzero-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_nonzero_01__sympy_auto),
     ('demo-nonzero-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_nonzero_01__sympy_ask),
     ('demo-nonzero-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212422', demo_nonzero_01__sympy_refine),
     ('demo-nonzero-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_nonzero_01__sympy_simplify),
-    ('demo-sign-02', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-212426', demo_sign_02__satrefine_refine),
+    ('demo-sign-02', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_sign_02__satrefine_refine),
     ('demo-sign-02', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_sign_02__sympy_auto),
     ('demo-sign-02', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_sign_02__sympy_ask),
     ('demo-sign-02', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-212422', demo_sign_02__sympy_refine),
     ('demo-sign-02', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_sign_02__sympy_simplify),
-    ('demo-sign-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261018-212426', demo_sign_03__satrefine_refine),
+    ('demo-sign-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-025311', demo_sign_03__satrefine_refine),
     ('demo-sign-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212418', demo_sign_03__sympy_auto),
     ('demo-sign-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-212419', demo_sign_03__sympy_ask),
     ('demo-sign-03', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-212422', demo_sign_03__sympy_refine),
     ('demo-sign-03', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261018-212424', demo_sign_03__sympy_simplify),
-    ('demo-sign-04', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-212426', demo_sign_04__satrefine_refine),
+    ('demo-sign-04', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_sign_04__satrefine_refine),
     ('demo-sign-04', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212418', demo_sign_04__sympy_auto),
     ('demo-sign-04', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_sign_04__sympy_ask),
     ('demo-sign-04', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212422', demo_sign_04__sympy_refine),
     ('demo-sign-04', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261018-212424', demo_sign_04__sympy_simplify),
-    ('demo-sign-05', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261018-212426', demo_sign_05__satrefine_refine),
+    ('demo-sign-05', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_sign_05__satrefine_refine),
     ('demo-sign-05', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_sign_05__sympy_auto),
     ('demo-sign-05', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_sign_05__sympy_ask),
     ('demo-sign-05', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-212422', demo_sign_05__sympy_refine),
