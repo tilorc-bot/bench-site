@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite examples · every case · all Python systems (27 cases listed)
-# 162 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 270 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -127,10 +127,24 @@ _SETUP3 = _Setup(r'''from sympy import *
 import sympy
 ''', ('sympy', '1.14.0'))
 
+# setup 4 (the harness's warm-up, version capture and cache clearing left out)
+_SETUP4 = _Setup(r'''from sympy import *
+import sympy
+import sympy_extras.assumptions
+import sympy_extras.settings
+import importlib.metadata
+import json as Json, re as Regex
+Source = Json.loads(importlib.metadata.distribution('sympy-extras').read_text('direct_url.json') or '{}')
+Archive = Regex.match('https://[^#]*/archive/([0-9a-f]{40})[.](tar[.]gz|zip)(#|$)', Source.get('url', '')) if 'archive_info' in Source else None
+Commit = Source.get('vcs_info', {}).get('commit_id') or (Archive and Archive.group(1))
+Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settings.settings.time_scale}'
+''', ('sympy-extras', '0.0.3 (commit 2d60199620ac)'))
+
 # comments that the cases' code repeats, shown once here (left out below):
 # true iff the result is 0; false only if it is a definite nonzero number
 # automatic evaluation only: no simplify, refine or other function
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
+# the claim as a relation, sympy-extras' statement form (not Q.zero: see the adapter)
 # dropped (not a unary fact about one symbol): p > 2
 
 
@@ -156,6 +170,20 @@ def demo_atan2_01__satrefine_refine():
     Assum = And(Q.real(x), Q.real(y), Q.positive(x))
     Residual = atan2(y, x) - atan(y / x)
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-atan2-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered true (solved)
+@_in(_SETUP2)
+def demo_atan2_01__satrefine_simplify():
+    x = Symbol('x', real=True, positive=True)
+    y = Symbol('y', real=True)
+    Assum = And(Q.real(x), Q.real(y), Q.positive(x))
+    Residual = atan2(y, x) - atan(y / x)
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -214,6 +242,47 @@ def demo_atan2_01__sympy_simplify():
     return Answer
 
 
+# ---- case demo-atan2-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered null (no verdict)
+@_in(_SETUP4)
+def demo_atan2_01__sympy_extras_ask():
+    x = Symbol('x', real=True)
+    y = Symbol('y', real=True)
+    Assum = And(Q.real(x), Q.real(y), Q.positive(x))
+    Residual = atan2(y, x) - atan(y / x)
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-atan2-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered true (solved)
+@_in(_SETUP4)
+def demo_atan2_01__sympy_extras_refine():
+    x = Symbol('x', real=True)
+    y = Symbol('y', real=True)
+    Assum = And(Q.real(x), Q.real(y), Q.positive(x))
+    Residual = atan2(y, x) - atan(y / x)
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-atan2-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered true (solved)
+@_in(_SETUP4)
+def demo_atan2_01__sympy_extras_simplify():
+    x = Symbol('x', real=True)
+    y = Symbol('y', real=True)
+    Assum = And(Q.real(x), Q.real(y), Q.positive(x))
+    Residual = atan2(y, x) - atan(y / x)
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-atan2-02 · expected false · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered null (no verdict)
 @_in(_SETUP1)
@@ -236,6 +305,20 @@ def demo_atan2_02__satrefine_refine():
     Assum = And(Q.real(x), Q.real(y), Q.negative(x), Q.positive(y))
     Residual = atan2(y, x) - atan(y / x)
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-atan2-02 · expected false · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered false (solved)
+@_in(_SETUP2)
+def demo_atan2_02__satrefine_simplify():
+    x = Symbol('x', real=True, negative=True)
+    y = Symbol('y', real=True, positive=True)
+    Assum = And(Q.real(x), Q.real(y), Q.negative(x), Q.positive(y))
+    Residual = atan2(y, x) - atan(y / x)
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -294,6 +377,47 @@ def demo_atan2_02__sympy_simplify():
     return Answer
 
 
+# ---- case demo-atan2-02 · expected false · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered null (no verdict)
+@_in(_SETUP4)
+def demo_atan2_02__sympy_extras_ask():
+    x = Symbol('x', real=True)
+    y = Symbol('y', real=True)
+    Assum = And(Q.real(x), Q.real(y), Q.negative(x), Q.positive(y))
+    Residual = atan2(y, x) - atan(y / x)
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-atan2-02 · expected false · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered false (solved)
+@_in(_SETUP4)
+def demo_atan2_02__sympy_extras_refine():
+    x = Symbol('x', real=True)
+    y = Symbol('y', real=True)
+    Assum = And(Q.real(x), Q.real(y), Q.negative(x), Q.positive(y))
+    Residual = atan2(y, x) - atan(y / x)
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-atan2-02 · expected false · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered false (solved)
+@_in(_SETUP4)
+def demo_atan2_02__sympy_extras_simplify():
+    x = Symbol('x', real=True)
+    y = Symbol('y', real=True)
+    Assum = And(Q.real(x), Q.real(y), Q.negative(x), Q.positive(y))
+    Residual = atan2(y, x) - atan(y / x)
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-eq-abs-01 · expected true · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered null (no verdict)
 @_in(_SETUP1)
@@ -314,6 +438,19 @@ def demo_eq_abs_01__satrefine_refine():
     Assum = And(Q.real(x), Q.negative(x))
     Residual = Abs(x) - (-x)
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-abs-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered true (solved)
+@_in(_SETUP2)
+def demo_eq_abs_01__satrefine_simplify():
+    x = Symbol('x', real=True, negative=True)
+    Assum = And(Q.real(x), Q.negative(x))
+    Residual = Abs(x) - (-x)
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -368,6 +505,44 @@ def demo_eq_abs_01__sympy_simplify():
     return Answer
 
 
+# ---- case demo-eq-abs-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered true (solved)
+@_in(_SETUP4)
+def demo_eq_abs_01__sympy_extras_ask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.negative(x))
+    Residual = Abs(x) - (-x)
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-abs-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered true (solved)
+@_in(_SETUP4)
+def demo_eq_abs_01__sympy_extras_refine():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.negative(x))
+    Residual = Abs(x) - (-x)
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-abs-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered true (solved)
+@_in(_SETUP4)
+def demo_eq_abs_01__sympy_extras_simplify():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.negative(x))
+    Residual = Abs(x) - (-x)
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-eq-abs-02 · expected false · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered false (solved)
 @_in(_SETUP1)
@@ -388,6 +563,19 @@ def demo_eq_abs_02__satrefine_refine():
     Assum = And(Q.real(x), Q.negative(x))
     Residual = Abs(x) - x
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-abs-02 · expected false · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered null (no verdict)
+@_in(_SETUP2)
+def demo_eq_abs_02__satrefine_simplify():
+    x = Symbol('x', real=True, negative=True)
+    Assum = And(Q.real(x), Q.negative(x))
+    Residual = Abs(x) - x
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -442,6 +630,44 @@ def demo_eq_abs_02__sympy_simplify():
     return Answer
 
 
+# ---- case demo-eq-abs-02 · expected false · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered false (solved)
+@_in(_SETUP4)
+def demo_eq_abs_02__sympy_extras_ask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.negative(x))
+    Residual = Abs(x) - x
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-abs-02 · expected false · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered null (no verdict)
+@_in(_SETUP4)
+def demo_eq_abs_02__sympy_extras_refine():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.negative(x))
+    Residual = Abs(x) - x
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-abs-02 · expected false · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered null (no verdict)
+@_in(_SETUP4)
+def demo_eq_abs_02__sympy_extras_simplify():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.negative(x))
+    Residual = Abs(x) - x
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-eq-log-01 · expected true · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered true (solved)
 @_in(_SETUP1)
@@ -462,6 +688,19 @@ def demo_eq_log_01__satrefine_refine():
     Assum = And(Q.real(x), Q.positive(x))
     Residual = log(exp(x)) - x
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-log-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered true (solved)
+@_in(_SETUP2)
+def demo_eq_log_01__satrefine_simplify():
+    x = Symbol('x', real=True, positive=True)
+    Assum = And(Q.real(x), Q.positive(x))
+    Residual = log(exp(x)) - x
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -516,6 +755,44 @@ def demo_eq_log_01__sympy_simplify():
     return Answer
 
 
+# ---- case demo-eq-log-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered true (solved)
+@_in(_SETUP4)
+def demo_eq_log_01__sympy_extras_ask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.positive(x))
+    Residual = log(exp(x)) - x
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-log-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered true (solved)
+@_in(_SETUP4)
+def demo_eq_log_01__sympy_extras_refine():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.positive(x))
+    Residual = log(exp(x)) - x
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-log-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered true (solved)
+@_in(_SETUP4)
+def demo_eq_log_01__sympy_extras_simplify():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.positive(x))
+    Residual = log(exp(x)) - x
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-eq-pow-01 · expected true · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered true (solved)
 @_in(_SETUP1)
@@ -536,6 +813,19 @@ def demo_eq_pow_01__satrefine_refine():
     Assum = And(Q.integer(n))
     Residual = Pow(-1, 2 * n) - 1
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-pow-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered true (solved)
+@_in(_SETUP2)
+def demo_eq_pow_01__satrefine_simplify():
+    n = Symbol('n', integer=True)
+    Assum = And(Q.integer(n))
+    Residual = Pow(-1, 2 * n) - 1
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -590,6 +880,44 @@ def demo_eq_pow_01__sympy_simplify():
     return Answer
 
 
+# ---- case demo-eq-pow-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered true (solved)
+@_in(_SETUP4)
+def demo_eq_pow_01__sympy_extras_ask():
+    n = Symbol('n', integer=True)
+    Assum = And(Q.integer(n))
+    Residual = Pow(-1, 2 * n) - 1
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-pow-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered true (solved)
+@_in(_SETUP4)
+def demo_eq_pow_01__sympy_extras_refine():
+    n = Symbol('n', integer=True)
+    Assum = And(Q.integer(n))
+    Residual = Pow(-1, 2 * n) - 1
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-pow-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered true (solved)
+@_in(_SETUP4)
+def demo_eq_pow_01__sympy_extras_simplify():
+    n = Symbol('n', integer=True)
+    Assum = And(Q.integer(n))
+    Residual = Pow(-1, 2 * n) - 1
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-eq-sqrt-01 · expected true · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered null (no verdict)
 @_in(_SETUP1)
@@ -610,6 +938,19 @@ def demo_eq_sqrt_01__satrefine_refine():
     Assum = And(Q.real(x), Q.positive(x))
     Residual = sqrt(Pow(x, 2)) - x
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-sqrt-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered true (solved)
+@_in(_SETUP2)
+def demo_eq_sqrt_01__satrefine_simplify():
+    x = Symbol('x', real=True, positive=True)
+    Assum = And(Q.real(x), Q.positive(x))
+    Residual = sqrt(Pow(x, 2)) - x
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -664,6 +1005,44 @@ def demo_eq_sqrt_01__sympy_simplify():
     return Answer
 
 
+# ---- case demo-eq-sqrt-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered true (solved)
+@_in(_SETUP4)
+def demo_eq_sqrt_01__sympy_extras_ask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.positive(x))
+    Residual = sqrt(Pow(x, 2)) - x
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-sqrt-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered true (solved)
+@_in(_SETUP4)
+def demo_eq_sqrt_01__sympy_extras_refine():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.positive(x))
+    Residual = sqrt(Pow(x, 2)) - x
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-sqrt-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered true (solved)
+@_in(_SETUP4)
+def demo_eq_sqrt_01__sympy_extras_simplify():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.positive(x))
+    Residual = sqrt(Pow(x, 2)) - x
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-eq-sqrt-02 · expected true · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered true (solved)
 @_in(_SETUP1)
@@ -684,6 +1063,19 @@ def demo_eq_sqrt_02__satrefine_refine():
     Assum = And(Q.real(x))
     Residual = sqrt(Pow(x, 2)) - Abs(x)
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-sqrt-02 · expected true · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered true (solved)
+@_in(_SETUP2)
+def demo_eq_sqrt_02__satrefine_simplify():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x))
+    Residual = sqrt(Pow(x, 2)) - Abs(x)
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -738,6 +1130,44 @@ def demo_eq_sqrt_02__sympy_simplify():
     return Answer
 
 
+# ---- case demo-eq-sqrt-02 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered true (solved)
+@_in(_SETUP4)
+def demo_eq_sqrt_02__sympy_extras_ask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x))
+    Residual = sqrt(Pow(x, 2)) - Abs(x)
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-sqrt-02 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered true (solved)
+@_in(_SETUP4)
+def demo_eq_sqrt_02__sympy_extras_refine():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x))
+    Residual = sqrt(Pow(x, 2)) - Abs(x)
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-sqrt-02 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered true (solved)
+@_in(_SETUP4)
+def demo_eq_sqrt_02__sympy_extras_simplify():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x))
+    Residual = sqrt(Pow(x, 2)) - Abs(x)
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-eq-sqrt-03 · expected contingent · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered null (declined correctly)
 @_in(_SETUP1)
@@ -758,6 +1188,19 @@ def demo_eq_sqrt_03__satrefine_refine():
     Assum = And(Q.real(x))
     Residual = sqrt(Pow(x, 2)) - x
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-sqrt-03 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered null (declined correctly)
+@_in(_SETUP2)
+def demo_eq_sqrt_03__satrefine_simplify():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x))
+    Residual = sqrt(Pow(x, 2)) - x
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -812,6 +1255,44 @@ def demo_eq_sqrt_03__sympy_simplify():
     return Answer
 
 
+# ---- case demo-eq-sqrt-03 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered null (declined correctly)
+@_in(_SETUP4)
+def demo_eq_sqrt_03__sympy_extras_ask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x))
+    Residual = sqrt(Pow(x, 2)) - x
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-sqrt-03 · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered null (declined correctly)
+@_in(_SETUP4)
+def demo_eq_sqrt_03__sympy_extras_refine():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x))
+    Residual = sqrt(Pow(x, 2)) - x
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-sqrt-03 · expected contingent · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered null (declined correctly)
+@_in(_SETUP4)
+def demo_eq_sqrt_03__sympy_extras_simplify():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x))
+    Residual = sqrt(Pow(x, 2)) - x
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-eq-sqrt-04 · expected false · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered null (no verdict)
 @_in(_SETUP1)
@@ -832,6 +1313,19 @@ def demo_eq_sqrt_04__satrefine_refine():
     Assum = And(Q.real(x), Q.positive(x))
     Residual = sqrt(Pow(x, 2)) + 1 - x
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-sqrt-04 · expected false · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered false (solved)
+@_in(_SETUP2)
+def demo_eq_sqrt_04__satrefine_simplify():
+    x = Symbol('x', real=True, positive=True)
+    Assum = And(Q.real(x), Q.positive(x))
+    Residual = sqrt(Pow(x, 2)) + 1 - x
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -886,6 +1380,44 @@ def demo_eq_sqrt_04__sympy_simplify():
     return Answer
 
 
+# ---- case demo-eq-sqrt-04 · expected false · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered false (solved)
+@_in(_SETUP4)
+def demo_eq_sqrt_04__sympy_extras_ask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.positive(x))
+    Residual = sqrt(Pow(x, 2)) + 1 - x
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-sqrt-04 · expected false · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered false (solved)
+@_in(_SETUP4)
+def demo_eq_sqrt_04__sympy_extras_refine():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.positive(x))
+    Residual = sqrt(Pow(x, 2)) + 1 - x
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-sqrt-04 · expected false · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered false (solved)
+@_in(_SETUP4)
+def demo_eq_sqrt_04__sympy_extras_simplify():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.positive(x))
+    Residual = sqrt(Pow(x, 2)) + 1 - x
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-eq-trig-01 · expected true · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered null (no verdict)
 @_in(_SETUP1)
@@ -906,6 +1438,19 @@ def demo_eq_trig_01__satrefine_refine():
     Assum = And(Q.complex(x))
     Residual = Pow(sin(x), 2) + Pow(cos(x), 2) - 1
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-trig-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered true (solved)
+@_in(_SETUP2)
+def demo_eq_trig_01__satrefine_simplify():
+    x = Symbol('x', complex=True)
+    Assum = And(Q.complex(x))
+    Residual = Pow(sin(x), 2) + Pow(cos(x), 2) - 1
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -960,6 +1505,44 @@ def demo_eq_trig_01__sympy_simplify():
     return Answer
 
 
+# ---- case demo-eq-trig-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered true (solved)
+@_in(_SETUP4)
+def demo_eq_trig_01__sympy_extras_ask():
+    x = Symbol('x', complex=True)
+    Assum = And(Q.complex(x))
+    Residual = Pow(sin(x), 2) + Pow(cos(x), 2) - 1
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-trig-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered null (no verdict)
+@_in(_SETUP4)
+def demo_eq_trig_01__sympy_extras_refine():
+    x = Symbol('x', complex=True)
+    Assum = And(Q.complex(x))
+    Residual = Pow(sin(x), 2) + Pow(cos(x), 2) - 1
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-trig-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered true (solved)
+@_in(_SETUP4)
+def demo_eq_trig_01__sympy_extras_simplify():
+    x = Symbol('x', complex=True)
+    Assum = And(Q.complex(x))
+    Residual = Pow(sin(x), 2) + Pow(cos(x), 2) - 1
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-eq-trig-02 · expected true · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered null (no verdict)
 @_in(_SETUP1)
@@ -980,6 +1563,19 @@ def demo_eq_trig_02__satrefine_refine():
     Assum = And(Q.complex(x))
     Residual = 2 * sin(x) * cos(x) - sin(2 * x)
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-trig-02 · expected true · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered true (solved)
+@_in(_SETUP2)
+def demo_eq_trig_02__satrefine_simplify():
+    x = Symbol('x', complex=True)
+    Assum = And(Q.complex(x))
+    Residual = 2 * sin(x) * cos(x) - sin(2 * x)
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -1034,6 +1630,44 @@ def demo_eq_trig_02__sympy_simplify():
     return Answer
 
 
+# ---- case demo-eq-trig-02 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered true (solved)
+@_in(_SETUP4)
+def demo_eq_trig_02__sympy_extras_ask():
+    x = Symbol('x', complex=True)
+    Assum = And(Q.complex(x))
+    Residual = 2 * sin(x) * cos(x) - sin(2 * x)
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-trig-02 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered null (no verdict)
+@_in(_SETUP4)
+def demo_eq_trig_02__sympy_extras_refine():
+    x = Symbol('x', complex=True)
+    Assum = And(Q.complex(x))
+    Residual = 2 * sin(x) * cos(x) - sin(2 * x)
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-eq-trig-02 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered true (solved)
+@_in(_SETUP4)
+def demo_eq_trig_02__sympy_extras_simplify():
+    x = Symbol('x', complex=True)
+    Assum = And(Q.complex(x))
+    Residual = 2 * sin(x) * cos(x) - sin(2 * x)
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-log-01 · expected true · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered null (no verdict)
 @_in(_SETUP1)
@@ -1056,6 +1690,20 @@ def demo_log_01__satrefine_refine():
     Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
     Residual = log(x * y) - (log(x) + log(y))
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-log-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered true (solved)
+@_in(_SETUP2)
+def demo_log_01__satrefine_simplify():
+    x = Symbol('x', real=True, positive=True)
+    y = Symbol('y', real=True, positive=True)
+    Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
+    Residual = log(x * y) - (log(x) + log(y))
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -1114,6 +1762,47 @@ def demo_log_01__sympy_simplify():
     return Answer
 
 
+# ---- case demo-log-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered true (solved)
+@_in(_SETUP4)
+def demo_log_01__sympy_extras_ask():
+    x = Symbol('x', real=True)
+    y = Symbol('y', real=True)
+    Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
+    Residual = log(x * y) - (log(x) + log(y))
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-log-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered null (no verdict)
+@_in(_SETUP4)
+def demo_log_01__sympy_extras_refine():
+    x = Symbol('x', real=True)
+    y = Symbol('y', real=True)
+    Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
+    Residual = log(x * y) - (log(x) + log(y))
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-log-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered true (solved)
+@_in(_SETUP4)
+def demo_log_01__sympy_extras_simplify():
+    x = Symbol('x', real=True)
+    y = Symbol('y', real=True)
+    Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
+    Residual = log(x * y) - (log(x) + log(y))
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-log-02 · expected contingent · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered null (declined correctly)
 @_in(_SETUP1)
@@ -1136,6 +1825,20 @@ def demo_log_02__satrefine_refine():
     Assum = And(Q.complex(z), Q.complex(w), ~Q.zero(z), ~Q.zero(w))
     Residual = log(z * w) - (log(z) + log(w))
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-log-02 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered null (declined correctly)
+@_in(_SETUP2)
+def demo_log_02__satrefine_simplify():
+    z = Symbol('z', complex=True, zero=False)
+    w = Symbol('w', complex=True, zero=False)
+    Assum = And(Q.complex(z), Q.complex(w), ~Q.zero(z), ~Q.zero(w))
+    Residual = log(z * w) - (log(z) + log(w))
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -1194,6 +1897,47 @@ def demo_log_02__sympy_simplify():
     return Answer
 
 
+# ---- case demo-log-02 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered null (declined correctly)
+@_in(_SETUP4)
+def demo_log_02__sympy_extras_ask():
+    z = Symbol('z', complex=True)
+    w = Symbol('w', complex=True)
+    Assum = And(Q.complex(z), Q.complex(w), ~Q.zero(z), ~Q.zero(w))
+    Residual = log(z * w) - (log(z) + log(w))
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-log-02 · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered null (declined correctly)
+@_in(_SETUP4)
+def demo_log_02__sympy_extras_refine():
+    z = Symbol('z', complex=True)
+    w = Symbol('w', complex=True)
+    Assum = And(Q.complex(z), Q.complex(w), ~Q.zero(z), ~Q.zero(w))
+    Residual = log(z * w) - (log(z) + log(w))
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-log-02 · expected contingent · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered null (declined correctly)
+@_in(_SETUP4)
+def demo_log_02__sympy_extras_simplify():
+    z = Symbol('z', complex=True)
+    w = Symbol('w', complex=True)
+    Assum = And(Q.complex(z), Q.complex(w), ~Q.zero(z), ~Q.zero(w))
+    Residual = log(z * w) - (log(z) + log(w))
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-log-03 · expected false · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered false (solved)
 @_in(_SETUP1)
@@ -1214,6 +1958,19 @@ def demo_log_03__satrefine_refine():
     Assum = And(Q.real(x), Q.negative(x))
     Residual = log(x) - log(-x)
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-log-03 · expected false · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered false (solved)
+@_in(_SETUP2)
+def demo_log_03__satrefine_simplify():
+    x = Symbol('x', real=True, negative=True)
+    Assum = And(Q.real(x), Q.negative(x))
+    Residual = log(x) - log(-x)
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -1268,6 +2025,44 @@ def demo_log_03__sympy_simplify():
     return Answer
 
 
+# ---- case demo-log-03 · expected false · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered null (no verdict)
+@_in(_SETUP4)
+def demo_log_03__sympy_extras_ask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.negative(x))
+    Residual = log(x) - log(-x)
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-log-03 · expected false · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered null (no verdict)
+@_in(_SETUP4)
+def demo_log_03__sympy_extras_refine():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.negative(x))
+    Residual = log(x) - log(-x)
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-log-03 · expected false · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered false (solved)
+@_in(_SETUP4)
+def demo_log_03__sympy_extras_simplify():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.negative(x))
+    Residual = log(x) - log(-x)
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-nonzero-01 · expected true · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered null (no verdict)
 @_in(_SETUP1)
@@ -1288,6 +2083,19 @@ def demo_nonzero_01__satrefine_refine():
     Assum = And(Q.complex(z), Q.imaginary(z))
     Residual = Abs(sign(z)) - 1
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-nonzero-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered true (solved)
+@_in(_SETUP2)
+def demo_nonzero_01__satrefine_simplify():
+    z = Symbol('z', complex=True, imaginary=True)
+    Assum = And(Q.complex(z), Q.imaginary(z))
+    Residual = Abs(sign(z)) - 1
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -1342,6 +2150,44 @@ def demo_nonzero_01__sympy_simplify():
     return Answer
 
 
+# ---- case demo-nonzero-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered null (no verdict)
+@_in(_SETUP4)
+def demo_nonzero_01__sympy_extras_ask():
+    z = Symbol('z', complex=True)
+    Assum = And(Q.complex(z), Q.imaginary(z))
+    Residual = Abs(sign(z)) - 1
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-nonzero-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered null (no verdict)
+@_in(_SETUP4)
+def demo_nonzero_01__sympy_extras_refine():
+    z = Symbol('z', complex=True)
+    Assum = And(Q.complex(z), Q.imaginary(z))
+    Residual = Abs(sign(z)) - 1
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-nonzero-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered null (no verdict)
+@_in(_SETUP4)
+def demo_nonzero_01__sympy_extras_simplify():
+    z = Symbol('z', complex=True)
+    Assum = And(Q.complex(z), Q.imaginary(z))
+    Residual = Abs(sign(z)) - 1
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-parity-01 · expected true · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered null (no verdict)
 @_in(_SETUP1)
@@ -1362,6 +2208,19 @@ def demo_parity_01__satrefine_refine():
     Assum = And(Q.integer(n), Q.odd(n))
     Residual = Pow(-1, n + 1) - 1
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-parity-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered true (solved)
+@_in(_SETUP2)
+def demo_parity_01__satrefine_simplify():
+    n = Symbol('n', integer=True, odd=True)
+    Assum = And(Q.integer(n), Q.odd(n))
+    Residual = Pow(-1, n + 1) - 1
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -1416,6 +2275,44 @@ def demo_parity_01__sympy_simplify():
     return Answer
 
 
+# ---- case demo-parity-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered null (no verdict)
+@_in(_SETUP4)
+def demo_parity_01__sympy_extras_ask():
+    n = Symbol('n', integer=True)
+    Assum = And(Q.integer(n), Q.odd(n))
+    Residual = Pow(-1, n + 1) - 1
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-parity-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered true (solved)
+@_in(_SETUP4)
+def demo_parity_01__sympy_extras_refine():
+    n = Symbol('n', integer=True)
+    Assum = And(Q.integer(n), Q.odd(n))
+    Residual = Pow(-1, n + 1) - 1
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-parity-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered true (solved)
+@_in(_SETUP4)
+def demo_parity_01__sympy_extras_simplify():
+    n = Symbol('n', integer=True)
+    Assum = And(Q.integer(n), Q.odd(n))
+    Residual = Pow(-1, n + 1) - 1
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-parity-02 · expected false · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered false (solved)
 @_in(_SETUP1)
@@ -1438,6 +2335,20 @@ def demo_parity_02__satrefine_refine():
     Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
     Residual = Pow(-1, n * m) - 1
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-parity-02 · expected false · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered false (solved)
+@_in(_SETUP2)
+def demo_parity_02__satrefine_simplify():
+    n = Symbol('n', integer=True, odd=True)
+    m = Symbol('m', integer=True, odd=True)
+    Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
+    Residual = Pow(-1, n * m) - 1
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -1496,6 +2407,47 @@ def demo_parity_02__sympy_simplify():
     return Answer
 
 
+# ---- case demo-parity-02 · expected false · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered false (solved)
+@_in(_SETUP4)
+def demo_parity_02__sympy_extras_ask():
+    n = Symbol('n', integer=True)
+    m = Symbol('m', integer=True)
+    Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
+    Residual = Pow(-1, n * m) - 1
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-parity-02 · expected false · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered false (solved)
+@_in(_SETUP4)
+def demo_parity_02__sympy_extras_refine():
+    n = Symbol('n', integer=True)
+    m = Symbol('m', integer=True)
+    Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
+    Residual = Pow(-1, n * m) - 1
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-parity-02 · expected false · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered false (solved)
+@_in(_SETUP4)
+def demo_parity_02__sympy_extras_simplify():
+    n = Symbol('n', integer=True)
+    m = Symbol('m', integer=True)
+    Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
+    Residual = Pow(-1, n * m) - 1
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-parity-03 · expected true · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered true (solved)
 @_in(_SETUP1)
@@ -1516,6 +2468,19 @@ def demo_parity_03__satrefine_refine():
     Assum = And(Q.integer(n))
     Residual = Pow(-1, n * (n + 1)) - 1
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-parity-03 · expected true · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered true (solved)
+@_in(_SETUP2)
+def demo_parity_03__satrefine_simplify():
+    n = Symbol('n', integer=True)
+    Assum = And(Q.integer(n))
+    Residual = Pow(-1, n * (n + 1)) - 1
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -1570,6 +2535,44 @@ def demo_parity_03__sympy_simplify():
     return Answer
 
 
+# ---- case demo-parity-03 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered true (solved)
+@_in(_SETUP4)
+def demo_parity_03__sympy_extras_ask():
+    n = Symbol('n', integer=True)
+    Assum = And(Q.integer(n))
+    Residual = Pow(-1, n * (n + 1)) - 1
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-parity-03 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered true (solved)
+@_in(_SETUP4)
+def demo_parity_03__sympy_extras_refine():
+    n = Symbol('n', integer=True)
+    Assum = And(Q.integer(n))
+    Residual = Pow(-1, n * (n + 1)) - 1
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-parity-03 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered true (solved)
+@_in(_SETUP4)
+def demo_parity_03__sympy_extras_simplify():
+    n = Symbol('n', integer=True)
+    Assum = And(Q.integer(n))
+    Residual = Pow(-1, n * (n + 1)) - 1
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-parity-04 · expected contingent · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered null (declined correctly)
 @_in(_SETUP1)
@@ -1590,6 +2593,19 @@ def demo_parity_04__satrefine_refine():
     Assum = And(Q.integer(n), Q.even(n))
     Residual = Pow(I, n) - 1
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-parity-04 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered null (declined correctly)
+@_in(_SETUP2)
+def demo_parity_04__satrefine_simplify():
+    n = Symbol('n', integer=True, even=True)
+    Assum = And(Q.integer(n), Q.even(n))
+    Residual = Pow(I, n) - 1
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -1644,6 +2660,44 @@ def demo_parity_04__sympy_simplify():
     return Answer
 
 
+# ---- case demo-parity-04 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered null (declined correctly)
+@_in(_SETUP4)
+def demo_parity_04__sympy_extras_ask():
+    n = Symbol('n', integer=True)
+    Assum = And(Q.integer(n), Q.even(n))
+    Residual = Pow(I, n) - 1
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-parity-04 · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered null (declined correctly)
+@_in(_SETUP4)
+def demo_parity_04__sympy_extras_refine():
+    n = Symbol('n', integer=True)
+    Assum = And(Q.integer(n), Q.even(n))
+    Residual = Pow(I, n) - 1
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-parity-04 · expected contingent · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered null (declined correctly)
+@_in(_SETUP4)
+def demo_parity_04__sympy_extras_simplify():
+    n = Symbol('n', integer=True)
+    Assum = And(Q.integer(n), Q.even(n))
+    Residual = Pow(I, n) - 1
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-parity-05 · expected true · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered null (no verdict)
 @_in(_SETUP1)
@@ -1666,6 +2720,20 @@ def demo_parity_05__satrefine_refine():
     Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
     Residual = Pow(-1, n * m) - (-1)
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-parity-05 · expected true · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered true (solved)
+@_in(_SETUP2)
+def demo_parity_05__satrefine_simplify():
+    n = Symbol('n', integer=True, odd=True)
+    m = Symbol('m', integer=True, odd=True)
+    Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
+    Residual = Pow(-1, n * m) - (-1)
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -1724,6 +2792,47 @@ def demo_parity_05__sympy_simplify():
     return Answer
 
 
+# ---- case demo-parity-05 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered null (no verdict)
+@_in(_SETUP4)
+def demo_parity_05__sympy_extras_ask():
+    n = Symbol('n', integer=True)
+    m = Symbol('m', integer=True)
+    Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
+    Residual = Pow(-1, n * m) - (-1)
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-parity-05 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered true (solved)
+@_in(_SETUP4)
+def demo_parity_05__sympy_extras_refine():
+    n = Symbol('n', integer=True)
+    m = Symbol('m', integer=True)
+    Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
+    Residual = Pow(-1, n * m) - (-1)
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-parity-05 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered true (solved)
+@_in(_SETUP4)
+def demo_parity_05__sympy_extras_simplify():
+    n = Symbol('n', integer=True)
+    m = Symbol('m', integer=True)
+    Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
+    Residual = Pow(-1, n * m) - (-1)
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-prime-01 · expected true · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered null (no verdict)
 @_in(_SETUP1)
@@ -1744,6 +2853,19 @@ def demo_prime_01__satrefine_refine():
     Assum = And(Q.integer(p), Q.prime(p), p > 2)
     Residual = Pow(-1, p) - (-1)
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-prime-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered null (no verdict)
+@_in(_SETUP2)
+def demo_prime_01__satrefine_simplify():
+    p = Symbol('p', integer=True, prime=True)
+    Assum = And(Q.integer(p), Q.prime(p), p > 2)
+    Residual = Pow(-1, p) - (-1)
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -1798,6 +2920,44 @@ def demo_prime_01__sympy_simplify():
     return Answer
 
 
+# ---- case demo-prime-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered null (no verdict)
+@_in(_SETUP4)
+def demo_prime_01__sympy_extras_ask():
+    p = Symbol('p', integer=True)
+    Assum = And(Q.integer(p), Q.prime(p), p > 2)
+    Residual = Pow(-1, p) - (-1)
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-prime-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered null (no verdict)
+@_in(_SETUP4)
+def demo_prime_01__sympy_extras_refine():
+    p = Symbol('p', integer=True)
+    Assum = And(Q.integer(p), Q.prime(p), p > 2)
+    Residual = Pow(-1, p) - (-1)
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-prime-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered null (no verdict)
+@_in(_SETUP4)
+def demo_prime_01__sympy_extras_simplify():
+    p = Symbol('p', integer=True)
+    Assum = And(Q.integer(p), Q.prime(p), p > 2)
+    Residual = Pow(-1, p) - (-1)
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-prime-02 · expected contingent · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered null (declined correctly)
 @_in(_SETUP1)
@@ -1818,6 +2978,19 @@ def demo_prime_02__satrefine_refine():
     Assum = And(Q.integer(p), Q.prime(p))
     Residual = Pow(-1, p) - (-1)
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-prime-02 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered null (declined correctly)
+@_in(_SETUP2)
+def demo_prime_02__satrefine_simplify():
+    p = Symbol('p', integer=True, prime=True)
+    Assum = And(Q.integer(p), Q.prime(p))
+    Residual = Pow(-1, p) - (-1)
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -1872,6 +3045,44 @@ def demo_prime_02__sympy_simplify():
     return Answer
 
 
+# ---- case demo-prime-02 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered null (declined correctly)
+@_in(_SETUP4)
+def demo_prime_02__sympy_extras_ask():
+    p = Symbol('p', integer=True)
+    Assum = And(Q.integer(p), Q.prime(p))
+    Residual = Pow(-1, p) - (-1)
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-prime-02 · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered null (declined correctly)
+@_in(_SETUP4)
+def demo_prime_02__sympy_extras_refine():
+    p = Symbol('p', integer=True)
+    Assum = And(Q.integer(p), Q.prime(p))
+    Residual = Pow(-1, p) - (-1)
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-prime-02 · expected contingent · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered null (declined correctly)
+@_in(_SETUP4)
+def demo_prime_02__sympy_extras_simplify():
+    p = Symbol('p', integer=True)
+    Assum = And(Q.integer(p), Q.prime(p))
+    Residual = Pow(-1, p) - (-1)
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-sign-02 · expected true · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered null (no verdict)
 @_in(_SETUP1)
@@ -1892,6 +3103,19 @@ def demo_sign_02__satrefine_refine():
     Assum = And(Q.real(x), ~Q.zero(x))
     Residual = sign(Pow(x, 2)) - 1
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-sign-02 · expected true · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered true (solved)
+@_in(_SETUP2)
+def demo_sign_02__satrefine_simplify():
+    x = Symbol('x', real=True, zero=False)
+    Assum = And(Q.real(x), ~Q.zero(x))
+    Residual = sign(Pow(x, 2)) - 1
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -1946,6 +3170,44 @@ def demo_sign_02__sympy_simplify():
     return Answer
 
 
+# ---- case demo-sign-02 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered null (no verdict)
+@_in(_SETUP4)
+def demo_sign_02__sympy_extras_ask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), ~Q.zero(x))
+    Residual = sign(Pow(x, 2)) - 1
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-sign-02 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered true (solved)
+@_in(_SETUP4)
+def demo_sign_02__sympy_extras_refine():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), ~Q.zero(x))
+    Residual = sign(Pow(x, 2)) - 1
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-sign-02 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered true (solved)
+@_in(_SETUP4)
+def demo_sign_02__sympy_extras_simplify():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), ~Q.zero(x))
+    Residual = sign(Pow(x, 2)) - 1
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-sign-03 · expected contingent · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered null (declined correctly)
 @_in(_SETUP1)
@@ -1966,6 +3228,19 @@ def demo_sign_03__satrefine_refine():
     Assum = And(Q.complex(x), ~Q.zero(x))
     Residual = sign(Pow(x, 2)) - 1
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-sign-03 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered null (declined correctly)
+@_in(_SETUP2)
+def demo_sign_03__satrefine_simplify():
+    x = Symbol('x', complex=True, zero=False)
+    Assum = And(Q.complex(x), ~Q.zero(x))
+    Residual = sign(Pow(x, 2)) - 1
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -2020,6 +3295,44 @@ def demo_sign_03__sympy_simplify():
     return Answer
 
 
+# ---- case demo-sign-03 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered null (declined correctly)
+@_in(_SETUP4)
+def demo_sign_03__sympy_extras_ask():
+    x = Symbol('x', complex=True)
+    Assum = And(Q.complex(x), ~Q.zero(x))
+    Residual = sign(Pow(x, 2)) - 1
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-sign-03 · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered null (declined correctly)
+@_in(_SETUP4)
+def demo_sign_03__sympy_extras_refine():
+    x = Symbol('x', complex=True)
+    Assum = And(Q.complex(x), ~Q.zero(x))
+    Residual = sign(Pow(x, 2)) - 1
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-sign-03 · expected contingent · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered null (declined correctly)
+@_in(_SETUP4)
+def demo_sign_03__sympy_extras_simplify():
+    x = Symbol('x', complex=True)
+    Assum = And(Q.complex(x), ~Q.zero(x))
+    Residual = sign(Pow(x, 2)) - 1
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-sign-04 · expected true · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered null (no verdict)
 @_in(_SETUP1)
@@ -2040,6 +3353,19 @@ def demo_sign_04__satrefine_refine():
     Assum = And(Q.complex(z))
     Residual = Abs(z * conjugate(z)) - (z * conjugate(z))
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-sign-04 · expected true · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered true (solved)
+@_in(_SETUP2)
+def demo_sign_04__satrefine_simplify():
+    z = Symbol('z', complex=True)
+    Assum = And(Q.complex(z))
+    Residual = Abs(z * conjugate(z)) - (z * conjugate(z))
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -2094,6 +3420,44 @@ def demo_sign_04__sympy_simplify():
     return Answer
 
 
+# ---- case demo-sign-04 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered null (no verdict)
+@_in(_SETUP4)
+def demo_sign_04__sympy_extras_ask():
+    z = Symbol('z', complex=True)
+    Assum = And(Q.complex(z))
+    Residual = Abs(z * conjugate(z)) - (z * conjugate(z))
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-sign-04 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered null (no verdict)
+@_in(_SETUP4)
+def demo_sign_04__sympy_extras_refine():
+    z = Symbol('z', complex=True)
+    Assum = And(Q.complex(z))
+    Residual = Abs(z * conjugate(z)) - (z * conjugate(z))
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-sign-04 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered null (no verdict)
+@_in(_SETUP4)
+def demo_sign_04__sympy_extras_simplify():
+    z = Symbol('z', complex=True)
+    Assum = And(Q.complex(z))
+    Residual = Abs(z * conjugate(z)) - (z * conjugate(z))
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-sign-05 · expected true · system satassume-ask (satassume 0.0.1)
 # the run satassume-ask-20261019-032311 answered null (no verdict)
 @_in(_SETUP1)
@@ -2116,6 +3480,20 @@ def demo_sign_05__satrefine_refine():
     Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.negative(y))
     Residual = Abs(x - y) - (x - y)
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-sign-05 · expected true · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered true (solved)
+@_in(_SETUP2)
+def demo_sign_05__satrefine_simplify():
+    x = Symbol('x', real=True, positive=True)
+    y = Symbol('y', real=True, negative=True)
+    Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.negative(y))
+    Residual = Abs(x - y) - (x - y)
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -2174,170 +3552,319 @@ def demo_sign_05__sympy_simplify():
     return Answer
 
 
+# ---- case demo-sign-05 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered true (solved)
+@_in(_SETUP4)
+def demo_sign_05__sympy_extras_ask():
+    x = Symbol('x', real=True)
+    y = Symbol('y', real=True)
+    Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.negative(y))
+    Residual = Abs(x - y) - (x - y)
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-sign-05 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered true (solved)
+@_in(_SETUP4)
+def demo_sign_05__sympy_extras_refine():
+    x = Symbol('x', real=True)
+    y = Symbol('y', real=True)
+    Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.negative(y))
+    Residual = Abs(x - y) - (x - y)
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-sign-05 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered true (solved)
+@_in(_SETUP4)
+def demo_sign_05__sympy_extras_simplify():
+    x = Symbol('x', real=True)
+    y = Symbol('y', real=True)
+    Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.negative(y))
+    Residual = Abs(x - y) - (x - y)
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('demo-atan2-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_atan2_01__satassume_ask),
     ('demo-atan2-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_atan2_01__satrefine_refine),
+    ('demo-atan2-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-032451', demo_atan2_01__satrefine_simplify),
     ('demo-atan2-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_atan2_01__sympy_auto),
     ('demo-atan2-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_atan2_01__sympy_ask),
     ('demo-atan2-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-212422', demo_atan2_01__sympy_refine),
     ('demo-atan2-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_atan2_01__sympy_simplify),
+    ('demo-atan2-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-032454', demo_atan2_01__sympy_extras_ask),
+    ('demo-atan2-01', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261019-032458', demo_atan2_01__sympy_extras_refine),
+    ('demo-atan2-01', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-032501', demo_atan2_01__sympy_extras_simplify),
     ('demo-atan2-02', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-032311', demo_atan2_02__satassume_ask),
     ('demo-atan2-02', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261019-025311', demo_atan2_02__satrefine_refine),
+    ('demo-atan2-02', 'satrefine-simplify', 'false', 'false', 'satrefine-simplify-20261019-032451', demo_atan2_02__satrefine_simplify),
     ('demo-atan2-02', 'sympy-auto', 'false', 'false', 'sympy-auto-20261018-212418', demo_atan2_02__sympy_auto),
     ('demo-atan2-02', 'sympy-ask', 'false', 'null', 'sympy-ask-20261018-212419', demo_atan2_02__sympy_ask),
     ('demo-atan2-02', 'sympy-refine', 'false', 'false', 'sympy-refine-20261018-212422', demo_atan2_02__sympy_refine),
     ('demo-atan2-02', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261018-212424', demo_atan2_02__sympy_simplify),
+    ('demo-atan2-02', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261019-032454', demo_atan2_02__sympy_extras_ask),
+    ('demo-atan2-02', 'sympy-extras-refine', 'false', 'false', 'sympy-extras-refine-20261019-032458', demo_atan2_02__sympy_extras_refine),
+    ('demo-atan2-02', 'sympy-extras-simplify', 'false', 'false', 'sympy-extras-simplify-20261019-032501', demo_atan2_02__sympy_extras_simplify),
     ('demo-eq-abs-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_eq_abs_01__satassume_ask),
     ('demo-eq-abs-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_eq_abs_01__satrefine_refine),
+    ('demo-eq-abs-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-032451', demo_eq_abs_01__satrefine_simplify),
     ('demo-eq-abs-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_eq_abs_01__sympy_auto),
     ('demo-eq-abs-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_eq_abs_01__sympy_ask),
     ('demo-eq-abs-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-212422', demo_eq_abs_01__sympy_refine),
     ('demo-eq-abs-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_eq_abs_01__sympy_simplify),
+    ('demo-eq-abs-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-032454', demo_eq_abs_01__sympy_extras_ask),
+    ('demo-eq-abs-01', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261019-032458', demo_eq_abs_01__sympy_extras_refine),
+    ('demo-eq-abs-01', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-032501', demo_eq_abs_01__sympy_extras_simplify),
     ('demo-eq-abs-02', 'satassume-ask', 'false', 'false', 'satassume-ask-20261019-032311', demo_eq_abs_02__satassume_ask),
     ('demo-eq-abs-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261019-025311', demo_eq_abs_02__satrefine_refine),
+    ('demo-eq-abs-02', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261019-032451', demo_eq_abs_02__satrefine_simplify),
     ('demo-eq-abs-02', 'sympy-auto', 'false', 'null', 'sympy-auto-20261018-212418', demo_eq_abs_02__sympy_auto),
     ('demo-eq-abs-02', 'sympy-ask', 'false', 'false', 'sympy-ask-20261018-212419', demo_eq_abs_02__sympy_ask),
     ('demo-eq-abs-02', 'sympy-refine', 'false', 'null', 'sympy-refine-20261018-212422', demo_eq_abs_02__sympy_refine),
     ('demo-eq-abs-02', 'sympy-simplify', 'false', 'null', 'sympy-simplify-20261018-212424', demo_eq_abs_02__sympy_simplify),
+    ('demo-eq-abs-02', 'sympy-extras-ask', 'false', 'false', 'sympy-extras-ask-20261019-032454', demo_eq_abs_02__sympy_extras_ask),
+    ('demo-eq-abs-02', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261019-032458', demo_eq_abs_02__sympy_extras_refine),
+    ('demo-eq-abs-02', 'sympy-extras-simplify', 'false', 'null', 'sympy-extras-simplify-20261019-032501', demo_eq_abs_02__sympy_extras_simplify),
     ('demo-eq-log-01', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-032311', demo_eq_log_01__satassume_ask),
     ('demo-eq-log-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_eq_log_01__satrefine_refine),
+    ('demo-eq-log-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-032451', demo_eq_log_01__satrefine_simplify),
     ('demo-eq-log-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_eq_log_01__sympy_auto),
     ('demo-eq-log-01', 'sympy-ask', 'true', 'true', 'sympy-ask-20261018-212419', demo_eq_log_01__sympy_ask),
     ('demo-eq-log-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-212422', demo_eq_log_01__sympy_refine),
     ('demo-eq-log-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_eq_log_01__sympy_simplify),
+    ('demo-eq-log-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-032454', demo_eq_log_01__sympy_extras_ask),
+    ('demo-eq-log-01', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261019-032458', demo_eq_log_01__sympy_extras_refine),
+    ('demo-eq-log-01', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-032501', demo_eq_log_01__sympy_extras_simplify),
     ('demo-eq-pow-01', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-032311', demo_eq_pow_01__satassume_ask),
     ('demo-eq-pow-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_eq_pow_01__satrefine_refine),
+    ('demo-eq-pow-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-032451', demo_eq_pow_01__satrefine_simplify),
     ('demo-eq-pow-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_eq_pow_01__sympy_auto),
     ('demo-eq-pow-01', 'sympy-ask', 'true', 'true', 'sympy-ask-20261018-212419', demo_eq_pow_01__sympy_ask),
     ('demo-eq-pow-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-212422', demo_eq_pow_01__sympy_refine),
     ('demo-eq-pow-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_eq_pow_01__sympy_simplify),
+    ('demo-eq-pow-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-032454', demo_eq_pow_01__sympy_extras_ask),
+    ('demo-eq-pow-01', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261019-032458', demo_eq_pow_01__sympy_extras_refine),
+    ('demo-eq-pow-01', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-032501', demo_eq_pow_01__sympy_extras_simplify),
     ('demo-eq-sqrt-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_eq_sqrt_01__satassume_ask),
     ('demo-eq-sqrt-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_eq_sqrt_01__satrefine_refine),
+    ('demo-eq-sqrt-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-032451', demo_eq_sqrt_01__satrefine_simplify),
     ('demo-eq-sqrt-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_eq_sqrt_01__sympy_auto),
     ('demo-eq-sqrt-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_eq_sqrt_01__sympy_ask),
     ('demo-eq-sqrt-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-212422', demo_eq_sqrt_01__sympy_refine),
     ('demo-eq-sqrt-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_eq_sqrt_01__sympy_simplify),
+    ('demo-eq-sqrt-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-032454', demo_eq_sqrt_01__sympy_extras_ask),
+    ('demo-eq-sqrt-01', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261019-032458', demo_eq_sqrt_01__sympy_extras_refine),
+    ('demo-eq-sqrt-01', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-032501', demo_eq_sqrt_01__sympy_extras_simplify),
     ('demo-eq-sqrt-02', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-032311', demo_eq_sqrt_02__satassume_ask),
     ('demo-eq-sqrt-02', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_eq_sqrt_02__satrefine_refine),
+    ('demo-eq-sqrt-02', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-032451', demo_eq_sqrt_02__satrefine_simplify),
     ('demo-eq-sqrt-02', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_eq_sqrt_02__sympy_auto),
     ('demo-eq-sqrt-02', 'sympy-ask', 'true', 'true', 'sympy-ask-20261018-212419', demo_eq_sqrt_02__sympy_ask),
     ('demo-eq-sqrt-02', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-212422', demo_eq_sqrt_02__sympy_refine),
     ('demo-eq-sqrt-02', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_eq_sqrt_02__sympy_simplify),
+    ('demo-eq-sqrt-02', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-032454', demo_eq_sqrt_02__sympy_extras_ask),
+    ('demo-eq-sqrt-02', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261019-032458', demo_eq_sqrt_02__sympy_extras_refine),
+    ('demo-eq-sqrt-02', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-032501', demo_eq_sqrt_02__sympy_extras_simplify),
     ('demo-eq-sqrt-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032311', demo_eq_sqrt_03__satassume_ask),
     ('demo-eq-sqrt-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-025311', demo_eq_sqrt_03__satrefine_refine),
+    ('demo-eq-sqrt-03', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-032451', demo_eq_sqrt_03__satrefine_simplify),
     ('demo-eq-sqrt-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212418', demo_eq_sqrt_03__sympy_auto),
     ('demo-eq-sqrt-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-212419', demo_eq_sqrt_03__sympy_ask),
     ('demo-eq-sqrt-03', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-212422', demo_eq_sqrt_03__sympy_refine),
     ('demo-eq-sqrt-03', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261018-212424', demo_eq_sqrt_03__sympy_simplify),
+    ('demo-eq-sqrt-03', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-032454', demo_eq_sqrt_03__sympy_extras_ask),
+    ('demo-eq-sqrt-03', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-032458', demo_eq_sqrt_03__sympy_extras_refine),
+    ('demo-eq-sqrt-03', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261019-032501', demo_eq_sqrt_03__sympy_extras_simplify),
     ('demo-eq-sqrt-04', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-032311', demo_eq_sqrt_04__satassume_ask),
     ('demo-eq-sqrt-04', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261019-025311', demo_eq_sqrt_04__satrefine_refine),
+    ('demo-eq-sqrt-04', 'satrefine-simplify', 'false', 'false', 'satrefine-simplify-20261019-032451', demo_eq_sqrt_04__satrefine_simplify),
     ('demo-eq-sqrt-04', 'sympy-auto', 'false', 'false', 'sympy-auto-20261018-212418', demo_eq_sqrt_04__sympy_auto),
     ('demo-eq-sqrt-04', 'sympy-ask', 'false', 'null', 'sympy-ask-20261018-212419', demo_eq_sqrt_04__sympy_ask),
     ('demo-eq-sqrt-04', 'sympy-refine', 'false', 'false', 'sympy-refine-20261018-212422', demo_eq_sqrt_04__sympy_refine),
     ('demo-eq-sqrt-04', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261018-212424', demo_eq_sqrt_04__sympy_simplify),
+    ('demo-eq-sqrt-04', 'sympy-extras-ask', 'false', 'false', 'sympy-extras-ask-20261019-032454', demo_eq_sqrt_04__sympy_extras_ask),
+    ('demo-eq-sqrt-04', 'sympy-extras-refine', 'false', 'false', 'sympy-extras-refine-20261019-032458', demo_eq_sqrt_04__sympy_extras_refine),
+    ('demo-eq-sqrt-04', 'sympy-extras-simplify', 'false', 'false', 'sympy-extras-simplify-20261019-032501', demo_eq_sqrt_04__sympy_extras_simplify),
     ('demo-eq-trig-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_eq_trig_01__satassume_ask),
     ('demo-eq-trig-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-025311', demo_eq_trig_01__satrefine_refine),
+    ('demo-eq-trig-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-032451', demo_eq_trig_01__satrefine_simplify),
     ('demo-eq-trig-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212418', demo_eq_trig_01__sympy_auto),
     ('demo-eq-trig-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_eq_trig_01__sympy_ask),
     ('demo-eq-trig-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212422', demo_eq_trig_01__sympy_refine),
     ('demo-eq-trig-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_eq_trig_01__sympy_simplify),
+    ('demo-eq-trig-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-032454', demo_eq_trig_01__sympy_extras_ask),
+    ('demo-eq-trig-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-032458', demo_eq_trig_01__sympy_extras_refine),
+    ('demo-eq-trig-01', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-032501', demo_eq_trig_01__sympy_extras_simplify),
     ('demo-eq-trig-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_eq_trig_02__satassume_ask),
     ('demo-eq-trig-02', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-025311', demo_eq_trig_02__satrefine_refine),
+    ('demo-eq-trig-02', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-032451', demo_eq_trig_02__satrefine_simplify),
     ('demo-eq-trig-02', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212418', demo_eq_trig_02__sympy_auto),
     ('demo-eq-trig-02', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_eq_trig_02__sympy_ask),
     ('demo-eq-trig-02', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212422', demo_eq_trig_02__sympy_refine),
     ('demo-eq-trig-02', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_eq_trig_02__sympy_simplify),
+    ('demo-eq-trig-02', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-032454', demo_eq_trig_02__sympy_extras_ask),
+    ('demo-eq-trig-02', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-032458', demo_eq_trig_02__sympy_extras_refine),
+    ('demo-eq-trig-02', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-032501', demo_eq_trig_02__sympy_extras_simplify),
     ('demo-log-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_log_01__satassume_ask),
     ('demo-log-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_log_01__satrefine_refine),
+    ('demo-log-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-032451', demo_log_01__satrefine_simplify),
     ('demo-log-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212418', demo_log_01__sympy_auto),
     ('demo-log-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_log_01__sympy_ask),
     ('demo-log-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212422', demo_log_01__sympy_refine),
     ('demo-log-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_log_01__sympy_simplify),
+    ('demo-log-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-032454', demo_log_01__sympy_extras_ask),
+    ('demo-log-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-032458', demo_log_01__sympy_extras_refine),
+    ('demo-log-01', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-032501', demo_log_01__sympy_extras_simplify),
     ('demo-log-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032311', demo_log_02__satassume_ask),
     ('demo-log-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-025311', demo_log_02__satrefine_refine),
+    ('demo-log-02', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-032451', demo_log_02__satrefine_simplify),
     ('demo-log-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212418', demo_log_02__sympy_auto),
     ('demo-log-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-212419', demo_log_02__sympy_ask),
     ('demo-log-02', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-212422', demo_log_02__sympy_refine),
     ('demo-log-02', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261018-212424', demo_log_02__sympy_simplify),
+    ('demo-log-02', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-032454', demo_log_02__sympy_extras_ask),
+    ('demo-log-02', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-032458', demo_log_02__sympy_extras_refine),
+    ('demo-log-02', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261019-032501', demo_log_02__sympy_extras_simplify),
     ('demo-log-03', 'satassume-ask', 'false', 'false', 'satassume-ask-20261019-032311', demo_log_03__satassume_ask),
     ('demo-log-03', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261019-025311', demo_log_03__satrefine_refine),
+    ('demo-log-03', 'satrefine-simplify', 'false', 'false', 'satrefine-simplify-20261019-032451', demo_log_03__satrefine_simplify),
     ('demo-log-03', 'sympy-auto', 'false', 'null', 'sympy-auto-20261018-212418', demo_log_03__sympy_auto),
     ('demo-log-03', 'sympy-ask', 'false', 'false', 'sympy-ask-20261018-212419', demo_log_03__sympy_ask),
     ('demo-log-03', 'sympy-refine', 'false', 'null', 'sympy-refine-20261018-212422', demo_log_03__sympy_refine),
     ('demo-log-03', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261018-212424', demo_log_03__sympy_simplify),
+    ('demo-log-03', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261019-032454', demo_log_03__sympy_extras_ask),
+    ('demo-log-03', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261019-032458', demo_log_03__sympy_extras_refine),
+    ('demo-log-03', 'sympy-extras-simplify', 'false', 'false', 'sympy-extras-simplify-20261019-032501', demo_log_03__sympy_extras_simplify),
     ('demo-nonzero-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_nonzero_01__satassume_ask),
     ('demo-nonzero-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_nonzero_01__satrefine_refine),
+    ('demo-nonzero-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-032451', demo_nonzero_01__satrefine_simplify),
     ('demo-nonzero-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_nonzero_01__sympy_auto),
     ('demo-nonzero-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_nonzero_01__sympy_ask),
     ('demo-nonzero-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212422', demo_nonzero_01__sympy_refine),
     ('demo-nonzero-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_nonzero_01__sympy_simplify),
+    ('demo-nonzero-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-032454', demo_nonzero_01__sympy_extras_ask),
+    ('demo-nonzero-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-032458', demo_nonzero_01__sympy_extras_refine),
+    ('demo-nonzero-01', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261019-032501', demo_nonzero_01__sympy_extras_simplify),
     ('demo-parity-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_parity_01__satassume_ask),
     ('demo-parity-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_parity_01__satrefine_refine),
+    ('demo-parity-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-032451', demo_parity_01__satrefine_simplify),
     ('demo-parity-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_parity_01__sympy_auto),
     ('demo-parity-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_parity_01__sympy_ask),
     ('demo-parity-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-212422', demo_parity_01__sympy_refine),
     ('demo-parity-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_parity_01__sympy_simplify),
+    ('demo-parity-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-032454', demo_parity_01__sympy_extras_ask),
+    ('demo-parity-01', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261019-032458', demo_parity_01__sympy_extras_refine),
+    ('demo-parity-01', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-032501', demo_parity_01__sympy_extras_simplify),
     ('demo-parity-02', 'satassume-ask', 'false', 'false', 'satassume-ask-20261019-032311', demo_parity_02__satassume_ask),
     ('demo-parity-02', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261019-025311', demo_parity_02__satrefine_refine),
+    ('demo-parity-02', 'satrefine-simplify', 'false', 'false', 'satrefine-simplify-20261019-032451', demo_parity_02__satrefine_simplify),
     ('demo-parity-02', 'sympy-auto', 'false', 'false', 'sympy-auto-20261018-212418', demo_parity_02__sympy_auto),
     ('demo-parity-02', 'sympy-ask', 'false', 'false', 'sympy-ask-20261018-212419', demo_parity_02__sympy_ask),
     ('demo-parity-02', 'sympy-refine', 'false', 'false', 'sympy-refine-20261018-212422', demo_parity_02__sympy_refine),
     ('demo-parity-02', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261018-212424', demo_parity_02__sympy_simplify),
+    ('demo-parity-02', 'sympy-extras-ask', 'false', 'false', 'sympy-extras-ask-20261019-032454', demo_parity_02__sympy_extras_ask),
+    ('demo-parity-02', 'sympy-extras-refine', 'false', 'false', 'sympy-extras-refine-20261019-032458', demo_parity_02__sympy_extras_refine),
+    ('demo-parity-02', 'sympy-extras-simplify', 'false', 'false', 'sympy-extras-simplify-20261019-032501', demo_parity_02__sympy_extras_simplify),
     ('demo-parity-03', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-032311', demo_parity_03__satassume_ask),
     ('demo-parity-03', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_parity_03__satrefine_refine),
+    ('demo-parity-03', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-032451', demo_parity_03__satrefine_simplify),
     ('demo-parity-03', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_parity_03__sympy_auto),
     ('demo-parity-03', 'sympy-ask', 'true', 'true', 'sympy-ask-20261018-212419', demo_parity_03__sympy_ask),
     ('demo-parity-03', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-212422', demo_parity_03__sympy_refine),
     ('demo-parity-03', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_parity_03__sympy_simplify),
+    ('demo-parity-03', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-032454', demo_parity_03__sympy_extras_ask),
+    ('demo-parity-03', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261019-032458', demo_parity_03__sympy_extras_refine),
+    ('demo-parity-03', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-032501', demo_parity_03__sympy_extras_simplify),
     ('demo-parity-04', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032311', demo_parity_04__satassume_ask),
     ('demo-parity-04', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-025311', demo_parity_04__satrefine_refine),
+    ('demo-parity-04', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-032451', demo_parity_04__satrefine_simplify),
     ('demo-parity-04', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212418', demo_parity_04__sympy_auto),
     ('demo-parity-04', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-212419', demo_parity_04__sympy_ask),
     ('demo-parity-04', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-212422', demo_parity_04__sympy_refine),
     ('demo-parity-04', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261018-212424', demo_parity_04__sympy_simplify),
+    ('demo-parity-04', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-032454', demo_parity_04__sympy_extras_ask),
+    ('demo-parity-04', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-032458', demo_parity_04__sympy_extras_refine),
+    ('demo-parity-04', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261019-032501', demo_parity_04__sympy_extras_simplify),
     ('demo-parity-05', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_parity_05__satassume_ask),
     ('demo-parity-05', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_parity_05__satrefine_refine),
+    ('demo-parity-05', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-032451', demo_parity_05__satrefine_simplify),
     ('demo-parity-05', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_parity_05__sympy_auto),
     ('demo-parity-05', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_parity_05__sympy_ask),
     ('demo-parity-05', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-212422', demo_parity_05__sympy_refine),
     ('demo-parity-05', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_parity_05__sympy_simplify),
+    ('demo-parity-05', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-032454', demo_parity_05__sympy_extras_ask),
+    ('demo-parity-05', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261019-032458', demo_parity_05__sympy_extras_refine),
+    ('demo-parity-05', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-032501', demo_parity_05__sympy_extras_simplify),
     ('demo-prime-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_prime_01__satassume_ask),
     ('demo-prime-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-025311', demo_prime_01__satrefine_refine),
+    ('demo-prime-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261019-032451', demo_prime_01__satrefine_simplify),
     ('demo-prime-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212418', demo_prime_01__sympy_auto),
     ('demo-prime-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_prime_01__sympy_ask),
     ('demo-prime-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212422', demo_prime_01__sympy_refine),
     ('demo-prime-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261018-212424', demo_prime_01__sympy_simplify),
+    ('demo-prime-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-032454', demo_prime_01__sympy_extras_ask),
+    ('demo-prime-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-032458', demo_prime_01__sympy_extras_refine),
+    ('demo-prime-01', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261019-032501', demo_prime_01__sympy_extras_simplify),
     ('demo-prime-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032311', demo_prime_02__satassume_ask),
     ('demo-prime-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-025311', demo_prime_02__satrefine_refine),
+    ('demo-prime-02', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-032451', demo_prime_02__satrefine_simplify),
     ('demo-prime-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212418', demo_prime_02__sympy_auto),
     ('demo-prime-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-212419', demo_prime_02__sympy_ask),
     ('demo-prime-02', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-212422', demo_prime_02__sympy_refine),
     ('demo-prime-02', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261018-212424', demo_prime_02__sympy_simplify),
+    ('demo-prime-02', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-032454', demo_prime_02__sympy_extras_ask),
+    ('demo-prime-02', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-032458', demo_prime_02__sympy_extras_refine),
+    ('demo-prime-02', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261019-032501', demo_prime_02__sympy_extras_simplify),
     ('demo-sign-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_sign_02__satassume_ask),
     ('demo-sign-02', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_sign_02__satrefine_refine),
+    ('demo-sign-02', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-032451', demo_sign_02__satrefine_simplify),
     ('demo-sign-02', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_sign_02__sympy_auto),
     ('demo-sign-02', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_sign_02__sympy_ask),
     ('demo-sign-02', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-212422', demo_sign_02__sympy_refine),
     ('demo-sign-02', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_sign_02__sympy_simplify),
+    ('demo-sign-02', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-032454', demo_sign_02__sympy_extras_ask),
+    ('demo-sign-02', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261019-032458', demo_sign_02__sympy_extras_refine),
+    ('demo-sign-02', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-032501', demo_sign_02__sympy_extras_simplify),
     ('demo-sign-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032311', demo_sign_03__satassume_ask),
     ('demo-sign-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-025311', demo_sign_03__satrefine_refine),
+    ('demo-sign-03', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-032451', demo_sign_03__satrefine_simplify),
     ('demo-sign-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212418', demo_sign_03__sympy_auto),
     ('demo-sign-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-212419', demo_sign_03__sympy_ask),
     ('demo-sign-03', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-212422', demo_sign_03__sympy_refine),
     ('demo-sign-03', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261018-212424', demo_sign_03__sympy_simplify),
+    ('demo-sign-03', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-032454', demo_sign_03__sympy_extras_ask),
+    ('demo-sign-03', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-032458', demo_sign_03__sympy_extras_refine),
+    ('demo-sign-03', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261019-032501', demo_sign_03__sympy_extras_simplify),
     ('demo-sign-04', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_sign_04__satassume_ask),
     ('demo-sign-04', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_sign_04__satrefine_refine),
+    ('demo-sign-04', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-032451', demo_sign_04__satrefine_simplify),
     ('demo-sign-04', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212418', demo_sign_04__sympy_auto),
     ('demo-sign-04', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_sign_04__sympy_ask),
     ('demo-sign-04', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212422', demo_sign_04__sympy_refine),
     ('demo-sign-04', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261018-212424', demo_sign_04__sympy_simplify),
+    ('demo-sign-04', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-032454', demo_sign_04__sympy_extras_ask),
+    ('demo-sign-04', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-032458', demo_sign_04__sympy_extras_refine),
+    ('demo-sign-04', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261019-032501', demo_sign_04__sympy_extras_simplify),
     ('demo-sign-05', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_sign_05__satassume_ask),
     ('demo-sign-05', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_sign_05__satrefine_refine),
+    ('demo-sign-05', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-032451', demo_sign_05__satrefine_simplify),
     ('demo-sign-05', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_sign_05__sympy_auto),
     ('demo-sign-05', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_sign_05__sympy_ask),
     ('demo-sign-05', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-212422', demo_sign_05__sympy_refine),
     ('demo-sign-05', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_sign_05__sympy_simplify),
+    ('demo-sign-05', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-032454', demo_sign_05__sympy_extras_ask),
+    ('demo-sign-05', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261019-032458', demo_sign_05__sympy_extras_refine),
+    ('demo-sign-05', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-032501', demo_sign_05__sympy_extras_simplify),
 ]
 
 

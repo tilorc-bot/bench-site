@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite examples · case demo-log-01 · all Python systems
-# 6 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 10 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -127,6 +127,19 @@ _SETUP3 = _Setup(r'''from sympy import *
 import sympy
 ''', ('sympy', '1.14.0'))
 
+# setup 4 (the harness's warm-up, version capture and cache clearing left out)
+_SETUP4 = _Setup(r'''from sympy import *
+import sympy
+import sympy_extras.assumptions
+import sympy_extras.settings
+import importlib.metadata
+import json as Json, re as Regex
+Source = Json.loads(importlib.metadata.distribution('sympy-extras').read_text('direct_url.json') or '{}')
+Archive = Regex.match('https://[^#]*/archive/([0-9a-f]{40})[.](tar[.]gz|zip)(#|$)', Source.get('url', '')) if 'archive_info' in Source else None
+Commit = Source.get('vcs_info', {}).get('commit_id') or (Archive and Archive.group(1))
+Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settings.settings.time_scale}'
+''', ('sympy-extras', '0.0.3 (commit 2d60199620ac)'))
+
 # comments that the cases' code repeats, shown once here (left out below):
 # true iff the result is 0; false only if it is a definite nonzero number
 
@@ -153,6 +166,20 @@ def demo_log_01__satrefine_refine():
     Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
     Residual = log(x * y) - (log(x) + log(y))
     Result = satsimp.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-log-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032451 answered true (solved)
+@_in(_SETUP2)
+def demo_log_01__satrefine_simplify():
+    x = Symbol('x', real=True, positive=True)
+    y = Symbol('y', real=True, positive=True)
+    Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
+    Residual = log(x * y) - (log(x) + log(y))
+    Result = simplify(satsimp.refine(Residual, Assum))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -213,14 +240,60 @@ def demo_log_01__sympy_simplify():
     return Answer
 
 
+# ---- case demo-log-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032454 answered true (solved)
+@_in(_SETUP4)
+def demo_log_01__sympy_extras_ask():
+    x = Symbol('x', real=True)
+    y = Symbol('y', real=True)
+    Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
+    Residual = log(x * y) - (log(x) + log(y))
+    # the claim as a relation, sympy-extras' statement form (not Q.zero: see the adapter)
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-log-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032458 answered null (no verdict)
+@_in(_SETUP4)
+def demo_log_01__sympy_extras_refine():
+    x = Symbol('x', real=True)
+    y = Symbol('y', real=True)
+    Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
+    Residual = log(x * y) - (log(x) + log(y))
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-log-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032501 answered true (solved)
+@_in(_SETUP4)
+def demo_log_01__sympy_extras_simplify():
+    x = Symbol('x', real=True)
+    y = Symbol('y', real=True)
+    Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
+    Residual = log(x * y) - (log(x) + log(y))
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('demo-log-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_log_01__satassume_ask),
     ('demo-log-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_log_01__satrefine_refine),
+    ('demo-log-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-032451', demo_log_01__satrefine_simplify),
     ('demo-log-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212418', demo_log_01__sympy_auto),
     ('demo-log-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_log_01__sympy_ask),
     ('demo-log-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212422', demo_log_01__sympy_refine),
     ('demo-log-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_log_01__sympy_simplify),
+    ('demo-log-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-032454', demo_log_01__sympy_extras_ask),
+    ('demo-log-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-032458', demo_log_01__sympy_extras_refine),
+    ('demo-log-01', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-032501', demo_log_01__sympy_extras_simplify),
 ]
 
 

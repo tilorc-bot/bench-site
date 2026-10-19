@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite simplipy · case sp-acj4-137-complex · all Python systems
-# 5 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 10 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -113,22 +113,53 @@ def _fresh():
 # setup 1 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP1 = _Setup(r'''from sympy import *
 import sympy
-import satsimp
-''', ('satsimp', '0.1.0'))
+import satassume.sympy_api
+''', ('satassume', '0.0.1'))
 
 # setup 2 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP2 = _Setup(r'''from sympy import *
 import sympy
+import satsimp
+''', ('satsimp', '0.1.0'))
+
+# setup 3 (the harness's warm-up, version capture and cache clearing left out)
+_SETUP3 = _Setup(r'''from sympy import *
+import sympy
 ''', ('sympy', '1.14.0'))
+
+# setup 4 (the harness's warm-up, version capture and cache clearing left out)
+_SETUP4 = _Setup(r'''from sympy import *
+import sympy
+import sympy_extras.assumptions
+import sympy_extras.settings
+import importlib.metadata
+import json as Json, re as Regex
+Source = Json.loads(importlib.metadata.distribution('sympy-extras').read_text('direct_url.json') or '{}')
+Archive = Regex.match('https://[^#]*/archive/([0-9a-f]{40})[.](tar[.]gz|zip)(#|$)', Source.get('url', '')) if 'archive_info' in Source else None
+Commit = Source.get('vcs_info', {}).get('commit_id') or (Archive and Archive.group(1))
+Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settings.settings.time_scale}'
+''', ('sympy-extras', '0.0.3 (commit 2d60199620ac)'))
 
 # comments that the cases' code repeats, shown once here (left out below):
 # true iff the result is 0; false only if it is a definite nonzero number
 # dropped (not a unary fact about one symbol): Or(~Q.zero(x), re(pi) > 0)
 
 
+# ---- case sp-acj4-137-complex · expected contingent · system satassume-ask (satassume 0.0.1)
+# the run satassume-ask-20261019-032540 answered null (declined correctly)
+@_in(_SETUP1)
+def sp_acj4_137_complex__satassume_ask():
+    x = Symbol('x', complex=True)
+    Assum = And(Q.complex(x), Or(~Q.zero(x), re(pi) > 0))
+    Residual = Abs(Pow(x, pi)) - Pow(x, pi)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-137-complex · expected contingent · system satrefine-refine (satsimp 0.1.0)
 # the run satrefine-refine-20261019-025455 answered null (declined correctly)
-@_in(_SETUP1)
+@_in(_SETUP2)
 def sp_acj4_137_complex__satrefine_refine():
     x = Symbol('x', complex=True)
     Assum = And(Q.complex(x), Or(~Q.zero(x), re(pi) > 0))
@@ -139,9 +170,22 @@ def sp_acj4_137_complex__satrefine_refine():
     return Answer
 
 
+# ---- case sp-acj4-137-complex · expected contingent · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032549 answered null (declined correctly)
+@_in(_SETUP2)
+def sp_acj4_137_complex__satrefine_simplify():
+    x = Symbol('x', complex=True)
+    Assum = And(Q.complex(x), Or(~Q.zero(x), re(pi) > 0))
+    Residual = Abs(Pow(x, pi)) - Pow(x, pi)
+    Result = simplify(satsimp.refine(Residual, Assum))
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-137-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261018-212658 answered null (declined correctly)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def sp_acj4_137_complex__sympy_auto():
     x = Symbol('x', complex=True)
     Residual = Abs(Pow(x, pi)) - Pow(x, pi)
@@ -154,7 +198,7 @@ def sp_acj4_137_complex__sympy_auto():
 
 # ---- case sp-acj4-137-complex · expected contingent · system sympy-ask (sympy 1.14.0)
 # the run sympy-ask-20261018-212703 answered null (declined correctly)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def sp_acj4_137_complex__sympy_ask():
     x = Symbol('x', complex=True)
     Assum = And(Q.complex(x), Or(~Q.zero(x), re(pi) > 0))
@@ -167,7 +211,7 @@ def sp_acj4_137_complex__sympy_ask():
 
 # ---- case sp-acj4-137-complex · expected contingent · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261018-212815 answered null (declined correctly)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def sp_acj4_137_complex__sympy_refine():
     x = Symbol('x', complex=True)
     Assum = And(Q.complex(x), Or(~Q.zero(x), re(pi) > 0))
@@ -180,7 +224,7 @@ def sp_acj4_137_complex__sympy_refine():
 
 # ---- case sp-acj4-137-complex · expected contingent · system sympy-simplify (sympy 1.14.0)
 # the run sympy-simplify-20261018-212948 answered null (declined correctly)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def sp_acj4_137_complex__sympy_simplify():
     x = Symbol('x', complex=True)
     Residual = Abs(Pow(x, pi)) - Pow(x, pi)
@@ -190,13 +234,57 @@ def sp_acj4_137_complex__sympy_simplify():
     return Answer
 
 
+# ---- case sp-acj4-137-complex · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032626 answered null (declined correctly)
+@_in(_SETUP4)
+def sp_acj4_137_complex__sympy_extras_ask():
+    x = Symbol('x', complex=True)
+    Assum = And(Q.complex(x), Or(~Q.zero(x), re(pi) > 0))
+    Residual = Abs(Pow(x, pi)) - Pow(x, pi)
+    # the claim as a relation, sympy-extras' statement form (not Q.zero: see the adapter)
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case sp-acj4-137-complex · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-033002 answered null (declined correctly)
+@_in(_SETUP4)
+def sp_acj4_137_complex__sympy_extras_refine():
+    x = Symbol('x', complex=True)
+    Assum = And(Q.complex(x), Or(~Q.zero(x), re(pi) > 0))
+    Residual = Abs(Pow(x, pi)) - Pow(x, pi)
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case sp-acj4-137-complex · expected contingent · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-033408 answered null (declined correctly)
+@_in(_SETUP4)
+def sp_acj4_137_complex__sympy_extras_simplify():
+    x = Symbol('x', complex=True)
+    Assum = And(Q.complex(x), Or(~Q.zero(x), re(pi) > 0))
+    Residual = Abs(Pow(x, pi)) - Pow(x, pi)
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
+    ('sp-acj4-137-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032540', sp_acj4_137_complex__satassume_ask),
     ('sp-acj4-137-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-025455', sp_acj4_137_complex__satrefine_refine),
+    ('sp-acj4-137-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-032549', sp_acj4_137_complex__satrefine_simplify),
     ('sp-acj4-137-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212658', sp_acj4_137_complex__sympy_auto),
     ('sp-acj4-137-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-212703', sp_acj4_137_complex__sympy_ask),
     ('sp-acj4-137-complex', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-212815', sp_acj4_137_complex__sympy_refine),
     ('sp-acj4-137-complex', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261018-212948', sp_acj4_137_complex__sympy_simplify),
+    ('sp-acj4-137-complex', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-032626', sp_acj4_137_complex__sympy_extras_ask),
+    ('sp-acj4-137-complex', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-033002', sp_acj4_137_complex__sympy_extras_refine),
+    ('sp-acj4-137-complex', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261019-033408', sp_acj4_137_complex__sympy_extras_simplify),
 ]
 
 

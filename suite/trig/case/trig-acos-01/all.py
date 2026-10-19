@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite trig · case trig-acos-01 · all Python systems
-# 5 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 10 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -113,22 +113,53 @@ def _fresh():
 # setup 1 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP1 = _Setup(r'''from sympy import *
 import sympy
-import satsimp
-''', ('satsimp', '0.1.0'))
+import satassume.sympy_api
+''', ('satassume', '0.0.1'))
 
 # setup 2 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP2 = _Setup(r'''from sympy import *
 import sympy
+import satsimp
+''', ('satsimp', '0.1.0'))
+
+# setup 3 (the harness's warm-up, version capture and cache clearing left out)
+_SETUP3 = _Setup(r'''from sympy import *
+import sympy
 ''', ('sympy', '1.14.0'))
+
+# setup 4 (the harness's warm-up, version capture and cache clearing left out)
+_SETUP4 = _Setup(r'''from sympy import *
+import sympy
+import sympy_extras.assumptions
+import sympy_extras.settings
+import importlib.metadata
+import json as Json, re as Regex
+Source = Json.loads(importlib.metadata.distribution('sympy-extras').read_text('direct_url.json') or '{}')
+Archive = Regex.match('https://[^#]*/archive/([0-9a-f]{40})[.](tar[.]gz|zip)(#|$)', Source.get('url', '')) if 'archive_info' in Source else None
+Commit = Source.get('vcs_info', {}).get('commit_id') or (Archive and Archive.group(1))
+Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settings.settings.time_scale}'
+''', ('sympy-extras', '0.0.3 (commit 2d60199620ac)'))
 
 # comments that the cases' code repeats, shown once here (left out below):
 # true iff the result is 0; false only if it is a definite nonzero number
 # dropped (not a unary fact about one symbol): x < 3
 
 
+# ---- case trig-acos-01 · expected true · system satassume-ask (satassume 0.0.1)
+# the run satassume-ask-20261019-032505 answered null (no verdict)
+@_in(_SETUP1)
+def trig_acos_01__satassume_ask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.positive(x), x < 3)
+    Residual = acos(cos(x)) - x
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case trig-acos-01 · expected true · system satrefine-refine (satsimp 0.1.0)
 # the run satrefine-refine-20261019-025453 answered null (no verdict)
-@_in(_SETUP1)
+@_in(_SETUP2)
 def trig_acos_01__satrefine_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), Q.positive(x), x < 3)
@@ -139,9 +170,22 @@ def trig_acos_01__satrefine_refine():
     return Answer
 
 
+# ---- case trig-acos-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032507 answered null (no verdict)
+@_in(_SETUP2)
+def trig_acos_01__satrefine_simplify():
+    x = Symbol('x', real=True, positive=True)
+    Assum = And(Q.real(x), Q.positive(x), x < 3)
+    Residual = acos(cos(x)) - x
+    Result = simplify(satsimp.refine(Residual, Assum))
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case trig-acos-01 · expected true · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261018-212442 answered null (no verdict)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def trig_acos_01__sympy_auto():
     x = Symbol('x', real=True, positive=True)
     Residual = acos(cos(x)) - x
@@ -154,7 +198,7 @@ def trig_acos_01__sympy_auto():
 
 # ---- case trig-acos-01 · expected true · system sympy-ask (sympy 1.14.0)
 # the run sympy-ask-20261018-212443 answered null (no verdict)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def trig_acos_01__sympy_ask():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), Q.positive(x), x < 3)
@@ -167,7 +211,7 @@ def trig_acos_01__sympy_ask():
 
 # ---- case trig-acos-01 · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261018-212445 answered null (no verdict)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def trig_acos_01__sympy_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), Q.positive(x), x < 3)
@@ -180,7 +224,7 @@ def trig_acos_01__sympy_refine():
 
 # ---- case trig-acos-01 · expected true · system sympy-simplify (sympy 1.14.0)
 # the run sympy-simplify-20261018-212447 answered null (no verdict)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def trig_acos_01__sympy_simplify():
     x = Symbol('x', real=True, positive=True)
     Residual = acos(cos(x)) - x
@@ -190,13 +234,57 @@ def trig_acos_01__sympy_simplify():
     return Answer
 
 
+# ---- case trig-acos-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032509 answered null (no verdict)
+@_in(_SETUP4)
+def trig_acos_01__sympy_extras_ask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.positive(x), x < 3)
+    Residual = acos(cos(x)) - x
+    # the claim as a relation, sympy-extras' statement form (not Q.zero: see the adapter)
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case trig-acos-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032520 answered null (no verdict)
+@_in(_SETUP4)
+def trig_acos_01__sympy_extras_refine():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.positive(x), x < 3)
+    Residual = acos(cos(x)) - x
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case trig-acos-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032530 answered null (no verdict)
+@_in(_SETUP4)
+def trig_acos_01__sympy_extras_simplify():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.positive(x), x < 3)
+    Residual = acos(cos(x)) - x
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
+    ('trig-acos-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032505', trig_acos_01__satassume_ask),
     ('trig-acos-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-025453', trig_acos_01__satrefine_refine),
+    ('trig-acos-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261019-032507', trig_acos_01__satrefine_simplify),
     ('trig-acos-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212442', trig_acos_01__sympy_auto),
     ('trig-acos-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212443', trig_acos_01__sympy_ask),
     ('trig-acos-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212445', trig_acos_01__sympy_refine),
     ('trig-acos-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261018-212447', trig_acos_01__sympy_simplify),
+    ('trig-acos-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-032509', trig_acos_01__sympy_extras_ask),
+    ('trig-acos-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-032520', trig_acos_01__sympy_extras_refine),
+    ('trig-acos-01', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261019-032530', trig_acos_01__sympy_extras_simplify),
 ]
 
 

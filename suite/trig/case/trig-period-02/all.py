@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite trig · case trig-period-02 · all Python systems
-# 5 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 10 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -113,21 +113,52 @@ def _fresh():
 # setup 1 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP1 = _Setup(r'''from sympy import *
 import sympy
-import satsimp
-''', ('satsimp', '0.1.0'))
+import satassume.sympy_api
+''', ('satassume', '0.0.1'))
 
 # setup 2 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP2 = _Setup(r'''from sympy import *
 import sympy
+import satsimp
+''', ('satsimp', '0.1.0'))
+
+# setup 3 (the harness's warm-up, version capture and cache clearing left out)
+_SETUP3 = _Setup(r'''from sympy import *
+import sympy
 ''', ('sympy', '1.14.0'))
+
+# setup 4 (the harness's warm-up, version capture and cache clearing left out)
+_SETUP4 = _Setup(r'''from sympy import *
+import sympy
+import sympy_extras.assumptions
+import sympy_extras.settings
+import importlib.metadata
+import json as Json, re as Regex
+Source = Json.loads(importlib.metadata.distribution('sympy-extras').read_text('direct_url.json') or '{}')
+Archive = Regex.match('https://[^#]*/archive/([0-9a-f]{40})[.](tar[.]gz|zip)(#|$)', Source.get('url', '')) if 'archive_info' in Source else None
+Commit = Source.get('vcs_info', {}).get('commit_id') or (Archive and Archive.group(1))
+Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settings.settings.time_scale}'
+''', ('sympy-extras', '0.0.3 (commit 2d60199620ac)'))
 
 # comments that the cases' code repeats, shown once here (left out below):
 # true iff the result is 0; false only if it is a definite nonzero number
 
 
+# ---- case trig-period-02 · expected contingent · system satassume-ask (satassume 0.0.1)
+# the run satassume-ask-20261019-032505 answered null (declined correctly)
+@_in(_SETUP1)
+def trig_period_02__satassume_ask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x))
+    Residual = cos(x + pi) - cos(x)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case trig-period-02 · expected contingent · system satrefine-refine (satsimp 0.1.0)
 # the run satrefine-refine-20261019-025453 answered null (declined correctly)
-@_in(_SETUP1)
+@_in(_SETUP2)
 def trig_period_02__satrefine_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x))
@@ -138,9 +169,22 @@ def trig_period_02__satrefine_refine():
     return Answer
 
 
+# ---- case trig-period-02 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
+# the run satrefine-simplify-20261019-032507 answered null (declined correctly)
+@_in(_SETUP2)
+def trig_period_02__satrefine_simplify():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x))
+    Residual = cos(x + pi) - cos(x)
+    Result = simplify(satsimp.refine(Residual, Assum))
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case trig-period-02 · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261018-212442 answered null (declined correctly)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def trig_period_02__sympy_auto():
     x = Symbol('x', real=True)
     Residual = cos(x + pi) - cos(x)
@@ -153,7 +197,7 @@ def trig_period_02__sympy_auto():
 
 # ---- case trig-period-02 · expected contingent · system sympy-ask (sympy 1.14.0)
 # the run sympy-ask-20261018-212443 answered null (declined correctly)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def trig_period_02__sympy_ask():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x))
@@ -166,7 +210,7 @@ def trig_period_02__sympy_ask():
 
 # ---- case trig-period-02 · expected contingent · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261018-212445 answered null (declined correctly)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def trig_period_02__sympy_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x))
@@ -179,7 +223,7 @@ def trig_period_02__sympy_refine():
 
 # ---- case trig-period-02 · expected contingent · system sympy-simplify (sympy 1.14.0)
 # the run sympy-simplify-20261018-212447 answered null (declined correctly)
-@_in(_SETUP2)
+@_in(_SETUP3)
 def trig_period_02__sympy_simplify():
     x = Symbol('x', real=True)
     Residual = cos(x + pi) - cos(x)
@@ -189,13 +233,57 @@ def trig_period_02__sympy_simplify():
     return Answer
 
 
+# ---- case trig-period-02 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-ask-20261019-032509 answered null (declined correctly)
+@_in(_SETUP4)
+def trig_period_02__sympy_extras_ask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x))
+    Residual = cos(x + pi) - cos(x)
+    # the claim as a relation, sympy-extras' statement form (not Q.zero: see the adapter)
+    Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case trig-period-02 · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-refine-20261019-032520 answered null (declined correctly)
+@_in(_SETUP4)
+def trig_period_02__sympy_extras_refine():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x))
+    Residual = cos(x + pi) - cos(x)
+    Result = sympy_extras.assumptions.refine(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case trig-period-02 · expected contingent · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-032530 answered null (declined correctly)
+@_in(_SETUP4)
+def trig_period_02__sympy_extras_simplify():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x))
+    Residual = cos(x + pi) - cos(x)
+    Result = sympy_extras.assumptions.simplify(Residual, Assum)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
+    ('trig-period-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-032505', trig_period_02__satassume_ask),
     ('trig-period-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-025453', trig_period_02__satrefine_refine),
+    ('trig-period-02', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-032507', trig_period_02__satrefine_simplify),
     ('trig-period-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212442', trig_period_02__sympy_auto),
     ('trig-period-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-212443', trig_period_02__sympy_ask),
     ('trig-period-02', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261018-212445', trig_period_02__sympy_refine),
     ('trig-period-02', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261018-212447', trig_period_02__sympy_simplify),
+    ('trig-period-02', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-032509', trig_period_02__sympy_extras_ask),
+    ('trig-period-02', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-032520', trig_period_02__sympy_extras_refine),
+    ('trig-period-02', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261019-032530', trig_period_02__sympy_extras_simplify),
 ]
 
 
