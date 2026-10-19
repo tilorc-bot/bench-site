@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
-# case sp-acj4-417-cond · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-190147 answered null (no verdict)
+# case sp-acj4-396-real · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
+# the run sympy-extras-simplify-20261019-220406 answered null (no verdict)
 # It prints the CAS version that runs (with a warning if the stored run used another), the
 # verdict, and CHANGED: <stored> -> <got> if the answer is not the stored run's.
 # Exit status: 0 when the answer is the stored run's (a wrong one too; an error answers null,
@@ -90,9 +90,9 @@ _version('sympy-extras', '0.0.3 (commit 2d60199620ac)')
 
 # the query code, exactly as it ran (an error answers null, as in the harness)
 try:
-    x = Symbol('x', real=True)
-    Assum = And(Q.real(x), Abs(x) < 1, ~Q.zero(cos(asin(Abs(x)))), ~Q.zero(cos(asin(x))))
-    Residual = tan(asin(Abs(x))) - Abs(tan(asin(x)))
+    x = Symbol('x')
+    Assum = And(Q.real(x))
+    Residual = sin(Abs(sin(x))) - Abs(sin(sin(x)))
     Result = sympy_extras.assumptions.simplify(Residual, Assum)
     # true iff the result is 0; false only if it is a definite nonzero number
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
@@ -101,5 +101,5 @@ except (Exception, SystemExit):
     _traceback.print_exc()
     Answer = None
 
-_outcome, _change = _verdict(globals().get('Answer'), 'true', 'null', 'sympy-extras-simplify-20261019-190147')
+_outcome, _change = _verdict(globals().get('Answer'), 'true', 'null', 'sympy-extras-simplify-20261019-220406')
 _exit(1 if _change else 0)

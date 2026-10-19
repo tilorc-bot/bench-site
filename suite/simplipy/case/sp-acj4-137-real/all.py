@@ -156,7 +156,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case sp-acj4-137-real · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-184950 answered null (declined correctly)
+# the run satassume-ask-20261019-214929 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_137_real__satassume_ask():
     x = Symbol('x')
@@ -168,7 +168,7 @@ def sp_acj4_137_real__satassume_ask():
 
 
 # ---- case sp-acj4-137-real · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-184647 answered null (declined correctly)
+# the run satrefine-refine-20261019-214620 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_137_real__satrefine_refine():
     x = Symbol('x')
@@ -181,7 +181,7 @@ def sp_acj4_137_real__satrefine_refine():
 
 
 # ---- case sp-acj4-137-real · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261019-185038 answered null (declined correctly)
+# the run satsimp-trigsimp-20261019-215018 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_137_real__satsimp_trigsimp():
     x = Symbol('x')
@@ -194,7 +194,7 @@ def sp_acj4_137_real__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-137-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-185000 answered null (declined correctly)
+# the run satrefine-simplify-20261019-214939 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_137_real__satrefine_simplify():
     x = Symbol('x')
@@ -207,7 +207,7 @@ def sp_acj4_137_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-137-real · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184146 answered null (declined correctly)
+# the run sympy-auto-20261019-214042 answered null (declined correctly)
 @_in(_SETUP3)
 def sp_acj4_137_real__sympy_auto():
     x = Symbol('x', real=True)
@@ -220,10 +220,10 @@ def sp_acj4_137_real__sympy_auto():
 
 
 # ---- case sp-acj4-137-real · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-184152 answered null (declined correctly)
+# the run sympy-ask-20261019-214048 answered null (declined correctly)
 @_in(_SETUP3)
 def sp_acj4_137_real__sympy_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Or(~Q.zero(x), re(pi) > 0))
     Residual = Abs(Pow(x, pi)) - Pow(x, pi)
     Answer = ask(Q.zero(Residual), Assum)
@@ -244,10 +244,10 @@ def sp_acj4_137_real__sympy_satask():
 
 
 # ---- case sp-acj4-137-real · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-184304 answered null (declined correctly)
+# the run sympy-refine-20261019-214237 answered null (declined correctly)
 @_in(_SETUP3)
 def sp_acj4_137_real__sympy_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Or(~Q.zero(x), re(pi) > 0))
     Residual = Abs(Pow(x, pi)) - Pow(x, pi)
     Result = refine(Residual, Assum)
@@ -257,7 +257,7 @@ def sp_acj4_137_real__sympy_refine():
 
 
 # ---- case sp-acj4-137-real · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261019-184629 answered null (declined correctly)
+# the run sympy-simplify-20261019-214603 answered null (declined correctly)
 @_in(_SETUP3)
 def sp_acj4_137_real__sympy_simplify():
     x = Symbol('x', real=True)
@@ -269,10 +269,10 @@ def sp_acj4_137_real__sympy_simplify():
 
 
 # ---- case sp-acj4-137-real · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-215028 answered null (declined correctly)
 @_in(_SETUP5)
 def sp_acj4_137_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Or(~Q.zero(x), re(pi) > 0))
     Residual = Abs(Pow(x, pi)) - Pow(x, pi)
     # the claim as a relation, sympy-extras' statement form (not Q.zero: see the adapter)
@@ -282,10 +282,10 @@ def sp_acj4_137_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-137-real · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-185552 answered null (declined correctly)
+# the run sympy-extras-refine-20261019-215625 answered null (declined correctly)
 @_in(_SETUP5)
 def sp_acj4_137_real__sympy_extras_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Or(~Q.zero(x), re(pi) > 0))
     Residual = Abs(Pow(x, pi)) - Pow(x, pi)
     Result = sympy_extras.assumptions.refine(Residual, Assum)
@@ -295,10 +295,10 @@ def sp_acj4_137_real__sympy_extras_refine():
 
 
 # ---- case sp-acj4-137-real · expected contingent · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-190147 answered null (declined correctly)
+# the run sympy-extras-simplify-20261019-220406 answered null (declined correctly)
 @_in(_SETUP5)
 def sp_acj4_137_real__sympy_extras_simplify():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Or(~Q.zero(x), re(pi) > 0))
     Residual = Abs(Pow(x, pi)) - Pow(x, pi)
     Result = sympy_extras.assumptions.simplify(Residual, Assum)
@@ -309,18 +309,18 @@ def sp_acj4_137_real__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-137-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-184950', sp_acj4_137_real__satassume_ask),
-    ('sp-acj4-137-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-184647', sp_acj4_137_real__satrefine_refine),
-    ('sp-acj4-137-real', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261019-185038', sp_acj4_137_real__satsimp_trigsimp),
-    ('sp-acj4-137-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-185000', sp_acj4_137_real__satrefine_simplify),
-    ('sp-acj4-137-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-184146', sp_acj4_137_real__sympy_auto),
-    ('sp-acj4-137-real', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-184152', sp_acj4_137_real__sympy_ask),
+    ('sp-acj4-137-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-214929', sp_acj4_137_real__satassume_ask),
+    ('sp-acj4-137-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-214620', sp_acj4_137_real__satrefine_refine),
+    ('sp-acj4-137-real', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261019-215018', sp_acj4_137_real__satsimp_trigsimp),
+    ('sp-acj4-137-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_137_real__satrefine_simplify),
+    ('sp-acj4-137-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-214042', sp_acj4_137_real__sympy_auto),
+    ('sp-acj4-137-real', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-214048', sp_acj4_137_real__sympy_ask),
     ('sp-acj4-137-real', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-191346', sp_acj4_137_real__sympy_satask),
-    ('sp-acj4-137-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-184304', sp_acj4_137_real__sympy_refine),
-    ('sp-acj4-137-real', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-184629', sp_acj4_137_real__sympy_simplify),
-    ('sp-acj4-137-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_137_real__sympy_extras_ask),
-    ('sp-acj4-137-real', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-185552', sp_acj4_137_real__sympy_extras_refine),
-    ('sp-acj4-137-real', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261019-190147', sp_acj4_137_real__sympy_extras_simplify),
+    ('sp-acj4-137-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-214237', sp_acj4_137_real__sympy_refine),
+    ('sp-acj4-137-real', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-214603', sp_acj4_137_real__sympy_simplify),
+    ('sp-acj4-137-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_137_real__sympy_extras_ask),
+    ('sp-acj4-137-real', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-215625', sp_acj4_137_real__sympy_extras_refine),
+    ('sp-acj4-137-real', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261019-220406', sp_acj4_137_real__sympy_extras_simplify),
 ]
 
 

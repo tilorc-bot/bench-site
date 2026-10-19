@@ -124,10 +124,10 @@ from sympy.assumptions.satask import satask
 
 
 # ---- case demo-eq-log-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered true (solved)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_log_01__sympy_satask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x))
     Residual = log(exp(x)) - x
     Answer = satask(Q.zero(Residual), Assum)
@@ -136,10 +136,10 @@ def demo_eq_log_01__sympy_satask():
 
 
 # ---- case demo-eq-pow-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered true (solved)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_pow_01__sympy_satask():
-    n = Symbol('n', integer=True)
+    n = Symbol('n')
     Assum = And(Q.integer(n))
     Residual = Pow(-1, 2 * n) - 1
     Answer = satask(Q.zero(Residual), Assum)
@@ -149,8 +149,8 @@ def demo_eq_pow_01__sympy_satask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-log-01', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-184911', demo_eq_log_01__sympy_satask),
-    ('demo-eq-pow-01', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-184911', demo_eq_pow_01__sympy_satask),
+    ('demo-eq-log-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214847', demo_eq_log_01__sympy_satask),
+    ('demo-eq-pow-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214847', demo_eq_pow_01__sympy_satask),
 ]
 
 

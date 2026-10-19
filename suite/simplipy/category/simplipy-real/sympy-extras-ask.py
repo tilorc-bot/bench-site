@@ -131,10 +131,10 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case sp-acj4-1-real · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-215028 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_1_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = asin(Abs(x)) - Abs(asin(x))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -143,10 +143,10 @@ def sp_acj4_1_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-102-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_102_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = Abs(x) / 6 - Abs(x / -6)
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -155,10 +155,10 @@ def sp_acj4_102_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-108-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_108_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(x), ~Q.zero(Abs(x)))
     Residual = Abs(x) / x - (x / Abs(x))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -167,10 +167,10 @@ def sp_acj4_108_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-120-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_120_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(Abs(x)), ~Q.zero(x))
     Residual = pi / Abs(x) - Abs(pi / x)
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -179,10 +179,10 @@ def sp_acj4_120_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-127-real · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-215028 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_127_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Ne(exp(x), 1, evaluate=False), Ne(exp(x), -1, evaluate=False))
     Residual = Abs(atanh(exp(x))) - atanh(exp(x))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -191,10 +191,10 @@ def sp_acj4_127_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-128-real · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-215028 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_128_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = Abs(cos(asin(x))) - cos(asin(x))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -203,10 +203,10 @@ def sp_acj4_128_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-131-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (no verdict)
+# the run sympy-extras-ask-20261019-215028 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_131_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(cosh(x)))
     Residual = Abs(log(cosh(x))) - log(cosh(x))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -215,10 +215,10 @@ def sp_acj4_131_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-132-real · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-215028 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_132_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(sin(x)))
     Residual = Abs(log(sin(x))) - (-log(sin(x)))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -227,10 +227,10 @@ def sp_acj4_132_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-133-real · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-215028 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_133_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(tanh(x)))
     Residual = Abs(log(tanh(x))) - (-log(tanh(x)))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -239,10 +239,10 @@ def sp_acj4_133_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-136-real · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-215028 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_136_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Or(~Q.zero(x), re(exp(1)) > 0))
     Residual = Abs(Pow(x, exp(1))) - Pow(x, exp(1))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -251,10 +251,10 @@ def sp_acj4_136_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-137-real · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-215028 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_137_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Or(~Q.zero(x), re(pi) > 0))
     Residual = Abs(Pow(x, pi)) - Pow(x, pi)
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -263,10 +263,10 @@ def sp_acj4_137_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-14-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_14_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = -sin(x) - sin(-x)
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -275,10 +275,10 @@ def sp_acj4_14_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-145-real · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-215028 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_145_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = Abs(sin(acos(x))) - cos(asin(x))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -287,10 +287,10 @@ def sp_acj4_145_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-162-real · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-215028 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_162_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = acosh(real_root(x, 5)) - acosh(Pow(x, Rational(1, 5)))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -299,10 +299,10 @@ def sp_acj4_162_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-179-real · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-215028 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_179_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Ne(sinh(acos(x)), I, evaluate=False), Ne(sinh(acos(x)), -I, evaluate=False), ~Q.zero(cosh(acos(x))))
     Residual = atan(sinh(acos(x))) - asin(tanh(acos(x)))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -311,10 +311,10 @@ def sp_acj4_179_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-181-real · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-215028 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_181_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Ne(sinh(asin(x)), I, evaluate=False), Ne(sinh(asin(x)), -I, evaluate=False), ~Q.zero(cosh(asin(x))))
     Residual = atan(sinh(asin(x))) - asin(tanh(asin(x)))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -323,10 +323,10 @@ def sp_acj4_181_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-185-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (no verdict)
+# the run sympy-extras-ask-20261019-215028 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_185_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(cos(cos(x))), Ne(tan(cos(x)), I, evaluate=False), Ne(tan(cos(x)), -I, evaluate=False))
     Residual = atan(tan(cos(x))) - cos(x)
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -335,10 +335,10 @@ def sp_acj4_185_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-194-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (no verdict)
+# the run sympy-extras-ask-20261019-215028 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_194_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Ne(sin(cos(x)), 1, evaluate=False), Ne(sin(cos(x)), -1, evaluate=False), ~Q.zero(cos(cos(x))))
     Residual = atanh(sin(cos(x))) - asinh(tan(cos(x)))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -347,10 +347,10 @@ def sp_acj4_194_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-195-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (no verdict)
+# the run sympy-extras-ask-20261019-215028 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_195_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Ne(sin(sin(x)), 1, evaluate=False), Ne(sin(sin(x)), -1, evaluate=False), ~Q.zero(cos(sin(x))))
     Residual = atanh(sin(sin(x))) - asinh(tan(sin(x)))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -359,10 +359,10 @@ def sp_acj4_195_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-196-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (no verdict)
+# the run sympy-extras-ask-20261019-215028 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_196_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Ne(sin(tanh(x)), 1, evaluate=False), Ne(sin(tanh(x)), -1, evaluate=False), ~Q.zero(cos(tanh(x))))
     Residual = atanh(sin(tanh(x))) - asinh(tan(tanh(x)))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -371,10 +371,10 @@ def sp_acj4_196_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-218-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_218_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(x), ~Q.zero(-6 / x))
     Residual = 1 / (-6 / x) - (x / -6)
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -383,10 +383,10 @@ def sp_acj4_218_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-22-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (no verdict)
+# the run sympy-extras-ask-20261019-215028 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_22_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = tanh(Abs(x)) - Abs(tanh(x))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -395,10 +395,10 @@ def sp_acj4_22_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-220-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_220_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(x), ~Q.zero(-8 / x))
     Residual = 1 / (-8 / x) - (x / -8)
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -407,10 +407,10 @@ def sp_acj4_220_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-233-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_233_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Or(~Q.zero(x), re(pi) > 0), ~Q.zero(Pow(x, pi)), Or(~Q.zero(x), re(-pi) > 0))
     Residual = 1 / Pow(x, pi) - Pow(x, -pi)
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -419,10 +419,10 @@ def sp_acj4_233_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-248-real · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-215028 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_248_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = -Abs(asin(x)) - asin(-Abs(x))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -431,10 +431,10 @@ def sp_acj4_248_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-249-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (no verdict)
+# the run sympy-extras-ask-20261019-215028 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_249_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = -Abs(asinh(x)) - asinh(-Abs(x))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -443,10 +443,10 @@ def sp_acj4_249_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-251-real · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-215028 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_251_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Ne(x, 1, evaluate=False), Ne(x, -1, evaluate=False), Ne(-Abs(x), 1, evaluate=False), Ne(-Abs(x), -1, evaluate=False))
     Residual = -Abs(atanh(x)) - atanh(-Abs(x))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -455,10 +455,10 @@ def sp_acj4_251_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-252-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (no verdict)
+# the run sympy-extras-ask-20261019-215028 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_252_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = -Abs(sinh(x)) - sinh(-Abs(x))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -467,10 +467,10 @@ def sp_acj4_252_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-253-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (no verdict)
+# the run sympy-extras-ask-20261019-215028 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_253_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = -Abs(tanh(x)) - tanh(-Abs(x))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -479,10 +479,10 @@ def sp_acj4_253_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-256-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_256_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(-exp(x)))
     Residual = -exp(-x) - (1 / -exp(x))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -491,10 +491,10 @@ def sp_acj4_256_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-275-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_275_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(Abs(x)), ~Q.zero(x))
     Residual = Pow(Abs(x), -3) - Abs(Pow(x, -3))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -503,10 +503,10 @@ def sp_acj4_275_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-276-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_276_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(Abs(x)), ~Q.zero(x))
     Residual = Pow(Abs(x), -4) - Pow(x, -4)
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -515,10 +515,10 @@ def sp_acj4_276_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-283-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_283_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = Pow(Abs(x), 2) - (x * x)
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -527,10 +527,10 @@ def sp_acj4_283_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-286-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_286_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = Pow(Abs(x), 5) - Abs(Pow(x, 5))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -539,10 +539,10 @@ def sp_acj4_286_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-289-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_289_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = Pow(Abs(x), 8) - Pow(x, 8)
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -551,10 +551,10 @@ def sp_acj4_289_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-31-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_31_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = 5 * Abs(x) - Abs(-5 * x)
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -563,10 +563,10 @@ def sp_acj4_31_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-326-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_326_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = Pow(exp(x), 2) - exp(2 * x)
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -575,10 +575,10 @@ def sp_acj4_326_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-33-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_33_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = 6 * Abs(x) - Abs(-6 * x)
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -587,10 +587,10 @@ def sp_acj4_33_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-35-real · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-215028 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_35_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(x), ~Q.zero(Pow(x, 7)))
     Residual = 7 * log(x) - log(Pow(x, 7))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -599,10 +599,10 @@ def sp_acj4_35_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-354-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_354_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Or(~Q.zero(x), re(log(5)) > 0), ~Q.zero(x))
     Residual = Pow(x, log(5)) - Pow(5, log(x))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -611,10 +611,10 @@ def sp_acj4_354_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-356-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_356_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Or(~Q.zero(x), re(log(7)) > 0), ~Q.zero(x))
     Residual = Pow(x, log(7)) - Pow(7, log(x))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -623,10 +623,10 @@ def sp_acj4_356_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-359-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_359_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Or(~Q.zero(x), re(log(pi)) > 0), ~Q.zero(x))
     Residual = Pow(x, log(pi)) - Pow(pi, log(x))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -635,10 +635,10 @@ def sp_acj4_359_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-364-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (no verdict)
+# the run sympy-extras-ask-20261019-215028 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_364_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = real_root(Abs(x), 3) - Abs(real_root(x, 3))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -647,10 +647,10 @@ def sp_acj4_364_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-367-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (no verdict)
+# the run sympy-extras-ask-20261019-215028 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_367_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = real_root(Abs(x), 9) - Abs(real_root(x, 9))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -659,10 +659,10 @@ def sp_acj4_367_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-368-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (no verdict)
+# the run sympy-extras-ask-20261019-215028 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_368_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.real(acos(x)), ~Q.zero(acos(x)))
     Residual = real_root(acos(x), -5) - Pow(acos(x), Rational(-1, 5))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -671,10 +671,10 @@ def sp_acj4_368_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-369-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (no verdict)
+# the run sympy-extras-ask-20261019-215028 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_369_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.real(acos(x)))
     Residual = real_root(acos(x), 5) - Pow(acos(x), Rational(1, 5))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -683,10 +683,10 @@ def sp_acj4_369_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-370-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (no verdict)
+# the run sympy-extras-ask-20261019-215028 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_370_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.real(acosh(x)), ~Q.zero(acosh(x)))
     Residual = real_root(acosh(x), -5) - Pow(acosh(x), Rational(-1, 5))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -695,10 +695,10 @@ def sp_acj4_370_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-371-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (no verdict)
+# the run sympy-extras-ask-20261019-215028 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_371_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.real(acosh(x)))
     Residual = real_root(acosh(x), 5) - Pow(acosh(x), Rational(1, 5))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -707,10 +707,10 @@ def sp_acj4_371_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-372-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_372_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(cosh(x)))
     Residual = real_root(cosh(x), -5) - Pow(cosh(x), Rational(-1, 5))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -719,10 +719,10 @@ def sp_acj4_372_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-373-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_373_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = real_root(cosh(x), 5) - Pow(cosh(x), Rational(1, 5))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -731,10 +731,10 @@ def sp_acj4_373_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-38-real · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-215028 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_38_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(x), ~Q.zero(Pow(x, 9)))
     Residual = 9 * log(x) - log(Pow(x, 9))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -743,10 +743,10 @@ def sp_acj4_38_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-394-real · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-215028 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_394_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Ne(x, 1, evaluate=False), Ne(x, -1, evaluate=False))
     Residual = sin(Abs(atanh(x))) - Abs(sin(atanh(x)))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -755,10 +755,10 @@ def sp_acj4_394_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-395-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (no verdict)
+# the run sympy-extras-ask-20261019-215028 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_395_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sin(Abs(cos(x))) - Abs(sin(cos(x)))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -767,10 +767,10 @@ def sp_acj4_395_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-396-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (no verdict)
+# the run sympy-extras-ask-20261019-215028 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_396_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sin(Abs(sin(x))) - Abs(sin(sin(x)))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -779,10 +779,10 @@ def sp_acj4_396_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-397-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (no verdict)
+# the run sympy-extras-ask-20261019-215028 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_397_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sin(Abs(tanh(x))) - Abs(sin(tanh(x)))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -791,10 +791,10 @@ def sp_acj4_397_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-402-real · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-215028 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_402_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Ne(Abs(x), 1, evaluate=False), Ne(x, 1, evaluate=False), Ne(x, -1, evaluate=False))
     Residual = sin(atanh(Abs(x))) - Abs(sin(atanh(x)))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -803,10 +803,10 @@ def sp_acj4_402_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-404-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (no verdict)
+# the run sympy-extras-ask-20261019-215028 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_404_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sin(tanh(Abs(x))) - Abs(sin(tanh(x)))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -815,10 +815,10 @@ def sp_acj4_404_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-412-real · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-215028 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_412_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(cos(Abs(asin(x)))), ~Q.zero(cos(asin(x))))
     Residual = tan(Abs(asin(x))) - Abs(tan(asin(x)))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -827,10 +827,10 @@ def sp_acj4_412_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-413-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (no verdict)
+# the run sympy-extras-ask-20261019-215028 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_413_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(cos(Abs(cos(x)))), ~Q.zero(cos(cos(x))))
     Residual = tan(Abs(cos(x))) - Abs(tan(cos(x)))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -839,10 +839,10 @@ def sp_acj4_413_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-414-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (no verdict)
+# the run sympy-extras-ask-20261019-215028 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_414_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(cos(Abs(sin(x)))), ~Q.zero(cos(sin(x))))
     Residual = tan(Abs(sin(x))) - Abs(tan(sin(x)))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -851,10 +851,10 @@ def sp_acj4_414_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-415-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (no verdict)
+# the run sympy-extras-ask-20261019-215028 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_415_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(cos(Abs(tanh(x)))), ~Q.zero(cos(tanh(x))))
     Residual = tan(Abs(tanh(x))) - Abs(tan(tanh(x)))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -863,10 +863,10 @@ def sp_acj4_415_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-417-real · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-215028 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_417_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(cos(asin(Abs(x)))), ~Q.zero(cos(asin(x))))
     Residual = tan(asin(Abs(x))) - Abs(tan(asin(x)))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -875,10 +875,10 @@ def sp_acj4_417_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-421-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (no verdict)
+# the run sympy-extras-ask-20261019-215028 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_421_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(cos(tanh(Abs(x)))), ~Q.zero(cos(tanh(x))))
     Residual = tan(tanh(Abs(x))) - Abs(tan(tanh(x)))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -887,10 +887,10 @@ def sp_acj4_421_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-5-real · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-215028 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_5_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Ne(Abs(x), 1, evaluate=False), Ne(x, 1, evaluate=False), Ne(x, -1, evaluate=False))
     Residual = atanh(Abs(x)) - Abs(atanh(x))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -899,10 +899,10 @@ def sp_acj4_5_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-73-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_73_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(Abs(x)), ~Q.zero(-Abs(x)))
     Residual = -1 / Abs(x) - (1 / -Abs(x))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -911,10 +911,10 @@ def sp_acj4_73_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-80-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_80_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(cos(x)), ~Q.zero(-cos(x)))
     Residual = -1 / cos(x) - (1 / -cos(x))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -923,10 +923,10 @@ def sp_acj4_80_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-83-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_83_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(x), ~Q.zero(log(x)), ~Q.zero(-log(x)))
     Residual = -1 / log(x) - (1 / -log(x))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -935,10 +935,10 @@ def sp_acj4_83_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-86-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_86_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(cos(x)), ~Q.zero(tan(x)), ~Q.zero(-tan(x)))
     Residual = -1 / tan(x) - (1 / -tan(x))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -947,10 +947,10 @@ def sp_acj4_86_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-90-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_90_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(Abs(x)), ~Q.zero(x))
     Residual = 3 / Abs(x) - Abs(-3 / x)
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -959,10 +959,10 @@ def sp_acj4_90_real__sympy_extras_ask():
 
 
 # ---- case sp-acj4-99-real · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-185049 answered true (solved)
+# the run sympy-extras-ask-20261019-215028 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_99_real__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = Abs(x) / 3 - Abs(x / -3)
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -972,76 +972,76 @@ def sp_acj4_99_real__sympy_extras_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-1-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_1_real__sympy_extras_ask),
-    ('sp-acj4-102-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_102_real__sympy_extras_ask),
-    ('sp-acj4-108-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_108_real__sympy_extras_ask),
-    ('sp-acj4-120-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_120_real__sympy_extras_ask),
-    ('sp-acj4-127-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_127_real__sympy_extras_ask),
-    ('sp-acj4-128-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_128_real__sympy_extras_ask),
-    ('sp-acj4-131-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_131_real__sympy_extras_ask),
-    ('sp-acj4-132-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_132_real__sympy_extras_ask),
-    ('sp-acj4-133-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_133_real__sympy_extras_ask),
-    ('sp-acj4-136-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_136_real__sympy_extras_ask),
-    ('sp-acj4-137-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_137_real__sympy_extras_ask),
-    ('sp-acj4-14-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_14_real__sympy_extras_ask),
-    ('sp-acj4-145-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_145_real__sympy_extras_ask),
-    ('sp-acj4-162-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_162_real__sympy_extras_ask),
-    ('sp-acj4-179-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_179_real__sympy_extras_ask),
-    ('sp-acj4-181-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_181_real__sympy_extras_ask),
-    ('sp-acj4-185-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_185_real__sympy_extras_ask),
-    ('sp-acj4-194-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_194_real__sympy_extras_ask),
-    ('sp-acj4-195-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_195_real__sympy_extras_ask),
-    ('sp-acj4-196-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_196_real__sympy_extras_ask),
-    ('sp-acj4-218-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_218_real__sympy_extras_ask),
-    ('sp-acj4-22-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_22_real__sympy_extras_ask),
-    ('sp-acj4-220-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_220_real__sympy_extras_ask),
-    ('sp-acj4-233-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_233_real__sympy_extras_ask),
-    ('sp-acj4-248-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_248_real__sympy_extras_ask),
-    ('sp-acj4-249-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_249_real__sympy_extras_ask),
-    ('sp-acj4-251-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_251_real__sympy_extras_ask),
-    ('sp-acj4-252-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_252_real__sympy_extras_ask),
-    ('sp-acj4-253-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_253_real__sympy_extras_ask),
-    ('sp-acj4-256-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_256_real__sympy_extras_ask),
-    ('sp-acj4-275-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_275_real__sympy_extras_ask),
-    ('sp-acj4-276-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_276_real__sympy_extras_ask),
-    ('sp-acj4-283-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_283_real__sympy_extras_ask),
-    ('sp-acj4-286-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_286_real__sympy_extras_ask),
-    ('sp-acj4-289-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_289_real__sympy_extras_ask),
-    ('sp-acj4-31-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_31_real__sympy_extras_ask),
-    ('sp-acj4-326-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_326_real__sympy_extras_ask),
-    ('sp-acj4-33-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_33_real__sympy_extras_ask),
-    ('sp-acj4-35-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_35_real__sympy_extras_ask),
-    ('sp-acj4-354-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_354_real__sympy_extras_ask),
-    ('sp-acj4-356-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_356_real__sympy_extras_ask),
-    ('sp-acj4-359-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_359_real__sympy_extras_ask),
-    ('sp-acj4-364-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_364_real__sympy_extras_ask),
-    ('sp-acj4-367-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_367_real__sympy_extras_ask),
-    ('sp-acj4-368-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_368_real__sympy_extras_ask),
-    ('sp-acj4-369-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_369_real__sympy_extras_ask),
-    ('sp-acj4-370-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_370_real__sympy_extras_ask),
-    ('sp-acj4-371-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_371_real__sympy_extras_ask),
-    ('sp-acj4-372-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_372_real__sympy_extras_ask),
-    ('sp-acj4-373-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_373_real__sympy_extras_ask),
-    ('sp-acj4-38-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_38_real__sympy_extras_ask),
-    ('sp-acj4-394-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_394_real__sympy_extras_ask),
-    ('sp-acj4-395-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_395_real__sympy_extras_ask),
-    ('sp-acj4-396-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_396_real__sympy_extras_ask),
-    ('sp-acj4-397-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_397_real__sympy_extras_ask),
-    ('sp-acj4-402-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_402_real__sympy_extras_ask),
-    ('sp-acj4-404-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_404_real__sympy_extras_ask),
-    ('sp-acj4-412-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_412_real__sympy_extras_ask),
-    ('sp-acj4-413-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_413_real__sympy_extras_ask),
-    ('sp-acj4-414-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_414_real__sympy_extras_ask),
-    ('sp-acj4-415-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_415_real__sympy_extras_ask),
-    ('sp-acj4-417-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_417_real__sympy_extras_ask),
-    ('sp-acj4-421-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_421_real__sympy_extras_ask),
-    ('sp-acj4-5-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_5_real__sympy_extras_ask),
-    ('sp-acj4-73-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_73_real__sympy_extras_ask),
-    ('sp-acj4-80-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_80_real__sympy_extras_ask),
-    ('sp-acj4-83-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_83_real__sympy_extras_ask),
-    ('sp-acj4-86-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_86_real__sympy_extras_ask),
-    ('sp-acj4-90-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_90_real__sympy_extras_ask),
-    ('sp-acj4-99-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-185049', sp_acj4_99_real__sympy_extras_ask),
+    ('sp-acj4-1-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_1_real__sympy_extras_ask),
+    ('sp-acj4-102-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_102_real__sympy_extras_ask),
+    ('sp-acj4-108-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_108_real__sympy_extras_ask),
+    ('sp-acj4-120-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_120_real__sympy_extras_ask),
+    ('sp-acj4-127-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_127_real__sympy_extras_ask),
+    ('sp-acj4-128-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_128_real__sympy_extras_ask),
+    ('sp-acj4-131-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_131_real__sympy_extras_ask),
+    ('sp-acj4-132-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_132_real__sympy_extras_ask),
+    ('sp-acj4-133-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_133_real__sympy_extras_ask),
+    ('sp-acj4-136-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_136_real__sympy_extras_ask),
+    ('sp-acj4-137-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_137_real__sympy_extras_ask),
+    ('sp-acj4-14-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_14_real__sympy_extras_ask),
+    ('sp-acj4-145-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_145_real__sympy_extras_ask),
+    ('sp-acj4-162-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_162_real__sympy_extras_ask),
+    ('sp-acj4-179-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_179_real__sympy_extras_ask),
+    ('sp-acj4-181-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_181_real__sympy_extras_ask),
+    ('sp-acj4-185-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_185_real__sympy_extras_ask),
+    ('sp-acj4-194-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_194_real__sympy_extras_ask),
+    ('sp-acj4-195-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_195_real__sympy_extras_ask),
+    ('sp-acj4-196-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_196_real__sympy_extras_ask),
+    ('sp-acj4-218-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_218_real__sympy_extras_ask),
+    ('sp-acj4-22-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_22_real__sympy_extras_ask),
+    ('sp-acj4-220-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_220_real__sympy_extras_ask),
+    ('sp-acj4-233-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_233_real__sympy_extras_ask),
+    ('sp-acj4-248-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_248_real__sympy_extras_ask),
+    ('sp-acj4-249-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_249_real__sympy_extras_ask),
+    ('sp-acj4-251-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_251_real__sympy_extras_ask),
+    ('sp-acj4-252-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_252_real__sympy_extras_ask),
+    ('sp-acj4-253-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_253_real__sympy_extras_ask),
+    ('sp-acj4-256-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_256_real__sympy_extras_ask),
+    ('sp-acj4-275-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_275_real__sympy_extras_ask),
+    ('sp-acj4-276-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_276_real__sympy_extras_ask),
+    ('sp-acj4-283-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_283_real__sympy_extras_ask),
+    ('sp-acj4-286-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_286_real__sympy_extras_ask),
+    ('sp-acj4-289-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_289_real__sympy_extras_ask),
+    ('sp-acj4-31-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_31_real__sympy_extras_ask),
+    ('sp-acj4-326-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_326_real__sympy_extras_ask),
+    ('sp-acj4-33-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_33_real__sympy_extras_ask),
+    ('sp-acj4-35-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_35_real__sympy_extras_ask),
+    ('sp-acj4-354-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_354_real__sympy_extras_ask),
+    ('sp-acj4-356-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_356_real__sympy_extras_ask),
+    ('sp-acj4-359-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_359_real__sympy_extras_ask),
+    ('sp-acj4-364-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_364_real__sympy_extras_ask),
+    ('sp-acj4-367-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_367_real__sympy_extras_ask),
+    ('sp-acj4-368-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_368_real__sympy_extras_ask),
+    ('sp-acj4-369-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_369_real__sympy_extras_ask),
+    ('sp-acj4-370-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_370_real__sympy_extras_ask),
+    ('sp-acj4-371-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_371_real__sympy_extras_ask),
+    ('sp-acj4-372-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_372_real__sympy_extras_ask),
+    ('sp-acj4-373-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_373_real__sympy_extras_ask),
+    ('sp-acj4-38-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_38_real__sympy_extras_ask),
+    ('sp-acj4-394-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_394_real__sympy_extras_ask),
+    ('sp-acj4-395-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_395_real__sympy_extras_ask),
+    ('sp-acj4-396-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_396_real__sympy_extras_ask),
+    ('sp-acj4-397-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_397_real__sympy_extras_ask),
+    ('sp-acj4-402-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_402_real__sympy_extras_ask),
+    ('sp-acj4-404-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_404_real__sympy_extras_ask),
+    ('sp-acj4-412-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_412_real__sympy_extras_ask),
+    ('sp-acj4-413-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_413_real__sympy_extras_ask),
+    ('sp-acj4-414-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_414_real__sympy_extras_ask),
+    ('sp-acj4-415-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_415_real__sympy_extras_ask),
+    ('sp-acj4-417-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_417_real__sympy_extras_ask),
+    ('sp-acj4-421-real', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_421_real__sympy_extras_ask),
+    ('sp-acj4-5-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_5_real__sympy_extras_ask),
+    ('sp-acj4-73-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_73_real__sympy_extras_ask),
+    ('sp-acj4-80-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_80_real__sympy_extras_ask),
+    ('sp-acj4-83-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_83_real__sympy_extras_ask),
+    ('sp-acj4-86-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_86_real__sympy_extras_ask),
+    ('sp-acj4-90-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_90_real__sympy_extras_ask),
+    ('sp-acj4-99-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_99_real__sympy_extras_ask),
 ]
 
 

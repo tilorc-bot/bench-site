@@ -131,10 +131,10 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-prime-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-184904 answered null (no verdict)
+# the run sympy-extras-refine-20261019-214838 answered null (no verdict)
 @_in(_SETUP1)
 def demo_prime_01__sympy_extras_refine():
-    p = Symbol('p', integer=True)
+    p = Symbol('p')
     Assum = And(Q.integer(p), Q.prime(p), p > 2)
     Residual = Pow(-1, p) - (-1)
     Result = sympy_extras.assumptions.refine(Residual, Assum)
@@ -144,10 +144,10 @@ def demo_prime_01__sympy_extras_refine():
 
 
 # ---- case demo-prime-02 · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-184904 answered null (declined correctly)
+# the run sympy-extras-refine-20261019-214838 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_prime_02__sympy_extras_refine():
-    p = Symbol('p', integer=True)
+    p = Symbol('p')
     Assum = And(Q.integer(p), Q.prime(p))
     Residual = Pow(-1, p) - (-1)
     Result = sympy_extras.assumptions.refine(Residual, Assum)
@@ -158,8 +158,8 @@ def demo_prime_02__sympy_extras_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-prime-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-184904', demo_prime_01__sympy_extras_refine),
-    ('demo-prime-02', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-184904', demo_prime_02__sympy_extras_refine),
+    ('demo-prime-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-214838', demo_prime_01__sympy_extras_refine),
+    ('demo-prime-02', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-214838', demo_prime_02__sympy_extras_refine),
 ]
 
 

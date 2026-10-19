@@ -124,11 +124,11 @@ from sympy.assumptions.satask import satask
 
 
 # ---- case demo-atan2-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (no verdict)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_atan2_01__sympy_satask():
-    x = Symbol('x', real=True)
-    y = Symbol('y', real=True)
+    x = Symbol('x')
+    y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.positive(x))
     Residual = atan2(y, x) - atan(y / x)
     Answer = satask(Q.zero(Residual), Assum)
@@ -137,11 +137,11 @@ def demo_atan2_01__sympy_satask():
 
 
 # ---- case demo-atan2-02 · expected false · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (no verdict)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_atan2_02__sympy_satask():
-    x = Symbol('x', real=True)
-    y = Symbol('y', real=True)
+    x = Symbol('x')
+    y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.negative(x), Q.positive(y))
     Residual = atan2(y, x) - atan(y / x)
     Answer = satask(Q.zero(Residual), Assum)
@@ -150,10 +150,10 @@ def demo_atan2_02__sympy_satask():
 
 
 # ---- case demo-eq-abs-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (no verdict)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_abs_01__sympy_satask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.negative(x))
     Residual = Abs(x) - (-x)
     Answer = satask(Q.zero(Residual), Assum)
@@ -162,10 +162,10 @@ def demo_eq_abs_01__sympy_satask():
 
 
 # ---- case demo-eq-abs-02 · expected false · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (no verdict)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_abs_02__sympy_satask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.negative(x))
     Residual = Abs(x) - x
     Answer = satask(Q.zero(Residual), Assum)
@@ -174,10 +174,10 @@ def demo_eq_abs_02__sympy_satask():
 
 
 # ---- case demo-eq-log-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered true (solved)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_log_01__sympy_satask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x))
     Residual = log(exp(x)) - x
     Answer = satask(Q.zero(Residual), Assum)
@@ -186,10 +186,10 @@ def demo_eq_log_01__sympy_satask():
 
 
 # ---- case demo-eq-pow-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered true (solved)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_pow_01__sympy_satask():
-    n = Symbol('n', integer=True)
+    n = Symbol('n')
     Assum = And(Q.integer(n))
     Residual = Pow(-1, 2 * n) - 1
     Answer = satask(Q.zero(Residual), Assum)
@@ -198,10 +198,10 @@ def demo_eq_pow_01__sympy_satask():
 
 
 # ---- case demo-eq-sqrt-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (no verdict)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_sqrt_01__sympy_satask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x))
     Residual = sqrt(Pow(x, 2)) - x
     Answer = satask(Q.zero(Residual), Assum)
@@ -210,10 +210,10 @@ def demo_eq_sqrt_01__sympy_satask():
 
 
 # ---- case demo-eq-sqrt-02 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered true (solved)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_sqrt_02__sympy_satask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sqrt(Pow(x, 2)) - Abs(x)
     Answer = satask(Q.zero(Residual), Assum)
@@ -222,10 +222,10 @@ def demo_eq_sqrt_02__sympy_satask():
 
 
 # ---- case demo-eq-sqrt-03 · expected contingent · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (declined correctly)
+# the run sympy-satask-20261019-214847 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_eq_sqrt_03__sympy_satask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sqrt(Pow(x, 2)) - x
     Answer = satask(Q.zero(Residual), Assum)
@@ -234,10 +234,10 @@ def demo_eq_sqrt_03__sympy_satask():
 
 
 # ---- case demo-eq-sqrt-04 · expected false · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (no verdict)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_sqrt_04__sympy_satask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x))
     Residual = sqrt(Pow(x, 2)) + 1 - x
     Answer = satask(Q.zero(Residual), Assum)
@@ -246,10 +246,10 @@ def demo_eq_sqrt_04__sympy_satask():
 
 
 # ---- case demo-eq-trig-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (no verdict)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_trig_01__sympy_satask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x))
     Residual = Pow(sin(x), 2) + Pow(cos(x), 2) - 1
     Answer = satask(Q.zero(Residual), Assum)
@@ -258,10 +258,10 @@ def demo_eq_trig_01__sympy_satask():
 
 
 # ---- case demo-eq-trig-02 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (no verdict)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_trig_02__sympy_satask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x))
     Residual = 2 * sin(x) * cos(x) - sin(2 * x)
     Answer = satask(Q.zero(Residual), Assum)
@@ -270,11 +270,11 @@ def demo_eq_trig_02__sympy_satask():
 
 
 # ---- case demo-log-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (no verdict)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_log_01__sympy_satask():
-    x = Symbol('x', real=True)
-    y = Symbol('y', real=True)
+    x = Symbol('x')
+    y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
     Residual = log(x * y) - (log(x) + log(y))
     Answer = satask(Q.zero(Residual), Assum)
@@ -283,11 +283,11 @@ def demo_log_01__sympy_satask():
 
 
 # ---- case demo-log-02 · expected contingent · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (declined correctly)
+# the run sympy-satask-20261019-214847 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_log_02__sympy_satask():
-    z = Symbol('z', complex=True)
-    w = Symbol('w', complex=True)
+    z = Symbol('z')
+    w = Symbol('w')
     Assum = And(Q.complex(z), Q.complex(w), ~Q.zero(z), ~Q.zero(w))
     Residual = log(z * w) - (log(z) + log(w))
     Answer = satask(Q.zero(Residual), Assum)
@@ -296,10 +296,10 @@ def demo_log_02__sympy_satask():
 
 
 # ---- case demo-log-03 · expected false · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (no verdict)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_log_03__sympy_satask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.negative(x))
     Residual = log(x) - log(-x)
     Answer = satask(Q.zero(Residual), Assum)
@@ -308,10 +308,10 @@ def demo_log_03__sympy_satask():
 
 
 # ---- case demo-nonzero-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (no verdict)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_nonzero_01__sympy_satask():
-    z = Symbol('z', complex=True)
+    z = Symbol('z')
     Assum = And(Q.complex(z), Q.imaginary(z))
     Residual = Abs(sign(z)) - 1
     Answer = satask(Q.zero(Residual), Assum)
@@ -320,10 +320,10 @@ def demo_nonzero_01__sympy_satask():
 
 
 # ---- case demo-parity-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (no verdict)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_01__sympy_satask():
-    n = Symbol('n', integer=True)
+    n = Symbol('n')
     Assum = And(Q.integer(n), Q.odd(n))
     Residual = Pow(-1, n + 1) - 1
     Answer = satask(Q.zero(Residual), Assum)
@@ -332,11 +332,11 @@ def demo_parity_01__sympy_satask():
 
 
 # ---- case demo-parity-02 · expected false · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (no verdict)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_02__sympy_satask():
-    n = Symbol('n', integer=True)
-    m = Symbol('m', integer=True)
+    n = Symbol('n')
+    m = Symbol('m')
     Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
     Residual = Pow(-1, n * m) - 1
     Answer = satask(Q.zero(Residual), Assum)
@@ -345,10 +345,10 @@ def demo_parity_02__sympy_satask():
 
 
 # ---- case demo-parity-03 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered true (solved)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_03__sympy_satask():
-    n = Symbol('n', integer=True)
+    n = Symbol('n')
     Assum = And(Q.integer(n))
     Residual = Pow(-1, n * (n + 1)) - 1
     Answer = satask(Q.zero(Residual), Assum)
@@ -357,10 +357,10 @@ def demo_parity_03__sympy_satask():
 
 
 # ---- case demo-parity-04 · expected contingent · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (declined correctly)
+# the run sympy-satask-20261019-214847 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_parity_04__sympy_satask():
-    n = Symbol('n', integer=True)
+    n = Symbol('n')
     Assum = And(Q.integer(n), Q.even(n))
     Residual = Pow(I, n) - 1
     Answer = satask(Q.zero(Residual), Assum)
@@ -369,11 +369,11 @@ def demo_parity_04__sympy_satask():
 
 
 # ---- case demo-parity-05 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (no verdict)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_05__sympy_satask():
-    n = Symbol('n', integer=True)
-    m = Symbol('m', integer=True)
+    n = Symbol('n')
+    m = Symbol('m')
     Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
     Residual = Pow(-1, n * m) - (-1)
     Answer = satask(Q.zero(Residual), Assum)
@@ -382,10 +382,10 @@ def demo_parity_05__sympy_satask():
 
 
 # ---- case demo-prime-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (no verdict)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_prime_01__sympy_satask():
-    p = Symbol('p', integer=True)
+    p = Symbol('p')
     Assum = And(Q.integer(p), Q.prime(p), p > 2)
     Residual = Pow(-1, p) - (-1)
     Answer = satask(Q.zero(Residual), Assum)
@@ -394,10 +394,10 @@ def demo_prime_01__sympy_satask():
 
 
 # ---- case demo-prime-02 · expected contingent · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (declined correctly)
+# the run sympy-satask-20261019-214847 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_prime_02__sympy_satask():
-    p = Symbol('p', integer=True)
+    p = Symbol('p')
     Assum = And(Q.integer(p), Q.prime(p))
     Residual = Pow(-1, p) - (-1)
     Answer = satask(Q.zero(Residual), Assum)
@@ -406,10 +406,10 @@ def demo_prime_02__sympy_satask():
 
 
 # ---- case demo-sign-02 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (no verdict)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_02__sympy_satask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(x))
     Residual = sign(Pow(x, 2)) - 1
     Answer = satask(Q.zero(Residual), Assum)
@@ -418,10 +418,10 @@ def demo_sign_02__sympy_satask():
 
 
 # ---- case demo-sign-03 · expected contingent · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (declined correctly)
+# the run sympy-satask-20261019-214847 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_sign_03__sympy_satask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), ~Q.zero(x))
     Residual = sign(Pow(x, 2)) - 1
     Answer = satask(Q.zero(Residual), Assum)
@@ -430,10 +430,10 @@ def demo_sign_03__sympy_satask():
 
 
 # ---- case demo-sign-04 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (no verdict)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_04__sympy_satask():
-    z = Symbol('z', complex=True)
+    z = Symbol('z')
     Assum = And(Q.complex(z))
     Residual = Abs(z * conjugate(z)) - (z * conjugate(z))
     Answer = satask(Q.zero(Residual), Assum)
@@ -442,11 +442,11 @@ def demo_sign_04__sympy_satask():
 
 
 # ---- case demo-sign-05 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (no verdict)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_05__sympy_satask():
-    x = Symbol('x', real=True)
-    y = Symbol('y', real=True)
+    x = Symbol('x')
+    y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.negative(y))
     Residual = Abs(x - y) - (x - y)
     Answer = satask(Q.zero(Residual), Assum)
@@ -456,33 +456,33 @@ def demo_sign_05__sympy_satask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-atan2-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-184911', demo_atan2_01__sympy_satask),
-    ('demo-atan2-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261019-184911', demo_atan2_02__sympy_satask),
-    ('demo-eq-abs-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-184911', demo_eq_abs_01__sympy_satask),
-    ('demo-eq-abs-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261019-184911', demo_eq_abs_02__sympy_satask),
-    ('demo-eq-log-01', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-184911', demo_eq_log_01__sympy_satask),
-    ('demo-eq-pow-01', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-184911', demo_eq_pow_01__sympy_satask),
-    ('demo-eq-sqrt-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-184911', demo_eq_sqrt_01__sympy_satask),
-    ('demo-eq-sqrt-02', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-184911', demo_eq_sqrt_02__sympy_satask),
-    ('demo-eq-sqrt-03', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-184911', demo_eq_sqrt_03__sympy_satask),
-    ('demo-eq-sqrt-04', 'sympy-satask', 'false', 'null', 'sympy-satask-20261019-184911', demo_eq_sqrt_04__sympy_satask),
-    ('demo-eq-trig-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-184911', demo_eq_trig_01__sympy_satask),
-    ('demo-eq-trig-02', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-184911', demo_eq_trig_02__sympy_satask),
-    ('demo-log-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-184911', demo_log_01__sympy_satask),
-    ('demo-log-02', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-184911', demo_log_02__sympy_satask),
-    ('demo-log-03', 'sympy-satask', 'false', 'null', 'sympy-satask-20261019-184911', demo_log_03__sympy_satask),
-    ('demo-nonzero-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-184911', demo_nonzero_01__sympy_satask),
-    ('demo-parity-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-184911', demo_parity_01__sympy_satask),
-    ('demo-parity-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261019-184911', demo_parity_02__sympy_satask),
-    ('demo-parity-03', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-184911', demo_parity_03__sympy_satask),
-    ('demo-parity-04', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-184911', demo_parity_04__sympy_satask),
-    ('demo-parity-05', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-184911', demo_parity_05__sympy_satask),
-    ('demo-prime-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-184911', demo_prime_01__sympy_satask),
-    ('demo-prime-02', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-184911', demo_prime_02__sympy_satask),
-    ('demo-sign-02', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-184911', demo_sign_02__sympy_satask),
-    ('demo-sign-03', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-184911', demo_sign_03__sympy_satask),
-    ('demo-sign-04', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-184911', demo_sign_04__sympy_satask),
-    ('demo-sign-05', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-184911', demo_sign_05__sympy_satask),
+    ('demo-atan2-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214847', demo_atan2_01__sympy_satask),
+    ('demo-atan2-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261019-214847', demo_atan2_02__sympy_satask),
+    ('demo-eq-abs-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214847', demo_eq_abs_01__sympy_satask),
+    ('demo-eq-abs-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261019-214847', demo_eq_abs_02__sympy_satask),
+    ('demo-eq-log-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214847', demo_eq_log_01__sympy_satask),
+    ('demo-eq-pow-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214847', demo_eq_pow_01__sympy_satask),
+    ('demo-eq-sqrt-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214847', demo_eq_sqrt_01__sympy_satask),
+    ('demo-eq-sqrt-02', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214847', demo_eq_sqrt_02__sympy_satask),
+    ('demo-eq-sqrt-03', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-214847', demo_eq_sqrt_03__sympy_satask),
+    ('demo-eq-sqrt-04', 'sympy-satask', 'false', 'null', 'sympy-satask-20261019-214847', demo_eq_sqrt_04__sympy_satask),
+    ('demo-eq-trig-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214847', demo_eq_trig_01__sympy_satask),
+    ('demo-eq-trig-02', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214847', demo_eq_trig_02__sympy_satask),
+    ('demo-log-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214847', demo_log_01__sympy_satask),
+    ('demo-log-02', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-214847', demo_log_02__sympy_satask),
+    ('demo-log-03', 'sympy-satask', 'false', 'null', 'sympy-satask-20261019-214847', demo_log_03__sympy_satask),
+    ('demo-nonzero-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214847', demo_nonzero_01__sympy_satask),
+    ('demo-parity-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214847', demo_parity_01__sympy_satask),
+    ('demo-parity-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261019-214847', demo_parity_02__sympy_satask),
+    ('demo-parity-03', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214847', demo_parity_03__sympy_satask),
+    ('demo-parity-04', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-214847', demo_parity_04__sympy_satask),
+    ('demo-parity-05', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214847', demo_parity_05__sympy_satask),
+    ('demo-prime-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214847', demo_prime_01__sympy_satask),
+    ('demo-prime-02', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-214847', demo_prime_02__sympy_satask),
+    ('demo-sign-02', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214847', demo_sign_02__sympy_satask),
+    ('demo-sign-03', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-214847', demo_sign_03__sympy_satask),
+    ('demo-sign-04', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214847', demo_sign_04__sympy_satask),
+    ('demo-sign-05', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214847', demo_sign_05__sympy_satask),
 ]
 
 

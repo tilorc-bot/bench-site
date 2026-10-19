@@ -124,7 +124,7 @@ import sympy
 
 
 # ---- case sp-acj4-1007-ground · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184146 answered true (solved)
+# the run sympy-auto-20261019-214042 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1007_ground__sympy_auto():
     Residual = 0 / sin(5) - 0
@@ -135,7 +135,7 @@ def sp_acj4_1007_ground__sympy_auto():
 
 
 # ---- case sp-acj4-1107-ground · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184146 answered true (solved)
+# the run sympy-auto-20261019-214042 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1107_ground__sympy_auto():
     Residual = asin(sin(Integer(1) / 10)) - Rational(1, 10)
@@ -146,7 +146,7 @@ def sp_acj4_1107_ground__sympy_auto():
 
 
 # ---- case sp-acj4-1148-ground · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184146 answered null (no verdict)
+# the run sympy-auto-20261019-214042 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_1148_ground__sympy_auto():
     Residual = cosh(log(Integer(1) / 4)) - Rational(17, 8)
@@ -157,7 +157,7 @@ def sp_acj4_1148_ground__sympy_auto():
 
 
 # ---- case sp-acj4-1149-ground · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184146 answered true (solved)
+# the run sympy-auto-20261019-214042 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1149_ground__sympy_auto():
     Residual = exp(Abs(log(2))) - 2
@@ -168,7 +168,7 @@ def sp_acj4_1149_ground__sympy_auto():
 
 
 # ---- case sp-acj4-1177-ground · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184146 answered true (solved)
+# the run sympy-auto-20261019-214042 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1177_ground__sympy_auto():
     Residual = Pow(0, asinh(10)) - 0
@@ -179,7 +179,7 @@ def sp_acj4_1177_ground__sympy_auto():
 
 
 # ---- case sp-acj4-1195-ground · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184146 answered true (solved)
+# the run sympy-auto-20261019-214042 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1195_ground__sympy_auto():
     Residual = Pow(0, atan(7)) - 0
@@ -190,7 +190,7 @@ def sp_acj4_1195_ground__sympy_auto():
 
 
 # ---- case sp-acj4-1217-ground · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184146 answered true (solved)
+# the run sympy-auto-20261019-214042 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1217_ground__sympy_auto():
     Residual = Pow(0, exp(-1)) - 0
@@ -201,7 +201,7 @@ def sp_acj4_1217_ground__sympy_auto():
 
 
 # ---- case sp-acj4-1238-ground · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184146 answered true (solved)
+# the run sympy-auto-20261019-214042 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1238_ground__sympy_auto():
     Residual = Pow(0, 1 / pi) - 0
@@ -212,7 +212,7 @@ def sp_acj4_1238_ground__sympy_auto():
 
 
 # ---- case sp-acj4-1247-ground · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184146 answered true (solved)
+# the run sympy-auto-20261019-214042 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1247_ground__sympy_auto():
     Residual = Pow(0, log(9)) - 0
@@ -223,7 +223,7 @@ def sp_acj4_1247_ground__sympy_auto():
 
 
 # ---- case sp-acj4-1254-ground · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184146 answered true (solved)
+# the run sympy-auto-20261019-214042 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1254_ground__sympy_auto():
     Residual = Pow(0, sin(2)) - 0
@@ -234,7 +234,7 @@ def sp_acj4_1254_ground__sympy_auto():
 
 
 # ---- case sp-acj4-1258-ground · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184146 answered true (solved)
+# the run sympy-auto-20261019-214042 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1258_ground__sympy_auto():
     Residual = Pow(0, sin(9)) - 0
@@ -245,7 +245,7 @@ def sp_acj4_1258_ground__sympy_auto():
 
 
 # ---- case sp-acj4-5372-ground · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184146 answered true (solved)
+# the run sympy-auto-20261019-214042 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_5372_ground__sympy_auto():
     Residual = sin(asin(Integer(1) / -4)) - Rational(-1, 4)
@@ -256,7 +256,7 @@ def sp_acj4_5372_ground__sympy_auto():
 
 
 # ---- case sp-acj4-5382-ground · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184146 answered null (no verdict)
+# the run sympy-auto-20261019-214042 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_5382_ground__sympy_auto():
     Residual = sinh(log(Integer(1) / 4)) - Rational(-15, 8)
@@ -267,7 +267,7 @@ def sp_acj4_5382_ground__sympy_auto():
 
 
 # ---- case sp-acj4-5385-ground · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184146 answered null (no verdict)
+# the run sympy-auto-20261019-214042 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_5385_ground__sympy_auto():
     Residual = sinh(-log(4)) - Rational(-15, 8)
@@ -278,7 +278,7 @@ def sp_acj4_5385_ground__sympy_auto():
 
 
 # ---- case sp-acj4-819-ground · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184146 answered true (solved)
+# the run sympy-auto-20261019-214042 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_819_ground__sympy_auto():
     Residual = 0 / pi - 0
@@ -289,7 +289,7 @@ def sp_acj4_819_ground__sympy_auto():
 
 
 # ---- case sp-acj4-837-ground · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184146 answered true (solved)
+# the run sympy-auto-20261019-214042 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_837_ground__sympy_auto():
     Residual = Pow(0, pi) - 0
@@ -300,7 +300,7 @@ def sp_acj4_837_ground__sympy_auto():
 
 
 # ---- case sp-acj4-848-ground · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184146 answered null (no verdict)
+# the run sympy-auto-20261019-214042 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_848_ground__sympy_auto():
     Residual = sinh(log(4)) - Rational(15, 8)
@@ -311,7 +311,7 @@ def sp_acj4_848_ground__sympy_auto():
 
 
 # ---- case sp-acj4-868-ground · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184146 answered true (solved)
+# the run sympy-auto-20261019-214042 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_868_ground__sympy_auto():
     Residual = 0 * acosh(7) - 0
@@ -322,7 +322,7 @@ def sp_acj4_868_ground__sympy_auto():
 
 
 # ---- case sp-acj4-911-ground · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184146 answered true (solved)
+# the run sympy-auto-20261019-214042 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_911_ground__sympy_auto():
     Residual = 0 / asin(-1) - 0
@@ -333,7 +333,7 @@ def sp_acj4_911_ground__sympy_auto():
 
 
 # ---- case sp-acj4-927-ground · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184146 answered true (solved)
+# the run sympy-auto-20261019-214042 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_927_ground__sympy_auto():
     Residual = 0 / asinh(4) - 0
@@ -345,26 +345,26 @@ def sp_acj4_927_ground__sympy_auto():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-1007-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-184146', sp_acj4_1007_ground__sympy_auto),
-    ('sp-acj4-1107-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-184146', sp_acj4_1107_ground__sympy_auto),
-    ('sp-acj4-1148-ground', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-184146', sp_acj4_1148_ground__sympy_auto),
-    ('sp-acj4-1149-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-184146', sp_acj4_1149_ground__sympy_auto),
-    ('sp-acj4-1177-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-184146', sp_acj4_1177_ground__sympy_auto),
-    ('sp-acj4-1195-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-184146', sp_acj4_1195_ground__sympy_auto),
-    ('sp-acj4-1217-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-184146', sp_acj4_1217_ground__sympy_auto),
-    ('sp-acj4-1238-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-184146', sp_acj4_1238_ground__sympy_auto),
-    ('sp-acj4-1247-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-184146', sp_acj4_1247_ground__sympy_auto),
-    ('sp-acj4-1254-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-184146', sp_acj4_1254_ground__sympy_auto),
-    ('sp-acj4-1258-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-184146', sp_acj4_1258_ground__sympy_auto),
-    ('sp-acj4-5372-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-184146', sp_acj4_5372_ground__sympy_auto),
-    ('sp-acj4-5382-ground', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-184146', sp_acj4_5382_ground__sympy_auto),
-    ('sp-acj4-5385-ground', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-184146', sp_acj4_5385_ground__sympy_auto),
-    ('sp-acj4-819-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-184146', sp_acj4_819_ground__sympy_auto),
-    ('sp-acj4-837-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-184146', sp_acj4_837_ground__sympy_auto),
-    ('sp-acj4-848-ground', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-184146', sp_acj4_848_ground__sympy_auto),
-    ('sp-acj4-868-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-184146', sp_acj4_868_ground__sympy_auto),
-    ('sp-acj4-911-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-184146', sp_acj4_911_ground__sympy_auto),
-    ('sp-acj4-927-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-184146', sp_acj4_927_ground__sympy_auto),
+    ('sp-acj4-1007-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-214042', sp_acj4_1007_ground__sympy_auto),
+    ('sp-acj4-1107-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-214042', sp_acj4_1107_ground__sympy_auto),
+    ('sp-acj4-1148-ground', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-214042', sp_acj4_1148_ground__sympy_auto),
+    ('sp-acj4-1149-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-214042', sp_acj4_1149_ground__sympy_auto),
+    ('sp-acj4-1177-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-214042', sp_acj4_1177_ground__sympy_auto),
+    ('sp-acj4-1195-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-214042', sp_acj4_1195_ground__sympy_auto),
+    ('sp-acj4-1217-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-214042', sp_acj4_1217_ground__sympy_auto),
+    ('sp-acj4-1238-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-214042', sp_acj4_1238_ground__sympy_auto),
+    ('sp-acj4-1247-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-214042', sp_acj4_1247_ground__sympy_auto),
+    ('sp-acj4-1254-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-214042', sp_acj4_1254_ground__sympy_auto),
+    ('sp-acj4-1258-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-214042', sp_acj4_1258_ground__sympy_auto),
+    ('sp-acj4-5372-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-214042', sp_acj4_5372_ground__sympy_auto),
+    ('sp-acj4-5382-ground', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-214042', sp_acj4_5382_ground__sympy_auto),
+    ('sp-acj4-5385-ground', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-214042', sp_acj4_5385_ground__sympy_auto),
+    ('sp-acj4-819-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-214042', sp_acj4_819_ground__sympy_auto),
+    ('sp-acj4-837-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-214042', sp_acj4_837_ground__sympy_auto),
+    ('sp-acj4-848-ground', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-214042', sp_acj4_848_ground__sympy_auto),
+    ('sp-acj4-868-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-214042', sp_acj4_868_ground__sympy_auto),
+    ('sp-acj4-911-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-214042', sp_acj4_911_ground__sympy_auto),
+    ('sp-acj4-927-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-214042', sp_acj4_927_ground__sympy_auto),
 ]
 
 

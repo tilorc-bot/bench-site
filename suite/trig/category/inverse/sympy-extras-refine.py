@@ -131,10 +131,10 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case trig-acos-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-184929 answered null (no verdict)
+# the run sympy-extras-refine-20261019-214906 answered null (no verdict)
 @_in(_SETUP1)
 def trig_acos_01__sympy_extras_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x), x < 3)
     Residual = acos(cos(x)) - x
     Result = sympy_extras.assumptions.refine(Residual, Assum)
@@ -144,10 +144,10 @@ def trig_acos_01__sympy_extras_refine():
 
 
 # ---- case trig-asin-01 · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-184929 answered null (declined correctly)
+# the run sympy-extras-refine-20261019-214906 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_asin_01__sympy_extras_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = asin(sin(x)) - x
     Result = sympy_extras.assumptions.refine(Residual, Assum)
@@ -157,10 +157,10 @@ def trig_asin_01__sympy_extras_refine():
 
 
 # ---- case trig-asin-02 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-184929 answered null (no verdict)
+# the run sympy-extras-refine-20261019-214906 answered null (no verdict)
 @_in(_SETUP1)
 def trig_asin_02__sympy_extras_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), x > -1, x < 1)
     Residual = asin(sin(x)) - x
     Result = sympy_extras.assumptions.refine(Residual, Assum)
@@ -170,10 +170,10 @@ def trig_asin_02__sympy_extras_refine():
 
 
 # ---- case trig-atan-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-184929 answered null (no verdict)
+# the run sympy-extras-refine-20261019-214906 answered null (no verdict)
 @_in(_SETUP1)
 def trig_atan_01__sympy_extras_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), x > -1, x < 1)
     Residual = atan(tan(x)) - x
     Result = sympy_extras.assumptions.refine(Residual, Assum)
@@ -184,10 +184,10 @@ def trig_atan_01__sympy_extras_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-acos-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-184929', trig_acos_01__sympy_extras_refine),
-    ('trig-asin-01', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-184929', trig_asin_01__sympy_extras_refine),
-    ('trig-asin-02', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-184929', trig_asin_02__sympy_extras_refine),
-    ('trig-atan-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-184929', trig_atan_01__sympy_extras_refine),
+    ('trig-acos-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-214906', trig_acos_01__sympy_extras_refine),
+    ('trig-asin-01', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-214906', trig_asin_01__sympy_extras_refine),
+    ('trig-asin-02', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-214906', trig_asin_02__sympy_extras_refine),
+    ('trig-atan-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-214906', trig_atan_01__sympy_extras_refine),
 ]
 
 

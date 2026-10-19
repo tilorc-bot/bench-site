@@ -131,10 +131,10 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case trig-double-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-184929 answered null (no verdict)
+# the run sympy-extras-refine-20261019-214906 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_01__sympy_extras_refine():
-    z = Symbol('z', complex=True)
+    z = Symbol('z')
     Assum = And(Q.complex(z))
     Residual = sin(2 * z) - (2 * (sin(z) * cos(z)))
     Result = sympy_extras.assumptions.refine(Residual, Assum)
@@ -144,10 +144,10 @@ def trig_double_01__sympy_extras_refine():
 
 
 # ---- case trig-double-02 · expected false · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-184929 answered null (no verdict)
+# the run sympy-extras-refine-20261019-214906 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_02__sympy_extras_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x), x < 1)
     Residual = sin(2 * x) - (2 * sin(x))
     Result = sympy_extras.assumptions.refine(Residual, Assum)
@@ -157,10 +157,10 @@ def trig_double_02__sympy_extras_refine():
 
 
 # ---- case trig-pyth-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-184929 answered null (no verdict)
+# the run sympy-extras-refine-20261019-214906 answered null (no verdict)
 @_in(_SETUP1)
 def trig_pyth_01__sympy_extras_refine():
-    z = Symbol('z', complex=True)
+    z = Symbol('z')
     Assum = And(Q.complex(z))
     Residual = sin(z) * sin(z) + cos(z) * cos(z) - 1
     Result = sympy_extras.assumptions.refine(Residual, Assum)
@@ -170,10 +170,10 @@ def trig_pyth_01__sympy_extras_refine():
 
 
 # ---- case trig-sqrt-01 · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-184929 answered null (declined correctly)
+# the run sympy-extras-refine-20261019-214906 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_sqrt_01__sympy_extras_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sqrt(1 - sin(x) * sin(x)) - cos(x)
     Result = sympy_extras.assumptions.refine(Residual, Assum)
@@ -183,10 +183,10 @@ def trig_sqrt_01__sympy_extras_refine():
 
 
 # ---- case trig-tan-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-184929 answered null (no verdict)
+# the run sympy-extras-refine-20261019-214906 answered null (no verdict)
 @_in(_SETUP1)
 def trig_tan_01__sympy_extras_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(cos(x)))
     Residual = tan(x) - (sin(x) / cos(x))
     Result = sympy_extras.assumptions.refine(Residual, Assum)
@@ -197,11 +197,11 @@ def trig_tan_01__sympy_extras_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-double-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-184929', trig_double_01__sympy_extras_refine),
-    ('trig-double-02', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261019-184929', trig_double_02__sympy_extras_refine),
-    ('trig-pyth-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-184929', trig_pyth_01__sympy_extras_refine),
-    ('trig-sqrt-01', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-184929', trig_sqrt_01__sympy_extras_refine),
-    ('trig-tan-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-184929', trig_tan_01__sympy_extras_refine),
+    ('trig-double-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-214906', trig_double_01__sympy_extras_refine),
+    ('trig-double-02', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261019-214906', trig_double_02__sympy_extras_refine),
+    ('trig-pyth-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-214906', trig_pyth_01__sympy_extras_refine),
+    ('trig-sqrt-01', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-214906', trig_sqrt_01__sympy_extras_refine),
+    ('trig-tan-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-214906', trig_tan_01__sympy_extras_refine),
 ]
 
 

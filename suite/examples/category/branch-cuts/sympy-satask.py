@@ -124,11 +124,11 @@ from sympy.assumptions.satask import satask
 
 
 # ---- case demo-atan2-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (no verdict)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_atan2_01__sympy_satask():
-    x = Symbol('x', real=True)
-    y = Symbol('y', real=True)
+    x = Symbol('x')
+    y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.positive(x))
     Residual = atan2(y, x) - atan(y / x)
     Answer = satask(Q.zero(Residual), Assum)
@@ -137,11 +137,11 @@ def demo_atan2_01__sympy_satask():
 
 
 # ---- case demo-atan2-02 · expected false · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (no verdict)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_atan2_02__sympy_satask():
-    x = Symbol('x', real=True)
-    y = Symbol('y', real=True)
+    x = Symbol('x')
+    y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.negative(x), Q.positive(y))
     Residual = atan2(y, x) - atan(y / x)
     Answer = satask(Q.zero(Residual), Assum)
@@ -150,11 +150,11 @@ def demo_atan2_02__sympy_satask():
 
 
 # ---- case demo-log-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (no verdict)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_log_01__sympy_satask():
-    x = Symbol('x', real=True)
-    y = Symbol('y', real=True)
+    x = Symbol('x')
+    y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
     Residual = log(x * y) - (log(x) + log(y))
     Answer = satask(Q.zero(Residual), Assum)
@@ -163,11 +163,11 @@ def demo_log_01__sympy_satask():
 
 
 # ---- case demo-log-02 · expected contingent · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (declined correctly)
+# the run sympy-satask-20261019-214847 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_log_02__sympy_satask():
-    z = Symbol('z', complex=True)
-    w = Symbol('w', complex=True)
+    z = Symbol('z')
+    w = Symbol('w')
     Assum = And(Q.complex(z), Q.complex(w), ~Q.zero(z), ~Q.zero(w))
     Residual = log(z * w) - (log(z) + log(w))
     Answer = satask(Q.zero(Residual), Assum)
@@ -176,10 +176,10 @@ def demo_log_02__sympy_satask():
 
 
 # ---- case demo-log-03 · expected false · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184911 answered null (no verdict)
+# the run sympy-satask-20261019-214847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_log_03__sympy_satask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.negative(x))
     Residual = log(x) - log(-x)
     Answer = satask(Q.zero(Residual), Assum)
@@ -189,11 +189,11 @@ def demo_log_03__sympy_satask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-atan2-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-184911', demo_atan2_01__sympy_satask),
-    ('demo-atan2-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261019-184911', demo_atan2_02__sympy_satask),
-    ('demo-log-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-184911', demo_log_01__sympy_satask),
-    ('demo-log-02', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-184911', demo_log_02__sympy_satask),
-    ('demo-log-03', 'sympy-satask', 'false', 'null', 'sympy-satask-20261019-184911', demo_log_03__sympy_satask),
+    ('demo-atan2-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214847', demo_atan2_01__sympy_satask),
+    ('demo-atan2-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261019-214847', demo_atan2_02__sympy_satask),
+    ('demo-log-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214847', demo_log_01__sympy_satask),
+    ('demo-log-02', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-214847', demo_log_02__sympy_satask),
+    ('demo-log-03', 'sympy-satask', 'false', 'null', 'sympy-satask-20261019-214847', demo_log_03__sympy_satask),
 ]
 
 

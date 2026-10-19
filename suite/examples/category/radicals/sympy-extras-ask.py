@@ -131,10 +131,10 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-eq-abs-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-184859 answered true (solved)
+# the run sympy-extras-ask-20261019-214833 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_abs_01__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.negative(x))
     Residual = Abs(x) - (-x)
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -143,10 +143,10 @@ def demo_eq_abs_01__sympy_extras_ask():
 
 
 # ---- case demo-eq-abs-02 · expected false · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-184859 answered false (solved)
+# the run sympy-extras-ask-20261019-214833 answered false (solved)
 @_in(_SETUP1)
 def demo_eq_abs_02__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.negative(x))
     Residual = Abs(x) - x
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -155,10 +155,10 @@ def demo_eq_abs_02__sympy_extras_ask():
 
 
 # ---- case demo-eq-sqrt-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-184859 answered true (solved)
+# the run sympy-extras-ask-20261019-214833 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_01__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x))
     Residual = sqrt(Pow(x, 2)) - x
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -167,10 +167,10 @@ def demo_eq_sqrt_01__sympy_extras_ask():
 
 
 # ---- case demo-eq-sqrt-02 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-184859 answered true (solved)
+# the run sympy-extras-ask-20261019-214833 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_02__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sqrt(Pow(x, 2)) - Abs(x)
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -179,10 +179,10 @@ def demo_eq_sqrt_02__sympy_extras_ask():
 
 
 # ---- case demo-eq-sqrt-03 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-184859 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-214833 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_eq_sqrt_03__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sqrt(Pow(x, 2)) - x
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -191,10 +191,10 @@ def demo_eq_sqrt_03__sympy_extras_ask():
 
 
 # ---- case demo-eq-sqrt-04 · expected false · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-184859 answered false (solved)
+# the run sympy-extras-ask-20261019-214833 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_sqrt_04__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x))
     Residual = sqrt(Pow(x, 2)) + 1 - x
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -204,12 +204,12 @@ def demo_eq_sqrt_04__sympy_extras_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-abs-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-184859', demo_eq_abs_01__sympy_extras_ask),
-    ('demo-eq-abs-02', 'sympy-extras-ask', 'false', 'false', 'sympy-extras-ask-20261019-184859', demo_eq_abs_02__sympy_extras_ask),
-    ('demo-eq-sqrt-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-184859', demo_eq_sqrt_01__sympy_extras_ask),
-    ('demo-eq-sqrt-02', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-184859', demo_eq_sqrt_02__sympy_extras_ask),
-    ('demo-eq-sqrt-03', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-184859', demo_eq_sqrt_03__sympy_extras_ask),
-    ('demo-eq-sqrt-04', 'sympy-extras-ask', 'false', 'false', 'sympy-extras-ask-20261019-184859', demo_eq_sqrt_04__sympy_extras_ask),
+    ('demo-eq-abs-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-214833', demo_eq_abs_01__sympy_extras_ask),
+    ('demo-eq-abs-02', 'sympy-extras-ask', 'false', 'false', 'sympy-extras-ask-20261019-214833', demo_eq_abs_02__sympy_extras_ask),
+    ('demo-eq-sqrt-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-214833', demo_eq_sqrt_01__sympy_extras_ask),
+    ('demo-eq-sqrt-02', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-214833', demo_eq_sqrt_02__sympy_extras_ask),
+    ('demo-eq-sqrt-03', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-214833', demo_eq_sqrt_03__sympy_extras_ask),
+    ('demo-eq-sqrt-04', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261019-214833', demo_eq_sqrt_04__sympy_extras_ask),
 ]
 
 

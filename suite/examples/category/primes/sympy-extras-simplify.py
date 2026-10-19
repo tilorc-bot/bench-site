@@ -131,10 +131,10 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-prime-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-184907 answered null (no verdict)
+# the run sympy-extras-simplify-20261019-214842 answered null (no verdict)
 @_in(_SETUP1)
 def demo_prime_01__sympy_extras_simplify():
-    p = Symbol('p', integer=True)
+    p = Symbol('p')
     Assum = And(Q.integer(p), Q.prime(p), p > 2)
     Residual = Pow(-1, p) - (-1)
     Result = sympy_extras.assumptions.simplify(Residual, Assum)
@@ -144,10 +144,10 @@ def demo_prime_01__sympy_extras_simplify():
 
 
 # ---- case demo-prime-02 · expected contingent · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-184907 answered null (declined correctly)
+# the run sympy-extras-simplify-20261019-214842 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_prime_02__sympy_extras_simplify():
-    p = Symbol('p', integer=True)
+    p = Symbol('p')
     Assum = And(Q.integer(p), Q.prime(p))
     Residual = Pow(-1, p) - (-1)
     Result = sympy_extras.assumptions.simplify(Residual, Assum)
@@ -158,8 +158,8 @@ def demo_prime_02__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-prime-01', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261019-184907', demo_prime_01__sympy_extras_simplify),
-    ('demo-prime-02', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261019-184907', demo_prime_02__sympy_extras_simplify),
+    ('demo-prime-01', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261019-214842', demo_prime_01__sympy_extras_simplify),
+    ('demo-prime-02', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261019-214842', demo_prime_02__sympy_extras_simplify),
 ]
 
 

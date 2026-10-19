@@ -131,10 +131,10 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case trig-period-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-184918 answered true (solved)
+# the run sympy-extras-ask-20261019-214854 answered true (solved)
 @_in(_SETUP1)
 def trig_period_01__sympy_extras_ask():
-    z = Symbol('z', complex=True)
+    z = Symbol('z')
     Assum = And(Q.complex(z))
     Residual = sin(z + 2 * pi) - sin(z)
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -143,10 +143,10 @@ def trig_period_01__sympy_extras_ask():
 
 
 # ---- case trig-period-02 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-184918 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-214854 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_02__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = cos(x + pi) - cos(x)
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -155,10 +155,10 @@ def trig_period_02__sympy_extras_ask():
 
 
 # ---- case trig-period-03 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-184918 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-214854 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_03__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x))
     Residual = cos(x + pi) - cos(x)
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -167,10 +167,10 @@ def trig_period_03__sympy_extras_ask():
 
 
 # ---- case trig-shift-01 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-184918 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-214854 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_shift_01__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sin(x + pi) - sin(x)
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -180,10 +180,10 @@ def trig_shift_01__sympy_extras_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-period-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-184918', trig_period_01__sympy_extras_ask),
-    ('trig-period-02', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-184918', trig_period_02__sympy_extras_ask),
-    ('trig-period-03', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-184918', trig_period_03__sympy_extras_ask),
-    ('trig-shift-01', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-184918', trig_shift_01__sympy_extras_ask),
+    ('trig-period-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-214854', trig_period_01__sympy_extras_ask),
+    ('trig-period-02', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-214854', trig_period_02__sympy_extras_ask),
+    ('trig-period-03', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-214854', trig_period_03__sympy_extras_ask),
+    ('trig-shift-01', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-214854', trig_shift_01__sympy_extras_ask),
 ]
 
 

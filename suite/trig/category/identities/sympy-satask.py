@@ -124,10 +124,10 @@ from sympy.assumptions.satask import satask
 
 
 # ---- case trig-double-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184949 answered null (no verdict)
+# the run sympy-satask-20261019-214928 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_01__sympy_satask():
-    z = Symbol('z', complex=True)
+    z = Symbol('z')
     Assum = And(Q.complex(z))
     Residual = sin(2 * z) - (2 * (sin(z) * cos(z)))
     Answer = satask(Q.zero(Residual), Assum)
@@ -136,10 +136,10 @@ def trig_double_01__sympy_satask():
 
 
 # ---- case trig-double-02 · expected false · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184949 answered null (no verdict)
+# the run sympy-satask-20261019-214928 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_02__sympy_satask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x), x < 1)
     Residual = sin(2 * x) - (2 * sin(x))
     Answer = satask(Q.zero(Residual), Assum)
@@ -148,10 +148,10 @@ def trig_double_02__sympy_satask():
 
 
 # ---- case trig-pyth-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184949 answered null (no verdict)
+# the run sympy-satask-20261019-214928 answered null (no verdict)
 @_in(_SETUP1)
 def trig_pyth_01__sympy_satask():
-    z = Symbol('z', complex=True)
+    z = Symbol('z')
     Assum = And(Q.complex(z))
     Residual = sin(z) * sin(z) + cos(z) * cos(z) - 1
     Answer = satask(Q.zero(Residual), Assum)
@@ -160,10 +160,10 @@ def trig_pyth_01__sympy_satask():
 
 
 # ---- case trig-sqrt-01 · expected contingent · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184949 answered null (declined correctly)
+# the run sympy-satask-20261019-214928 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_sqrt_01__sympy_satask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sqrt(1 - sin(x) * sin(x)) - cos(x)
     Answer = satask(Q.zero(Residual), Assum)
@@ -172,10 +172,10 @@ def trig_sqrt_01__sympy_satask():
 
 
 # ---- case trig-tan-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184949 answered null (no verdict)
+# the run sympy-satask-20261019-214928 answered null (no verdict)
 @_in(_SETUP1)
 def trig_tan_01__sympy_satask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(cos(x)))
     Residual = tan(x) - (sin(x) / cos(x))
     Answer = satask(Q.zero(Residual), Assum)
@@ -185,11 +185,11 @@ def trig_tan_01__sympy_satask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-double-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-184949', trig_double_01__sympy_satask),
-    ('trig-double-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261019-184949', trig_double_02__sympy_satask),
-    ('trig-pyth-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-184949', trig_pyth_01__sympy_satask),
-    ('trig-sqrt-01', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-184949', trig_sqrt_01__sympy_satask),
-    ('trig-tan-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-184949', trig_tan_01__sympy_satask),
+    ('trig-double-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214928', trig_double_01__sympy_satask),
+    ('trig-double-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261019-214928', trig_double_02__sympy_satask),
+    ('trig-pyth-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214928', trig_pyth_01__sympy_satask),
+    ('trig-sqrt-01', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-214928', trig_sqrt_01__sympy_satask),
+    ('trig-tan-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214928', trig_tan_01__sympy_satask),
 ]
 
 

@@ -131,11 +131,11 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-atan2-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-184907 answered true (solved)
+# the run sympy-extras-simplify-20261019-214842 answered true (solved)
 @_in(_SETUP1)
 def demo_atan2_01__sympy_extras_simplify():
-    x = Symbol('x', real=True)
-    y = Symbol('y', real=True)
+    x = Symbol('x')
+    y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.positive(x))
     Residual = atan2(y, x) - atan(y / x)
     Result = sympy_extras.assumptions.simplify(Residual, Assum)
@@ -145,11 +145,11 @@ def demo_atan2_01__sympy_extras_simplify():
 
 
 # ---- case demo-atan2-02 · expected false · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-184907 answered false (solved)
+# the run sympy-extras-simplify-20261019-214842 answered false (solved)
 @_in(_SETUP1)
 def demo_atan2_02__sympy_extras_simplify():
-    x = Symbol('x', real=True)
-    y = Symbol('y', real=True)
+    x = Symbol('x')
+    y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.negative(x), Q.positive(y))
     Residual = atan2(y, x) - atan(y / x)
     Result = sympy_extras.assumptions.simplify(Residual, Assum)
@@ -159,11 +159,11 @@ def demo_atan2_02__sympy_extras_simplify():
 
 
 # ---- case demo-log-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-184907 answered true (solved)
+# the run sympy-extras-simplify-20261019-214842 answered true (solved)
 @_in(_SETUP1)
 def demo_log_01__sympy_extras_simplify():
-    x = Symbol('x', real=True)
-    y = Symbol('y', real=True)
+    x = Symbol('x')
+    y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
     Residual = log(x * y) - (log(x) + log(y))
     Result = sympy_extras.assumptions.simplify(Residual, Assum)
@@ -173,11 +173,11 @@ def demo_log_01__sympy_extras_simplify():
 
 
 # ---- case demo-log-02 · expected contingent · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-184907 answered null (declined correctly)
+# the run sympy-extras-simplify-20261019-214842 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_log_02__sympy_extras_simplify():
-    z = Symbol('z', complex=True)
-    w = Symbol('w', complex=True)
+    z = Symbol('z')
+    w = Symbol('w')
     Assum = And(Q.complex(z), Q.complex(w), ~Q.zero(z), ~Q.zero(w))
     Residual = log(z * w) - (log(z) + log(w))
     Result = sympy_extras.assumptions.simplify(Residual, Assum)
@@ -187,10 +187,10 @@ def demo_log_02__sympy_extras_simplify():
 
 
 # ---- case demo-log-03 · expected false · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-184907 answered false (solved)
+# the run sympy-extras-simplify-20261019-214842 answered false (solved)
 @_in(_SETUP1)
 def demo_log_03__sympy_extras_simplify():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.negative(x))
     Residual = log(x) - log(-x)
     Result = sympy_extras.assumptions.simplify(Residual, Assum)
@@ -201,11 +201,11 @@ def demo_log_03__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-atan2-01', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-184907', demo_atan2_01__sympy_extras_simplify),
-    ('demo-atan2-02', 'sympy-extras-simplify', 'false', 'false', 'sympy-extras-simplify-20261019-184907', demo_atan2_02__sympy_extras_simplify),
-    ('demo-log-01', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-184907', demo_log_01__sympy_extras_simplify),
-    ('demo-log-02', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261019-184907', demo_log_02__sympy_extras_simplify),
-    ('demo-log-03', 'sympy-extras-simplify', 'false', 'false', 'sympy-extras-simplify-20261019-184907', demo_log_03__sympy_extras_simplify),
+    ('demo-atan2-01', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-214842', demo_atan2_01__sympy_extras_simplify),
+    ('demo-atan2-02', 'sympy-extras-simplify', 'false', 'false', 'sympy-extras-simplify-20261019-214842', demo_atan2_02__sympy_extras_simplify),
+    ('demo-log-01', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-214842', demo_log_01__sympy_extras_simplify),
+    ('demo-log-02', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261019-214842', demo_log_02__sympy_extras_simplify),
+    ('demo-log-03', 'sympy-extras-simplify', 'false', 'false', 'sympy-extras-simplify-20261019-214842', demo_log_03__sympy_extras_simplify),
 ]
 
 

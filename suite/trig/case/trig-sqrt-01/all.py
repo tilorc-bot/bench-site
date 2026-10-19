@@ -155,7 +155,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case trig-sqrt-01 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-184912 answered null (declined correctly)
+# the run satassume-ask-20261019-214849 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_sqrt_01__satassume_ask():
     x = Symbol('x')
@@ -180,7 +180,7 @@ def trig_sqrt_01__satrefine_refine():
 
 
 # ---- case trig-sqrt-01 · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261019-184916 answered null (declined correctly)
+# the run satsimp-trigsimp-20261019-214853 answered null (declined correctly)
 @_in(_SETUP2)
 def trig_sqrt_01__satsimp_trigsimp():
     x = Symbol('x')
@@ -193,7 +193,7 @@ def trig_sqrt_01__satsimp_trigsimp():
 
 
 # ---- case trig-sqrt-01 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-184914 answered null (declined correctly)
+# the run satrefine-simplify-20261019-214850 answered null (declined correctly)
 @_in(_SETUP2)
 def trig_sqrt_01__satrefine_simplify():
     x = Symbol('x')
@@ -231,10 +231,10 @@ def trig_sqrt_01__sympy_ask():
 
 
 # ---- case trig-sqrt-01 · expected contingent · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184949 answered null (declined correctly)
+# the run sympy-satask-20261019-214928 answered null (declined correctly)
 @_in(_SETUP4)
 def trig_sqrt_01__sympy_satask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sqrt(1 - sin(x) * sin(x)) - cos(x)
     Answer = satask(Q.zero(Residual), Assum)
@@ -268,10 +268,10 @@ def trig_sqrt_01__sympy_simplify():
 
 
 # ---- case trig-sqrt-01 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-184918 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-214854 answered null (declined correctly)
 @_in(_SETUP5)
 def trig_sqrt_01__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sqrt(1 - sin(x) * sin(x)) - cos(x)
     # the claim as a relation, sympy-extras' statement form (not Q.zero: see the adapter)
@@ -281,10 +281,10 @@ def trig_sqrt_01__sympy_extras_ask():
 
 
 # ---- case trig-sqrt-01 · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-184929 answered null (declined correctly)
+# the run sympy-extras-refine-20261019-214906 answered null (declined correctly)
 @_in(_SETUP5)
 def trig_sqrt_01__sympy_extras_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sqrt(1 - sin(x) * sin(x)) - cos(x)
     Result = sympy_extras.assumptions.refine(Residual, Assum)
@@ -294,10 +294,10 @@ def trig_sqrt_01__sympy_extras_refine():
 
 
 # ---- case trig-sqrt-01 · expected contingent · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-184938 answered null (declined correctly)
+# the run sympy-extras-simplify-20261019-214916 answered null (declined correctly)
 @_in(_SETUP5)
 def trig_sqrt_01__sympy_extras_simplify():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sqrt(1 - sin(x) * sin(x)) - cos(x)
     Result = sympy_extras.assumptions.simplify(Residual, Assum)
@@ -308,18 +308,18 @@ def trig_sqrt_01__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-sqrt-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-184912', trig_sqrt_01__satassume_ask),
+    ('trig-sqrt-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-214849', trig_sqrt_01__satassume_ask),
     ('trig-sqrt-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-213715', trig_sqrt_01__satrefine_refine),
-    ('trig-sqrt-01', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261019-184916', trig_sqrt_01__satsimp_trigsimp),
-    ('trig-sqrt-01', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-184914', trig_sqrt_01__satrefine_simplify),
+    ('trig-sqrt-01', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261019-214853', trig_sqrt_01__satsimp_trigsimp),
+    ('trig-sqrt-01', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214850', trig_sqrt_01__satrefine_simplify),
     ('trig-sqrt-01', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-213708', trig_sqrt_01__sympy_auto),
     ('trig-sqrt-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-213709', trig_sqrt_01__sympy_ask),
-    ('trig-sqrt-01', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-184949', trig_sqrt_01__sympy_satask),
+    ('trig-sqrt-01', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-214928', trig_sqrt_01__sympy_satask),
     ('trig-sqrt-01', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-213712', trig_sqrt_01__sympy_refine),
     ('trig-sqrt-01', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-213713', trig_sqrt_01__sympy_simplify),
-    ('trig-sqrt-01', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-184918', trig_sqrt_01__sympy_extras_ask),
-    ('trig-sqrt-01', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-184929', trig_sqrt_01__sympy_extras_refine),
-    ('trig-sqrt-01', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261019-184938', trig_sqrt_01__sympy_extras_simplify),
+    ('trig-sqrt-01', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-214854', trig_sqrt_01__sympy_extras_ask),
+    ('trig-sqrt-01', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-214906', trig_sqrt_01__sympy_extras_refine),
+    ('trig-sqrt-01', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261019-214916', trig_sqrt_01__sympy_extras_simplify),
 ]
 
 

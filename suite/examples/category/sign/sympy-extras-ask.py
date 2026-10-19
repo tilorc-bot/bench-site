@@ -131,10 +131,10 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-nonzero-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-184859 answered null (no verdict)
+# the run sympy-extras-ask-20261019-214833 answered null (no verdict)
 @_in(_SETUP1)
 def demo_nonzero_01__sympy_extras_ask():
-    z = Symbol('z', complex=True)
+    z = Symbol('z')
     Assum = And(Q.complex(z), Q.imaginary(z))
     Residual = Abs(sign(z)) - 1
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -143,10 +143,10 @@ def demo_nonzero_01__sympy_extras_ask():
 
 
 # ---- case demo-sign-02 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-184859 answered null (no verdict)
+# the run sympy-extras-ask-20261019-214833 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_02__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(x))
     Residual = sign(Pow(x, 2)) - 1
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -155,10 +155,10 @@ def demo_sign_02__sympy_extras_ask():
 
 
 # ---- case demo-sign-03 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-184859 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-214833 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_sign_03__sympy_extras_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), ~Q.zero(x))
     Residual = sign(Pow(x, 2)) - 1
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -167,10 +167,10 @@ def demo_sign_03__sympy_extras_ask():
 
 
 # ---- case demo-sign-04 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-184859 answered null (no verdict)
+# the run sympy-extras-ask-20261019-214833 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_04__sympy_extras_ask():
-    z = Symbol('z', complex=True)
+    z = Symbol('z')
     Assum = And(Q.complex(z))
     Residual = Abs(z * conjugate(z)) - (z * conjugate(z))
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -179,11 +179,11 @@ def demo_sign_04__sympy_extras_ask():
 
 
 # ---- case demo-sign-05 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-184859 answered true (solved)
+# the run sympy-extras-ask-20261019-214833 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_05__sympy_extras_ask():
-    x = Symbol('x', real=True)
-    y = Symbol('y', real=True)
+    x = Symbol('x')
+    y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.negative(y))
     Residual = Abs(x - y) - (x - y)
     Answer = sympy_extras.assumptions.ask(Eq(Residual, 0), Assum)
@@ -193,11 +193,11 @@ def demo_sign_05__sympy_extras_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-nonzero-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-184859', demo_nonzero_01__sympy_extras_ask),
-    ('demo-sign-02', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-184859', demo_sign_02__sympy_extras_ask),
-    ('demo-sign-03', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-184859', demo_sign_03__sympy_extras_ask),
-    ('demo-sign-04', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-184859', demo_sign_04__sympy_extras_ask),
-    ('demo-sign-05', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-184859', demo_sign_05__sympy_extras_ask),
+    ('demo-nonzero-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-214833', demo_nonzero_01__sympy_extras_ask),
+    ('demo-sign-02', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-214833', demo_sign_02__sympy_extras_ask),
+    ('demo-sign-03', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-214833', demo_sign_03__sympy_extras_ask),
+    ('demo-sign-04', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-214833', demo_sign_04__sympy_extras_ask),
+    ('demo-sign-05', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-214833', demo_sign_05__sympy_extras_ask),
 ]
 
 

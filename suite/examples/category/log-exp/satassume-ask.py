@@ -121,7 +121,7 @@ import satassume.sympy_api
 
 
 # ---- case demo-eq-log-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-184853 answered null (no verdict)
+# the run satassume-ask-20261019-214827 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_log_01__satassume_ask():
     x = Symbol('x')
@@ -133,7 +133,7 @@ def demo_eq_log_01__satassume_ask():
 
 
 # ---- case demo-eq-pow-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-184853 answered null (no verdict)
+# the run satassume-ask-20261019-214827 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_pow_01__satassume_ask():
     n = Symbol('n')
@@ -146,8 +146,8 @@ def demo_eq_pow_01__satassume_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-log-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-184853', demo_eq_log_01__satassume_ask),
-    ('demo-eq-pow-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-184853', demo_eq_pow_01__satassume_ask),
+    ('demo-eq-log-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-214827', demo_eq_log_01__satassume_ask),
+    ('demo-eq-pow-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-214827', demo_eq_pow_01__satassume_ask),
 ]
 
 

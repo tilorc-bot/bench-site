@@ -131,10 +131,10 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-parity-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-184907 answered true (solved)
+# the run sympy-extras-simplify-20261019-214842 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_01__sympy_extras_simplify():
-    n = Symbol('n', integer=True)
+    n = Symbol('n')
     Assum = And(Q.integer(n), Q.odd(n))
     Residual = Pow(-1, n + 1) - 1
     Result = sympy_extras.assumptions.simplify(Residual, Assum)
@@ -144,11 +144,11 @@ def demo_parity_01__sympy_extras_simplify():
 
 
 # ---- case demo-parity-02 · expected false · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-184907 answered false (solved)
+# the run sympy-extras-simplify-20261019-214842 answered false (solved)
 @_in(_SETUP1)
 def demo_parity_02__sympy_extras_simplify():
-    n = Symbol('n', integer=True)
-    m = Symbol('m', integer=True)
+    n = Symbol('n')
+    m = Symbol('m')
     Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
     Residual = Pow(-1, n * m) - 1
     Result = sympy_extras.assumptions.simplify(Residual, Assum)
@@ -158,10 +158,10 @@ def demo_parity_02__sympy_extras_simplify():
 
 
 # ---- case demo-parity-03 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-184907 answered true (solved)
+# the run sympy-extras-simplify-20261019-214842 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_03__sympy_extras_simplify():
-    n = Symbol('n', integer=True)
+    n = Symbol('n')
     Assum = And(Q.integer(n))
     Residual = Pow(-1, n * (n + 1)) - 1
     Result = sympy_extras.assumptions.simplify(Residual, Assum)
@@ -171,10 +171,10 @@ def demo_parity_03__sympy_extras_simplify():
 
 
 # ---- case demo-parity-04 · expected contingent · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-184907 answered null (declined correctly)
+# the run sympy-extras-simplify-20261019-214842 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_parity_04__sympy_extras_simplify():
-    n = Symbol('n', integer=True)
+    n = Symbol('n')
     Assum = And(Q.integer(n), Q.even(n))
     Residual = Pow(I, n) - 1
     Result = sympy_extras.assumptions.simplify(Residual, Assum)
@@ -184,11 +184,11 @@ def demo_parity_04__sympy_extras_simplify():
 
 
 # ---- case demo-parity-05 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-184907 answered true (solved)
+# the run sympy-extras-simplify-20261019-214842 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_05__sympy_extras_simplify():
-    n = Symbol('n', integer=True)
-    m = Symbol('m', integer=True)
+    n = Symbol('n')
+    m = Symbol('m')
     Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
     Residual = Pow(-1, n * m) - (-1)
     Result = sympy_extras.assumptions.simplify(Residual, Assum)
@@ -199,11 +199,11 @@ def demo_parity_05__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-parity-01', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-184907', demo_parity_01__sympy_extras_simplify),
-    ('demo-parity-02', 'sympy-extras-simplify', 'false', 'false', 'sympy-extras-simplify-20261019-184907', demo_parity_02__sympy_extras_simplify),
-    ('demo-parity-03', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-184907', demo_parity_03__sympy_extras_simplify),
-    ('demo-parity-04', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261019-184907', demo_parity_04__sympy_extras_simplify),
-    ('demo-parity-05', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-184907', demo_parity_05__sympy_extras_simplify),
+    ('demo-parity-01', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-214842', demo_parity_01__sympy_extras_simplify),
+    ('demo-parity-02', 'sympy-extras-simplify', 'false', 'false', 'sympy-extras-simplify-20261019-214842', demo_parity_02__sympy_extras_simplify),
+    ('demo-parity-03', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-214842', demo_parity_03__sympy_extras_simplify),
+    ('demo-parity-04', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261019-214842', demo_parity_04__sympy_extras_simplify),
+    ('demo-parity-05', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-214842', demo_parity_05__sympy_extras_simplify),
 ]
 
 

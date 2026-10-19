@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # case sp-acj4-181-real · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-184304 answered null (declined correctly)
+# the run sympy-refine-20261019-214237 answered null (declined correctly)
 # It prints the CAS version that runs (with a warning if the stored run used another), the
 # verdict, and CHANGED: <stored> -> <got> if the answer is not the stored run's.
 # Exit status: 0 when the answer is the stored run's (a wrong one too; an error answers null,
@@ -82,7 +82,7 @@ _version('sympy', '1.14.0')
 
 # the query code, exactly as it ran (an error answers null, as in the harness)
 try:
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Ne(sinh(asin(x)), I, evaluate=False), Ne(sinh(asin(x)), -I, evaluate=False), ~Q.zero(cosh(asin(x))))
     Residual = atan(sinh(asin(x))) - asin(tanh(asin(x)))
     Result = refine(Residual, Assum)
@@ -93,5 +93,5 @@ except (Exception, SystemExit):
     _traceback.print_exc()
     Answer = None
 
-_outcome, _change = _verdict(globals().get('Answer'), 'contingent', 'null', 'sympy-refine-20261019-184304')
+_outcome, _change = _verdict(globals().get('Answer'), 'contingent', 'null', 'sympy-refine-20261019-214237')
 _exit(1 if _change else 0)

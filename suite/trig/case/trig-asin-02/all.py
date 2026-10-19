@@ -157,7 +157,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case trig-asin-02 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-184912 answered null (no verdict)
+# the run satassume-ask-20261019-214849 answered null (no verdict)
 @_in(_SETUP1)
 def trig_asin_02__satassume_ask():
     x = Symbol('x')
@@ -182,7 +182,7 @@ def trig_asin_02__satrefine_refine():
 
 
 # ---- case trig-asin-02 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261019-184916 answered true (solved)
+# the run satsimp-trigsimp-20261019-214853 answered true (solved)
 @_in(_SETUP2)
 def trig_asin_02__satsimp_trigsimp():
     x = Symbol('x')
@@ -195,7 +195,7 @@ def trig_asin_02__satsimp_trigsimp():
 
 
 # ---- case trig-asin-02 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-184914 answered null (no verdict)
+# the run satrefine-simplify-20261019-214850 answered null (no verdict)
 @_in(_SETUP2)
 def trig_asin_02__satrefine_simplify():
     x = Symbol('x')
@@ -233,10 +233,10 @@ def trig_asin_02__sympy_ask():
 
 
 # ---- case trig-asin-02 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184949 answered null (no verdict)
+# the run sympy-satask-20261019-214928 answered null (no verdict)
 @_in(_SETUP4)
 def trig_asin_02__sympy_satask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), x > -1, x < 1)
     Residual = asin(sin(x)) - x
     Answer = satask(Q.zero(Residual), Assum)
@@ -270,10 +270,10 @@ def trig_asin_02__sympy_simplify():
 
 
 # ---- case trig-asin-02 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-184918 answered null (no verdict)
+# the run sympy-extras-ask-20261019-214854 answered null (no verdict)
 @_in(_SETUP5)
 def trig_asin_02__sympy_extras_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), x > -1, x < 1)
     Residual = asin(sin(x)) - x
     # the claim as a relation, sympy-extras' statement form (not Q.zero: see the adapter)
@@ -283,10 +283,10 @@ def trig_asin_02__sympy_extras_ask():
 
 
 # ---- case trig-asin-02 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-184929 answered null (no verdict)
+# the run sympy-extras-refine-20261019-214906 answered null (no verdict)
 @_in(_SETUP5)
 def trig_asin_02__sympy_extras_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), x > -1, x < 1)
     Residual = asin(sin(x)) - x
     Result = sympy_extras.assumptions.refine(Residual, Assum)
@@ -296,10 +296,10 @@ def trig_asin_02__sympy_extras_refine():
 
 
 # ---- case trig-asin-02 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-184938 answered null (no verdict)
+# the run sympy-extras-simplify-20261019-214916 answered null (no verdict)
 @_in(_SETUP5)
 def trig_asin_02__sympy_extras_simplify():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), x > -1, x < 1)
     Residual = asin(sin(x)) - x
     Result = sympy_extras.assumptions.simplify(Residual, Assum)
@@ -310,18 +310,18 @@ def trig_asin_02__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-asin-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-184912', trig_asin_02__satassume_ask),
+    ('trig-asin-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-214849', trig_asin_02__satassume_ask),
     ('trig-asin-02', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-213715', trig_asin_02__satrefine_refine),
-    ('trig-asin-02', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261019-184916', trig_asin_02__satsimp_trigsimp),
-    ('trig-asin-02', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261019-184914', trig_asin_02__satrefine_simplify),
+    ('trig-asin-02', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261019-214853', trig_asin_02__satsimp_trigsimp),
+    ('trig-asin-02', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261019-214850', trig_asin_02__satrefine_simplify),
     ('trig-asin-02', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-213708', trig_asin_02__sympy_auto),
     ('trig-asin-02', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-213709', trig_asin_02__sympy_ask),
-    ('trig-asin-02', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-184949', trig_asin_02__sympy_satask),
+    ('trig-asin-02', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214928', trig_asin_02__sympy_satask),
     ('trig-asin-02', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-213712', trig_asin_02__sympy_refine),
     ('trig-asin-02', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261019-213713', trig_asin_02__sympy_simplify),
-    ('trig-asin-02', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-184918', trig_asin_02__sympy_extras_ask),
-    ('trig-asin-02', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-184929', trig_asin_02__sympy_extras_refine),
-    ('trig-asin-02', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261019-184938', trig_asin_02__sympy_extras_simplify),
+    ('trig-asin-02', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-214854', trig_asin_02__sympy_extras_ask),
+    ('trig-asin-02', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-214906', trig_asin_02__sympy_extras_refine),
+    ('trig-asin-02', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261019-214916', trig_asin_02__sympy_extras_simplify),
 ]
 
 

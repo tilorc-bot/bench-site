@@ -124,10 +124,10 @@ from sympy.assumptions.satask import satask
 
 
 # ---- case trig-acos-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184949 answered null (no verdict)
+# the run sympy-satask-20261019-214928 answered null (no verdict)
 @_in(_SETUP1)
 def trig_acos_01__sympy_satask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x), x < 3)
     Residual = acos(cos(x)) - x
     Answer = satask(Q.zero(Residual), Assum)
@@ -136,10 +136,10 @@ def trig_acos_01__sympy_satask():
 
 
 # ---- case trig-asin-01 · expected contingent · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184949 answered null (declined correctly)
+# the run sympy-satask-20261019-214928 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_asin_01__sympy_satask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = asin(sin(x)) - x
     Answer = satask(Q.zero(Residual), Assum)
@@ -148,10 +148,10 @@ def trig_asin_01__sympy_satask():
 
 
 # ---- case trig-asin-02 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184949 answered null (no verdict)
+# the run sympy-satask-20261019-214928 answered null (no verdict)
 @_in(_SETUP1)
 def trig_asin_02__sympy_satask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), x > -1, x < 1)
     Residual = asin(sin(x)) - x
     Answer = satask(Q.zero(Residual), Assum)
@@ -160,10 +160,10 @@ def trig_asin_02__sympy_satask():
 
 
 # ---- case trig-atan-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-184949 answered null (no verdict)
+# the run sympy-satask-20261019-214928 answered null (no verdict)
 @_in(_SETUP1)
 def trig_atan_01__sympy_satask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), x > -1, x < 1)
     Residual = atan(tan(x)) - x
     Answer = satask(Q.zero(Residual), Assum)
@@ -173,10 +173,10 @@ def trig_atan_01__sympy_satask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-acos-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-184949', trig_acos_01__sympy_satask),
-    ('trig-asin-01', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-184949', trig_asin_01__sympy_satask),
-    ('trig-asin-02', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-184949', trig_asin_02__sympy_satask),
-    ('trig-atan-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-184949', trig_atan_01__sympy_satask),
+    ('trig-acos-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214928', trig_acos_01__sympy_satask),
+    ('trig-asin-01', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-214928', trig_asin_01__sympy_satask),
+    ('trig-asin-02', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214928', trig_asin_02__sympy_satask),
+    ('trig-atan-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214928', trig_atan_01__sympy_satask),
 ]
 
 
