@@ -234,10 +234,10 @@ def sp_acj4_421_complex__sympy_ask():
 
 
 # ---- case sp-acj4-421-complex · expected contingent · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-191346 answered null (declined correctly)
+# the run sympy-satask-20261019-221849 answered null (declined correctly)
 @_in(_SETUP4)
 def sp_acj4_421_complex__sympy_satask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), ~Q.zero(cos(tanh(Abs(x)))), ~Q.zero(cosh(x)), ~Q.zero(cos(tanh(x))))
     Residual = tan(tanh(Abs(x))) - Abs(tan(tanh(x)))
     Answer = satask(Q.zero(Residual), Assum)
@@ -317,7 +317,7 @@ CASES = [
     ('sp-acj4-421-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_421_complex__satrefine_simplify),
     ('sp-acj4-421-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-214042', sp_acj4_421_complex__sympy_auto),
     ('sp-acj4-421-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-214048', sp_acj4_421_complex__sympy_ask),
-    ('sp-acj4-421-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-191346', sp_acj4_421_complex__sympy_satask),
+    ('sp-acj4-421-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-221849', sp_acj4_421_complex__sympy_satask),
     ('sp-acj4-421-complex', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-214237', sp_acj4_421_complex__sympy_refine),
     ('sp-acj4-421-complex', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-214603', sp_acj4_421_complex__sympy_simplify),
     ('sp-acj4-421-complex', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_421_complex__sympy_extras_ask),

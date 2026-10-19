@@ -232,10 +232,10 @@ def sp_acj4_229_real__sympy_ask():
 
 
 # ---- case sp-acj4-229-real · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-191346 answered true (solved)
+# the run sympy-satask-20261019-221849 answered true (solved)
 @_in(_SETUP4)
 def sp_acj4_229_real__sympy_satask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(Pow(pi, x)))
     Residual = 1 / Pow(pi, x) - Pow(1 / pi, x)
     Answer = satask(Q.zero(Residual), Assum)
@@ -315,7 +315,7 @@ CASES = [
     ('sp-acj4-229-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-214939', sp_acj4_229_real__satrefine_simplify),
     ('sp-acj4-229-real', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-214042', sp_acj4_229_real__sympy_auto),
     ('sp-acj4-229-real', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-214048', sp_acj4_229_real__sympy_ask),
-    ('sp-acj4-229-real', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-191346', sp_acj4_229_real__sympy_satask),
+    ('sp-acj4-229-real', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-221849', sp_acj4_229_real__sympy_satask),
     ('sp-acj4-229-real', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-214237', sp_acj4_229_real__sympy_refine),
     ('sp-acj4-229-real', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-214603', sp_acj4_229_real__sympy_simplify),
     ('sp-acj4-229-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_229_real__sympy_extras_ask),

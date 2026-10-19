@@ -231,10 +231,10 @@ def sp_acj4_3_real__sympy_ask():
 
 
 # ---- case sp-acj4-3-real · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-191346 answered null (no verdict)
+# the run sympy-satask-20261019-221849 answered null (no verdict)
 @_in(_SETUP4)
 def sp_acj4_3_real__sympy_satask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = asinh(sinh(x)) - x
     Answer = satask(Q.zero(Residual), Assum)
@@ -314,7 +314,7 @@ CASES = [
     ('sp-acj4-3-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-214939', sp_acj4_3_real__satrefine_simplify),
     ('sp-acj4-3-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-214042', sp_acj4_3_real__sympy_auto),
     ('sp-acj4-3-real', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-214048', sp_acj4_3_real__sympy_ask),
-    ('sp-acj4-3-real', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-191346', sp_acj4_3_real__sympy_satask),
+    ('sp-acj4-3-real', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-221849', sp_acj4_3_real__sympy_satask),
     ('sp-acj4-3-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-214237', sp_acj4_3_real__sympy_refine),
     ('sp-acj4-3-real', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261019-214603', sp_acj4_3_real__sympy_simplify),
     ('sp-acj4-3-real', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-215028', sp_acj4_3_real__sympy_extras_ask),

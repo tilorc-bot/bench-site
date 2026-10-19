@@ -235,10 +235,10 @@ def sp_acj4_190_condf__sympy_ask():
 
 
 # ---- case sp-acj4-190-condf · expected false · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-191346 answered null (no verdict)
+# the run sympy-satask-20261019-221849 answered null (no verdict)
 @_in(_SETUP4)
 def sp_acj4_190_condf__sympy_satask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), Q.imaginary(x), Ne(x, I, evaluate=False), Ne(x, -I, evaluate=False), Ne(cos(atan(x)), 1, evaluate=False), Ne(cos(atan(x)), -1, evaluate=False), ~Q.zero(x))
     Residual = atanh(cos(atan(x))) - Abs(asinh(1 / x))
     Answer = satask(Q.zero(Residual), Assum)
@@ -318,7 +318,7 @@ CASES = [
     ('sp-acj4-190-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_190_condf__satrefine_simplify),
     ('sp-acj4-190-condf', 'sympy-auto', 'false', 'null', 'sympy-auto-20261019-214042', sp_acj4_190_condf__sympy_auto),
     ('sp-acj4-190-condf', 'sympy-ask', 'false', 'null', 'sympy-ask-20261019-214048', sp_acj4_190_condf__sympy_ask),
-    ('sp-acj4-190-condf', 'sympy-satask', 'false', 'null', 'sympy-satask-20261019-191346', sp_acj4_190_condf__sympy_satask),
+    ('sp-acj4-190-condf', 'sympy-satask', 'false', 'null', 'sympy-satask-20261019-221849', sp_acj4_190_condf__sympy_satask),
     ('sp-acj4-190-condf', 'sympy-refine', 'false', 'null', 'sympy-refine-20261019-214237', sp_acj4_190_condf__sympy_refine),
     ('sp-acj4-190-condf', 'sympy-simplify', 'false', 'null', 'sympy-simplify-20261019-214603', sp_acj4_190_condf__sympy_simplify),
     ('sp-acj4-190-condf', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261019-215028', sp_acj4_190_condf__sympy_extras_ask),
