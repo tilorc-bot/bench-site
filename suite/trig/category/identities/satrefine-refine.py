@@ -121,7 +121,7 @@ import satsimp
 
 
 # ---- case trig-double-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-041010 answered null (no verdict)
+# the run satrefine-refine-20261019-075055 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_01__satrefine_refine():
     z = Symbol('z')
@@ -134,7 +134,7 @@ def trig_double_01__satrefine_refine():
 
 
 # ---- case trig-double-02 · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-041010 answered null (no verdict)
+# the run satrefine-refine-20261019-075055 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_02__satrefine_refine():
     x = Symbol('x')
@@ -147,7 +147,7 @@ def trig_double_02__satrefine_refine():
 
 
 # ---- case trig-pyth-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-041010 answered null (no verdict)
+# the run satrefine-refine-20261019-075055 answered null (no verdict)
 @_in(_SETUP1)
 def trig_pyth_01__satrefine_refine():
     z = Symbol('z')
@@ -160,7 +160,7 @@ def trig_pyth_01__satrefine_refine():
 
 
 # ---- case trig-sqrt-01 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-041010 answered null (declined correctly)
+# the run satrefine-refine-20261019-075055 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_sqrt_01__satrefine_refine():
     x = Symbol('x')
@@ -173,7 +173,7 @@ def trig_sqrt_01__satrefine_refine():
 
 
 # ---- case trig-tan-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-041010 answered null (no verdict)
+# the run satrefine-refine-20261019-075055 answered null (no verdict)
 @_in(_SETUP1)
 def trig_tan_01__satrefine_refine():
     x = Symbol('x')
@@ -187,11 +187,11 @@ def trig_tan_01__satrefine_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-double-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-041010', trig_double_01__satrefine_refine),
-    ('trig-double-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261019-041010', trig_double_02__satrefine_refine),
-    ('trig-pyth-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-041010', trig_pyth_01__satrefine_refine),
-    ('trig-sqrt-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-041010', trig_sqrt_01__satrefine_refine),
-    ('trig-tan-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-041010', trig_tan_01__satrefine_refine),
+    ('trig-double-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-075055', trig_double_01__satrefine_refine),
+    ('trig-double-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261019-075055', trig_double_02__satrefine_refine),
+    ('trig-pyth-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-075055', trig_pyth_01__satrefine_refine),
+    ('trig-sqrt-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-075055', trig_sqrt_01__satrefine_refine),
+    ('trig-tan-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-075055', trig_tan_01__satrefine_refine),
 ]
 
 

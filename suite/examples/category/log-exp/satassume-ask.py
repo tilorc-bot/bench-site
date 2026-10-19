@@ -118,33 +118,33 @@ import satassume.sympy_api
 
 
 # ---- case demo-eq-log-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (no verdict)
+# the run satassume-ask-20261019-075124 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_log_01__satassume_ask():
     x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x))
     Residual = log(exp(x)) - x
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-eq-pow-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (no verdict)
+# the run satassume-ask-20261019-075124 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_pow_01__satassume_ask():
     n = Symbol('n')
     Assum = And(Q.integer(n))
     Residual = Pow(-1, 2 * n) - 1
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-log-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_eq_log_01__satassume_ask),
-    ('demo-eq-pow-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_eq_pow_01__satassume_ask),
+    ('demo-eq-log-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075124', demo_eq_log_01__satassume_ask),
+    ('demo-eq-pow-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075124', demo_eq_pow_01__satassume_ask),
 ]
 
 

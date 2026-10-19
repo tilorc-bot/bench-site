@@ -121,26 +121,26 @@ import satsimp
 
 
 # ---- case demo-eq-log-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-041807 answered true (solved)
+# the run satrefine-simplify-20261019-075126 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_log_01__satrefine_simplify():
     x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x))
     Residual = log(exp(x)) - x
-    Result = simplify(satsimp.refine(Residual, Assum))
+    Result = simplify(satsimp.refine(Residual, Assum, strict=True))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-eq-pow-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-041807 answered true (solved)
+# the run satrefine-simplify-20261019-075126 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_pow_01__satrefine_simplify():
     n = Symbol('n')
     Assum = And(Q.integer(n))
     Residual = Pow(-1, 2 * n) - 1
-    Result = simplify(satsimp.refine(Residual, Assum))
+    Result = simplify(satsimp.refine(Residual, Assum, strict=True))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -148,8 +148,8 @@ def demo_eq_pow_01__satrefine_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-log-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-041807', demo_eq_log_01__satrefine_simplify),
-    ('demo-eq-pow-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-041807', demo_eq_pow_01__satrefine_simplify),
+    ('demo-eq-log-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-075126', demo_eq_log_01__satrefine_simplify),
+    ('demo-eq-pow-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-075126', demo_eq_pow_01__satrefine_simplify),
 ]
 
 

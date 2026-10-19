@@ -118,247 +118,247 @@ import satassume.sympy_api
 
 
 # ---- case sp-acj4-1007-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041856 answered true (solved)
+# the run satassume-ask-20261019-075135 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1007_ground__satassume_ask():
     Assum = And()
     Residual = 0 / sin(5) - 0
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case sp-acj4-1107-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041856 answered true (solved)
+# the run satassume-ask-20261019-075135 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1107_ground__satassume_ask():
     Assum = And()
     Residual = asin(sin(Integer(1) / 10)) - Rational(1, 10)
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case sp-acj4-1148-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041856 answered null (no verdict)
+# the run satassume-ask-20261019-075135 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_1148_ground__satassume_ask():
     Assum = And()
     Residual = cosh(log(Integer(1) / 4)) - Rational(17, 8)
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case sp-acj4-1149-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041856 answered true (solved)
+# the run satassume-ask-20261019-075135 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1149_ground__satassume_ask():
     Assum = And()
     Residual = exp(Abs(log(2))) - 2
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case sp-acj4-1177-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041856 answered true (solved)
+# the run satassume-ask-20261019-075135 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1177_ground__satassume_ask():
     Assum = And()
     Residual = Pow(0, asinh(10)) - 0
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case sp-acj4-1195-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041856 answered true (solved)
+# the run satassume-ask-20261019-075135 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1195_ground__satassume_ask():
     Assum = And()
     Residual = Pow(0, atan(7)) - 0
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case sp-acj4-1217-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041856 answered true (solved)
+# the run satassume-ask-20261019-075135 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1217_ground__satassume_ask():
     Assum = And()
     Residual = Pow(0, exp(-1)) - 0
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case sp-acj4-1238-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041856 answered true (solved)
+# the run satassume-ask-20261019-075135 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1238_ground__satassume_ask():
     Assum = And()
     Residual = Pow(0, 1 / pi) - 0
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case sp-acj4-1247-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041856 answered true (solved)
+# the run satassume-ask-20261019-075135 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1247_ground__satassume_ask():
     Assum = And()
     Residual = Pow(0, log(9)) - 0
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case sp-acj4-1254-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041856 answered true (solved)
+# the run satassume-ask-20261019-075135 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1254_ground__satassume_ask():
     Assum = And()
     Residual = Pow(0, sin(2)) - 0
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case sp-acj4-1258-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041856 answered true (solved)
+# the run satassume-ask-20261019-075135 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1258_ground__satassume_ask():
     Assum = And()
     Residual = Pow(0, sin(9)) - 0
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case sp-acj4-5372-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041856 answered true (solved)
+# the run satassume-ask-20261019-075135 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_5372_ground__satassume_ask():
     Assum = And()
     Residual = sin(asin(Integer(1) / -4)) - Rational(-1, 4)
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case sp-acj4-5382-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041856 answered null (no verdict)
+# the run satassume-ask-20261019-075135 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_5382_ground__satassume_ask():
     Assum = And()
     Residual = sinh(log(Integer(1) / 4)) - Rational(-15, 8)
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case sp-acj4-5385-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041856 answered null (no verdict)
+# the run satassume-ask-20261019-075135 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_5385_ground__satassume_ask():
     Assum = And()
     Residual = sinh(-log(4)) - Rational(-15, 8)
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case sp-acj4-819-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041856 answered true (solved)
+# the run satassume-ask-20261019-075135 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_819_ground__satassume_ask():
     Assum = And()
     Residual = 0 / pi - 0
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case sp-acj4-837-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041856 answered true (solved)
+# the run satassume-ask-20261019-075135 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_837_ground__satassume_ask():
     Assum = And()
     Residual = Pow(0, pi) - 0
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case sp-acj4-848-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041856 answered null (no verdict)
+# the run satassume-ask-20261019-075135 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_848_ground__satassume_ask():
     Assum = And()
     Residual = sinh(log(4)) - Rational(15, 8)
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case sp-acj4-868-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041856 answered true (solved)
+# the run satassume-ask-20261019-075135 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_868_ground__satassume_ask():
     Assum = And()
     Residual = 0 * acosh(7) - 0
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case sp-acj4-911-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041856 answered true (solved)
+# the run satassume-ask-20261019-075135 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_911_ground__satassume_ask():
     Assum = And()
     Residual = 0 / asin(-1) - 0
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case sp-acj4-927-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041856 answered true (solved)
+# the run satassume-ask-20261019-075135 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_927_ground__satassume_ask():
     Assum = And()
     Residual = 0 / asinh(4) - 0
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-1007-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-041856', sp_acj4_1007_ground__satassume_ask),
-    ('sp-acj4-1107-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-041856', sp_acj4_1107_ground__satassume_ask),
-    ('sp-acj4-1148-ground', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_1148_ground__satassume_ask),
-    ('sp-acj4-1149-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-041856', sp_acj4_1149_ground__satassume_ask),
-    ('sp-acj4-1177-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-041856', sp_acj4_1177_ground__satassume_ask),
-    ('sp-acj4-1195-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-041856', sp_acj4_1195_ground__satassume_ask),
-    ('sp-acj4-1217-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-041856', sp_acj4_1217_ground__satassume_ask),
-    ('sp-acj4-1238-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-041856', sp_acj4_1238_ground__satassume_ask),
-    ('sp-acj4-1247-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-041856', sp_acj4_1247_ground__satassume_ask),
-    ('sp-acj4-1254-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-041856', sp_acj4_1254_ground__satassume_ask),
-    ('sp-acj4-1258-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-041856', sp_acj4_1258_ground__satassume_ask),
-    ('sp-acj4-5372-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-041856', sp_acj4_5372_ground__satassume_ask),
-    ('sp-acj4-5382-ground', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_5382_ground__satassume_ask),
-    ('sp-acj4-5385-ground', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_5385_ground__satassume_ask),
-    ('sp-acj4-819-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-041856', sp_acj4_819_ground__satassume_ask),
-    ('sp-acj4-837-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-041856', sp_acj4_837_ground__satassume_ask),
-    ('sp-acj4-848-ground', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041856', sp_acj4_848_ground__satassume_ask),
-    ('sp-acj4-868-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-041856', sp_acj4_868_ground__satassume_ask),
-    ('sp-acj4-911-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-041856', sp_acj4_911_ground__satassume_ask),
-    ('sp-acj4-927-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-041856', sp_acj4_927_ground__satassume_ask),
+    ('sp-acj4-1007-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-075135', sp_acj4_1007_ground__satassume_ask),
+    ('sp-acj4-1107-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-075135', sp_acj4_1107_ground__satassume_ask),
+    ('sp-acj4-1148-ground', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075135', sp_acj4_1148_ground__satassume_ask),
+    ('sp-acj4-1149-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-075135', sp_acj4_1149_ground__satassume_ask),
+    ('sp-acj4-1177-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-075135', sp_acj4_1177_ground__satassume_ask),
+    ('sp-acj4-1195-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-075135', sp_acj4_1195_ground__satassume_ask),
+    ('sp-acj4-1217-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-075135', sp_acj4_1217_ground__satassume_ask),
+    ('sp-acj4-1238-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-075135', sp_acj4_1238_ground__satassume_ask),
+    ('sp-acj4-1247-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-075135', sp_acj4_1247_ground__satassume_ask),
+    ('sp-acj4-1254-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-075135', sp_acj4_1254_ground__satassume_ask),
+    ('sp-acj4-1258-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-075135', sp_acj4_1258_ground__satassume_ask),
+    ('sp-acj4-5372-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-075135', sp_acj4_5372_ground__satassume_ask),
+    ('sp-acj4-5382-ground', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075135', sp_acj4_5382_ground__satassume_ask),
+    ('sp-acj4-5385-ground', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075135', sp_acj4_5385_ground__satassume_ask),
+    ('sp-acj4-819-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-075135', sp_acj4_819_ground__satassume_ask),
+    ('sp-acj4-837-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-075135', sp_acj4_837_ground__satassume_ask),
+    ('sp-acj4-848-ground', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075135', sp_acj4_848_ground__satassume_ask),
+    ('sp-acj4-868-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-075135', sp_acj4_868_ground__satassume_ask),
+    ('sp-acj4-911-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-075135', sp_acj4_911_ground__satassume_ask),
+    ('sp-acj4-927-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-075135', sp_acj4_927_ground__satassume_ask),
 ]
 
 

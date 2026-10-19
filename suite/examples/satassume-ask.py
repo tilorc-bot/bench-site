@@ -118,365 +118,365 @@ import satassume.sympy_api
 
 
 # ---- case demo-atan2-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (no verdict)
+# the run satassume-ask-20261019-075124 answered null (no verdict)
 @_in(_SETUP1)
 def demo_atan2_01__satassume_ask():
     x = Symbol('x')
     y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.positive(x))
     Residual = atan2(y, x) - atan(y / x)
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-atan2-02 · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (no verdict)
+# the run satassume-ask-20261019-075124 answered null (no verdict)
 @_in(_SETUP1)
 def demo_atan2_02__satassume_ask():
     x = Symbol('x')
     y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.negative(x), Q.positive(y))
     Residual = atan2(y, x) - atan(y / x)
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-eq-abs-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (no verdict)
+# the run satassume-ask-20261019-075124 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_abs_01__satassume_ask():
     x = Symbol('x')
     Assum = And(Q.real(x), Q.negative(x))
     Residual = Abs(x) - (-x)
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-eq-abs-02 · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered false (solved)
+# the run satassume-ask-20261019-075124 answered false (solved)
 @_in(_SETUP1)
 def demo_eq_abs_02__satassume_ask():
     x = Symbol('x')
     Assum = And(Q.real(x), Q.negative(x))
     Residual = Abs(x) - x
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-eq-log-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (no verdict)
+# the run satassume-ask-20261019-075124 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_log_01__satassume_ask():
     x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x))
     Residual = log(exp(x)) - x
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-eq-pow-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (no verdict)
+# the run satassume-ask-20261019-075124 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_pow_01__satassume_ask():
     n = Symbol('n')
     Assum = And(Q.integer(n))
     Residual = Pow(-1, 2 * n) - 1
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-eq-sqrt-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (no verdict)
+# the run satassume-ask-20261019-075124 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_sqrt_01__satassume_ask():
     x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x))
     Residual = sqrt(Pow(x, 2)) - x
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-eq-sqrt-02 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (no verdict)
+# the run satassume-ask-20261019-075124 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_sqrt_02__satassume_ask():
     x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sqrt(Pow(x, 2)) - Abs(x)
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-eq-sqrt-03 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (declined correctly)
+# the run satassume-ask-20261019-075124 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_eq_sqrt_03__satassume_ask():
     x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sqrt(Pow(x, 2)) - x
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-eq-sqrt-04 · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (no verdict)
+# the run satassume-ask-20261019-075124 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_sqrt_04__satassume_ask():
     x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x))
     Residual = sqrt(Pow(x, 2)) + 1 - x
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-eq-trig-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (no verdict)
+# the run satassume-ask-20261019-075124 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_trig_01__satassume_ask():
     x = Symbol('x')
     Assum = And(Q.complex(x))
     Residual = Pow(sin(x), 2) + Pow(cos(x), 2) - 1
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-eq-trig-02 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (no verdict)
+# the run satassume-ask-20261019-075124 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_trig_02__satassume_ask():
     x = Symbol('x')
     Assum = And(Q.complex(x))
     Residual = 2 * sin(x) * cos(x) - sin(2 * x)
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-log-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (no verdict)
+# the run satassume-ask-20261019-075124 answered null (no verdict)
 @_in(_SETUP1)
 def demo_log_01__satassume_ask():
     x = Symbol('x')
     y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
     Residual = log(x * y) - (log(x) + log(y))
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-log-02 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (declined correctly)
+# the run satassume-ask-20261019-075124 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_log_02__satassume_ask():
     z = Symbol('z')
     w = Symbol('w')
     Assum = And(Q.complex(z), Q.complex(w), ~Q.zero(z), ~Q.zero(w))
     Residual = log(z * w) - (log(z) + log(w))
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-log-03 · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered false (solved)
+# the run satassume-ask-20261019-075124 answered false (solved)
 @_in(_SETUP1)
 def demo_log_03__satassume_ask():
     x = Symbol('x')
     Assum = And(Q.real(x), Q.negative(x))
     Residual = log(x) - log(-x)
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-nonzero-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (no verdict)
+# the run satassume-ask-20261019-075124 answered null (no verdict)
 @_in(_SETUP1)
 def demo_nonzero_01__satassume_ask():
     z = Symbol('z')
     Assum = And(Q.complex(z), Q.imaginary(z))
     Residual = Abs(sign(z)) - 1
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-parity-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (no verdict)
+# the run satassume-ask-20261019-075124 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_01__satassume_ask():
     n = Symbol('n')
     Assum = And(Q.integer(n), Q.odd(n))
     Residual = Pow(-1, n + 1) - 1
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-parity-02 · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered false (solved)
+# the run satassume-ask-20261019-075124 answered false (solved)
 @_in(_SETUP1)
 def demo_parity_02__satassume_ask():
     n = Symbol('n')
     m = Symbol('m')
     Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
     Residual = Pow(-1, n * m) - 1
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-parity-03 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (no verdict)
+# the run satassume-ask-20261019-075124 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_03__satassume_ask():
     n = Symbol('n')
     Assum = And(Q.integer(n))
     Residual = Pow(-1, n * (n + 1)) - 1
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-parity-04 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (declined correctly)
+# the run satassume-ask-20261019-075124 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_parity_04__satassume_ask():
     n = Symbol('n')
     Assum = And(Q.integer(n), Q.even(n))
     Residual = Pow(I, n) - 1
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-parity-05 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (no verdict)
+# the run satassume-ask-20261019-075124 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_05__satassume_ask():
     n = Symbol('n')
     m = Symbol('m')
     Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
     Residual = Pow(-1, n * m) - (-1)
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-prime-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (no verdict)
+# the run satassume-ask-20261019-075124 answered null (no verdict)
 @_in(_SETUP1)
 def demo_prime_01__satassume_ask():
     p = Symbol('p')
     Assum = And(Q.integer(p), Q.prime(p), p > 2)
     Residual = Pow(-1, p) - (-1)
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-prime-02 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (declined correctly)
+# the run satassume-ask-20261019-075124 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_prime_02__satassume_ask():
     p = Symbol('p')
     Assum = And(Q.integer(p), Q.prime(p))
     Residual = Pow(-1, p) - (-1)
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-sign-02 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (no verdict)
+# the run satassume-ask-20261019-075124 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_02__satassume_ask():
     x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(x))
     Residual = sign(Pow(x, 2)) - 1
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-sign-03 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (declined correctly)
+# the run satassume-ask-20261019-075124 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_sign_03__satassume_ask():
     x = Symbol('x')
     Assum = And(Q.complex(x), ~Q.zero(x))
     Residual = sign(Pow(x, 2)) - 1
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-sign-04 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (no verdict)
+# the run satassume-ask-20261019-075124 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_04__satassume_ask():
     z = Symbol('z')
     Assum = And(Q.complex(z))
     Residual = Abs(z * conjugate(z)) - (z * conjugate(z))
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-sign-05 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (no verdict)
+# the run satassume-ask-20261019-075124 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_05__satassume_ask():
     x = Symbol('x')
     y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.negative(y))
     Residual = Abs(x - y) - (x - y)
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-atan2-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_atan2_01__satassume_ask),
-    ('demo-atan2-02', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-041805', demo_atan2_02__satassume_ask),
-    ('demo-eq-abs-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_eq_abs_01__satassume_ask),
-    ('demo-eq-abs-02', 'satassume-ask', 'false', 'false', 'satassume-ask-20261019-041805', demo_eq_abs_02__satassume_ask),
-    ('demo-eq-log-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_eq_log_01__satassume_ask),
-    ('demo-eq-pow-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_eq_pow_01__satassume_ask),
-    ('demo-eq-sqrt-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_eq_sqrt_01__satassume_ask),
-    ('demo-eq-sqrt-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_eq_sqrt_02__satassume_ask),
-    ('demo-eq-sqrt-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041805', demo_eq_sqrt_03__satassume_ask),
-    ('demo-eq-sqrt-04', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-041805', demo_eq_sqrt_04__satassume_ask),
-    ('demo-eq-trig-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_eq_trig_01__satassume_ask),
-    ('demo-eq-trig-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_eq_trig_02__satassume_ask),
-    ('demo-log-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_log_01__satassume_ask),
-    ('demo-log-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041805', demo_log_02__satassume_ask),
-    ('demo-log-03', 'satassume-ask', 'false', 'false', 'satassume-ask-20261019-041805', demo_log_03__satassume_ask),
-    ('demo-nonzero-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_nonzero_01__satassume_ask),
-    ('demo-parity-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_parity_01__satassume_ask),
-    ('demo-parity-02', 'satassume-ask', 'false', 'false', 'satassume-ask-20261019-041805', demo_parity_02__satassume_ask),
-    ('demo-parity-03', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_parity_03__satassume_ask),
-    ('demo-parity-04', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041805', demo_parity_04__satassume_ask),
-    ('demo-parity-05', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_parity_05__satassume_ask),
-    ('demo-prime-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_prime_01__satassume_ask),
-    ('demo-prime-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041805', demo_prime_02__satassume_ask),
-    ('demo-sign-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_sign_02__satassume_ask),
-    ('demo-sign-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041805', demo_sign_03__satassume_ask),
-    ('demo-sign-04', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_sign_04__satassume_ask),
-    ('demo-sign-05', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_sign_05__satassume_ask),
+    ('demo-atan2-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075124', demo_atan2_01__satassume_ask),
+    ('demo-atan2-02', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-075124', demo_atan2_02__satassume_ask),
+    ('demo-eq-abs-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075124', demo_eq_abs_01__satassume_ask),
+    ('demo-eq-abs-02', 'satassume-ask', 'false', 'false', 'satassume-ask-20261019-075124', demo_eq_abs_02__satassume_ask),
+    ('demo-eq-log-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075124', demo_eq_log_01__satassume_ask),
+    ('demo-eq-pow-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075124', demo_eq_pow_01__satassume_ask),
+    ('demo-eq-sqrt-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075124', demo_eq_sqrt_01__satassume_ask),
+    ('demo-eq-sqrt-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075124', demo_eq_sqrt_02__satassume_ask),
+    ('demo-eq-sqrt-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-075124', demo_eq_sqrt_03__satassume_ask),
+    ('demo-eq-sqrt-04', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-075124', demo_eq_sqrt_04__satassume_ask),
+    ('demo-eq-trig-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075124', demo_eq_trig_01__satassume_ask),
+    ('demo-eq-trig-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075124', demo_eq_trig_02__satassume_ask),
+    ('demo-log-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075124', demo_log_01__satassume_ask),
+    ('demo-log-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-075124', demo_log_02__satassume_ask),
+    ('demo-log-03', 'satassume-ask', 'false', 'false', 'satassume-ask-20261019-075124', demo_log_03__satassume_ask),
+    ('demo-nonzero-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075124', demo_nonzero_01__satassume_ask),
+    ('demo-parity-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075124', demo_parity_01__satassume_ask),
+    ('demo-parity-02', 'satassume-ask', 'false', 'false', 'satassume-ask-20261019-075124', demo_parity_02__satassume_ask),
+    ('demo-parity-03', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075124', demo_parity_03__satassume_ask),
+    ('demo-parity-04', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-075124', demo_parity_04__satassume_ask),
+    ('demo-parity-05', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075124', demo_parity_05__satassume_ask),
+    ('demo-prime-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075124', demo_prime_01__satassume_ask),
+    ('demo-prime-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-075124', demo_prime_02__satassume_ask),
+    ('demo-sign-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075124', demo_sign_02__satassume_ask),
+    ('demo-sign-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-075124', demo_sign_03__satassume_ask),
+    ('demo-sign-04', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075124', demo_sign_04__satassume_ask),
+    ('demo-sign-05', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075124', demo_sign_05__satassume_ask),
 ]
 
 

@@ -121,26 +121,26 @@ import satsimp
 
 
 # ---- case demo-prime-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-041807 answered null (no verdict)
+# the run satrefine-simplify-20261019-075126 answered null (no verdict)
 @_in(_SETUP1)
 def demo_prime_01__satrefine_simplify():
     p = Symbol('p')
     Assum = And(Q.integer(p), Q.prime(p), p > 2)
     Residual = Pow(-1, p) - (-1)
-    Result = simplify(satsimp.refine(Residual, Assum))
+    Result = simplify(satsimp.refine(Residual, Assum, strict=True))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-prime-02 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-041807 answered null (declined correctly)
+# the run satrefine-simplify-20261019-075126 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_prime_02__satrefine_simplify():
     p = Symbol('p')
     Assum = And(Q.integer(p), Q.prime(p))
     Residual = Pow(-1, p) - (-1)
-    Result = simplify(satsimp.refine(Residual, Assum))
+    Result = simplify(satsimp.refine(Residual, Assum, strict=True))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -148,8 +148,8 @@ def demo_prime_02__satrefine_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-prime-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261019-041807', demo_prime_01__satrefine_simplify),
-    ('demo-prime-02', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-041807', demo_prime_02__satrefine_simplify),
+    ('demo-prime-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261019-075126', demo_prime_01__satrefine_simplify),
+    ('demo-prime-02', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-075126', demo_prime_02__satrefine_simplify),
 ]
 
 

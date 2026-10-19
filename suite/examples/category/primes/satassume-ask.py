@@ -118,33 +118,33 @@ import satassume.sympy_api
 
 
 # ---- case demo-prime-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (no verdict)
+# the run satassume-ask-20261019-075124 answered null (no verdict)
 @_in(_SETUP1)
 def demo_prime_01__satassume_ask():
     p = Symbol('p')
     Assum = And(Q.integer(p), Q.prime(p), p > 2)
     Residual = Pow(-1, p) - (-1)
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-prime-02 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (declined correctly)
+# the run satassume-ask-20261019-075124 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_prime_02__satassume_ask():
     p = Symbol('p')
     Assum = And(Q.integer(p), Q.prime(p))
     Residual = Pow(-1, p) - (-1)
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-prime-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_prime_01__satassume_ask),
-    ('demo-prime-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041805', demo_prime_02__satassume_ask),
+    ('demo-prime-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075124', demo_prime_01__satassume_ask),
+    ('demo-prime-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-075124', demo_prime_02__satassume_ask),
 ]
 
 

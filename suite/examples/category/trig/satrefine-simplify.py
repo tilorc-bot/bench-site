@@ -121,26 +121,26 @@ import satsimp
 
 
 # ---- case demo-eq-trig-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-041807 answered true (solved)
+# the run satrefine-simplify-20261019-075126 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_trig_01__satrefine_simplify():
     x = Symbol('x')
     Assum = And(Q.complex(x))
     Residual = Pow(sin(x), 2) + Pow(cos(x), 2) - 1
-    Result = simplify(satsimp.refine(Residual, Assum))
+    Result = simplify(satsimp.refine(Residual, Assum, strict=True))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
 
 
 # ---- case demo-eq-trig-02 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-041807 answered true (solved)
+# the run satrefine-simplify-20261019-075126 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_trig_02__satrefine_simplify():
     x = Symbol('x')
     Assum = And(Q.complex(x))
     Residual = 2 * sin(x) * cos(x) - sin(2 * x)
-    Result = simplify(satsimp.refine(Residual, Assum))
+    Result = simplify(satsimp.refine(Residual, Assum, strict=True))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -148,8 +148,8 @@ def demo_eq_trig_02__satrefine_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-trig-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-041807', demo_eq_trig_01__satrefine_simplify),
-    ('demo-eq-trig-02', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-041807', demo_eq_trig_02__satrefine_simplify),
+    ('demo-eq-trig-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-075126', demo_eq_trig_01__satrefine_simplify),
+    ('demo-eq-trig-02', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-075126', demo_eq_trig_02__satrefine_simplify),
 ]
 
 

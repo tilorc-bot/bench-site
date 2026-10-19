@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite examples · case demo-eq-sqrt-02 · all Python systems
-# 10 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 11 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -145,13 +145,13 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-eq-sqrt-02 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (no verdict)
+# the run satassume-ask-20261019-075124 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_sqrt_02__satassume_ask():
     x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sqrt(Pow(x, 2)) - Abs(x)
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
@@ -169,14 +169,27 @@ def demo_eq_sqrt_02__satrefine_refine():
     return Answer
 
 
+# ---- case demo-eq-sqrt-02 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
+# the run satsimp-trigsimp-20261019-075128 answered null (no verdict)
+@_in(_SETUP2)
+def demo_eq_sqrt_02__satsimp_trigsimp():
+    x = Symbol('x')
+    Assum = And(Q.real(x))
+    Residual = sqrt(Pow(x, 2)) - Abs(x)
+    Result = satsimp.trigsimp(Residual, Assum, strict=True)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-eq-sqrt-02 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-041807 answered true (solved)
+# the run satrefine-simplify-20261019-075126 answered true (solved)
 @_in(_SETUP2)
 def demo_eq_sqrt_02__satrefine_simplify():
     x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sqrt(Pow(x, 2)) - Abs(x)
-    Result = simplify(satsimp.refine(Residual, Assum))
+    Result = simplify(satsimp.refine(Residual, Assum, strict=True))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -274,9 +287,10 @@ def demo_eq_sqrt_02__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-sqrt-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_eq_sqrt_02__satassume_ask),
+    ('demo-eq-sqrt-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075124', demo_eq_sqrt_02__satassume_ask),
     ('demo-eq-sqrt-02', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-074829', demo_eq_sqrt_02__satrefine_refine),
-    ('demo-eq-sqrt-02', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-041807', demo_eq_sqrt_02__satrefine_simplify),
+    ('demo-eq-sqrt-02', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261019-075128', demo_eq_sqrt_02__satsimp_trigsimp),
+    ('demo-eq-sqrt-02', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-075126', demo_eq_sqrt_02__satrefine_simplify),
     ('demo-eq-sqrt-02', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-040938', demo_eq_sqrt_02__sympy_auto),
     ('demo-eq-sqrt-02', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-040940', demo_eq_sqrt_02__sympy_ask),
     ('demo-eq-sqrt-02', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-040943', demo_eq_sqrt_02__sympy_refine),

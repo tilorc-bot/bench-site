@@ -118,59 +118,59 @@ import satassume.sympy_api
 
 
 # ---- case trig-period-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041821 answered true (solved)
+# the run satassume-ask-20261019-075130 answered true (solved)
 @_in(_SETUP1)
 def trig_period_01__satassume_ask():
     z = Symbol('z')
     Assum = And(Q.complex(z))
     Residual = sin(z + 2 * pi) - sin(z)
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case trig-period-02 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041821 answered null (declined correctly)
+# the run satassume-ask-20261019-075130 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_02__satassume_ask():
     x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = cos(x + pi) - cos(x)
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case trig-period-03 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041821 answered null (declined correctly)
+# the run satassume-ask-20261019-075130 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_03__satassume_ask():
     x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x))
     Residual = cos(x + pi) - cos(x)
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case trig-shift-01 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041821 answered null (declined correctly)
+# the run satassume-ask-20261019-075130 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_shift_01__satassume_ask():
     x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sin(x + pi) - sin(x)
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-period-01', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-041821', trig_period_01__satassume_ask),
-    ('trig-period-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041821', trig_period_02__satassume_ask),
-    ('trig-period-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041821', trig_period_03__satassume_ask),
-    ('trig-shift-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041821', trig_shift_01__satassume_ask),
+    ('trig-period-01', 'satassume-ask', 'true', 'true', 'satassume-ask-20261019-075130', trig_period_01__satassume_ask),
+    ('trig-period-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-075130', trig_period_02__satassume_ask),
+    ('trig-period-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-075130', trig_period_03__satassume_ask),
+    ('trig-shift-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-075130', trig_shift_01__satassume_ask),
 ]
 
 

@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite simplipy · case sp-acj4-442-real · all Python systems
-# 10 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 11 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -147,19 +147,19 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case sp-acj4-442-real · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041856 answered null (declined correctly)
+# the run satassume-ask-20261019-075135 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_442_real__satassume_ask():
     x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(x), ~Q.zero(log(x)), ~Q.zero(1 / log(x)))
     Residual = -log(log(x)) - log(1 / log(x))
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
 
 # ---- case sp-acj4-442-real · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-041555 answered null (declined correctly)
+# the run satrefine-refine-20261019-075057 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_442_real__satrefine_refine():
     x = Symbol('x')
@@ -171,14 +171,27 @@ def sp_acj4_442_real__satrefine_refine():
     return Answer
 
 
+# ---- case sp-acj4-442-real · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
+# the run satsimp-trigsimp-20261019-075223 answered null (declined correctly)
+@_in(_SETUP2)
+def sp_acj4_442_real__satsimp_trigsimp():
+    x = Symbol('x')
+    Assum = And(Q.real(x), ~Q.zero(x), ~Q.zero(log(x)), ~Q.zero(1 / log(x)))
+    Residual = -log(log(x)) - log(1 / log(x))
+    Result = satsimp.trigsimp(Residual, Assum, strict=True)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-442-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-041906 answered null (declined correctly)
+# the run satrefine-simplify-20261019-075144 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_442_real__satrefine_simplify():
     x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(x), ~Q.zero(log(x)), ~Q.zero(1 / log(x)))
     Residual = -log(log(x)) - log(1 / log(x))
-    Result = simplify(satsimp.refine(Residual, Assum))
+    Result = simplify(satsimp.refine(Residual, Assum, strict=True))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -276,9 +289,10 @@ def sp_acj4_442_real__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-442-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041856', sp_acj4_442_real__satassume_ask),
-    ('sp-acj4-442-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-041555', sp_acj4_442_real__satrefine_refine),
-    ('sp-acj4-442-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-041906', sp_acj4_442_real__satrefine_simplify),
+    ('sp-acj4-442-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-075135', sp_acj4_442_real__satassume_ask),
+    ('sp-acj4-442-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-075057', sp_acj4_442_real__satrefine_refine),
+    ('sp-acj4-442-real', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261019-075223', sp_acj4_442_real__satsimp_trigsimp),
+    ('sp-acj4-442-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-075144', sp_acj4_442_real__satrefine_simplify),
     ('sp-acj4-442-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-041248', sp_acj4_442_real__sympy_auto),
     ('sp-acj4-442-real', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-041253', sp_acj4_442_real__sympy_ask),
     ('sp-acj4-442-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-041405', sp_acj4_442_real__sympy_refine),

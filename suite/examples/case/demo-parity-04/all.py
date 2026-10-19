@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite examples · case demo-parity-04 · all Python systems
-# 10 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 11 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -145,13 +145,13 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-parity-04 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-041805 answered null (declined correctly)
+# the run satassume-ask-20261019-075124 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_parity_04__satassume_ask():
     n = Symbol('n')
     Assum = And(Q.integer(n), Q.even(n))
     Residual = Pow(I, n) - 1
-    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum)
+    Answer = satassume.sympy_api.ask(Q.zero(Residual), Assum, strict=True)
     print(Residual, Answer, sep='\n')
     return Answer
 
@@ -169,14 +169,27 @@ def demo_parity_04__satrefine_refine():
     return Answer
 
 
+# ---- case demo-parity-04 · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
+# the run satsimp-trigsimp-20261019-075128 answered null (declined correctly)
+@_in(_SETUP2)
+def demo_parity_04__satsimp_trigsimp():
+    n = Symbol('n')
+    Assum = And(Q.integer(n), Q.even(n))
+    Residual = Pow(I, n) - 1
+    Result = satsimp.trigsimp(Residual, Assum, strict=True)
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-parity-04 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-041807 answered null (declined correctly)
+# the run satrefine-simplify-20261019-075126 answered null (declined correctly)
 @_in(_SETUP2)
 def demo_parity_04__satrefine_simplify():
     n = Symbol('n')
     Assum = And(Q.integer(n), Q.even(n))
     Residual = Pow(I, n) - 1
-    Result = simplify(satsimp.refine(Residual, Assum))
+    Result = simplify(satsimp.refine(Residual, Assum, strict=True))
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -274,9 +287,10 @@ def demo_parity_04__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-parity-04', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041805', demo_parity_04__satassume_ask),
+    ('demo-parity-04', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-075124', demo_parity_04__satassume_ask),
     ('demo-parity-04', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-074829', demo_parity_04__satrefine_refine),
-    ('demo-parity-04', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-041807', demo_parity_04__satrefine_simplify),
+    ('demo-parity-04', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261019-075128', demo_parity_04__satsimp_trigsimp),
+    ('demo-parity-04', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-075126', demo_parity_04__satrefine_simplify),
     ('demo-parity-04', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-040938', demo_parity_04__sympy_auto),
     ('demo-parity-04', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-040940', demo_parity_04__sympy_ask),
     ('demo-parity-04', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-040943', demo_parity_04__sympy_refine),
