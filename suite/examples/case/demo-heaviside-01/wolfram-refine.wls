@@ -1,5 +1,5 @@
 (* assume-eval: case demo-heaviside-01 · expected true · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261018-212433 answered null (no verdict) *)
+(* the run wolfram-refine-20261019-040953 answered null (no verdict) *)
 (* Run: wolframscript -file this-file.wls.  The harness's setup only warms up the kernel and silences messages: left out. *)
 
 Begin["AEScript`"];
@@ -23,4 +23,4 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261018-212433 answered null (no verdict)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261019-040953 answered null (no verdict)"];

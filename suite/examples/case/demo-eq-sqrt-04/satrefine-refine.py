@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # case demo-eq-sqrt-04 · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025311 answered false (solved)
+# the run satrefine-refine-20261019-040947 answered false (solved)
 # It prints the CAS version that runs (with a warning if the stored run used another), the
 # verdict, and CHANGED: <stored> -> <got> if the answer is not the stored run's.
 # Exit status: 0 when the answer is the stored run's (a wrong one too; an error answers null,
@@ -83,7 +83,7 @@ _version('satsimp', '0.1.0')
 
 # the query code, exactly as it ran (an error answers null, as in the harness)
 try:
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x))
     Residual = sqrt(Pow(x, 2)) + 1 - x
     Result = satsimp.refine(Residual, Assum)
@@ -94,5 +94,5 @@ except (Exception, SystemExit):
     _traceback.print_exc()
     Answer = None
 
-_outcome, _change = _verdict(globals().get('Answer'), 'false', 'false', 'satrefine-refine-20261019-025311')
+_outcome, _change = _verdict(globals().get('Answer'), 'false', 'false', 'satrefine-refine-20261019-040947')
 _exit(1 if _change else 0)

@@ -121,7 +121,7 @@ import sympy
 
 
 # ---- case demo-eq-log-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212418 answered true (solved)
+# the run sympy-auto-20261019-040938 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_log_01__sympy_auto():
     x = Symbol('x', real=True, positive=True)
@@ -133,7 +133,7 @@ def demo_eq_log_01__sympy_auto():
 
 
 # ---- case demo-eq-pow-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212418 answered true (solved)
+# the run sympy-auto-20261019-040938 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_pow_01__sympy_auto():
     n = Symbol('n', integer=True)
@@ -146,8 +146,8 @@ def demo_eq_pow_01__sympy_auto():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-log-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_eq_log_01__sympy_auto),
-    ('demo-eq-pow-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_eq_pow_01__sympy_auto),
+    ('demo-eq-log-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-040938', demo_eq_log_01__sympy_auto),
+    ('demo-eq-pow-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-040938', demo_eq_pow_01__sympy_auto),
 ]
 
 

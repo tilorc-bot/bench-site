@@ -158,11 +158,11 @@ def demo_parity_05__satassume_ask():
 
 
 # ---- case demo-parity-05 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025311 answered true (solved)
+# the run satrefine-refine-20261019-040947 answered true (solved)
 @_in(_SETUP2)
 def demo_parity_05__satrefine_refine():
-    n = Symbol('n', integer=True)
-    m = Symbol('m', integer=True)
+    n = Symbol('n')
+    m = Symbol('m')
     Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
     Residual = Pow(-1, n * m) - (-1)
     Result = satsimp.refine(Residual, Assum)
@@ -186,7 +186,7 @@ def demo_parity_05__satrefine_simplify():
 
 
 # ---- case demo-parity-05 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212418 answered true (solved)
+# the run sympy-auto-20261019-040938 answered true (solved)
 @_in(_SETUP3)
 def demo_parity_05__sympy_auto():
     n = Symbol('n', integer=True, odd=True)
@@ -200,7 +200,7 @@ def demo_parity_05__sympy_auto():
 
 
 # ---- case demo-parity-05 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-212419 answered null (no verdict)
+# the run sympy-ask-20261019-040940 answered null (no verdict)
 @_in(_SETUP3)
 def demo_parity_05__sympy_ask():
     n = Symbol('n', integer=True)
@@ -214,7 +214,7 @@ def demo_parity_05__sympy_ask():
 
 
 # ---- case demo-parity-05 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-212422 answered true (solved)
+# the run sympy-refine-20261019-040943 answered true (solved)
 @_in(_SETUP3)
 def demo_parity_05__sympy_refine():
     n = Symbol('n', integer=True)
@@ -228,7 +228,7 @@ def demo_parity_05__sympy_refine():
 
 
 # ---- case demo-parity-05 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-212424 answered true (solved)
+# the run sympy-simplify-20261019-040945 answered true (solved)
 @_in(_SETUP3)
 def demo_parity_05__sympy_simplify():
     n = Symbol('n', integer=True, odd=True)
@@ -285,12 +285,12 @@ def demo_parity_05__sympy_extras_simplify():
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('demo-parity-05', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_parity_05__satassume_ask),
-    ('demo-parity-05', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_parity_05__satrefine_refine),
+    ('demo-parity-05', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-040947', demo_parity_05__satrefine_refine),
     ('demo-parity-05', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-032451', demo_parity_05__satrefine_simplify),
-    ('demo-parity-05', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_parity_05__sympy_auto),
-    ('demo-parity-05', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_parity_05__sympy_ask),
-    ('demo-parity-05', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-212422', demo_parity_05__sympy_refine),
-    ('demo-parity-05', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_parity_05__sympy_simplify),
+    ('demo-parity-05', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-040938', demo_parity_05__sympy_auto),
+    ('demo-parity-05', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-040940', demo_parity_05__sympy_ask),
+    ('demo-parity-05', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-040943', demo_parity_05__sympy_refine),
+    ('demo-parity-05', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-040945', demo_parity_05__sympy_simplify),
     ('demo-parity-05', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-032454', demo_parity_05__sympy_extras_ask),
     ('demo-parity-05', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261019-032458', demo_parity_05__sympy_extras_refine),
     ('demo-parity-05', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-032501', demo_parity_05__sympy_extras_simplify),

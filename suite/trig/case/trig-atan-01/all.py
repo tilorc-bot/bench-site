@@ -159,10 +159,10 @@ def trig_atan_01__satassume_ask():
 
 
 # ---- case trig-atan-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025453 answered null (no verdict)
+# the run satrefine-refine-20261019-041010 answered null (no verdict)
 @_in(_SETUP2)
 def trig_atan_01__satrefine_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), x > -1, x < 1)
     Residual = atan(tan(x)) - x
     Result = satsimp.refine(Residual, Assum)
@@ -185,7 +185,7 @@ def trig_atan_01__satrefine_simplify():
 
 
 # ---- case trig-atan-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212442 answered null (no verdict)
+# the run sympy-auto-20261019-041003 answered null (no verdict)
 @_in(_SETUP3)
 def trig_atan_01__sympy_auto():
     x = Symbol('x', real=True)
@@ -198,7 +198,7 @@ def trig_atan_01__sympy_auto():
 
 
 # ---- case trig-atan-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-212443 answered null (no verdict)
+# the run sympy-ask-20261019-041004 answered null (no verdict)
 @_in(_SETUP3)
 def trig_atan_01__sympy_ask():
     x = Symbol('x', real=True)
@@ -211,7 +211,7 @@ def trig_atan_01__sympy_ask():
 
 
 # ---- case trig-atan-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-212445 answered null (no verdict)
+# the run sympy-refine-20261019-041006 answered null (no verdict)
 @_in(_SETUP3)
 def trig_atan_01__sympy_refine():
     x = Symbol('x', real=True)
@@ -224,7 +224,7 @@ def trig_atan_01__sympy_refine():
 
 
 # ---- case trig-atan-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-212447 answered null (no verdict)
+# the run sympy-simplify-20261019-041008 answered null (no verdict)
 @_in(_SETUP3)
 def trig_atan_01__sympy_simplify():
     x = Symbol('x', real=True)
@@ -277,12 +277,12 @@ def trig_atan_01__sympy_extras_simplify():
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('trig-atan-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032505', trig_atan_01__satassume_ask),
-    ('trig-atan-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-025453', trig_atan_01__satrefine_refine),
+    ('trig-atan-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-041010', trig_atan_01__satrefine_refine),
     ('trig-atan-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261019-032507', trig_atan_01__satrefine_simplify),
-    ('trig-atan-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261018-212442', trig_atan_01__sympy_auto),
-    ('trig-atan-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212443', trig_atan_01__sympy_ask),
-    ('trig-atan-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212445', trig_atan_01__sympy_refine),
-    ('trig-atan-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261018-212447', trig_atan_01__sympy_simplify),
+    ('trig-atan-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-041003', trig_atan_01__sympy_auto),
+    ('trig-atan-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-041004', trig_atan_01__sympy_ask),
+    ('trig-atan-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-041006', trig_atan_01__sympy_refine),
+    ('trig-atan-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261019-041008', trig_atan_01__sympy_simplify),
     ('trig-atan-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-032509', trig_atan_01__sympy_extras_ask),
     ('trig-atan-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-032520', trig_atan_01__sympy_extras_refine),
     ('trig-atan-01', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261019-032530', trig_atan_01__sympy_extras_simplify),

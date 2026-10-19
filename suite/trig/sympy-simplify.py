@@ -122,7 +122,7 @@ import sympy
 
 
 # ---- case trig-acos-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-212447 answered null (no verdict)
+# the run sympy-simplify-20261019-041008 answered null (no verdict)
 @_in(_SETUP1)
 def trig_acos_01__sympy_simplify():
     x = Symbol('x', real=True, positive=True)
@@ -135,7 +135,7 @@ def trig_acos_01__sympy_simplify():
 
 
 # ---- case trig-asin-01 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-212447 answered null (declined correctly)
+# the run sympy-simplify-20261019-041008 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_asin_01__sympy_simplify():
     x = Symbol('x', real=True)
@@ -147,7 +147,7 @@ def trig_asin_01__sympy_simplify():
 
 
 # ---- case trig-asin-02 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-212447 answered null (no verdict)
+# the run sympy-simplify-20261019-041008 answered null (no verdict)
 @_in(_SETUP1)
 def trig_asin_02__sympy_simplify():
     x = Symbol('x', real=True)
@@ -159,7 +159,7 @@ def trig_asin_02__sympy_simplify():
 
 
 # ---- case trig-atan-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-212447 answered null (no verdict)
+# the run sympy-simplify-20261019-041008 answered null (no verdict)
 @_in(_SETUP1)
 def trig_atan_01__sympy_simplify():
     x = Symbol('x', real=True)
@@ -171,7 +171,7 @@ def trig_atan_01__sympy_simplify():
 
 
 # ---- case trig-double-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-212447 answered true (solved)
+# the run sympy-simplify-20261019-041008 answered true (solved)
 @_in(_SETUP1)
 def trig_double_01__sympy_simplify():
     z = Symbol('z', complex=True)
@@ -183,7 +183,7 @@ def trig_double_01__sympy_simplify():
 
 
 # ---- case trig-double-02 · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-212447 answered null (no verdict)
+# the run sympy-simplify-20261019-041008 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_02__sympy_simplify():
     x = Symbol('x', real=True, positive=True)
@@ -195,7 +195,7 @@ def trig_double_02__sympy_simplify():
 
 
 # ---- case trig-period-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-212447 answered true (solved)
+# the run sympy-simplify-20261019-041008 answered true (solved)
 @_in(_SETUP1)
 def trig_period_01__sympy_simplify():
     z = Symbol('z', complex=True)
@@ -207,7 +207,7 @@ def trig_period_01__sympy_simplify():
 
 
 # ---- case trig-period-02 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-212447 answered null (declined correctly)
+# the run sympy-simplify-20261019-041008 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_02__sympy_simplify():
     x = Symbol('x', real=True)
@@ -219,7 +219,7 @@ def trig_period_02__sympy_simplify():
 
 
 # ---- case trig-period-03 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-212447 answered null (declined correctly)
+# the run sympy-simplify-20261019-041008 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_03__sympy_simplify():
     x = Symbol('x', real=True, positive=True)
@@ -231,7 +231,7 @@ def trig_period_03__sympy_simplify():
 
 
 # ---- case trig-pyth-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-212447 answered true (solved)
+# the run sympy-simplify-20261019-041008 answered true (solved)
 @_in(_SETUP1)
 def trig_pyth_01__sympy_simplify():
     z = Symbol('z', complex=True)
@@ -243,7 +243,7 @@ def trig_pyth_01__sympy_simplify():
 
 
 # ---- case trig-shift-01 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-212447 answered null (declined correctly)
+# the run sympy-simplify-20261019-041008 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_shift_01__sympy_simplify():
     x = Symbol('x', real=True)
@@ -255,7 +255,7 @@ def trig_shift_01__sympy_simplify():
 
 
 # ---- case trig-sqrt-01 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-212447 answered null (declined correctly)
+# the run sympy-simplify-20261019-041008 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_sqrt_01__sympy_simplify():
     x = Symbol('x', real=True)
@@ -267,7 +267,7 @@ def trig_sqrt_01__sympy_simplify():
 
 
 # ---- case trig-tan-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-212447 answered true (solved)
+# the run sympy-simplify-20261019-041008 answered true (solved)
 @_in(_SETUP1)
 def trig_tan_01__sympy_simplify():
     x = Symbol('x', real=True)
@@ -281,19 +281,19 @@ def trig_tan_01__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-acos-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261018-212447', trig_acos_01__sympy_simplify),
-    ('trig-asin-01', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261018-212447', trig_asin_01__sympy_simplify),
-    ('trig-asin-02', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261018-212447', trig_asin_02__sympy_simplify),
-    ('trig-atan-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261018-212447', trig_atan_01__sympy_simplify),
-    ('trig-double-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212447', trig_double_01__sympy_simplify),
-    ('trig-double-02', 'sympy-simplify', 'false', 'null', 'sympy-simplify-20261018-212447', trig_double_02__sympy_simplify),
-    ('trig-period-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212447', trig_period_01__sympy_simplify),
-    ('trig-period-02', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261018-212447', trig_period_02__sympy_simplify),
-    ('trig-period-03', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261018-212447', trig_period_03__sympy_simplify),
-    ('trig-pyth-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212447', trig_pyth_01__sympy_simplify),
-    ('trig-shift-01', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261018-212447', trig_shift_01__sympy_simplify),
-    ('trig-sqrt-01', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261018-212447', trig_sqrt_01__sympy_simplify),
-    ('trig-tan-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212447', trig_tan_01__sympy_simplify),
+    ('trig-acos-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261019-041008', trig_acos_01__sympy_simplify),
+    ('trig-asin-01', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-041008', trig_asin_01__sympy_simplify),
+    ('trig-asin-02', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261019-041008', trig_asin_02__sympy_simplify),
+    ('trig-atan-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261019-041008', trig_atan_01__sympy_simplify),
+    ('trig-double-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-041008', trig_double_01__sympy_simplify),
+    ('trig-double-02', 'sympy-simplify', 'false', 'null', 'sympy-simplify-20261019-041008', trig_double_02__sympy_simplify),
+    ('trig-period-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-041008', trig_period_01__sympy_simplify),
+    ('trig-period-02', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-041008', trig_period_02__sympy_simplify),
+    ('trig-period-03', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-041008', trig_period_03__sympy_simplify),
+    ('trig-pyth-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-041008', trig_pyth_01__sympy_simplify),
+    ('trig-shift-01', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-041008', trig_shift_01__sympy_simplify),
+    ('trig-sqrt-01', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-041008', trig_sqrt_01__sympy_simplify),
+    ('trig-tan-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-041008', trig_tan_01__sympy_simplify),
 ]
 
 

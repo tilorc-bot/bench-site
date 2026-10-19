@@ -120,7 +120,7 @@ import sympy
 
 
 # ---- case trig-acos-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-212443 answered null (no verdict)
+# the run sympy-ask-20261019-041004 answered null (no verdict)
 @_in(_SETUP1)
 def trig_acos_01__sympy_ask():
     x = Symbol('x', real=True)
@@ -132,7 +132,7 @@ def trig_acos_01__sympy_ask():
 
 
 # ---- case trig-asin-01 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-212443 answered null (declined correctly)
+# the run sympy-ask-20261019-041004 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_asin_01__sympy_ask():
     x = Symbol('x', real=True)
@@ -144,7 +144,7 @@ def trig_asin_01__sympy_ask():
 
 
 # ---- case trig-asin-02 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-212443 answered null (no verdict)
+# the run sympy-ask-20261019-041004 answered null (no verdict)
 @_in(_SETUP1)
 def trig_asin_02__sympy_ask():
     x = Symbol('x', real=True)
@@ -156,7 +156,7 @@ def trig_asin_02__sympy_ask():
 
 
 # ---- case trig-atan-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-212443 answered null (no verdict)
+# the run sympy-ask-20261019-041004 answered null (no verdict)
 @_in(_SETUP1)
 def trig_atan_01__sympy_ask():
     x = Symbol('x', real=True)
@@ -168,7 +168,7 @@ def trig_atan_01__sympy_ask():
 
 
 # ---- case trig-double-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-212443 answered null (no verdict)
+# the run sympy-ask-20261019-041004 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_01__sympy_ask():
     z = Symbol('z', complex=True)
@@ -180,7 +180,7 @@ def trig_double_01__sympy_ask():
 
 
 # ---- case trig-double-02 · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-212443 answered null (no verdict)
+# the run sympy-ask-20261019-041004 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_02__sympy_ask():
     x = Symbol('x', real=True)
@@ -192,7 +192,7 @@ def trig_double_02__sympy_ask():
 
 
 # ---- case trig-period-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-212443 answered true (solved)
+# the run sympy-ask-20261019-041004 answered true (solved)
 @_in(_SETUP1)
 def trig_period_01__sympy_ask():
     z = Symbol('z', complex=True)
@@ -204,7 +204,7 @@ def trig_period_01__sympy_ask():
 
 
 # ---- case trig-period-02 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-212443 answered null (declined correctly)
+# the run sympy-ask-20261019-041004 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_02__sympy_ask():
     x = Symbol('x', real=True)
@@ -216,7 +216,7 @@ def trig_period_02__sympy_ask():
 
 
 # ---- case trig-period-03 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-212443 answered null (declined correctly)
+# the run sympy-ask-20261019-041004 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_03__sympy_ask():
     x = Symbol('x', real=True)
@@ -228,7 +228,7 @@ def trig_period_03__sympy_ask():
 
 
 # ---- case trig-pyth-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-212443 answered null (no verdict)
+# the run sympy-ask-20261019-041004 answered null (no verdict)
 @_in(_SETUP1)
 def trig_pyth_01__sympy_ask():
     z = Symbol('z', complex=True)
@@ -240,7 +240,7 @@ def trig_pyth_01__sympy_ask():
 
 
 # ---- case trig-shift-01 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-212443 answered null (declined correctly)
+# the run sympy-ask-20261019-041004 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_shift_01__sympy_ask():
     x = Symbol('x', real=True)
@@ -252,7 +252,7 @@ def trig_shift_01__sympy_ask():
 
 
 # ---- case trig-sqrt-01 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-212443 answered null (declined correctly)
+# the run sympy-ask-20261019-041004 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_sqrt_01__sympy_ask():
     x = Symbol('x', real=True)
@@ -264,7 +264,7 @@ def trig_sqrt_01__sympy_ask():
 
 
 # ---- case trig-tan-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-212443 answered null (no verdict)
+# the run sympy-ask-20261019-041004 answered null (no verdict)
 @_in(_SETUP1)
 def trig_tan_01__sympy_ask():
     x = Symbol('x', real=True)
@@ -277,19 +277,19 @@ def trig_tan_01__sympy_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-acos-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212443', trig_acos_01__sympy_ask),
-    ('trig-asin-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-212443', trig_asin_01__sympy_ask),
-    ('trig-asin-02', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212443', trig_asin_02__sympy_ask),
-    ('trig-atan-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212443', trig_atan_01__sympy_ask),
-    ('trig-double-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212443', trig_double_01__sympy_ask),
-    ('trig-double-02', 'sympy-ask', 'false', 'null', 'sympy-ask-20261018-212443', trig_double_02__sympy_ask),
-    ('trig-period-01', 'sympy-ask', 'true', 'true', 'sympy-ask-20261018-212443', trig_period_01__sympy_ask),
-    ('trig-period-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-212443', trig_period_02__sympy_ask),
-    ('trig-period-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-212443', trig_period_03__sympy_ask),
-    ('trig-pyth-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212443', trig_pyth_01__sympy_ask),
-    ('trig-shift-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-212443', trig_shift_01__sympy_ask),
-    ('trig-sqrt-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261018-212443', trig_sqrt_01__sympy_ask),
-    ('trig-tan-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212443', trig_tan_01__sympy_ask),
+    ('trig-acos-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-041004', trig_acos_01__sympy_ask),
+    ('trig-asin-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-041004', trig_asin_01__sympy_ask),
+    ('trig-asin-02', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-041004', trig_asin_02__sympy_ask),
+    ('trig-atan-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-041004', trig_atan_01__sympy_ask),
+    ('trig-double-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-041004', trig_double_01__sympy_ask),
+    ('trig-double-02', 'sympy-ask', 'false', 'null', 'sympy-ask-20261019-041004', trig_double_02__sympy_ask),
+    ('trig-period-01', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-041004', trig_period_01__sympy_ask),
+    ('trig-period-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-041004', trig_period_02__sympy_ask),
+    ('trig-period-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-041004', trig_period_03__sympy_ask),
+    ('trig-pyth-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-041004', trig_pyth_01__sympy_ask),
+    ('trig-shift-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-041004', trig_shift_01__sympy_ask),
+    ('trig-sqrt-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-041004', trig_sqrt_01__sympy_ask),
+    ('trig-tan-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-041004', trig_tan_01__sympy_ask),
 ]
 
 

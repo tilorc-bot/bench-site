@@ -121,10 +121,10 @@ import satsimp
 
 
 # ---- case demo-parity-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025311 answered true (solved)
+# the run satrefine-refine-20261019-040947 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_01__satrefine_refine():
-    n = Symbol('n', integer=True)
+    n = Symbol('n')
     Assum = And(Q.integer(n), Q.odd(n))
     Residual = Pow(-1, n + 1) - 1
     Result = satsimp.refine(Residual, Assum)
@@ -134,11 +134,11 @@ def demo_parity_01__satrefine_refine():
 
 
 # ---- case demo-parity-02 · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025311 answered false (solved)
+# the run satrefine-refine-20261019-040947 answered false (solved)
 @_in(_SETUP1)
 def demo_parity_02__satrefine_refine():
-    n = Symbol('n', integer=True)
-    m = Symbol('m', integer=True)
+    n = Symbol('n')
+    m = Symbol('m')
     Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
     Residual = Pow(-1, n * m) - 1
     Result = satsimp.refine(Residual, Assum)
@@ -148,10 +148,10 @@ def demo_parity_02__satrefine_refine():
 
 
 # ---- case demo-parity-03 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025311 answered true (solved)
+# the run satrefine-refine-20261019-040947 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_03__satrefine_refine():
-    n = Symbol('n', integer=True)
+    n = Symbol('n')
     Assum = And(Q.integer(n))
     Residual = Pow(-1, n * (n + 1)) - 1
     Result = satsimp.refine(Residual, Assum)
@@ -161,10 +161,10 @@ def demo_parity_03__satrefine_refine():
 
 
 # ---- case demo-parity-04 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025311 answered null (declined correctly)
+# the run satrefine-refine-20261019-040947 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_parity_04__satrefine_refine():
-    n = Symbol('n', integer=True)
+    n = Symbol('n')
     Assum = And(Q.integer(n), Q.even(n))
     Residual = Pow(I, n) - 1
     Result = satsimp.refine(Residual, Assum)
@@ -174,11 +174,11 @@ def demo_parity_04__satrefine_refine():
 
 
 # ---- case demo-parity-05 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025311 answered true (solved)
+# the run satrefine-refine-20261019-040947 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_05__satrefine_refine():
-    n = Symbol('n', integer=True)
-    m = Symbol('m', integer=True)
+    n = Symbol('n')
+    m = Symbol('m')
     Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
     Residual = Pow(-1, n * m) - (-1)
     Result = satsimp.refine(Residual, Assum)
@@ -189,11 +189,11 @@ def demo_parity_05__satrefine_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-parity-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_parity_01__satrefine_refine),
-    ('demo-parity-02', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261019-025311', demo_parity_02__satrefine_refine),
-    ('demo-parity-03', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_parity_03__satrefine_refine),
-    ('demo-parity-04', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-025311', demo_parity_04__satrefine_refine),
-    ('demo-parity-05', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_parity_05__satrefine_refine),
+    ('demo-parity-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-040947', demo_parity_01__satrefine_refine),
+    ('demo-parity-02', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261019-040947', demo_parity_02__satrefine_refine),
+    ('demo-parity-03', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-040947', demo_parity_03__satrefine_refine),
+    ('demo-parity-04', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-040947', demo_parity_04__satrefine_refine),
+    ('demo-parity-05', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-040947', demo_parity_05__satrefine_refine),
 ]
 
 

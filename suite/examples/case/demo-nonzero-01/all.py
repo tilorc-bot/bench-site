@@ -157,10 +157,10 @@ def demo_nonzero_01__satassume_ask():
 
 
 # ---- case demo-nonzero-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025311 answered true (solved)
+# the run satrefine-refine-20261019-040947 answered true (solved)
 @_in(_SETUP2)
 def demo_nonzero_01__satrefine_refine():
-    z = Symbol('z', complex=True)
+    z = Symbol('z')
     Assum = And(Q.complex(z), Q.imaginary(z))
     Residual = Abs(sign(z)) - 1
     Result = satsimp.refine(Residual, Assum)
@@ -183,7 +183,7 @@ def demo_nonzero_01__satrefine_simplify():
 
 
 # ---- case demo-nonzero-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212418 answered true (solved)
+# the run sympy-auto-20261019-040938 answered true (solved)
 @_in(_SETUP3)
 def demo_nonzero_01__sympy_auto():
     z = Symbol('z', complex=True, imaginary=True)
@@ -196,7 +196,7 @@ def demo_nonzero_01__sympy_auto():
 
 
 # ---- case demo-nonzero-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-212419 answered null (no verdict)
+# the run sympy-ask-20261019-040940 answered null (no verdict)
 @_in(_SETUP3)
 def demo_nonzero_01__sympy_ask():
     z = Symbol('z', complex=True)
@@ -209,7 +209,7 @@ def demo_nonzero_01__sympy_ask():
 
 
 # ---- case demo-nonzero-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-212422 answered null (no verdict)
+# the run sympy-refine-20261019-040943 answered null (no verdict)
 @_in(_SETUP3)
 def demo_nonzero_01__sympy_refine():
     z = Symbol('z', complex=True)
@@ -222,7 +222,7 @@ def demo_nonzero_01__sympy_refine():
 
 
 # ---- case demo-nonzero-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-212424 answered true (solved)
+# the run sympy-simplify-20261019-040945 answered true (solved)
 @_in(_SETUP3)
 def demo_nonzero_01__sympy_simplify():
     z = Symbol('z', complex=True, imaginary=True)
@@ -275,12 +275,12 @@ def demo_nonzero_01__sympy_extras_simplify():
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('demo-nonzero-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_nonzero_01__satassume_ask),
-    ('demo-nonzero-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_nonzero_01__satrefine_refine),
+    ('demo-nonzero-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-040947', demo_nonzero_01__satrefine_refine),
     ('demo-nonzero-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-032451', demo_nonzero_01__satrefine_simplify),
-    ('demo-nonzero-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_nonzero_01__sympy_auto),
-    ('demo-nonzero-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_nonzero_01__sympy_ask),
-    ('demo-nonzero-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261018-212422', demo_nonzero_01__sympy_refine),
-    ('demo-nonzero-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_nonzero_01__sympy_simplify),
+    ('demo-nonzero-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-040938', demo_nonzero_01__sympy_auto),
+    ('demo-nonzero-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-040940', demo_nonzero_01__sympy_ask),
+    ('demo-nonzero-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-040943', demo_nonzero_01__sympy_refine),
+    ('demo-nonzero-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-040945', demo_nonzero_01__sympy_simplify),
     ('demo-nonzero-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-032454', demo_nonzero_01__sympy_extras_ask),
     ('demo-nonzero-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-032458', demo_nonzero_01__sympy_extras_refine),
     ('demo-nonzero-01', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261019-032501', demo_nonzero_01__sympy_extras_simplify),

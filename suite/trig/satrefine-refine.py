@@ -121,10 +121,10 @@ import satsimp
 
 
 # ---- case trig-acos-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025453 answered null (no verdict)
+# the run satrefine-refine-20261019-041010 answered null (no verdict)
 @_in(_SETUP1)
 def trig_acos_01__satrefine_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x), x < 3)
     Residual = acos(cos(x)) - x
     Result = satsimp.refine(Residual, Assum)
@@ -134,10 +134,10 @@ def trig_acos_01__satrefine_refine():
 
 
 # ---- case trig-asin-01 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025453 answered null (declined correctly)
+# the run satrefine-refine-20261019-041010 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_asin_01__satrefine_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = asin(sin(x)) - x
     Result = satsimp.refine(Residual, Assum)
@@ -147,10 +147,10 @@ def trig_asin_01__satrefine_refine():
 
 
 # ---- case trig-asin-02 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025453 answered null (no verdict)
+# the run satrefine-refine-20261019-041010 answered null (no verdict)
 @_in(_SETUP1)
 def trig_asin_02__satrefine_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), x > -1, x < 1)
     Residual = asin(sin(x)) - x
     Result = satsimp.refine(Residual, Assum)
@@ -160,10 +160,10 @@ def trig_asin_02__satrefine_refine():
 
 
 # ---- case trig-atan-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025453 answered null (no verdict)
+# the run satrefine-refine-20261019-041010 answered null (no verdict)
 @_in(_SETUP1)
 def trig_atan_01__satrefine_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), x > -1, x < 1)
     Residual = atan(tan(x)) - x
     Result = satsimp.refine(Residual, Assum)
@@ -173,10 +173,10 @@ def trig_atan_01__satrefine_refine():
 
 
 # ---- case trig-double-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025453 answered null (no verdict)
+# the run satrefine-refine-20261019-041010 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_01__satrefine_refine():
-    z = Symbol('z', complex=True)
+    z = Symbol('z')
     Assum = And(Q.complex(z))
     Residual = sin(2 * z) - (2 * (sin(z) * cos(z)))
     Result = satsimp.refine(Residual, Assum)
@@ -186,10 +186,10 @@ def trig_double_01__satrefine_refine():
 
 
 # ---- case trig-double-02 · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025453 answered null (no verdict)
+# the run satrefine-refine-20261019-041010 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_02__satrefine_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x), x < 1)
     Residual = sin(2 * x) - (2 * sin(x))
     Result = satsimp.refine(Residual, Assum)
@@ -199,10 +199,10 @@ def trig_double_02__satrefine_refine():
 
 
 # ---- case trig-period-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025453 answered true (solved)
+# the run satrefine-refine-20261019-041010 answered true (solved)
 @_in(_SETUP1)
 def trig_period_01__satrefine_refine():
-    z = Symbol('z', complex=True)
+    z = Symbol('z')
     Assum = And(Q.complex(z))
     Residual = sin(z + 2 * pi) - sin(z)
     Result = satsimp.refine(Residual, Assum)
@@ -212,10 +212,10 @@ def trig_period_01__satrefine_refine():
 
 
 # ---- case trig-period-02 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025453 answered null (declined correctly)
+# the run satrefine-refine-20261019-041010 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_02__satrefine_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = cos(x + pi) - cos(x)
     Result = satsimp.refine(Residual, Assum)
@@ -225,10 +225,10 @@ def trig_period_02__satrefine_refine():
 
 
 # ---- case trig-period-03 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025453 answered null (declined correctly)
+# the run satrefine-refine-20261019-041010 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_03__satrefine_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x))
     Residual = cos(x + pi) - cos(x)
     Result = satsimp.refine(Residual, Assum)
@@ -238,10 +238,10 @@ def trig_period_03__satrefine_refine():
 
 
 # ---- case trig-pyth-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025453 answered null (no verdict)
+# the run satrefine-refine-20261019-041010 answered null (no verdict)
 @_in(_SETUP1)
 def trig_pyth_01__satrefine_refine():
-    z = Symbol('z', complex=True)
+    z = Symbol('z')
     Assum = And(Q.complex(z))
     Residual = sin(z) * sin(z) + cos(z) * cos(z) - 1
     Result = satsimp.refine(Residual, Assum)
@@ -251,10 +251,10 @@ def trig_pyth_01__satrefine_refine():
 
 
 # ---- case trig-shift-01 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025453 answered null (declined correctly)
+# the run satrefine-refine-20261019-041010 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_shift_01__satrefine_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sin(x + pi) - sin(x)
     Result = satsimp.refine(Residual, Assum)
@@ -264,10 +264,10 @@ def trig_shift_01__satrefine_refine():
 
 
 # ---- case trig-sqrt-01 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025453 answered null (declined correctly)
+# the run satrefine-refine-20261019-041010 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_sqrt_01__satrefine_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sqrt(1 - sin(x) * sin(x)) - cos(x)
     Result = satsimp.refine(Residual, Assum)
@@ -277,10 +277,10 @@ def trig_sqrt_01__satrefine_refine():
 
 
 # ---- case trig-tan-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025453 answered null (no verdict)
+# the run satrefine-refine-20261019-041010 answered null (no verdict)
 @_in(_SETUP1)
 def trig_tan_01__satrefine_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(cos(x)))
     Residual = tan(x) - (sin(x) / cos(x))
     Result = satsimp.refine(Residual, Assum)
@@ -291,19 +291,19 @@ def trig_tan_01__satrefine_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-acos-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-025453', trig_acos_01__satrefine_refine),
-    ('trig-asin-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-025453', trig_asin_01__satrefine_refine),
-    ('trig-asin-02', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-025453', trig_asin_02__satrefine_refine),
-    ('trig-atan-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-025453', trig_atan_01__satrefine_refine),
-    ('trig-double-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-025453', trig_double_01__satrefine_refine),
-    ('trig-double-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261019-025453', trig_double_02__satrefine_refine),
-    ('trig-period-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025453', trig_period_01__satrefine_refine),
-    ('trig-period-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-025453', trig_period_02__satrefine_refine),
-    ('trig-period-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-025453', trig_period_03__satrefine_refine),
-    ('trig-pyth-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-025453', trig_pyth_01__satrefine_refine),
-    ('trig-shift-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-025453', trig_shift_01__satrefine_refine),
-    ('trig-sqrt-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-025453', trig_sqrt_01__satrefine_refine),
-    ('trig-tan-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-025453', trig_tan_01__satrefine_refine),
+    ('trig-acos-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-041010', trig_acos_01__satrefine_refine),
+    ('trig-asin-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-041010', trig_asin_01__satrefine_refine),
+    ('trig-asin-02', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-041010', trig_asin_02__satrefine_refine),
+    ('trig-atan-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-041010', trig_atan_01__satrefine_refine),
+    ('trig-double-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-041010', trig_double_01__satrefine_refine),
+    ('trig-double-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261019-041010', trig_double_02__satrefine_refine),
+    ('trig-period-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-041010', trig_period_01__satrefine_refine),
+    ('trig-period-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-041010', trig_period_02__satrefine_refine),
+    ('trig-period-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-041010', trig_period_03__satrefine_refine),
+    ('trig-pyth-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-041010', trig_pyth_01__satrefine_refine),
+    ('trig-shift-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-041010', trig_shift_01__satrefine_refine),
+    ('trig-sqrt-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-041010', trig_sqrt_01__satrefine_refine),
+    ('trig-tan-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-041010', trig_tan_01__satrefine_refine),
 ]
 
 

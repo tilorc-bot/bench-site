@@ -122,7 +122,7 @@ import sympy
 
 
 # ---- case trig-acos-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-212447 answered null (no verdict)
+# the run sympy-simplify-20261019-041008 answered null (no verdict)
 @_in(_SETUP1)
 def trig_acos_01__sympy_simplify():
     x = Symbol('x', real=True, positive=True)
@@ -135,7 +135,7 @@ def trig_acos_01__sympy_simplify():
 
 
 # ---- case trig-asin-01 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-212447 answered null (declined correctly)
+# the run sympy-simplify-20261019-041008 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_asin_01__sympy_simplify():
     x = Symbol('x', real=True)
@@ -147,7 +147,7 @@ def trig_asin_01__sympy_simplify():
 
 
 # ---- case trig-asin-02 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-212447 answered null (no verdict)
+# the run sympy-simplify-20261019-041008 answered null (no verdict)
 @_in(_SETUP1)
 def trig_asin_02__sympy_simplify():
     x = Symbol('x', real=True)
@@ -159,7 +159,7 @@ def trig_asin_02__sympy_simplify():
 
 
 # ---- case trig-atan-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-212447 answered null (no verdict)
+# the run sympy-simplify-20261019-041008 answered null (no verdict)
 @_in(_SETUP1)
 def trig_atan_01__sympy_simplify():
     x = Symbol('x', real=True)
@@ -172,10 +172,10 @@ def trig_atan_01__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-acos-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261018-212447', trig_acos_01__sympy_simplify),
-    ('trig-asin-01', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261018-212447', trig_asin_01__sympy_simplify),
-    ('trig-asin-02', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261018-212447', trig_asin_02__sympy_simplify),
-    ('trig-atan-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261018-212447', trig_atan_01__sympy_simplify),
+    ('trig-acos-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261019-041008', trig_acos_01__sympy_simplify),
+    ('trig-asin-01', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-041008', trig_asin_01__sympy_simplify),
+    ('trig-asin-02', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261019-041008', trig_asin_02__sympy_simplify),
+    ('trig-atan-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261019-041008', trig_atan_01__sympy_simplify),
 ]
 
 

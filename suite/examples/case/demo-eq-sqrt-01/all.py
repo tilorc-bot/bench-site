@@ -157,10 +157,10 @@ def demo_eq_sqrt_01__satassume_ask():
 
 
 # ---- case demo-eq-sqrt-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025311 answered true (solved)
+# the run satrefine-refine-20261019-040947 answered true (solved)
 @_in(_SETUP2)
 def demo_eq_sqrt_01__satrefine_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x))
     Residual = sqrt(Pow(x, 2)) - x
     Result = satsimp.refine(Residual, Assum)
@@ -183,7 +183,7 @@ def demo_eq_sqrt_01__satrefine_simplify():
 
 
 # ---- case demo-eq-sqrt-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212418 answered true (solved)
+# the run sympy-auto-20261019-040938 answered true (solved)
 @_in(_SETUP3)
 def demo_eq_sqrt_01__sympy_auto():
     x = Symbol('x', real=True, positive=True)
@@ -196,7 +196,7 @@ def demo_eq_sqrt_01__sympy_auto():
 
 
 # ---- case demo-eq-sqrt-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261018-212419 answered null (no verdict)
+# the run sympy-ask-20261019-040940 answered null (no verdict)
 @_in(_SETUP3)
 def demo_eq_sqrt_01__sympy_ask():
     x = Symbol('x', real=True)
@@ -209,7 +209,7 @@ def demo_eq_sqrt_01__sympy_ask():
 
 
 # ---- case demo-eq-sqrt-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261018-212422 answered true (solved)
+# the run sympy-refine-20261019-040943 answered true (solved)
 @_in(_SETUP3)
 def demo_eq_sqrt_01__sympy_refine():
     x = Symbol('x', real=True)
@@ -222,7 +222,7 @@ def demo_eq_sqrt_01__sympy_refine():
 
 
 # ---- case demo-eq-sqrt-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261018-212424 answered true (solved)
+# the run sympy-simplify-20261019-040945 answered true (solved)
 @_in(_SETUP3)
 def demo_eq_sqrt_01__sympy_simplify():
     x = Symbol('x', real=True, positive=True)
@@ -275,12 +275,12 @@ def demo_eq_sqrt_01__sympy_extras_simplify():
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('demo-eq-sqrt-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-032311', demo_eq_sqrt_01__satassume_ask),
-    ('demo-eq-sqrt-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_eq_sqrt_01__satrefine_refine),
+    ('demo-eq-sqrt-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-040947', demo_eq_sqrt_01__satrefine_refine),
     ('demo-eq-sqrt-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-032451', demo_eq_sqrt_01__satrefine_simplify),
-    ('demo-eq-sqrt-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_eq_sqrt_01__sympy_auto),
-    ('demo-eq-sqrt-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261018-212419', demo_eq_sqrt_01__sympy_ask),
-    ('demo-eq-sqrt-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261018-212422', demo_eq_sqrt_01__sympy_refine),
-    ('demo-eq-sqrt-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261018-212424', demo_eq_sqrt_01__sympy_simplify),
+    ('demo-eq-sqrt-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-040938', demo_eq_sqrt_01__sympy_auto),
+    ('demo-eq-sqrt-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-040940', demo_eq_sqrt_01__sympy_ask),
+    ('demo-eq-sqrt-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-040943', demo_eq_sqrt_01__sympy_refine),
+    ('demo-eq-sqrt-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-040945', demo_eq_sqrt_01__sympy_simplify),
     ('demo-eq-sqrt-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-032454', demo_eq_sqrt_01__sympy_extras_ask),
     ('demo-eq-sqrt-01', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261019-032458', demo_eq_sqrt_01__sympy_extras_refine),
     ('demo-eq-sqrt-01', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-032501', demo_eq_sqrt_01__sympy_extras_simplify),

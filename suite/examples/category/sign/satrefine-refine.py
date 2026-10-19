@@ -121,10 +121,10 @@ import satsimp
 
 
 # ---- case demo-nonzero-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025311 answered true (solved)
+# the run satrefine-refine-20261019-040947 answered true (solved)
 @_in(_SETUP1)
 def demo_nonzero_01__satrefine_refine():
-    z = Symbol('z', complex=True)
+    z = Symbol('z')
     Assum = And(Q.complex(z), Q.imaginary(z))
     Residual = Abs(sign(z)) - 1
     Result = satsimp.refine(Residual, Assum)
@@ -134,10 +134,10 @@ def demo_nonzero_01__satrefine_refine():
 
 
 # ---- case demo-sign-02 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025311 answered true (solved)
+# the run satrefine-refine-20261019-040947 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_02__satrefine_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(x))
     Residual = sign(Pow(x, 2)) - 1
     Result = satsimp.refine(Residual, Assum)
@@ -147,10 +147,10 @@ def demo_sign_02__satrefine_refine():
 
 
 # ---- case demo-sign-03 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025311 answered null (declined correctly)
+# the run satrefine-refine-20261019-040947 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_sign_03__satrefine_refine():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), ~Q.zero(x))
     Residual = sign(Pow(x, 2)) - 1
     Result = satsimp.refine(Residual, Assum)
@@ -160,10 +160,10 @@ def demo_sign_03__satrefine_refine():
 
 
 # ---- case demo-sign-04 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025311 answered true (solved)
+# the run satrefine-refine-20261019-040947 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_04__satrefine_refine():
-    z = Symbol('z', complex=True)
+    z = Symbol('z')
     Assum = And(Q.complex(z))
     Residual = Abs(z * conjugate(z)) - (z * conjugate(z))
     Result = satsimp.refine(Residual, Assum)
@@ -173,11 +173,11 @@ def demo_sign_04__satrefine_refine():
 
 
 # ---- case demo-sign-05 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-025311 answered true (solved)
+# the run satrefine-refine-20261019-040947 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_05__satrefine_refine():
-    x = Symbol('x', real=True)
-    y = Symbol('y', real=True)
+    x = Symbol('x')
+    y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.negative(y))
     Residual = Abs(x - y) - (x - y)
     Result = satsimp.refine(Residual, Assum)
@@ -188,11 +188,11 @@ def demo_sign_05__satrefine_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-nonzero-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_nonzero_01__satrefine_refine),
-    ('demo-sign-02', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_sign_02__satrefine_refine),
-    ('demo-sign-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-025311', demo_sign_03__satrefine_refine),
-    ('demo-sign-04', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_sign_04__satrefine_refine),
-    ('demo-sign-05', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-025311', demo_sign_05__satrefine_refine),
+    ('demo-nonzero-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-040947', demo_nonzero_01__satrefine_refine),
+    ('demo-sign-02', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-040947', demo_sign_02__satrefine_refine),
+    ('demo-sign-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-040947', demo_sign_03__satrefine_refine),
+    ('demo-sign-04', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-040947', demo_sign_04__satrefine_refine),
+    ('demo-sign-05', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-040947', demo_sign_05__satrefine_refine),
 ]
 
 

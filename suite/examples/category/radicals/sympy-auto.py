@@ -121,7 +121,7 @@ import sympy
 
 
 # ---- case demo-eq-abs-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212418 answered true (solved)
+# the run sympy-auto-20261019-040938 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_abs_01__sympy_auto():
     x = Symbol('x', real=True, negative=True)
@@ -133,7 +133,7 @@ def demo_eq_abs_01__sympy_auto():
 
 
 # ---- case demo-eq-abs-02 · expected false · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212418 answered null (no verdict)
+# the run sympy-auto-20261019-040938 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_abs_02__sympy_auto():
     x = Symbol('x', real=True, negative=True)
@@ -145,7 +145,7 @@ def demo_eq_abs_02__sympy_auto():
 
 
 # ---- case demo-eq-sqrt-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212418 answered true (solved)
+# the run sympy-auto-20261019-040938 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_01__sympy_auto():
     x = Symbol('x', real=True, positive=True)
@@ -157,7 +157,7 @@ def demo_eq_sqrt_01__sympy_auto():
 
 
 # ---- case demo-eq-sqrt-02 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212418 answered true (solved)
+# the run sympy-auto-20261019-040938 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_02__sympy_auto():
     x = Symbol('x', real=True)
@@ -169,7 +169,7 @@ def demo_eq_sqrt_02__sympy_auto():
 
 
 # ---- case demo-eq-sqrt-03 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212418 answered null (declined correctly)
+# the run sympy-auto-20261019-040938 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_eq_sqrt_03__sympy_auto():
     x = Symbol('x', real=True)
@@ -181,7 +181,7 @@ def demo_eq_sqrt_03__sympy_auto():
 
 
 # ---- case demo-eq-sqrt-04 · expected false · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261018-212418 answered false (solved)
+# the run sympy-auto-20261019-040938 answered false (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_04__sympy_auto():
     x = Symbol('x', real=True, positive=True)
@@ -194,12 +194,12 @@ def demo_eq_sqrt_04__sympy_auto():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-abs-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_eq_abs_01__sympy_auto),
-    ('demo-eq-abs-02', 'sympy-auto', 'false', 'null', 'sympy-auto-20261018-212418', demo_eq_abs_02__sympy_auto),
-    ('demo-eq-sqrt-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_eq_sqrt_01__sympy_auto),
-    ('demo-eq-sqrt-02', 'sympy-auto', 'true', 'true', 'sympy-auto-20261018-212418', demo_eq_sqrt_02__sympy_auto),
-    ('demo-eq-sqrt-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261018-212418', demo_eq_sqrt_03__sympy_auto),
-    ('demo-eq-sqrt-04', 'sympy-auto', 'false', 'false', 'sympy-auto-20261018-212418', demo_eq_sqrt_04__sympy_auto),
+    ('demo-eq-abs-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-040938', demo_eq_abs_01__sympy_auto),
+    ('demo-eq-abs-02', 'sympy-auto', 'false', 'null', 'sympy-auto-20261019-040938', demo_eq_abs_02__sympy_auto),
+    ('demo-eq-sqrt-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-040938', demo_eq_sqrt_01__sympy_auto),
+    ('demo-eq-sqrt-02', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-040938', demo_eq_sqrt_02__sympy_auto),
+    ('demo-eq-sqrt-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-040938', demo_eq_sqrt_03__sympy_auto),
+    ('demo-eq-sqrt-04', 'sympy-auto', 'false', 'false', 'sympy-auto-20261019-040938', demo_eq_sqrt_04__sympy_auto),
 ]
 
 
