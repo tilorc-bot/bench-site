@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite simplipy · case sp-acj4-1238-ground · all Python systems
-# 11 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 12 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -133,6 +133,12 @@ import sympy
 # setup 4 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP4 = _Setup(r'''from sympy import *
 import sympy
+from sympy.assumptions.satask import satask
+''', ('sympy', '1.14.0'))
+
+# setup 5 (the harness's warm-up, version capture and cache clearing left out)
+_SETUP5 = _Setup(r'''from sympy import *
+import sympy
 import sympy_extras.assumptions
 import sympy_extras.settings
 import importlib.metadata
@@ -145,6 +151,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 # comments that the cases' code repeats, shown once here (left out below):
 # true iff the result is 0; false only if it is a definite nonzero number
+# not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
 
 
 # ---- case sp-acj4-1238-ground · expected true · system satassume-ask (satassume 0.0.1)
@@ -212,8 +219,18 @@ def sp_acj4_1238_ground__sympy_auto():
 def sp_acj4_1238_ground__sympy_ask():
     Assum = And()
     Residual = Pow(0, 1 / pi) - 0
-    # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
     Answer = ask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case sp-acj4-1238-ground · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165120 answered true (solved)
+@_in(_SETUP4)
+def sp_acj4_1238_ground__sympy_satask():
+    Assum = And()
+    Residual = Pow(0, 1 / pi) - 0
+    Answer = satask(Q.zero(Residual), Assum)
     print(Residual, Answer, sep='\n')
     return Answer
 
@@ -243,7 +260,7 @@ def sp_acj4_1238_ground__sympy_simplify():
 
 # ---- case sp-acj4-1238-ground · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110626 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1238_ground__sympy_extras_ask():
     Assum = And()
     Residual = Pow(0, 1 / pi) - 0
@@ -255,7 +272,7 @@ def sp_acj4_1238_ground__sympy_extras_ask():
 
 # ---- case sp-acj4-1238-ground · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-111002 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1238_ground__sympy_extras_refine():
     Assum = And()
     Residual = Pow(0, 1 / pi) - 0
@@ -267,7 +284,7 @@ def sp_acj4_1238_ground__sympy_extras_refine():
 
 # ---- case sp-acj4-1238-ground · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-111402 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1238_ground__sympy_extras_simplify():
     Assum = And()
     Residual = Pow(0, 1 / pi) - 0
@@ -285,6 +302,7 @@ CASES = [
     ('sp-acj4-1238-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110538', sp_acj4_1238_ground__satrefine_simplify),
     ('sp-acj4-1238-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-105919', sp_acj4_1238_ground__sympy_auto),
     ('sp-acj4-1238-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-105924', sp_acj4_1238_ground__sympy_ask),
+    ('sp-acj4-1238-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-165120', sp_acj4_1238_ground__sympy_satask),
     ('sp-acj4-1238-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-110036', sp_acj4_1238_ground__sympy_refine),
     ('sp-acj4-1238-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-110207', sp_acj4_1238_ground__sympy_simplify),
     ('sp-acj4-1238-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110626', sp_acj4_1238_ground__sympy_extras_ask),

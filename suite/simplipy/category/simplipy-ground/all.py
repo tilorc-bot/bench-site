@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite simplipy · category simplipy-ground · all Python systems (20 cases listed)
-# 220 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 240 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -133,6 +133,12 @@ import sympy
 # setup 4 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP4 = _Setup(r'''from sympy import *
 import sympy
+from sympy.assumptions.satask import satask
+''', ('sympy', '1.14.0'))
+
+# setup 5 (the harness's warm-up, version capture and cache clearing left out)
+_SETUP5 = _Setup(r'''from sympy import *
+import sympy
 import sympy_extras.assumptions
 import sympy_extras.settings
 import importlib.metadata
@@ -219,6 +225,17 @@ def sp_acj4_1007_ground__sympy_ask():
     return Answer
 
 
+# ---- case sp-acj4-1007-ground · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165120 answered true (solved)
+@_in(_SETUP4)
+def sp_acj4_1007_ground__sympy_satask():
+    Assum = And()
+    Residual = 0 / sin(5) - 0
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-1007-ground · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-110036 answered true (solved)
 @_in(_SETUP3)
@@ -244,7 +261,7 @@ def sp_acj4_1007_ground__sympy_simplify():
 
 # ---- case sp-acj4-1007-ground · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110626 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1007_ground__sympy_extras_ask():
     Assum = And()
     Residual = 0 / sin(5) - 0
@@ -255,7 +272,7 @@ def sp_acj4_1007_ground__sympy_extras_ask():
 
 # ---- case sp-acj4-1007-ground · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-111002 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1007_ground__sympy_extras_refine():
     Assum = And()
     Residual = 0 / sin(5) - 0
@@ -267,7 +284,7 @@ def sp_acj4_1007_ground__sympy_extras_refine():
 
 # ---- case sp-acj4-1007-ground · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-111402 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1007_ground__sympy_extras_simplify():
     Assum = And()
     Residual = 0 / sin(5) - 0
@@ -346,6 +363,17 @@ def sp_acj4_1107_ground__sympy_ask():
     return Answer
 
 
+# ---- case sp-acj4-1107-ground · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165120 answered true (solved)
+@_in(_SETUP4)
+def sp_acj4_1107_ground__sympy_satask():
+    Assum = And()
+    Residual = asin(sin(Integer(1) / 10)) - Rational(1, 10)
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-1107-ground · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-110036 answered true (solved)
 @_in(_SETUP3)
@@ -371,7 +399,7 @@ def sp_acj4_1107_ground__sympy_simplify():
 
 # ---- case sp-acj4-1107-ground · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110626 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1107_ground__sympy_extras_ask():
     Assum = And()
     Residual = asin(sin(Integer(1) / 10)) - Rational(1, 10)
@@ -382,7 +410,7 @@ def sp_acj4_1107_ground__sympy_extras_ask():
 
 # ---- case sp-acj4-1107-ground · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-111002 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1107_ground__sympy_extras_refine():
     Assum = And()
     Residual = asin(sin(Integer(1) / 10)) - Rational(1, 10)
@@ -394,7 +422,7 @@ def sp_acj4_1107_ground__sympy_extras_refine():
 
 # ---- case sp-acj4-1107-ground · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-111402 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1107_ground__sympy_extras_simplify():
     Assum = And()
     Residual = asin(sin(Integer(1) / 10)) - Rational(1, 10)
@@ -473,6 +501,17 @@ def sp_acj4_1148_ground__sympy_ask():
     return Answer
 
 
+# ---- case sp-acj4-1148-ground · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165120 answered null (no verdict)
+@_in(_SETUP4)
+def sp_acj4_1148_ground__sympy_satask():
+    Assum = And()
+    Residual = cosh(log(Integer(1) / 4)) - Rational(17, 8)
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-1148-ground · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-110036 answered null (no verdict)
 @_in(_SETUP3)
@@ -498,7 +537,7 @@ def sp_acj4_1148_ground__sympy_simplify():
 
 # ---- case sp-acj4-1148-ground · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110626 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1148_ground__sympy_extras_ask():
     Assum = And()
     Residual = cosh(log(Integer(1) / 4)) - Rational(17, 8)
@@ -509,7 +548,7 @@ def sp_acj4_1148_ground__sympy_extras_ask():
 
 # ---- case sp-acj4-1148-ground · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-111002 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1148_ground__sympy_extras_refine():
     Assum = And()
     Residual = cosh(log(Integer(1) / 4)) - Rational(17, 8)
@@ -521,7 +560,7 @@ def sp_acj4_1148_ground__sympy_extras_refine():
 
 # ---- case sp-acj4-1148-ground · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-111402 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1148_ground__sympy_extras_simplify():
     Assum = And()
     Residual = cosh(log(Integer(1) / 4)) - Rational(17, 8)
@@ -600,6 +639,17 @@ def sp_acj4_1149_ground__sympy_ask():
     return Answer
 
 
+# ---- case sp-acj4-1149-ground · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165120 answered true (solved)
+@_in(_SETUP4)
+def sp_acj4_1149_ground__sympy_satask():
+    Assum = And()
+    Residual = exp(Abs(log(2))) - 2
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-1149-ground · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-110036 answered true (solved)
 @_in(_SETUP3)
@@ -625,7 +675,7 @@ def sp_acj4_1149_ground__sympy_simplify():
 
 # ---- case sp-acj4-1149-ground · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110626 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1149_ground__sympy_extras_ask():
     Assum = And()
     Residual = exp(Abs(log(2))) - 2
@@ -636,7 +686,7 @@ def sp_acj4_1149_ground__sympy_extras_ask():
 
 # ---- case sp-acj4-1149-ground · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-111002 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1149_ground__sympy_extras_refine():
     Assum = And()
     Residual = exp(Abs(log(2))) - 2
@@ -648,7 +698,7 @@ def sp_acj4_1149_ground__sympy_extras_refine():
 
 # ---- case sp-acj4-1149-ground · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-111402 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1149_ground__sympy_extras_simplify():
     Assum = And()
     Residual = exp(Abs(log(2))) - 2
@@ -727,6 +777,17 @@ def sp_acj4_1177_ground__sympy_ask():
     return Answer
 
 
+# ---- case sp-acj4-1177-ground · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165120 answered true (solved)
+@_in(_SETUP4)
+def sp_acj4_1177_ground__sympy_satask():
+    Assum = And()
+    Residual = Pow(0, asinh(10)) - 0
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-1177-ground · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-110036 answered true (solved)
 @_in(_SETUP3)
@@ -752,7 +813,7 @@ def sp_acj4_1177_ground__sympy_simplify():
 
 # ---- case sp-acj4-1177-ground · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110626 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1177_ground__sympy_extras_ask():
     Assum = And()
     Residual = Pow(0, asinh(10)) - 0
@@ -763,7 +824,7 @@ def sp_acj4_1177_ground__sympy_extras_ask():
 
 # ---- case sp-acj4-1177-ground · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-111002 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1177_ground__sympy_extras_refine():
     Assum = And()
     Residual = Pow(0, asinh(10)) - 0
@@ -775,7 +836,7 @@ def sp_acj4_1177_ground__sympy_extras_refine():
 
 # ---- case sp-acj4-1177-ground · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-111402 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1177_ground__sympy_extras_simplify():
     Assum = And()
     Residual = Pow(0, asinh(10)) - 0
@@ -854,6 +915,17 @@ def sp_acj4_1195_ground__sympy_ask():
     return Answer
 
 
+# ---- case sp-acj4-1195-ground · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165120 answered true (solved)
+@_in(_SETUP4)
+def sp_acj4_1195_ground__sympy_satask():
+    Assum = And()
+    Residual = Pow(0, atan(7)) - 0
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-1195-ground · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-110036 answered true (solved)
 @_in(_SETUP3)
@@ -879,7 +951,7 @@ def sp_acj4_1195_ground__sympy_simplify():
 
 # ---- case sp-acj4-1195-ground · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110626 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1195_ground__sympy_extras_ask():
     Assum = And()
     Residual = Pow(0, atan(7)) - 0
@@ -890,7 +962,7 @@ def sp_acj4_1195_ground__sympy_extras_ask():
 
 # ---- case sp-acj4-1195-ground · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-111002 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1195_ground__sympy_extras_refine():
     Assum = And()
     Residual = Pow(0, atan(7)) - 0
@@ -902,7 +974,7 @@ def sp_acj4_1195_ground__sympy_extras_refine():
 
 # ---- case sp-acj4-1195-ground · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-111402 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1195_ground__sympy_extras_simplify():
     Assum = And()
     Residual = Pow(0, atan(7)) - 0
@@ -981,6 +1053,17 @@ def sp_acj4_1217_ground__sympy_ask():
     return Answer
 
 
+# ---- case sp-acj4-1217-ground · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165120 answered true (solved)
+@_in(_SETUP4)
+def sp_acj4_1217_ground__sympy_satask():
+    Assum = And()
+    Residual = Pow(0, exp(-1)) - 0
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-1217-ground · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-110036 answered true (solved)
 @_in(_SETUP3)
@@ -1006,7 +1089,7 @@ def sp_acj4_1217_ground__sympy_simplify():
 
 # ---- case sp-acj4-1217-ground · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110626 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1217_ground__sympy_extras_ask():
     Assum = And()
     Residual = Pow(0, exp(-1)) - 0
@@ -1017,7 +1100,7 @@ def sp_acj4_1217_ground__sympy_extras_ask():
 
 # ---- case sp-acj4-1217-ground · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-111002 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1217_ground__sympy_extras_refine():
     Assum = And()
     Residual = Pow(0, exp(-1)) - 0
@@ -1029,7 +1112,7 @@ def sp_acj4_1217_ground__sympy_extras_refine():
 
 # ---- case sp-acj4-1217-ground · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-111402 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1217_ground__sympy_extras_simplify():
     Assum = And()
     Residual = Pow(0, exp(-1)) - 0
@@ -1108,6 +1191,17 @@ def sp_acj4_1238_ground__sympy_ask():
     return Answer
 
 
+# ---- case sp-acj4-1238-ground · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165120 answered true (solved)
+@_in(_SETUP4)
+def sp_acj4_1238_ground__sympy_satask():
+    Assum = And()
+    Residual = Pow(0, 1 / pi) - 0
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-1238-ground · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-110036 answered true (solved)
 @_in(_SETUP3)
@@ -1133,7 +1227,7 @@ def sp_acj4_1238_ground__sympy_simplify():
 
 # ---- case sp-acj4-1238-ground · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110626 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1238_ground__sympy_extras_ask():
     Assum = And()
     Residual = Pow(0, 1 / pi) - 0
@@ -1144,7 +1238,7 @@ def sp_acj4_1238_ground__sympy_extras_ask():
 
 # ---- case sp-acj4-1238-ground · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-111002 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1238_ground__sympy_extras_refine():
     Assum = And()
     Residual = Pow(0, 1 / pi) - 0
@@ -1156,7 +1250,7 @@ def sp_acj4_1238_ground__sympy_extras_refine():
 
 # ---- case sp-acj4-1238-ground · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-111402 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1238_ground__sympy_extras_simplify():
     Assum = And()
     Residual = Pow(0, 1 / pi) - 0
@@ -1235,6 +1329,17 @@ def sp_acj4_1247_ground__sympy_ask():
     return Answer
 
 
+# ---- case sp-acj4-1247-ground · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165120 answered true (solved)
+@_in(_SETUP4)
+def sp_acj4_1247_ground__sympy_satask():
+    Assum = And()
+    Residual = Pow(0, log(9)) - 0
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-1247-ground · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-110036 answered true (solved)
 @_in(_SETUP3)
@@ -1260,7 +1365,7 @@ def sp_acj4_1247_ground__sympy_simplify():
 
 # ---- case sp-acj4-1247-ground · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110626 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1247_ground__sympy_extras_ask():
     Assum = And()
     Residual = Pow(0, log(9)) - 0
@@ -1271,7 +1376,7 @@ def sp_acj4_1247_ground__sympy_extras_ask():
 
 # ---- case sp-acj4-1247-ground · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-111002 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1247_ground__sympy_extras_refine():
     Assum = And()
     Residual = Pow(0, log(9)) - 0
@@ -1283,7 +1388,7 @@ def sp_acj4_1247_ground__sympy_extras_refine():
 
 # ---- case sp-acj4-1247-ground · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-111402 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1247_ground__sympy_extras_simplify():
     Assum = And()
     Residual = Pow(0, log(9)) - 0
@@ -1362,6 +1467,17 @@ def sp_acj4_1254_ground__sympy_ask():
     return Answer
 
 
+# ---- case sp-acj4-1254-ground · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165120 answered true (solved)
+@_in(_SETUP4)
+def sp_acj4_1254_ground__sympy_satask():
+    Assum = And()
+    Residual = Pow(0, sin(2)) - 0
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-1254-ground · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-110036 answered true (solved)
 @_in(_SETUP3)
@@ -1387,7 +1503,7 @@ def sp_acj4_1254_ground__sympy_simplify():
 
 # ---- case sp-acj4-1254-ground · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110626 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1254_ground__sympy_extras_ask():
     Assum = And()
     Residual = Pow(0, sin(2)) - 0
@@ -1398,7 +1514,7 @@ def sp_acj4_1254_ground__sympy_extras_ask():
 
 # ---- case sp-acj4-1254-ground · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-111002 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1254_ground__sympy_extras_refine():
     Assum = And()
     Residual = Pow(0, sin(2)) - 0
@@ -1410,7 +1526,7 @@ def sp_acj4_1254_ground__sympy_extras_refine():
 
 # ---- case sp-acj4-1254-ground · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-111402 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1254_ground__sympy_extras_simplify():
     Assum = And()
     Residual = Pow(0, sin(2)) - 0
@@ -1489,6 +1605,17 @@ def sp_acj4_1258_ground__sympy_ask():
     return Answer
 
 
+# ---- case sp-acj4-1258-ground · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165120 answered true (solved)
+@_in(_SETUP4)
+def sp_acj4_1258_ground__sympy_satask():
+    Assum = And()
+    Residual = Pow(0, sin(9)) - 0
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-1258-ground · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-110036 answered true (solved)
 @_in(_SETUP3)
@@ -1514,7 +1641,7 @@ def sp_acj4_1258_ground__sympy_simplify():
 
 # ---- case sp-acj4-1258-ground · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110626 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1258_ground__sympy_extras_ask():
     Assum = And()
     Residual = Pow(0, sin(9)) - 0
@@ -1525,7 +1652,7 @@ def sp_acj4_1258_ground__sympy_extras_ask():
 
 # ---- case sp-acj4-1258-ground · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-111002 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1258_ground__sympy_extras_refine():
     Assum = And()
     Residual = Pow(0, sin(9)) - 0
@@ -1537,7 +1664,7 @@ def sp_acj4_1258_ground__sympy_extras_refine():
 
 # ---- case sp-acj4-1258-ground · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-111402 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_1258_ground__sympy_extras_simplify():
     Assum = And()
     Residual = Pow(0, sin(9)) - 0
@@ -1616,6 +1743,17 @@ def sp_acj4_5372_ground__sympy_ask():
     return Answer
 
 
+# ---- case sp-acj4-5372-ground · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165120 answered true (solved)
+@_in(_SETUP4)
+def sp_acj4_5372_ground__sympy_satask():
+    Assum = And()
+    Residual = sin(asin(Integer(1) / -4)) - Rational(-1, 4)
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-5372-ground · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-110036 answered true (solved)
 @_in(_SETUP3)
@@ -1641,7 +1779,7 @@ def sp_acj4_5372_ground__sympy_simplify():
 
 # ---- case sp-acj4-5372-ground · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110626 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_5372_ground__sympy_extras_ask():
     Assum = And()
     Residual = sin(asin(Integer(1) / -4)) - Rational(-1, 4)
@@ -1652,7 +1790,7 @@ def sp_acj4_5372_ground__sympy_extras_ask():
 
 # ---- case sp-acj4-5372-ground · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-111002 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_5372_ground__sympy_extras_refine():
     Assum = And()
     Residual = sin(asin(Integer(1) / -4)) - Rational(-1, 4)
@@ -1664,7 +1802,7 @@ def sp_acj4_5372_ground__sympy_extras_refine():
 
 # ---- case sp-acj4-5372-ground · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-111402 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_5372_ground__sympy_extras_simplify():
     Assum = And()
     Residual = sin(asin(Integer(1) / -4)) - Rational(-1, 4)
@@ -1743,6 +1881,17 @@ def sp_acj4_5382_ground__sympy_ask():
     return Answer
 
 
+# ---- case sp-acj4-5382-ground · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165120 answered null (no verdict)
+@_in(_SETUP4)
+def sp_acj4_5382_ground__sympy_satask():
+    Assum = And()
+    Residual = sinh(log(Integer(1) / 4)) - Rational(-15, 8)
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-5382-ground · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-110036 answered null (no verdict)
 @_in(_SETUP3)
@@ -1768,7 +1917,7 @@ def sp_acj4_5382_ground__sympy_simplify():
 
 # ---- case sp-acj4-5382-ground · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110626 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_5382_ground__sympy_extras_ask():
     Assum = And()
     Residual = sinh(log(Integer(1) / 4)) - Rational(-15, 8)
@@ -1779,7 +1928,7 @@ def sp_acj4_5382_ground__sympy_extras_ask():
 
 # ---- case sp-acj4-5382-ground · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-111002 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_5382_ground__sympy_extras_refine():
     Assum = And()
     Residual = sinh(log(Integer(1) / 4)) - Rational(-15, 8)
@@ -1791,7 +1940,7 @@ def sp_acj4_5382_ground__sympy_extras_refine():
 
 # ---- case sp-acj4-5382-ground · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-111402 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_5382_ground__sympy_extras_simplify():
     Assum = And()
     Residual = sinh(log(Integer(1) / 4)) - Rational(-15, 8)
@@ -1870,6 +2019,17 @@ def sp_acj4_5385_ground__sympy_ask():
     return Answer
 
 
+# ---- case sp-acj4-5385-ground · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165120 answered null (no verdict)
+@_in(_SETUP4)
+def sp_acj4_5385_ground__sympy_satask():
+    Assum = And()
+    Residual = sinh(-log(4)) - Rational(-15, 8)
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-5385-ground · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-110036 answered null (no verdict)
 @_in(_SETUP3)
@@ -1895,7 +2055,7 @@ def sp_acj4_5385_ground__sympy_simplify():
 
 # ---- case sp-acj4-5385-ground · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110626 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_5385_ground__sympy_extras_ask():
     Assum = And()
     Residual = sinh(-log(4)) - Rational(-15, 8)
@@ -1906,7 +2066,7 @@ def sp_acj4_5385_ground__sympy_extras_ask():
 
 # ---- case sp-acj4-5385-ground · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-111002 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_5385_ground__sympy_extras_refine():
     Assum = And()
     Residual = sinh(-log(4)) - Rational(-15, 8)
@@ -1918,7 +2078,7 @@ def sp_acj4_5385_ground__sympy_extras_refine():
 
 # ---- case sp-acj4-5385-ground · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-111402 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_5385_ground__sympy_extras_simplify():
     Assum = And()
     Residual = sinh(-log(4)) - Rational(-15, 8)
@@ -1997,6 +2157,17 @@ def sp_acj4_819_ground__sympy_ask():
     return Answer
 
 
+# ---- case sp-acj4-819-ground · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165120 answered true (solved)
+@_in(_SETUP4)
+def sp_acj4_819_ground__sympy_satask():
+    Assum = And()
+    Residual = 0 / pi - 0
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-819-ground · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-110036 answered true (solved)
 @_in(_SETUP3)
@@ -2022,7 +2193,7 @@ def sp_acj4_819_ground__sympy_simplify():
 
 # ---- case sp-acj4-819-ground · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110626 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_819_ground__sympy_extras_ask():
     Assum = And()
     Residual = 0 / pi - 0
@@ -2033,7 +2204,7 @@ def sp_acj4_819_ground__sympy_extras_ask():
 
 # ---- case sp-acj4-819-ground · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-111002 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_819_ground__sympy_extras_refine():
     Assum = And()
     Residual = 0 / pi - 0
@@ -2045,7 +2216,7 @@ def sp_acj4_819_ground__sympy_extras_refine():
 
 # ---- case sp-acj4-819-ground · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-111402 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_819_ground__sympy_extras_simplify():
     Assum = And()
     Residual = 0 / pi - 0
@@ -2124,6 +2295,17 @@ def sp_acj4_837_ground__sympy_ask():
     return Answer
 
 
+# ---- case sp-acj4-837-ground · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165120 answered true (solved)
+@_in(_SETUP4)
+def sp_acj4_837_ground__sympy_satask():
+    Assum = And()
+    Residual = Pow(0, pi) - 0
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-837-ground · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-110036 answered true (solved)
 @_in(_SETUP3)
@@ -2149,7 +2331,7 @@ def sp_acj4_837_ground__sympy_simplify():
 
 # ---- case sp-acj4-837-ground · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110626 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_837_ground__sympy_extras_ask():
     Assum = And()
     Residual = Pow(0, pi) - 0
@@ -2160,7 +2342,7 @@ def sp_acj4_837_ground__sympy_extras_ask():
 
 # ---- case sp-acj4-837-ground · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-111002 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_837_ground__sympy_extras_refine():
     Assum = And()
     Residual = Pow(0, pi) - 0
@@ -2172,7 +2354,7 @@ def sp_acj4_837_ground__sympy_extras_refine():
 
 # ---- case sp-acj4-837-ground · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-111402 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_837_ground__sympy_extras_simplify():
     Assum = And()
     Residual = Pow(0, pi) - 0
@@ -2251,6 +2433,17 @@ def sp_acj4_848_ground__sympy_ask():
     return Answer
 
 
+# ---- case sp-acj4-848-ground · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165120 answered null (no verdict)
+@_in(_SETUP4)
+def sp_acj4_848_ground__sympy_satask():
+    Assum = And()
+    Residual = sinh(log(4)) - Rational(15, 8)
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-848-ground · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-110036 answered null (no verdict)
 @_in(_SETUP3)
@@ -2276,7 +2469,7 @@ def sp_acj4_848_ground__sympy_simplify():
 
 # ---- case sp-acj4-848-ground · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110626 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_848_ground__sympy_extras_ask():
     Assum = And()
     Residual = sinh(log(4)) - Rational(15, 8)
@@ -2287,7 +2480,7 @@ def sp_acj4_848_ground__sympy_extras_ask():
 
 # ---- case sp-acj4-848-ground · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-111002 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_848_ground__sympy_extras_refine():
     Assum = And()
     Residual = sinh(log(4)) - Rational(15, 8)
@@ -2299,7 +2492,7 @@ def sp_acj4_848_ground__sympy_extras_refine():
 
 # ---- case sp-acj4-848-ground · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-111402 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_848_ground__sympy_extras_simplify():
     Assum = And()
     Residual = sinh(log(4)) - Rational(15, 8)
@@ -2378,6 +2571,17 @@ def sp_acj4_868_ground__sympy_ask():
     return Answer
 
 
+# ---- case sp-acj4-868-ground · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165120 answered true (solved)
+@_in(_SETUP4)
+def sp_acj4_868_ground__sympy_satask():
+    Assum = And()
+    Residual = 0 * acosh(7) - 0
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-868-ground · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-110036 answered true (solved)
 @_in(_SETUP3)
@@ -2403,7 +2607,7 @@ def sp_acj4_868_ground__sympy_simplify():
 
 # ---- case sp-acj4-868-ground · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110626 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_868_ground__sympy_extras_ask():
     Assum = And()
     Residual = 0 * acosh(7) - 0
@@ -2414,7 +2618,7 @@ def sp_acj4_868_ground__sympy_extras_ask():
 
 # ---- case sp-acj4-868-ground · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-111002 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_868_ground__sympy_extras_refine():
     Assum = And()
     Residual = 0 * acosh(7) - 0
@@ -2426,7 +2630,7 @@ def sp_acj4_868_ground__sympy_extras_refine():
 
 # ---- case sp-acj4-868-ground · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-111402 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_868_ground__sympy_extras_simplify():
     Assum = And()
     Residual = 0 * acosh(7) - 0
@@ -2505,6 +2709,17 @@ def sp_acj4_911_ground__sympy_ask():
     return Answer
 
 
+# ---- case sp-acj4-911-ground · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165120 answered true (solved)
+@_in(_SETUP4)
+def sp_acj4_911_ground__sympy_satask():
+    Assum = And()
+    Residual = 0 / asin(-1) - 0
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-911-ground · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-110036 answered true (solved)
 @_in(_SETUP3)
@@ -2530,7 +2745,7 @@ def sp_acj4_911_ground__sympy_simplify():
 
 # ---- case sp-acj4-911-ground · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110626 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_911_ground__sympy_extras_ask():
     Assum = And()
     Residual = 0 / asin(-1) - 0
@@ -2541,7 +2756,7 @@ def sp_acj4_911_ground__sympy_extras_ask():
 
 # ---- case sp-acj4-911-ground · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-111002 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_911_ground__sympy_extras_refine():
     Assum = And()
     Residual = 0 / asin(-1) - 0
@@ -2553,7 +2768,7 @@ def sp_acj4_911_ground__sympy_extras_refine():
 
 # ---- case sp-acj4-911-ground · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-111402 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_911_ground__sympy_extras_simplify():
     Assum = And()
     Residual = 0 / asin(-1) - 0
@@ -2632,6 +2847,17 @@ def sp_acj4_927_ground__sympy_ask():
     return Answer
 
 
+# ---- case sp-acj4-927-ground · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165120 answered true (solved)
+@_in(_SETUP4)
+def sp_acj4_927_ground__sympy_satask():
+    Assum = And()
+    Residual = 0 / asinh(4) - 0
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case sp-acj4-927-ground · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-110036 answered true (solved)
 @_in(_SETUP3)
@@ -2657,7 +2883,7 @@ def sp_acj4_927_ground__sympy_simplify():
 
 # ---- case sp-acj4-927-ground · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110626 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_927_ground__sympy_extras_ask():
     Assum = And()
     Residual = 0 / asinh(4) - 0
@@ -2668,7 +2894,7 @@ def sp_acj4_927_ground__sympy_extras_ask():
 
 # ---- case sp-acj4-927-ground · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-111002 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_927_ground__sympy_extras_refine():
     Assum = And()
     Residual = 0 / asinh(4) - 0
@@ -2680,7 +2906,7 @@ def sp_acj4_927_ground__sympy_extras_refine():
 
 # ---- case sp-acj4-927-ground · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-111402 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_927_ground__sympy_extras_simplify():
     Assum = And()
     Residual = 0 / asinh(4) - 0
@@ -2698,6 +2924,7 @@ CASES = [
     ('sp-acj4-1007-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110538', sp_acj4_1007_ground__satrefine_simplify),
     ('sp-acj4-1007-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-105919', sp_acj4_1007_ground__sympy_auto),
     ('sp-acj4-1007-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-105924', sp_acj4_1007_ground__sympy_ask),
+    ('sp-acj4-1007-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-165120', sp_acj4_1007_ground__sympy_satask),
     ('sp-acj4-1007-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-110036', sp_acj4_1007_ground__sympy_refine),
     ('sp-acj4-1007-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-110207', sp_acj4_1007_ground__sympy_simplify),
     ('sp-acj4-1007-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110626', sp_acj4_1007_ground__sympy_extras_ask),
@@ -2709,6 +2936,7 @@ CASES = [
     ('sp-acj4-1107-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110538', sp_acj4_1107_ground__satrefine_simplify),
     ('sp-acj4-1107-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-105919', sp_acj4_1107_ground__sympy_auto),
     ('sp-acj4-1107-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-105924', sp_acj4_1107_ground__sympy_ask),
+    ('sp-acj4-1107-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-165120', sp_acj4_1107_ground__sympy_satask),
     ('sp-acj4-1107-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-110036', sp_acj4_1107_ground__sympy_refine),
     ('sp-acj4-1107-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-110207', sp_acj4_1107_ground__sympy_simplify),
     ('sp-acj4-1107-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110626', sp_acj4_1107_ground__sympy_extras_ask),
@@ -2720,6 +2948,7 @@ CASES = [
     ('sp-acj4-1148-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110538', sp_acj4_1148_ground__satrefine_simplify),
     ('sp-acj4-1148-ground', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-105919', sp_acj4_1148_ground__sympy_auto),
     ('sp-acj4-1148-ground', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-105924', sp_acj4_1148_ground__sympy_ask),
+    ('sp-acj4-1148-ground', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-165120', sp_acj4_1148_ground__sympy_satask),
     ('sp-acj4-1148-ground', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-110036', sp_acj4_1148_ground__sympy_refine),
     ('sp-acj4-1148-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-110207', sp_acj4_1148_ground__sympy_simplify),
     ('sp-acj4-1148-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110626', sp_acj4_1148_ground__sympy_extras_ask),
@@ -2731,6 +2960,7 @@ CASES = [
     ('sp-acj4-1149-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110538', sp_acj4_1149_ground__satrefine_simplify),
     ('sp-acj4-1149-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-105919', sp_acj4_1149_ground__sympy_auto),
     ('sp-acj4-1149-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-105924', sp_acj4_1149_ground__sympy_ask),
+    ('sp-acj4-1149-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-165120', sp_acj4_1149_ground__sympy_satask),
     ('sp-acj4-1149-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-110036', sp_acj4_1149_ground__sympy_refine),
     ('sp-acj4-1149-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-110207', sp_acj4_1149_ground__sympy_simplify),
     ('sp-acj4-1149-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110626', sp_acj4_1149_ground__sympy_extras_ask),
@@ -2742,6 +2972,7 @@ CASES = [
     ('sp-acj4-1177-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110538', sp_acj4_1177_ground__satrefine_simplify),
     ('sp-acj4-1177-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-105919', sp_acj4_1177_ground__sympy_auto),
     ('sp-acj4-1177-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-105924', sp_acj4_1177_ground__sympy_ask),
+    ('sp-acj4-1177-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-165120', sp_acj4_1177_ground__sympy_satask),
     ('sp-acj4-1177-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-110036', sp_acj4_1177_ground__sympy_refine),
     ('sp-acj4-1177-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-110207', sp_acj4_1177_ground__sympy_simplify),
     ('sp-acj4-1177-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110626', sp_acj4_1177_ground__sympy_extras_ask),
@@ -2753,6 +2984,7 @@ CASES = [
     ('sp-acj4-1195-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110538', sp_acj4_1195_ground__satrefine_simplify),
     ('sp-acj4-1195-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-105919', sp_acj4_1195_ground__sympy_auto),
     ('sp-acj4-1195-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-105924', sp_acj4_1195_ground__sympy_ask),
+    ('sp-acj4-1195-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-165120', sp_acj4_1195_ground__sympy_satask),
     ('sp-acj4-1195-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-110036', sp_acj4_1195_ground__sympy_refine),
     ('sp-acj4-1195-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-110207', sp_acj4_1195_ground__sympy_simplify),
     ('sp-acj4-1195-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110626', sp_acj4_1195_ground__sympy_extras_ask),
@@ -2764,6 +2996,7 @@ CASES = [
     ('sp-acj4-1217-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110538', sp_acj4_1217_ground__satrefine_simplify),
     ('sp-acj4-1217-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-105919', sp_acj4_1217_ground__sympy_auto),
     ('sp-acj4-1217-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-105924', sp_acj4_1217_ground__sympy_ask),
+    ('sp-acj4-1217-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-165120', sp_acj4_1217_ground__sympy_satask),
     ('sp-acj4-1217-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-110036', sp_acj4_1217_ground__sympy_refine),
     ('sp-acj4-1217-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-110207', sp_acj4_1217_ground__sympy_simplify),
     ('sp-acj4-1217-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110626', sp_acj4_1217_ground__sympy_extras_ask),
@@ -2775,6 +3008,7 @@ CASES = [
     ('sp-acj4-1238-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110538', sp_acj4_1238_ground__satrefine_simplify),
     ('sp-acj4-1238-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-105919', sp_acj4_1238_ground__sympy_auto),
     ('sp-acj4-1238-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-105924', sp_acj4_1238_ground__sympy_ask),
+    ('sp-acj4-1238-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-165120', sp_acj4_1238_ground__sympy_satask),
     ('sp-acj4-1238-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-110036', sp_acj4_1238_ground__sympy_refine),
     ('sp-acj4-1238-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-110207', sp_acj4_1238_ground__sympy_simplify),
     ('sp-acj4-1238-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110626', sp_acj4_1238_ground__sympy_extras_ask),
@@ -2786,6 +3020,7 @@ CASES = [
     ('sp-acj4-1247-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110538', sp_acj4_1247_ground__satrefine_simplify),
     ('sp-acj4-1247-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-105919', sp_acj4_1247_ground__sympy_auto),
     ('sp-acj4-1247-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-105924', sp_acj4_1247_ground__sympy_ask),
+    ('sp-acj4-1247-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-165120', sp_acj4_1247_ground__sympy_satask),
     ('sp-acj4-1247-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-110036', sp_acj4_1247_ground__sympy_refine),
     ('sp-acj4-1247-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-110207', sp_acj4_1247_ground__sympy_simplify),
     ('sp-acj4-1247-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110626', sp_acj4_1247_ground__sympy_extras_ask),
@@ -2797,6 +3032,7 @@ CASES = [
     ('sp-acj4-1254-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110538', sp_acj4_1254_ground__satrefine_simplify),
     ('sp-acj4-1254-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-105919', sp_acj4_1254_ground__sympy_auto),
     ('sp-acj4-1254-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-105924', sp_acj4_1254_ground__sympy_ask),
+    ('sp-acj4-1254-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-165120', sp_acj4_1254_ground__sympy_satask),
     ('sp-acj4-1254-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-110036', sp_acj4_1254_ground__sympy_refine),
     ('sp-acj4-1254-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-110207', sp_acj4_1254_ground__sympy_simplify),
     ('sp-acj4-1254-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110626', sp_acj4_1254_ground__sympy_extras_ask),
@@ -2808,6 +3044,7 @@ CASES = [
     ('sp-acj4-1258-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110538', sp_acj4_1258_ground__satrefine_simplify),
     ('sp-acj4-1258-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-105919', sp_acj4_1258_ground__sympy_auto),
     ('sp-acj4-1258-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-105924', sp_acj4_1258_ground__sympy_ask),
+    ('sp-acj4-1258-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-165120', sp_acj4_1258_ground__sympy_satask),
     ('sp-acj4-1258-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-110036', sp_acj4_1258_ground__sympy_refine),
     ('sp-acj4-1258-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-110207', sp_acj4_1258_ground__sympy_simplify),
     ('sp-acj4-1258-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110626', sp_acj4_1258_ground__sympy_extras_ask),
@@ -2819,6 +3056,7 @@ CASES = [
     ('sp-acj4-5372-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110538', sp_acj4_5372_ground__satrefine_simplify),
     ('sp-acj4-5372-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-105919', sp_acj4_5372_ground__sympy_auto),
     ('sp-acj4-5372-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-105924', sp_acj4_5372_ground__sympy_ask),
+    ('sp-acj4-5372-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-165120', sp_acj4_5372_ground__sympy_satask),
     ('sp-acj4-5372-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-110036', sp_acj4_5372_ground__sympy_refine),
     ('sp-acj4-5372-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-110207', sp_acj4_5372_ground__sympy_simplify),
     ('sp-acj4-5372-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110626', sp_acj4_5372_ground__sympy_extras_ask),
@@ -2830,6 +3068,7 @@ CASES = [
     ('sp-acj4-5382-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110538', sp_acj4_5382_ground__satrefine_simplify),
     ('sp-acj4-5382-ground', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-105919', sp_acj4_5382_ground__sympy_auto),
     ('sp-acj4-5382-ground', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-105924', sp_acj4_5382_ground__sympy_ask),
+    ('sp-acj4-5382-ground', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-165120', sp_acj4_5382_ground__sympy_satask),
     ('sp-acj4-5382-ground', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-110036', sp_acj4_5382_ground__sympy_refine),
     ('sp-acj4-5382-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-110207', sp_acj4_5382_ground__sympy_simplify),
     ('sp-acj4-5382-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110626', sp_acj4_5382_ground__sympy_extras_ask),
@@ -2841,6 +3080,7 @@ CASES = [
     ('sp-acj4-5385-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110538', sp_acj4_5385_ground__satrefine_simplify),
     ('sp-acj4-5385-ground', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-105919', sp_acj4_5385_ground__sympy_auto),
     ('sp-acj4-5385-ground', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-105924', sp_acj4_5385_ground__sympy_ask),
+    ('sp-acj4-5385-ground', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-165120', sp_acj4_5385_ground__sympy_satask),
     ('sp-acj4-5385-ground', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-110036', sp_acj4_5385_ground__sympy_refine),
     ('sp-acj4-5385-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-110207', sp_acj4_5385_ground__sympy_simplify),
     ('sp-acj4-5385-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110626', sp_acj4_5385_ground__sympy_extras_ask),
@@ -2852,6 +3092,7 @@ CASES = [
     ('sp-acj4-819-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110538', sp_acj4_819_ground__satrefine_simplify),
     ('sp-acj4-819-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-105919', sp_acj4_819_ground__sympy_auto),
     ('sp-acj4-819-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-105924', sp_acj4_819_ground__sympy_ask),
+    ('sp-acj4-819-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-165120', sp_acj4_819_ground__sympy_satask),
     ('sp-acj4-819-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-110036', sp_acj4_819_ground__sympy_refine),
     ('sp-acj4-819-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-110207', sp_acj4_819_ground__sympy_simplify),
     ('sp-acj4-819-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110626', sp_acj4_819_ground__sympy_extras_ask),
@@ -2863,6 +3104,7 @@ CASES = [
     ('sp-acj4-837-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110538', sp_acj4_837_ground__satrefine_simplify),
     ('sp-acj4-837-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-105919', sp_acj4_837_ground__sympy_auto),
     ('sp-acj4-837-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-105924', sp_acj4_837_ground__sympy_ask),
+    ('sp-acj4-837-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-165120', sp_acj4_837_ground__sympy_satask),
     ('sp-acj4-837-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-110036', sp_acj4_837_ground__sympy_refine),
     ('sp-acj4-837-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-110207', sp_acj4_837_ground__sympy_simplify),
     ('sp-acj4-837-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110626', sp_acj4_837_ground__sympy_extras_ask),
@@ -2874,6 +3116,7 @@ CASES = [
     ('sp-acj4-848-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110538', sp_acj4_848_ground__satrefine_simplify),
     ('sp-acj4-848-ground', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-105919', sp_acj4_848_ground__sympy_auto),
     ('sp-acj4-848-ground', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-105924', sp_acj4_848_ground__sympy_ask),
+    ('sp-acj4-848-ground', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-165120', sp_acj4_848_ground__sympy_satask),
     ('sp-acj4-848-ground', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-110036', sp_acj4_848_ground__sympy_refine),
     ('sp-acj4-848-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-110207', sp_acj4_848_ground__sympy_simplify),
     ('sp-acj4-848-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110626', sp_acj4_848_ground__sympy_extras_ask),
@@ -2885,6 +3128,7 @@ CASES = [
     ('sp-acj4-868-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110538', sp_acj4_868_ground__satrefine_simplify),
     ('sp-acj4-868-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-105919', sp_acj4_868_ground__sympy_auto),
     ('sp-acj4-868-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-105924', sp_acj4_868_ground__sympy_ask),
+    ('sp-acj4-868-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-165120', sp_acj4_868_ground__sympy_satask),
     ('sp-acj4-868-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-110036', sp_acj4_868_ground__sympy_refine),
     ('sp-acj4-868-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-110207', sp_acj4_868_ground__sympy_simplify),
     ('sp-acj4-868-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110626', sp_acj4_868_ground__sympy_extras_ask),
@@ -2896,6 +3140,7 @@ CASES = [
     ('sp-acj4-911-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110538', sp_acj4_911_ground__satrefine_simplify),
     ('sp-acj4-911-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-105919', sp_acj4_911_ground__sympy_auto),
     ('sp-acj4-911-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-105924', sp_acj4_911_ground__sympy_ask),
+    ('sp-acj4-911-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-165120', sp_acj4_911_ground__sympy_satask),
     ('sp-acj4-911-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-110036', sp_acj4_911_ground__sympy_refine),
     ('sp-acj4-911-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-110207', sp_acj4_911_ground__sympy_simplify),
     ('sp-acj4-911-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110626', sp_acj4_911_ground__sympy_extras_ask),
@@ -2907,6 +3152,7 @@ CASES = [
     ('sp-acj4-927-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110538', sp_acj4_927_ground__satrefine_simplify),
     ('sp-acj4-927-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-105919', sp_acj4_927_ground__sympy_auto),
     ('sp-acj4-927-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-105924', sp_acj4_927_ground__sympy_ask),
+    ('sp-acj4-927-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-165120', sp_acj4_927_ground__sympy_satask),
     ('sp-acj4-927-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-110036', sp_acj4_927_ground__sympy_refine),
     ('sp-acj4-927-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-110207', sp_acj4_927_ground__sympy_simplify),
     ('sp-acj4-927-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110626', sp_acj4_927_ground__sympy_extras_ask),

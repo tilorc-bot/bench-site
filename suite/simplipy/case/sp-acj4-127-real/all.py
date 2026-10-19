@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite simplipy · case sp-acj4-127-real · all Python systems
-# 9 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 10 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -133,6 +133,12 @@ import sympy
 # setup 4 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP4 = _Setup(r'''from sympy import *
 import sympy
+from sympy.assumptions.satask import satask
+''', ('sympy', '1.14.0'))
+
+# setup 5 (the harness's warm-up, version capture and cache clearing left out)
+_SETUP5 = _Setup(r'''from sympy import *
+import sympy
 import sympy_extras.assumptions
 import sympy_extras.settings
 import importlib.metadata
@@ -147,6 +153,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 # true iff the result is 0; false only if it is a definite nonzero number
 # dropped (not a unary fact about one symbol): Ne(exp(x), 1, evaluate=False)
 # dropped (not a unary fact about one symbol): Ne(exp(x), -1, evaluate=False)
+# not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
 
 
 # ---- case sp-acj4-127-real · expected contingent · system satassume-ask (satassume 0.0.1)
@@ -220,8 +227,19 @@ def sp_acj4_127_real__sympy_ask():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), Ne(exp(x), 1, evaluate=False), Ne(exp(x), -1, evaluate=False))
     Residual = Abs(atanh(exp(x))) - atanh(exp(x))
-    # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
     Answer = ask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
+# ---- case sp-acj4-127-real · expected contingent · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165120 answered null (declined correctly)
+@_in(_SETUP4)
+def sp_acj4_127_real__sympy_satask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Ne(exp(x), 1, evaluate=False), Ne(exp(x), -1, evaluate=False))
+    Residual = Abs(atanh(exp(x))) - atanh(exp(x))
+    Answer = satask(Q.zero(Residual), Assum)
     print(Residual, Answer, sep='\n')
     return Answer
 
@@ -253,7 +271,7 @@ def sp_acj4_127_real__sympy_simplify():
 
 # ---- case sp-acj4-127-real · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110626 answered null (declined correctly)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def sp_acj4_127_real__sympy_extras_ask():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), Ne(exp(x), 1, evaluate=False), Ne(exp(x), -1, evaluate=False))
@@ -272,6 +290,7 @@ CASES = [
     ('sp-acj4-127-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-110538', sp_acj4_127_real__satrefine_simplify),
     ('sp-acj4-127-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-105919', sp_acj4_127_real__sympy_auto),
     ('sp-acj4-127-real', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-105924', sp_acj4_127_real__sympy_ask),
+    ('sp-acj4-127-real', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-165120', sp_acj4_127_real__sympy_satask),
     ('sp-acj4-127-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-110036', sp_acj4_127_real__sympy_refine),
     ('sp-acj4-127-real', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-110207', sp_acj4_127_real__sympy_simplify),
     ('sp-acj4-127-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-110626', sp_acj4_127_real__sympy_extras_ask),

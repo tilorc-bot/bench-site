@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite trig · every case · all Python systems (13 cases listed)
-# 143 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 156 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -133,6 +133,12 @@ import sympy
 # setup 4 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP4 = _Setup(r'''from sympy import *
 import sympy
+from sympy.assumptions.satask import satask
+''', ('sympy', '1.14.0'))
+
+# setup 5 (the harness's warm-up, version capture and cache clearing left out)
+_SETUP5 = _Setup(r'''from sympy import *
+import sympy
 import sympy_extras.assumptions
 import sympy_extras.settings
 import importlib.metadata
@@ -229,6 +235,18 @@ def trig_acos_01__sympy_ask():
     return Answer
 
 
+# ---- case trig-acos-01 · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165118 answered null (no verdict)
+@_in(_SETUP4)
+def trig_acos_01__sympy_satask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.positive(x), x < 3)
+    Residual = acos(cos(x)) - x
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case trig-acos-01 · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-105626 answered null (no verdict)
 @_in(_SETUP3)
@@ -256,7 +274,7 @@ def trig_acos_01__sympy_simplify():
 
 # ---- case trig-acos-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110457 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_acos_01__sympy_extras_ask():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), Q.positive(x), x < 3)
@@ -268,7 +286,7 @@ def trig_acos_01__sympy_extras_ask():
 
 # ---- case trig-acos-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-110508 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_acos_01__sympy_extras_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), Q.positive(x), x < 3)
@@ -281,7 +299,7 @@ def trig_acos_01__sympy_extras_refine():
 
 # ---- case trig-acos-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-110517 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_acos_01__sympy_extras_simplify():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), Q.positive(x), x < 3)
@@ -367,6 +385,18 @@ def trig_asin_01__sympy_ask():
     return Answer
 
 
+# ---- case trig-asin-01 · expected contingent · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165118 answered null (declined correctly)
+@_in(_SETUP4)
+def trig_asin_01__sympy_satask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x))
+    Residual = asin(sin(x)) - x
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case trig-asin-01 · expected contingent · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-105626 answered null (declined correctly)
 @_in(_SETUP3)
@@ -394,7 +424,7 @@ def trig_asin_01__sympy_simplify():
 
 # ---- case trig-asin-01 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110457 answered null (declined correctly)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_asin_01__sympy_extras_ask():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x))
@@ -406,7 +436,7 @@ def trig_asin_01__sympy_extras_ask():
 
 # ---- case trig-asin-01 · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-110508 answered null (declined correctly)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_asin_01__sympy_extras_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x))
@@ -419,7 +449,7 @@ def trig_asin_01__sympy_extras_refine():
 
 # ---- case trig-asin-01 · expected contingent · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-110517 answered null (declined correctly)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_asin_01__sympy_extras_simplify():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x))
@@ -505,6 +535,18 @@ def trig_asin_02__sympy_ask():
     return Answer
 
 
+# ---- case trig-asin-02 · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165118 answered null (no verdict)
+@_in(_SETUP4)
+def trig_asin_02__sympy_satask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), x > -1, x < 1)
+    Residual = asin(sin(x)) - x
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case trig-asin-02 · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-105626 answered null (no verdict)
 @_in(_SETUP3)
@@ -532,7 +574,7 @@ def trig_asin_02__sympy_simplify():
 
 # ---- case trig-asin-02 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110457 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_asin_02__sympy_extras_ask():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), x > -1, x < 1)
@@ -544,7 +586,7 @@ def trig_asin_02__sympy_extras_ask():
 
 # ---- case trig-asin-02 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-110508 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_asin_02__sympy_extras_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), x > -1, x < 1)
@@ -557,7 +599,7 @@ def trig_asin_02__sympy_extras_refine():
 
 # ---- case trig-asin-02 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-110517 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_asin_02__sympy_extras_simplify():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), x > -1, x < 1)
@@ -643,6 +685,18 @@ def trig_atan_01__sympy_ask():
     return Answer
 
 
+# ---- case trig-atan-01 · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165118 answered null (no verdict)
+@_in(_SETUP4)
+def trig_atan_01__sympy_satask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), x > -1, x < 1)
+    Residual = atan(tan(x)) - x
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case trig-atan-01 · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-105626 answered null (no verdict)
 @_in(_SETUP3)
@@ -670,7 +724,7 @@ def trig_atan_01__sympy_simplify():
 
 # ---- case trig-atan-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110457 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_atan_01__sympy_extras_ask():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), x > -1, x < 1)
@@ -682,7 +736,7 @@ def trig_atan_01__sympy_extras_ask():
 
 # ---- case trig-atan-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-110508 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_atan_01__sympy_extras_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), x > -1, x < 1)
@@ -695,7 +749,7 @@ def trig_atan_01__sympy_extras_refine():
 
 # ---- case trig-atan-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-110517 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_atan_01__sympy_extras_simplify():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), x > -1, x < 1)
@@ -781,6 +835,18 @@ def trig_double_01__sympy_ask():
     return Answer
 
 
+# ---- case trig-double-01 · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165118 answered null (no verdict)
+@_in(_SETUP4)
+def trig_double_01__sympy_satask():
+    z = Symbol('z', complex=True)
+    Assum = And(Q.complex(z))
+    Residual = sin(2 * z) - (2 * (sin(z) * cos(z)))
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case trig-double-01 · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-105626 answered null (no verdict)
 @_in(_SETUP3)
@@ -808,7 +874,7 @@ def trig_double_01__sympy_simplify():
 
 # ---- case trig-double-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110457 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_double_01__sympy_extras_ask():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z))
@@ -820,7 +886,7 @@ def trig_double_01__sympy_extras_ask():
 
 # ---- case trig-double-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-110508 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_double_01__sympy_extras_refine():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z))
@@ -833,7 +899,7 @@ def trig_double_01__sympy_extras_refine():
 
 # ---- case trig-double-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-110517 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_double_01__sympy_extras_simplify():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z))
@@ -919,6 +985,18 @@ def trig_double_02__sympy_ask():
     return Answer
 
 
+# ---- case trig-double-02 · expected false · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165118 answered null (no verdict)
+@_in(_SETUP4)
+def trig_double_02__sympy_satask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.positive(x), x < 1)
+    Residual = sin(2 * x) - (2 * sin(x))
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case trig-double-02 · expected false · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-105626 answered null (no verdict)
 @_in(_SETUP3)
@@ -946,7 +1024,7 @@ def trig_double_02__sympy_simplify():
 
 # ---- case trig-double-02 · expected false · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110457 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_double_02__sympy_extras_ask():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), Q.positive(x), x < 1)
@@ -958,7 +1036,7 @@ def trig_double_02__sympy_extras_ask():
 
 # ---- case trig-double-02 · expected false · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-110508 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_double_02__sympy_extras_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), Q.positive(x), x < 1)
@@ -971,7 +1049,7 @@ def trig_double_02__sympy_extras_refine():
 
 # ---- case trig-double-02 · expected false · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-110517 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_double_02__sympy_extras_simplify():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), Q.positive(x), x < 1)
@@ -1057,6 +1135,18 @@ def trig_period_01__sympy_ask():
     return Answer
 
 
+# ---- case trig-period-01 · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165118 answered true (solved)
+@_in(_SETUP4)
+def trig_period_01__sympy_satask():
+    z = Symbol('z', complex=True)
+    Assum = And(Q.complex(z))
+    Residual = sin(z + 2 * pi) - sin(z)
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case trig-period-01 · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-105626 answered true (solved)
 @_in(_SETUP3)
@@ -1084,7 +1174,7 @@ def trig_period_01__sympy_simplify():
 
 # ---- case trig-period-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110457 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_period_01__sympy_extras_ask():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z))
@@ -1096,7 +1186,7 @@ def trig_period_01__sympy_extras_ask():
 
 # ---- case trig-period-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-110508 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_period_01__sympy_extras_refine():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z))
@@ -1109,7 +1199,7 @@ def trig_period_01__sympy_extras_refine():
 
 # ---- case trig-period-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-110517 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_period_01__sympy_extras_simplify():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z))
@@ -1195,6 +1285,18 @@ def trig_period_02__sympy_ask():
     return Answer
 
 
+# ---- case trig-period-02 · expected contingent · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165118 answered null (declined correctly)
+@_in(_SETUP4)
+def trig_period_02__sympy_satask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x))
+    Residual = cos(x + pi) - cos(x)
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case trig-period-02 · expected contingent · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-105626 answered null (declined correctly)
 @_in(_SETUP3)
@@ -1222,7 +1324,7 @@ def trig_period_02__sympy_simplify():
 
 # ---- case trig-period-02 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110457 answered null (declined correctly)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_period_02__sympy_extras_ask():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x))
@@ -1234,7 +1336,7 @@ def trig_period_02__sympy_extras_ask():
 
 # ---- case trig-period-02 · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-110508 answered null (declined correctly)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_period_02__sympy_extras_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x))
@@ -1247,7 +1349,7 @@ def trig_period_02__sympy_extras_refine():
 
 # ---- case trig-period-02 · expected contingent · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-110517 answered null (declined correctly)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_period_02__sympy_extras_simplify():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x))
@@ -1333,6 +1435,18 @@ def trig_period_03__sympy_ask():
     return Answer
 
 
+# ---- case trig-period-03 · expected contingent · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165118 answered null (declined correctly)
+@_in(_SETUP4)
+def trig_period_03__sympy_satask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), Q.positive(x))
+    Residual = cos(x + pi) - cos(x)
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case trig-period-03 · expected contingent · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-105626 answered null (declined correctly)
 @_in(_SETUP3)
@@ -1360,7 +1474,7 @@ def trig_period_03__sympy_simplify():
 
 # ---- case trig-period-03 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110457 answered null (declined correctly)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_period_03__sympy_extras_ask():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), Q.positive(x))
@@ -1372,7 +1486,7 @@ def trig_period_03__sympy_extras_ask():
 
 # ---- case trig-period-03 · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-110508 answered null (declined correctly)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_period_03__sympy_extras_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), Q.positive(x))
@@ -1385,7 +1499,7 @@ def trig_period_03__sympy_extras_refine():
 
 # ---- case trig-period-03 · expected contingent · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-110517 answered null (declined correctly)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_period_03__sympy_extras_simplify():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), Q.positive(x))
@@ -1471,6 +1585,18 @@ def trig_pyth_01__sympy_ask():
     return Answer
 
 
+# ---- case trig-pyth-01 · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165118 answered null (no verdict)
+@_in(_SETUP4)
+def trig_pyth_01__sympy_satask():
+    z = Symbol('z', complex=True)
+    Assum = And(Q.complex(z))
+    Residual = sin(z) * sin(z) + cos(z) * cos(z) - 1
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case trig-pyth-01 · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-105626 answered null (no verdict)
 @_in(_SETUP3)
@@ -1498,7 +1624,7 @@ def trig_pyth_01__sympy_simplify():
 
 # ---- case trig-pyth-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110457 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_pyth_01__sympy_extras_ask():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z))
@@ -1510,7 +1636,7 @@ def trig_pyth_01__sympy_extras_ask():
 
 # ---- case trig-pyth-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-110508 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_pyth_01__sympy_extras_refine():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z))
@@ -1523,7 +1649,7 @@ def trig_pyth_01__sympy_extras_refine():
 
 # ---- case trig-pyth-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-110517 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_pyth_01__sympy_extras_simplify():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z))
@@ -1609,6 +1735,18 @@ def trig_shift_01__sympy_ask():
     return Answer
 
 
+# ---- case trig-shift-01 · expected contingent · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165118 answered null (declined correctly)
+@_in(_SETUP4)
+def trig_shift_01__sympy_satask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x))
+    Residual = sin(x + pi) - sin(x)
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case trig-shift-01 · expected contingent · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-105626 answered null (declined correctly)
 @_in(_SETUP3)
@@ -1636,7 +1774,7 @@ def trig_shift_01__sympy_simplify():
 
 # ---- case trig-shift-01 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110457 answered null (declined correctly)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_shift_01__sympy_extras_ask():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x))
@@ -1648,7 +1786,7 @@ def trig_shift_01__sympy_extras_ask():
 
 # ---- case trig-shift-01 · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-110508 answered null (declined correctly)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_shift_01__sympy_extras_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x))
@@ -1661,7 +1799,7 @@ def trig_shift_01__sympy_extras_refine():
 
 # ---- case trig-shift-01 · expected contingent · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-110517 answered null (declined correctly)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_shift_01__sympy_extras_simplify():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x))
@@ -1747,6 +1885,18 @@ def trig_sqrt_01__sympy_ask():
     return Answer
 
 
+# ---- case trig-sqrt-01 · expected contingent · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165118 answered null (declined correctly)
+@_in(_SETUP4)
+def trig_sqrt_01__sympy_satask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x))
+    Residual = sqrt(1 - sin(x) * sin(x)) - cos(x)
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case trig-sqrt-01 · expected contingent · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-105626 answered null (declined correctly)
 @_in(_SETUP3)
@@ -1774,7 +1924,7 @@ def trig_sqrt_01__sympy_simplify():
 
 # ---- case trig-sqrt-01 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110457 answered null (declined correctly)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_sqrt_01__sympy_extras_ask():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x))
@@ -1786,7 +1936,7 @@ def trig_sqrt_01__sympy_extras_ask():
 
 # ---- case trig-sqrt-01 · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-110508 answered null (declined correctly)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_sqrt_01__sympy_extras_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x))
@@ -1799,7 +1949,7 @@ def trig_sqrt_01__sympy_extras_refine():
 
 # ---- case trig-sqrt-01 · expected contingent · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-110517 answered null (declined correctly)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_sqrt_01__sympy_extras_simplify():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x))
@@ -1885,6 +2035,18 @@ def trig_tan_01__sympy_ask():
     return Answer
 
 
+# ---- case trig-tan-01 · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-165118 answered null (no verdict)
+@_in(_SETUP4)
+def trig_tan_01__sympy_satask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), ~Q.zero(cos(x)))
+    Residual = tan(x) - (sin(x) / cos(x))
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case trig-tan-01 · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-105626 answered null (no verdict)
 @_in(_SETUP3)
@@ -1912,7 +2074,7 @@ def trig_tan_01__sympy_simplify():
 
 # ---- case trig-tan-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110457 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_tan_01__sympy_extras_ask():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), ~Q.zero(cos(x)))
@@ -1924,7 +2086,7 @@ def trig_tan_01__sympy_extras_ask():
 
 # ---- case trig-tan-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-110508 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_tan_01__sympy_extras_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), ~Q.zero(cos(x)))
@@ -1937,7 +2099,7 @@ def trig_tan_01__sympy_extras_refine():
 
 # ---- case trig-tan-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-110517 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def trig_tan_01__sympy_extras_simplify():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), ~Q.zero(cos(x)))
@@ -1956,6 +2118,7 @@ CASES = [
     ('trig-acos-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261019-110453', trig_acos_01__satrefine_simplify),
     ('trig-acos-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-105622', trig_acos_01__sympy_auto),
     ('trig-acos-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-105623', trig_acos_01__sympy_ask),
+    ('trig-acos-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-165118', trig_acos_01__sympy_satask),
     ('trig-acos-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-105626', trig_acos_01__sympy_refine),
     ('trig-acos-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261019-105627', trig_acos_01__sympy_simplify),
     ('trig-acos-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-110457', trig_acos_01__sympy_extras_ask),
@@ -1967,6 +2130,7 @@ CASES = [
     ('trig-asin-01', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-110453', trig_asin_01__satrefine_simplify),
     ('trig-asin-01', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-105622', trig_asin_01__sympy_auto),
     ('trig-asin-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-105623', trig_asin_01__sympy_ask),
+    ('trig-asin-01', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-165118', trig_asin_01__sympy_satask),
     ('trig-asin-01', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-105626', trig_asin_01__sympy_refine),
     ('trig-asin-01', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-105627', trig_asin_01__sympy_simplify),
     ('trig-asin-01', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-110457', trig_asin_01__sympy_extras_ask),
@@ -1978,6 +2142,7 @@ CASES = [
     ('trig-asin-02', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261019-110453', trig_asin_02__satrefine_simplify),
     ('trig-asin-02', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-105622', trig_asin_02__sympy_auto),
     ('trig-asin-02', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-105623', trig_asin_02__sympy_ask),
+    ('trig-asin-02', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-165118', trig_asin_02__sympy_satask),
     ('trig-asin-02', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-105626', trig_asin_02__sympy_refine),
     ('trig-asin-02', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261019-105627', trig_asin_02__sympy_simplify),
     ('trig-asin-02', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-110457', trig_asin_02__sympy_extras_ask),
@@ -1989,6 +2154,7 @@ CASES = [
     ('trig-atan-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261019-110453', trig_atan_01__satrefine_simplify),
     ('trig-atan-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-105622', trig_atan_01__sympy_auto),
     ('trig-atan-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-105623', trig_atan_01__sympy_ask),
+    ('trig-atan-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-165118', trig_atan_01__sympy_satask),
     ('trig-atan-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-105626', trig_atan_01__sympy_refine),
     ('trig-atan-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261019-105627', trig_atan_01__sympy_simplify),
     ('trig-atan-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-110457', trig_atan_01__sympy_extras_ask),
@@ -2000,6 +2166,7 @@ CASES = [
     ('trig-double-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110453', trig_double_01__satrefine_simplify),
     ('trig-double-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-105622', trig_double_01__sympy_auto),
     ('trig-double-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-105623', trig_double_01__sympy_ask),
+    ('trig-double-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-165118', trig_double_01__sympy_satask),
     ('trig-double-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-105626', trig_double_01__sympy_refine),
     ('trig-double-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-105627', trig_double_01__sympy_simplify),
     ('trig-double-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110457', trig_double_01__sympy_extras_ask),
@@ -2011,6 +2178,7 @@ CASES = [
     ('trig-double-02', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261019-110453', trig_double_02__satrefine_simplify),
     ('trig-double-02', 'sympy-auto', 'false', 'null', 'sympy-auto-20261019-105622', trig_double_02__sympy_auto),
     ('trig-double-02', 'sympy-ask', 'false', 'null', 'sympy-ask-20261019-105623', trig_double_02__sympy_ask),
+    ('trig-double-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261019-165118', trig_double_02__sympy_satask),
     ('trig-double-02', 'sympy-refine', 'false', 'null', 'sympy-refine-20261019-105626', trig_double_02__sympy_refine),
     ('trig-double-02', 'sympy-simplify', 'false', 'null', 'sympy-simplify-20261019-105627', trig_double_02__sympy_simplify),
     ('trig-double-02', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261019-110457', trig_double_02__sympy_extras_ask),
@@ -2022,6 +2190,7 @@ CASES = [
     ('trig-period-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110453', trig_period_01__satrefine_simplify),
     ('trig-period-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-105622', trig_period_01__sympy_auto),
     ('trig-period-01', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-105623', trig_period_01__sympy_ask),
+    ('trig-period-01', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-165118', trig_period_01__sympy_satask),
     ('trig-period-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-105626', trig_period_01__sympy_refine),
     ('trig-period-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-105627', trig_period_01__sympy_simplify),
     ('trig-period-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110457', trig_period_01__sympy_extras_ask),
@@ -2033,6 +2202,7 @@ CASES = [
     ('trig-period-02', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-110453', trig_period_02__satrefine_simplify),
     ('trig-period-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-105622', trig_period_02__sympy_auto),
     ('trig-period-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-105623', trig_period_02__sympy_ask),
+    ('trig-period-02', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-165118', trig_period_02__sympy_satask),
     ('trig-period-02', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-105626', trig_period_02__sympy_refine),
     ('trig-period-02', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-105627', trig_period_02__sympy_simplify),
     ('trig-period-02', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-110457', trig_period_02__sympy_extras_ask),
@@ -2044,6 +2214,7 @@ CASES = [
     ('trig-period-03', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-110453', trig_period_03__satrefine_simplify),
     ('trig-period-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-105622', trig_period_03__sympy_auto),
     ('trig-period-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-105623', trig_period_03__sympy_ask),
+    ('trig-period-03', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-165118', trig_period_03__sympy_satask),
     ('trig-period-03', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-105626', trig_period_03__sympy_refine),
     ('trig-period-03', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-105627', trig_period_03__sympy_simplify),
     ('trig-period-03', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-110457', trig_period_03__sympy_extras_ask),
@@ -2055,6 +2226,7 @@ CASES = [
     ('trig-pyth-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110453', trig_pyth_01__satrefine_simplify),
     ('trig-pyth-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-105622', trig_pyth_01__sympy_auto),
     ('trig-pyth-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-105623', trig_pyth_01__sympy_ask),
+    ('trig-pyth-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-165118', trig_pyth_01__sympy_satask),
     ('trig-pyth-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-105626', trig_pyth_01__sympy_refine),
     ('trig-pyth-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-105627', trig_pyth_01__sympy_simplify),
     ('trig-pyth-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110457', trig_pyth_01__sympy_extras_ask),
@@ -2066,6 +2238,7 @@ CASES = [
     ('trig-shift-01', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-110453', trig_shift_01__satrefine_simplify),
     ('trig-shift-01', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-105622', trig_shift_01__sympy_auto),
     ('trig-shift-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-105623', trig_shift_01__sympy_ask),
+    ('trig-shift-01', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-165118', trig_shift_01__sympy_satask),
     ('trig-shift-01', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-105626', trig_shift_01__sympy_refine),
     ('trig-shift-01', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-105627', trig_shift_01__sympy_simplify),
     ('trig-shift-01', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-110457', trig_shift_01__sympy_extras_ask),
@@ -2077,6 +2250,7 @@ CASES = [
     ('trig-sqrt-01', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-110453', trig_sqrt_01__satrefine_simplify),
     ('trig-sqrt-01', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-105622', trig_sqrt_01__sympy_auto),
     ('trig-sqrt-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-105623', trig_sqrt_01__sympy_ask),
+    ('trig-sqrt-01', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-165118', trig_sqrt_01__sympy_satask),
     ('trig-sqrt-01', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-105626', trig_sqrt_01__sympy_refine),
     ('trig-sqrt-01', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-105627', trig_sqrt_01__sympy_simplify),
     ('trig-sqrt-01', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-110457', trig_sqrt_01__sympy_extras_ask),
@@ -2088,6 +2262,7 @@ CASES = [
     ('trig-tan-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110453', trig_tan_01__satrefine_simplify),
     ('trig-tan-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-105622', trig_tan_01__sympy_auto),
     ('trig-tan-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-105623', trig_tan_01__sympy_ask),
+    ('trig-tan-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-165118', trig_tan_01__sympy_satask),
     ('trig-tan-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-105626', trig_tan_01__sympy_refine),
     ('trig-tan-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-105627', trig_tan_01__sympy_simplify),
     ('trig-tan-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110457', trig_tan_01__sympy_extras_ask),
