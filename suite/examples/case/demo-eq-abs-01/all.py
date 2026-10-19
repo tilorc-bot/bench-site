@@ -160,7 +160,7 @@ def demo_eq_abs_01__satassume_ask():
 
 
 # ---- case demo-eq-abs-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered true (solved)
+# the run satrefine-refine-20261019-105606 answered true (solved)
 @_in(_SETUP2)
 def demo_eq_abs_01__satrefine_refine():
     x = Symbol('x')
@@ -199,7 +199,7 @@ def demo_eq_abs_01__satrefine_simplify():
 
 
 # ---- case demo-eq-abs-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-040938 answered true (solved)
+# the run sympy-auto-20261019-105557 answered true (solved)
 @_in(_SETUP3)
 def demo_eq_abs_01__sympy_auto():
     x = Symbol('x', real=True, negative=True)
@@ -212,7 +212,7 @@ def demo_eq_abs_01__sympy_auto():
 
 
 # ---- case demo-eq-abs-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-040940 answered null (no verdict)
+# the run sympy-ask-20261019-105559 answered null (no verdict)
 @_in(_SETUP3)
 def demo_eq_abs_01__sympy_ask():
     x = Symbol('x', real=True)
@@ -225,7 +225,7 @@ def demo_eq_abs_01__sympy_ask():
 
 
 # ---- case demo-eq-abs-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-040943 answered true (solved)
+# the run sympy-refine-20261019-105602 answered true (solved)
 @_in(_SETUP3)
 def demo_eq_abs_01__sympy_refine():
     x = Symbol('x', real=True)
@@ -238,7 +238,7 @@ def demo_eq_abs_01__sympy_refine():
 
 
 # ---- case demo-eq-abs-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261019-040945 answered true (solved)
+# the run sympy-simplify-20261019-105605 answered true (solved)
 @_in(_SETUP3)
 def demo_eq_abs_01__sympy_simplify():
     x = Symbol('x', real=True, negative=True)
@@ -291,13 +291,13 @@ def demo_eq_abs_01__sympy_extras_simplify():
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('demo-eq-abs-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075124', demo_eq_abs_01__satassume_ask),
-    ('demo-eq-abs-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-074829', demo_eq_abs_01__satrefine_refine),
+    ('demo-eq-abs-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-105606', demo_eq_abs_01__satrefine_refine),
     ('demo-eq-abs-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261019-075128', demo_eq_abs_01__satsimp_trigsimp),
     ('demo-eq-abs-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-075126', demo_eq_abs_01__satrefine_simplify),
-    ('demo-eq-abs-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-040938', demo_eq_abs_01__sympy_auto),
-    ('demo-eq-abs-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-040940', demo_eq_abs_01__sympy_ask),
-    ('demo-eq-abs-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-040943', demo_eq_abs_01__sympy_refine),
-    ('demo-eq-abs-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-040945', demo_eq_abs_01__sympy_simplify),
+    ('demo-eq-abs-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-105557', demo_eq_abs_01__sympy_auto),
+    ('demo-eq-abs-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-105559', demo_eq_abs_01__sympy_ask),
+    ('demo-eq-abs-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-105602', demo_eq_abs_01__sympy_refine),
+    ('demo-eq-abs-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-105605', demo_eq_abs_01__sympy_simplify),
     ('demo-eq-abs-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-041809', demo_eq_abs_01__sympy_extras_ask),
     ('demo-eq-abs-01', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261019-041814', demo_eq_abs_01__sympy_extras_refine),
     ('demo-eq-abs-01', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-041817', demo_eq_abs_01__sympy_extras_simplify),

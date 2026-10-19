@@ -124,7 +124,7 @@ import satsimp
 
 
 # ---- case demo-atan2-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered true (solved)
+# the run satrefine-refine-20261019-105606 answered true (solved)
 @_in(_SETUP1)
 def demo_atan2_01__satrefine_refine():
     x = Symbol('x')
@@ -138,7 +138,7 @@ def demo_atan2_01__satrefine_refine():
 
 
 # ---- case demo-atan2-02 · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered false (solved)
+# the run satrefine-refine-20261019-105606 answered false (solved)
 @_in(_SETUP1)
 def demo_atan2_02__satrefine_refine():
     x = Symbol('x')
@@ -152,7 +152,7 @@ def demo_atan2_02__satrefine_refine():
 
 
 # ---- case demo-eq-abs-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered true (solved)
+# the run satrefine-refine-20261019-105606 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_abs_01__satrefine_refine():
     x = Symbol('x')
@@ -165,7 +165,7 @@ def demo_eq_abs_01__satrefine_refine():
 
 
 # ---- case demo-eq-abs-02 · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered null (no verdict)
+# the run satrefine-refine-20261019-105606 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_abs_02__satrefine_refine():
     x = Symbol('x')
@@ -178,7 +178,7 @@ def demo_eq_abs_02__satrefine_refine():
 
 
 # ---- case demo-eq-log-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered true (solved)
+# the run satrefine-refine-20261019-105606 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_log_01__satrefine_refine():
     x = Symbol('x')
@@ -191,7 +191,7 @@ def demo_eq_log_01__satrefine_refine():
 
 
 # ---- case demo-eq-pow-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered true (solved)
+# the run satrefine-refine-20261019-105606 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_pow_01__satrefine_refine():
     n = Symbol('n')
@@ -204,7 +204,7 @@ def demo_eq_pow_01__satrefine_refine():
 
 
 # ---- case demo-eq-sqrt-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered true (solved)
+# the run satrefine-refine-20261019-105606 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_01__satrefine_refine():
     x = Symbol('x')
@@ -217,7 +217,7 @@ def demo_eq_sqrt_01__satrefine_refine():
 
 
 # ---- case demo-eq-sqrt-02 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered true (solved)
+# the run satrefine-refine-20261019-105606 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_02__satrefine_refine():
     x = Symbol('x')
@@ -230,7 +230,7 @@ def demo_eq_sqrt_02__satrefine_refine():
 
 
 # ---- case demo-eq-sqrt-03 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered null (declined correctly)
+# the run satrefine-refine-20261019-105606 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_eq_sqrt_03__satrefine_refine():
     x = Symbol('x')
@@ -243,7 +243,7 @@ def demo_eq_sqrt_03__satrefine_refine():
 
 
 # ---- case demo-eq-sqrt-04 · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered false (solved)
+# the run satrefine-refine-20261019-105606 answered false (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_04__satrefine_refine():
     x = Symbol('x')
@@ -256,7 +256,7 @@ def demo_eq_sqrt_04__satrefine_refine():
 
 
 # ---- case demo-eq-trig-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered null (no verdict)
+# the run satrefine-refine-20261019-105606 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_trig_01__satrefine_refine():
     x = Symbol('x')
@@ -269,7 +269,7 @@ def demo_eq_trig_01__satrefine_refine():
 
 
 # ---- case demo-eq-trig-02 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered null (no verdict)
+# the run satrefine-refine-20261019-105606 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_trig_02__satrefine_refine():
     x = Symbol('x')
@@ -282,7 +282,7 @@ def demo_eq_trig_02__satrefine_refine():
 
 
 # ---- case demo-log-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered true (solved)
+# the run satrefine-refine-20261019-105606 answered true (solved)
 @_in(_SETUP1)
 def demo_log_01__satrefine_refine():
     x = Symbol('x')
@@ -296,7 +296,7 @@ def demo_log_01__satrefine_refine():
 
 
 # ---- case demo-log-02 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered null (declined correctly)
+# the run satrefine-refine-20261019-105606 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_log_02__satrefine_refine():
     z = Symbol('z')
@@ -310,7 +310,7 @@ def demo_log_02__satrefine_refine():
 
 
 # ---- case demo-log-03 · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered false (solved)
+# the run satrefine-refine-20261019-105606 answered false (solved)
 @_in(_SETUP1)
 def demo_log_03__satrefine_refine():
     x = Symbol('x')
@@ -323,7 +323,7 @@ def demo_log_03__satrefine_refine():
 
 
 # ---- case demo-nonzero-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered true (solved)
+# the run satrefine-refine-20261019-105606 answered true (solved)
 @_in(_SETUP1)
 def demo_nonzero_01__satrefine_refine():
     z = Symbol('z')
@@ -336,7 +336,7 @@ def demo_nonzero_01__satrefine_refine():
 
 
 # ---- case demo-parity-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered true (solved)
+# the run satrefine-refine-20261019-105606 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_01__satrefine_refine():
     n = Symbol('n')
@@ -349,7 +349,7 @@ def demo_parity_01__satrefine_refine():
 
 
 # ---- case demo-parity-02 · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered false (solved)
+# the run satrefine-refine-20261019-105606 answered false (solved)
 @_in(_SETUP1)
 def demo_parity_02__satrefine_refine():
     n = Symbol('n')
@@ -363,7 +363,7 @@ def demo_parity_02__satrefine_refine():
 
 
 # ---- case demo-parity-03 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered true (solved)
+# the run satrefine-refine-20261019-105606 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_03__satrefine_refine():
     n = Symbol('n')
@@ -376,7 +376,7 @@ def demo_parity_03__satrefine_refine():
 
 
 # ---- case demo-parity-04 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered null (declined correctly)
+# the run satrefine-refine-20261019-105606 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_parity_04__satrefine_refine():
     n = Symbol('n')
@@ -389,7 +389,7 @@ def demo_parity_04__satrefine_refine():
 
 
 # ---- case demo-parity-05 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered true (solved)
+# the run satrefine-refine-20261019-105606 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_05__satrefine_refine():
     n = Symbol('n')
@@ -403,7 +403,7 @@ def demo_parity_05__satrefine_refine():
 
 
 # ---- case demo-prime-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered null (no verdict)
+# the run satrefine-refine-20261019-105606 answered null (no verdict)
 @_in(_SETUP1)
 def demo_prime_01__satrefine_refine():
     p = Symbol('p')
@@ -416,7 +416,7 @@ def demo_prime_01__satrefine_refine():
 
 
 # ---- case demo-prime-02 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered null (declined correctly)
+# the run satrefine-refine-20261019-105606 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_prime_02__satrefine_refine():
     p = Symbol('p')
@@ -429,7 +429,7 @@ def demo_prime_02__satrefine_refine():
 
 
 # ---- case demo-sign-02 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered true (solved)
+# the run satrefine-refine-20261019-105606 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_02__satrefine_refine():
     x = Symbol('x')
@@ -442,7 +442,7 @@ def demo_sign_02__satrefine_refine():
 
 
 # ---- case demo-sign-03 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered null (declined correctly)
+# the run satrefine-refine-20261019-105606 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_sign_03__satrefine_refine():
     x = Symbol('x')
@@ -455,7 +455,7 @@ def demo_sign_03__satrefine_refine():
 
 
 # ---- case demo-sign-04 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered true (solved)
+# the run satrefine-refine-20261019-105606 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_04__satrefine_refine():
     z = Symbol('z')
@@ -468,7 +468,7 @@ def demo_sign_04__satrefine_refine():
 
 
 # ---- case demo-sign-05 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered true (solved)
+# the run satrefine-refine-20261019-105606 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_05__satrefine_refine():
     x = Symbol('x')
@@ -483,33 +483,33 @@ def demo_sign_05__satrefine_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-atan2-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-074829', demo_atan2_01__satrefine_refine),
-    ('demo-atan2-02', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261019-074829', demo_atan2_02__satrefine_refine),
-    ('demo-eq-abs-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-074829', demo_eq_abs_01__satrefine_refine),
-    ('demo-eq-abs-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261019-074829', demo_eq_abs_02__satrefine_refine),
-    ('demo-eq-log-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-074829', demo_eq_log_01__satrefine_refine),
-    ('demo-eq-pow-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-074829', demo_eq_pow_01__satrefine_refine),
-    ('demo-eq-sqrt-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-074829', demo_eq_sqrt_01__satrefine_refine),
-    ('demo-eq-sqrt-02', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-074829', demo_eq_sqrt_02__satrefine_refine),
-    ('demo-eq-sqrt-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-074829', demo_eq_sqrt_03__satrefine_refine),
-    ('demo-eq-sqrt-04', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261019-074829', demo_eq_sqrt_04__satrefine_refine),
-    ('demo-eq-trig-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-074829', demo_eq_trig_01__satrefine_refine),
-    ('demo-eq-trig-02', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-074829', demo_eq_trig_02__satrefine_refine),
-    ('demo-log-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-074829', demo_log_01__satrefine_refine),
-    ('demo-log-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-074829', demo_log_02__satrefine_refine),
-    ('demo-log-03', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261019-074829', demo_log_03__satrefine_refine),
-    ('demo-nonzero-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-074829', demo_nonzero_01__satrefine_refine),
-    ('demo-parity-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-074829', demo_parity_01__satrefine_refine),
-    ('demo-parity-02', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261019-074829', demo_parity_02__satrefine_refine),
-    ('demo-parity-03', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-074829', demo_parity_03__satrefine_refine),
-    ('demo-parity-04', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-074829', demo_parity_04__satrefine_refine),
-    ('demo-parity-05', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-074829', demo_parity_05__satrefine_refine),
-    ('demo-prime-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-074829', demo_prime_01__satrefine_refine),
-    ('demo-prime-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-074829', demo_prime_02__satrefine_refine),
-    ('demo-sign-02', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-074829', demo_sign_02__satrefine_refine),
-    ('demo-sign-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-074829', demo_sign_03__satrefine_refine),
-    ('demo-sign-04', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-074829', demo_sign_04__satrefine_refine),
-    ('demo-sign-05', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-074829', demo_sign_05__satrefine_refine),
+    ('demo-atan2-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-105606', demo_atan2_01__satrefine_refine),
+    ('demo-atan2-02', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261019-105606', demo_atan2_02__satrefine_refine),
+    ('demo-eq-abs-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-105606', demo_eq_abs_01__satrefine_refine),
+    ('demo-eq-abs-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261019-105606', demo_eq_abs_02__satrefine_refine),
+    ('demo-eq-log-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-105606', demo_eq_log_01__satrefine_refine),
+    ('demo-eq-pow-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-105606', demo_eq_pow_01__satrefine_refine),
+    ('demo-eq-sqrt-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-105606', demo_eq_sqrt_01__satrefine_refine),
+    ('demo-eq-sqrt-02', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-105606', demo_eq_sqrt_02__satrefine_refine),
+    ('demo-eq-sqrt-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-105606', demo_eq_sqrt_03__satrefine_refine),
+    ('demo-eq-sqrt-04', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261019-105606', demo_eq_sqrt_04__satrefine_refine),
+    ('demo-eq-trig-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-105606', demo_eq_trig_01__satrefine_refine),
+    ('demo-eq-trig-02', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-105606', demo_eq_trig_02__satrefine_refine),
+    ('demo-log-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-105606', demo_log_01__satrefine_refine),
+    ('demo-log-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-105606', demo_log_02__satrefine_refine),
+    ('demo-log-03', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261019-105606', demo_log_03__satrefine_refine),
+    ('demo-nonzero-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-105606', demo_nonzero_01__satrefine_refine),
+    ('demo-parity-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-105606', demo_parity_01__satrefine_refine),
+    ('demo-parity-02', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261019-105606', demo_parity_02__satrefine_refine),
+    ('demo-parity-03', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-105606', demo_parity_03__satrefine_refine),
+    ('demo-parity-04', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-105606', demo_parity_04__satrefine_refine),
+    ('demo-parity-05', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-105606', demo_parity_05__satrefine_refine),
+    ('demo-prime-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-105606', demo_prime_01__satrefine_refine),
+    ('demo-prime-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-105606', demo_prime_02__satrefine_refine),
+    ('demo-sign-02', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-105606', demo_sign_02__satrefine_refine),
+    ('demo-sign-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-105606', demo_sign_03__satrefine_refine),
+    ('demo-sign-04', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-105606', demo_sign_04__satrefine_refine),
+    ('demo-sign-05', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-105606', demo_sign_05__satrefine_refine),
 ]
 
 

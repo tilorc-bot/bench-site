@@ -123,7 +123,7 @@ import sympy
 
 
 # ---- case trig-acos-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-041006 answered null (no verdict)
+# the run sympy-refine-20261019-105626 answered null (no verdict)
 @_in(_SETUP1)
 def trig_acos_01__sympy_refine():
     x = Symbol('x', real=True)
@@ -136,7 +136,7 @@ def trig_acos_01__sympy_refine():
 
 
 # ---- case trig-asin-01 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-041006 answered null (declined correctly)
+# the run sympy-refine-20261019-105626 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_asin_01__sympy_refine():
     x = Symbol('x', real=True)
@@ -149,7 +149,7 @@ def trig_asin_01__sympy_refine():
 
 
 # ---- case trig-asin-02 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-041006 answered null (no verdict)
+# the run sympy-refine-20261019-105626 answered null (no verdict)
 @_in(_SETUP1)
 def trig_asin_02__sympy_refine():
     x = Symbol('x', real=True)
@@ -162,7 +162,7 @@ def trig_asin_02__sympy_refine():
 
 
 # ---- case trig-atan-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-041006 answered null (no verdict)
+# the run sympy-refine-20261019-105626 answered null (no verdict)
 @_in(_SETUP1)
 def trig_atan_01__sympy_refine():
     x = Symbol('x', real=True)
@@ -176,10 +176,10 @@ def trig_atan_01__sympy_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-acos-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-041006', trig_acos_01__sympy_refine),
-    ('trig-asin-01', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-041006', trig_asin_01__sympy_refine),
-    ('trig-asin-02', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-041006', trig_asin_02__sympy_refine),
-    ('trig-atan-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-041006', trig_atan_01__sympy_refine),
+    ('trig-acos-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-105626', trig_acos_01__sympy_refine),
+    ('trig-asin-01', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-105626', trig_asin_01__sympy_refine),
+    ('trig-asin-02', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-105626', trig_asin_02__sympy_refine),
+    ('trig-atan-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-105626', trig_atan_01__sympy_refine),
 ]
 
 

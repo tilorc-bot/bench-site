@@ -13,7 +13,7 @@ verdict[out_, expected_String, stored_String] := Module[{answer, got, outcome},
 End[];
 
 (* ---- case demo-parity-02 · expected false · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261019-040958 answered false (solved) *)
+(* the run wolfram-fullsimplify-20261019-105617 answered false (solved) *)
 Print["== demo-parity-02 · wolfram-fullsimplify · expected false"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -25,10 +25,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "false", "the run wolfram-fullsimplify-20261019-040958 answered false (solved)"];
+AEScript`verdict[AEScript`out, "false", "the run wolfram-fullsimplify-20261019-105617 answered false (solved)"];
 
 (* ---- case demo-parity-02 · expected false · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261019-040953 answered false (solved) *)
+(* the run wolfram-refine-20261019-105613 answered false (solved) *)
 Print["== demo-parity-02 · wolfram-refine · expected false"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -40,10 +40,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "false", "the run wolfram-refine-20261019-040953 answered false (solved)"];
+AEScript`verdict[AEScript`out, "false", "the run wolfram-refine-20261019-105613 answered false (solved)"];
 
 (* ---- case demo-parity-02 · expected false · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261019-040949 answered false (solved) *)
+(* the run wolfram-simplify-20261019-105609 answered false (solved) *)
 Print["== demo-parity-02 · wolfram-simplify · expected false"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -55,4 +55,4 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "false", "the run wolfram-simplify-20261019-040949 answered false (solved)"];
+AEScript`verdict[AEScript`out, "false", "the run wolfram-simplify-20261019-105609 answered false (solved)"];

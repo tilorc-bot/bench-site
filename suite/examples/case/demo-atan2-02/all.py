@@ -161,7 +161,7 @@ def demo_atan2_02__satassume_ask():
 
 
 # ---- case demo-atan2-02 · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-074829 answered false (solved)
+# the run satrefine-refine-20261019-105606 answered false (solved)
 @_in(_SETUP2)
 def demo_atan2_02__satrefine_refine():
     x = Symbol('x')
@@ -203,7 +203,7 @@ def demo_atan2_02__satrefine_simplify():
 
 
 # ---- case demo-atan2-02 · expected false · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-040938 answered false (solved)
+# the run sympy-auto-20261019-105557 answered false (solved)
 @_in(_SETUP3)
 def demo_atan2_02__sympy_auto():
     x = Symbol('x', real=True, negative=True)
@@ -217,7 +217,7 @@ def demo_atan2_02__sympy_auto():
 
 
 # ---- case demo-atan2-02 · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-040940 answered null (no verdict)
+# the run sympy-ask-20261019-105559 answered null (no verdict)
 @_in(_SETUP3)
 def demo_atan2_02__sympy_ask():
     x = Symbol('x', real=True)
@@ -231,7 +231,7 @@ def demo_atan2_02__sympy_ask():
 
 
 # ---- case demo-atan2-02 · expected false · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-040943 answered false (solved)
+# the run sympy-refine-20261019-105602 answered false (solved)
 @_in(_SETUP3)
 def demo_atan2_02__sympy_refine():
     x = Symbol('x', real=True)
@@ -245,7 +245,7 @@ def demo_atan2_02__sympy_refine():
 
 
 # ---- case demo-atan2-02 · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261019-040945 answered false (solved)
+# the run sympy-simplify-20261019-105605 answered false (solved)
 @_in(_SETUP3)
 def demo_atan2_02__sympy_simplify():
     x = Symbol('x', real=True, negative=True)
@@ -302,13 +302,13 @@ def demo_atan2_02__sympy_extras_simplify():
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('demo-atan2-02', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-075124', demo_atan2_02__satassume_ask),
-    ('demo-atan2-02', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261019-074829', demo_atan2_02__satrefine_refine),
+    ('demo-atan2-02', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261019-105606', demo_atan2_02__satrefine_refine),
     ('demo-atan2-02', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261019-075128', demo_atan2_02__satsimp_trigsimp),
     ('demo-atan2-02', 'satrefine-simplify', 'false', 'false', 'satrefine-simplify-20261019-075126', demo_atan2_02__satrefine_simplify),
-    ('demo-atan2-02', 'sympy-auto', 'false', 'false', 'sympy-auto-20261019-040938', demo_atan2_02__sympy_auto),
-    ('demo-atan2-02', 'sympy-ask', 'false', 'null', 'sympy-ask-20261019-040940', demo_atan2_02__sympy_ask),
-    ('demo-atan2-02', 'sympy-refine', 'false', 'false', 'sympy-refine-20261019-040943', demo_atan2_02__sympy_refine),
-    ('demo-atan2-02', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261019-040945', demo_atan2_02__sympy_simplify),
+    ('demo-atan2-02', 'sympy-auto', 'false', 'false', 'sympy-auto-20261019-105557', demo_atan2_02__sympy_auto),
+    ('demo-atan2-02', 'sympy-ask', 'false', 'null', 'sympy-ask-20261019-105559', demo_atan2_02__sympy_ask),
+    ('demo-atan2-02', 'sympy-refine', 'false', 'false', 'sympy-refine-20261019-105602', demo_atan2_02__sympy_refine),
+    ('demo-atan2-02', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261019-105605', demo_atan2_02__sympy_simplify),
     ('demo-atan2-02', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261019-041809', demo_atan2_02__sympy_extras_ask),
     ('demo-atan2-02', 'sympy-extras-refine', 'false', 'false', 'sympy-extras-refine-20261019-041814', demo_atan2_02__sympy_extras_refine),
     ('demo-atan2-02', 'sympy-extras-simplify', 'false', 'false', 'sympy-extras-simplify-20261019-041817', demo_atan2_02__sympy_extras_simplify),

@@ -123,7 +123,7 @@ import sympy
 
 
 # ---- case trig-period-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-041004 answered true (solved)
+# the run sympy-ask-20261019-105623 answered true (solved)
 @_in(_SETUP1)
 def trig_period_01__sympy_ask():
     z = Symbol('z', complex=True)
@@ -135,7 +135,7 @@ def trig_period_01__sympy_ask():
 
 
 # ---- case trig-period-02 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-041004 answered null (declined correctly)
+# the run sympy-ask-20261019-105623 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_02__sympy_ask():
     x = Symbol('x', real=True)
@@ -147,7 +147,7 @@ def trig_period_02__sympy_ask():
 
 
 # ---- case trig-period-03 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-041004 answered null (declined correctly)
+# the run sympy-ask-20261019-105623 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_03__sympy_ask():
     x = Symbol('x', real=True)
@@ -159,7 +159,7 @@ def trig_period_03__sympy_ask():
 
 
 # ---- case trig-shift-01 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-041004 answered null (declined correctly)
+# the run sympy-ask-20261019-105623 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_shift_01__sympy_ask():
     x = Symbol('x', real=True)
@@ -172,10 +172,10 @@ def trig_shift_01__sympy_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-period-01', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-041004', trig_period_01__sympy_ask),
-    ('trig-period-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-041004', trig_period_02__sympy_ask),
-    ('trig-period-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-041004', trig_period_03__sympy_ask),
-    ('trig-shift-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-041004', trig_shift_01__sympy_ask),
+    ('trig-period-01', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-105623', trig_period_01__sympy_ask),
+    ('trig-period-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-105623', trig_period_02__sympy_ask),
+    ('trig-period-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-105623', trig_period_03__sympy_ask),
+    ('trig-shift-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-105623', trig_shift_01__sympy_ask),
 ]
 
 
