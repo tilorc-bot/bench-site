@@ -131,7 +131,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-atan2-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-041809 answered null (no verdict)
+# the run sympy-extras-ask-20261019-110440 answered null (no verdict)
 @_in(_SETUP1)
 def demo_atan2_01__sympy_extras_ask():
     x = Symbol('x', real=True)
@@ -144,7 +144,7 @@ def demo_atan2_01__sympy_extras_ask():
 
 
 # ---- case demo-atan2-02 · expected false · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-041809 answered null (no verdict)
+# the run sympy-extras-ask-20261019-110440 answered null (no verdict)
 @_in(_SETUP1)
 def demo_atan2_02__sympy_extras_ask():
     x = Symbol('x', real=True)
@@ -157,7 +157,7 @@ def demo_atan2_02__sympy_extras_ask():
 
 
 # ---- case demo-log-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-041809 answered true (solved)
+# the run sympy-extras-ask-20261019-110440 answered true (solved)
 @_in(_SETUP1)
 def demo_log_01__sympy_extras_ask():
     x = Symbol('x', real=True)
@@ -170,7 +170,7 @@ def demo_log_01__sympy_extras_ask():
 
 
 # ---- case demo-log-02 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-041809 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-110440 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_log_02__sympy_extras_ask():
     z = Symbol('z', complex=True)
@@ -183,7 +183,7 @@ def demo_log_02__sympy_extras_ask():
 
 
 # ---- case demo-log-03 · expected false · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-041809 answered null (no verdict)
+# the run sympy-extras-ask-20261019-110440 answered null (no verdict)
 @_in(_SETUP1)
 def demo_log_03__sympy_extras_ask():
     x = Symbol('x', real=True)
@@ -196,11 +196,11 @@ def demo_log_03__sympy_extras_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-atan2-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-041809', demo_atan2_01__sympy_extras_ask),
-    ('demo-atan2-02', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261019-041809', demo_atan2_02__sympy_extras_ask),
-    ('demo-log-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-041809', demo_log_01__sympy_extras_ask),
-    ('demo-log-02', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-041809', demo_log_02__sympy_extras_ask),
-    ('demo-log-03', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261019-041809', demo_log_03__sympy_extras_ask),
+    ('demo-atan2-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-110440', demo_atan2_01__sympy_extras_ask),
+    ('demo-atan2-02', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261019-110440', demo_atan2_02__sympy_extras_ask),
+    ('demo-log-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110440', demo_log_01__sympy_extras_ask),
+    ('demo-log-02', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-110440', demo_log_02__sympy_extras_ask),
+    ('demo-log-03', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261019-110440', demo_log_03__sympy_extras_ask),
 ]
 
 

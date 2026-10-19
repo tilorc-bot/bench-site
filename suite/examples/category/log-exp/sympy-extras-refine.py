@@ -131,7 +131,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-eq-log-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-041814 answered true (solved)
+# the run sympy-extras-refine-20261019-110445 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_log_01__sympy_extras_refine():
     x = Symbol('x', real=True)
@@ -144,7 +144,7 @@ def demo_eq_log_01__sympy_extras_refine():
 
 
 # ---- case demo-eq-pow-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-041814 answered true (solved)
+# the run sympy-extras-refine-20261019-110445 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_pow_01__sympy_extras_refine():
     n = Symbol('n', integer=True)
@@ -158,8 +158,8 @@ def demo_eq_pow_01__sympy_extras_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-log-01', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261019-041814', demo_eq_log_01__sympy_extras_refine),
-    ('demo-eq-pow-01', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261019-041814', demo_eq_pow_01__sympy_extras_refine),
+    ('demo-eq-log-01', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261019-110445', demo_eq_log_01__sympy_extras_refine),
+    ('demo-eq-pow-01', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261019-110445', demo_eq_pow_01__sympy_extras_refine),
 ]
 
 

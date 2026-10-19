@@ -148,7 +148,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-log-03 · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-075124 answered false (solved)
+# the run satassume-ask-20261019-110434 answered false (solved)
 @_in(_SETUP1)
 def demo_log_03__satassume_ask():
     x = Symbol('x')
@@ -173,7 +173,7 @@ def demo_log_03__satrefine_refine():
 
 
 # ---- case demo-log-03 · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261019-075128 answered null (no verdict)
+# the run satsimp-trigsimp-20261019-110438 answered null (no verdict)
 @_in(_SETUP2)
 def demo_log_03__satsimp_trigsimp():
     x = Symbol('x')
@@ -186,7 +186,7 @@ def demo_log_03__satsimp_trigsimp():
 
 
 # ---- case demo-log-03 · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-075126 answered false (solved)
+# the run satrefine-simplify-20261019-110436 answered false (solved)
 @_in(_SETUP2)
 def demo_log_03__satrefine_simplify():
     x = Symbol('x')
@@ -250,7 +250,7 @@ def demo_log_03__sympy_simplify():
 
 
 # ---- case demo-log-03 · expected false · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-041809 answered null (no verdict)
+# the run sympy-extras-ask-20261019-110440 answered null (no verdict)
 @_in(_SETUP4)
 def demo_log_03__sympy_extras_ask():
     x = Symbol('x', real=True)
@@ -263,7 +263,7 @@ def demo_log_03__sympy_extras_ask():
 
 
 # ---- case demo-log-03 · expected false · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-041814 answered null (no verdict)
+# the run sympy-extras-refine-20261019-110445 answered null (no verdict)
 @_in(_SETUP4)
 def demo_log_03__sympy_extras_refine():
     x = Symbol('x', real=True)
@@ -276,7 +276,7 @@ def demo_log_03__sympy_extras_refine():
 
 
 # ---- case demo-log-03 · expected false · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-041817 answered false (solved)
+# the run sympy-extras-simplify-20261019-110448 answered false (solved)
 @_in(_SETUP4)
 def demo_log_03__sympy_extras_simplify():
     x = Symbol('x', real=True)
@@ -290,17 +290,17 @@ def demo_log_03__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-log-03', 'satassume-ask', 'false', 'false', 'satassume-ask-20261019-075124', demo_log_03__satassume_ask),
+    ('demo-log-03', 'satassume-ask', 'false', 'false', 'satassume-ask-20261019-110434', demo_log_03__satassume_ask),
     ('demo-log-03', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261019-105606', demo_log_03__satrefine_refine),
-    ('demo-log-03', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261019-075128', demo_log_03__satsimp_trigsimp),
-    ('demo-log-03', 'satrefine-simplify', 'false', 'false', 'satrefine-simplify-20261019-075126', demo_log_03__satrefine_simplify),
+    ('demo-log-03', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261019-110438', demo_log_03__satsimp_trigsimp),
+    ('demo-log-03', 'satrefine-simplify', 'false', 'false', 'satrefine-simplify-20261019-110436', demo_log_03__satrefine_simplify),
     ('demo-log-03', 'sympy-auto', 'false', 'null', 'sympy-auto-20261019-105557', demo_log_03__sympy_auto),
     ('demo-log-03', 'sympy-ask', 'false', 'false', 'sympy-ask-20261019-105559', demo_log_03__sympy_ask),
     ('demo-log-03', 'sympy-refine', 'false', 'null', 'sympy-refine-20261019-105602', demo_log_03__sympy_refine),
     ('demo-log-03', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261019-105605', demo_log_03__sympy_simplify),
-    ('demo-log-03', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261019-041809', demo_log_03__sympy_extras_ask),
-    ('demo-log-03', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261019-041814', demo_log_03__sympy_extras_refine),
-    ('demo-log-03', 'sympy-extras-simplify', 'false', 'false', 'sympy-extras-simplify-20261019-041817', demo_log_03__sympy_extras_simplify),
+    ('demo-log-03', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261019-110440', demo_log_03__sympy_extras_ask),
+    ('demo-log-03', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261019-110445', demo_log_03__sympy_extras_refine),
+    ('demo-log-03', 'sympy-extras-simplify', 'false', 'false', 'sympy-extras-simplify-20261019-110448', demo_log_03__sympy_extras_simplify),
 ]
 
 

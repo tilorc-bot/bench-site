@@ -149,7 +149,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case trig-double-02 · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-075130 answered null (no verdict)
+# the run satassume-ask-20261019-110452 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_02__satassume_ask():
     x = Symbol('x')
@@ -174,7 +174,7 @@ def trig_double_02__satrefine_refine():
 
 
 # ---- case trig-double-02 · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261019-075133 answered null (no verdict)
+# the run satsimp-trigsimp-20261019-110455 answered null (no verdict)
 @_in(_SETUP2)
 def trig_double_02__satsimp_trigsimp():
     x = Symbol('x')
@@ -187,7 +187,7 @@ def trig_double_02__satsimp_trigsimp():
 
 
 # ---- case trig-double-02 · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-075131 answered null (no verdict)
+# the run satrefine-simplify-20261019-110453 answered null (no verdict)
 @_in(_SETUP2)
 def trig_double_02__satrefine_simplify():
     x = Symbol('x')
@@ -251,7 +251,7 @@ def trig_double_02__sympy_simplify():
 
 
 # ---- case trig-double-02 · expected false · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-041825 answered null (no verdict)
+# the run sympy-extras-ask-20261019-110457 answered null (no verdict)
 @_in(_SETUP4)
 def trig_double_02__sympy_extras_ask():
     x = Symbol('x', real=True)
@@ -264,7 +264,7 @@ def trig_double_02__sympy_extras_ask():
 
 
 # ---- case trig-double-02 · expected false · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-041836 answered null (no verdict)
+# the run sympy-extras-refine-20261019-110508 answered null (no verdict)
 @_in(_SETUP4)
 def trig_double_02__sympy_extras_refine():
     x = Symbol('x', real=True)
@@ -277,7 +277,7 @@ def trig_double_02__sympy_extras_refine():
 
 
 # ---- case trig-double-02 · expected false · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-041846 answered null (no verdict)
+# the run sympy-extras-simplify-20261019-110517 answered null (no verdict)
 @_in(_SETUP4)
 def trig_double_02__sympy_extras_simplify():
     x = Symbol('x', real=True)
@@ -291,17 +291,17 @@ def trig_double_02__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-double-02', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-075130', trig_double_02__satassume_ask),
+    ('trig-double-02', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-110452', trig_double_02__satassume_ask),
     ('trig-double-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261019-105629', trig_double_02__satrefine_refine),
-    ('trig-double-02', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261019-075133', trig_double_02__satsimp_trigsimp),
-    ('trig-double-02', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261019-075131', trig_double_02__satrefine_simplify),
+    ('trig-double-02', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261019-110455', trig_double_02__satsimp_trigsimp),
+    ('trig-double-02', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261019-110453', trig_double_02__satrefine_simplify),
     ('trig-double-02', 'sympy-auto', 'false', 'null', 'sympy-auto-20261019-105622', trig_double_02__sympy_auto),
     ('trig-double-02', 'sympy-ask', 'false', 'null', 'sympy-ask-20261019-105623', trig_double_02__sympy_ask),
     ('trig-double-02', 'sympy-refine', 'false', 'null', 'sympy-refine-20261019-105626', trig_double_02__sympy_refine),
     ('trig-double-02', 'sympy-simplify', 'false', 'null', 'sympy-simplify-20261019-105627', trig_double_02__sympy_simplify),
-    ('trig-double-02', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261019-041825', trig_double_02__sympy_extras_ask),
-    ('trig-double-02', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261019-041836', trig_double_02__sympy_extras_refine),
-    ('trig-double-02', 'sympy-extras-simplify', 'false', 'null', 'sympy-extras-simplify-20261019-041846', trig_double_02__sympy_extras_simplify),
+    ('trig-double-02', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261019-110457', trig_double_02__sympy_extras_ask),
+    ('trig-double-02', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261019-110508', trig_double_02__sympy_extras_refine),
+    ('trig-double-02', 'sympy-extras-simplify', 'false', 'null', 'sympy-extras-simplify-20261019-110517', trig_double_02__sympy_extras_simplify),
 ]
 
 

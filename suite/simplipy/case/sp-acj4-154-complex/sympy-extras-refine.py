@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # case sp-acj4-154-complex · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-042323 answered null (declined correctly)
+# the run sympy-extras-refine-20261019-111002 answered null (declined correctly)
 # It prints the CAS version that runs (with a warning if the stored run used another), the
 # verdict, and CHANGED: <stored> -> <got> if the answer is not the stored run's.
 # Exit status: 0 when the answer is the stored run's (a wrong one too; an error answers null,
@@ -101,5 +101,5 @@ except (Exception, SystemExit):
     _traceback.print_exc()
     Answer = None
 
-_outcome, _change = _verdict(globals().get('Answer'), 'contingent', 'null', 'sympy-extras-refine-20261019-042323')
+_outcome, _change = _verdict(globals().get('Answer'), 'contingent', 'null', 'sympy-extras-refine-20261019-111002')
 _exit(1 if _change else 0)

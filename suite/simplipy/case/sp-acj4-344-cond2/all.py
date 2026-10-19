@@ -150,7 +150,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case sp-acj4-344-cond2 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-075135 answered null (no verdict)
+# the run satassume-ask-20261019-110528 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_344_cond2__satassume_ask():
     x = Symbol('x')
@@ -162,7 +162,7 @@ def sp_acj4_344_cond2__satassume_ask():
 
 
 # ---- case sp-acj4-344-cond2 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-075057 answered true (solved)
+# the run satrefine-refine-20261019-110225 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_344_cond2__satrefine_refine():
     x = Symbol('x')
@@ -175,7 +175,7 @@ def sp_acj4_344_cond2__satrefine_refine():
 
 
 # ---- case sp-acj4-344-cond2 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261019-075223 answered null (no verdict)
+# the run satsimp-trigsimp-20261019-110616 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_344_cond2__satsimp_trigsimp():
     x = Symbol('x')
@@ -188,7 +188,7 @@ def sp_acj4_344_cond2__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-344-cond2 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-075144 answered true (solved)
+# the run satrefine-simplify-20261019-110538 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_344_cond2__satrefine_simplify():
     x = Symbol('x')
@@ -201,7 +201,7 @@ def sp_acj4_344_cond2__satrefine_simplify():
 
 
 # ---- case sp-acj4-344-cond2 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-041248 answered true (solved)
+# the run sympy-auto-20261019-105919 answered true (solved)
 @_in(_SETUP3)
 def sp_acj4_344_cond2__sympy_auto():
     x = Symbol('x', integer=True, zero=False)
@@ -214,7 +214,7 @@ def sp_acj4_344_cond2__sympy_auto():
 
 
 # ---- case sp-acj4-344-cond2 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-041253 answered true (solved)
+# the run sympy-ask-20261019-105924 answered true (solved)
 @_in(_SETUP3)
 def sp_acj4_344_cond2__sympy_ask():
     x = Symbol('x', integer=True)
@@ -227,7 +227,7 @@ def sp_acj4_344_cond2__sympy_ask():
 
 
 # ---- case sp-acj4-344-cond2 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-041405 answered true (solved)
+# the run sympy-refine-20261019-110036 answered true (solved)
 @_in(_SETUP3)
 def sp_acj4_344_cond2__sympy_refine():
     x = Symbol('x', integer=True)
@@ -240,7 +240,7 @@ def sp_acj4_344_cond2__sympy_refine():
 
 
 # ---- case sp-acj4-344-cond2 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261019-041538 answered true (solved)
+# the run sympy-simplify-20261019-110207 answered true (solved)
 @_in(_SETUP3)
 def sp_acj4_344_cond2__sympy_simplify():
     x = Symbol('x', integer=True, zero=False)
@@ -252,7 +252,7 @@ def sp_acj4_344_cond2__sympy_simplify():
 
 
 # ---- case sp-acj4-344-cond2 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-041945 answered true (solved)
+# the run sympy-extras-ask-20261019-110626 answered true (solved)
 @_in(_SETUP4)
 def sp_acj4_344_cond2__sympy_extras_ask():
     x = Symbol('x', integer=True)
@@ -265,7 +265,7 @@ def sp_acj4_344_cond2__sympy_extras_ask():
 
 
 # ---- case sp-acj4-344-cond2 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-042323 answered true (solved)
+# the run sympy-extras-refine-20261019-111002 answered true (solved)
 @_in(_SETUP4)
 def sp_acj4_344_cond2__sympy_extras_refine():
     x = Symbol('x', integer=True)
@@ -278,7 +278,7 @@ def sp_acj4_344_cond2__sympy_extras_refine():
 
 
 # ---- case sp-acj4-344-cond2 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-042726 answered true (solved)
+# the run sympy-extras-simplify-20261019-111402 answered true (solved)
 @_in(_SETUP4)
 def sp_acj4_344_cond2__sympy_extras_simplify():
     x = Symbol('x', integer=True)
@@ -292,17 +292,17 @@ def sp_acj4_344_cond2__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-344-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-075135', sp_acj4_344_cond2__satassume_ask),
-    ('sp-acj4-344-cond2', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-075057', sp_acj4_344_cond2__satrefine_refine),
-    ('sp-acj4-344-cond2', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261019-075223', sp_acj4_344_cond2__satsimp_trigsimp),
-    ('sp-acj4-344-cond2', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-075144', sp_acj4_344_cond2__satrefine_simplify),
-    ('sp-acj4-344-cond2', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-041248', sp_acj4_344_cond2__sympy_auto),
-    ('sp-acj4-344-cond2', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-041253', sp_acj4_344_cond2__sympy_ask),
-    ('sp-acj4-344-cond2', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-041405', sp_acj4_344_cond2__sympy_refine),
-    ('sp-acj4-344-cond2', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-041538', sp_acj4_344_cond2__sympy_simplify),
-    ('sp-acj4-344-cond2', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-041945', sp_acj4_344_cond2__sympy_extras_ask),
-    ('sp-acj4-344-cond2', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261019-042323', sp_acj4_344_cond2__sympy_extras_refine),
-    ('sp-acj4-344-cond2', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-042726', sp_acj4_344_cond2__sympy_extras_simplify),
+    ('sp-acj4-344-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-110528', sp_acj4_344_cond2__satassume_ask),
+    ('sp-acj4-344-cond2', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-110225', sp_acj4_344_cond2__satrefine_refine),
+    ('sp-acj4-344-cond2', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261019-110616', sp_acj4_344_cond2__satsimp_trigsimp),
+    ('sp-acj4-344-cond2', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110538', sp_acj4_344_cond2__satrefine_simplify),
+    ('sp-acj4-344-cond2', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-105919', sp_acj4_344_cond2__sympy_auto),
+    ('sp-acj4-344-cond2', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-105924', sp_acj4_344_cond2__sympy_ask),
+    ('sp-acj4-344-cond2', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-110036', sp_acj4_344_cond2__sympy_refine),
+    ('sp-acj4-344-cond2', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-110207', sp_acj4_344_cond2__sympy_simplify),
+    ('sp-acj4-344-cond2', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110626', sp_acj4_344_cond2__sympy_extras_ask),
+    ('sp-acj4-344-cond2', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261019-111002', sp_acj4_344_cond2__sympy_extras_refine),
+    ('sp-acj4-344-cond2', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-111402', sp_acj4_344_cond2__sympy_extras_simplify),
 ]
 
 
