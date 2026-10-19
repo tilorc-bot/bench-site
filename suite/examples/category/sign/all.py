@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite examples · category sign · all Python systems (5 cases listed)
-# 55 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 60 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -133,6 +133,12 @@ import sympy
 # setup 4 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP4 = _Setup(r'''from sympy import *
 import sympy
+from sympy.assumptions.satask import satask
+''', ('sympy', '1.14.0'))
+
+# setup 5 (the harness's warm-up, version capture and cache clearing left out)
+_SETUP5 = _Setup(r'''from sympy import *
+import sympy
 import sympy_extras.assumptions
 import sympy_extras.settings
 import importlib.metadata
@@ -225,6 +231,18 @@ def demo_nonzero_01__sympy_ask():
     return Answer
 
 
+# ---- case demo-nonzero-01 · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-164814 answered null (no verdict)
+@_in(_SETUP4)
+def demo_nonzero_01__sympy_satask():
+    z = Symbol('z', complex=True)
+    Assum = And(Q.complex(z), Q.imaginary(z))
+    Residual = Abs(sign(z)) - 1
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-nonzero-01 · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-105602 answered null (no verdict)
 @_in(_SETUP3)
@@ -252,7 +270,7 @@ def demo_nonzero_01__sympy_simplify():
 
 # ---- case demo-nonzero-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110440 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def demo_nonzero_01__sympy_extras_ask():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z), Q.imaginary(z))
@@ -264,7 +282,7 @@ def demo_nonzero_01__sympy_extras_ask():
 
 # ---- case demo-nonzero-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-110445 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def demo_nonzero_01__sympy_extras_refine():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z), Q.imaginary(z))
@@ -277,7 +295,7 @@ def demo_nonzero_01__sympy_extras_refine():
 
 # ---- case demo-nonzero-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-110448 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def demo_nonzero_01__sympy_extras_simplify():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z), Q.imaginary(z))
@@ -363,6 +381,18 @@ def demo_sign_02__sympy_ask():
     return Answer
 
 
+# ---- case demo-sign-02 · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-164814 answered null (no verdict)
+@_in(_SETUP4)
+def demo_sign_02__sympy_satask():
+    x = Symbol('x', real=True)
+    Assum = And(Q.real(x), ~Q.zero(x))
+    Residual = sign(Pow(x, 2)) - 1
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-sign-02 · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-105602 answered true (solved)
 @_in(_SETUP3)
@@ -390,7 +420,7 @@ def demo_sign_02__sympy_simplify():
 
 # ---- case demo-sign-02 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110440 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def demo_sign_02__sympy_extras_ask():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), ~Q.zero(x))
@@ -402,7 +432,7 @@ def demo_sign_02__sympy_extras_ask():
 
 # ---- case demo-sign-02 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-110445 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def demo_sign_02__sympy_extras_refine():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), ~Q.zero(x))
@@ -415,7 +445,7 @@ def demo_sign_02__sympy_extras_refine():
 
 # ---- case demo-sign-02 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-110448 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def demo_sign_02__sympy_extras_simplify():
     x = Symbol('x', real=True)
     Assum = And(Q.real(x), ~Q.zero(x))
@@ -501,6 +531,18 @@ def demo_sign_03__sympy_ask():
     return Answer
 
 
+# ---- case demo-sign-03 · expected contingent · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-164814 answered null (declined correctly)
+@_in(_SETUP4)
+def demo_sign_03__sympy_satask():
+    x = Symbol('x', complex=True)
+    Assum = And(Q.complex(x), ~Q.zero(x))
+    Residual = sign(Pow(x, 2)) - 1
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-sign-03 · expected contingent · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-105602 answered null (declined correctly)
 @_in(_SETUP3)
@@ -528,7 +570,7 @@ def demo_sign_03__sympy_simplify():
 
 # ---- case demo-sign-03 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110440 answered null (declined correctly)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def demo_sign_03__sympy_extras_ask():
     x = Symbol('x', complex=True)
     Assum = And(Q.complex(x), ~Q.zero(x))
@@ -540,7 +582,7 @@ def demo_sign_03__sympy_extras_ask():
 
 # ---- case demo-sign-03 · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-110445 answered null (declined correctly)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def demo_sign_03__sympy_extras_refine():
     x = Symbol('x', complex=True)
     Assum = And(Q.complex(x), ~Q.zero(x))
@@ -553,7 +595,7 @@ def demo_sign_03__sympy_extras_refine():
 
 # ---- case demo-sign-03 · expected contingent · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-110448 answered null (declined correctly)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def demo_sign_03__sympy_extras_simplify():
     x = Symbol('x', complex=True)
     Assum = And(Q.complex(x), ~Q.zero(x))
@@ -639,6 +681,18 @@ def demo_sign_04__sympy_ask():
     return Answer
 
 
+# ---- case demo-sign-04 · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-164814 answered null (no verdict)
+@_in(_SETUP4)
+def demo_sign_04__sympy_satask():
+    z = Symbol('z', complex=True)
+    Assum = And(Q.complex(z))
+    Residual = Abs(z * conjugate(z)) - (z * conjugate(z))
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-sign-04 · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-105602 answered null (no verdict)
 @_in(_SETUP3)
@@ -666,7 +720,7 @@ def demo_sign_04__sympy_simplify():
 
 # ---- case demo-sign-04 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110440 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def demo_sign_04__sympy_extras_ask():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z))
@@ -678,7 +732,7 @@ def demo_sign_04__sympy_extras_ask():
 
 # ---- case demo-sign-04 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-110445 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def demo_sign_04__sympy_extras_refine():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z))
@@ -691,7 +745,7 @@ def demo_sign_04__sympy_extras_refine():
 
 # ---- case demo-sign-04 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-110448 answered null (no verdict)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def demo_sign_04__sympy_extras_simplify():
     z = Symbol('z', complex=True)
     Assum = And(Q.complex(z))
@@ -783,6 +837,19 @@ def demo_sign_05__sympy_ask():
     return Answer
 
 
+# ---- case demo-sign-05 · expected true · system sympy-satask (sympy 1.14.0)
+# the run sympy-satask-20261019-164814 answered null (no verdict)
+@_in(_SETUP4)
+def demo_sign_05__sympy_satask():
+    x = Symbol('x', real=True)
+    y = Symbol('y', real=True)
+    Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.negative(y))
+    Residual = Abs(x - y) - (x - y)
+    Answer = satask(Q.zero(Residual), Assum)
+    print(Residual, Answer, sep='\n')
+    return Answer
+
+
 # ---- case demo-sign-05 · expected true · system sympy-refine (sympy 1.14.0)
 # the run sympy-refine-20261019-105602 answered true (solved)
 @_in(_SETUP3)
@@ -812,7 +879,7 @@ def demo_sign_05__sympy_simplify():
 
 # ---- case demo-sign-05 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-ask-20261019-110440 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def demo_sign_05__sympy_extras_ask():
     x = Symbol('x', real=True)
     y = Symbol('y', real=True)
@@ -825,7 +892,7 @@ def demo_sign_05__sympy_extras_ask():
 
 # ---- case demo-sign-05 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-refine-20261019-110445 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def demo_sign_05__sympy_extras_refine():
     x = Symbol('x', real=True)
     y = Symbol('y', real=True)
@@ -839,7 +906,7 @@ def demo_sign_05__sympy_extras_refine():
 
 # ---- case demo-sign-05 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
 # the run sympy-extras-simplify-20261019-110448 answered true (solved)
-@_in(_SETUP4)
+@_in(_SETUP5)
 def demo_sign_05__sympy_extras_simplify():
     x = Symbol('x', real=True)
     y = Symbol('y', real=True)
@@ -859,6 +926,7 @@ CASES = [
     ('demo-nonzero-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110436', demo_nonzero_01__satrefine_simplify),
     ('demo-nonzero-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-105557', demo_nonzero_01__sympy_auto),
     ('demo-nonzero-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-105559', demo_nonzero_01__sympy_ask),
+    ('demo-nonzero-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-164814', demo_nonzero_01__sympy_satask),
     ('demo-nonzero-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-105602', demo_nonzero_01__sympy_refine),
     ('demo-nonzero-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-105605', demo_nonzero_01__sympy_simplify),
     ('demo-nonzero-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-110440', demo_nonzero_01__sympy_extras_ask),
@@ -870,6 +938,7 @@ CASES = [
     ('demo-sign-02', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110436', demo_sign_02__satrefine_simplify),
     ('demo-sign-02', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-105557', demo_sign_02__sympy_auto),
     ('demo-sign-02', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-105559', demo_sign_02__sympy_ask),
+    ('demo-sign-02', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-164814', demo_sign_02__sympy_satask),
     ('demo-sign-02', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-105602', demo_sign_02__sympy_refine),
     ('demo-sign-02', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-105605', demo_sign_02__sympy_simplify),
     ('demo-sign-02', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-110440', demo_sign_02__sympy_extras_ask),
@@ -881,6 +950,7 @@ CASES = [
     ('demo-sign-03', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-110436', demo_sign_03__satrefine_simplify),
     ('demo-sign-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-105557', demo_sign_03__sympy_auto),
     ('demo-sign-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-105559', demo_sign_03__sympy_ask),
+    ('demo-sign-03', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-164814', demo_sign_03__sympy_satask),
     ('demo-sign-03', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-105602', demo_sign_03__sympy_refine),
     ('demo-sign-03', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-105605', demo_sign_03__sympy_simplify),
     ('demo-sign-03', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-110440', demo_sign_03__sympy_extras_ask),
@@ -892,6 +962,7 @@ CASES = [
     ('demo-sign-04', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110436', demo_sign_04__satrefine_simplify),
     ('demo-sign-04', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-105557', demo_sign_04__sympy_auto),
     ('demo-sign-04', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-105559', demo_sign_04__sympy_ask),
+    ('demo-sign-04', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-164814', demo_sign_04__sympy_satask),
     ('demo-sign-04', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-105602', demo_sign_04__sympy_refine),
     ('demo-sign-04', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261019-105605', demo_sign_04__sympy_simplify),
     ('demo-sign-04', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-110440', demo_sign_04__sympy_extras_ask),
@@ -903,6 +974,7 @@ CASES = [
     ('demo-sign-05', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110436', demo_sign_05__satrefine_simplify),
     ('demo-sign-05', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-105557', demo_sign_05__sympy_auto),
     ('demo-sign-05', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-105559', demo_sign_05__sympy_ask),
+    ('demo-sign-05', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-164814', demo_sign_05__sympy_satask),
     ('demo-sign-05', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-105602', demo_sign_05__sympy_refine),
     ('demo-sign-05', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-105605', demo_sign_05__sympy_simplify),
     ('demo-sign-05', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110440', demo_sign_05__sympy_extras_ask),
