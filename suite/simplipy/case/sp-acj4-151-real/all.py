@@ -231,7 +231,7 @@ def sp_acj4_151_real__sympy_ask():
 
 
 # ---- case sp-acj4-151-real · expected contingent · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-165120 answered null (declined correctly)
+# the run sympy-satask-20261019-191346 answered null (declined correctly)
 @_in(_SETUP4)
 def sp_acj4_151_real__sympy_satask():
     x = Symbol('x', real=True)
@@ -314,7 +314,7 @@ CASES = [
     ('sp-acj4-151-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-185000', sp_acj4_151_real__satrefine_simplify),
     ('sp-acj4-151-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-184146', sp_acj4_151_real__sympy_auto),
     ('sp-acj4-151-real', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-184152', sp_acj4_151_real__sympy_ask),
-    ('sp-acj4-151-real', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-165120', sp_acj4_151_real__sympy_satask),
+    ('sp-acj4-151-real', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-191346', sp_acj4_151_real__sympy_satask),
     ('sp-acj4-151-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-184304', sp_acj4_151_real__sympy_refine),
     ('sp-acj4-151-real', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-184629', sp_acj4_151_real__sympy_simplify),
     ('sp-acj4-151-real', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-185049', sp_acj4_151_real__sympy_extras_ask),
