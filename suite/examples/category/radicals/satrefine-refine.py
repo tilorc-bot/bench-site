@@ -121,7 +121,7 @@ import satsimp
 
 
 # ---- case demo-eq-abs-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-040947 answered true (solved)
+# the run satrefine-refine-20261019-074829 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_abs_01__satrefine_refine():
     x = Symbol('x')
@@ -134,7 +134,7 @@ def demo_eq_abs_01__satrefine_refine():
 
 
 # ---- case demo-eq-abs-02 · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-040947 answered null (no verdict)
+# the run satrefine-refine-20261019-074829 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_abs_02__satrefine_refine():
     x = Symbol('x')
@@ -147,7 +147,7 @@ def demo_eq_abs_02__satrefine_refine():
 
 
 # ---- case demo-eq-sqrt-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-040947 answered true (solved)
+# the run satrefine-refine-20261019-074829 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_01__satrefine_refine():
     x = Symbol('x')
@@ -160,7 +160,7 @@ def demo_eq_sqrt_01__satrefine_refine():
 
 
 # ---- case demo-eq-sqrt-02 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-040947 answered true (solved)
+# the run satrefine-refine-20261019-074829 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_02__satrefine_refine():
     x = Symbol('x')
@@ -173,7 +173,7 @@ def demo_eq_sqrt_02__satrefine_refine():
 
 
 # ---- case demo-eq-sqrt-03 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-040947 answered null (declined correctly)
+# the run satrefine-refine-20261019-074829 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_eq_sqrt_03__satrefine_refine():
     x = Symbol('x')
@@ -186,7 +186,7 @@ def demo_eq_sqrt_03__satrefine_refine():
 
 
 # ---- case demo-eq-sqrt-04 · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-040947 answered false (solved)
+# the run satrefine-refine-20261019-074829 answered false (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_04__satrefine_refine():
     x = Symbol('x')
@@ -200,12 +200,12 @@ def demo_eq_sqrt_04__satrefine_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-abs-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-040947', demo_eq_abs_01__satrefine_refine),
-    ('demo-eq-abs-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261019-040947', demo_eq_abs_02__satrefine_refine),
-    ('demo-eq-sqrt-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-040947', demo_eq_sqrt_01__satrefine_refine),
-    ('demo-eq-sqrt-02', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-040947', demo_eq_sqrt_02__satrefine_refine),
-    ('demo-eq-sqrt-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-040947', demo_eq_sqrt_03__satrefine_refine),
-    ('demo-eq-sqrt-04', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261019-040947', demo_eq_sqrt_04__satrefine_refine),
+    ('demo-eq-abs-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-074829', demo_eq_abs_01__satrefine_refine),
+    ('demo-eq-abs-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261019-074829', demo_eq_abs_02__satrefine_refine),
+    ('demo-eq-sqrt-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-074829', demo_eq_sqrt_01__satrefine_refine),
+    ('demo-eq-sqrt-02', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-074829', demo_eq_sqrt_02__satrefine_refine),
+    ('demo-eq-sqrt-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-074829', demo_eq_sqrt_03__satrefine_refine),
+    ('demo-eq-sqrt-04', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261019-074829', demo_eq_sqrt_04__satrefine_refine),
 ]
 
 

@@ -158,7 +158,7 @@ def demo_sign_05__satassume_ask():
 
 
 # ---- case demo-sign-05 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-040947 answered true (solved)
+# the run satrefine-refine-20261019-074829 answered true (solved)
 @_in(_SETUP2)
 def demo_sign_05__satrefine_refine():
     x = Symbol('x')
@@ -285,7 +285,7 @@ def demo_sign_05__sympy_extras_simplify():
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('demo-sign-05', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-041805', demo_sign_05__satassume_ask),
-    ('demo-sign-05', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-040947', demo_sign_05__satrefine_refine),
+    ('demo-sign-05', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-074829', demo_sign_05__satrefine_refine),
     ('demo-sign-05', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-041807', demo_sign_05__satrefine_simplify),
     ('demo-sign-05', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-040938', demo_sign_05__sympy_auto),
     ('demo-sign-05', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-040940', demo_sign_05__sympy_ask),

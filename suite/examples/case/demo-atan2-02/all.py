@@ -158,7 +158,7 @@ def demo_atan2_02__satassume_ask():
 
 
 # ---- case demo-atan2-02 · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-040947 answered false (solved)
+# the run satrefine-refine-20261019-074829 answered false (solved)
 @_in(_SETUP2)
 def demo_atan2_02__satrefine_refine():
     x = Symbol('x')
@@ -285,7 +285,7 @@ def demo_atan2_02__sympy_extras_simplify():
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('demo-atan2-02', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-041805', demo_atan2_02__satassume_ask),
-    ('demo-atan2-02', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261019-040947', demo_atan2_02__satrefine_refine),
+    ('demo-atan2-02', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261019-074829', demo_atan2_02__satrefine_refine),
     ('demo-atan2-02', 'satrefine-simplify', 'false', 'false', 'satrefine-simplify-20261019-041807', demo_atan2_02__satrefine_simplify),
     ('demo-atan2-02', 'sympy-auto', 'false', 'false', 'sympy-auto-20261019-040938', demo_atan2_02__sympy_auto),
     ('demo-atan2-02', 'sympy-ask', 'false', 'null', 'sympy-ask-20261019-040940', demo_atan2_02__sympy_ask),

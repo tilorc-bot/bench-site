@@ -158,7 +158,7 @@ def demo_log_02__satassume_ask():
 
 
 # ---- case demo-log-02 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-040947 answered null (declined correctly)
+# the run satrefine-refine-20261019-074829 answered null (declined correctly)
 @_in(_SETUP2)
 def demo_log_02__satrefine_refine():
     z = Symbol('z')
@@ -285,7 +285,7 @@ def demo_log_02__sympy_extras_simplify():
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('demo-log-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-041805', demo_log_02__satassume_ask),
-    ('demo-log-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-040947', demo_log_02__satrefine_refine),
+    ('demo-log-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-074829', demo_log_02__satrefine_refine),
     ('demo-log-02', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-041807', demo_log_02__satrefine_simplify),
     ('demo-log-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-040938', demo_log_02__sympy_auto),
     ('demo-log-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-040940', demo_log_02__sympy_ask),

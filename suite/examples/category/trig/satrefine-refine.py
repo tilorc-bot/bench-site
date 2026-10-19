@@ -121,7 +121,7 @@ import satsimp
 
 
 # ---- case demo-eq-trig-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-040947 answered null (no verdict)
+# the run satrefine-refine-20261019-074829 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_trig_01__satrefine_refine():
     x = Symbol('x')
@@ -134,7 +134,7 @@ def demo_eq_trig_01__satrefine_refine():
 
 
 # ---- case demo-eq-trig-02 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-040947 answered null (no verdict)
+# the run satrefine-refine-20261019-074829 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_trig_02__satrefine_refine():
     x = Symbol('x')
@@ -148,8 +148,8 @@ def demo_eq_trig_02__satrefine_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-trig-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-040947', demo_eq_trig_01__satrefine_refine),
-    ('demo-eq-trig-02', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-040947', demo_eq_trig_02__satrefine_refine),
+    ('demo-eq-trig-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-074829', demo_eq_trig_01__satrefine_refine),
+    ('demo-eq-trig-02', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-074829', demo_eq_trig_02__satrefine_refine),
 ]
 
 
