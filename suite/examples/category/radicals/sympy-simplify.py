@@ -123,7 +123,7 @@ import sympy
 
 
 # ---- case demo-eq-abs-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261019-184106 answered true (solved)
+# the run sympy-simplify-20261019-213650 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_abs_01__sympy_simplify():
     x = Symbol('x', real=True, negative=True)
@@ -135,7 +135,7 @@ def demo_eq_abs_01__sympy_simplify():
 
 
 # ---- case demo-eq-abs-02 · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261019-184106 answered null (no verdict)
+# the run sympy-simplify-20261019-213650 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_abs_02__sympy_simplify():
     x = Symbol('x', real=True, negative=True)
@@ -147,7 +147,7 @@ def demo_eq_abs_02__sympy_simplify():
 
 
 # ---- case demo-eq-sqrt-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261019-184106 answered true (solved)
+# the run sympy-simplify-20261019-213650 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_01__sympy_simplify():
     x = Symbol('x', real=True, positive=True)
@@ -159,7 +159,7 @@ def demo_eq_sqrt_01__sympy_simplify():
 
 
 # ---- case demo-eq-sqrt-02 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261019-184106 answered true (solved)
+# the run sympy-simplify-20261019-213650 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_02__sympy_simplify():
     x = Symbol('x', real=True)
@@ -171,7 +171,7 @@ def demo_eq_sqrt_02__sympy_simplify():
 
 
 # ---- case demo-eq-sqrt-03 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261019-184106 answered null (declined correctly)
+# the run sympy-simplify-20261019-213650 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_eq_sqrt_03__sympy_simplify():
     x = Symbol('x', real=True)
@@ -183,7 +183,7 @@ def demo_eq_sqrt_03__sympy_simplify():
 
 
 # ---- case demo-eq-sqrt-04 · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261019-184106 answered false (solved)
+# the run sympy-simplify-20261019-213650 answered false (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_04__sympy_simplify():
     x = Symbol('x', real=True, positive=True)
@@ -196,12 +196,12 @@ def demo_eq_sqrt_04__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-abs-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-184106', demo_eq_abs_01__sympy_simplify),
-    ('demo-eq-abs-02', 'sympy-simplify', 'false', 'null', 'sympy-simplify-20261019-184106', demo_eq_abs_02__sympy_simplify),
-    ('demo-eq-sqrt-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-184106', demo_eq_sqrt_01__sympy_simplify),
-    ('demo-eq-sqrt-02', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-184106', demo_eq_sqrt_02__sympy_simplify),
-    ('demo-eq-sqrt-03', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-184106', demo_eq_sqrt_03__sympy_simplify),
-    ('demo-eq-sqrt-04', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261019-184106', demo_eq_sqrt_04__sympy_simplify),
+    ('demo-eq-abs-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-213650', demo_eq_abs_01__sympy_simplify),
+    ('demo-eq-abs-02', 'sympy-simplify', 'false', 'null', 'sympy-simplify-20261019-213650', demo_eq_abs_02__sympy_simplify),
+    ('demo-eq-sqrt-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-213650', demo_eq_sqrt_01__sympy_simplify),
+    ('demo-eq-sqrt-02', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-213650', demo_eq_sqrt_02__sympy_simplify),
+    ('demo-eq-sqrt-03', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-213650', demo_eq_sqrt_03__sympy_simplify),
+    ('demo-eq-sqrt-04', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261019-213650', demo_eq_sqrt_04__sympy_simplify),
 ]
 
 

@@ -123,10 +123,10 @@ import sympy
 
 
 # ---- case trig-acos-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-184125 answered null (no verdict)
+# the run sympy-ask-20261019-213709 answered null (no verdict)
 @_in(_SETUP1)
 def trig_acos_01__sympy_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x), x < 3)
     Residual = acos(cos(x)) - x
     Answer = ask(Q.zero(Residual), Assum)
@@ -135,10 +135,10 @@ def trig_acos_01__sympy_ask():
 
 
 # ---- case trig-asin-01 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-184125 answered null (declined correctly)
+# the run sympy-ask-20261019-213709 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_asin_01__sympy_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = asin(sin(x)) - x
     Answer = ask(Q.zero(Residual), Assum)
@@ -147,10 +147,10 @@ def trig_asin_01__sympy_ask():
 
 
 # ---- case trig-asin-02 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-184125 answered null (no verdict)
+# the run sympy-ask-20261019-213709 answered null (no verdict)
 @_in(_SETUP1)
 def trig_asin_02__sympy_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), x > -1, x < 1)
     Residual = asin(sin(x)) - x
     Answer = ask(Q.zero(Residual), Assum)
@@ -159,10 +159,10 @@ def trig_asin_02__sympy_ask():
 
 
 # ---- case trig-atan-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-184125 answered null (no verdict)
+# the run sympy-ask-20261019-213709 answered null (no verdict)
 @_in(_SETUP1)
 def trig_atan_01__sympy_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), x > -1, x < 1)
     Residual = atan(tan(x)) - x
     Answer = ask(Q.zero(Residual), Assum)
@@ -172,10 +172,10 @@ def trig_atan_01__sympy_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-acos-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-184125', trig_acos_01__sympy_ask),
-    ('trig-asin-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-184125', trig_asin_01__sympy_ask),
-    ('trig-asin-02', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-184125', trig_asin_02__sympy_ask),
-    ('trig-atan-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-184125', trig_atan_01__sympy_ask),
+    ('trig-acos-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-213709', trig_acos_01__sympy_ask),
+    ('trig-asin-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-213709', trig_asin_01__sympy_ask),
+    ('trig-asin-02', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-213709', trig_asin_02__sympy_ask),
+    ('trig-atan-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-213709', trig_atan_01__sympy_ask),
 ]
 
 

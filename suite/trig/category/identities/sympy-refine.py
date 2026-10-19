@@ -123,10 +123,10 @@ import sympy
 
 
 # ---- case trig-double-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-184128 answered null (no verdict)
+# the run sympy-refine-20261019-213712 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_01__sympy_refine():
-    z = Symbol('z', complex=True)
+    z = Symbol('z')
     Assum = And(Q.complex(z))
     Residual = sin(2 * z) - (2 * (sin(z) * cos(z)))
     Result = refine(Residual, Assum)
@@ -136,10 +136,10 @@ def trig_double_01__sympy_refine():
 
 
 # ---- case trig-double-02 · expected false · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-184128 answered null (no verdict)
+# the run sympy-refine-20261019-213712 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_02__sympy_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x), x < 1)
     Residual = sin(2 * x) - (2 * sin(x))
     Result = refine(Residual, Assum)
@@ -149,10 +149,10 @@ def trig_double_02__sympy_refine():
 
 
 # ---- case trig-pyth-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-184128 answered null (no verdict)
+# the run sympy-refine-20261019-213712 answered null (no verdict)
 @_in(_SETUP1)
 def trig_pyth_01__sympy_refine():
-    z = Symbol('z', complex=True)
+    z = Symbol('z')
     Assum = And(Q.complex(z))
     Residual = sin(z) * sin(z) + cos(z) * cos(z) - 1
     Result = refine(Residual, Assum)
@@ -162,10 +162,10 @@ def trig_pyth_01__sympy_refine():
 
 
 # ---- case trig-sqrt-01 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-184128 answered null (declined correctly)
+# the run sympy-refine-20261019-213712 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_sqrt_01__sympy_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sqrt(1 - sin(x) * sin(x)) - cos(x)
     Result = refine(Residual, Assum)
@@ -175,10 +175,10 @@ def trig_sqrt_01__sympy_refine():
 
 
 # ---- case trig-tan-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-184128 answered null (no verdict)
+# the run sympy-refine-20261019-213712 answered null (no verdict)
 @_in(_SETUP1)
 def trig_tan_01__sympy_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(cos(x)))
     Residual = tan(x) - (sin(x) / cos(x))
     Result = refine(Residual, Assum)
@@ -189,11 +189,11 @@ def trig_tan_01__sympy_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-double-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-184128', trig_double_01__sympy_refine),
-    ('trig-double-02', 'sympy-refine', 'false', 'null', 'sympy-refine-20261019-184128', trig_double_02__sympy_refine),
-    ('trig-pyth-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-184128', trig_pyth_01__sympy_refine),
-    ('trig-sqrt-01', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-184128', trig_sqrt_01__sympy_refine),
-    ('trig-tan-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-184128', trig_tan_01__sympy_refine),
+    ('trig-double-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-213712', trig_double_01__sympy_refine),
+    ('trig-double-02', 'sympy-refine', 'false', 'null', 'sympy-refine-20261019-213712', trig_double_02__sympy_refine),
+    ('trig-pyth-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-213712', trig_pyth_01__sympy_refine),
+    ('trig-sqrt-01', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-213712', trig_sqrt_01__sympy_refine),
+    ('trig-tan-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-213712', trig_tan_01__sympy_refine),
 ]
 
 

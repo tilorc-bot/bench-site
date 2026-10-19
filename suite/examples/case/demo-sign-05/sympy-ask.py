@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # case demo-sign-05 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-184101 answered null (no verdict)
+# the run sympy-ask-20261019-213644 answered null (no verdict)
 # It prints the CAS version that runs (with a warning if the stored run used another), the
 # verdict, and CHANGED: <stored> -> <got> if the answer is not the stored run's.
 # Exit status: 0 when the answer is the stored run's (a wrong one too; an error answers null,
@@ -82,8 +82,8 @@ _version('sympy', '1.14.0')
 
 # the query code, exactly as it ran (an error answers null, as in the harness)
 try:
-    x = Symbol('x', real=True)
-    y = Symbol('y', real=True)
+    x = Symbol('x')
+    y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.negative(y))
     Residual = Abs(x - y) - (x - y)
     # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
@@ -93,5 +93,5 @@ except (Exception, SystemExit):
     _traceback.print_exc()
     Answer = None
 
-_outcome, _change = _verdict(globals().get('Answer'), 'true', 'null', 'sympy-ask-20261019-184101')
+_outcome, _change = _verdict(globals().get('Answer'), 'true', 'null', 'sympy-ask-20261019-213644')
 _exit(1 if _change else 0)

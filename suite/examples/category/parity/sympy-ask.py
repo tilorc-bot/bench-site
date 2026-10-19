@@ -123,10 +123,10 @@ import sympy
 
 
 # ---- case demo-parity-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-184101 answered null (no verdict)
+# the run sympy-ask-20261019-213644 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_01__sympy_ask():
-    n = Symbol('n', integer=True)
+    n = Symbol('n')
     Assum = And(Q.integer(n), Q.odd(n))
     Residual = Pow(-1, n + 1) - 1
     Answer = ask(Q.zero(Residual), Assum)
@@ -135,11 +135,11 @@ def demo_parity_01__sympy_ask():
 
 
 # ---- case demo-parity-02 · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-184101 answered false (solved)
+# the run sympy-ask-20261019-213644 answered false (solved)
 @_in(_SETUP1)
 def demo_parity_02__sympy_ask():
-    n = Symbol('n', integer=True)
-    m = Symbol('m', integer=True)
+    n = Symbol('n')
+    m = Symbol('m')
     Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
     Residual = Pow(-1, n * m) - 1
     Answer = ask(Q.zero(Residual), Assum)
@@ -148,10 +148,10 @@ def demo_parity_02__sympy_ask():
 
 
 # ---- case demo-parity-03 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-184101 answered true (solved)
+# the run sympy-ask-20261019-213644 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_03__sympy_ask():
-    n = Symbol('n', integer=True)
+    n = Symbol('n')
     Assum = And(Q.integer(n))
     Residual = Pow(-1, n * (n + 1)) - 1
     Answer = ask(Q.zero(Residual), Assum)
@@ -160,10 +160,10 @@ def demo_parity_03__sympy_ask():
 
 
 # ---- case demo-parity-04 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-184101 answered null (declined correctly)
+# the run sympy-ask-20261019-213644 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_parity_04__sympy_ask():
-    n = Symbol('n', integer=True)
+    n = Symbol('n')
     Assum = And(Q.integer(n), Q.even(n))
     Residual = Pow(I, n) - 1
     Answer = ask(Q.zero(Residual), Assum)
@@ -172,11 +172,11 @@ def demo_parity_04__sympy_ask():
 
 
 # ---- case demo-parity-05 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-184101 answered null (no verdict)
+# the run sympy-ask-20261019-213644 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_05__sympy_ask():
-    n = Symbol('n', integer=True)
-    m = Symbol('m', integer=True)
+    n = Symbol('n')
+    m = Symbol('m')
     Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
     Residual = Pow(-1, n * m) - (-1)
     Answer = ask(Q.zero(Residual), Assum)
@@ -186,11 +186,11 @@ def demo_parity_05__sympy_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-parity-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-184101', demo_parity_01__sympy_ask),
-    ('demo-parity-02', 'sympy-ask', 'false', 'false', 'sympy-ask-20261019-184101', demo_parity_02__sympy_ask),
-    ('demo-parity-03', 'sympy-ask', 'true', 'true', 'sympy-ask-20261019-184101', demo_parity_03__sympy_ask),
-    ('demo-parity-04', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-184101', demo_parity_04__sympy_ask),
-    ('demo-parity-05', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-184101', demo_parity_05__sympy_ask),
+    ('demo-parity-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-213644', demo_parity_01__sympy_ask),
+    ('demo-parity-02', 'sympy-ask', 'false', 'false', 'sympy-ask-20261019-213644', demo_parity_02__sympy_ask),
+    ('demo-parity-03', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-213644', demo_parity_03__sympy_ask),
+    ('demo-parity-04', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-213644', demo_parity_04__sympy_ask),
+    ('demo-parity-05', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-213644', demo_parity_05__sympy_ask),
 ]
 
 

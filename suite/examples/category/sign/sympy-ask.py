@@ -123,10 +123,10 @@ import sympy
 
 
 # ---- case demo-nonzero-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-184101 answered null (no verdict)
+# the run sympy-ask-20261019-213644 answered null (no verdict)
 @_in(_SETUP1)
 def demo_nonzero_01__sympy_ask():
-    z = Symbol('z', complex=True)
+    z = Symbol('z')
     Assum = And(Q.complex(z), Q.imaginary(z))
     Residual = Abs(sign(z)) - 1
     Answer = ask(Q.zero(Residual), Assum)
@@ -135,10 +135,10 @@ def demo_nonzero_01__sympy_ask():
 
 
 # ---- case demo-sign-02 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-184101 answered null (no verdict)
+# the run sympy-ask-20261019-213644 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_02__sympy_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(x))
     Residual = sign(Pow(x, 2)) - 1
     Answer = ask(Q.zero(Residual), Assum)
@@ -147,10 +147,10 @@ def demo_sign_02__sympy_ask():
 
 
 # ---- case demo-sign-03 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-184101 answered null (declined correctly)
+# the run sympy-ask-20261019-213644 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_sign_03__sympy_ask():
-    x = Symbol('x', complex=True)
+    x = Symbol('x')
     Assum = And(Q.complex(x), ~Q.zero(x))
     Residual = sign(Pow(x, 2)) - 1
     Answer = ask(Q.zero(Residual), Assum)
@@ -159,10 +159,10 @@ def demo_sign_03__sympy_ask():
 
 
 # ---- case demo-sign-04 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-184101 answered null (no verdict)
+# the run sympy-ask-20261019-213644 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_04__sympy_ask():
-    z = Symbol('z', complex=True)
+    z = Symbol('z')
     Assum = And(Q.complex(z))
     Residual = Abs(z * conjugate(z)) - (z * conjugate(z))
     Answer = ask(Q.zero(Residual), Assum)
@@ -171,11 +171,11 @@ def demo_sign_04__sympy_ask():
 
 
 # ---- case demo-sign-05 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-184101 answered null (no verdict)
+# the run sympy-ask-20261019-213644 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_05__sympy_ask():
-    x = Symbol('x', real=True)
-    y = Symbol('y', real=True)
+    x = Symbol('x')
+    y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.negative(y))
     Residual = Abs(x - y) - (x - y)
     Answer = ask(Q.zero(Residual), Assum)
@@ -185,11 +185,11 @@ def demo_sign_05__sympy_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-nonzero-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-184101', demo_nonzero_01__sympy_ask),
-    ('demo-sign-02', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-184101', demo_sign_02__sympy_ask),
-    ('demo-sign-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-184101', demo_sign_03__sympy_ask),
-    ('demo-sign-04', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-184101', demo_sign_04__sympy_ask),
-    ('demo-sign-05', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-184101', demo_sign_05__sympy_ask),
+    ('demo-nonzero-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-213644', demo_nonzero_01__sympy_ask),
+    ('demo-sign-02', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-213644', demo_sign_02__sympy_ask),
+    ('demo-sign-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-213644', demo_sign_03__sympy_ask),
+    ('demo-sign-04', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-213644', demo_sign_04__sympy_ask),
+    ('demo-sign-05', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-213644', demo_sign_05__sympy_ask),
 ]
 
 

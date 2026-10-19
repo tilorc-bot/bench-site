@@ -123,11 +123,11 @@ import sympy
 
 
 # ---- case demo-atan2-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-184104 answered true (solved)
+# the run sympy-refine-20261019-213648 answered true (solved)
 @_in(_SETUP1)
 def demo_atan2_01__sympy_refine():
-    x = Symbol('x', real=True)
-    y = Symbol('y', real=True)
+    x = Symbol('x')
+    y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.positive(x))
     Residual = atan2(y, x) - atan(y / x)
     Result = refine(Residual, Assum)
@@ -137,11 +137,11 @@ def demo_atan2_01__sympy_refine():
 
 
 # ---- case demo-atan2-02 · expected false · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-184104 answered false (solved)
+# the run sympy-refine-20261019-213648 answered false (solved)
 @_in(_SETUP1)
 def demo_atan2_02__sympy_refine():
-    x = Symbol('x', real=True)
-    y = Symbol('y', real=True)
+    x = Symbol('x')
+    y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.negative(x), Q.positive(y))
     Residual = atan2(y, x) - atan(y / x)
     Result = refine(Residual, Assum)
@@ -151,11 +151,11 @@ def demo_atan2_02__sympy_refine():
 
 
 # ---- case demo-log-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-184104 answered null (no verdict)
+# the run sympy-refine-20261019-213648 answered null (no verdict)
 @_in(_SETUP1)
 def demo_log_01__sympy_refine():
-    x = Symbol('x', real=True)
-    y = Symbol('y', real=True)
+    x = Symbol('x')
+    y = Symbol('y')
     Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
     Residual = log(x * y) - (log(x) + log(y))
     Result = refine(Residual, Assum)
@@ -165,11 +165,11 @@ def demo_log_01__sympy_refine():
 
 
 # ---- case demo-log-02 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-184104 answered null (declined correctly)
+# the run sympy-refine-20261019-213648 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_log_02__sympy_refine():
-    z = Symbol('z', complex=True)
-    w = Symbol('w', complex=True)
+    z = Symbol('z')
+    w = Symbol('w')
     Assum = And(Q.complex(z), Q.complex(w), ~Q.zero(z), ~Q.zero(w))
     Residual = log(z * w) - (log(z) + log(w))
     Result = refine(Residual, Assum)
@@ -179,10 +179,10 @@ def demo_log_02__sympy_refine():
 
 
 # ---- case demo-log-03 · expected false · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-184104 answered null (no verdict)
+# the run sympy-refine-20261019-213648 answered null (no verdict)
 @_in(_SETUP1)
 def demo_log_03__sympy_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.negative(x))
     Residual = log(x) - log(-x)
     Result = refine(Residual, Assum)
@@ -193,11 +193,11 @@ def demo_log_03__sympy_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-atan2-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-184104', demo_atan2_01__sympy_refine),
-    ('demo-atan2-02', 'sympy-refine', 'false', 'false', 'sympy-refine-20261019-184104', demo_atan2_02__sympy_refine),
-    ('demo-log-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-184104', demo_log_01__sympy_refine),
-    ('demo-log-02', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-184104', demo_log_02__sympy_refine),
-    ('demo-log-03', 'sympy-refine', 'false', 'null', 'sympy-refine-20261019-184104', demo_log_03__sympy_refine),
+    ('demo-atan2-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-213648', demo_atan2_01__sympy_refine),
+    ('demo-atan2-02', 'sympy-refine', 'false', 'false', 'sympy-refine-20261019-213648', demo_atan2_02__sympy_refine),
+    ('demo-log-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-213648', demo_log_01__sympy_refine),
+    ('demo-log-02', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-213648', demo_log_02__sympy_refine),
+    ('demo-log-03', 'sympy-refine', 'false', 'null', 'sympy-refine-20261019-213648', demo_log_03__sympy_refine),
 ]
 
 

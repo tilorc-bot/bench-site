@@ -123,7 +123,7 @@ import sympy
 
 
 # ---- case demo-eq-log-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261019-184106 answered true (solved)
+# the run sympy-simplify-20261019-213650 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_log_01__sympy_simplify():
     x = Symbol('x', real=True, positive=True)
@@ -135,7 +135,7 @@ def demo_eq_log_01__sympy_simplify():
 
 
 # ---- case demo-eq-pow-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261019-184106 answered true (solved)
+# the run sympy-simplify-20261019-213650 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_pow_01__sympy_simplify():
     n = Symbol('n', integer=True)
@@ -148,8 +148,8 @@ def demo_eq_pow_01__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-log-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-184106', demo_eq_log_01__sympy_simplify),
-    ('demo-eq-pow-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-184106', demo_eq_pow_01__sympy_simplify),
+    ('demo-eq-log-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-213650', demo_eq_log_01__sympy_simplify),
+    ('demo-eq-pow-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261019-213650', demo_eq_pow_01__sympy_simplify),
 ]
 
 

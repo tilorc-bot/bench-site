@@ -124,7 +124,7 @@ import sympy
 
 
 # ---- case demo-nonzero-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184059 answered true (solved)
+# the run sympy-auto-20261019-213643 answered true (solved)
 @_in(_SETUP1)
 def demo_nonzero_01__sympy_auto():
     z = Symbol('z', complex=True, imaginary=True)
@@ -136,7 +136,7 @@ def demo_nonzero_01__sympy_auto():
 
 
 # ---- case demo-sign-02 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184059 answered true (solved)
+# the run sympy-auto-20261019-213643 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_02__sympy_auto():
     x = Symbol('x', real=True, zero=False)
@@ -148,7 +148,7 @@ def demo_sign_02__sympy_auto():
 
 
 # ---- case demo-sign-03 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184059 answered null (declined correctly)
+# the run sympy-auto-20261019-213643 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_sign_03__sympy_auto():
     x = Symbol('x', complex=True, zero=False)
@@ -160,7 +160,7 @@ def demo_sign_03__sympy_auto():
 
 
 # ---- case demo-sign-04 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184059 answered null (no verdict)
+# the run sympy-auto-20261019-213643 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_04__sympy_auto():
     z = Symbol('z', complex=True)
@@ -172,7 +172,7 @@ def demo_sign_04__sympy_auto():
 
 
 # ---- case demo-sign-05 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184059 answered true (solved)
+# the run sympy-auto-20261019-213643 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_05__sympy_auto():
     x = Symbol('x', real=True, positive=True)
@@ -186,11 +186,11 @@ def demo_sign_05__sympy_auto():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-nonzero-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-184059', demo_nonzero_01__sympy_auto),
-    ('demo-sign-02', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-184059', demo_sign_02__sympy_auto),
-    ('demo-sign-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-184059', demo_sign_03__sympy_auto),
-    ('demo-sign-04', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-184059', demo_sign_04__sympy_auto),
-    ('demo-sign-05', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-184059', demo_sign_05__sympy_auto),
+    ('demo-nonzero-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-213643', demo_nonzero_01__sympy_auto),
+    ('demo-sign-02', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-213643', demo_sign_02__sympy_auto),
+    ('demo-sign-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-213643', demo_sign_03__sympy_auto),
+    ('demo-sign-04', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-213643', demo_sign_04__sympy_auto),
+    ('demo-sign-05', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-213643', demo_sign_05__sympy_auto),
 ]
 
 

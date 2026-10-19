@@ -168,7 +168,7 @@ def trig_double_02__satassume_ask():
 
 
 # ---- case trig-double-02 · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-184131 answered null (no verdict)
+# the run satrefine-refine-20261019-213715 answered null (no verdict)
 @_in(_SETUP2)
 def trig_double_02__satrefine_refine():
     x = Symbol('x')
@@ -207,7 +207,7 @@ def trig_double_02__satrefine_simplify():
 
 
 # ---- case trig-double-02 · expected false · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184124 answered null (no verdict)
+# the run sympy-auto-20261019-213708 answered null (no verdict)
 @_in(_SETUP3)
 def trig_double_02__sympy_auto():
     x = Symbol('x', real=True, positive=True)
@@ -220,10 +220,10 @@ def trig_double_02__sympy_auto():
 
 
 # ---- case trig-double-02 · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-184125 answered null (no verdict)
+# the run sympy-ask-20261019-213709 answered null (no verdict)
 @_in(_SETUP3)
 def trig_double_02__sympy_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x), x < 1)
     Residual = sin(2 * x) - (2 * sin(x))
     Answer = ask(Q.zero(Residual), Assum)
@@ -244,10 +244,10 @@ def trig_double_02__sympy_satask():
 
 
 # ---- case trig-double-02 · expected false · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-184128 answered null (no verdict)
+# the run sympy-refine-20261019-213712 answered null (no verdict)
 @_in(_SETUP3)
 def trig_double_02__sympy_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x), x < 1)
     Residual = sin(2 * x) - (2 * sin(x))
     Result = refine(Residual, Assum)
@@ -257,7 +257,7 @@ def trig_double_02__sympy_refine():
 
 
 # ---- case trig-double-02 · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261019-184130 answered null (no verdict)
+# the run sympy-simplify-20261019-213713 answered null (no verdict)
 @_in(_SETUP3)
 def trig_double_02__sympy_simplify():
     x = Symbol('x', real=True, positive=True)
@@ -310,14 +310,14 @@ def trig_double_02__sympy_extras_simplify():
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('trig-double-02', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-184912', trig_double_02__satassume_ask),
-    ('trig-double-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261019-184131', trig_double_02__satrefine_refine),
+    ('trig-double-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261019-213715', trig_double_02__satrefine_refine),
     ('trig-double-02', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261019-184916', trig_double_02__satsimp_trigsimp),
     ('trig-double-02', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261019-184914', trig_double_02__satrefine_simplify),
-    ('trig-double-02', 'sympy-auto', 'false', 'null', 'sympy-auto-20261019-184124', trig_double_02__sympy_auto),
-    ('trig-double-02', 'sympy-ask', 'false', 'null', 'sympy-ask-20261019-184125', trig_double_02__sympy_ask),
+    ('trig-double-02', 'sympy-auto', 'false', 'null', 'sympy-auto-20261019-213708', trig_double_02__sympy_auto),
+    ('trig-double-02', 'sympy-ask', 'false', 'null', 'sympy-ask-20261019-213709', trig_double_02__sympy_ask),
     ('trig-double-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261019-184949', trig_double_02__sympy_satask),
-    ('trig-double-02', 'sympy-refine', 'false', 'null', 'sympy-refine-20261019-184128', trig_double_02__sympy_refine),
-    ('trig-double-02', 'sympy-simplify', 'false', 'null', 'sympy-simplify-20261019-184130', trig_double_02__sympy_simplify),
+    ('trig-double-02', 'sympy-refine', 'false', 'null', 'sympy-refine-20261019-213712', trig_double_02__sympy_refine),
+    ('trig-double-02', 'sympy-simplify', 'false', 'null', 'sympy-simplify-20261019-213713', trig_double_02__sympy_simplify),
     ('trig-double-02', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261019-184918', trig_double_02__sympy_extras_ask),
     ('trig-double-02', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261019-184929', trig_double_02__sympy_extras_refine),
     ('trig-double-02', 'sympy-extras-simplify', 'false', 'null', 'sympy-extras-simplify-20261019-184938', trig_double_02__sympy_extras_simplify),

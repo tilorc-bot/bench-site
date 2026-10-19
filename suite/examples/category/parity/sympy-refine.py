@@ -123,10 +123,10 @@ import sympy
 
 
 # ---- case demo-parity-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-184104 answered true (solved)
+# the run sympy-refine-20261019-213648 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_01__sympy_refine():
-    n = Symbol('n', integer=True)
+    n = Symbol('n')
     Assum = And(Q.integer(n), Q.odd(n))
     Residual = Pow(-1, n + 1) - 1
     Result = refine(Residual, Assum)
@@ -136,11 +136,11 @@ def demo_parity_01__sympy_refine():
 
 
 # ---- case demo-parity-02 · expected false · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-184104 answered false (solved)
+# the run sympy-refine-20261019-213648 answered false (solved)
 @_in(_SETUP1)
 def demo_parity_02__sympy_refine():
-    n = Symbol('n', integer=True)
-    m = Symbol('m', integer=True)
+    n = Symbol('n')
+    m = Symbol('m')
     Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
     Residual = Pow(-1, n * m) - 1
     Result = refine(Residual, Assum)
@@ -150,10 +150,10 @@ def demo_parity_02__sympy_refine():
 
 
 # ---- case demo-parity-03 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-184104 answered true (solved)
+# the run sympy-refine-20261019-213648 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_03__sympy_refine():
-    n = Symbol('n', integer=True)
+    n = Symbol('n')
     Assum = And(Q.integer(n))
     Residual = Pow(-1, n * (n + 1)) - 1
     Result = refine(Residual, Assum)
@@ -163,10 +163,10 @@ def demo_parity_03__sympy_refine():
 
 
 # ---- case demo-parity-04 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-184104 answered null (declined correctly)
+# the run sympy-refine-20261019-213648 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_parity_04__sympy_refine():
-    n = Symbol('n', integer=True)
+    n = Symbol('n')
     Assum = And(Q.integer(n), Q.even(n))
     Residual = Pow(I, n) - 1
     Result = refine(Residual, Assum)
@@ -176,11 +176,11 @@ def demo_parity_04__sympy_refine():
 
 
 # ---- case demo-parity-05 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-184104 answered true (solved)
+# the run sympy-refine-20261019-213648 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_05__sympy_refine():
-    n = Symbol('n', integer=True)
-    m = Symbol('m', integer=True)
+    n = Symbol('n')
+    m = Symbol('m')
     Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
     Residual = Pow(-1, n * m) - (-1)
     Result = refine(Residual, Assum)
@@ -191,11 +191,11 @@ def demo_parity_05__sympy_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-parity-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-184104', demo_parity_01__sympy_refine),
-    ('demo-parity-02', 'sympy-refine', 'false', 'false', 'sympy-refine-20261019-184104', demo_parity_02__sympy_refine),
-    ('demo-parity-03', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-184104', demo_parity_03__sympy_refine),
-    ('demo-parity-04', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-184104', demo_parity_04__sympy_refine),
-    ('demo-parity-05', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-184104', demo_parity_05__sympy_refine),
+    ('demo-parity-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-213648', demo_parity_01__sympy_refine),
+    ('demo-parity-02', 'sympy-refine', 'false', 'false', 'sympy-refine-20261019-213648', demo_parity_02__sympy_refine),
+    ('demo-parity-03', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-213648', demo_parity_03__sympy_refine),
+    ('demo-parity-04', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-213648', demo_parity_04__sympy_refine),
+    ('demo-parity-05', 'sympy-refine', 'true', 'true', 'sympy-refine-20261019-213648', demo_parity_05__sympy_refine),
 ]
 
 

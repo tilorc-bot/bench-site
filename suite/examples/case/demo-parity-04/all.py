@@ -167,7 +167,7 @@ def demo_parity_04__satassume_ask():
 
 
 # ---- case demo-parity-04 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-184108 answered null (declined correctly)
+# the run satrefine-refine-20261019-213652 answered null (declined correctly)
 @_in(_SETUP2)
 def demo_parity_04__satrefine_refine():
     n = Symbol('n')
@@ -206,7 +206,7 @@ def demo_parity_04__satrefine_simplify():
 
 
 # ---- case demo-parity-04 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184059 answered null (declined correctly)
+# the run sympy-auto-20261019-213643 answered null (declined correctly)
 @_in(_SETUP3)
 def demo_parity_04__sympy_auto():
     n = Symbol('n', integer=True, even=True)
@@ -219,10 +219,10 @@ def demo_parity_04__sympy_auto():
 
 
 # ---- case demo-parity-04 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-184101 answered null (declined correctly)
+# the run sympy-ask-20261019-213644 answered null (declined correctly)
 @_in(_SETUP3)
 def demo_parity_04__sympy_ask():
-    n = Symbol('n', integer=True)
+    n = Symbol('n')
     Assum = And(Q.integer(n), Q.even(n))
     Residual = Pow(I, n) - 1
     Answer = ask(Q.zero(Residual), Assum)
@@ -243,10 +243,10 @@ def demo_parity_04__sympy_satask():
 
 
 # ---- case demo-parity-04 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-184104 answered null (declined correctly)
+# the run sympy-refine-20261019-213648 answered null (declined correctly)
 @_in(_SETUP3)
 def demo_parity_04__sympy_refine():
-    n = Symbol('n', integer=True)
+    n = Symbol('n')
     Assum = And(Q.integer(n), Q.even(n))
     Residual = Pow(I, n) - 1
     Result = refine(Residual, Assum)
@@ -256,7 +256,7 @@ def demo_parity_04__sympy_refine():
 
 
 # ---- case demo-parity-04 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261019-184106 answered null (declined correctly)
+# the run sympy-simplify-20261019-213650 answered null (declined correctly)
 @_in(_SETUP3)
 def demo_parity_04__sympy_simplify():
     n = Symbol('n', integer=True, even=True)
@@ -309,14 +309,14 @@ def demo_parity_04__sympy_extras_simplify():
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('demo-parity-04', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-184853', demo_parity_04__satassume_ask),
-    ('demo-parity-04', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-184108', demo_parity_04__satrefine_refine),
+    ('demo-parity-04', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-213652', demo_parity_04__satrefine_refine),
     ('demo-parity-04', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261019-184857', demo_parity_04__satsimp_trigsimp),
     ('demo-parity-04', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-184855', demo_parity_04__satrefine_simplify),
-    ('demo-parity-04', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-184059', demo_parity_04__sympy_auto),
-    ('demo-parity-04', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-184101', demo_parity_04__sympy_ask),
+    ('demo-parity-04', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-213643', demo_parity_04__sympy_auto),
+    ('demo-parity-04', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-213644', demo_parity_04__sympy_ask),
     ('demo-parity-04', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-184911', demo_parity_04__sympy_satask),
-    ('demo-parity-04', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-184104', demo_parity_04__sympy_refine),
-    ('demo-parity-04', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-184106', demo_parity_04__sympy_simplify),
+    ('demo-parity-04', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-213648', demo_parity_04__sympy_refine),
+    ('demo-parity-04', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-213650', demo_parity_04__sympy_simplify),
     ('demo-parity-04', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-184859', demo_parity_04__sympy_extras_ask),
     ('demo-parity-04', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-184904', demo_parity_04__sympy_extras_refine),
     ('demo-parity-04', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261019-184907', demo_parity_04__sympy_extras_simplify),

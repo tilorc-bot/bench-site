@@ -167,7 +167,7 @@ def demo_heaviside_01__satassume_ask():
 
 
 # ---- case demo-heaviside-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-184108 answered null (no verdict)
+# the run satrefine-refine-20261019-213652 answered null (no verdict)
 @_in(_SETUP2)
 def demo_heaviside_01__satrefine_refine():
     x = Symbol('x')
@@ -206,7 +206,7 @@ def demo_heaviside_01__satrefine_simplify():
 
 
 # ---- case demo-heaviside-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-184059 answered null (no verdict)
+# the run sympy-auto-20261019-213643 answered null (no verdict)
 @_in(_SETUP3)
 def demo_heaviside_01__sympy_auto():
     x = Symbol('x', real=True, zero=False)
@@ -219,10 +219,10 @@ def demo_heaviside_01__sympy_auto():
 
 
 # ---- case demo-heaviside-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-184101 answered null (no verdict)
+# the run sympy-ask-20261019-213644 answered null (no verdict)
 @_in(_SETUP3)
 def demo_heaviside_01__sympy_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(x))
     Residual = Heaviside(x) + Heaviside(-x) - 1
     Answer = ask(Q.zero(Residual), Assum)
@@ -243,10 +243,10 @@ def demo_heaviside_01__sympy_satask():
 
 
 # ---- case demo-heaviside-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-184104 answered null (no verdict)
+# the run sympy-refine-20261019-213648 answered null (no verdict)
 @_in(_SETUP3)
 def demo_heaviside_01__sympy_refine():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(x))
     Residual = Heaviside(x) + Heaviside(-x) - 1
     Result = refine(Residual, Assum)
@@ -256,7 +256,7 @@ def demo_heaviside_01__sympy_refine():
 
 
 # ---- case demo-heaviside-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261019-184106 answered null (no verdict)
+# the run sympy-simplify-20261019-213650 answered null (no verdict)
 @_in(_SETUP3)
 def demo_heaviside_01__sympy_simplify():
     x = Symbol('x', real=True, zero=False)
@@ -309,14 +309,14 @@ def demo_heaviside_01__sympy_extras_simplify():
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('demo-heaviside-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-184853', demo_heaviside_01__satassume_ask),
-    ('demo-heaviside-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-184108', demo_heaviside_01__satrefine_refine),
+    ('demo-heaviside-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-213652', demo_heaviside_01__satrefine_refine),
     ('demo-heaviside-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261019-184857', demo_heaviside_01__satsimp_trigsimp),
     ('demo-heaviside-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261019-184855', demo_heaviside_01__satrefine_simplify),
-    ('demo-heaviside-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-184059', demo_heaviside_01__sympy_auto),
-    ('demo-heaviside-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-184101', demo_heaviside_01__sympy_ask),
+    ('demo-heaviside-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-213643', demo_heaviside_01__sympy_auto),
+    ('demo-heaviside-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-213644', demo_heaviside_01__sympy_ask),
     ('demo-heaviside-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-184911', demo_heaviside_01__sympy_satask),
-    ('demo-heaviside-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-184104', demo_heaviside_01__sympy_refine),
-    ('demo-heaviside-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261019-184106', demo_heaviside_01__sympy_simplify),
+    ('demo-heaviside-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-213648', demo_heaviside_01__sympy_refine),
+    ('demo-heaviside-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261019-213650', demo_heaviside_01__sympy_simplify),
     ('demo-heaviside-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261019-184859', demo_heaviside_01__sympy_extras_ask),
     ('demo-heaviside-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261019-184904', demo_heaviside_01__sympy_extras_refine),
     ('demo-heaviside-01', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261019-184907', demo_heaviside_01__sympy_extras_simplify),

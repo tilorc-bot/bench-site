@@ -123,10 +123,10 @@ import sympy
 
 
 # ---- case trig-double-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-184125 answered null (no verdict)
+# the run sympy-ask-20261019-213709 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_01__sympy_ask():
-    z = Symbol('z', complex=True)
+    z = Symbol('z')
     Assum = And(Q.complex(z))
     Residual = sin(2 * z) - (2 * (sin(z) * cos(z)))
     Answer = ask(Q.zero(Residual), Assum)
@@ -135,10 +135,10 @@ def trig_double_01__sympy_ask():
 
 
 # ---- case trig-double-02 · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-184125 answered null (no verdict)
+# the run sympy-ask-20261019-213709 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_02__sympy_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), Q.positive(x), x < 1)
     Residual = sin(2 * x) - (2 * sin(x))
     Answer = ask(Q.zero(Residual), Assum)
@@ -147,10 +147,10 @@ def trig_double_02__sympy_ask():
 
 
 # ---- case trig-pyth-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-184125 answered null (no verdict)
+# the run sympy-ask-20261019-213709 answered null (no verdict)
 @_in(_SETUP1)
 def trig_pyth_01__sympy_ask():
-    z = Symbol('z', complex=True)
+    z = Symbol('z')
     Assum = And(Q.complex(z))
     Residual = sin(z) * sin(z) + cos(z) * cos(z) - 1
     Answer = ask(Q.zero(Residual), Assum)
@@ -159,10 +159,10 @@ def trig_pyth_01__sympy_ask():
 
 
 # ---- case trig-sqrt-01 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-184125 answered null (declined correctly)
+# the run sympy-ask-20261019-213709 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_sqrt_01__sympy_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x))
     Residual = sqrt(1 - sin(x) * sin(x)) - cos(x)
     Answer = ask(Q.zero(Residual), Assum)
@@ -171,10 +171,10 @@ def trig_sqrt_01__sympy_ask():
 
 
 # ---- case trig-tan-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-184125 answered null (no verdict)
+# the run sympy-ask-20261019-213709 answered null (no verdict)
 @_in(_SETUP1)
 def trig_tan_01__sympy_ask():
-    x = Symbol('x', real=True)
+    x = Symbol('x')
     Assum = And(Q.real(x), ~Q.zero(cos(x)))
     Residual = tan(x) - (sin(x) / cos(x))
     Answer = ask(Q.zero(Residual), Assum)
@@ -184,11 +184,11 @@ def trig_tan_01__sympy_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-double-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-184125', trig_double_01__sympy_ask),
-    ('trig-double-02', 'sympy-ask', 'false', 'null', 'sympy-ask-20261019-184125', trig_double_02__sympy_ask),
-    ('trig-pyth-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-184125', trig_pyth_01__sympy_ask),
-    ('trig-sqrt-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-184125', trig_sqrt_01__sympy_ask),
-    ('trig-tan-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-184125', trig_tan_01__sympy_ask),
+    ('trig-double-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-213709', trig_double_01__sympy_ask),
+    ('trig-double-02', 'sympy-ask', 'false', 'null', 'sympy-ask-20261019-213709', trig_double_02__sympy_ask),
+    ('trig-pyth-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-213709', trig_pyth_01__sympy_ask),
+    ('trig-sqrt-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-213709', trig_sqrt_01__sympy_ask),
+    ('trig-tan-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-213709', trig_tan_01__sympy_ask),
 ]
 
 
