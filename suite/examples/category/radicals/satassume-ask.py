@@ -121,7 +121,7 @@ import satassume.sympy_api
 
 
 # ---- case demo-eq-abs-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-110434 answered null (no verdict)
+# the run satassume-ask-20261019-184853 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_abs_01__satassume_ask():
     x = Symbol('x')
@@ -133,7 +133,7 @@ def demo_eq_abs_01__satassume_ask():
 
 
 # ---- case demo-eq-abs-02 · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-110434 answered false (solved)
+# the run satassume-ask-20261019-184853 answered false (solved)
 @_in(_SETUP1)
 def demo_eq_abs_02__satassume_ask():
     x = Symbol('x')
@@ -145,7 +145,7 @@ def demo_eq_abs_02__satassume_ask():
 
 
 # ---- case demo-eq-sqrt-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-110434 answered null (no verdict)
+# the run satassume-ask-20261019-184853 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_sqrt_01__satassume_ask():
     x = Symbol('x')
@@ -157,7 +157,7 @@ def demo_eq_sqrt_01__satassume_ask():
 
 
 # ---- case demo-eq-sqrt-02 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-110434 answered null (no verdict)
+# the run satassume-ask-20261019-184853 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_sqrt_02__satassume_ask():
     x = Symbol('x')
@@ -169,7 +169,7 @@ def demo_eq_sqrt_02__satassume_ask():
 
 
 # ---- case demo-eq-sqrt-03 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-110434 answered null (declined correctly)
+# the run satassume-ask-20261019-184853 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_eq_sqrt_03__satassume_ask():
     x = Symbol('x')
@@ -181,7 +181,7 @@ def demo_eq_sqrt_03__satassume_ask():
 
 
 # ---- case demo-eq-sqrt-04 · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-110434 answered null (no verdict)
+# the run satassume-ask-20261019-184853 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_sqrt_04__satassume_ask():
     x = Symbol('x')
@@ -194,12 +194,12 @@ def demo_eq_sqrt_04__satassume_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-abs-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-110434', demo_eq_abs_01__satassume_ask),
-    ('demo-eq-abs-02', 'satassume-ask', 'false', 'false', 'satassume-ask-20261019-110434', demo_eq_abs_02__satassume_ask),
-    ('demo-eq-sqrt-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-110434', demo_eq_sqrt_01__satassume_ask),
-    ('demo-eq-sqrt-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-110434', demo_eq_sqrt_02__satassume_ask),
-    ('demo-eq-sqrt-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-110434', demo_eq_sqrt_03__satassume_ask),
-    ('demo-eq-sqrt-04', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-110434', demo_eq_sqrt_04__satassume_ask),
+    ('demo-eq-abs-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-184853', demo_eq_abs_01__satassume_ask),
+    ('demo-eq-abs-02', 'satassume-ask', 'false', 'false', 'satassume-ask-20261019-184853', demo_eq_abs_02__satassume_ask),
+    ('demo-eq-sqrt-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-184853', demo_eq_sqrt_01__satassume_ask),
+    ('demo-eq-sqrt-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-184853', demo_eq_sqrt_02__satassume_ask),
+    ('demo-eq-sqrt-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-184853', demo_eq_sqrt_03__satassume_ask),
+    ('demo-eq-sqrt-04', 'satassume-ask', 'false', 'null', 'satassume-ask-20261019-184853', demo_eq_sqrt_04__satassume_ask),
 ]
 
 

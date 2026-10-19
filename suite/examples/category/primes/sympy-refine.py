@@ -123,7 +123,7 @@ import sympy
 
 
 # ---- case demo-prime-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-105602 answered null (no verdict)
+# the run sympy-refine-20261019-184104 answered null (no verdict)
 @_in(_SETUP1)
 def demo_prime_01__sympy_refine():
     p = Symbol('p', integer=True)
@@ -136,7 +136,7 @@ def demo_prime_01__sympy_refine():
 
 
 # ---- case demo-prime-02 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-105602 answered null (declined correctly)
+# the run sympy-refine-20261019-184104 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_prime_02__sympy_refine():
     p = Symbol('p', integer=True)
@@ -150,8 +150,8 @@ def demo_prime_02__sympy_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-prime-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-105602', demo_prime_01__sympy_refine),
-    ('demo-prime-02', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-105602', demo_prime_02__sympy_refine),
+    ('demo-prime-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261019-184104', demo_prime_01__sympy_refine),
+    ('demo-prime-02', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-184104', demo_prime_02__sympy_refine),
 ]
 
 

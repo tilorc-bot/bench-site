@@ -124,7 +124,7 @@ import satsimp
 
 
 # ---- case demo-prime-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-110436 answered null (no verdict)
+# the run satrefine-simplify-20261019-184855 answered null (no verdict)
 @_in(_SETUP1)
 def demo_prime_01__satrefine_simplify():
     p = Symbol('p')
@@ -137,7 +137,7 @@ def demo_prime_01__satrefine_simplify():
 
 
 # ---- case demo-prime-02 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-110436 answered null (declined correctly)
+# the run satrefine-simplify-20261019-184855 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_prime_02__satrefine_simplify():
     p = Symbol('p')
@@ -151,8 +151,8 @@ def demo_prime_02__satrefine_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-prime-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261019-110436', demo_prime_01__satrefine_simplify),
-    ('demo-prime-02', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-110436', demo_prime_02__satrefine_simplify),
+    ('demo-prime-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261019-184855', demo_prime_01__satrefine_simplify),
+    ('demo-prime-02', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-184855', demo_prime_02__satrefine_simplify),
 ]
 
 

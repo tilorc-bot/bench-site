@@ -123,7 +123,7 @@ import sympy
 
 
 # ---- case demo-prime-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-105559 answered null (no verdict)
+# the run sympy-ask-20261019-184101 answered null (no verdict)
 @_in(_SETUP1)
 def demo_prime_01__sympy_ask():
     p = Symbol('p', integer=True)
@@ -135,7 +135,7 @@ def demo_prime_01__sympy_ask():
 
 
 # ---- case demo-prime-02 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-105559 answered null (declined correctly)
+# the run sympy-ask-20261019-184101 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_prime_02__sympy_ask():
     p = Symbol('p', integer=True)
@@ -148,8 +148,8 @@ def demo_prime_02__sympy_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-prime-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-105559', demo_prime_01__sympy_ask),
-    ('demo-prime-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-105559', demo_prime_02__sympy_ask),
+    ('demo-prime-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261019-184101', demo_prime_01__sympy_ask),
+    ('demo-prime-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-184101', demo_prime_02__sympy_ask),
 ]
 
 

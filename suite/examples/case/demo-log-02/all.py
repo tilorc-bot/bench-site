@@ -155,7 +155,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-log-02 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-110434 answered null (declined correctly)
+# the run satassume-ask-20261019-184853 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_log_02__satassume_ask():
     z = Symbol('z')
@@ -168,7 +168,7 @@ def demo_log_02__satassume_ask():
 
 
 # ---- case demo-log-02 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-105606 answered null (declined correctly)
+# the run satrefine-refine-20261019-184108 answered null (declined correctly)
 @_in(_SETUP2)
 def demo_log_02__satrefine_refine():
     z = Symbol('z')
@@ -182,7 +182,7 @@ def demo_log_02__satrefine_refine():
 
 
 # ---- case demo-log-02 · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261019-110438 answered null (declined correctly)
+# the run satsimp-trigsimp-20261019-184857 answered null (declined correctly)
 @_in(_SETUP2)
 def demo_log_02__satsimp_trigsimp():
     z = Symbol('z')
@@ -196,7 +196,7 @@ def demo_log_02__satsimp_trigsimp():
 
 
 # ---- case demo-log-02 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-110436 answered null (declined correctly)
+# the run satrefine-simplify-20261019-184855 answered null (declined correctly)
 @_in(_SETUP2)
 def demo_log_02__satrefine_simplify():
     z = Symbol('z')
@@ -210,7 +210,7 @@ def demo_log_02__satrefine_simplify():
 
 
 # ---- case demo-log-02 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-105557 answered null (declined correctly)
+# the run sympy-auto-20261019-184059 answered null (declined correctly)
 @_in(_SETUP3)
 def demo_log_02__sympy_auto():
     z = Symbol('z', complex=True, zero=False)
@@ -224,7 +224,7 @@ def demo_log_02__sympy_auto():
 
 
 # ---- case demo-log-02 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-105559 answered null (declined correctly)
+# the run sympy-ask-20261019-184101 answered null (declined correctly)
 @_in(_SETUP3)
 def demo_log_02__sympy_ask():
     z = Symbol('z', complex=True)
@@ -237,7 +237,7 @@ def demo_log_02__sympy_ask():
 
 
 # ---- case demo-log-02 · expected contingent · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-164814 answered null (declined correctly)
+# the run sympy-satask-20261019-184911 answered null (declined correctly)
 @_in(_SETUP4)
 def demo_log_02__sympy_satask():
     z = Symbol('z', complex=True)
@@ -250,7 +250,7 @@ def demo_log_02__sympy_satask():
 
 
 # ---- case demo-log-02 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-105602 answered null (declined correctly)
+# the run sympy-refine-20261019-184104 answered null (declined correctly)
 @_in(_SETUP3)
 def demo_log_02__sympy_refine():
     z = Symbol('z', complex=True)
@@ -264,7 +264,7 @@ def demo_log_02__sympy_refine():
 
 
 # ---- case demo-log-02 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261019-105605 answered null (declined correctly)
+# the run sympy-simplify-20261019-184106 answered null (declined correctly)
 @_in(_SETUP3)
 def demo_log_02__sympy_simplify():
     z = Symbol('z', complex=True, zero=False)
@@ -277,7 +277,7 @@ def demo_log_02__sympy_simplify():
 
 
 # ---- case demo-log-02 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-110440 answered null (declined correctly)
+# the run sympy-extras-ask-20261019-184859 answered null (declined correctly)
 @_in(_SETUP5)
 def demo_log_02__sympy_extras_ask():
     z = Symbol('z', complex=True)
@@ -291,7 +291,7 @@ def demo_log_02__sympy_extras_ask():
 
 
 # ---- case demo-log-02 · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-110445 answered null (declined correctly)
+# the run sympy-extras-refine-20261019-184904 answered null (declined correctly)
 @_in(_SETUP5)
 def demo_log_02__sympy_extras_refine():
     z = Symbol('z', complex=True)
@@ -305,7 +305,7 @@ def demo_log_02__sympy_extras_refine():
 
 
 # ---- case demo-log-02 · expected contingent · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-110448 answered null (declined correctly)
+# the run sympy-extras-simplify-20261019-184907 answered null (declined correctly)
 @_in(_SETUP5)
 def demo_log_02__sympy_extras_simplify():
     z = Symbol('z', complex=True)
@@ -320,18 +320,18 @@ def demo_log_02__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-log-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-110434', demo_log_02__satassume_ask),
-    ('demo-log-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-105606', demo_log_02__satrefine_refine),
-    ('demo-log-02', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261019-110438', demo_log_02__satsimp_trigsimp),
-    ('demo-log-02', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-110436', demo_log_02__satrefine_simplify),
-    ('demo-log-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-105557', demo_log_02__sympy_auto),
-    ('demo-log-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-105559', demo_log_02__sympy_ask),
-    ('demo-log-02', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-164814', demo_log_02__sympy_satask),
-    ('demo-log-02', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-105602', demo_log_02__sympy_refine),
-    ('demo-log-02', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-105605', demo_log_02__sympy_simplify),
-    ('demo-log-02', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-110440', demo_log_02__sympy_extras_ask),
-    ('demo-log-02', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-110445', demo_log_02__sympy_extras_refine),
-    ('demo-log-02', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261019-110448', demo_log_02__sympy_extras_simplify),
+    ('demo-log-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-184853', demo_log_02__satassume_ask),
+    ('demo-log-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261019-184108', demo_log_02__satrefine_refine),
+    ('demo-log-02', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261019-184857', demo_log_02__satsimp_trigsimp),
+    ('demo-log-02', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-184855', demo_log_02__satrefine_simplify),
+    ('demo-log-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-184059', demo_log_02__sympy_auto),
+    ('demo-log-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261019-184101', demo_log_02__sympy_ask),
+    ('demo-log-02', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-184911', demo_log_02__sympy_satask),
+    ('demo-log-02', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261019-184104', demo_log_02__sympy_refine),
+    ('demo-log-02', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-184106', demo_log_02__sympy_simplify),
+    ('demo-log-02', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-184859', demo_log_02__sympy_extras_ask),
+    ('demo-log-02', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261019-184904', demo_log_02__sympy_extras_refine),
+    ('demo-log-02', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261019-184907', demo_log_02__sympy_extras_simplify),
 ]
 
 

@@ -124,7 +124,7 @@ import sympy
 
 
 # ---- case demo-atan2-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-105557 answered true (solved)
+# the run sympy-auto-20261019-184059 answered true (solved)
 @_in(_SETUP1)
 def demo_atan2_01__sympy_auto():
     x = Symbol('x', real=True, positive=True)
@@ -137,7 +137,7 @@ def demo_atan2_01__sympy_auto():
 
 
 # ---- case demo-atan2-02 · expected false · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-105557 answered false (solved)
+# the run sympy-auto-20261019-184059 answered false (solved)
 @_in(_SETUP1)
 def demo_atan2_02__sympy_auto():
     x = Symbol('x', real=True, negative=True)
@@ -150,7 +150,7 @@ def demo_atan2_02__sympy_auto():
 
 
 # ---- case demo-log-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-105557 answered null (no verdict)
+# the run sympy-auto-20261019-184059 answered null (no verdict)
 @_in(_SETUP1)
 def demo_log_01__sympy_auto():
     x = Symbol('x', real=True, positive=True)
@@ -163,7 +163,7 @@ def demo_log_01__sympy_auto():
 
 
 # ---- case demo-log-02 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-105557 answered null (declined correctly)
+# the run sympy-auto-20261019-184059 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_log_02__sympy_auto():
     z = Symbol('z', complex=True, zero=False)
@@ -176,7 +176,7 @@ def demo_log_02__sympy_auto():
 
 
 # ---- case demo-log-03 · expected false · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-105557 answered null (no verdict)
+# the run sympy-auto-20261019-184059 answered null (no verdict)
 @_in(_SETUP1)
 def demo_log_03__sympy_auto():
     x = Symbol('x', real=True, negative=True)
@@ -189,11 +189,11 @@ def demo_log_03__sympy_auto():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-atan2-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-105557', demo_atan2_01__sympy_auto),
-    ('demo-atan2-02', 'sympy-auto', 'false', 'false', 'sympy-auto-20261019-105557', demo_atan2_02__sympy_auto),
-    ('demo-log-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-105557', demo_log_01__sympy_auto),
-    ('demo-log-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-105557', demo_log_02__sympy_auto),
-    ('demo-log-03', 'sympy-auto', 'false', 'null', 'sympy-auto-20261019-105557', demo_log_03__sympy_auto),
+    ('demo-atan2-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-184059', demo_atan2_01__sympy_auto),
+    ('demo-atan2-02', 'sympy-auto', 'false', 'false', 'sympy-auto-20261019-184059', demo_atan2_02__sympy_auto),
+    ('demo-log-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-184059', demo_log_01__sympy_auto),
+    ('demo-log-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-184059', demo_log_02__sympy_auto),
+    ('demo-log-03', 'sympy-auto', 'false', 'null', 'sympy-auto-20261019-184059', demo_log_03__sympy_auto),
 ]
 
 

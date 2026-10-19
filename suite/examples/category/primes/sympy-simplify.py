@@ -123,7 +123,7 @@ import sympy
 
 
 # ---- case demo-prime-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261019-105605 answered null (no verdict)
+# the run sympy-simplify-20261019-184106 answered null (no verdict)
 @_in(_SETUP1)
 def demo_prime_01__sympy_simplify():
     p = Symbol('p', integer=True, prime=True)
@@ -136,7 +136,7 @@ def demo_prime_01__sympy_simplify():
 
 
 # ---- case demo-prime-02 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261019-105605 answered null (declined correctly)
+# the run sympy-simplify-20261019-184106 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_prime_02__sympy_simplify():
     p = Symbol('p', integer=True, prime=True)
@@ -149,8 +149,8 @@ def demo_prime_02__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-prime-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261019-105605', demo_prime_01__sympy_simplify),
-    ('demo-prime-02', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-105605', demo_prime_02__sympy_simplify),
+    ('demo-prime-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261019-184106', demo_prime_01__sympy_simplify),
+    ('demo-prime-02', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261019-184106', demo_prime_02__sympy_simplify),
 ]
 
 

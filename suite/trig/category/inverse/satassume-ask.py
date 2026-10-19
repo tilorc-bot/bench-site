@@ -121,7 +121,7 @@ import satassume.sympy_api
 
 
 # ---- case trig-acos-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-110452 answered null (no verdict)
+# the run satassume-ask-20261019-184912 answered null (no verdict)
 @_in(_SETUP1)
 def trig_acos_01__satassume_ask():
     x = Symbol('x')
@@ -133,7 +133,7 @@ def trig_acos_01__satassume_ask():
 
 
 # ---- case trig-asin-01 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-110452 answered null (declined correctly)
+# the run satassume-ask-20261019-184912 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_asin_01__satassume_ask():
     x = Symbol('x')
@@ -145,7 +145,7 @@ def trig_asin_01__satassume_ask():
 
 
 # ---- case trig-asin-02 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-110452 answered null (no verdict)
+# the run satassume-ask-20261019-184912 answered null (no verdict)
 @_in(_SETUP1)
 def trig_asin_02__satassume_ask():
     x = Symbol('x')
@@ -157,7 +157,7 @@ def trig_asin_02__satassume_ask():
 
 
 # ---- case trig-atan-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-110452 answered null (no verdict)
+# the run satassume-ask-20261019-184912 answered null (no verdict)
 @_in(_SETUP1)
 def trig_atan_01__satassume_ask():
     x = Symbol('x')
@@ -170,10 +170,10 @@ def trig_atan_01__satassume_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-acos-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-110452', trig_acos_01__satassume_ask),
-    ('trig-asin-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-110452', trig_asin_01__satassume_ask),
-    ('trig-asin-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-110452', trig_asin_02__satassume_ask),
-    ('trig-atan-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-110452', trig_atan_01__satassume_ask),
+    ('trig-acos-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-184912', trig_acos_01__satassume_ask),
+    ('trig-asin-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261019-184912', trig_asin_01__satassume_ask),
+    ('trig-asin-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-184912', trig_asin_02__satassume_ask),
+    ('trig-atan-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261019-184912', trig_atan_01__satassume_ask),
 ]
 
 

@@ -124,7 +124,7 @@ import sympy
 
 
 # ---- case trig-period-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-105622 answered true (solved)
+# the run sympy-auto-20261019-184124 answered true (solved)
 @_in(_SETUP1)
 def trig_period_01__sympy_auto():
     z = Symbol('z', complex=True)
@@ -136,7 +136,7 @@ def trig_period_01__sympy_auto():
 
 
 # ---- case trig-period-02 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-105622 answered null (declined correctly)
+# the run sympy-auto-20261019-184124 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_02__sympy_auto():
     x = Symbol('x', real=True)
@@ -148,7 +148,7 @@ def trig_period_02__sympy_auto():
 
 
 # ---- case trig-period-03 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-105622 answered null (declined correctly)
+# the run sympy-auto-20261019-184124 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_03__sympy_auto():
     x = Symbol('x', real=True, positive=True)
@@ -160,7 +160,7 @@ def trig_period_03__sympy_auto():
 
 
 # ---- case trig-shift-01 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-105622 answered null (declined correctly)
+# the run sympy-auto-20261019-184124 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_shift_01__sympy_auto():
     x = Symbol('x', real=True)
@@ -173,10 +173,10 @@ def trig_shift_01__sympy_auto():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-period-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-105622', trig_period_01__sympy_auto),
-    ('trig-period-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-105622', trig_period_02__sympy_auto),
-    ('trig-period-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-105622', trig_period_03__sympy_auto),
-    ('trig-shift-01', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-105622', trig_shift_01__sympy_auto),
+    ('trig-period-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261019-184124', trig_period_01__sympy_auto),
+    ('trig-period-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-184124', trig_period_02__sympy_auto),
+    ('trig-period-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-184124', trig_period_03__sympy_auto),
+    ('trig-shift-01', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-184124', trig_shift_01__sympy_auto),
 ]
 
 

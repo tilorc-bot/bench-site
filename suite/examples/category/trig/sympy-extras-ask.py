@@ -131,7 +131,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-eq-trig-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-110440 answered true (solved)
+# the run sympy-extras-ask-20261019-184859 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_trig_01__sympy_extras_ask():
     x = Symbol('x', complex=True)
@@ -143,7 +143,7 @@ def demo_eq_trig_01__sympy_extras_ask():
 
 
 # ---- case demo-eq-trig-02 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-110440 answered true (solved)
+# the run sympy-extras-ask-20261019-184859 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_trig_02__sympy_extras_ask():
     x = Symbol('x', complex=True)
@@ -156,8 +156,8 @@ def demo_eq_trig_02__sympy_extras_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-trig-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110440', demo_eq_trig_01__sympy_extras_ask),
-    ('demo-eq-trig-02', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-110440', demo_eq_trig_02__sympy_extras_ask),
+    ('demo-eq-trig-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-184859', demo_eq_trig_01__sympy_extras_ask),
+    ('demo-eq-trig-02', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-184859', demo_eq_trig_02__sympy_extras_ask),
 ]
 
 

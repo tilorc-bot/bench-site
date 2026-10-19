@@ -124,7 +124,7 @@ import satsimp
 
 
 # ---- case trig-period-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-110453 answered true (solved)
+# the run satrefine-simplify-20261019-184914 answered true (solved)
 @_in(_SETUP1)
 def trig_period_01__satrefine_simplify():
     z = Symbol('z')
@@ -137,7 +137,7 @@ def trig_period_01__satrefine_simplify():
 
 
 # ---- case trig-period-02 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-110453 answered null (declined correctly)
+# the run satrefine-simplify-20261019-184914 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_02__satrefine_simplify():
     x = Symbol('x')
@@ -150,7 +150,7 @@ def trig_period_02__satrefine_simplify():
 
 
 # ---- case trig-period-03 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-110453 answered null (declined correctly)
+# the run satrefine-simplify-20261019-184914 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_03__satrefine_simplify():
     x = Symbol('x')
@@ -163,7 +163,7 @@ def trig_period_03__satrefine_simplify():
 
 
 # ---- case trig-shift-01 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-110453 answered null (declined correctly)
+# the run satrefine-simplify-20261019-184914 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_shift_01__satrefine_simplify():
     x = Symbol('x')
@@ -177,10 +177,10 @@ def trig_shift_01__satrefine_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-period-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-110453', trig_period_01__satrefine_simplify),
-    ('trig-period-02', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-110453', trig_period_02__satrefine_simplify),
-    ('trig-period-03', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-110453', trig_period_03__satrefine_simplify),
-    ('trig-shift-01', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-110453', trig_shift_01__satrefine_simplify),
+    ('trig-period-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-184914', trig_period_01__satrefine_simplify),
+    ('trig-period-02', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-184914', trig_period_02__satrefine_simplify),
+    ('trig-period-03', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-184914', trig_period_03__satrefine_simplify),
+    ('trig-shift-01', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-184914', trig_shift_01__satrefine_simplify),
 ]
 
 

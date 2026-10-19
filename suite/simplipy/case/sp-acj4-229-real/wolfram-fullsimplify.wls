@@ -1,5 +1,5 @@
 (* assume-eval: case sp-acj4-229-real · expected true · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261019-110319 answered true (solved) *)
+(* the run wolfram-fullsimplify-20261019-184741 answered true (solved) *)
 (* Run: wolframscript -file this-file.wls.  The harness's setup only warms up the kernel and silences messages: left out. *)
 
 Begin["AEScript`"];
@@ -23,4 +23,4 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261019-110319 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261019-184741 answered true (solved)"];
