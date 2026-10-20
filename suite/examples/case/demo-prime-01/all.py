@@ -168,7 +168,7 @@ def demo_prime_01__satassume_ask():
 
 
 # ---- case demo-prime-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-064159 answered null (no verdict)
+# the run satrefine-refine-20261020-122340 answered null (no verdict)
 @_in(_SETUP2)
 def demo_prime_01__satrefine_refine():
     p = Symbol('p')
@@ -310,7 +310,7 @@ def demo_prime_01__sympy_extras_simplify():
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('demo-prime-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-065021', demo_prime_01__satassume_ask),
-    ('demo-prime-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-064159', demo_prime_01__satrefine_refine),
+    ('demo-prime-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122340', demo_prime_01__satrefine_refine),
     ('demo-prime-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-065026', demo_prime_01__satsimp_trigsimp),
     ('demo-prime-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-065023', demo_prime_01__satrefine_simplify),
     ('demo-prime-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064150', demo_prime_01__sympy_auto),

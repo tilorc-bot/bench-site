@@ -167,7 +167,7 @@ def demo_eq_pow_01__satassume_ask():
 
 
 # ---- case demo-eq-pow-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-064159 answered true (solved)
+# the run satrefine-refine-20261020-122340 answered true (solved)
 @_in(_SETUP2)
 def demo_eq_pow_01__satrefine_refine():
     n = Symbol('n')
@@ -309,7 +309,7 @@ def demo_eq_pow_01__sympy_extras_simplify():
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('demo-eq-pow-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-065021', demo_eq_pow_01__satassume_ask),
-    ('demo-eq-pow-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-064159', demo_eq_pow_01__satrefine_refine),
+    ('demo-eq-pow-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-122340', demo_eq_pow_01__satrefine_refine),
     ('demo-eq-pow-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-065026', demo_eq_pow_01__satsimp_trigsimp),
     ('demo-eq-pow-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065023', demo_eq_pow_01__satrefine_simplify),
     ('demo-eq-pow-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261020-064150', demo_eq_pow_01__sympy_auto),

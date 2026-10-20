@@ -168,7 +168,7 @@ def demo_parity_02__satassume_ask():
 
 
 # ---- case demo-parity-02 · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-064159 answered false (solved)
+# the run satrefine-refine-20261020-122340 answered false (solved)
 @_in(_SETUP2)
 def demo_parity_02__satrefine_refine():
     n = Symbol('n')
@@ -321,7 +321,7 @@ def demo_parity_02__sympy_extras_simplify():
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('demo-parity-02', 'satassume-ask', 'false', 'false', 'satassume-ask-20261020-065021', demo_parity_02__satassume_ask),
-    ('demo-parity-02', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261020-064159', demo_parity_02__satrefine_refine),
+    ('demo-parity-02', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261020-122340', demo_parity_02__satrefine_refine),
     ('demo-parity-02', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261020-065026', demo_parity_02__satsimp_trigsimp),
     ('demo-parity-02', 'satrefine-simplify', 'false', 'false', 'satrefine-simplify-20261020-065023', demo_parity_02__satrefine_simplify),
     ('demo-parity-02', 'sympy-auto', 'false', 'false', 'sympy-auto-20261020-064150', demo_parity_02__sympy_auto),

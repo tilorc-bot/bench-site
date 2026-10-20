@@ -167,7 +167,7 @@ def demo_eq_sqrt_02__satassume_ask():
 
 
 # ---- case demo-eq-sqrt-02 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-064159 answered true (solved)
+# the run satrefine-refine-20261020-122340 answered true (solved)
 @_in(_SETUP2)
 def demo_eq_sqrt_02__satrefine_refine():
     x = Symbol('x')
@@ -309,7 +309,7 @@ def demo_eq_sqrt_02__sympy_extras_simplify():
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('demo-eq-sqrt-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-065021', demo_eq_sqrt_02__satassume_ask),
-    ('demo-eq-sqrt-02', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-064159', demo_eq_sqrt_02__satrefine_refine),
+    ('demo-eq-sqrt-02', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-122340', demo_eq_sqrt_02__satrefine_refine),
     ('demo-eq-sqrt-02', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-065026', demo_eq_sqrt_02__satsimp_trigsimp),
     ('demo-eq-sqrt-02', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065023', demo_eq_sqrt_02__satrefine_simplify),
     ('demo-eq-sqrt-02', 'sympy-auto', 'true', 'true', 'sympy-auto-20261020-064150', demo_eq_sqrt_02__sympy_auto),
