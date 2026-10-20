@@ -124,7 +124,7 @@ import satsimp
 
 
 # ---- case sp-acj4-1007-ground · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-214620 answered true (solved)
+# the run satrefine-refine-20261020-064814 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1007_ground__satrefine_refine():
     Assum = And()
@@ -136,7 +136,7 @@ def sp_acj4_1007_ground__satrefine_refine():
 
 
 # ---- case sp-acj4-1107-ground · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-214620 answered true (solved)
+# the run satrefine-refine-20261020-064814 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1107_ground__satrefine_refine():
     Assum = And()
@@ -148,7 +148,7 @@ def sp_acj4_1107_ground__satrefine_refine():
 
 
 # ---- case sp-acj4-1148-ground · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-214620 answered null (no verdict)
+# the run satrefine-refine-20261020-064814 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_1148_ground__satrefine_refine():
     Assum = And()
@@ -160,7 +160,7 @@ def sp_acj4_1148_ground__satrefine_refine():
 
 
 # ---- case sp-acj4-1149-ground · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-214620 answered true (solved)
+# the run satrefine-refine-20261020-064814 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1149_ground__satrefine_refine():
     Assum = And()
@@ -172,7 +172,7 @@ def sp_acj4_1149_ground__satrefine_refine():
 
 
 # ---- case sp-acj4-1177-ground · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-214620 answered true (solved)
+# the run satrefine-refine-20261020-064814 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1177_ground__satrefine_refine():
     Assum = And()
@@ -184,7 +184,7 @@ def sp_acj4_1177_ground__satrefine_refine():
 
 
 # ---- case sp-acj4-1195-ground · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-214620 answered true (solved)
+# the run satrefine-refine-20261020-064814 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1195_ground__satrefine_refine():
     Assum = And()
@@ -196,7 +196,7 @@ def sp_acj4_1195_ground__satrefine_refine():
 
 
 # ---- case sp-acj4-1217-ground · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-214620 answered true (solved)
+# the run satrefine-refine-20261020-064814 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1217_ground__satrefine_refine():
     Assum = And()
@@ -208,7 +208,7 @@ def sp_acj4_1217_ground__satrefine_refine():
 
 
 # ---- case sp-acj4-1238-ground · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-214620 answered true (solved)
+# the run satrefine-refine-20261020-064814 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1238_ground__satrefine_refine():
     Assum = And()
@@ -220,7 +220,7 @@ def sp_acj4_1238_ground__satrefine_refine():
 
 
 # ---- case sp-acj4-1247-ground · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-214620 answered true (solved)
+# the run satrefine-refine-20261020-064814 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1247_ground__satrefine_refine():
     Assum = And()
@@ -232,7 +232,7 @@ def sp_acj4_1247_ground__satrefine_refine():
 
 
 # ---- case sp-acj4-1254-ground · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-214620 answered true (solved)
+# the run satrefine-refine-20261020-064814 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1254_ground__satrefine_refine():
     Assum = And()
@@ -244,7 +244,7 @@ def sp_acj4_1254_ground__satrefine_refine():
 
 
 # ---- case sp-acj4-1258-ground · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-214620 answered true (solved)
+# the run satrefine-refine-20261020-064814 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1258_ground__satrefine_refine():
     Assum = And()
@@ -256,7 +256,7 @@ def sp_acj4_1258_ground__satrefine_refine():
 
 
 # ---- case sp-acj4-5372-ground · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-214620 answered true (solved)
+# the run satrefine-refine-20261020-064814 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_5372_ground__satrefine_refine():
     Assum = And()
@@ -268,7 +268,7 @@ def sp_acj4_5372_ground__satrefine_refine():
 
 
 # ---- case sp-acj4-5382-ground · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-214620 answered null (no verdict)
+# the run satrefine-refine-20261020-064814 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_5382_ground__satrefine_refine():
     Assum = And()
@@ -280,7 +280,7 @@ def sp_acj4_5382_ground__satrefine_refine():
 
 
 # ---- case sp-acj4-5385-ground · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-214620 answered null (no verdict)
+# the run satrefine-refine-20261020-064814 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_5385_ground__satrefine_refine():
     Assum = And()
@@ -292,7 +292,7 @@ def sp_acj4_5385_ground__satrefine_refine():
 
 
 # ---- case sp-acj4-819-ground · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-214620 answered true (solved)
+# the run satrefine-refine-20261020-064814 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_819_ground__satrefine_refine():
     Assum = And()
@@ -304,7 +304,7 @@ def sp_acj4_819_ground__satrefine_refine():
 
 
 # ---- case sp-acj4-837-ground · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-214620 answered true (solved)
+# the run satrefine-refine-20261020-064814 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_837_ground__satrefine_refine():
     Assum = And()
@@ -316,7 +316,7 @@ def sp_acj4_837_ground__satrefine_refine():
 
 
 # ---- case sp-acj4-848-ground · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-214620 answered null (no verdict)
+# the run satrefine-refine-20261020-064814 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_848_ground__satrefine_refine():
     Assum = And()
@@ -328,7 +328,7 @@ def sp_acj4_848_ground__satrefine_refine():
 
 
 # ---- case sp-acj4-868-ground · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-214620 answered true (solved)
+# the run satrefine-refine-20261020-064814 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_868_ground__satrefine_refine():
     Assum = And()
@@ -340,7 +340,7 @@ def sp_acj4_868_ground__satrefine_refine():
 
 
 # ---- case sp-acj4-911-ground · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-214620 answered true (solved)
+# the run satrefine-refine-20261020-064814 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_911_ground__satrefine_refine():
     Assum = And()
@@ -352,7 +352,7 @@ def sp_acj4_911_ground__satrefine_refine():
 
 
 # ---- case sp-acj4-927-ground · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-214620 answered true (solved)
+# the run satrefine-refine-20261020-064814 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_927_ground__satrefine_refine():
     Assum = And()
@@ -365,26 +365,26 @@ def sp_acj4_927_ground__satrefine_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-1007-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-214620', sp_acj4_1007_ground__satrefine_refine),
-    ('sp-acj4-1107-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-214620', sp_acj4_1107_ground__satrefine_refine),
-    ('sp-acj4-1148-ground', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-214620', sp_acj4_1148_ground__satrefine_refine),
-    ('sp-acj4-1149-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-214620', sp_acj4_1149_ground__satrefine_refine),
-    ('sp-acj4-1177-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-214620', sp_acj4_1177_ground__satrefine_refine),
-    ('sp-acj4-1195-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-214620', sp_acj4_1195_ground__satrefine_refine),
-    ('sp-acj4-1217-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-214620', sp_acj4_1217_ground__satrefine_refine),
-    ('sp-acj4-1238-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-214620', sp_acj4_1238_ground__satrefine_refine),
-    ('sp-acj4-1247-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-214620', sp_acj4_1247_ground__satrefine_refine),
-    ('sp-acj4-1254-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-214620', sp_acj4_1254_ground__satrefine_refine),
-    ('sp-acj4-1258-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-214620', sp_acj4_1258_ground__satrefine_refine),
-    ('sp-acj4-5372-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-214620', sp_acj4_5372_ground__satrefine_refine),
-    ('sp-acj4-5382-ground', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-214620', sp_acj4_5382_ground__satrefine_refine),
-    ('sp-acj4-5385-ground', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-214620', sp_acj4_5385_ground__satrefine_refine),
-    ('sp-acj4-819-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-214620', sp_acj4_819_ground__satrefine_refine),
-    ('sp-acj4-837-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-214620', sp_acj4_837_ground__satrefine_refine),
-    ('sp-acj4-848-ground', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261019-214620', sp_acj4_848_ground__satrefine_refine),
-    ('sp-acj4-868-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-214620', sp_acj4_868_ground__satrefine_refine),
-    ('sp-acj4-911-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-214620', sp_acj4_911_ground__satrefine_refine),
-    ('sp-acj4-927-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-214620', sp_acj4_927_ground__satrefine_refine),
+    ('sp-acj4-1007-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-064814', sp_acj4_1007_ground__satrefine_refine),
+    ('sp-acj4-1107-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-064814', sp_acj4_1107_ground__satrefine_refine),
+    ('sp-acj4-1148-ground', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-064814', sp_acj4_1148_ground__satrefine_refine),
+    ('sp-acj4-1149-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-064814', sp_acj4_1149_ground__satrefine_refine),
+    ('sp-acj4-1177-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-064814', sp_acj4_1177_ground__satrefine_refine),
+    ('sp-acj4-1195-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-064814', sp_acj4_1195_ground__satrefine_refine),
+    ('sp-acj4-1217-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-064814', sp_acj4_1217_ground__satrefine_refine),
+    ('sp-acj4-1238-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-064814', sp_acj4_1238_ground__satrefine_refine),
+    ('sp-acj4-1247-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-064814', sp_acj4_1247_ground__satrefine_refine),
+    ('sp-acj4-1254-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-064814', sp_acj4_1254_ground__satrefine_refine),
+    ('sp-acj4-1258-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-064814', sp_acj4_1258_ground__satrefine_refine),
+    ('sp-acj4-5372-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-064814', sp_acj4_5372_ground__satrefine_refine),
+    ('sp-acj4-5382-ground', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-064814', sp_acj4_5382_ground__satrefine_refine),
+    ('sp-acj4-5385-ground', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-064814', sp_acj4_5385_ground__satrefine_refine),
+    ('sp-acj4-819-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-064814', sp_acj4_819_ground__satrefine_refine),
+    ('sp-acj4-837-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-064814', sp_acj4_837_ground__satrefine_refine),
+    ('sp-acj4-848-ground', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-064814', sp_acj4_848_ground__satrefine_refine),
+    ('sp-acj4-868-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-064814', sp_acj4_868_ground__satrefine_refine),
+    ('sp-acj4-911-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-064814', sp_acj4_911_ground__satrefine_refine),
+    ('sp-acj4-927-ground', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-064814', sp_acj4_927_ground__satrefine_refine),
 ]
 
 

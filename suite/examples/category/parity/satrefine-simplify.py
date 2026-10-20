@@ -124,7 +124,7 @@ import satsimp
 
 
 # ---- case demo-parity-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214829 answered true (solved)
+# the run satrefine-simplify-20261020-065023 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_01__satrefine_simplify():
     n = Symbol('n')
@@ -137,7 +137,7 @@ def demo_parity_01__satrefine_simplify():
 
 
 # ---- case demo-parity-02 · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214829 answered false (solved)
+# the run satrefine-simplify-20261020-065023 answered false (solved)
 @_in(_SETUP1)
 def demo_parity_02__satrefine_simplify():
     n = Symbol('n')
@@ -151,7 +151,7 @@ def demo_parity_02__satrefine_simplify():
 
 
 # ---- case demo-parity-03 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214829 answered true (solved)
+# the run satrefine-simplify-20261020-065023 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_03__satrefine_simplify():
     n = Symbol('n')
@@ -164,7 +164,7 @@ def demo_parity_03__satrefine_simplify():
 
 
 # ---- case demo-parity-04 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214829 answered null (declined correctly)
+# the run satrefine-simplify-20261020-065023 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_parity_04__satrefine_simplify():
     n = Symbol('n')
@@ -177,7 +177,7 @@ def demo_parity_04__satrefine_simplify():
 
 
 # ---- case demo-parity-05 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214829 answered true (solved)
+# the run satrefine-simplify-20261020-065023 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_05__satrefine_simplify():
     n = Symbol('n')
@@ -192,11 +192,11 @@ def demo_parity_05__satrefine_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-parity-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-214829', demo_parity_01__satrefine_simplify),
-    ('demo-parity-02', 'satrefine-simplify', 'false', 'false', 'satrefine-simplify-20261019-214829', demo_parity_02__satrefine_simplify),
-    ('demo-parity-03', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-214829', demo_parity_03__satrefine_simplify),
-    ('demo-parity-04', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214829', demo_parity_04__satrefine_simplify),
-    ('demo-parity-05', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-214829', demo_parity_05__satrefine_simplify),
+    ('demo-parity-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065023', demo_parity_01__satrefine_simplify),
+    ('demo-parity-02', 'satrefine-simplify', 'false', 'false', 'satrefine-simplify-20261020-065023', demo_parity_02__satrefine_simplify),
+    ('demo-parity-03', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065023', demo_parity_03__satrefine_simplify),
+    ('demo-parity-04', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-065023', demo_parity_04__satrefine_simplify),
+    ('demo-parity-05', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065023', demo_parity_05__satrefine_simplify),
 ]
 
 

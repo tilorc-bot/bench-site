@@ -124,7 +124,7 @@ from sympy.assumptions.satask import satask
 
 
 # ---- case trig-acos-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-214928 answered null (no verdict)
+# the run sympy-satask-20261020-065122 answered null (no verdict)
 @_in(_SETUP1)
 def trig_acos_01__sympy_satask():
     x = Symbol('x')
@@ -136,7 +136,7 @@ def trig_acos_01__sympy_satask():
 
 
 # ---- case trig-asin-01 · expected contingent · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-214928 answered null (declined correctly)
+# the run sympy-satask-20261020-065122 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_asin_01__sympy_satask():
     x = Symbol('x')
@@ -148,7 +148,7 @@ def trig_asin_01__sympy_satask():
 
 
 # ---- case trig-asin-02 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-214928 answered null (no verdict)
+# the run sympy-satask-20261020-065122 answered null (no verdict)
 @_in(_SETUP1)
 def trig_asin_02__sympy_satask():
     x = Symbol('x')
@@ -160,7 +160,7 @@ def trig_asin_02__sympy_satask():
 
 
 # ---- case trig-atan-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-214928 answered null (no verdict)
+# the run sympy-satask-20261020-065122 answered null (no verdict)
 @_in(_SETUP1)
 def trig_atan_01__sympy_satask():
     x = Symbol('x')
@@ -173,10 +173,10 @@ def trig_atan_01__sympy_satask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-acos-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214928', trig_acos_01__sympy_satask),
-    ('trig-asin-01', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-214928', trig_asin_01__sympy_satask),
-    ('trig-asin-02', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214928', trig_asin_02__sympy_satask),
-    ('trig-atan-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214928', trig_atan_01__sympy_satask),
+    ('trig-acos-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-065122', trig_acos_01__sympy_satask),
+    ('trig-asin-01', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261020-065122', trig_asin_01__sympy_satask),
+    ('trig-asin-02', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-065122', trig_asin_02__sympy_satask),
+    ('trig-atan-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-065122', trig_atan_01__sympy_satask),
 ]
 
 

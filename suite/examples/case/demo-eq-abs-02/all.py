@@ -155,7 +155,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-eq-abs-02 · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261019-214827 answered false (solved)
+# the run satassume-ask-20261020-065021 answered false (solved)
 @_in(_SETUP1)
 def demo_eq_abs_02__satassume_ask():
     x = Symbol('x')
@@ -167,7 +167,7 @@ def demo_eq_abs_02__satassume_ask():
 
 
 # ---- case demo-eq-abs-02 · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-213652 answered null (no verdict)
+# the run satrefine-refine-20261020-064159 answered null (no verdict)
 @_in(_SETUP2)
 def demo_eq_abs_02__satrefine_refine():
     x = Symbol('x')
@@ -180,7 +180,7 @@ def demo_eq_abs_02__satrefine_refine():
 
 
 # ---- case demo-eq-abs-02 · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261019-214831 answered null (no verdict)
+# the run satsimp-trigsimp-20261020-065026 answered null (no verdict)
 @_in(_SETUP2)
 def demo_eq_abs_02__satsimp_trigsimp():
     x = Symbol('x')
@@ -193,7 +193,7 @@ def demo_eq_abs_02__satsimp_trigsimp():
 
 
 # ---- case demo-eq-abs-02 · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214829 answered null (no verdict)
+# the run satrefine-simplify-20261020-065023 answered null (no verdict)
 @_in(_SETUP2)
 def demo_eq_abs_02__satrefine_simplify():
     x = Symbol('x')
@@ -206,7 +206,7 @@ def demo_eq_abs_02__satrefine_simplify():
 
 
 # ---- case demo-eq-abs-02 · expected false · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-213643 answered null (no verdict)
+# the run sympy-auto-20261020-064150 answered null (no verdict)
 @_in(_SETUP3)
 def demo_eq_abs_02__sympy_auto():
     x = Symbol('x', real=True, negative=True)
@@ -219,7 +219,7 @@ def demo_eq_abs_02__sympy_auto():
 
 
 # ---- case demo-eq-abs-02 · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261019-213644 answered false (solved)
+# the run sympy-ask-20261020-064151 answered false (solved)
 @_in(_SETUP3)
 def demo_eq_abs_02__sympy_ask():
     x = Symbol('x')
@@ -231,7 +231,7 @@ def demo_eq_abs_02__sympy_ask():
 
 
 # ---- case demo-eq-abs-02 · expected false · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-214847 answered null (no verdict)
+# the run sympy-satask-20261020-065041 answered null (no verdict)
 @_in(_SETUP4)
 def demo_eq_abs_02__sympy_satask():
     x = Symbol('x')
@@ -243,7 +243,7 @@ def demo_eq_abs_02__sympy_satask():
 
 
 # ---- case demo-eq-abs-02 · expected false · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261019-213648 answered null (no verdict)
+# the run sympy-refine-20261020-064155 answered null (no verdict)
 @_in(_SETUP3)
 def demo_eq_abs_02__sympy_refine():
     x = Symbol('x')
@@ -256,7 +256,7 @@ def demo_eq_abs_02__sympy_refine():
 
 
 # ---- case demo-eq-abs-02 · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261019-213650 answered null (no verdict)
+# the run sympy-simplify-20261020-064157 answered null (no verdict)
 @_in(_SETUP3)
 def demo_eq_abs_02__sympy_simplify():
     x = Symbol('x', real=True, negative=True)
@@ -268,7 +268,7 @@ def demo_eq_abs_02__sympy_simplify():
 
 
 # ---- case demo-eq-abs-02 · expected false · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-214833 answered false (solved)
+# the run sympy-extras-ask-20261020-065027 answered false (solved)
 @_in(_SETUP5)
 def demo_eq_abs_02__sympy_extras_ask():
     x = Symbol('x')
@@ -281,7 +281,7 @@ def demo_eq_abs_02__sympy_extras_ask():
 
 
 # ---- case demo-eq-abs-02 · expected false · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261019-214838 answered null (no verdict)
+# the run sympy-extras-refine-20261020-065033 answered null (no verdict)
 @_in(_SETUP5)
 def demo_eq_abs_02__sympy_extras_refine():
     x = Symbol('x')
@@ -294,7 +294,7 @@ def demo_eq_abs_02__sympy_extras_refine():
 
 
 # ---- case demo-eq-abs-02 · expected false · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-214842 answered null (no verdict)
+# the run sympy-extras-simplify-20261020-065037 answered null (no verdict)
 @_in(_SETUP5)
 def demo_eq_abs_02__sympy_extras_simplify():
     x = Symbol('x')
@@ -308,18 +308,18 @@ def demo_eq_abs_02__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-abs-02', 'satassume-ask', 'false', 'false', 'satassume-ask-20261019-214827', demo_eq_abs_02__satassume_ask),
-    ('demo-eq-abs-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261019-213652', demo_eq_abs_02__satrefine_refine),
-    ('demo-eq-abs-02', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261019-214831', demo_eq_abs_02__satsimp_trigsimp),
-    ('demo-eq-abs-02', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261019-214829', demo_eq_abs_02__satrefine_simplify),
-    ('demo-eq-abs-02', 'sympy-auto', 'false', 'null', 'sympy-auto-20261019-213643', demo_eq_abs_02__sympy_auto),
-    ('demo-eq-abs-02', 'sympy-ask', 'false', 'false', 'sympy-ask-20261019-213644', demo_eq_abs_02__sympy_ask),
-    ('demo-eq-abs-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261019-214847', demo_eq_abs_02__sympy_satask),
-    ('demo-eq-abs-02', 'sympy-refine', 'false', 'null', 'sympy-refine-20261019-213648', demo_eq_abs_02__sympy_refine),
-    ('demo-eq-abs-02', 'sympy-simplify', 'false', 'null', 'sympy-simplify-20261019-213650', demo_eq_abs_02__sympy_simplify),
-    ('demo-eq-abs-02', 'sympy-extras-ask', 'false', 'false', 'sympy-extras-ask-20261019-214833', demo_eq_abs_02__sympy_extras_ask),
-    ('demo-eq-abs-02', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261019-214838', demo_eq_abs_02__sympy_extras_refine),
-    ('demo-eq-abs-02', 'sympy-extras-simplify', 'false', 'null', 'sympy-extras-simplify-20261019-214842', demo_eq_abs_02__sympy_extras_simplify),
+    ('demo-eq-abs-02', 'satassume-ask', 'false', 'false', 'satassume-ask-20261020-065021', demo_eq_abs_02__satassume_ask),
+    ('demo-eq-abs-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261020-064159', demo_eq_abs_02__satrefine_refine),
+    ('demo-eq-abs-02', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261020-065026', demo_eq_abs_02__satsimp_trigsimp),
+    ('demo-eq-abs-02', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261020-065023', demo_eq_abs_02__satrefine_simplify),
+    ('demo-eq-abs-02', 'sympy-auto', 'false', 'null', 'sympy-auto-20261020-064150', demo_eq_abs_02__sympy_auto),
+    ('demo-eq-abs-02', 'sympy-ask', 'false', 'false', 'sympy-ask-20261020-064151', demo_eq_abs_02__sympy_ask),
+    ('demo-eq-abs-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-065041', demo_eq_abs_02__sympy_satask),
+    ('demo-eq-abs-02', 'sympy-refine', 'false', 'null', 'sympy-refine-20261020-064155', demo_eq_abs_02__sympy_refine),
+    ('demo-eq-abs-02', 'sympy-simplify', 'false', 'null', 'sympy-simplify-20261020-064157', demo_eq_abs_02__sympy_simplify),
+    ('demo-eq-abs-02', 'sympy-extras-ask', 'false', 'false', 'sympy-extras-ask-20261020-065027', demo_eq_abs_02__sympy_extras_ask),
+    ('demo-eq-abs-02', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261020-065033', demo_eq_abs_02__sympy_extras_refine),
+    ('demo-eq-abs-02', 'sympy-extras-simplify', 'false', 'null', 'sympy-extras-simplify-20261020-065037', demo_eq_abs_02__sympy_extras_simplify),
 ]
 
 

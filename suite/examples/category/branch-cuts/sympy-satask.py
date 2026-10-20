@@ -124,7 +124,7 @@ from sympy.assumptions.satask import satask
 
 
 # ---- case demo-atan2-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-214847 answered null (no verdict)
+# the run sympy-satask-20261020-065041 answered null (no verdict)
 @_in(_SETUP1)
 def demo_atan2_01__sympy_satask():
     x = Symbol('x')
@@ -137,7 +137,7 @@ def demo_atan2_01__sympy_satask():
 
 
 # ---- case demo-atan2-02 · expected false · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-214847 answered null (no verdict)
+# the run sympy-satask-20261020-065041 answered null (no verdict)
 @_in(_SETUP1)
 def demo_atan2_02__sympy_satask():
     x = Symbol('x')
@@ -150,7 +150,7 @@ def demo_atan2_02__sympy_satask():
 
 
 # ---- case demo-log-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-214847 answered null (no verdict)
+# the run sympy-satask-20261020-065041 answered null (no verdict)
 @_in(_SETUP1)
 def demo_log_01__sympy_satask():
     x = Symbol('x')
@@ -163,7 +163,7 @@ def demo_log_01__sympy_satask():
 
 
 # ---- case demo-log-02 · expected contingent · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-214847 answered null (declined correctly)
+# the run sympy-satask-20261020-065041 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_log_02__sympy_satask():
     z = Symbol('z')
@@ -176,7 +176,7 @@ def demo_log_02__sympy_satask():
 
 
 # ---- case demo-log-03 · expected false · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-214847 answered null (no verdict)
+# the run sympy-satask-20261020-065041 answered null (no verdict)
 @_in(_SETUP1)
 def demo_log_03__sympy_satask():
     x = Symbol('x')
@@ -189,11 +189,11 @@ def demo_log_03__sympy_satask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-atan2-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214847', demo_atan2_01__sympy_satask),
-    ('demo-atan2-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261019-214847', demo_atan2_02__sympy_satask),
-    ('demo-log-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-214847', demo_log_01__sympy_satask),
-    ('demo-log-02', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261019-214847', demo_log_02__sympy_satask),
-    ('demo-log-03', 'sympy-satask', 'false', 'null', 'sympy-satask-20261019-214847', demo_log_03__sympy_satask),
+    ('demo-atan2-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-065041', demo_atan2_01__sympy_satask),
+    ('demo-atan2-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-065041', demo_atan2_02__sympy_satask),
+    ('demo-log-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-065041', demo_log_01__sympy_satask),
+    ('demo-log-02', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261020-065041', demo_log_02__sympy_satask),
+    ('demo-log-03', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-065041', demo_log_03__sympy_satask),
 ]
 
 

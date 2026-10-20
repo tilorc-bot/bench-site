@@ -131,7 +131,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-nonzero-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-214842 answered null (no verdict)
+# the run sympy-extras-simplify-20261020-065037 answered null (no verdict)
 @_in(_SETUP1)
 def demo_nonzero_01__sympy_extras_simplify():
     z = Symbol('z')
@@ -144,7 +144,7 @@ def demo_nonzero_01__sympy_extras_simplify():
 
 
 # ---- case demo-sign-02 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-214842 answered true (solved)
+# the run sympy-extras-simplify-20261020-065037 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_02__sympy_extras_simplify():
     x = Symbol('x')
@@ -157,7 +157,7 @@ def demo_sign_02__sympy_extras_simplify():
 
 
 # ---- case demo-sign-03 · expected contingent · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-214842 answered null (declined correctly)
+# the run sympy-extras-simplify-20261020-065037 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_sign_03__sympy_extras_simplify():
     x = Symbol('x')
@@ -170,7 +170,7 @@ def demo_sign_03__sympy_extras_simplify():
 
 
 # ---- case demo-sign-04 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-214842 answered null (no verdict)
+# the run sympy-extras-simplify-20261020-065037 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_04__sympy_extras_simplify():
     z = Symbol('z')
@@ -183,7 +183,7 @@ def demo_sign_04__sympy_extras_simplify():
 
 
 # ---- case demo-sign-05 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261019-214842 answered true (solved)
+# the run sympy-extras-simplify-20261020-065037 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_05__sympy_extras_simplify():
     x = Symbol('x')
@@ -198,11 +198,11 @@ def demo_sign_05__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-nonzero-01', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261019-214842', demo_nonzero_01__sympy_extras_simplify),
-    ('demo-sign-02', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-214842', demo_sign_02__sympy_extras_simplify),
-    ('demo-sign-03', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261019-214842', demo_sign_03__sympy_extras_simplify),
-    ('demo-sign-04', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261019-214842', demo_sign_04__sympy_extras_simplify),
-    ('demo-sign-05', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261019-214842', demo_sign_05__sympy_extras_simplify),
+    ('demo-nonzero-01', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-065037', demo_nonzero_01__sympy_extras_simplify),
+    ('demo-sign-02', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261020-065037', demo_sign_02__sympy_extras_simplify),
+    ('demo-sign-03', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261020-065037', demo_sign_03__sympy_extras_simplify),
+    ('demo-sign-04', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-065037', demo_sign_04__sympy_extras_simplify),
+    ('demo-sign-05', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261020-065037', demo_sign_05__sympy_extras_simplify),
 ]
 
 

@@ -124,7 +124,7 @@ import sympy
 
 
 # ---- case demo-prime-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-213643 answered null (no verdict)
+# the run sympy-auto-20261020-064150 answered null (no verdict)
 @_in(_SETUP1)
 def demo_prime_01__sympy_auto():
     p = Symbol('p', integer=True, prime=True)
@@ -137,7 +137,7 @@ def demo_prime_01__sympy_auto():
 
 
 # ---- case demo-prime-02 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261019-213643 answered null (declined correctly)
+# the run sympy-auto-20261020-064150 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_prime_02__sympy_auto():
     p = Symbol('p', integer=True, prime=True)
@@ -150,8 +150,8 @@ def demo_prime_02__sympy_auto():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-prime-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261019-213643', demo_prime_01__sympy_auto),
-    ('demo-prime-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261019-213643', demo_prime_02__sympy_auto),
+    ('demo-prime-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064150', demo_prime_01__sympy_auto),
+    ('demo-prime-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261020-064150', demo_prime_02__sympy_auto),
 ]
 
 

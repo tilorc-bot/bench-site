@@ -124,7 +124,7 @@ import satsimp
 
 
 # ---- case demo-prime-01 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261019-214831 answered null (no verdict)
+# the run satsimp-trigsimp-20261020-065026 answered null (no verdict)
 @_in(_SETUP1)
 def demo_prime_01__satsimp_trigsimp():
     p = Symbol('p')
@@ -137,7 +137,7 @@ def demo_prime_01__satsimp_trigsimp():
 
 
 # ---- case demo-prime-02 · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261019-214831 answered null (declined correctly)
+# the run satsimp-trigsimp-20261020-065026 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_prime_02__satsimp_trigsimp():
     p = Symbol('p')
@@ -151,8 +151,8 @@ def demo_prime_02__satsimp_trigsimp():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-prime-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261019-214831', demo_prime_01__satsimp_trigsimp),
-    ('demo-prime-02', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261019-214831', demo_prime_02__satsimp_trigsimp),
+    ('demo-prime-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-065026', demo_prime_01__satsimp_trigsimp),
+    ('demo-prime-02', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-065026', demo_prime_02__satsimp_trigsimp),
 ]
 
 

@@ -124,7 +124,7 @@ import satsimp
 
 
 # ---- case demo-eq-log-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-213652 answered true (solved)
+# the run satrefine-refine-20261020-064159 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_log_01__satrefine_refine():
     x = Symbol('x')
@@ -137,7 +137,7 @@ def demo_eq_log_01__satrefine_refine():
 
 
 # ---- case demo-eq-pow-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261019-213652 answered true (solved)
+# the run satrefine-refine-20261020-064159 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_pow_01__satrefine_refine():
     n = Symbol('n')
@@ -151,8 +151,8 @@ def demo_eq_pow_01__satrefine_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-log-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-213652', demo_eq_log_01__satrefine_refine),
-    ('demo-eq-pow-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261019-213652', demo_eq_pow_01__satrefine_refine),
+    ('demo-eq-log-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-064159', demo_eq_log_01__satrefine_refine),
+    ('demo-eq-pow-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-064159', demo_eq_pow_01__satrefine_refine),
 ]
 
 

@@ -131,7 +131,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case trig-double-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-214854 answered true (solved)
+# the run sympy-extras-ask-20261020-065048 answered true (solved)
 @_in(_SETUP1)
 def trig_double_01__sympy_extras_ask():
     z = Symbol('z')
@@ -143,7 +143,7 @@ def trig_double_01__sympy_extras_ask():
 
 
 # ---- case trig-double-02 · expected false · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-214854 answered null (no verdict)
+# the run sympy-extras-ask-20261020-065048 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_02__sympy_extras_ask():
     x = Symbol('x')
@@ -155,7 +155,7 @@ def trig_double_02__sympy_extras_ask():
 
 
 # ---- case trig-pyth-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-214854 answered true (solved)
+# the run sympy-extras-ask-20261020-065048 answered true (solved)
 @_in(_SETUP1)
 def trig_pyth_01__sympy_extras_ask():
     z = Symbol('z')
@@ -167,7 +167,7 @@ def trig_pyth_01__sympy_extras_ask():
 
 
 # ---- case trig-sqrt-01 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-214854 answered null (declined correctly)
+# the run sympy-extras-ask-20261020-065048 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_sqrt_01__sympy_extras_ask():
     x = Symbol('x')
@@ -179,7 +179,7 @@ def trig_sqrt_01__sympy_extras_ask():
 
 
 # ---- case trig-tan-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261019-214854 answered true (solved)
+# the run sympy-extras-ask-20261020-065048 answered true (solved)
 @_in(_SETUP1)
 def trig_tan_01__sympy_extras_ask():
     x = Symbol('x')
@@ -192,11 +192,11 @@ def trig_tan_01__sympy_extras_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-double-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-214854', trig_double_01__sympy_extras_ask),
-    ('trig-double-02', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261019-214854', trig_double_02__sympy_extras_ask),
-    ('trig-pyth-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-214854', trig_pyth_01__sympy_extras_ask),
-    ('trig-sqrt-01', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261019-214854', trig_sqrt_01__sympy_extras_ask),
-    ('trig-tan-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261019-214854', trig_tan_01__sympy_extras_ask),
+    ('trig-double-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065048', trig_double_01__sympy_extras_ask),
+    ('trig-double-02', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261020-065048', trig_double_02__sympy_extras_ask),
+    ('trig-pyth-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065048', trig_pyth_01__sympy_extras_ask),
+    ('trig-sqrt-01', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261020-065048', trig_sqrt_01__sympy_extras_ask),
+    ('trig-tan-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065048', trig_tan_01__sympy_extras_ask),
 ]
 
 

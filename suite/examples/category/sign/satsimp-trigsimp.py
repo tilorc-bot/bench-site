@@ -124,7 +124,7 @@ import satsimp
 
 
 # ---- case demo-nonzero-01 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261019-214831 answered null (no verdict)
+# the run satsimp-trigsimp-20261020-065026 answered null (no verdict)
 @_in(_SETUP1)
 def demo_nonzero_01__satsimp_trigsimp():
     z = Symbol('z')
@@ -137,7 +137,7 @@ def demo_nonzero_01__satsimp_trigsimp():
 
 
 # ---- case demo-sign-02 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261019-214831 answered null (no verdict)
+# the run satsimp-trigsimp-20261020-065026 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_02__satsimp_trigsimp():
     x = Symbol('x')
@@ -150,7 +150,7 @@ def demo_sign_02__satsimp_trigsimp():
 
 
 # ---- case demo-sign-03 · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261019-214831 answered null (declined correctly)
+# the run satsimp-trigsimp-20261020-065026 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_sign_03__satsimp_trigsimp():
     x = Symbol('x')
@@ -163,7 +163,7 @@ def demo_sign_03__satsimp_trigsimp():
 
 
 # ---- case demo-sign-04 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261019-214831 answered null (no verdict)
+# the run satsimp-trigsimp-20261020-065026 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_04__satsimp_trigsimp():
     z = Symbol('z')
@@ -176,7 +176,7 @@ def demo_sign_04__satsimp_trigsimp():
 
 
 # ---- case demo-sign-05 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261019-214831 answered null (no verdict)
+# the run satsimp-trigsimp-20261020-065026 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_05__satsimp_trigsimp():
     x = Symbol('x')
@@ -191,11 +191,11 @@ def demo_sign_05__satsimp_trigsimp():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-nonzero-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261019-214831', demo_nonzero_01__satsimp_trigsimp),
-    ('demo-sign-02', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261019-214831', demo_sign_02__satsimp_trigsimp),
-    ('demo-sign-03', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261019-214831', demo_sign_03__satsimp_trigsimp),
-    ('demo-sign-04', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261019-214831', demo_sign_04__satsimp_trigsimp),
-    ('demo-sign-05', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261019-214831', demo_sign_05__satsimp_trigsimp),
+    ('demo-nonzero-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-065026', demo_nonzero_01__satsimp_trigsimp),
+    ('demo-sign-02', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-065026', demo_sign_02__satsimp_trigsimp),
+    ('demo-sign-03', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-065026', demo_sign_03__satsimp_trigsimp),
+    ('demo-sign-04', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-065026', demo_sign_04__satsimp_trigsimp),
+    ('demo-sign-05', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-065026', demo_sign_05__satsimp_trigsimp),
 ]
 
 

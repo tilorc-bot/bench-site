@@ -124,7 +124,7 @@ import satsimp
 
 
 # ---- case sp-acj4-0-real · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered true (solved)
+# the run satrefine-simplify-20261020-065134 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_0_real__satrefine_simplify():
     x = Symbol('x')
@@ -137,7 +137,7 @@ def sp_acj4_0_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-115-real · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered true (solved)
+# the run satrefine-simplify-20261020-065134 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_115_real__satrefine_simplify():
     x = Symbol('x')
@@ -150,7 +150,7 @@ def sp_acj4_115_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-116-real · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered true (solved)
+# the run satrefine-simplify-20261020-065134 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_116_real__satrefine_simplify():
     x = Symbol('x')
@@ -163,7 +163,7 @@ def sp_acj4_116_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-130-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (declined correctly)
+# the run satrefine-simplify-20261020-065134 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_130_real__satrefine_simplify():
     x = Symbol('x')
@@ -176,7 +176,7 @@ def sp_acj4_130_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-151-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (declined correctly)
+# the run satrefine-simplify-20261020-065134 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_151_real__satrefine_simplify():
     x = Symbol('x')
@@ -189,7 +189,7 @@ def sp_acj4_151_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-154-real · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (no verdict)
+# the run satrefine-simplify-20261020-065134 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_154_real__satrefine_simplify():
     x = Symbol('x')
@@ -202,7 +202,7 @@ def sp_acj4_154_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-156-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (declined correctly)
+# the run satrefine-simplify-20261020-065134 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_156_real__satrefine_simplify():
     x = Symbol('x')
@@ -215,7 +215,7 @@ def sp_acj4_156_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-180-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (declined correctly)
+# the run satrefine-simplify-20261020-065134 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_180_real__satrefine_simplify():
     x = Symbol('x')
@@ -228,7 +228,7 @@ def sp_acj4_180_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-183-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (declined correctly)
+# the run satrefine-simplify-20261020-065134 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_183_real__satrefine_simplify():
     x = Symbol('x')
@@ -241,7 +241,7 @@ def sp_acj4_183_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-189-real · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (no verdict)
+# the run satrefine-simplify-20261020-065134 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_189_real__satrefine_simplify():
     x = Symbol('x')
@@ -254,7 +254,7 @@ def sp_acj4_189_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-190-real · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (no verdict)
+# the run satrefine-simplify-20261020-065134 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_190_real__satrefine_simplify():
     x = Symbol('x')
@@ -267,7 +267,7 @@ def sp_acj4_190_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-191-real · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (no verdict)
+# the run satrefine-simplify-20261020-065134 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_191_real__satrefine_simplify():
     x = Symbol('x')
@@ -280,7 +280,7 @@ def sp_acj4_191_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-203-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (declined correctly)
+# the run satrefine-simplify-20261020-065134 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_203_real__satrefine_simplify():
     x = Symbol('x')
@@ -293,7 +293,7 @@ def sp_acj4_203_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-229-real · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered true (solved)
+# the run satrefine-simplify-20261020-065134 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_229_real__satrefine_simplify():
     x = Symbol('x')
@@ -306,7 +306,7 @@ def sp_acj4_229_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-234-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (declined correctly)
+# the run satrefine-simplify-20261020-065134 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_234_real__satrefine_simplify():
     x = Symbol('x')
@@ -319,7 +319,7 @@ def sp_acj4_234_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-241-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (declined correctly)
+# the run satrefine-simplify-20261020-065134 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_241_real__satrefine_simplify():
     x = Symbol('x')
@@ -332,7 +332,7 @@ def sp_acj4_241_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-247-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (declined correctly)
+# the run satrefine-simplify-20261020-065134 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_247_real__satrefine_simplify():
     x = Symbol('x')
@@ -345,7 +345,7 @@ def sp_acj4_247_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-260-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (declined correctly)
+# the run satrefine-simplify-20261020-065134 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_260_real__satrefine_simplify():
     x = Symbol('x')
@@ -358,7 +358,7 @@ def sp_acj4_260_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-261-real · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered true (solved)
+# the run satrefine-simplify-20261020-065134 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_261_real__satrefine_simplify():
     x = Symbol('x')
@@ -371,7 +371,7 @@ def sp_acj4_261_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-266-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (declined correctly)
+# the run satrefine-simplify-20261020-065134 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_266_real__satrefine_simplify():
     x = Symbol('x')
@@ -384,7 +384,7 @@ def sp_acj4_266_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-267-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (declined correctly)
+# the run satrefine-simplify-20261020-065134 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_267_real__satrefine_simplify():
     x = Symbol('x')
@@ -397,7 +397,7 @@ def sp_acj4_267_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-29-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (declined correctly)
+# the run satrefine-simplify-20261020-065134 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_29_real__satrefine_simplify():
     x = Symbol('x')
@@ -410,7 +410,7 @@ def sp_acj4_29_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-3-real · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered true (solved)
+# the run satrefine-simplify-20261020-065134 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_3_real__satrefine_simplify():
     x = Symbol('x')
@@ -423,7 +423,7 @@ def sp_acj4_3_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-343-real · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered true (solved)
+# the run satrefine-simplify-20261020-065134 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_343_real__satrefine_simplify():
     x = Symbol('x')
@@ -436,7 +436,7 @@ def sp_acj4_343_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-344-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (declined correctly)
+# the run satrefine-simplify-20261020-065134 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_344_real__satrefine_simplify():
     x = Symbol('x')
@@ -449,7 +449,7 @@ def sp_acj4_344_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-378-real · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered true (solved)
+# the run satrefine-simplify-20261020-065134 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_378_real__satrefine_simplify():
     x = Symbol('x')
@@ -462,7 +462,7 @@ def sp_acj4_378_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-380-real · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered true (solved)
+# the run satrefine-simplify-20261020-065134 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_380_real__satrefine_simplify():
     x = Symbol('x')
@@ -475,7 +475,7 @@ def sp_acj4_380_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-392-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (declined correctly)
+# the run satrefine-simplify-20261020-065134 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_392_real__satrefine_simplify():
     x = Symbol('x')
@@ -488,7 +488,7 @@ def sp_acj4_392_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-403-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (declined correctly)
+# the run satrefine-simplify-20261020-065134 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_403_real__satrefine_simplify():
     x = Symbol('x')
@@ -501,7 +501,7 @@ def sp_acj4_403_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-410-real · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered true (solved)
+# the run satrefine-simplify-20261020-065134 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_410_real__satrefine_simplify():
     x = Symbol('x')
@@ -514,7 +514,7 @@ def sp_acj4_410_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-416-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (declined correctly)
+# the run satrefine-simplify-20261020-065134 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_416_real__satrefine_simplify():
     x = Symbol('x')
@@ -527,7 +527,7 @@ def sp_acj4_416_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-420-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (declined correctly)
+# the run satrefine-simplify-20261020-065134 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_420_real__satrefine_simplify():
     x = Symbol('x')
@@ -540,7 +540,7 @@ def sp_acj4_420_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-430-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (declined correctly)
+# the run satrefine-simplify-20261020-065134 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_430_real__satrefine_simplify():
     x = Symbol('x')
@@ -553,7 +553,7 @@ def sp_acj4_430_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-433-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (declined correctly)
+# the run satrefine-simplify-20261020-065134 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_433_real__satrefine_simplify():
     x = Symbol('x')
@@ -566,7 +566,7 @@ def sp_acj4_433_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-442-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (declined correctly)
+# the run satrefine-simplify-20261020-065134 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_442_real__satrefine_simplify():
     x = Symbol('x')
@@ -579,7 +579,7 @@ def sp_acj4_442_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-449-real · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (no verdict)
+# the run satrefine-simplify-20261020-065134 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_449_real__satrefine_simplify():
     x = Symbol('x')
@@ -592,7 +592,7 @@ def sp_acj4_449_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-450-real · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered true (solved)
+# the run satrefine-simplify-20261020-065134 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_450_real__satrefine_simplify():
     x = Symbol('x')
@@ -605,7 +605,7 @@ def sp_acj4_450_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-451-real · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered true (solved)
+# the run satrefine-simplify-20261020-065134 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_451_real__satrefine_simplify():
     x = Symbol('x')
@@ -618,7 +618,7 @@ def sp_acj4_451_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-50-real · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered true (solved)
+# the run satrefine-simplify-20261020-065134 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_50_real__satrefine_simplify():
     x = Symbol('x')
@@ -631,7 +631,7 @@ def sp_acj4_50_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-55-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (declined correctly)
+# the run satrefine-simplify-20261020-065134 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_55_real__satrefine_simplify():
     x = Symbol('x')
@@ -644,7 +644,7 @@ def sp_acj4_55_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-56-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered null (declined correctly)
+# the run satrefine-simplify-20261020-065134 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_56_real__satrefine_simplify():
     x = Symbol('x')
@@ -657,7 +657,7 @@ def sp_acj4_56_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-6-real · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered true (solved)
+# the run satrefine-simplify-20261020-065134 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_6_real__satrefine_simplify():
     x = Symbol('x')
@@ -670,7 +670,7 @@ def sp_acj4_6_real__satrefine_simplify():
 
 
 # ---- case sp-acj4-806-ground · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered true (solved)
+# the run satrefine-simplify-20261020-065134 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_806_ground__satrefine_simplify():
     Assum = And()
@@ -682,7 +682,7 @@ def sp_acj4_806_ground__satrefine_simplify():
 
 
 # ---- case sp-acj4-813-ground · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered true (solved)
+# the run satrefine-simplify-20261020-065134 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_813_ground__satrefine_simplify():
     Assum = And()
@@ -694,7 +694,7 @@ def sp_acj4_813_ground__satrefine_simplify():
 
 
 # ---- case sp-acj4-816-ground · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261019-214939 answered true (solved)
+# the run satrefine-simplify-20261020-065134 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_816_ground__satrefine_simplify():
     Assum = And()
@@ -707,51 +707,51 @@ def sp_acj4_816_ground__satrefine_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-0-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-214939', sp_acj4_0_real__satrefine_simplify),
-    ('sp-acj4-115-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-214939', sp_acj4_115_real__satrefine_simplify),
-    ('sp-acj4-116-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-214939', sp_acj4_116_real__satrefine_simplify),
-    ('sp-acj4-130-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_130_real__satrefine_simplify),
-    ('sp-acj4-151-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_151_real__satrefine_simplify),
-    ('sp-acj4-154-real', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_154_real__satrefine_simplify),
-    ('sp-acj4-156-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_156_real__satrefine_simplify),
-    ('sp-acj4-180-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_180_real__satrefine_simplify),
-    ('sp-acj4-183-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_183_real__satrefine_simplify),
-    ('sp-acj4-189-real', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_189_real__satrefine_simplify),
-    ('sp-acj4-190-real', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_190_real__satrefine_simplify),
-    ('sp-acj4-191-real', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_191_real__satrefine_simplify),
-    ('sp-acj4-203-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_203_real__satrefine_simplify),
-    ('sp-acj4-229-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-214939', sp_acj4_229_real__satrefine_simplify),
-    ('sp-acj4-234-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_234_real__satrefine_simplify),
-    ('sp-acj4-241-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_241_real__satrefine_simplify),
-    ('sp-acj4-247-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_247_real__satrefine_simplify),
-    ('sp-acj4-260-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_260_real__satrefine_simplify),
-    ('sp-acj4-261-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-214939', sp_acj4_261_real__satrefine_simplify),
-    ('sp-acj4-266-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_266_real__satrefine_simplify),
-    ('sp-acj4-267-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_267_real__satrefine_simplify),
-    ('sp-acj4-29-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_29_real__satrefine_simplify),
-    ('sp-acj4-3-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-214939', sp_acj4_3_real__satrefine_simplify),
-    ('sp-acj4-343-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-214939', sp_acj4_343_real__satrefine_simplify),
-    ('sp-acj4-344-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_344_real__satrefine_simplify),
-    ('sp-acj4-378-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-214939', sp_acj4_378_real__satrefine_simplify),
-    ('sp-acj4-380-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-214939', sp_acj4_380_real__satrefine_simplify),
-    ('sp-acj4-392-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_392_real__satrefine_simplify),
-    ('sp-acj4-403-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_403_real__satrefine_simplify),
-    ('sp-acj4-410-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-214939', sp_acj4_410_real__satrefine_simplify),
-    ('sp-acj4-416-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_416_real__satrefine_simplify),
-    ('sp-acj4-420-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_420_real__satrefine_simplify),
-    ('sp-acj4-430-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_430_real__satrefine_simplify),
-    ('sp-acj4-433-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_433_real__satrefine_simplify),
-    ('sp-acj4-442-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_442_real__satrefine_simplify),
-    ('sp-acj4-449-real', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_449_real__satrefine_simplify),
-    ('sp-acj4-450-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-214939', sp_acj4_450_real__satrefine_simplify),
-    ('sp-acj4-451-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-214939', sp_acj4_451_real__satrefine_simplify),
-    ('sp-acj4-50-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-214939', sp_acj4_50_real__satrefine_simplify),
-    ('sp-acj4-55-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_55_real__satrefine_simplify),
-    ('sp-acj4-56-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261019-214939', sp_acj4_56_real__satrefine_simplify),
-    ('sp-acj4-6-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-214939', sp_acj4_6_real__satrefine_simplify),
-    ('sp-acj4-806-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-214939', sp_acj4_806_ground__satrefine_simplify),
-    ('sp-acj4-813-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-214939', sp_acj4_813_ground__satrefine_simplify),
-    ('sp-acj4-816-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261019-214939', sp_acj4_816_ground__satrefine_simplify),
+    ('sp-acj4-0-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_0_real__satrefine_simplify),
+    ('sp-acj4-115-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_115_real__satrefine_simplify),
+    ('sp-acj4-116-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_116_real__satrefine_simplify),
+    ('sp-acj4-130-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_130_real__satrefine_simplify),
+    ('sp-acj4-151-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_151_real__satrefine_simplify),
+    ('sp-acj4-154-real', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_154_real__satrefine_simplify),
+    ('sp-acj4-156-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_156_real__satrefine_simplify),
+    ('sp-acj4-180-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_180_real__satrefine_simplify),
+    ('sp-acj4-183-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_183_real__satrefine_simplify),
+    ('sp-acj4-189-real', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_189_real__satrefine_simplify),
+    ('sp-acj4-190-real', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_190_real__satrefine_simplify),
+    ('sp-acj4-191-real', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_191_real__satrefine_simplify),
+    ('sp-acj4-203-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_203_real__satrefine_simplify),
+    ('sp-acj4-229-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_229_real__satrefine_simplify),
+    ('sp-acj4-234-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_234_real__satrefine_simplify),
+    ('sp-acj4-241-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_241_real__satrefine_simplify),
+    ('sp-acj4-247-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_247_real__satrefine_simplify),
+    ('sp-acj4-260-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_260_real__satrefine_simplify),
+    ('sp-acj4-261-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_261_real__satrefine_simplify),
+    ('sp-acj4-266-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_266_real__satrefine_simplify),
+    ('sp-acj4-267-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_267_real__satrefine_simplify),
+    ('sp-acj4-29-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_29_real__satrefine_simplify),
+    ('sp-acj4-3-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_3_real__satrefine_simplify),
+    ('sp-acj4-343-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_343_real__satrefine_simplify),
+    ('sp-acj4-344-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_344_real__satrefine_simplify),
+    ('sp-acj4-378-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_378_real__satrefine_simplify),
+    ('sp-acj4-380-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_380_real__satrefine_simplify),
+    ('sp-acj4-392-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_392_real__satrefine_simplify),
+    ('sp-acj4-403-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_403_real__satrefine_simplify),
+    ('sp-acj4-410-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_410_real__satrefine_simplify),
+    ('sp-acj4-416-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_416_real__satrefine_simplify),
+    ('sp-acj4-420-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_420_real__satrefine_simplify),
+    ('sp-acj4-430-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_430_real__satrefine_simplify),
+    ('sp-acj4-433-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_433_real__satrefine_simplify),
+    ('sp-acj4-442-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_442_real__satrefine_simplify),
+    ('sp-acj4-449-real', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_449_real__satrefine_simplify),
+    ('sp-acj4-450-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_450_real__satrefine_simplify),
+    ('sp-acj4-451-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_451_real__satrefine_simplify),
+    ('sp-acj4-50-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_50_real__satrefine_simplify),
+    ('sp-acj4-55-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_55_real__satrefine_simplify),
+    ('sp-acj4-56-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_56_real__satrefine_simplify),
+    ('sp-acj4-6-real', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_6_real__satrefine_simplify),
+    ('sp-acj4-806-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_806_ground__satrefine_simplify),
+    ('sp-acj4-813-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_813_ground__satrefine_simplify),
+    ('sp-acj4-816-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_816_ground__satrefine_simplify),
 ]
 
 
