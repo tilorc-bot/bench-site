@@ -124,7 +124,7 @@ import satsimp
 
 
 # ---- case sp-acj4-1007-ground · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065212 answered true (solved)
+# the run satsimp-trigsimp-20261020-122909 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1007_ground__satsimp_trigsimp():
     Assum = And()
@@ -136,7 +136,7 @@ def sp_acj4_1007_ground__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-1107-ground · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065212 answered true (solved)
+# the run satsimp-trigsimp-20261020-122909 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1107_ground__satsimp_trigsimp():
     Assum = And()
@@ -148,7 +148,7 @@ def sp_acj4_1107_ground__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-1148-ground · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065212 answered null (no verdict)
+# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_1148_ground__satsimp_trigsimp():
     Assum = And()
@@ -160,7 +160,7 @@ def sp_acj4_1148_ground__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-1149-ground · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065212 answered true (solved)
+# the run satsimp-trigsimp-20261020-122909 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1149_ground__satsimp_trigsimp():
     Assum = And()
@@ -172,7 +172,7 @@ def sp_acj4_1149_ground__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-1177-ground · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065212 answered true (solved)
+# the run satsimp-trigsimp-20261020-122909 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1177_ground__satsimp_trigsimp():
     Assum = And()
@@ -184,7 +184,7 @@ def sp_acj4_1177_ground__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-1195-ground · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065212 answered true (solved)
+# the run satsimp-trigsimp-20261020-122909 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1195_ground__satsimp_trigsimp():
     Assum = And()
@@ -196,7 +196,7 @@ def sp_acj4_1195_ground__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-1217-ground · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065212 answered true (solved)
+# the run satsimp-trigsimp-20261020-122909 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1217_ground__satsimp_trigsimp():
     Assum = And()
@@ -208,7 +208,7 @@ def sp_acj4_1217_ground__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-1238-ground · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065212 answered true (solved)
+# the run satsimp-trigsimp-20261020-122909 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1238_ground__satsimp_trigsimp():
     Assum = And()
@@ -220,7 +220,7 @@ def sp_acj4_1238_ground__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-1247-ground · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065212 answered true (solved)
+# the run satsimp-trigsimp-20261020-122909 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1247_ground__satsimp_trigsimp():
     Assum = And()
@@ -232,7 +232,7 @@ def sp_acj4_1247_ground__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-1254-ground · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065212 answered true (solved)
+# the run satsimp-trigsimp-20261020-122909 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1254_ground__satsimp_trigsimp():
     Assum = And()
@@ -244,7 +244,7 @@ def sp_acj4_1254_ground__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-1258-ground · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065212 answered true (solved)
+# the run satsimp-trigsimp-20261020-122909 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1258_ground__satsimp_trigsimp():
     Assum = And()
@@ -256,7 +256,7 @@ def sp_acj4_1258_ground__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-5372-ground · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065212 answered true (solved)
+# the run satsimp-trigsimp-20261020-122909 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_5372_ground__satsimp_trigsimp():
     Assum = And()
@@ -268,7 +268,7 @@ def sp_acj4_5372_ground__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-5382-ground · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065212 answered null (no verdict)
+# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_5382_ground__satsimp_trigsimp():
     Assum = And()
@@ -280,7 +280,7 @@ def sp_acj4_5382_ground__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-5385-ground · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065212 answered null (no verdict)
+# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_5385_ground__satsimp_trigsimp():
     Assum = And()
@@ -292,7 +292,7 @@ def sp_acj4_5385_ground__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-819-ground · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065212 answered true (solved)
+# the run satsimp-trigsimp-20261020-122909 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_819_ground__satsimp_trigsimp():
     Assum = And()
@@ -304,7 +304,7 @@ def sp_acj4_819_ground__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-837-ground · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065212 answered true (solved)
+# the run satsimp-trigsimp-20261020-122909 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_837_ground__satsimp_trigsimp():
     Assum = And()
@@ -316,7 +316,7 @@ def sp_acj4_837_ground__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-848-ground · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065212 answered null (no verdict)
+# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_848_ground__satsimp_trigsimp():
     Assum = And()
@@ -328,7 +328,7 @@ def sp_acj4_848_ground__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-868-ground · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065212 answered true (solved)
+# the run satsimp-trigsimp-20261020-122909 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_868_ground__satsimp_trigsimp():
     Assum = And()
@@ -340,7 +340,7 @@ def sp_acj4_868_ground__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-911-ground · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065212 answered true (solved)
+# the run satsimp-trigsimp-20261020-122909 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_911_ground__satsimp_trigsimp():
     Assum = And()
@@ -352,7 +352,7 @@ def sp_acj4_911_ground__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-927-ground · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065212 answered true (solved)
+# the run satsimp-trigsimp-20261020-122909 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_927_ground__satsimp_trigsimp():
     Assum = And()
@@ -365,26 +365,26 @@ def sp_acj4_927_ground__satsimp_trigsimp():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-1007-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-065212', sp_acj4_1007_ground__satsimp_trigsimp),
-    ('sp-acj4-1107-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-065212', sp_acj4_1107_ground__satsimp_trigsimp),
-    ('sp-acj4-1148-ground', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-065212', sp_acj4_1148_ground__satsimp_trigsimp),
-    ('sp-acj4-1149-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-065212', sp_acj4_1149_ground__satsimp_trigsimp),
-    ('sp-acj4-1177-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-065212', sp_acj4_1177_ground__satsimp_trigsimp),
-    ('sp-acj4-1195-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-065212', sp_acj4_1195_ground__satsimp_trigsimp),
-    ('sp-acj4-1217-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-065212', sp_acj4_1217_ground__satsimp_trigsimp),
-    ('sp-acj4-1238-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-065212', sp_acj4_1238_ground__satsimp_trigsimp),
-    ('sp-acj4-1247-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-065212', sp_acj4_1247_ground__satsimp_trigsimp),
-    ('sp-acj4-1254-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-065212', sp_acj4_1254_ground__satsimp_trigsimp),
-    ('sp-acj4-1258-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-065212', sp_acj4_1258_ground__satsimp_trigsimp),
-    ('sp-acj4-5372-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-065212', sp_acj4_5372_ground__satsimp_trigsimp),
-    ('sp-acj4-5382-ground', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-065212', sp_acj4_5382_ground__satsimp_trigsimp),
-    ('sp-acj4-5385-ground', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-065212', sp_acj4_5385_ground__satsimp_trigsimp),
-    ('sp-acj4-819-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-065212', sp_acj4_819_ground__satsimp_trigsimp),
-    ('sp-acj4-837-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-065212', sp_acj4_837_ground__satsimp_trigsimp),
-    ('sp-acj4-848-ground', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-065212', sp_acj4_848_ground__satsimp_trigsimp),
-    ('sp-acj4-868-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-065212', sp_acj4_868_ground__satsimp_trigsimp),
-    ('sp-acj4-911-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-065212', sp_acj4_911_ground__satsimp_trigsimp),
-    ('sp-acj4-927-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-065212', sp_acj4_927_ground__satsimp_trigsimp),
+    ('sp-acj4-1007-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-122909', sp_acj4_1007_ground__satsimp_trigsimp),
+    ('sp-acj4-1107-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-122909', sp_acj4_1107_ground__satsimp_trigsimp),
+    ('sp-acj4-1148-ground', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_1148_ground__satsimp_trigsimp),
+    ('sp-acj4-1149-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-122909', sp_acj4_1149_ground__satsimp_trigsimp),
+    ('sp-acj4-1177-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-122909', sp_acj4_1177_ground__satsimp_trigsimp),
+    ('sp-acj4-1195-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-122909', sp_acj4_1195_ground__satsimp_trigsimp),
+    ('sp-acj4-1217-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-122909', sp_acj4_1217_ground__satsimp_trigsimp),
+    ('sp-acj4-1238-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-122909', sp_acj4_1238_ground__satsimp_trigsimp),
+    ('sp-acj4-1247-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-122909', sp_acj4_1247_ground__satsimp_trigsimp),
+    ('sp-acj4-1254-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-122909', sp_acj4_1254_ground__satsimp_trigsimp),
+    ('sp-acj4-1258-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-122909', sp_acj4_1258_ground__satsimp_trigsimp),
+    ('sp-acj4-5372-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-122909', sp_acj4_5372_ground__satsimp_trigsimp),
+    ('sp-acj4-5382-ground', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_5382_ground__satsimp_trigsimp),
+    ('sp-acj4-5385-ground', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_5385_ground__satsimp_trigsimp),
+    ('sp-acj4-819-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-122909', sp_acj4_819_ground__satsimp_trigsimp),
+    ('sp-acj4-837-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-122909', sp_acj4_837_ground__satsimp_trigsimp),
+    ('sp-acj4-848-ground', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_848_ground__satsimp_trigsimp),
+    ('sp-acj4-868-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-122909', sp_acj4_868_ground__satsimp_trigsimp),
+    ('sp-acj4-911-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-122909', sp_acj4_911_ground__satsimp_trigsimp),
+    ('sp-acj4-927-ground', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-122909', sp_acj4_927_ground__satsimp_trigsimp),
 ]
 
 

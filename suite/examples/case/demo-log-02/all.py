@@ -155,7 +155,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-log-02 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-065021 answered null (declined correctly)
+# the run satassume-ask-20261020-122808 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_log_02__satassume_ask():
     z = Symbol('z')
@@ -182,7 +182,7 @@ def demo_log_02__satrefine_refine():
 
 
 # ---- case demo-log-02 · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065026 answered null (declined correctly)
+# the run satsimp-trigsimp-20261020-122813 answered null (declined correctly)
 @_in(_SETUP2)
 def demo_log_02__satsimp_trigsimp():
     z = Symbol('z')
@@ -196,7 +196,7 @@ def demo_log_02__satsimp_trigsimp():
 
 
 # ---- case demo-log-02 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-065023 answered null (declined correctly)
+# the run satrefine-simplify-20261020-122810 answered null (declined correctly)
 @_in(_SETUP2)
 def demo_log_02__satrefine_simplify():
     z = Symbol('z')
@@ -320,10 +320,10 @@ def demo_log_02__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-log-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261020-065021', demo_log_02__satassume_ask),
+    ('demo-log-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261020-122808', demo_log_02__satassume_ask),
     ('demo-log-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261020-122340', demo_log_02__satrefine_refine),
-    ('demo-log-02', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-065026', demo_log_02__satsimp_trigsimp),
-    ('demo-log-02', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-065023', demo_log_02__satrefine_simplify),
+    ('demo-log-02', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-122813', demo_log_02__satsimp_trigsimp),
+    ('demo-log-02', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-122810', demo_log_02__satrefine_simplify),
     ('demo-log-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261020-064150', demo_log_02__sympy_auto),
     ('demo-log-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261020-064151', demo_log_02__sympy_ask),
     ('demo-log-02', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261020-065041', demo_log_02__sympy_satask),

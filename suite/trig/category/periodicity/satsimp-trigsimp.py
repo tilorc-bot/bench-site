@@ -124,7 +124,7 @@ import satsimp
 
 
 # ---- case trig-period-01 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065047 answered true (solved)
+# the run satsimp-trigsimp-20261020-122818 answered true (solved)
 @_in(_SETUP1)
 def trig_period_01__satsimp_trigsimp():
     z = Symbol('z')
@@ -137,7 +137,7 @@ def trig_period_01__satsimp_trigsimp():
 
 
 # ---- case trig-period-02 · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065047 answered null (declined correctly)
+# the run satsimp-trigsimp-20261020-122818 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_02__satsimp_trigsimp():
     x = Symbol('x')
@@ -150,7 +150,7 @@ def trig_period_02__satsimp_trigsimp():
 
 
 # ---- case trig-period-03 · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065047 answered null (declined correctly)
+# the run satsimp-trigsimp-20261020-122818 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_03__satsimp_trigsimp():
     x = Symbol('x')
@@ -163,7 +163,7 @@ def trig_period_03__satsimp_trigsimp():
 
 
 # ---- case trig-shift-01 · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065047 answered null (declined correctly)
+# the run satsimp-trigsimp-20261020-122818 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_shift_01__satsimp_trigsimp():
     x = Symbol('x')
@@ -177,10 +177,10 @@ def trig_shift_01__satsimp_trigsimp():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-period-01', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-065047', trig_period_01__satsimp_trigsimp),
-    ('trig-period-02', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-065047', trig_period_02__satsimp_trigsimp),
-    ('trig-period-03', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-065047', trig_period_03__satsimp_trigsimp),
-    ('trig-shift-01', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-065047', trig_shift_01__satsimp_trigsimp),
+    ('trig-period-01', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-122818', trig_period_01__satsimp_trigsimp),
+    ('trig-period-02', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-122818', trig_period_02__satsimp_trigsimp),
+    ('trig-period-03', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-122818', trig_period_03__satsimp_trigsimp),
+    ('trig-shift-01', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-122818', trig_shift_01__satsimp_trigsimp),
 ]
 
 

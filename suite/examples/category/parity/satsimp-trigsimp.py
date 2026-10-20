@@ -124,7 +124,7 @@ import satsimp
 
 
 # ---- case demo-parity-01 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065026 answered null (no verdict)
+# the run satsimp-trigsimp-20261020-122813 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_01__satsimp_trigsimp():
     n = Symbol('n')
@@ -137,7 +137,7 @@ def demo_parity_01__satsimp_trigsimp():
 
 
 # ---- case demo-parity-02 · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065026 answered null (no verdict)
+# the run satsimp-trigsimp-20261020-122813 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_02__satsimp_trigsimp():
     n = Symbol('n')
@@ -151,7 +151,7 @@ def demo_parity_02__satsimp_trigsimp():
 
 
 # ---- case demo-parity-03 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065026 answered null (no verdict)
+# the run satsimp-trigsimp-20261020-122813 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_03__satsimp_trigsimp():
     n = Symbol('n')
@@ -164,7 +164,7 @@ def demo_parity_03__satsimp_trigsimp():
 
 
 # ---- case demo-parity-04 · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065026 answered null (declined correctly)
+# the run satsimp-trigsimp-20261020-122813 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_parity_04__satsimp_trigsimp():
     n = Symbol('n')
@@ -177,7 +177,7 @@ def demo_parity_04__satsimp_trigsimp():
 
 
 # ---- case demo-parity-05 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065026 answered null (no verdict)
+# the run satsimp-trigsimp-20261020-122813 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_05__satsimp_trigsimp():
     n = Symbol('n')
@@ -192,11 +192,11 @@ def demo_parity_05__satsimp_trigsimp():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-parity-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-065026', demo_parity_01__satsimp_trigsimp),
-    ('demo-parity-02', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261020-065026', demo_parity_02__satsimp_trigsimp),
-    ('demo-parity-03', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-065026', demo_parity_03__satsimp_trigsimp),
-    ('demo-parity-04', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-065026', demo_parity_04__satsimp_trigsimp),
-    ('demo-parity-05', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-065026', demo_parity_05__satsimp_trigsimp),
+    ('demo-parity-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122813', demo_parity_01__satsimp_trigsimp),
+    ('demo-parity-02', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261020-122813', demo_parity_02__satsimp_trigsimp),
+    ('demo-parity-03', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122813', demo_parity_03__satsimp_trigsimp),
+    ('demo-parity-04', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-122813', demo_parity_04__satsimp_trigsimp),
+    ('demo-parity-05', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122813', demo_parity_05__satsimp_trigsimp),
 ]
 
 

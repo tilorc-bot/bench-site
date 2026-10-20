@@ -155,7 +155,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-eq-abs-02 · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-065021 answered false (solved)
+# the run satassume-ask-20261020-122808 answered false (solved)
 @_in(_SETUP1)
 def demo_eq_abs_02__satassume_ask():
     x = Symbol('x')
@@ -180,7 +180,7 @@ def demo_eq_abs_02__satrefine_refine():
 
 
 # ---- case demo-eq-abs-02 · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-065026 answered null (no verdict)
+# the run satsimp-trigsimp-20261020-122813 answered null (no verdict)
 @_in(_SETUP2)
 def demo_eq_abs_02__satsimp_trigsimp():
     x = Symbol('x')
@@ -193,7 +193,7 @@ def demo_eq_abs_02__satsimp_trigsimp():
 
 
 # ---- case demo-eq-abs-02 · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-065023 answered null (no verdict)
+# the run satrefine-simplify-20261020-122810 answered null (no verdict)
 @_in(_SETUP2)
 def demo_eq_abs_02__satrefine_simplify():
     x = Symbol('x')
@@ -308,10 +308,10 @@ def demo_eq_abs_02__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-abs-02', 'satassume-ask', 'false', 'false', 'satassume-ask-20261020-065021', demo_eq_abs_02__satassume_ask),
+    ('demo-eq-abs-02', 'satassume-ask', 'false', 'false', 'satassume-ask-20261020-122808', demo_eq_abs_02__satassume_ask),
     ('demo-eq-abs-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261020-122340', demo_eq_abs_02__satrefine_refine),
-    ('demo-eq-abs-02', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261020-065026', demo_eq_abs_02__satsimp_trigsimp),
-    ('demo-eq-abs-02', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261020-065023', demo_eq_abs_02__satrefine_simplify),
+    ('demo-eq-abs-02', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261020-122813', demo_eq_abs_02__satsimp_trigsimp),
+    ('demo-eq-abs-02', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261020-122810', demo_eq_abs_02__satrefine_simplify),
     ('demo-eq-abs-02', 'sympy-auto', 'false', 'null', 'sympy-auto-20261020-064150', demo_eq_abs_02__sympy_auto),
     ('demo-eq-abs-02', 'sympy-ask', 'false', 'false', 'sympy-ask-20261020-064151', demo_eq_abs_02__sympy_ask),
     ('demo-eq-abs-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-065041', demo_eq_abs_02__sympy_satask),
