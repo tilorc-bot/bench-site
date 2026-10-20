@@ -233,7 +233,7 @@ def sp_acj4_424_condf__sympy_ask():
 
 
 # ---- case sp-acj4-424-condf · expected false · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-221849 answered null (no verdict)
+# the run sympy-satask-20261020-072057 answered null (no verdict)
 @_in(_SETUP4)
 def sp_acj4_424_condf__sympy_satask():
     x = Symbol('x')
@@ -316,7 +316,7 @@ CASES = [
     ('sp-acj4-424-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261020-065134', sp_acj4_424_condf__satrefine_simplify),
     ('sp-acj4-424-condf', 'sympy-auto', 'false', 'null', 'sympy-auto-20261020-064252', sp_acj4_424_condf__sympy_auto),
     ('sp-acj4-424-condf', 'sympy-ask', 'false', 'null', 'sympy-ask-20261020-064258', sp_acj4_424_condf__sympy_ask),
-    ('sp-acj4-424-condf', 'sympy-satask', 'false', 'null', 'sympy-satask-20261019-221849', sp_acj4_424_condf__sympy_satask),
+    ('sp-acj4-424-condf', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-072057', sp_acj4_424_condf__sympy_satask),
     ('sp-acj4-424-condf', 'sympy-refine', 'false', 'null', 'sympy-refine-20261020-064447', sp_acj4_424_condf__sympy_refine),
     ('sp-acj4-424-condf', 'sympy-simplify', 'false', 'null', 'sympy-simplify-20261020-064757', sp_acj4_424_condf__sympy_simplify),
     ('sp-acj4-424-condf', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_424_condf__sympy_extras_ask),

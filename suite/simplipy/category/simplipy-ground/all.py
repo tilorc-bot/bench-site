@@ -226,7 +226,7 @@ def sp_acj4_1007_ground__sympy_ask():
 
 
 # ---- case sp-acj4-1007-ground · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-221849 answered true (solved)
+# the run sympy-satask-20261020-072057 answered true (solved)
 @_in(_SETUP4)
 def sp_acj4_1007_ground__sympy_satask():
     Assum = And()
@@ -364,7 +364,7 @@ def sp_acj4_1107_ground__sympy_ask():
 
 
 # ---- case sp-acj4-1107-ground · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-221849 answered true (solved)
+# the run sympy-satask-20261020-072057 answered true (solved)
 @_in(_SETUP4)
 def sp_acj4_1107_ground__sympy_satask():
     Assum = And()
@@ -502,7 +502,7 @@ def sp_acj4_1148_ground__sympy_ask():
 
 
 # ---- case sp-acj4-1148-ground · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-221849 answered null (no verdict)
+# the run sympy-satask-20261020-072057 answered null (no verdict)
 @_in(_SETUP4)
 def sp_acj4_1148_ground__sympy_satask():
     Assum = And()
@@ -640,7 +640,7 @@ def sp_acj4_1149_ground__sympy_ask():
 
 
 # ---- case sp-acj4-1149-ground · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-221849 answered true (solved)
+# the run sympy-satask-20261020-072057 answered true (solved)
 @_in(_SETUP4)
 def sp_acj4_1149_ground__sympy_satask():
     Assum = And()
@@ -778,7 +778,7 @@ def sp_acj4_1177_ground__sympy_ask():
 
 
 # ---- case sp-acj4-1177-ground · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-221849 answered true (solved)
+# the run sympy-satask-20261020-072057 answered true (solved)
 @_in(_SETUP4)
 def sp_acj4_1177_ground__sympy_satask():
     Assum = And()
@@ -916,7 +916,7 @@ def sp_acj4_1195_ground__sympy_ask():
 
 
 # ---- case sp-acj4-1195-ground · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-221849 answered true (solved)
+# the run sympy-satask-20261020-072057 answered true (solved)
 @_in(_SETUP4)
 def sp_acj4_1195_ground__sympy_satask():
     Assum = And()
@@ -1054,7 +1054,7 @@ def sp_acj4_1217_ground__sympy_ask():
 
 
 # ---- case sp-acj4-1217-ground · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-221849 answered true (solved)
+# the run sympy-satask-20261020-072057 answered true (solved)
 @_in(_SETUP4)
 def sp_acj4_1217_ground__sympy_satask():
     Assum = And()
@@ -1192,7 +1192,7 @@ def sp_acj4_1238_ground__sympy_ask():
 
 
 # ---- case sp-acj4-1238-ground · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-221849 answered true (solved)
+# the run sympy-satask-20261020-072057 answered true (solved)
 @_in(_SETUP4)
 def sp_acj4_1238_ground__sympy_satask():
     Assum = And()
@@ -1330,7 +1330,7 @@ def sp_acj4_1247_ground__sympy_ask():
 
 
 # ---- case sp-acj4-1247-ground · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-221849 answered true (solved)
+# the run sympy-satask-20261020-072057 answered true (solved)
 @_in(_SETUP4)
 def sp_acj4_1247_ground__sympy_satask():
     Assum = And()
@@ -1468,7 +1468,7 @@ def sp_acj4_1254_ground__sympy_ask():
 
 
 # ---- case sp-acj4-1254-ground · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-221849 answered true (solved)
+# the run sympy-satask-20261020-072057 answered true (solved)
 @_in(_SETUP4)
 def sp_acj4_1254_ground__sympy_satask():
     Assum = And()
@@ -1606,7 +1606,7 @@ def sp_acj4_1258_ground__sympy_ask():
 
 
 # ---- case sp-acj4-1258-ground · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-221849 answered true (solved)
+# the run sympy-satask-20261020-072057 answered true (solved)
 @_in(_SETUP4)
 def sp_acj4_1258_ground__sympy_satask():
     Assum = And()
@@ -1744,7 +1744,7 @@ def sp_acj4_5372_ground__sympy_ask():
 
 
 # ---- case sp-acj4-5372-ground · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-221849 answered true (solved)
+# the run sympy-satask-20261020-072057 answered true (solved)
 @_in(_SETUP4)
 def sp_acj4_5372_ground__sympy_satask():
     Assum = And()
@@ -1882,7 +1882,7 @@ def sp_acj4_5382_ground__sympy_ask():
 
 
 # ---- case sp-acj4-5382-ground · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-221849 answered null (no verdict)
+# the run sympy-satask-20261020-072057 answered null (no verdict)
 @_in(_SETUP4)
 def sp_acj4_5382_ground__sympy_satask():
     Assum = And()
@@ -2020,7 +2020,7 @@ def sp_acj4_5385_ground__sympy_ask():
 
 
 # ---- case sp-acj4-5385-ground · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-221849 answered null (no verdict)
+# the run sympy-satask-20261020-072057 answered null (no verdict)
 @_in(_SETUP4)
 def sp_acj4_5385_ground__sympy_satask():
     Assum = And()
@@ -2158,7 +2158,7 @@ def sp_acj4_819_ground__sympy_ask():
 
 
 # ---- case sp-acj4-819-ground · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-221849 answered true (solved)
+# the run sympy-satask-20261020-072057 answered true (solved)
 @_in(_SETUP4)
 def sp_acj4_819_ground__sympy_satask():
     Assum = And()
@@ -2296,7 +2296,7 @@ def sp_acj4_837_ground__sympy_ask():
 
 
 # ---- case sp-acj4-837-ground · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-221849 answered true (solved)
+# the run sympy-satask-20261020-072057 answered true (solved)
 @_in(_SETUP4)
 def sp_acj4_837_ground__sympy_satask():
     Assum = And()
@@ -2434,7 +2434,7 @@ def sp_acj4_848_ground__sympy_ask():
 
 
 # ---- case sp-acj4-848-ground · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-221849 answered null (no verdict)
+# the run sympy-satask-20261020-072057 answered null (no verdict)
 @_in(_SETUP4)
 def sp_acj4_848_ground__sympy_satask():
     Assum = And()
@@ -2572,7 +2572,7 @@ def sp_acj4_868_ground__sympy_ask():
 
 
 # ---- case sp-acj4-868-ground · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-221849 answered true (solved)
+# the run sympy-satask-20261020-072057 answered true (solved)
 @_in(_SETUP4)
 def sp_acj4_868_ground__sympy_satask():
     Assum = And()
@@ -2710,7 +2710,7 @@ def sp_acj4_911_ground__sympy_ask():
 
 
 # ---- case sp-acj4-911-ground · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-221849 answered true (solved)
+# the run sympy-satask-20261020-072057 answered true (solved)
 @_in(_SETUP4)
 def sp_acj4_911_ground__sympy_satask():
     Assum = And()
@@ -2848,7 +2848,7 @@ def sp_acj4_927_ground__sympy_ask():
 
 
 # ---- case sp-acj4-927-ground · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261019-221849 answered true (solved)
+# the run sympy-satask-20261020-072057 answered true (solved)
 @_in(_SETUP4)
 def sp_acj4_927_ground__sympy_satask():
     Assum = And()
@@ -2924,7 +2924,7 @@ CASES = [
     ('sp-acj4-1007-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_1007_ground__satrefine_simplify),
     ('sp-acj4-1007-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261020-064252', sp_acj4_1007_ground__sympy_auto),
     ('sp-acj4-1007-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261020-064258', sp_acj4_1007_ground__sympy_ask),
-    ('sp-acj4-1007-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-221849', sp_acj4_1007_ground__sympy_satask),
+    ('sp-acj4-1007-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261020-072057', sp_acj4_1007_ground__sympy_satask),
     ('sp-acj4-1007-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261020-064447', sp_acj4_1007_ground__sympy_refine),
     ('sp-acj4-1007-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261020-064757', sp_acj4_1007_ground__sympy_simplify),
     ('sp-acj4-1007-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_1007_ground__sympy_extras_ask),
@@ -2936,7 +2936,7 @@ CASES = [
     ('sp-acj4-1107-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_1107_ground__satrefine_simplify),
     ('sp-acj4-1107-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261020-064252', sp_acj4_1107_ground__sympy_auto),
     ('sp-acj4-1107-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261020-064258', sp_acj4_1107_ground__sympy_ask),
-    ('sp-acj4-1107-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-221849', sp_acj4_1107_ground__sympy_satask),
+    ('sp-acj4-1107-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261020-072057', sp_acj4_1107_ground__sympy_satask),
     ('sp-acj4-1107-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261020-064447', sp_acj4_1107_ground__sympy_refine),
     ('sp-acj4-1107-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261020-064757', sp_acj4_1107_ground__sympy_simplify),
     ('sp-acj4-1107-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_1107_ground__sympy_extras_ask),
@@ -2948,7 +2948,7 @@ CASES = [
     ('sp-acj4-1148-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_1148_ground__satrefine_simplify),
     ('sp-acj4-1148-ground', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_1148_ground__sympy_auto),
     ('sp-acj4-1148-ground', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_1148_ground__sympy_ask),
-    ('sp-acj4-1148-ground', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-221849', sp_acj4_1148_ground__sympy_satask),
+    ('sp-acj4-1148-ground', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_1148_ground__sympy_satask),
     ('sp-acj4-1148-ground', 'sympy-refine', 'true', 'null', 'sympy-refine-20261020-064447', sp_acj4_1148_ground__sympy_refine),
     ('sp-acj4-1148-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261020-064757', sp_acj4_1148_ground__sympy_simplify),
     ('sp-acj4-1148-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_1148_ground__sympy_extras_ask),
@@ -2960,7 +2960,7 @@ CASES = [
     ('sp-acj4-1149-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_1149_ground__satrefine_simplify),
     ('sp-acj4-1149-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261020-064252', sp_acj4_1149_ground__sympy_auto),
     ('sp-acj4-1149-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261020-064258', sp_acj4_1149_ground__sympy_ask),
-    ('sp-acj4-1149-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-221849', sp_acj4_1149_ground__sympy_satask),
+    ('sp-acj4-1149-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261020-072057', sp_acj4_1149_ground__sympy_satask),
     ('sp-acj4-1149-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261020-064447', sp_acj4_1149_ground__sympy_refine),
     ('sp-acj4-1149-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261020-064757', sp_acj4_1149_ground__sympy_simplify),
     ('sp-acj4-1149-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_1149_ground__sympy_extras_ask),
@@ -2972,7 +2972,7 @@ CASES = [
     ('sp-acj4-1177-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_1177_ground__satrefine_simplify),
     ('sp-acj4-1177-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261020-064252', sp_acj4_1177_ground__sympy_auto),
     ('sp-acj4-1177-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261020-064258', sp_acj4_1177_ground__sympy_ask),
-    ('sp-acj4-1177-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-221849', sp_acj4_1177_ground__sympy_satask),
+    ('sp-acj4-1177-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261020-072057', sp_acj4_1177_ground__sympy_satask),
     ('sp-acj4-1177-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261020-064447', sp_acj4_1177_ground__sympy_refine),
     ('sp-acj4-1177-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261020-064757', sp_acj4_1177_ground__sympy_simplify),
     ('sp-acj4-1177-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_1177_ground__sympy_extras_ask),
@@ -2984,7 +2984,7 @@ CASES = [
     ('sp-acj4-1195-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_1195_ground__satrefine_simplify),
     ('sp-acj4-1195-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261020-064252', sp_acj4_1195_ground__sympy_auto),
     ('sp-acj4-1195-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261020-064258', sp_acj4_1195_ground__sympy_ask),
-    ('sp-acj4-1195-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-221849', sp_acj4_1195_ground__sympy_satask),
+    ('sp-acj4-1195-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261020-072057', sp_acj4_1195_ground__sympy_satask),
     ('sp-acj4-1195-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261020-064447', sp_acj4_1195_ground__sympy_refine),
     ('sp-acj4-1195-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261020-064757', sp_acj4_1195_ground__sympy_simplify),
     ('sp-acj4-1195-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_1195_ground__sympy_extras_ask),
@@ -2996,7 +2996,7 @@ CASES = [
     ('sp-acj4-1217-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_1217_ground__satrefine_simplify),
     ('sp-acj4-1217-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261020-064252', sp_acj4_1217_ground__sympy_auto),
     ('sp-acj4-1217-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261020-064258', sp_acj4_1217_ground__sympy_ask),
-    ('sp-acj4-1217-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-221849', sp_acj4_1217_ground__sympy_satask),
+    ('sp-acj4-1217-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261020-072057', sp_acj4_1217_ground__sympy_satask),
     ('sp-acj4-1217-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261020-064447', sp_acj4_1217_ground__sympy_refine),
     ('sp-acj4-1217-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261020-064757', sp_acj4_1217_ground__sympy_simplify),
     ('sp-acj4-1217-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_1217_ground__sympy_extras_ask),
@@ -3008,7 +3008,7 @@ CASES = [
     ('sp-acj4-1238-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_1238_ground__satrefine_simplify),
     ('sp-acj4-1238-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261020-064252', sp_acj4_1238_ground__sympy_auto),
     ('sp-acj4-1238-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261020-064258', sp_acj4_1238_ground__sympy_ask),
-    ('sp-acj4-1238-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-221849', sp_acj4_1238_ground__sympy_satask),
+    ('sp-acj4-1238-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261020-072057', sp_acj4_1238_ground__sympy_satask),
     ('sp-acj4-1238-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261020-064447', sp_acj4_1238_ground__sympy_refine),
     ('sp-acj4-1238-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261020-064757', sp_acj4_1238_ground__sympy_simplify),
     ('sp-acj4-1238-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_1238_ground__sympy_extras_ask),
@@ -3020,7 +3020,7 @@ CASES = [
     ('sp-acj4-1247-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_1247_ground__satrefine_simplify),
     ('sp-acj4-1247-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261020-064252', sp_acj4_1247_ground__sympy_auto),
     ('sp-acj4-1247-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261020-064258', sp_acj4_1247_ground__sympy_ask),
-    ('sp-acj4-1247-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-221849', sp_acj4_1247_ground__sympy_satask),
+    ('sp-acj4-1247-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261020-072057', sp_acj4_1247_ground__sympy_satask),
     ('sp-acj4-1247-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261020-064447', sp_acj4_1247_ground__sympy_refine),
     ('sp-acj4-1247-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261020-064757', sp_acj4_1247_ground__sympy_simplify),
     ('sp-acj4-1247-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_1247_ground__sympy_extras_ask),
@@ -3032,7 +3032,7 @@ CASES = [
     ('sp-acj4-1254-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_1254_ground__satrefine_simplify),
     ('sp-acj4-1254-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261020-064252', sp_acj4_1254_ground__sympy_auto),
     ('sp-acj4-1254-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261020-064258', sp_acj4_1254_ground__sympy_ask),
-    ('sp-acj4-1254-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-221849', sp_acj4_1254_ground__sympy_satask),
+    ('sp-acj4-1254-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261020-072057', sp_acj4_1254_ground__sympy_satask),
     ('sp-acj4-1254-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261020-064447', sp_acj4_1254_ground__sympy_refine),
     ('sp-acj4-1254-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261020-064757', sp_acj4_1254_ground__sympy_simplify),
     ('sp-acj4-1254-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_1254_ground__sympy_extras_ask),
@@ -3044,7 +3044,7 @@ CASES = [
     ('sp-acj4-1258-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_1258_ground__satrefine_simplify),
     ('sp-acj4-1258-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261020-064252', sp_acj4_1258_ground__sympy_auto),
     ('sp-acj4-1258-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261020-064258', sp_acj4_1258_ground__sympy_ask),
-    ('sp-acj4-1258-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-221849', sp_acj4_1258_ground__sympy_satask),
+    ('sp-acj4-1258-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261020-072057', sp_acj4_1258_ground__sympy_satask),
     ('sp-acj4-1258-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261020-064447', sp_acj4_1258_ground__sympy_refine),
     ('sp-acj4-1258-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261020-064757', sp_acj4_1258_ground__sympy_simplify),
     ('sp-acj4-1258-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_1258_ground__sympy_extras_ask),
@@ -3056,7 +3056,7 @@ CASES = [
     ('sp-acj4-5372-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_5372_ground__satrefine_simplify),
     ('sp-acj4-5372-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261020-064252', sp_acj4_5372_ground__sympy_auto),
     ('sp-acj4-5372-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261020-064258', sp_acj4_5372_ground__sympy_ask),
-    ('sp-acj4-5372-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-221849', sp_acj4_5372_ground__sympy_satask),
+    ('sp-acj4-5372-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261020-072057', sp_acj4_5372_ground__sympy_satask),
     ('sp-acj4-5372-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261020-064447', sp_acj4_5372_ground__sympy_refine),
     ('sp-acj4-5372-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261020-064757', sp_acj4_5372_ground__sympy_simplify),
     ('sp-acj4-5372-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_5372_ground__sympy_extras_ask),
@@ -3068,7 +3068,7 @@ CASES = [
     ('sp-acj4-5382-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_5382_ground__satrefine_simplify),
     ('sp-acj4-5382-ground', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_5382_ground__sympy_auto),
     ('sp-acj4-5382-ground', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_5382_ground__sympy_ask),
-    ('sp-acj4-5382-ground', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-221849', sp_acj4_5382_ground__sympy_satask),
+    ('sp-acj4-5382-ground', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_5382_ground__sympy_satask),
     ('sp-acj4-5382-ground', 'sympy-refine', 'true', 'null', 'sympy-refine-20261020-064447', sp_acj4_5382_ground__sympy_refine),
     ('sp-acj4-5382-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261020-064757', sp_acj4_5382_ground__sympy_simplify),
     ('sp-acj4-5382-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_5382_ground__sympy_extras_ask),
@@ -3080,7 +3080,7 @@ CASES = [
     ('sp-acj4-5385-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_5385_ground__satrefine_simplify),
     ('sp-acj4-5385-ground', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_5385_ground__sympy_auto),
     ('sp-acj4-5385-ground', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_5385_ground__sympy_ask),
-    ('sp-acj4-5385-ground', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-221849', sp_acj4_5385_ground__sympy_satask),
+    ('sp-acj4-5385-ground', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_5385_ground__sympy_satask),
     ('sp-acj4-5385-ground', 'sympy-refine', 'true', 'null', 'sympy-refine-20261020-064447', sp_acj4_5385_ground__sympy_refine),
     ('sp-acj4-5385-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261020-064757', sp_acj4_5385_ground__sympy_simplify),
     ('sp-acj4-5385-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_5385_ground__sympy_extras_ask),
@@ -3092,7 +3092,7 @@ CASES = [
     ('sp-acj4-819-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_819_ground__satrefine_simplify),
     ('sp-acj4-819-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261020-064252', sp_acj4_819_ground__sympy_auto),
     ('sp-acj4-819-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261020-064258', sp_acj4_819_ground__sympy_ask),
-    ('sp-acj4-819-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-221849', sp_acj4_819_ground__sympy_satask),
+    ('sp-acj4-819-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261020-072057', sp_acj4_819_ground__sympy_satask),
     ('sp-acj4-819-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261020-064447', sp_acj4_819_ground__sympy_refine),
     ('sp-acj4-819-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261020-064757', sp_acj4_819_ground__sympy_simplify),
     ('sp-acj4-819-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_819_ground__sympy_extras_ask),
@@ -3104,7 +3104,7 @@ CASES = [
     ('sp-acj4-837-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_837_ground__satrefine_simplify),
     ('sp-acj4-837-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261020-064252', sp_acj4_837_ground__sympy_auto),
     ('sp-acj4-837-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261020-064258', sp_acj4_837_ground__sympy_ask),
-    ('sp-acj4-837-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-221849', sp_acj4_837_ground__sympy_satask),
+    ('sp-acj4-837-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261020-072057', sp_acj4_837_ground__sympy_satask),
     ('sp-acj4-837-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261020-064447', sp_acj4_837_ground__sympy_refine),
     ('sp-acj4-837-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261020-064757', sp_acj4_837_ground__sympy_simplify),
     ('sp-acj4-837-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_837_ground__sympy_extras_ask),
@@ -3116,7 +3116,7 @@ CASES = [
     ('sp-acj4-848-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_848_ground__satrefine_simplify),
     ('sp-acj4-848-ground', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_848_ground__sympy_auto),
     ('sp-acj4-848-ground', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_848_ground__sympy_ask),
-    ('sp-acj4-848-ground', 'sympy-satask', 'true', 'null', 'sympy-satask-20261019-221849', sp_acj4_848_ground__sympy_satask),
+    ('sp-acj4-848-ground', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_848_ground__sympy_satask),
     ('sp-acj4-848-ground', 'sympy-refine', 'true', 'null', 'sympy-refine-20261020-064447', sp_acj4_848_ground__sympy_refine),
     ('sp-acj4-848-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261020-064757', sp_acj4_848_ground__sympy_simplify),
     ('sp-acj4-848-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_848_ground__sympy_extras_ask),
@@ -3128,7 +3128,7 @@ CASES = [
     ('sp-acj4-868-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_868_ground__satrefine_simplify),
     ('sp-acj4-868-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261020-064252', sp_acj4_868_ground__sympy_auto),
     ('sp-acj4-868-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261020-064258', sp_acj4_868_ground__sympy_ask),
-    ('sp-acj4-868-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-221849', sp_acj4_868_ground__sympy_satask),
+    ('sp-acj4-868-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261020-072057', sp_acj4_868_ground__sympy_satask),
     ('sp-acj4-868-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261020-064447', sp_acj4_868_ground__sympy_refine),
     ('sp-acj4-868-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261020-064757', sp_acj4_868_ground__sympy_simplify),
     ('sp-acj4-868-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_868_ground__sympy_extras_ask),
@@ -3140,7 +3140,7 @@ CASES = [
     ('sp-acj4-911-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_911_ground__satrefine_simplify),
     ('sp-acj4-911-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261020-064252', sp_acj4_911_ground__sympy_auto),
     ('sp-acj4-911-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261020-064258', sp_acj4_911_ground__sympy_ask),
-    ('sp-acj4-911-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-221849', sp_acj4_911_ground__sympy_satask),
+    ('sp-acj4-911-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261020-072057', sp_acj4_911_ground__sympy_satask),
     ('sp-acj4-911-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261020-064447', sp_acj4_911_ground__sympy_refine),
     ('sp-acj4-911-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261020-064757', sp_acj4_911_ground__sympy_simplify),
     ('sp-acj4-911-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_911_ground__sympy_extras_ask),
@@ -3152,7 +3152,7 @@ CASES = [
     ('sp-acj4-927-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-065134', sp_acj4_927_ground__satrefine_simplify),
     ('sp-acj4-927-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261020-064252', sp_acj4_927_ground__sympy_auto),
     ('sp-acj4-927-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261020-064258', sp_acj4_927_ground__sympy_ask),
-    ('sp-acj4-927-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261019-221849', sp_acj4_927_ground__sympy_satask),
+    ('sp-acj4-927-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261020-072057', sp_acj4_927_ground__sympy_satask),
     ('sp-acj4-927-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261020-064447', sp_acj4_927_ground__sympy_refine),
     ('sp-acj4-927-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261020-064757', sp_acj4_927_ground__sympy_simplify),
     ('sp-acj4-927-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_927_ground__sympy_extras_ask),
