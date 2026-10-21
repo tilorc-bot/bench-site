@@ -167,7 +167,7 @@ def demo_parity_04__satassume_ask():
 
 
 # ---- case demo-parity-04 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122340 answered null (declined correctly)
+# the run satrefine-refine-20261021-073341 answered null (declined correctly)
 @_in(_SETUP2)
 def demo_parity_04__satrefine_refine():
     n = Symbol('n')
@@ -309,7 +309,7 @@ def demo_parity_04__sympy_extras_simplify():
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('demo-parity-04', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261020-122808', demo_parity_04__satassume_ask),
-    ('demo-parity-04', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261020-122340', demo_parity_04__satrefine_refine),
+    ('demo-parity-04', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261021-073341', demo_parity_04__satrefine_refine),
     ('demo-parity-04', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-122813', demo_parity_04__satsimp_trigsimp),
     ('demo-parity-04', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-122810', demo_parity_04__satrefine_simplify),
     ('demo-parity-04', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261020-064150', demo_parity_04__sympy_auto),

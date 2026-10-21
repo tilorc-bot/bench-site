@@ -170,7 +170,7 @@ def demo_prime_01__satassume_ask():
 
 
 # ---- case demo-prime-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122340 answered null (no verdict)
+# the run satrefine-refine-20261021-073341 answered null (no verdict)
 @_in(_SETUP2)
 def demo_prime_01__satrefine_refine():
     p = Symbol('p')
@@ -320,7 +320,7 @@ def demo_prime_02__satassume_ask():
 
 
 # ---- case demo-prime-02 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122340 answered null (declined correctly)
+# the run satrefine-refine-20261021-073341 answered null (declined correctly)
 @_in(_SETUP2)
 def demo_prime_02__satrefine_refine():
     p = Symbol('p')
@@ -460,7 +460,7 @@ def demo_prime_02__sympy_extras_simplify():
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('demo-prime-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122808', demo_prime_01__satassume_ask),
-    ('demo-prime-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122340', demo_prime_01__satrefine_refine),
+    ('demo-prime-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073341', demo_prime_01__satrefine_refine),
     ('demo-prime-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122813', demo_prime_01__satsimp_trigsimp),
     ('demo-prime-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122810', demo_prime_01__satrefine_simplify),
     ('demo-prime-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064150', demo_prime_01__sympy_auto),
@@ -472,7 +472,7 @@ CASES = [
     ('demo-prime-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065033', demo_prime_01__sympy_extras_refine),
     ('demo-prime-01', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-065037', demo_prime_01__sympy_extras_simplify),
     ('demo-prime-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261020-122808', demo_prime_02__satassume_ask),
-    ('demo-prime-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261020-122340', demo_prime_02__satrefine_refine),
+    ('demo-prime-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261021-073341', demo_prime_02__satrefine_refine),
     ('demo-prime-02', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-122813', demo_prime_02__satsimp_trigsimp),
     ('demo-prime-02', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-122810', demo_prime_02__satrefine_simplify),
     ('demo-prime-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261020-064150', demo_prime_02__sympy_auto),
