@@ -124,7 +124,7 @@ import satsimp
 
 
 # ---- case trig-double-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122816 answered true (solved)
+# the run satrefine-simplify-20261021-073853 answered true (solved)
 @_in(_SETUP1)
 def trig_double_01__satrefine_simplify():
     z = Symbol('z')
@@ -137,7 +137,7 @@ def trig_double_01__satrefine_simplify():
 
 
 # ---- case trig-double-02 · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122816 answered null (no verdict)
+# the run satrefine-simplify-20261021-073853 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_02__satrefine_simplify():
     x = Symbol('x')
@@ -150,7 +150,7 @@ def trig_double_02__satrefine_simplify():
 
 
 # ---- case trig-pyth-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122816 answered true (solved)
+# the run satrefine-simplify-20261021-073853 answered true (solved)
 @_in(_SETUP1)
 def trig_pyth_01__satrefine_simplify():
     z = Symbol('z')
@@ -163,7 +163,7 @@ def trig_pyth_01__satrefine_simplify():
 
 
 # ---- case trig-sqrt-01 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122816 answered null (declined correctly)
+# the run satrefine-simplify-20261021-073853 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_sqrt_01__satrefine_simplify():
     x = Symbol('x')
@@ -176,7 +176,7 @@ def trig_sqrt_01__satrefine_simplify():
 
 
 # ---- case trig-tan-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122816 answered true (solved)
+# the run satrefine-simplify-20261021-073853 answered true (solved)
 @_in(_SETUP1)
 def trig_tan_01__satrefine_simplify():
     x = Symbol('x')
@@ -190,11 +190,11 @@ def trig_tan_01__satrefine_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-double-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-122816', trig_double_01__satrefine_simplify),
-    ('trig-double-02', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261020-122816', trig_double_02__satrefine_simplify),
-    ('trig-pyth-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-122816', trig_pyth_01__satrefine_simplify),
-    ('trig-sqrt-01', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-122816', trig_sqrt_01__satrefine_simplify),
-    ('trig-tan-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-122816', trig_tan_01__satrefine_simplify),
+    ('trig-double-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261021-073853', trig_double_01__satrefine_simplify),
+    ('trig-double-02', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261021-073853', trig_double_02__satrefine_simplify),
+    ('trig-pyth-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261021-073853', trig_pyth_01__satrefine_simplify),
+    ('trig-sqrt-01', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261021-073853', trig_sqrt_01__satrefine_simplify),
+    ('trig-tan-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261021-073853', trig_tan_01__satrefine_simplify),
 ]
 
 

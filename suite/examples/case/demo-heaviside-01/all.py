@@ -155,7 +155,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-heaviside-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122808 answered null (no verdict)
+# the run satassume-ask-20261021-073846 answered null (no verdict)
 @_in(_SETUP1)
 def demo_heaviside_01__satassume_ask():
     x = Symbol('x')
@@ -180,7 +180,7 @@ def demo_heaviside_01__satrefine_refine():
 
 
 # ---- case demo-heaviside-01 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122813 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073850 answered null (no verdict)
 @_in(_SETUP2)
 def demo_heaviside_01__satsimp_trigsimp():
     x = Symbol('x')
@@ -193,7 +193,7 @@ def demo_heaviside_01__satsimp_trigsimp():
 
 
 # ---- case demo-heaviside-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122810 answered null (no verdict)
+# the run satrefine-simplify-20261021-073848 answered null (no verdict)
 @_in(_SETUP2)
 def demo_heaviside_01__satrefine_simplify():
     x = Symbol('x')
@@ -308,10 +308,10 @@ def demo_heaviside_01__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-heaviside-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122808', demo_heaviside_01__satassume_ask),
+    ('demo-heaviside-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073846', demo_heaviside_01__satassume_ask),
     ('demo-heaviside-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073341', demo_heaviside_01__satrefine_refine),
-    ('demo-heaviside-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122813', demo_heaviside_01__satsimp_trigsimp),
-    ('demo-heaviside-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122810', demo_heaviside_01__satrefine_simplify),
+    ('demo-heaviside-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073850', demo_heaviside_01__satsimp_trigsimp),
+    ('demo-heaviside-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073848', demo_heaviside_01__satrefine_simplify),
     ('demo-heaviside-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064150', demo_heaviside_01__sympy_auto),
     ('demo-heaviside-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064151', demo_heaviside_01__sympy_ask),
     ('demo-heaviside-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-065041', demo_heaviside_01__sympy_satask),

@@ -121,7 +121,7 @@ import satassume.sympy_api
 
 
 # ---- case demo-nonzero-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122808 answered null (no verdict)
+# the run satassume-ask-20261021-073846 answered null (no verdict)
 @_in(_SETUP1)
 def demo_nonzero_01__satassume_ask():
     z = Symbol('z')
@@ -133,7 +133,7 @@ def demo_nonzero_01__satassume_ask():
 
 
 # ---- case demo-sign-02 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122808 answered null (no verdict)
+# the run satassume-ask-20261021-073846 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_02__satassume_ask():
     x = Symbol('x')
@@ -145,7 +145,7 @@ def demo_sign_02__satassume_ask():
 
 
 # ---- case demo-sign-03 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122808 answered null (declined correctly)
+# the run satassume-ask-20261021-073846 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_sign_03__satassume_ask():
     x = Symbol('x')
@@ -157,7 +157,7 @@ def demo_sign_03__satassume_ask():
 
 
 # ---- case demo-sign-04 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122808 answered null (no verdict)
+# the run satassume-ask-20261021-073846 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_04__satassume_ask():
     z = Symbol('z')
@@ -169,7 +169,7 @@ def demo_sign_04__satassume_ask():
 
 
 # ---- case demo-sign-05 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122808 answered null (no verdict)
+# the run satassume-ask-20261021-073846 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_05__satassume_ask():
     x = Symbol('x')
@@ -183,11 +183,11 @@ def demo_sign_05__satassume_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-nonzero-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122808', demo_nonzero_01__satassume_ask),
-    ('demo-sign-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122808', demo_sign_02__satassume_ask),
-    ('demo-sign-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261020-122808', demo_sign_03__satassume_ask),
-    ('demo-sign-04', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122808', demo_sign_04__satassume_ask),
-    ('demo-sign-05', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122808', demo_sign_05__satassume_ask),
+    ('demo-nonzero-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073846', demo_nonzero_01__satassume_ask),
+    ('demo-sign-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073846', demo_sign_02__satassume_ask),
+    ('demo-sign-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261021-073846', demo_sign_03__satassume_ask),
+    ('demo-sign-04', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073846', demo_sign_04__satassume_ask),
+    ('demo-sign-05', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073846', demo_sign_05__satassume_ask),
 ]
 
 

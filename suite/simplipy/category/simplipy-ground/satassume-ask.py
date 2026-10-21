@@ -121,7 +121,7 @@ import satassume.sympy_api
 
 
 # ---- case sp-acj4-1007-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered true (solved)
+# the run satassume-ask-20261021-073857 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1007_ground__satassume_ask():
     Assum = And()
@@ -132,7 +132,7 @@ def sp_acj4_1007_ground__satassume_ask():
 
 
 # ---- case sp-acj4-1107-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered true (solved)
+# the run satassume-ask-20261021-073857 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1107_ground__satassume_ask():
     Assum = And()
@@ -143,7 +143,7 @@ def sp_acj4_1107_ground__satassume_ask():
 
 
 # ---- case sp-acj4-1148-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_1148_ground__satassume_ask():
     Assum = And()
@@ -154,7 +154,7 @@ def sp_acj4_1148_ground__satassume_ask():
 
 
 # ---- case sp-acj4-1149-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered true (solved)
+# the run satassume-ask-20261021-073857 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1149_ground__satassume_ask():
     Assum = And()
@@ -165,7 +165,7 @@ def sp_acj4_1149_ground__satassume_ask():
 
 
 # ---- case sp-acj4-1177-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered true (solved)
+# the run satassume-ask-20261021-073857 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1177_ground__satassume_ask():
     Assum = And()
@@ -176,7 +176,7 @@ def sp_acj4_1177_ground__satassume_ask():
 
 
 # ---- case sp-acj4-1195-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered true (solved)
+# the run satassume-ask-20261021-073857 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1195_ground__satassume_ask():
     Assum = And()
@@ -187,7 +187,7 @@ def sp_acj4_1195_ground__satassume_ask():
 
 
 # ---- case sp-acj4-1217-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered true (solved)
+# the run satassume-ask-20261021-073857 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1217_ground__satassume_ask():
     Assum = And()
@@ -198,7 +198,7 @@ def sp_acj4_1217_ground__satassume_ask():
 
 
 # ---- case sp-acj4-1238-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered true (solved)
+# the run satassume-ask-20261021-073857 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1238_ground__satassume_ask():
     Assum = And()
@@ -209,7 +209,7 @@ def sp_acj4_1238_ground__satassume_ask():
 
 
 # ---- case sp-acj4-1247-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered true (solved)
+# the run satassume-ask-20261021-073857 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1247_ground__satassume_ask():
     Assum = And()
@@ -220,7 +220,7 @@ def sp_acj4_1247_ground__satassume_ask():
 
 
 # ---- case sp-acj4-1254-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered true (solved)
+# the run satassume-ask-20261021-073857 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1254_ground__satassume_ask():
     Assum = And()
@@ -231,7 +231,7 @@ def sp_acj4_1254_ground__satassume_ask():
 
 
 # ---- case sp-acj4-1258-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered true (solved)
+# the run satassume-ask-20261021-073857 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_1258_ground__satassume_ask():
     Assum = And()
@@ -242,7 +242,7 @@ def sp_acj4_1258_ground__satassume_ask():
 
 
 # ---- case sp-acj4-5372-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered true (solved)
+# the run satassume-ask-20261021-073857 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_5372_ground__satassume_ask():
     Assum = And()
@@ -253,7 +253,7 @@ def sp_acj4_5372_ground__satassume_ask():
 
 
 # ---- case sp-acj4-5382-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_5382_ground__satassume_ask():
     Assum = And()
@@ -264,7 +264,7 @@ def sp_acj4_5382_ground__satassume_ask():
 
 
 # ---- case sp-acj4-5385-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_5385_ground__satassume_ask():
     Assum = And()
@@ -275,7 +275,7 @@ def sp_acj4_5385_ground__satassume_ask():
 
 
 # ---- case sp-acj4-819-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered true (solved)
+# the run satassume-ask-20261021-073857 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_819_ground__satassume_ask():
     Assum = And()
@@ -286,7 +286,7 @@ def sp_acj4_819_ground__satassume_ask():
 
 
 # ---- case sp-acj4-837-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered true (solved)
+# the run satassume-ask-20261021-073857 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_837_ground__satassume_ask():
     Assum = And()
@@ -297,7 +297,7 @@ def sp_acj4_837_ground__satassume_ask():
 
 
 # ---- case sp-acj4-848-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_848_ground__satassume_ask():
     Assum = And()
@@ -308,7 +308,7 @@ def sp_acj4_848_ground__satassume_ask():
 
 
 # ---- case sp-acj4-868-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered true (solved)
+# the run satassume-ask-20261021-073857 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_868_ground__satassume_ask():
     Assum = And()
@@ -319,7 +319,7 @@ def sp_acj4_868_ground__satassume_ask():
 
 
 # ---- case sp-acj4-911-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered true (solved)
+# the run satassume-ask-20261021-073857 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_911_ground__satassume_ask():
     Assum = And()
@@ -330,7 +330,7 @@ def sp_acj4_911_ground__satassume_ask():
 
 
 # ---- case sp-acj4-927-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered true (solved)
+# the run satassume-ask-20261021-073857 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_927_ground__satassume_ask():
     Assum = And()
@@ -342,26 +342,26 @@ def sp_acj4_927_ground__satassume_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-1007-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261020-122819', sp_acj4_1007_ground__satassume_ask),
-    ('sp-acj4-1107-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261020-122819', sp_acj4_1107_ground__satassume_ask),
-    ('sp-acj4-1148-ground', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_1148_ground__satassume_ask),
-    ('sp-acj4-1149-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261020-122819', sp_acj4_1149_ground__satassume_ask),
-    ('sp-acj4-1177-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261020-122819', sp_acj4_1177_ground__satassume_ask),
-    ('sp-acj4-1195-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261020-122819', sp_acj4_1195_ground__satassume_ask),
-    ('sp-acj4-1217-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261020-122819', sp_acj4_1217_ground__satassume_ask),
-    ('sp-acj4-1238-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261020-122819', sp_acj4_1238_ground__satassume_ask),
-    ('sp-acj4-1247-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261020-122819', sp_acj4_1247_ground__satassume_ask),
-    ('sp-acj4-1254-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261020-122819', sp_acj4_1254_ground__satassume_ask),
-    ('sp-acj4-1258-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261020-122819', sp_acj4_1258_ground__satassume_ask),
-    ('sp-acj4-5372-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261020-122819', sp_acj4_5372_ground__satassume_ask),
-    ('sp-acj4-5382-ground', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_5382_ground__satassume_ask),
-    ('sp-acj4-5385-ground', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_5385_ground__satassume_ask),
-    ('sp-acj4-819-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261020-122819', sp_acj4_819_ground__satassume_ask),
-    ('sp-acj4-837-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261020-122819', sp_acj4_837_ground__satassume_ask),
-    ('sp-acj4-848-ground', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_848_ground__satassume_ask),
-    ('sp-acj4-868-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261020-122819', sp_acj4_868_ground__satassume_ask),
-    ('sp-acj4-911-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261020-122819', sp_acj4_911_ground__satassume_ask),
-    ('sp-acj4-927-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261020-122819', sp_acj4_927_ground__satassume_ask),
+    ('sp-acj4-1007-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261021-073857', sp_acj4_1007_ground__satassume_ask),
+    ('sp-acj4-1107-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261021-073857', sp_acj4_1107_ground__satassume_ask),
+    ('sp-acj4-1148-ground', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_1148_ground__satassume_ask),
+    ('sp-acj4-1149-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261021-073857', sp_acj4_1149_ground__satassume_ask),
+    ('sp-acj4-1177-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261021-073857', sp_acj4_1177_ground__satassume_ask),
+    ('sp-acj4-1195-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261021-073857', sp_acj4_1195_ground__satassume_ask),
+    ('sp-acj4-1217-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261021-073857', sp_acj4_1217_ground__satassume_ask),
+    ('sp-acj4-1238-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261021-073857', sp_acj4_1238_ground__satassume_ask),
+    ('sp-acj4-1247-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261021-073857', sp_acj4_1247_ground__satassume_ask),
+    ('sp-acj4-1254-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261021-073857', sp_acj4_1254_ground__satassume_ask),
+    ('sp-acj4-1258-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261021-073857', sp_acj4_1258_ground__satassume_ask),
+    ('sp-acj4-5372-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261021-073857', sp_acj4_5372_ground__satassume_ask),
+    ('sp-acj4-5382-ground', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_5382_ground__satassume_ask),
+    ('sp-acj4-5385-ground', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_5385_ground__satassume_ask),
+    ('sp-acj4-819-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261021-073857', sp_acj4_819_ground__satassume_ask),
+    ('sp-acj4-837-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261021-073857', sp_acj4_837_ground__satassume_ask),
+    ('sp-acj4-848-ground', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_848_ground__satassume_ask),
+    ('sp-acj4-868-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261021-073857', sp_acj4_868_ground__satassume_ask),
+    ('sp-acj4-911-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261021-073857', sp_acj4_911_ground__satassume_ask),
+    ('sp-acj4-927-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261021-073857', sp_acj4_927_ground__satassume_ask),
 ]
 
 

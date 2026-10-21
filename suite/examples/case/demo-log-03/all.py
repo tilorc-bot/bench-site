@@ -155,7 +155,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-log-03 · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122808 answered false (solved)
+# the run satassume-ask-20261021-073846 answered false (solved)
 @_in(_SETUP1)
 def demo_log_03__satassume_ask():
     x = Symbol('x')
@@ -180,7 +180,7 @@ def demo_log_03__satrefine_refine():
 
 
 # ---- case demo-log-03 · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122813 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073850 answered null (no verdict)
 @_in(_SETUP2)
 def demo_log_03__satsimp_trigsimp():
     x = Symbol('x')
@@ -193,7 +193,7 @@ def demo_log_03__satsimp_trigsimp():
 
 
 # ---- case demo-log-03 · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122810 answered false (solved)
+# the run satrefine-simplify-20261021-073848 answered false (solved)
 @_in(_SETUP2)
 def demo_log_03__satrefine_simplify():
     x = Symbol('x')
@@ -308,10 +308,10 @@ def demo_log_03__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-log-03', 'satassume-ask', 'false', 'false', 'satassume-ask-20261020-122808', demo_log_03__satassume_ask),
+    ('demo-log-03', 'satassume-ask', 'false', 'false', 'satassume-ask-20261021-073846', demo_log_03__satassume_ask),
     ('demo-log-03', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261021-073341', demo_log_03__satrefine_refine),
-    ('demo-log-03', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261020-122813', demo_log_03__satsimp_trigsimp),
-    ('demo-log-03', 'satrefine-simplify', 'false', 'false', 'satrefine-simplify-20261020-122810', demo_log_03__satrefine_simplify),
+    ('demo-log-03', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261021-073850', demo_log_03__satsimp_trigsimp),
+    ('demo-log-03', 'satrefine-simplify', 'false', 'false', 'satrefine-simplify-20261021-073848', demo_log_03__satrefine_simplify),
     ('demo-log-03', 'sympy-auto', 'false', 'null', 'sympy-auto-20261020-064150', demo_log_03__sympy_auto),
     ('demo-log-03', 'sympy-ask', 'false', 'false', 'sympy-ask-20261020-064151', demo_log_03__sympy_ask),
     ('demo-log-03', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-065041', demo_log_03__sympy_satask),

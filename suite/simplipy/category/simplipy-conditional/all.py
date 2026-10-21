@@ -248,7 +248,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case sp-acj4-1-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_1_cond__satassume_ask():
     x = Symbol('x')
@@ -260,7 +260,7 @@ def sp_acj4_1_cond__satassume_ask():
 
 
 # ---- case sp-acj4-1-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_1_cond__satrefine_refine():
     x = Symbol('x')
@@ -273,7 +273,7 @@ def sp_acj4_1_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-1-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_1_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -286,7 +286,7 @@ def sp_acj4_1_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-1-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_1_cond__satrefine_simplify():
     x = Symbol('x')
@@ -398,7 +398,7 @@ def sp_acj4_1_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-108-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_108_condf__satassume_ask():
     x = Symbol('x')
@@ -410,7 +410,7 @@ def sp_acj4_108_condf__satassume_ask():
 
 
 # ---- case sp-acj4-108-condf · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_108_condf__satrefine_refine():
     x = Symbol('x')
@@ -423,7 +423,7 @@ def sp_acj4_108_condf__satrefine_refine():
 
 
 # ---- case sp-acj4-108-condf · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_108_condf__satsimp_trigsimp():
     x = Symbol('x')
@@ -436,7 +436,7 @@ def sp_acj4_108_condf__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-108-condf · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_108_condf__satrefine_simplify():
     x = Symbol('x')
@@ -548,7 +548,7 @@ def sp_acj4_108_condf__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-124-condf · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (declined correctly)
+# the run satassume-ask-20261021-073857 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_124_condf__satassume_ask():
     x = Symbol('x')
@@ -560,7 +560,7 @@ def sp_acj4_124_condf__satassume_ask():
 
 
 # ---- case sp-acj4-124-condf · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (declined correctly)
+# the run satrefine-refine-20261021-073817 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_124_condf__satrefine_refine():
     x = Symbol('x')
@@ -573,7 +573,7 @@ def sp_acj4_124_condf__satrefine_refine():
 
 
 # ---- case sp-acj4-124-condf · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (declined correctly)
+# the run satsimp-trigsimp-20261021-073947 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_124_condf__satsimp_trigsimp():
     x = Symbol('x')
@@ -586,7 +586,7 @@ def sp_acj4_124_condf__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-124-condf · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (declined correctly)
+# the run satrefine-simplify-20261021-073907 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_124_condf__satrefine_simplify():
     x = Symbol('x')
@@ -698,7 +698,7 @@ def sp_acj4_124_condf__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-127-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_127_condf__satassume_ask():
     x = Symbol('x')
@@ -710,7 +710,7 @@ def sp_acj4_127_condf__satassume_ask():
 
 
 # ---- case sp-acj4-127-condf · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_127_condf__satrefine_refine():
     x = Symbol('x')
@@ -723,7 +723,7 @@ def sp_acj4_127_condf__satrefine_refine():
 
 
 # ---- case sp-acj4-127-condf · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_127_condf__satsimp_trigsimp():
     x = Symbol('x')
@@ -736,7 +736,7 @@ def sp_acj4_127_condf__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-127-condf · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_127_condf__satrefine_simplify():
     x = Symbol('x')
@@ -822,7 +822,7 @@ def sp_acj4_127_condf__sympy_extras_ask():
 
 
 # ---- case sp-acj4-128-cond2 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_128_cond2__satassume_ask():
     x = Symbol('x')
@@ -834,7 +834,7 @@ def sp_acj4_128_cond2__satassume_ask():
 
 
 # ---- case sp-acj4-128-cond2 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_128_cond2__satrefine_refine():
     x = Symbol('x')
@@ -847,7 +847,7 @@ def sp_acj4_128_cond2__satrefine_refine():
 
 
 # ---- case sp-acj4-128-cond2 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_128_cond2__satsimp_trigsimp():
     x = Symbol('x')
@@ -860,7 +860,7 @@ def sp_acj4_128_cond2__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-128-cond2 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_128_cond2__satrefine_simplify():
     x = Symbol('x')
@@ -972,7 +972,7 @@ def sp_acj4_128_cond2__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-128-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_128_condf__satassume_ask():
     x = Symbol('x')
@@ -984,7 +984,7 @@ def sp_acj4_128_condf__satassume_ask():
 
 
 # ---- case sp-acj4-128-condf · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_128_condf__satrefine_refine():
     x = Symbol('x')
@@ -997,7 +997,7 @@ def sp_acj4_128_condf__satrefine_refine():
 
 
 # ---- case sp-acj4-128-condf · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_128_condf__satsimp_trigsimp():
     x = Symbol('x')
@@ -1010,7 +1010,7 @@ def sp_acj4_128_condf__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-128-condf · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_128_condf__satrefine_simplify():
     x = Symbol('x')
@@ -1122,7 +1122,7 @@ def sp_acj4_128_condf__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-129-cond · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (declined correctly)
+# the run satassume-ask-20261021-073857 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_129_cond__satassume_ask():
     x = Symbol('x')
@@ -1134,7 +1134,7 @@ def sp_acj4_129_cond__satassume_ask():
 
 
 # ---- case sp-acj4-129-cond · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (declined correctly)
+# the run satrefine-refine-20261021-073817 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_129_cond__satrefine_refine():
     x = Symbol('x')
@@ -1147,7 +1147,7 @@ def sp_acj4_129_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-129-cond · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (declined correctly)
+# the run satsimp-trigsimp-20261021-073947 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_129_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -1160,7 +1160,7 @@ def sp_acj4_129_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-129-cond · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (declined correctly)
+# the run satrefine-simplify-20261021-073907 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_129_cond__satrefine_simplify():
     x = Symbol('x')
@@ -1272,7 +1272,7 @@ def sp_acj4_129_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-130-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_130_cond__satassume_ask():
     x = Symbol('x')
@@ -1284,7 +1284,7 @@ def sp_acj4_130_cond__satassume_ask():
 
 
 # ---- case sp-acj4-130-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_130_cond__satrefine_refine():
     x = Symbol('x')
@@ -1297,7 +1297,7 @@ def sp_acj4_130_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-130-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_130_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -1310,7 +1310,7 @@ def sp_acj4_130_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-130-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_130_cond__satrefine_simplify():
     x = Symbol('x')
@@ -1422,7 +1422,7 @@ def sp_acj4_130_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-131-condf · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (declined correctly)
+# the run satassume-ask-20261021-073857 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_131_condf__satassume_ask():
     x = Symbol('x')
@@ -1434,7 +1434,7 @@ def sp_acj4_131_condf__satassume_ask():
 
 
 # ---- case sp-acj4-131-condf · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (declined correctly)
+# the run satrefine-refine-20261021-073817 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_131_condf__satrefine_refine():
     x = Symbol('x')
@@ -1447,7 +1447,7 @@ def sp_acj4_131_condf__satrefine_refine():
 
 
 # ---- case sp-acj4-131-condf · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (declined correctly)
+# the run satsimp-trigsimp-20261021-073947 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_131_condf__satsimp_trigsimp():
     x = Symbol('x')
@@ -1460,7 +1460,7 @@ def sp_acj4_131_condf__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-131-condf · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (declined correctly)
+# the run satrefine-simplify-20261021-073907 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_131_condf__satrefine_simplify():
     x = Symbol('x')
@@ -1572,7 +1572,7 @@ def sp_acj4_131_condf__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-132-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_132_cond__satassume_ask():
     x = Symbol('x')
@@ -1584,7 +1584,7 @@ def sp_acj4_132_cond__satassume_ask():
 
 
 # ---- case sp-acj4-132-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_132_cond__satrefine_refine():
     x = Symbol('x')
@@ -1597,7 +1597,7 @@ def sp_acj4_132_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-132-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_132_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -1610,7 +1610,7 @@ def sp_acj4_132_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-132-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_132_cond__satrefine_simplify():
     x = Symbol('x')
@@ -1722,7 +1722,7 @@ def sp_acj4_132_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-133-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_133_condf__satassume_ask():
     x = Symbol('x')
@@ -1734,7 +1734,7 @@ def sp_acj4_133_condf__satassume_ask():
 
 
 # ---- case sp-acj4-133-condf · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_133_condf__satrefine_refine():
     x = Symbol('x')
@@ -1747,7 +1747,7 @@ def sp_acj4_133_condf__satrefine_refine():
 
 
 # ---- case sp-acj4-133-condf · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_133_condf__satsimp_trigsimp():
     x = Symbol('x')
@@ -1760,7 +1760,7 @@ def sp_acj4_133_condf__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-133-condf · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_133_condf__satrefine_simplify():
     x = Symbol('x')
@@ -1872,7 +1872,7 @@ def sp_acj4_133_condf__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-136-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_136_cond__satassume_ask():
     x = Symbol('x')
@@ -1884,7 +1884,7 @@ def sp_acj4_136_cond__satassume_ask():
 
 
 # ---- case sp-acj4-136-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered true (solved)
+# the run satrefine-refine-20261021-073817 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_136_cond__satrefine_refine():
     x = Symbol('x')
@@ -1897,7 +1897,7 @@ def sp_acj4_136_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-136-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_136_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -1910,7 +1910,7 @@ def sp_acj4_136_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-136-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered true (solved)
+# the run satrefine-simplify-20261021-073907 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_136_cond__satrefine_simplify():
     x = Symbol('x')
@@ -2022,7 +2022,7 @@ def sp_acj4_136_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-137-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_137_cond__satassume_ask():
     x = Symbol('x')
@@ -2034,7 +2034,7 @@ def sp_acj4_137_cond__satassume_ask():
 
 
 # ---- case sp-acj4-137-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered true (solved)
+# the run satrefine-refine-20261021-073817 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_137_cond__satrefine_refine():
     x = Symbol('x')
@@ -2047,7 +2047,7 @@ def sp_acj4_137_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-137-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_137_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -2060,7 +2060,7 @@ def sp_acj4_137_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-137-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered true (solved)
+# the run satrefine-simplify-20261021-073907 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_137_cond__satrefine_simplify():
     x = Symbol('x')
@@ -2172,7 +2172,7 @@ def sp_acj4_137_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-145-cond2 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_145_cond2__satassume_ask():
     x = Symbol('x')
@@ -2184,7 +2184,7 @@ def sp_acj4_145_cond2__satassume_ask():
 
 
 # ---- case sp-acj4-145-cond2 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_145_cond2__satrefine_refine():
     x = Symbol('x')
@@ -2197,7 +2197,7 @@ def sp_acj4_145_cond2__satrefine_refine():
 
 
 # ---- case sp-acj4-145-cond2 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_145_cond2__satsimp_trigsimp():
     x = Symbol('x')
@@ -2210,7 +2210,7 @@ def sp_acj4_145_cond2__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-145-cond2 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_145_cond2__satrefine_simplify():
     x = Symbol('x')
@@ -2322,7 +2322,7 @@ def sp_acj4_145_cond2__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-145-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_145_condf__satassume_ask():
     x = Symbol('x')
@@ -2334,7 +2334,7 @@ def sp_acj4_145_condf__satassume_ask():
 
 
 # ---- case sp-acj4-145-condf · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_145_condf__satrefine_refine():
     x = Symbol('x')
@@ -2347,7 +2347,7 @@ def sp_acj4_145_condf__satrefine_refine():
 
 
 # ---- case sp-acj4-145-condf · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_145_condf__satsimp_trigsimp():
     x = Symbol('x')
@@ -2360,7 +2360,7 @@ def sp_acj4_145_condf__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-145-condf · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_145_condf__satrefine_simplify():
     x = Symbol('x')
@@ -2472,7 +2472,7 @@ def sp_acj4_145_condf__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-147-cond · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (declined correctly)
+# the run satassume-ask-20261021-073857 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_147_cond__satassume_ask():
     x = Symbol('x')
@@ -2484,7 +2484,7 @@ def sp_acj4_147_cond__satassume_ask():
 
 
 # ---- case sp-acj4-147-cond · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (declined correctly)
+# the run satrefine-refine-20261021-073817 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_147_cond__satrefine_refine():
     x = Symbol('x')
@@ -2497,7 +2497,7 @@ def sp_acj4_147_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-147-cond · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (declined correctly)
+# the run satsimp-trigsimp-20261021-073947 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_147_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -2510,7 +2510,7 @@ def sp_acj4_147_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-147-cond · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (declined correctly)
+# the run satrefine-simplify-20261021-073907 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_147_cond__satrefine_simplify():
     x = Symbol('x')
@@ -2622,7 +2622,7 @@ def sp_acj4_147_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-151-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_151_cond__satassume_ask():
     x = Symbol('x')
@@ -2634,7 +2634,7 @@ def sp_acj4_151_cond__satassume_ask():
 
 
 # ---- case sp-acj4-151-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_151_cond__satrefine_refine():
     x = Symbol('x')
@@ -2647,7 +2647,7 @@ def sp_acj4_151_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-151-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_151_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -2660,7 +2660,7 @@ def sp_acj4_151_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-151-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_151_cond__satrefine_simplify():
     x = Symbol('x')
@@ -2772,7 +2772,7 @@ def sp_acj4_151_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-156-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_156_cond__satassume_ask():
     x = Symbol('x')
@@ -2784,7 +2784,7 @@ def sp_acj4_156_cond__satassume_ask():
 
 
 # ---- case sp-acj4-156-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_156_cond__satrefine_refine():
     x = Symbol('x')
@@ -2797,7 +2797,7 @@ def sp_acj4_156_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-156-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_156_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -2810,7 +2810,7 @@ def sp_acj4_156_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-156-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_156_cond__satrefine_simplify():
     x = Symbol('x')
@@ -2922,7 +2922,7 @@ def sp_acj4_156_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-159-cond2 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_159_cond2__satassume_ask():
     x = Symbol('x')
@@ -2934,7 +2934,7 @@ def sp_acj4_159_cond2__satassume_ask():
 
 
 # ---- case sp-acj4-159-cond2 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_159_cond2__satrefine_refine():
     x = Symbol('x')
@@ -2947,7 +2947,7 @@ def sp_acj4_159_cond2__satrefine_refine():
 
 
 # ---- case sp-acj4-159-cond2 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_159_cond2__satsimp_trigsimp():
     x = Symbol('x')
@@ -2960,7 +2960,7 @@ def sp_acj4_159_cond2__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-159-cond2 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_159_cond2__satrefine_simplify():
     x = Symbol('x')
@@ -3072,7 +3072,7 @@ def sp_acj4_159_cond2__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-159-cond3 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_159_cond3__satassume_ask():
     x = Symbol('x')
@@ -3084,7 +3084,7 @@ def sp_acj4_159_cond3__satassume_ask():
 
 
 # ---- case sp-acj4-159-cond3 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_159_cond3__satrefine_refine():
     x = Symbol('x')
@@ -3097,7 +3097,7 @@ def sp_acj4_159_cond3__satrefine_refine():
 
 
 # ---- case sp-acj4-159-cond3 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_159_cond3__satsimp_trigsimp():
     x = Symbol('x')
@@ -3110,7 +3110,7 @@ def sp_acj4_159_cond3__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-159-cond3 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_159_cond3__satrefine_simplify():
     x = Symbol('x')
@@ -3222,7 +3222,7 @@ def sp_acj4_159_cond3__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-162-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_162_cond__satassume_ask():
     x = Symbol('x')
@@ -3234,7 +3234,7 @@ def sp_acj4_162_cond__satassume_ask():
 
 
 # ---- case sp-acj4-162-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_162_cond__satrefine_refine():
     x = Symbol('x')
@@ -3247,7 +3247,7 @@ def sp_acj4_162_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-162-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_162_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -3260,7 +3260,7 @@ def sp_acj4_162_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-162-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_162_cond__satrefine_simplify():
     x = Symbol('x')
@@ -3372,7 +3372,7 @@ def sp_acj4_162_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-162-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_162_condf__satassume_ask():
     x = Symbol('x')
@@ -3384,7 +3384,7 @@ def sp_acj4_162_condf__satassume_ask():
 
 
 # ---- case sp-acj4-162-condf · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_162_condf__satrefine_refine():
     x = Symbol('x')
@@ -3397,7 +3397,7 @@ def sp_acj4_162_condf__satrefine_refine():
 
 
 # ---- case sp-acj4-162-condf · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_162_condf__satsimp_trigsimp():
     x = Symbol('x')
@@ -3410,7 +3410,7 @@ def sp_acj4_162_condf__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-162-condf · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_162_condf__satrefine_simplify():
     x = Symbol('x')
@@ -3522,7 +3522,7 @@ def sp_acj4_162_condf__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-171-cond · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (declined correctly)
+# the run satassume-ask-20261021-073857 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_171_cond__satassume_ask():
     x = Symbol('x')
@@ -3534,7 +3534,7 @@ def sp_acj4_171_cond__satassume_ask():
 
 
 # ---- case sp-acj4-171-cond · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (declined correctly)
+# the run satrefine-refine-20261021-073817 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_171_cond__satrefine_refine():
     x = Symbol('x')
@@ -3547,7 +3547,7 @@ def sp_acj4_171_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-171-cond · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (declined correctly)
+# the run satsimp-trigsimp-20261021-073947 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_171_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -3560,7 +3560,7 @@ def sp_acj4_171_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-171-cond · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (declined correctly)
+# the run satrefine-simplify-20261021-073907 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_171_cond__satrefine_simplify():
     x = Symbol('x')
@@ -3672,7 +3672,7 @@ def sp_acj4_171_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-171-cond2 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_171_cond2__satassume_ask():
     x = Symbol('x')
@@ -3684,7 +3684,7 @@ def sp_acj4_171_cond2__satassume_ask():
 
 
 # ---- case sp-acj4-171-cond2 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_171_cond2__satrefine_refine():
     x = Symbol('x')
@@ -3697,7 +3697,7 @@ def sp_acj4_171_cond2__satrefine_refine():
 
 
 # ---- case sp-acj4-171-cond2 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_171_cond2__satsimp_trigsimp():
     x = Symbol('x')
@@ -3710,7 +3710,7 @@ def sp_acj4_171_cond2__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-171-cond2 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_171_cond2__satrefine_simplify():
     x = Symbol('x')
@@ -3822,7 +3822,7 @@ def sp_acj4_171_cond2__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-179-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_179_cond__satassume_ask():
     x = Symbol('x')
@@ -3834,7 +3834,7 @@ def sp_acj4_179_cond__satassume_ask():
 
 
 # ---- case sp-acj4-179-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_179_cond__satrefine_refine():
     x = Symbol('x')
@@ -3847,7 +3847,7 @@ def sp_acj4_179_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-179-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_179_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -3860,7 +3860,7 @@ def sp_acj4_179_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-179-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_179_cond__satrefine_simplify():
     x = Symbol('x')
@@ -3972,7 +3972,7 @@ def sp_acj4_179_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-180-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_180_cond__satassume_ask():
     x = Symbol('x')
@@ -3984,7 +3984,7 @@ def sp_acj4_180_cond__satassume_ask():
 
 
 # ---- case sp-acj4-180-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_180_cond__satrefine_refine():
     x = Symbol('x')
@@ -3997,7 +3997,7 @@ def sp_acj4_180_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-180-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_180_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -4010,7 +4010,7 @@ def sp_acj4_180_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-180-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_180_cond__satrefine_simplify():
     x = Symbol('x')
@@ -4122,7 +4122,7 @@ def sp_acj4_180_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-181-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_181_cond__satassume_ask():
     x = Symbol('x')
@@ -4134,7 +4134,7 @@ def sp_acj4_181_cond__satassume_ask():
 
 
 # ---- case sp-acj4-181-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_181_cond__satrefine_refine():
     x = Symbol('x')
@@ -4147,7 +4147,7 @@ def sp_acj4_181_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-181-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_181_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -4160,7 +4160,7 @@ def sp_acj4_181_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-181-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_181_cond__satrefine_simplify():
     x = Symbol('x')
@@ -4272,7 +4272,7 @@ def sp_acj4_181_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-183-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_183_cond__satassume_ask():
     x = Symbol('x')
@@ -4284,7 +4284,7 @@ def sp_acj4_183_cond__satassume_ask():
 
 
 # ---- case sp-acj4-183-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_183_cond__satrefine_refine():
     x = Symbol('x')
@@ -4297,7 +4297,7 @@ def sp_acj4_183_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-183-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_183_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -4310,7 +4310,7 @@ def sp_acj4_183_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-183-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_183_cond__satrefine_simplify():
     x = Symbol('x')
@@ -4422,7 +4422,7 @@ def sp_acj4_183_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-186-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_186_cond__satassume_ask():
     x = Symbol('x')
@@ -4434,7 +4434,7 @@ def sp_acj4_186_cond__satassume_ask():
 
 
 # ---- case sp-acj4-186-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_186_cond__satrefine_refine():
     x = Symbol('x')
@@ -4447,7 +4447,7 @@ def sp_acj4_186_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-186-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_186_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -4460,7 +4460,7 @@ def sp_acj4_186_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-186-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_186_cond__satrefine_simplify():
     x = Symbol('x')
@@ -4572,7 +4572,7 @@ def sp_acj4_186_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-187-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_187_cond__satassume_ask():
     x = Symbol('x')
@@ -4584,7 +4584,7 @@ def sp_acj4_187_cond__satassume_ask():
 
 
 # ---- case sp-acj4-187-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_187_cond__satrefine_refine():
     x = Symbol('x')
@@ -4597,7 +4597,7 @@ def sp_acj4_187_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-187-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_187_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -4610,7 +4610,7 @@ def sp_acj4_187_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-187-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_187_cond__satrefine_simplify():
     x = Symbol('x')
@@ -4722,7 +4722,7 @@ def sp_acj4_187_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-190-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_190_condf__satassume_ask():
     x = Symbol('x')
@@ -4734,7 +4734,7 @@ def sp_acj4_190_condf__satassume_ask():
 
 
 # ---- case sp-acj4-190-condf · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_190_condf__satrefine_refine():
     x = Symbol('x')
@@ -4747,7 +4747,7 @@ def sp_acj4_190_condf__satrefine_refine():
 
 
 # ---- case sp-acj4-190-condf · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_190_condf__satsimp_trigsimp():
     x = Symbol('x')
@@ -4760,7 +4760,7 @@ def sp_acj4_190_condf__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-190-condf · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_190_condf__satrefine_simplify():
     x = Symbol('x')
@@ -4872,7 +4872,7 @@ def sp_acj4_190_condf__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-191-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_191_condf__satassume_ask():
     x = Symbol('x')
@@ -4884,7 +4884,7 @@ def sp_acj4_191_condf__satassume_ask():
 
 
 # ---- case sp-acj4-191-condf · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_191_condf__satrefine_refine():
     x = Symbol('x')
@@ -4897,7 +4897,7 @@ def sp_acj4_191_condf__satrefine_refine():
 
 
 # ---- case sp-acj4-191-condf · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_191_condf__satsimp_trigsimp():
     x = Symbol('x')
@@ -4910,7 +4910,7 @@ def sp_acj4_191_condf__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-191-condf · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_191_condf__satrefine_simplify():
     x = Symbol('x')
@@ -5022,7 +5022,7 @@ def sp_acj4_191_condf__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-196-cond2 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_196_cond2__satassume_ask():
     x = Symbol('x')
@@ -5034,7 +5034,7 @@ def sp_acj4_196_cond2__satassume_ask():
 
 
 # ---- case sp-acj4-196-cond2 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_196_cond2__satrefine_refine():
     x = Symbol('x')
@@ -5047,7 +5047,7 @@ def sp_acj4_196_cond2__satrefine_refine():
 
 
 # ---- case sp-acj4-196-cond2 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_196_cond2__satsimp_trigsimp():
     x = Symbol('x')
@@ -5060,7 +5060,7 @@ def sp_acj4_196_cond2__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-196-cond2 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_196_cond2__satrefine_simplify():
     x = Symbol('x')
@@ -5172,7 +5172,7 @@ def sp_acj4_196_cond2__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-20-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_20_condf__satassume_ask():
     x = Symbol('x')
@@ -5184,7 +5184,7 @@ def sp_acj4_20_condf__satassume_ask():
 
 
 # ---- case sp-acj4-20-condf · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_20_condf__satrefine_refine():
     x = Symbol('x')
@@ -5197,7 +5197,7 @@ def sp_acj4_20_condf__satrefine_refine():
 
 
 # ---- case sp-acj4-20-condf · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_20_condf__satsimp_trigsimp():
     x = Symbol('x')
@@ -5210,7 +5210,7 @@ def sp_acj4_20_condf__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-20-condf · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_20_condf__satrefine_simplify():
     x = Symbol('x')
@@ -5322,7 +5322,7 @@ def sp_acj4_20_condf__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-200-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_200_cond__satassume_ask():
     x = Symbol('x')
@@ -5334,7 +5334,7 @@ def sp_acj4_200_cond__satassume_ask():
 
 
 # ---- case sp-acj4-200-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_200_cond__satrefine_refine():
     x = Symbol('x')
@@ -5347,7 +5347,7 @@ def sp_acj4_200_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-200-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered true (solved)
+# the run satsimp-trigsimp-20261021-073947 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_200_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -5360,7 +5360,7 @@ def sp_acj4_200_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-200-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_200_cond__satrefine_simplify():
     x = Symbol('x')
@@ -5472,7 +5472,7 @@ def sp_acj4_200_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-202-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_202_cond__satassume_ask():
     x = Symbol('x')
@@ -5484,7 +5484,7 @@ def sp_acj4_202_cond__satassume_ask():
 
 
 # ---- case sp-acj4-202-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_202_cond__satrefine_refine():
     x = Symbol('x')
@@ -5497,7 +5497,7 @@ def sp_acj4_202_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-202-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_202_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -5510,7 +5510,7 @@ def sp_acj4_202_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-202-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_202_cond__satrefine_simplify():
     x = Symbol('x')
@@ -5622,7 +5622,7 @@ def sp_acj4_202_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-203-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_203_cond__satassume_ask():
     x = Symbol('x')
@@ -5634,7 +5634,7 @@ def sp_acj4_203_cond__satassume_ask():
 
 
 # ---- case sp-acj4-203-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered true (solved)
+# the run satrefine-refine-20261021-073817 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_203_cond__satrefine_refine():
     x = Symbol('x')
@@ -5647,7 +5647,7 @@ def sp_acj4_203_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-203-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_203_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -5660,7 +5660,7 @@ def sp_acj4_203_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-203-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered true (solved)
+# the run satrefine-simplify-20261021-073907 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_203_cond__satrefine_simplify():
     x = Symbol('x')
@@ -5772,7 +5772,7 @@ def sp_acj4_203_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-205-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_205_cond__satassume_ask():
     x = Symbol('x')
@@ -5784,7 +5784,7 @@ def sp_acj4_205_cond__satassume_ask():
 
 
 # ---- case sp-acj4-205-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_205_cond__satrefine_refine():
     x = Symbol('x')
@@ -5797,7 +5797,7 @@ def sp_acj4_205_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-205-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered true (solved)
+# the run satsimp-trigsimp-20261021-073947 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_205_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -5810,7 +5810,7 @@ def sp_acj4_205_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-205-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_205_cond__satrefine_simplify():
     x = Symbol('x')
@@ -5922,7 +5922,7 @@ def sp_acj4_205_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-234-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_234_cond__satassume_ask():
     x = Symbol('x')
@@ -5934,7 +5934,7 @@ def sp_acj4_234_cond__satassume_ask():
 
 
 # ---- case sp-acj4-234-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered true (solved)
+# the run satrefine-refine-20261021-073817 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_234_cond__satrefine_refine():
     x = Symbol('x')
@@ -5947,7 +5947,7 @@ def sp_acj4_234_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-234-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_234_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -5960,7 +5960,7 @@ def sp_acj4_234_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-234-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered true (solved)
+# the run satrefine-simplify-20261021-073907 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_234_cond__satrefine_simplify():
     x = Symbol('x')
@@ -6072,7 +6072,7 @@ def sp_acj4_234_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-234-cond2 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_234_cond2__satassume_ask():
     x = Symbol('x')
@@ -6084,7 +6084,7 @@ def sp_acj4_234_cond2__satassume_ask():
 
 
 # ---- case sp-acj4-234-cond2 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered true (solved)
+# the run satrefine-refine-20261021-073817 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_234_cond2__satrefine_refine():
     x = Symbol('x')
@@ -6097,7 +6097,7 @@ def sp_acj4_234_cond2__satrefine_refine():
 
 
 # ---- case sp-acj4-234-cond2 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_234_cond2__satsimp_trigsimp():
     x = Symbol('x')
@@ -6110,7 +6110,7 @@ def sp_acj4_234_cond2__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-234-cond2 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered true (solved)
+# the run satrefine-simplify-20261021-073907 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_234_cond2__satrefine_simplify():
     x = Symbol('x')
@@ -6222,7 +6222,7 @@ def sp_acj4_234_cond2__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-243-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_243_cond__satassume_ask():
     x = Symbol('x')
@@ -6234,7 +6234,7 @@ def sp_acj4_243_cond__satassume_ask():
 
 
 # ---- case sp-acj4-243-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered true (solved)
+# the run satrefine-refine-20261021-073817 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_243_cond__satrefine_refine():
     x = Symbol('x')
@@ -6247,7 +6247,7 @@ def sp_acj4_243_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-243-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_243_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -6260,7 +6260,7 @@ def sp_acj4_243_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-243-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered true (solved)
+# the run satrefine-simplify-20261021-073907 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_243_cond__satrefine_simplify():
     x = Symbol('x')
@@ -6372,7 +6372,7 @@ def sp_acj4_243_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-245-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_245_cond__satassume_ask():
     x = Symbol('x')
@@ -6384,7 +6384,7 @@ def sp_acj4_245_cond__satassume_ask():
 
 
 # ---- case sp-acj4-245-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered true (solved)
+# the run satrefine-refine-20261021-073817 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_245_cond__satrefine_refine():
     x = Symbol('x')
@@ -6397,7 +6397,7 @@ def sp_acj4_245_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-245-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_245_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -6410,7 +6410,7 @@ def sp_acj4_245_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-245-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered true (solved)
+# the run satrefine-simplify-20261021-073907 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_245_cond__satrefine_simplify():
     x = Symbol('x')
@@ -6522,7 +6522,7 @@ def sp_acj4_245_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-248-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_248_cond__satassume_ask():
     x = Symbol('x')
@@ -6534,7 +6534,7 @@ def sp_acj4_248_cond__satassume_ask():
 
 
 # ---- case sp-acj4-248-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_248_cond__satrefine_refine():
     x = Symbol('x')
@@ -6547,7 +6547,7 @@ def sp_acj4_248_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-248-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_248_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -6560,7 +6560,7 @@ def sp_acj4_248_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-248-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_248_cond__satrefine_simplify():
     x = Symbol('x')
@@ -6672,7 +6672,7 @@ def sp_acj4_248_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-251-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_251_cond__satassume_ask():
     x = Symbol('x')
@@ -6684,7 +6684,7 @@ def sp_acj4_251_cond__satassume_ask():
 
 
 # ---- case sp-acj4-251-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_251_cond__satrefine_refine():
     x = Symbol('x')
@@ -6697,7 +6697,7 @@ def sp_acj4_251_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-251-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_251_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -6710,7 +6710,7 @@ def sp_acj4_251_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-251-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_251_cond__satrefine_simplify():
     x = Symbol('x')
@@ -6822,7 +6822,7 @@ def sp_acj4_251_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-260-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_260_cond__satassume_ask():
     x = Symbol('x')
@@ -6834,7 +6834,7 @@ def sp_acj4_260_cond__satassume_ask():
 
 
 # ---- case sp-acj4-260-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_260_cond__satrefine_refine():
     x = Symbol('x')
@@ -6847,7 +6847,7 @@ def sp_acj4_260_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-260-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_260_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -6860,7 +6860,7 @@ def sp_acj4_260_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-260-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_260_cond__satrefine_simplify():
     x = Symbol('x')
@@ -6972,7 +6972,7 @@ def sp_acj4_260_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-261-cond · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (declined correctly)
+# the run satassume-ask-20261021-073857 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_261_cond__satassume_ask():
     x = Symbol('x')
@@ -6984,7 +6984,7 @@ def sp_acj4_261_cond__satassume_ask():
 
 
 # ---- case sp-acj4-261-cond · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (declined correctly)
+# the run satrefine-refine-20261021-073817 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_261_cond__satrefine_refine():
     x = Symbol('x')
@@ -6997,7 +6997,7 @@ def sp_acj4_261_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-261-cond · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (declined correctly)
+# the run satsimp-trigsimp-20261021-073947 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_261_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -7010,7 +7010,7 @@ def sp_acj4_261_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-261-cond · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (declined correctly)
+# the run satrefine-simplify-20261021-073907 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_261_cond__satrefine_simplify():
     x = Symbol('x')
@@ -7122,7 +7122,7 @@ def sp_acj4_261_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-266-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_266_cond__satassume_ask():
     x = Symbol('x')
@@ -7134,7 +7134,7 @@ def sp_acj4_266_cond__satassume_ask():
 
 
 # ---- case sp-acj4-266-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered true (solved)
+# the run satrefine-refine-20261021-073817 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_266_cond__satrefine_refine():
     x = Symbol('x')
@@ -7147,7 +7147,7 @@ def sp_acj4_266_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-266-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_266_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -7160,7 +7160,7 @@ def sp_acj4_266_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-266-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered true (solved)
+# the run satrefine-simplify-20261021-073907 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_266_cond__satrefine_simplify():
     x = Symbol('x')
@@ -7272,7 +7272,7 @@ def sp_acj4_266_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-266-condf · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (declined correctly)
+# the run satassume-ask-20261021-073857 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_266_condf__satassume_ask():
     x = Symbol('x')
@@ -7284,7 +7284,7 @@ def sp_acj4_266_condf__satassume_ask():
 
 
 # ---- case sp-acj4-266-condf · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (declined correctly)
+# the run satrefine-refine-20261021-073817 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_266_condf__satrefine_refine():
     x = Symbol('x')
@@ -7297,7 +7297,7 @@ def sp_acj4_266_condf__satrefine_refine():
 
 
 # ---- case sp-acj4-266-condf · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (declined correctly)
+# the run satsimp-trigsimp-20261021-073947 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_266_condf__satsimp_trigsimp():
     x = Symbol('x')
@@ -7310,7 +7310,7 @@ def sp_acj4_266_condf__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-266-condf · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (declined correctly)
+# the run satrefine-simplify-20261021-073907 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_266_condf__satrefine_simplify():
     x = Symbol('x')
@@ -7422,7 +7422,7 @@ def sp_acj4_266_condf__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-267-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_267_cond__satassume_ask():
     x = Symbol('x')
@@ -7434,7 +7434,7 @@ def sp_acj4_267_cond__satassume_ask():
 
 
 # ---- case sp-acj4-267-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered true (solved)
+# the run satrefine-refine-20261021-073817 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_267_cond__satrefine_refine():
     x = Symbol('x')
@@ -7447,7 +7447,7 @@ def sp_acj4_267_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-267-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_267_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -7460,7 +7460,7 @@ def sp_acj4_267_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-267-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered true (solved)
+# the run satrefine-simplify-20261021-073907 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_267_cond__satrefine_simplify():
     x = Symbol('x')
@@ -7572,7 +7572,7 @@ def sp_acj4_267_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-267-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_267_condf__satassume_ask():
     x = Symbol('x')
@@ -7584,7 +7584,7 @@ def sp_acj4_267_condf__satassume_ask():
 
 
 # ---- case sp-acj4-267-condf · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_267_condf__satrefine_refine():
     x = Symbol('x')
@@ -7597,7 +7597,7 @@ def sp_acj4_267_condf__satrefine_refine():
 
 
 # ---- case sp-acj4-267-condf · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_267_condf__satsimp_trigsimp():
     x = Symbol('x')
@@ -7610,7 +7610,7 @@ def sp_acj4_267_condf__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-267-condf · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_267_condf__satrefine_simplify():
     x = Symbol('x')
@@ -7722,7 +7722,7 @@ def sp_acj4_267_condf__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-283-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered false (solved)
 @_in(_SETUP1)
 def sp_acj4_283_condf__satassume_ask():
     x = Symbol('x')
@@ -7734,7 +7734,7 @@ def sp_acj4_283_condf__satassume_ask():
 
 
 # ---- case sp-acj4-283-condf · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_283_condf__satrefine_refine():
     x = Symbol('x')
@@ -7747,7 +7747,7 @@ def sp_acj4_283_condf__satrefine_refine():
 
 
 # ---- case sp-acj4-283-condf · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_283_condf__satsimp_trigsimp():
     x = Symbol('x')
@@ -7760,7 +7760,7 @@ def sp_acj4_283_condf__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-283-condf · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_283_condf__satrefine_simplify():
     x = Symbol('x')
@@ -7872,7 +7872,7 @@ def sp_acj4_283_condf__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-287-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered false (solved)
 @_in(_SETUP1)
 def sp_acj4_287_condf__satassume_ask():
     x = Symbol('x')
@@ -7884,7 +7884,7 @@ def sp_acj4_287_condf__satassume_ask():
 
 
 # ---- case sp-acj4-287-condf · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_287_condf__satrefine_refine():
     x = Symbol('x')
@@ -7897,7 +7897,7 @@ def sp_acj4_287_condf__satrefine_refine():
 
 
 # ---- case sp-acj4-287-condf · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_287_condf__satsimp_trigsimp():
     x = Symbol('x')
@@ -7910,7 +7910,7 @@ def sp_acj4_287_condf__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-287-condf · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_287_condf__satrefine_simplify():
     x = Symbol('x')
@@ -8022,7 +8022,7 @@ def sp_acj4_287_condf__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-289-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_289_cond__satassume_ask():
     x = Symbol('x')
@@ -8034,7 +8034,7 @@ def sp_acj4_289_cond__satassume_ask():
 
 
 # ---- case sp-acj4-289-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered true (solved)
+# the run satrefine-refine-20261021-073817 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_289_cond__satrefine_refine():
     x = Symbol('x')
@@ -8047,7 +8047,7 @@ def sp_acj4_289_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-289-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_289_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -8060,7 +8060,7 @@ def sp_acj4_289_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-289-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered true (solved)
+# the run satrefine-simplify-20261021-073907 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_289_cond__satrefine_simplify():
     x = Symbol('x')
@@ -8172,7 +8172,7 @@ def sp_acj4_289_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-29-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_29_cond__satassume_ask():
     x = Symbol('x')
@@ -8184,7 +8184,7 @@ def sp_acj4_29_cond__satassume_ask():
 
 
 # ---- case sp-acj4-29-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered true (solved)
+# the run satrefine-refine-20261021-073817 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_29_cond__satrefine_refine():
     x = Symbol('x')
@@ -8197,7 +8197,7 @@ def sp_acj4_29_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-29-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_29_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -8210,7 +8210,7 @@ def sp_acj4_29_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-29-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered true (solved)
+# the run satrefine-simplify-20261021-073907 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_29_cond__satrefine_simplify():
     x = Symbol('x')
@@ -8322,7 +8322,7 @@ def sp_acj4_29_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-29-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_29_condf__satassume_ask():
     x = Symbol('x')
@@ -8334,7 +8334,7 @@ def sp_acj4_29_condf__satassume_ask():
 
 
 # ---- case sp-acj4-29-condf · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_29_condf__satrefine_refine():
     x = Symbol('x')
@@ -8347,7 +8347,7 @@ def sp_acj4_29_condf__satrefine_refine():
 
 
 # ---- case sp-acj4-29-condf · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_29_condf__satsimp_trigsimp():
     x = Symbol('x')
@@ -8360,7 +8360,7 @@ def sp_acj4_29_condf__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-29-condf · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_29_condf__satrefine_simplify():
     x = Symbol('x')
@@ -8472,7 +8472,7 @@ def sp_acj4_29_condf__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-334-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_334_cond__satassume_ask():
     x = Symbol('x')
@@ -8484,7 +8484,7 @@ def sp_acj4_334_cond__satassume_ask():
 
 
 # ---- case sp-acj4-334-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_334_cond__satrefine_refine():
     x = Symbol('x')
@@ -8497,7 +8497,7 @@ def sp_acj4_334_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-334-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_334_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -8510,7 +8510,7 @@ def sp_acj4_334_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-334-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_334_cond__satrefine_simplify():
     x = Symbol('x')
@@ -8622,7 +8622,7 @@ def sp_acj4_334_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-335-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_335_cond__satassume_ask():
     x = Symbol('x')
@@ -8634,7 +8634,7 @@ def sp_acj4_335_cond__satassume_ask():
 
 
 # ---- case sp-acj4-335-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_335_cond__satrefine_refine():
     x = Symbol('x')
@@ -8647,7 +8647,7 @@ def sp_acj4_335_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-335-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_335_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -8660,7 +8660,7 @@ def sp_acj4_335_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-335-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_335_cond__satrefine_simplify():
     x = Symbol('x')
@@ -8772,7 +8772,7 @@ def sp_acj4_335_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-336-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_336_cond__satassume_ask():
     x = Symbol('x')
@@ -8784,7 +8784,7 @@ def sp_acj4_336_cond__satassume_ask():
 
 
 # ---- case sp-acj4-336-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_336_cond__satrefine_refine():
     x = Symbol('x')
@@ -8797,7 +8797,7 @@ def sp_acj4_336_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-336-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_336_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -8810,7 +8810,7 @@ def sp_acj4_336_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-336-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_336_cond__satrefine_simplify():
     x = Symbol('x')
@@ -8922,7 +8922,7 @@ def sp_acj4_336_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-344-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_344_cond__satassume_ask():
     x = Symbol('x')
@@ -8934,7 +8934,7 @@ def sp_acj4_344_cond__satassume_ask():
 
 
 # ---- case sp-acj4-344-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered true (solved)
+# the run satrefine-refine-20261021-073817 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_344_cond__satrefine_refine():
     x = Symbol('x')
@@ -8947,7 +8947,7 @@ def sp_acj4_344_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-344-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_344_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -8960,7 +8960,7 @@ def sp_acj4_344_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-344-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered true (solved)
+# the run satrefine-simplify-20261021-073907 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_344_cond__satrefine_simplify():
     x = Symbol('x')
@@ -9072,7 +9072,7 @@ def sp_acj4_344_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-344-cond2 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_344_cond2__satassume_ask():
     x = Symbol('x')
@@ -9084,7 +9084,7 @@ def sp_acj4_344_cond2__satassume_ask():
 
 
 # ---- case sp-acj4-344-cond2 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered true (solved)
+# the run satrefine-refine-20261021-073817 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_344_cond2__satrefine_refine():
     x = Symbol('x')
@@ -9097,7 +9097,7 @@ def sp_acj4_344_cond2__satrefine_refine():
 
 
 # ---- case sp-acj4-344-cond2 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_344_cond2__satsimp_trigsimp():
     x = Symbol('x')
@@ -9110,7 +9110,7 @@ def sp_acj4_344_cond2__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-344-cond2 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered true (solved)
+# the run satrefine-simplify-20261021-073907 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_344_cond2__satrefine_simplify():
     x = Symbol('x')
@@ -9222,7 +9222,7 @@ def sp_acj4_344_cond2__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-372-cond · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (declined correctly)
+# the run satassume-ask-20261021-073857 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_372_cond__satassume_ask():
     x = Symbol('x')
@@ -9234,7 +9234,7 @@ def sp_acj4_372_cond__satassume_ask():
 
 
 # ---- case sp-acj4-372-cond · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (declined correctly)
+# the run satrefine-refine-20261021-073817 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_372_cond__satrefine_refine():
     x = Symbol('x')
@@ -9247,7 +9247,7 @@ def sp_acj4_372_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-372-cond · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (declined correctly)
+# the run satsimp-trigsimp-20261021-073947 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_372_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -9260,7 +9260,7 @@ def sp_acj4_372_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-372-cond · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (declined correctly)
+# the run satrefine-simplify-20261021-073907 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_372_cond__satrefine_simplify():
     x = Symbol('x')
@@ -9372,7 +9372,7 @@ def sp_acj4_372_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-373-cond · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (declined correctly)
+# the run satassume-ask-20261021-073857 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_373_cond__satassume_ask():
     x = Symbol('x')
@@ -9384,7 +9384,7 @@ def sp_acj4_373_cond__satassume_ask():
 
 
 # ---- case sp-acj4-373-cond · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (declined correctly)
+# the run satrefine-refine-20261021-073817 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_373_cond__satrefine_refine():
     x = Symbol('x')
@@ -9397,7 +9397,7 @@ def sp_acj4_373_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-373-cond · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (declined correctly)
+# the run satsimp-trigsimp-20261021-073947 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_373_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -9410,7 +9410,7 @@ def sp_acj4_373_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-373-cond · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (declined correctly)
+# the run satrefine-simplify-20261021-073907 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_373_cond__satrefine_simplify():
     x = Symbol('x')
@@ -9522,7 +9522,7 @@ def sp_acj4_373_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-376-cond2 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_376_cond2__satassume_ask():
     x = Symbol('x')
@@ -9534,7 +9534,7 @@ def sp_acj4_376_cond2__satassume_ask():
 
 
 # ---- case sp-acj4-376-cond2 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_376_cond2__satrefine_refine():
     x = Symbol('x')
@@ -9547,7 +9547,7 @@ def sp_acj4_376_cond2__satrefine_refine():
 
 
 # ---- case sp-acj4-376-cond2 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_376_cond2__satsimp_trigsimp():
     x = Symbol('x')
@@ -9560,7 +9560,7 @@ def sp_acj4_376_cond2__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-376-cond2 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_376_cond2__satrefine_simplify():
     x = Symbol('x')
@@ -9659,7 +9659,7 @@ def sp_acj4_376_cond2__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-385-cond · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (declined correctly)
+# the run satassume-ask-20261021-073857 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_385_cond__satassume_ask():
     x = Symbol('x')
@@ -9671,7 +9671,7 @@ def sp_acj4_385_cond__satassume_ask():
 
 
 # ---- case sp-acj4-385-cond · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (declined correctly)
+# the run satrefine-refine-20261021-073817 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_385_cond__satrefine_refine():
     x = Symbol('x')
@@ -9684,7 +9684,7 @@ def sp_acj4_385_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-385-cond · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (declined correctly)
+# the run satsimp-trigsimp-20261021-073947 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_385_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -9697,7 +9697,7 @@ def sp_acj4_385_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-385-cond · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (declined correctly)
+# the run satrefine-simplify-20261021-073907 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_385_cond__satrefine_simplify():
     x = Symbol('x')
@@ -9796,7 +9796,7 @@ def sp_acj4_385_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-392-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_392_cond__satassume_ask():
     x = Symbol('x')
@@ -9808,7 +9808,7 @@ def sp_acj4_392_cond__satassume_ask():
 
 
 # ---- case sp-acj4-392-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_392_cond__satrefine_refine():
     x = Symbol('x')
@@ -9821,7 +9821,7 @@ def sp_acj4_392_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-392-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_392_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -9834,7 +9834,7 @@ def sp_acj4_392_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-392-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_392_cond__satrefine_simplify():
     x = Symbol('x')
@@ -9946,7 +9946,7 @@ def sp_acj4_392_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-394-cond · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (declined correctly)
+# the run satassume-ask-20261021-073857 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_394_cond__satassume_ask():
     x = Symbol('x')
@@ -9958,7 +9958,7 @@ def sp_acj4_394_cond__satassume_ask():
 
 
 # ---- case sp-acj4-394-cond · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (declined correctly)
+# the run satrefine-refine-20261021-073817 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_394_cond__satrefine_refine():
     x = Symbol('x')
@@ -9971,7 +9971,7 @@ def sp_acj4_394_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-394-cond · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (declined correctly)
+# the run satsimp-trigsimp-20261021-073947 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_394_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -9984,7 +9984,7 @@ def sp_acj4_394_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-394-cond · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (declined correctly)
+# the run satrefine-simplify-20261021-073907 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_394_cond__satrefine_simplify():
     x = Symbol('x')
@@ -10096,7 +10096,7 @@ def sp_acj4_394_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-399-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_399_cond__satassume_ask():
     x = Symbol('x')
@@ -10108,7 +10108,7 @@ def sp_acj4_399_cond__satassume_ask():
 
 
 # ---- case sp-acj4-399-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_399_cond__satrefine_refine():
     x = Symbol('x')
@@ -10121,7 +10121,7 @@ def sp_acj4_399_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-399-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered true (solved)
+# the run satsimp-trigsimp-20261021-073947 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_399_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -10134,7 +10134,7 @@ def sp_acj4_399_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-399-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_399_cond__satrefine_simplify():
     x = Symbol('x')
@@ -10246,7 +10246,7 @@ def sp_acj4_399_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-402-cond · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (declined correctly)
+# the run satassume-ask-20261021-073857 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_402_cond__satassume_ask():
     x = Symbol('x')
@@ -10258,7 +10258,7 @@ def sp_acj4_402_cond__satassume_ask():
 
 
 # ---- case sp-acj4-402-cond · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (declined correctly)
+# the run satrefine-refine-20261021-073817 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_402_cond__satrefine_refine():
     x = Symbol('x')
@@ -10271,7 +10271,7 @@ def sp_acj4_402_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-402-cond · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (declined correctly)
+# the run satsimp-trigsimp-20261021-073947 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_402_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -10284,7 +10284,7 @@ def sp_acj4_402_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-402-cond · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (declined correctly)
+# the run satrefine-simplify-20261021-073907 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_402_cond__satrefine_simplify():
     x = Symbol('x')
@@ -10396,7 +10396,7 @@ def sp_acj4_402_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-403-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_403_cond__satassume_ask():
     x = Symbol('x')
@@ -10408,7 +10408,7 @@ def sp_acj4_403_cond__satassume_ask():
 
 
 # ---- case sp-acj4-403-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered true (solved)
+# the run satrefine-refine-20261021-073817 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_403_cond__satrefine_refine():
     x = Symbol('x')
@@ -10421,7 +10421,7 @@ def sp_acj4_403_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-403-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_403_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -10434,7 +10434,7 @@ def sp_acj4_403_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-403-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered true (solved)
+# the run satrefine-simplify-20261021-073907 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_403_cond__satrefine_simplify():
     x = Symbol('x')
@@ -10546,7 +10546,7 @@ def sp_acj4_403_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-403-condf · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (declined correctly)
+# the run satassume-ask-20261021-073857 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_403_condf__satassume_ask():
     x = Symbol('x')
@@ -10558,7 +10558,7 @@ def sp_acj4_403_condf__satassume_ask():
 
 
 # ---- case sp-acj4-403-condf · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (declined correctly)
+# the run satrefine-refine-20261021-073817 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_403_condf__satrefine_refine():
     x = Symbol('x')
@@ -10571,7 +10571,7 @@ def sp_acj4_403_condf__satrefine_refine():
 
 
 # ---- case sp-acj4-403-condf · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (declined correctly)
+# the run satsimp-trigsimp-20261021-073947 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_403_condf__satsimp_trigsimp():
     x = Symbol('x')
@@ -10584,7 +10584,7 @@ def sp_acj4_403_condf__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-403-condf · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (declined correctly)
+# the run satrefine-simplify-20261021-073907 answered null (declined correctly)
 @_in(_SETUP2)
 def sp_acj4_403_condf__satrefine_simplify():
     x = Symbol('x')
@@ -10696,7 +10696,7 @@ def sp_acj4_403_condf__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-412-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_412_cond__satassume_ask():
     x = Symbol('x')
@@ -10708,7 +10708,7 @@ def sp_acj4_412_cond__satassume_ask():
 
 
 # ---- case sp-acj4-412-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_412_cond__satrefine_refine():
     x = Symbol('x')
@@ -10721,7 +10721,7 @@ def sp_acj4_412_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-412-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_412_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -10734,7 +10734,7 @@ def sp_acj4_412_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-412-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_412_cond__satrefine_simplify():
     x = Symbol('x')
@@ -10846,7 +10846,7 @@ def sp_acj4_412_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-416-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_416_cond__satassume_ask():
     x = Symbol('x')
@@ -10858,7 +10858,7 @@ def sp_acj4_416_cond__satassume_ask():
 
 
 # ---- case sp-acj4-416-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_416_cond__satrefine_refine():
     x = Symbol('x')
@@ -10871,7 +10871,7 @@ def sp_acj4_416_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-416-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_416_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -10884,7 +10884,7 @@ def sp_acj4_416_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-416-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_416_cond__satrefine_simplify():
     x = Symbol('x')
@@ -10996,7 +10996,7 @@ def sp_acj4_416_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-417-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_417_cond__satassume_ask():
     x = Symbol('x')
@@ -11008,7 +11008,7 @@ def sp_acj4_417_cond__satassume_ask():
 
 
 # ---- case sp-acj4-417-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_417_cond__satrefine_refine():
     x = Symbol('x')
@@ -11021,7 +11021,7 @@ def sp_acj4_417_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-417-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_417_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -11034,7 +11034,7 @@ def sp_acj4_417_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-417-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_417_cond__satrefine_simplify():
     x = Symbol('x')
@@ -11120,7 +11120,7 @@ def sp_acj4_417_cond__sympy_extras_ask():
 
 
 # ---- case sp-acj4-420-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_420_cond__satassume_ask():
     x = Symbol('x')
@@ -11132,7 +11132,7 @@ def sp_acj4_420_cond__satassume_ask():
 
 
 # ---- case sp-acj4-420-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered true (solved)
+# the run satrefine-refine-20261021-073817 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_420_cond__satrefine_refine():
     x = Symbol('x')
@@ -11145,7 +11145,7 @@ def sp_acj4_420_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-420-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_420_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -11158,7 +11158,7 @@ def sp_acj4_420_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-420-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered true (solved)
+# the run satrefine-simplify-20261021-073907 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_420_cond__satrefine_simplify():
     x = Symbol('x')
@@ -11270,7 +11270,7 @@ def sp_acj4_420_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-420-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_420_condf__satassume_ask():
     x = Symbol('x')
@@ -11282,7 +11282,7 @@ def sp_acj4_420_condf__satassume_ask():
 
 
 # ---- case sp-acj4-420-condf · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_420_condf__satrefine_refine():
     x = Symbol('x')
@@ -11295,7 +11295,7 @@ def sp_acj4_420_condf__satrefine_refine():
 
 
 # ---- case sp-acj4-420-condf · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_420_condf__satsimp_trigsimp():
     x = Symbol('x')
@@ -11308,7 +11308,7 @@ def sp_acj4_420_condf__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-420-condf · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_420_condf__satrefine_simplify():
     x = Symbol('x')
@@ -11420,7 +11420,7 @@ def sp_acj4_420_condf__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-422-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_422_condf__satassume_ask():
     x = Symbol('x')
@@ -11432,7 +11432,7 @@ def sp_acj4_422_condf__satassume_ask():
 
 
 # ---- case sp-acj4-422-condf · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_422_condf__satrefine_refine():
     x = Symbol('x')
@@ -11445,7 +11445,7 @@ def sp_acj4_422_condf__satrefine_refine():
 
 
 # ---- case sp-acj4-422-condf · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_422_condf__satsimp_trigsimp():
     x = Symbol('x')
@@ -11458,7 +11458,7 @@ def sp_acj4_422_condf__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-422-condf · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_422_condf__satrefine_simplify():
     x = Symbol('x')
@@ -11570,7 +11570,7 @@ def sp_acj4_422_condf__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-424-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_424_condf__satassume_ask():
     x = Symbol('x')
@@ -11582,7 +11582,7 @@ def sp_acj4_424_condf__satassume_ask():
 
 
 # ---- case sp-acj4-424-condf · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_424_condf__satrefine_refine():
     x = Symbol('x')
@@ -11595,7 +11595,7 @@ def sp_acj4_424_condf__satrefine_refine():
 
 
 # ---- case sp-acj4-424-condf · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_424_condf__satsimp_trigsimp():
     x = Symbol('x')
@@ -11608,7 +11608,7 @@ def sp_acj4_424_condf__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-424-condf · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_424_condf__satrefine_simplify():
     x = Symbol('x')
@@ -11720,7 +11720,7 @@ def sp_acj4_424_condf__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-428-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_428_cond__satassume_ask():
     x = Symbol('x')
@@ -11732,7 +11732,7 @@ def sp_acj4_428_cond__satassume_ask():
 
 
 # ---- case sp-acj4-428-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_428_cond__satrefine_refine():
     x = Symbol('x')
@@ -11745,7 +11745,7 @@ def sp_acj4_428_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-428-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_428_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -11758,7 +11758,7 @@ def sp_acj4_428_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-428-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_428_cond__satrefine_simplify():
     x = Symbol('x')
@@ -11870,7 +11870,7 @@ def sp_acj4_428_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-428-cond3 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_428_cond3__satassume_ask():
     x = Symbol('x')
@@ -11882,7 +11882,7 @@ def sp_acj4_428_cond3__satassume_ask():
 
 
 # ---- case sp-acj4-428-cond3 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_428_cond3__satrefine_refine():
     x = Symbol('x')
@@ -11895,7 +11895,7 @@ def sp_acj4_428_cond3__satrefine_refine():
 
 
 # ---- case sp-acj4-428-cond3 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_428_cond3__satsimp_trigsimp():
     x = Symbol('x')
@@ -11908,7 +11908,7 @@ def sp_acj4_428_cond3__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-428-cond3 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_428_cond3__satrefine_simplify():
     x = Symbol('x')
@@ -12020,7 +12020,7 @@ def sp_acj4_428_cond3__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-430-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_430_cond__satassume_ask():
     x = Symbol('x')
@@ -12032,7 +12032,7 @@ def sp_acj4_430_cond__satassume_ask():
 
 
 # ---- case sp-acj4-430-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered true (solved)
+# the run satrefine-refine-20261021-073817 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_430_cond__satrefine_refine():
     x = Symbol('x')
@@ -12045,7 +12045,7 @@ def sp_acj4_430_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-430-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_430_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -12058,7 +12058,7 @@ def sp_acj4_430_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-430-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered true (solved)
+# the run satrefine-simplify-20261021-073907 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_430_cond__satrefine_simplify():
     x = Symbol('x')
@@ -12170,7 +12170,7 @@ def sp_acj4_430_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-430-cond2 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_430_cond2__satassume_ask():
     x = Symbol('x')
@@ -12182,7 +12182,7 @@ def sp_acj4_430_cond2__satassume_ask():
 
 
 # ---- case sp-acj4-430-cond2 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_430_cond2__satrefine_refine():
     x = Symbol('x')
@@ -12195,7 +12195,7 @@ def sp_acj4_430_cond2__satrefine_refine():
 
 
 # ---- case sp-acj4-430-cond2 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_430_cond2__satsimp_trigsimp():
     x = Symbol('x')
@@ -12208,7 +12208,7 @@ def sp_acj4_430_cond2__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-430-cond2 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_430_cond2__satrefine_simplify():
     x = Symbol('x')
@@ -12320,7 +12320,7 @@ def sp_acj4_430_cond2__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-432-cond3 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_432_cond3__satassume_ask():
     x = Symbol('x')
@@ -12332,7 +12332,7 @@ def sp_acj4_432_cond3__satassume_ask():
 
 
 # ---- case sp-acj4-432-cond3 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_432_cond3__satrefine_refine():
     x = Symbol('x')
@@ -12345,7 +12345,7 @@ def sp_acj4_432_cond3__satrefine_refine():
 
 
 # ---- case sp-acj4-432-cond3 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_432_cond3__satsimp_trigsimp():
     x = Symbol('x')
@@ -12358,7 +12358,7 @@ def sp_acj4_432_cond3__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-432-cond3 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_432_cond3__satrefine_simplify():
     x = Symbol('x')
@@ -12470,7 +12470,7 @@ def sp_acj4_432_cond3__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-433-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_433_cond__satassume_ask():
     x = Symbol('x')
@@ -12482,7 +12482,7 @@ def sp_acj4_433_cond__satassume_ask():
 
 
 # ---- case sp-acj4-433-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered true (solved)
+# the run satrefine-refine-20261021-073817 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_433_cond__satrefine_refine():
     x = Symbol('x')
@@ -12495,7 +12495,7 @@ def sp_acj4_433_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-433-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_433_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -12508,7 +12508,7 @@ def sp_acj4_433_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-433-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered true (solved)
+# the run satrefine-simplify-20261021-073907 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_433_cond__satrefine_simplify():
     x = Symbol('x')
@@ -12620,7 +12620,7 @@ def sp_acj4_433_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-433-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_433_condf__satassume_ask():
     x = Symbol('x')
@@ -12632,7 +12632,7 @@ def sp_acj4_433_condf__satassume_ask():
 
 
 # ---- case sp-acj4-433-condf · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_433_condf__satrefine_refine():
     x = Symbol('x')
@@ -12645,7 +12645,7 @@ def sp_acj4_433_condf__satrefine_refine():
 
 
 # ---- case sp-acj4-433-condf · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_433_condf__satsimp_trigsimp():
     x = Symbol('x')
@@ -12658,7 +12658,7 @@ def sp_acj4_433_condf__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-433-condf · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_433_condf__satrefine_simplify():
     x = Symbol('x')
@@ -12770,7 +12770,7 @@ def sp_acj4_433_condf__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-442-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_442_cond__satassume_ask():
     x = Symbol('x')
@@ -12782,7 +12782,7 @@ def sp_acj4_442_cond__satassume_ask():
 
 
 # ---- case sp-acj4-442-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_442_cond__satrefine_refine():
     x = Symbol('x')
@@ -12795,7 +12795,7 @@ def sp_acj4_442_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-442-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_442_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -12808,7 +12808,7 @@ def sp_acj4_442_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-442-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_442_cond__satrefine_simplify():
     x = Symbol('x')
@@ -12920,7 +12920,7 @@ def sp_acj4_442_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-442-cond4 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_442_cond4__satassume_ask():
     x = Symbol('x')
@@ -12932,7 +12932,7 @@ def sp_acj4_442_cond4__satassume_ask():
 
 
 # ---- case sp-acj4-442-cond4 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_442_cond4__satrefine_refine():
     x = Symbol('x')
@@ -12945,7 +12945,7 @@ def sp_acj4_442_cond4__satrefine_refine():
 
 
 # ---- case sp-acj4-442-cond4 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_442_cond4__satsimp_trigsimp():
     x = Symbol('x')
@@ -12958,7 +12958,7 @@ def sp_acj4_442_cond4__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-442-cond4 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_442_cond4__satrefine_simplify():
     x = Symbol('x')
@@ -13070,7 +13070,7 @@ def sp_acj4_442_cond4__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-46-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_46_cond__satassume_ask():
     x = Symbol('x')
@@ -13082,7 +13082,7 @@ def sp_acj4_46_cond__satassume_ask():
 
 
 # ---- case sp-acj4-46-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_46_cond__satrefine_refine():
     x = Symbol('x')
@@ -13095,7 +13095,7 @@ def sp_acj4_46_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-46-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_46_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -13108,7 +13108,7 @@ def sp_acj4_46_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-46-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_46_cond__satrefine_simplify():
     x = Symbol('x')
@@ -13220,7 +13220,7 @@ def sp_acj4_46_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-5-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_5_cond__satassume_ask():
     x = Symbol('x')
@@ -13232,7 +13232,7 @@ def sp_acj4_5_cond__satassume_ask():
 
 
 # ---- case sp-acj4-5-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_5_cond__satrefine_refine():
     x = Symbol('x')
@@ -13245,7 +13245,7 @@ def sp_acj4_5_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-5-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_5_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -13258,7 +13258,7 @@ def sp_acj4_5_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-5-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_5_cond__satrefine_simplify():
     x = Symbol('x')
@@ -13370,7 +13370,7 @@ def sp_acj4_5_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-55-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_55_cond__satassume_ask():
     x = Symbol('x')
@@ -13382,7 +13382,7 @@ def sp_acj4_55_cond__satassume_ask():
 
 
 # ---- case sp-acj4-55-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered true (solved)
+# the run satrefine-refine-20261021-073817 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_55_cond__satrefine_refine():
     x = Symbol('x')
@@ -13395,7 +13395,7 @@ def sp_acj4_55_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-55-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_55_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -13408,7 +13408,7 @@ def sp_acj4_55_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-55-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered true (solved)
+# the run satrefine-simplify-20261021-073907 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_55_cond__satrefine_simplify():
     x = Symbol('x')
@@ -13520,7 +13520,7 @@ def sp_acj4_55_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-56-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_56_cond__satassume_ask():
     x = Symbol('x')
@@ -13532,7 +13532,7 @@ def sp_acj4_56_cond__satassume_ask():
 
 
 # ---- case sp-acj4-56-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered true (solved)
+# the run satrefine-refine-20261021-073817 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_56_cond__satrefine_refine():
     x = Symbol('x')
@@ -13545,7 +13545,7 @@ def sp_acj4_56_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-56-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_56_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -13558,7 +13558,7 @@ def sp_acj4_56_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-56-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered true (solved)
+# the run satrefine-simplify-20261021-073907 answered true (solved)
 @_in(_SETUP2)
 def sp_acj4_56_cond__satrefine_simplify():
     x = Symbol('x')
@@ -13670,7 +13670,7 @@ def sp_acj4_56_cond__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-56-condf · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_56_condf__satassume_ask():
     x = Symbol('x')
@@ -13682,7 +13682,7 @@ def sp_acj4_56_condf__satassume_ask():
 
 
 # ---- case sp-acj4-56-condf · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_56_condf__satrefine_refine():
     x = Symbol('x')
@@ -13695,7 +13695,7 @@ def sp_acj4_56_condf__satrefine_refine():
 
 
 # ---- case sp-acj4-56-condf · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_56_condf__satsimp_trigsimp():
     x = Symbol('x')
@@ -13708,7 +13708,7 @@ def sp_acj4_56_condf__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-56-condf · expected false · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_56_condf__satrefine_simplify():
     x = Symbol('x')
@@ -13820,7 +13820,7 @@ def sp_acj4_56_condf__sympy_extras_simplify():
 
 
 # ---- case sp-acj4-9-cond · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261020-122819 answered null (no verdict)
+# the run satassume-ask-20261021-073857 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_9_cond__satassume_ask():
     x = Symbol('x')
@@ -13832,7 +13832,7 @@ def sp_acj4_9_cond__satassume_ask():
 
 
 # ---- case sp-acj4-9-cond · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261020-122740 answered null (no verdict)
+# the run satrefine-refine-20261021-073817 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_9_cond__satrefine_refine():
     x = Symbol('x')
@@ -13845,7 +13845,7 @@ def sp_acj4_9_cond__satrefine_refine():
 
 
 # ---- case sp-acj4-9-cond · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261020-122909 answered null (no verdict)
+# the run satsimp-trigsimp-20261021-073947 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_9_cond__satsimp_trigsimp():
     x = Symbol('x')
@@ -13858,7 +13858,7 @@ def sp_acj4_9_cond__satsimp_trigsimp():
 
 
 # ---- case sp-acj4-9-cond · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261020-122830 answered null (no verdict)
+# the run satrefine-simplify-20261021-073907 answered null (no verdict)
 @_in(_SETUP2)
 def sp_acj4_9_cond__satrefine_simplify():
     x = Symbol('x')
@@ -13971,10 +13971,10 @@ def sp_acj4_9_cond__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-1-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_1_cond__satassume_ask),
-    ('sp-acj4-1-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_1_cond__satrefine_refine),
-    ('sp-acj4-1-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_1_cond__satsimp_trigsimp),
-    ('sp-acj4-1-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_1_cond__satrefine_simplify),
+    ('sp-acj4-1-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_1_cond__satassume_ask),
+    ('sp-acj4-1-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_1_cond__satrefine_refine),
+    ('sp-acj4-1-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_1_cond__satsimp_trigsimp),
+    ('sp-acj4-1-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_1_cond__satrefine_simplify),
     ('sp-acj4-1-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_1_cond__sympy_auto),
     ('sp-acj4-1-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_1_cond__sympy_ask),
     ('sp-acj4-1-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_1_cond__sympy_satask),
@@ -13983,10 +13983,10 @@ CASES = [
     ('sp-acj4-1-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_1_cond__sympy_extras_ask),
     ('sp-acj4-1-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_1_cond__sympy_extras_refine),
     ('sp-acj4-1-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_1_cond__sympy_extras_simplify),
-    ('sp-acj4-108-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261020-122819', sp_acj4_108_condf__satassume_ask),
-    ('sp-acj4-108-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261020-122740', sp_acj4_108_condf__satrefine_refine),
-    ('sp-acj4-108-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_108_condf__satsimp_trigsimp),
-    ('sp-acj4-108-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_108_condf__satrefine_simplify),
+    ('sp-acj4-108-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261021-073857', sp_acj4_108_condf__satassume_ask),
+    ('sp-acj4-108-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261021-073817', sp_acj4_108_condf__satrefine_refine),
+    ('sp-acj4-108-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_108_condf__satsimp_trigsimp),
+    ('sp-acj4-108-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_108_condf__satrefine_simplify),
     ('sp-acj4-108-condf', 'sympy-auto', 'false', 'null', 'sympy-auto-20261020-064252', sp_acj4_108_condf__sympy_auto),
     ('sp-acj4-108-condf', 'sympy-ask', 'false', 'null', 'sympy-ask-20261020-064258', sp_acj4_108_condf__sympy_ask),
     ('sp-acj4-108-condf', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-072057', sp_acj4_108_condf__sympy_satask),
@@ -13995,10 +13995,10 @@ CASES = [
     ('sp-acj4-108-condf', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_108_condf__sympy_extras_ask),
     ('sp-acj4-108-condf', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_108_condf__sympy_extras_refine),
     ('sp-acj4-108-condf', 'sympy-extras-simplify', 'false', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_108_condf__sympy_extras_simplify),
-    ('sp-acj4-124-condf', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261020-122819', sp_acj4_124_condf__satassume_ask),
-    ('sp-acj4-124-condf', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261020-122740', sp_acj4_124_condf__satrefine_refine),
-    ('sp-acj4-124-condf', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_124_condf__satsimp_trigsimp),
-    ('sp-acj4-124-condf', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_124_condf__satrefine_simplify),
+    ('sp-acj4-124-condf', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261021-073857', sp_acj4_124_condf__satassume_ask),
+    ('sp-acj4-124-condf', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261021-073817', sp_acj4_124_condf__satrefine_refine),
+    ('sp-acj4-124-condf', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_124_condf__satsimp_trigsimp),
+    ('sp-acj4-124-condf', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_124_condf__satrefine_simplify),
     ('sp-acj4-124-condf', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261020-064252', sp_acj4_124_condf__sympy_auto),
     ('sp-acj4-124-condf', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261020-064258', sp_acj4_124_condf__sympy_ask),
     ('sp-acj4-124-condf', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261020-072057', sp_acj4_124_condf__sympy_satask),
@@ -14007,20 +14007,20 @@ CASES = [
     ('sp-acj4-124-condf', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_124_condf__sympy_extras_ask),
     ('sp-acj4-124-condf', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_124_condf__sympy_extras_refine),
     ('sp-acj4-124-condf', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_124_condf__sympy_extras_simplify),
-    ('sp-acj4-127-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261020-122819', sp_acj4_127_condf__satassume_ask),
-    ('sp-acj4-127-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261020-122740', sp_acj4_127_condf__satrefine_refine),
-    ('sp-acj4-127-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_127_condf__satsimp_trigsimp),
-    ('sp-acj4-127-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_127_condf__satrefine_simplify),
+    ('sp-acj4-127-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261021-073857', sp_acj4_127_condf__satassume_ask),
+    ('sp-acj4-127-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261021-073817', sp_acj4_127_condf__satrefine_refine),
+    ('sp-acj4-127-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_127_condf__satsimp_trigsimp),
+    ('sp-acj4-127-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_127_condf__satrefine_simplify),
     ('sp-acj4-127-condf', 'sympy-auto', 'false', 'null', 'sympy-auto-20261020-064252', sp_acj4_127_condf__sympy_auto),
     ('sp-acj4-127-condf', 'sympy-ask', 'false', 'null', 'sympy-ask-20261020-064258', sp_acj4_127_condf__sympy_ask),
     ('sp-acj4-127-condf', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-072057', sp_acj4_127_condf__sympy_satask),
     ('sp-acj4-127-condf', 'sympy-refine', 'false', 'null', 'sympy-refine-20261020-064447', sp_acj4_127_condf__sympy_refine),
     ('sp-acj4-127-condf', 'sympy-simplify', 'false', 'null', 'sympy-simplify-20261020-064757', sp_acj4_127_condf__sympy_simplify),
     ('sp-acj4-127-condf', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_127_condf__sympy_extras_ask),
-    ('sp-acj4-128-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_128_cond2__satassume_ask),
-    ('sp-acj4-128-cond2', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_128_cond2__satrefine_refine),
-    ('sp-acj4-128-cond2', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_128_cond2__satsimp_trigsimp),
-    ('sp-acj4-128-cond2', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_128_cond2__satrefine_simplify),
+    ('sp-acj4-128-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_128_cond2__satassume_ask),
+    ('sp-acj4-128-cond2', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_128_cond2__satrefine_refine),
+    ('sp-acj4-128-cond2', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_128_cond2__satsimp_trigsimp),
+    ('sp-acj4-128-cond2', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_128_cond2__satrefine_simplify),
     ('sp-acj4-128-cond2', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_128_cond2__sympy_auto),
     ('sp-acj4-128-cond2', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_128_cond2__sympy_ask),
     ('sp-acj4-128-cond2', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_128_cond2__sympy_satask),
@@ -14029,10 +14029,10 @@ CASES = [
     ('sp-acj4-128-cond2', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_128_cond2__sympy_extras_ask),
     ('sp-acj4-128-cond2', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_128_cond2__sympy_extras_refine),
     ('sp-acj4-128-cond2', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_128_cond2__sympy_extras_simplify),
-    ('sp-acj4-128-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261020-122819', sp_acj4_128_condf__satassume_ask),
-    ('sp-acj4-128-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261020-122740', sp_acj4_128_condf__satrefine_refine),
-    ('sp-acj4-128-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_128_condf__satsimp_trigsimp),
-    ('sp-acj4-128-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_128_condf__satrefine_simplify),
+    ('sp-acj4-128-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261021-073857', sp_acj4_128_condf__satassume_ask),
+    ('sp-acj4-128-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261021-073817', sp_acj4_128_condf__satrefine_refine),
+    ('sp-acj4-128-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_128_condf__satsimp_trigsimp),
+    ('sp-acj4-128-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_128_condf__satrefine_simplify),
     ('sp-acj4-128-condf', 'sympy-auto', 'false', 'null', 'sympy-auto-20261020-064252', sp_acj4_128_condf__sympy_auto),
     ('sp-acj4-128-condf', 'sympy-ask', 'false', 'null', 'sympy-ask-20261020-064258', sp_acj4_128_condf__sympy_ask),
     ('sp-acj4-128-condf', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-072057', sp_acj4_128_condf__sympy_satask),
@@ -14041,10 +14041,10 @@ CASES = [
     ('sp-acj4-128-condf', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_128_condf__sympy_extras_ask),
     ('sp-acj4-128-condf', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_128_condf__sympy_extras_refine),
     ('sp-acj4-128-condf', 'sympy-extras-simplify', 'false', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_128_condf__sympy_extras_simplify),
-    ('sp-acj4-129-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261020-122819', sp_acj4_129_cond__satassume_ask),
-    ('sp-acj4-129-cond', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261020-122740', sp_acj4_129_cond__satrefine_refine),
-    ('sp-acj4-129-cond', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_129_cond__satsimp_trigsimp),
-    ('sp-acj4-129-cond', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_129_cond__satrefine_simplify),
+    ('sp-acj4-129-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261021-073857', sp_acj4_129_cond__satassume_ask),
+    ('sp-acj4-129-cond', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261021-073817', sp_acj4_129_cond__satrefine_refine),
+    ('sp-acj4-129-cond', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_129_cond__satsimp_trigsimp),
+    ('sp-acj4-129-cond', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_129_cond__satrefine_simplify),
     ('sp-acj4-129-cond', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261020-064252', sp_acj4_129_cond__sympy_auto),
     ('sp-acj4-129-cond', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261020-064258', sp_acj4_129_cond__sympy_ask),
     ('sp-acj4-129-cond', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261020-072057', sp_acj4_129_cond__sympy_satask),
@@ -14053,10 +14053,10 @@ CASES = [
     ('sp-acj4-129-cond', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_129_cond__sympy_extras_ask),
     ('sp-acj4-129-cond', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_129_cond__sympy_extras_refine),
     ('sp-acj4-129-cond', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_129_cond__sympy_extras_simplify),
-    ('sp-acj4-130-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_130_cond__satassume_ask),
-    ('sp-acj4-130-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_130_cond__satrefine_refine),
-    ('sp-acj4-130-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_130_cond__satsimp_trigsimp),
-    ('sp-acj4-130-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_130_cond__satrefine_simplify),
+    ('sp-acj4-130-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_130_cond__satassume_ask),
+    ('sp-acj4-130-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_130_cond__satrefine_refine),
+    ('sp-acj4-130-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_130_cond__satsimp_trigsimp),
+    ('sp-acj4-130-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_130_cond__satrefine_simplify),
     ('sp-acj4-130-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_130_cond__sympy_auto),
     ('sp-acj4-130-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_130_cond__sympy_ask),
     ('sp-acj4-130-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_130_cond__sympy_satask),
@@ -14065,10 +14065,10 @@ CASES = [
     ('sp-acj4-130-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_130_cond__sympy_extras_ask),
     ('sp-acj4-130-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_130_cond__sympy_extras_refine),
     ('sp-acj4-130-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_130_cond__sympy_extras_simplify),
-    ('sp-acj4-131-condf', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261020-122819', sp_acj4_131_condf__satassume_ask),
-    ('sp-acj4-131-condf', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261020-122740', sp_acj4_131_condf__satrefine_refine),
-    ('sp-acj4-131-condf', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_131_condf__satsimp_trigsimp),
-    ('sp-acj4-131-condf', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_131_condf__satrefine_simplify),
+    ('sp-acj4-131-condf', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261021-073857', sp_acj4_131_condf__satassume_ask),
+    ('sp-acj4-131-condf', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261021-073817', sp_acj4_131_condf__satrefine_refine),
+    ('sp-acj4-131-condf', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_131_condf__satsimp_trigsimp),
+    ('sp-acj4-131-condf', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_131_condf__satrefine_simplify),
     ('sp-acj4-131-condf', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261020-064252', sp_acj4_131_condf__sympy_auto),
     ('sp-acj4-131-condf', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261020-064258', sp_acj4_131_condf__sympy_ask),
     ('sp-acj4-131-condf', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261020-072057', sp_acj4_131_condf__sympy_satask),
@@ -14077,10 +14077,10 @@ CASES = [
     ('sp-acj4-131-condf', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_131_condf__sympy_extras_ask),
     ('sp-acj4-131-condf', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_131_condf__sympy_extras_refine),
     ('sp-acj4-131-condf', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_131_condf__sympy_extras_simplify),
-    ('sp-acj4-132-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_132_cond__satassume_ask),
-    ('sp-acj4-132-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_132_cond__satrefine_refine),
-    ('sp-acj4-132-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_132_cond__satsimp_trigsimp),
-    ('sp-acj4-132-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_132_cond__satrefine_simplify),
+    ('sp-acj4-132-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_132_cond__satassume_ask),
+    ('sp-acj4-132-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_132_cond__satrefine_refine),
+    ('sp-acj4-132-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_132_cond__satsimp_trigsimp),
+    ('sp-acj4-132-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_132_cond__satrefine_simplify),
     ('sp-acj4-132-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_132_cond__sympy_auto),
     ('sp-acj4-132-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_132_cond__sympy_ask),
     ('sp-acj4-132-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_132_cond__sympy_satask),
@@ -14089,10 +14089,10 @@ CASES = [
     ('sp-acj4-132-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_132_cond__sympy_extras_ask),
     ('sp-acj4-132-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_132_cond__sympy_extras_refine),
     ('sp-acj4-132-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_132_cond__sympy_extras_simplify),
-    ('sp-acj4-133-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261020-122819', sp_acj4_133_condf__satassume_ask),
-    ('sp-acj4-133-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261020-122740', sp_acj4_133_condf__satrefine_refine),
-    ('sp-acj4-133-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_133_condf__satsimp_trigsimp),
-    ('sp-acj4-133-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_133_condf__satrefine_simplify),
+    ('sp-acj4-133-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261021-073857', sp_acj4_133_condf__satassume_ask),
+    ('sp-acj4-133-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261021-073817', sp_acj4_133_condf__satrefine_refine),
+    ('sp-acj4-133-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_133_condf__satsimp_trigsimp),
+    ('sp-acj4-133-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_133_condf__satrefine_simplify),
     ('sp-acj4-133-condf', 'sympy-auto', 'false', 'null', 'sympy-auto-20261020-064252', sp_acj4_133_condf__sympy_auto),
     ('sp-acj4-133-condf', 'sympy-ask', 'false', 'null', 'sympy-ask-20261020-064258', sp_acj4_133_condf__sympy_ask),
     ('sp-acj4-133-condf', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-072057', sp_acj4_133_condf__sympy_satask),
@@ -14101,10 +14101,10 @@ CASES = [
     ('sp-acj4-133-condf', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_133_condf__sympy_extras_ask),
     ('sp-acj4-133-condf', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_133_condf__sympy_extras_refine),
     ('sp-acj4-133-condf', 'sympy-extras-simplify', 'false', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_133_condf__sympy_extras_simplify),
-    ('sp-acj4-136-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_136_cond__satassume_ask),
-    ('sp-acj4-136-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-122740', sp_acj4_136_cond__satrefine_refine),
-    ('sp-acj4-136-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_136_cond__satsimp_trigsimp),
-    ('sp-acj4-136-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-122830', sp_acj4_136_cond__satrefine_simplify),
+    ('sp-acj4-136-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_136_cond__satassume_ask),
+    ('sp-acj4-136-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261021-073817', sp_acj4_136_cond__satrefine_refine),
+    ('sp-acj4-136-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_136_cond__satsimp_trigsimp),
+    ('sp-acj4-136-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261021-073907', sp_acj4_136_cond__satrefine_simplify),
     ('sp-acj4-136-cond', 'sympy-auto', 'true', 'true', 'sympy-auto-20261020-064252', sp_acj4_136_cond__sympy_auto),
     ('sp-acj4-136-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_136_cond__sympy_ask),
     ('sp-acj4-136-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_136_cond__sympy_satask),
@@ -14113,10 +14113,10 @@ CASES = [
     ('sp-acj4-136-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_136_cond__sympy_extras_ask),
     ('sp-acj4-136-cond', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261020-065818', sp_acj4_136_cond__sympy_extras_refine),
     ('sp-acj4-136-cond', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261020-070552', sp_acj4_136_cond__sympy_extras_simplify),
-    ('sp-acj4-137-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_137_cond__satassume_ask),
-    ('sp-acj4-137-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-122740', sp_acj4_137_cond__satrefine_refine),
-    ('sp-acj4-137-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_137_cond__satsimp_trigsimp),
-    ('sp-acj4-137-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-122830', sp_acj4_137_cond__satrefine_simplify),
+    ('sp-acj4-137-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_137_cond__satassume_ask),
+    ('sp-acj4-137-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261021-073817', sp_acj4_137_cond__satrefine_refine),
+    ('sp-acj4-137-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_137_cond__satsimp_trigsimp),
+    ('sp-acj4-137-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261021-073907', sp_acj4_137_cond__satrefine_simplify),
     ('sp-acj4-137-cond', 'sympy-auto', 'true', 'true', 'sympy-auto-20261020-064252', sp_acj4_137_cond__sympy_auto),
     ('sp-acj4-137-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_137_cond__sympy_ask),
     ('sp-acj4-137-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_137_cond__sympy_satask),
@@ -14125,10 +14125,10 @@ CASES = [
     ('sp-acj4-137-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_137_cond__sympy_extras_ask),
     ('sp-acj4-137-cond', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261020-065818', sp_acj4_137_cond__sympy_extras_refine),
     ('sp-acj4-137-cond', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261020-070552', sp_acj4_137_cond__sympy_extras_simplify),
-    ('sp-acj4-145-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_145_cond2__satassume_ask),
-    ('sp-acj4-145-cond2', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_145_cond2__satrefine_refine),
-    ('sp-acj4-145-cond2', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_145_cond2__satsimp_trigsimp),
-    ('sp-acj4-145-cond2', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_145_cond2__satrefine_simplify),
+    ('sp-acj4-145-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_145_cond2__satassume_ask),
+    ('sp-acj4-145-cond2', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_145_cond2__satrefine_refine),
+    ('sp-acj4-145-cond2', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_145_cond2__satsimp_trigsimp),
+    ('sp-acj4-145-cond2', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_145_cond2__satrefine_simplify),
     ('sp-acj4-145-cond2', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_145_cond2__sympy_auto),
     ('sp-acj4-145-cond2', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_145_cond2__sympy_ask),
     ('sp-acj4-145-cond2', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_145_cond2__sympy_satask),
@@ -14137,10 +14137,10 @@ CASES = [
     ('sp-acj4-145-cond2', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_145_cond2__sympy_extras_ask),
     ('sp-acj4-145-cond2', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_145_cond2__sympy_extras_refine),
     ('sp-acj4-145-cond2', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_145_cond2__sympy_extras_simplify),
-    ('sp-acj4-145-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261020-122819', sp_acj4_145_condf__satassume_ask),
-    ('sp-acj4-145-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261020-122740', sp_acj4_145_condf__satrefine_refine),
-    ('sp-acj4-145-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_145_condf__satsimp_trigsimp),
-    ('sp-acj4-145-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_145_condf__satrefine_simplify),
+    ('sp-acj4-145-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261021-073857', sp_acj4_145_condf__satassume_ask),
+    ('sp-acj4-145-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261021-073817', sp_acj4_145_condf__satrefine_refine),
+    ('sp-acj4-145-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_145_condf__satsimp_trigsimp),
+    ('sp-acj4-145-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_145_condf__satrefine_simplify),
     ('sp-acj4-145-condf', 'sympy-auto', 'false', 'null', 'sympy-auto-20261020-064252', sp_acj4_145_condf__sympy_auto),
     ('sp-acj4-145-condf', 'sympy-ask', 'false', 'null', 'sympy-ask-20261020-064258', sp_acj4_145_condf__sympy_ask),
     ('sp-acj4-145-condf', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-072057', sp_acj4_145_condf__sympy_satask),
@@ -14149,10 +14149,10 @@ CASES = [
     ('sp-acj4-145-condf', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_145_condf__sympy_extras_ask),
     ('sp-acj4-145-condf', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_145_condf__sympy_extras_refine),
     ('sp-acj4-145-condf', 'sympy-extras-simplify', 'false', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_145_condf__sympy_extras_simplify),
-    ('sp-acj4-147-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261020-122819', sp_acj4_147_cond__satassume_ask),
-    ('sp-acj4-147-cond', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261020-122740', sp_acj4_147_cond__satrefine_refine),
-    ('sp-acj4-147-cond', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_147_cond__satsimp_trigsimp),
-    ('sp-acj4-147-cond', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_147_cond__satrefine_simplify),
+    ('sp-acj4-147-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261021-073857', sp_acj4_147_cond__satassume_ask),
+    ('sp-acj4-147-cond', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261021-073817', sp_acj4_147_cond__satrefine_refine),
+    ('sp-acj4-147-cond', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_147_cond__satsimp_trigsimp),
+    ('sp-acj4-147-cond', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_147_cond__satrefine_simplify),
     ('sp-acj4-147-cond', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261020-064252', sp_acj4_147_cond__sympy_auto),
     ('sp-acj4-147-cond', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261020-064258', sp_acj4_147_cond__sympy_ask),
     ('sp-acj4-147-cond', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261020-072057', sp_acj4_147_cond__sympy_satask),
@@ -14161,10 +14161,10 @@ CASES = [
     ('sp-acj4-147-cond', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_147_cond__sympy_extras_ask),
     ('sp-acj4-147-cond', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_147_cond__sympy_extras_refine),
     ('sp-acj4-147-cond', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_147_cond__sympy_extras_simplify),
-    ('sp-acj4-151-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_151_cond__satassume_ask),
-    ('sp-acj4-151-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_151_cond__satrefine_refine),
-    ('sp-acj4-151-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_151_cond__satsimp_trigsimp),
-    ('sp-acj4-151-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_151_cond__satrefine_simplify),
+    ('sp-acj4-151-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_151_cond__satassume_ask),
+    ('sp-acj4-151-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_151_cond__satrefine_refine),
+    ('sp-acj4-151-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_151_cond__satsimp_trigsimp),
+    ('sp-acj4-151-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_151_cond__satrefine_simplify),
     ('sp-acj4-151-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_151_cond__sympy_auto),
     ('sp-acj4-151-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_151_cond__sympy_ask),
     ('sp-acj4-151-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_151_cond__sympy_satask),
@@ -14173,10 +14173,10 @@ CASES = [
     ('sp-acj4-151-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_151_cond__sympy_extras_ask),
     ('sp-acj4-151-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_151_cond__sympy_extras_refine),
     ('sp-acj4-151-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_151_cond__sympy_extras_simplify),
-    ('sp-acj4-156-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_156_cond__satassume_ask),
-    ('sp-acj4-156-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_156_cond__satrefine_refine),
-    ('sp-acj4-156-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_156_cond__satsimp_trigsimp),
-    ('sp-acj4-156-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_156_cond__satrefine_simplify),
+    ('sp-acj4-156-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_156_cond__satassume_ask),
+    ('sp-acj4-156-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_156_cond__satrefine_refine),
+    ('sp-acj4-156-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_156_cond__satsimp_trigsimp),
+    ('sp-acj4-156-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_156_cond__satrefine_simplify),
     ('sp-acj4-156-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_156_cond__sympy_auto),
     ('sp-acj4-156-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_156_cond__sympy_ask),
     ('sp-acj4-156-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_156_cond__sympy_satask),
@@ -14185,10 +14185,10 @@ CASES = [
     ('sp-acj4-156-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_156_cond__sympy_extras_ask),
     ('sp-acj4-156-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_156_cond__sympy_extras_refine),
     ('sp-acj4-156-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_156_cond__sympy_extras_simplify),
-    ('sp-acj4-159-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_159_cond2__satassume_ask),
-    ('sp-acj4-159-cond2', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_159_cond2__satrefine_refine),
-    ('sp-acj4-159-cond2', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_159_cond2__satsimp_trigsimp),
-    ('sp-acj4-159-cond2', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_159_cond2__satrefine_simplify),
+    ('sp-acj4-159-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_159_cond2__satassume_ask),
+    ('sp-acj4-159-cond2', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_159_cond2__satrefine_refine),
+    ('sp-acj4-159-cond2', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_159_cond2__satsimp_trigsimp),
+    ('sp-acj4-159-cond2', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_159_cond2__satrefine_simplify),
     ('sp-acj4-159-cond2', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_159_cond2__sympy_auto),
     ('sp-acj4-159-cond2', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_159_cond2__sympy_ask),
     ('sp-acj4-159-cond2', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_159_cond2__sympy_satask),
@@ -14197,10 +14197,10 @@ CASES = [
     ('sp-acj4-159-cond2', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_159_cond2__sympy_extras_ask),
     ('sp-acj4-159-cond2', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_159_cond2__sympy_extras_refine),
     ('sp-acj4-159-cond2', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_159_cond2__sympy_extras_simplify),
-    ('sp-acj4-159-cond3', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_159_cond3__satassume_ask),
-    ('sp-acj4-159-cond3', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_159_cond3__satrefine_refine),
-    ('sp-acj4-159-cond3', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_159_cond3__satsimp_trigsimp),
-    ('sp-acj4-159-cond3', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_159_cond3__satrefine_simplify),
+    ('sp-acj4-159-cond3', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_159_cond3__satassume_ask),
+    ('sp-acj4-159-cond3', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_159_cond3__satrefine_refine),
+    ('sp-acj4-159-cond3', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_159_cond3__satsimp_trigsimp),
+    ('sp-acj4-159-cond3', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_159_cond3__satrefine_simplify),
     ('sp-acj4-159-cond3', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_159_cond3__sympy_auto),
     ('sp-acj4-159-cond3', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_159_cond3__sympy_ask),
     ('sp-acj4-159-cond3', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_159_cond3__sympy_satask),
@@ -14209,10 +14209,10 @@ CASES = [
     ('sp-acj4-159-cond3', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_159_cond3__sympy_extras_ask),
     ('sp-acj4-159-cond3', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_159_cond3__sympy_extras_refine),
     ('sp-acj4-159-cond3', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_159_cond3__sympy_extras_simplify),
-    ('sp-acj4-162-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_162_cond__satassume_ask),
-    ('sp-acj4-162-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_162_cond__satrefine_refine),
-    ('sp-acj4-162-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_162_cond__satsimp_trigsimp),
-    ('sp-acj4-162-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_162_cond__satrefine_simplify),
+    ('sp-acj4-162-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_162_cond__satassume_ask),
+    ('sp-acj4-162-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_162_cond__satrefine_refine),
+    ('sp-acj4-162-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_162_cond__satsimp_trigsimp),
+    ('sp-acj4-162-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_162_cond__satrefine_simplify),
     ('sp-acj4-162-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_162_cond__sympy_auto),
     ('sp-acj4-162-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_162_cond__sympy_ask),
     ('sp-acj4-162-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_162_cond__sympy_satask),
@@ -14221,10 +14221,10 @@ CASES = [
     ('sp-acj4-162-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_162_cond__sympy_extras_ask),
     ('sp-acj4-162-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_162_cond__sympy_extras_refine),
     ('sp-acj4-162-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_162_cond__sympy_extras_simplify),
-    ('sp-acj4-162-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261020-122819', sp_acj4_162_condf__satassume_ask),
-    ('sp-acj4-162-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261020-122740', sp_acj4_162_condf__satrefine_refine),
-    ('sp-acj4-162-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_162_condf__satsimp_trigsimp),
-    ('sp-acj4-162-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_162_condf__satrefine_simplify),
+    ('sp-acj4-162-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261021-073857', sp_acj4_162_condf__satassume_ask),
+    ('sp-acj4-162-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261021-073817', sp_acj4_162_condf__satrefine_refine),
+    ('sp-acj4-162-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_162_condf__satsimp_trigsimp),
+    ('sp-acj4-162-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_162_condf__satrefine_simplify),
     ('sp-acj4-162-condf', 'sympy-auto', 'false', 'null', 'sympy-auto-20261020-064252', sp_acj4_162_condf__sympy_auto),
     ('sp-acj4-162-condf', 'sympy-ask', 'false', 'null', 'sympy-ask-20261020-064258', sp_acj4_162_condf__sympy_ask),
     ('sp-acj4-162-condf', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-072057', sp_acj4_162_condf__sympy_satask),
@@ -14233,10 +14233,10 @@ CASES = [
     ('sp-acj4-162-condf', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_162_condf__sympy_extras_ask),
     ('sp-acj4-162-condf', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_162_condf__sympy_extras_refine),
     ('sp-acj4-162-condf', 'sympy-extras-simplify', 'false', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_162_condf__sympy_extras_simplify),
-    ('sp-acj4-171-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261020-122819', sp_acj4_171_cond__satassume_ask),
-    ('sp-acj4-171-cond', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261020-122740', sp_acj4_171_cond__satrefine_refine),
-    ('sp-acj4-171-cond', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_171_cond__satsimp_trigsimp),
-    ('sp-acj4-171-cond', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_171_cond__satrefine_simplify),
+    ('sp-acj4-171-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261021-073857', sp_acj4_171_cond__satassume_ask),
+    ('sp-acj4-171-cond', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261021-073817', sp_acj4_171_cond__satrefine_refine),
+    ('sp-acj4-171-cond', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_171_cond__satsimp_trigsimp),
+    ('sp-acj4-171-cond', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_171_cond__satrefine_simplify),
     ('sp-acj4-171-cond', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261020-064252', sp_acj4_171_cond__sympy_auto),
     ('sp-acj4-171-cond', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261020-064258', sp_acj4_171_cond__sympy_ask),
     ('sp-acj4-171-cond', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261020-072057', sp_acj4_171_cond__sympy_satask),
@@ -14245,10 +14245,10 @@ CASES = [
     ('sp-acj4-171-cond', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_171_cond__sympy_extras_ask),
     ('sp-acj4-171-cond', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_171_cond__sympy_extras_refine),
     ('sp-acj4-171-cond', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_171_cond__sympy_extras_simplify),
-    ('sp-acj4-171-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_171_cond2__satassume_ask),
-    ('sp-acj4-171-cond2', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_171_cond2__satrefine_refine),
-    ('sp-acj4-171-cond2', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_171_cond2__satsimp_trigsimp),
-    ('sp-acj4-171-cond2', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_171_cond2__satrefine_simplify),
+    ('sp-acj4-171-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_171_cond2__satassume_ask),
+    ('sp-acj4-171-cond2', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_171_cond2__satrefine_refine),
+    ('sp-acj4-171-cond2', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_171_cond2__satsimp_trigsimp),
+    ('sp-acj4-171-cond2', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_171_cond2__satrefine_simplify),
     ('sp-acj4-171-cond2', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_171_cond2__sympy_auto),
     ('sp-acj4-171-cond2', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_171_cond2__sympy_ask),
     ('sp-acj4-171-cond2', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_171_cond2__sympy_satask),
@@ -14257,10 +14257,10 @@ CASES = [
     ('sp-acj4-171-cond2', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_171_cond2__sympy_extras_ask),
     ('sp-acj4-171-cond2', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_171_cond2__sympy_extras_refine),
     ('sp-acj4-171-cond2', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_171_cond2__sympy_extras_simplify),
-    ('sp-acj4-179-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_179_cond__satassume_ask),
-    ('sp-acj4-179-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_179_cond__satrefine_refine),
-    ('sp-acj4-179-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_179_cond__satsimp_trigsimp),
-    ('sp-acj4-179-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_179_cond__satrefine_simplify),
+    ('sp-acj4-179-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_179_cond__satassume_ask),
+    ('sp-acj4-179-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_179_cond__satrefine_refine),
+    ('sp-acj4-179-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_179_cond__satsimp_trigsimp),
+    ('sp-acj4-179-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_179_cond__satrefine_simplify),
     ('sp-acj4-179-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_179_cond__sympy_auto),
     ('sp-acj4-179-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_179_cond__sympy_ask),
     ('sp-acj4-179-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_179_cond__sympy_satask),
@@ -14269,10 +14269,10 @@ CASES = [
     ('sp-acj4-179-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_179_cond__sympy_extras_ask),
     ('sp-acj4-179-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_179_cond__sympy_extras_refine),
     ('sp-acj4-179-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_179_cond__sympy_extras_simplify),
-    ('sp-acj4-180-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_180_cond__satassume_ask),
-    ('sp-acj4-180-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_180_cond__satrefine_refine),
-    ('sp-acj4-180-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_180_cond__satsimp_trigsimp),
-    ('sp-acj4-180-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_180_cond__satrefine_simplify),
+    ('sp-acj4-180-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_180_cond__satassume_ask),
+    ('sp-acj4-180-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_180_cond__satrefine_refine),
+    ('sp-acj4-180-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_180_cond__satsimp_trigsimp),
+    ('sp-acj4-180-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_180_cond__satrefine_simplify),
     ('sp-acj4-180-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_180_cond__sympy_auto),
     ('sp-acj4-180-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_180_cond__sympy_ask),
     ('sp-acj4-180-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_180_cond__sympy_satask),
@@ -14281,10 +14281,10 @@ CASES = [
     ('sp-acj4-180-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_180_cond__sympy_extras_ask),
     ('sp-acj4-180-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_180_cond__sympy_extras_refine),
     ('sp-acj4-180-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_180_cond__sympy_extras_simplify),
-    ('sp-acj4-181-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_181_cond__satassume_ask),
-    ('sp-acj4-181-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_181_cond__satrefine_refine),
-    ('sp-acj4-181-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_181_cond__satsimp_trigsimp),
-    ('sp-acj4-181-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_181_cond__satrefine_simplify),
+    ('sp-acj4-181-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_181_cond__satassume_ask),
+    ('sp-acj4-181-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_181_cond__satrefine_refine),
+    ('sp-acj4-181-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_181_cond__satsimp_trigsimp),
+    ('sp-acj4-181-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_181_cond__satrefine_simplify),
     ('sp-acj4-181-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_181_cond__sympy_auto),
     ('sp-acj4-181-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_181_cond__sympy_ask),
     ('sp-acj4-181-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_181_cond__sympy_satask),
@@ -14293,10 +14293,10 @@ CASES = [
     ('sp-acj4-181-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_181_cond__sympy_extras_ask),
     ('sp-acj4-181-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_181_cond__sympy_extras_refine),
     ('sp-acj4-181-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_181_cond__sympy_extras_simplify),
-    ('sp-acj4-183-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_183_cond__satassume_ask),
-    ('sp-acj4-183-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_183_cond__satrefine_refine),
-    ('sp-acj4-183-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_183_cond__satsimp_trigsimp),
-    ('sp-acj4-183-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_183_cond__satrefine_simplify),
+    ('sp-acj4-183-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_183_cond__satassume_ask),
+    ('sp-acj4-183-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_183_cond__satrefine_refine),
+    ('sp-acj4-183-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_183_cond__satsimp_trigsimp),
+    ('sp-acj4-183-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_183_cond__satrefine_simplify),
     ('sp-acj4-183-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_183_cond__sympy_auto),
     ('sp-acj4-183-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_183_cond__sympy_ask),
     ('sp-acj4-183-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_183_cond__sympy_satask),
@@ -14305,10 +14305,10 @@ CASES = [
     ('sp-acj4-183-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_183_cond__sympy_extras_ask),
     ('sp-acj4-183-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_183_cond__sympy_extras_refine),
     ('sp-acj4-183-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_183_cond__sympy_extras_simplify),
-    ('sp-acj4-186-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_186_cond__satassume_ask),
-    ('sp-acj4-186-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_186_cond__satrefine_refine),
-    ('sp-acj4-186-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_186_cond__satsimp_trigsimp),
-    ('sp-acj4-186-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_186_cond__satrefine_simplify),
+    ('sp-acj4-186-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_186_cond__satassume_ask),
+    ('sp-acj4-186-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_186_cond__satrefine_refine),
+    ('sp-acj4-186-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_186_cond__satsimp_trigsimp),
+    ('sp-acj4-186-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_186_cond__satrefine_simplify),
     ('sp-acj4-186-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_186_cond__sympy_auto),
     ('sp-acj4-186-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_186_cond__sympy_ask),
     ('sp-acj4-186-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_186_cond__sympy_satask),
@@ -14317,10 +14317,10 @@ CASES = [
     ('sp-acj4-186-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_186_cond__sympy_extras_ask),
     ('sp-acj4-186-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_186_cond__sympy_extras_refine),
     ('sp-acj4-186-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_186_cond__sympy_extras_simplify),
-    ('sp-acj4-187-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_187_cond__satassume_ask),
-    ('sp-acj4-187-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_187_cond__satrefine_refine),
-    ('sp-acj4-187-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_187_cond__satsimp_trigsimp),
-    ('sp-acj4-187-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_187_cond__satrefine_simplify),
+    ('sp-acj4-187-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_187_cond__satassume_ask),
+    ('sp-acj4-187-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_187_cond__satrefine_refine),
+    ('sp-acj4-187-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_187_cond__satsimp_trigsimp),
+    ('sp-acj4-187-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_187_cond__satrefine_simplify),
     ('sp-acj4-187-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_187_cond__sympy_auto),
     ('sp-acj4-187-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_187_cond__sympy_ask),
     ('sp-acj4-187-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_187_cond__sympy_satask),
@@ -14329,10 +14329,10 @@ CASES = [
     ('sp-acj4-187-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_187_cond__sympy_extras_ask),
     ('sp-acj4-187-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_187_cond__sympy_extras_refine),
     ('sp-acj4-187-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_187_cond__sympy_extras_simplify),
-    ('sp-acj4-190-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261020-122819', sp_acj4_190_condf__satassume_ask),
-    ('sp-acj4-190-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261020-122740', sp_acj4_190_condf__satrefine_refine),
-    ('sp-acj4-190-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_190_condf__satsimp_trigsimp),
-    ('sp-acj4-190-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_190_condf__satrefine_simplify),
+    ('sp-acj4-190-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261021-073857', sp_acj4_190_condf__satassume_ask),
+    ('sp-acj4-190-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261021-073817', sp_acj4_190_condf__satrefine_refine),
+    ('sp-acj4-190-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_190_condf__satsimp_trigsimp),
+    ('sp-acj4-190-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_190_condf__satrefine_simplify),
     ('sp-acj4-190-condf', 'sympy-auto', 'false', 'null', 'sympy-auto-20261020-064252', sp_acj4_190_condf__sympy_auto),
     ('sp-acj4-190-condf', 'sympy-ask', 'false', 'null', 'sympy-ask-20261020-064258', sp_acj4_190_condf__sympy_ask),
     ('sp-acj4-190-condf', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-072057', sp_acj4_190_condf__sympy_satask),
@@ -14341,10 +14341,10 @@ CASES = [
     ('sp-acj4-190-condf', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_190_condf__sympy_extras_ask),
     ('sp-acj4-190-condf', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_190_condf__sympy_extras_refine),
     ('sp-acj4-190-condf', 'sympy-extras-simplify', 'false', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_190_condf__sympy_extras_simplify),
-    ('sp-acj4-191-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261020-122819', sp_acj4_191_condf__satassume_ask),
-    ('sp-acj4-191-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261020-122740', sp_acj4_191_condf__satrefine_refine),
-    ('sp-acj4-191-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_191_condf__satsimp_trigsimp),
-    ('sp-acj4-191-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_191_condf__satrefine_simplify),
+    ('sp-acj4-191-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261021-073857', sp_acj4_191_condf__satassume_ask),
+    ('sp-acj4-191-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261021-073817', sp_acj4_191_condf__satrefine_refine),
+    ('sp-acj4-191-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_191_condf__satsimp_trigsimp),
+    ('sp-acj4-191-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_191_condf__satrefine_simplify),
     ('sp-acj4-191-condf', 'sympy-auto', 'false', 'null', 'sympy-auto-20261020-064252', sp_acj4_191_condf__sympy_auto),
     ('sp-acj4-191-condf', 'sympy-ask', 'false', 'null', 'sympy-ask-20261020-064258', sp_acj4_191_condf__sympy_ask),
     ('sp-acj4-191-condf', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-072057', sp_acj4_191_condf__sympy_satask),
@@ -14353,10 +14353,10 @@ CASES = [
     ('sp-acj4-191-condf', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_191_condf__sympy_extras_ask),
     ('sp-acj4-191-condf', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_191_condf__sympy_extras_refine),
     ('sp-acj4-191-condf', 'sympy-extras-simplify', 'false', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_191_condf__sympy_extras_simplify),
-    ('sp-acj4-196-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_196_cond2__satassume_ask),
-    ('sp-acj4-196-cond2', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_196_cond2__satrefine_refine),
-    ('sp-acj4-196-cond2', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_196_cond2__satsimp_trigsimp),
-    ('sp-acj4-196-cond2', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_196_cond2__satrefine_simplify),
+    ('sp-acj4-196-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_196_cond2__satassume_ask),
+    ('sp-acj4-196-cond2', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_196_cond2__satrefine_refine),
+    ('sp-acj4-196-cond2', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_196_cond2__satsimp_trigsimp),
+    ('sp-acj4-196-cond2', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_196_cond2__satrefine_simplify),
     ('sp-acj4-196-cond2', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_196_cond2__sympy_auto),
     ('sp-acj4-196-cond2', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_196_cond2__sympy_ask),
     ('sp-acj4-196-cond2', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_196_cond2__sympy_satask),
@@ -14365,10 +14365,10 @@ CASES = [
     ('sp-acj4-196-cond2', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_196_cond2__sympy_extras_ask),
     ('sp-acj4-196-cond2', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_196_cond2__sympy_extras_refine),
     ('sp-acj4-196-cond2', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_196_cond2__sympy_extras_simplify),
-    ('sp-acj4-20-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261020-122819', sp_acj4_20_condf__satassume_ask),
-    ('sp-acj4-20-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261020-122740', sp_acj4_20_condf__satrefine_refine),
-    ('sp-acj4-20-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_20_condf__satsimp_trigsimp),
-    ('sp-acj4-20-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_20_condf__satrefine_simplify),
+    ('sp-acj4-20-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261021-073857', sp_acj4_20_condf__satassume_ask),
+    ('sp-acj4-20-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261021-073817', sp_acj4_20_condf__satrefine_refine),
+    ('sp-acj4-20-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_20_condf__satsimp_trigsimp),
+    ('sp-acj4-20-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_20_condf__satrefine_simplify),
     ('sp-acj4-20-condf', 'sympy-auto', 'false', 'null', 'sympy-auto-20261020-064252', sp_acj4_20_condf__sympy_auto),
     ('sp-acj4-20-condf', 'sympy-ask', 'false', 'null', 'sympy-ask-20261020-064258', sp_acj4_20_condf__sympy_ask),
     ('sp-acj4-20-condf', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-072057', sp_acj4_20_condf__sympy_satask),
@@ -14377,10 +14377,10 @@ CASES = [
     ('sp-acj4-20-condf', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_20_condf__sympy_extras_ask),
     ('sp-acj4-20-condf', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_20_condf__sympy_extras_refine),
     ('sp-acj4-20-condf', 'sympy-extras-simplify', 'false', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_20_condf__sympy_extras_simplify),
-    ('sp-acj4-200-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_200_cond__satassume_ask),
-    ('sp-acj4-200-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_200_cond__satrefine_refine),
-    ('sp-acj4-200-cond', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-122909', sp_acj4_200_cond__satsimp_trigsimp),
-    ('sp-acj4-200-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_200_cond__satrefine_simplify),
+    ('sp-acj4-200-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_200_cond__satassume_ask),
+    ('sp-acj4-200-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_200_cond__satrefine_refine),
+    ('sp-acj4-200-cond', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261021-073947', sp_acj4_200_cond__satsimp_trigsimp),
+    ('sp-acj4-200-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_200_cond__satrefine_simplify),
     ('sp-acj4-200-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_200_cond__sympy_auto),
     ('sp-acj4-200-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_200_cond__sympy_ask),
     ('sp-acj4-200-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_200_cond__sympy_satask),
@@ -14389,10 +14389,10 @@ CASES = [
     ('sp-acj4-200-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_200_cond__sympy_extras_ask),
     ('sp-acj4-200-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_200_cond__sympy_extras_refine),
     ('sp-acj4-200-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_200_cond__sympy_extras_simplify),
-    ('sp-acj4-202-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_202_cond__satassume_ask),
-    ('sp-acj4-202-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_202_cond__satrefine_refine),
-    ('sp-acj4-202-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_202_cond__satsimp_trigsimp),
-    ('sp-acj4-202-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_202_cond__satrefine_simplify),
+    ('sp-acj4-202-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_202_cond__satassume_ask),
+    ('sp-acj4-202-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_202_cond__satrefine_refine),
+    ('sp-acj4-202-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_202_cond__satsimp_trigsimp),
+    ('sp-acj4-202-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_202_cond__satrefine_simplify),
     ('sp-acj4-202-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_202_cond__sympy_auto),
     ('sp-acj4-202-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_202_cond__sympy_ask),
     ('sp-acj4-202-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_202_cond__sympy_satask),
@@ -14401,10 +14401,10 @@ CASES = [
     ('sp-acj4-202-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_202_cond__sympy_extras_ask),
     ('sp-acj4-202-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_202_cond__sympy_extras_refine),
     ('sp-acj4-202-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_202_cond__sympy_extras_simplify),
-    ('sp-acj4-203-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_203_cond__satassume_ask),
-    ('sp-acj4-203-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-122740', sp_acj4_203_cond__satrefine_refine),
-    ('sp-acj4-203-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_203_cond__satsimp_trigsimp),
-    ('sp-acj4-203-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-122830', sp_acj4_203_cond__satrefine_simplify),
+    ('sp-acj4-203-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_203_cond__satassume_ask),
+    ('sp-acj4-203-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261021-073817', sp_acj4_203_cond__satrefine_refine),
+    ('sp-acj4-203-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_203_cond__satsimp_trigsimp),
+    ('sp-acj4-203-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261021-073907', sp_acj4_203_cond__satrefine_simplify),
     ('sp-acj4-203-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_203_cond__sympy_auto),
     ('sp-acj4-203-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_203_cond__sympy_ask),
     ('sp-acj4-203-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_203_cond__sympy_satask),
@@ -14413,10 +14413,10 @@ CASES = [
     ('sp-acj4-203-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_203_cond__sympy_extras_ask),
     ('sp-acj4-203-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_203_cond__sympy_extras_refine),
     ('sp-acj4-203-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_203_cond__sympy_extras_simplify),
-    ('sp-acj4-205-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_205_cond__satassume_ask),
-    ('sp-acj4-205-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_205_cond__satrefine_refine),
-    ('sp-acj4-205-cond', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-122909', sp_acj4_205_cond__satsimp_trigsimp),
-    ('sp-acj4-205-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_205_cond__satrefine_simplify),
+    ('sp-acj4-205-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_205_cond__satassume_ask),
+    ('sp-acj4-205-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_205_cond__satrefine_refine),
+    ('sp-acj4-205-cond', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261021-073947', sp_acj4_205_cond__satsimp_trigsimp),
+    ('sp-acj4-205-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_205_cond__satrefine_simplify),
     ('sp-acj4-205-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_205_cond__sympy_auto),
     ('sp-acj4-205-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_205_cond__sympy_ask),
     ('sp-acj4-205-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_205_cond__sympy_satask),
@@ -14425,10 +14425,10 @@ CASES = [
     ('sp-acj4-205-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_205_cond__sympy_extras_ask),
     ('sp-acj4-205-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_205_cond__sympy_extras_refine),
     ('sp-acj4-205-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_205_cond__sympy_extras_simplify),
-    ('sp-acj4-234-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_234_cond__satassume_ask),
-    ('sp-acj4-234-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-122740', sp_acj4_234_cond__satrefine_refine),
-    ('sp-acj4-234-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_234_cond__satsimp_trigsimp),
-    ('sp-acj4-234-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-122830', sp_acj4_234_cond__satrefine_simplify),
+    ('sp-acj4-234-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_234_cond__satassume_ask),
+    ('sp-acj4-234-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261021-073817', sp_acj4_234_cond__satrefine_refine),
+    ('sp-acj4-234-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_234_cond__satsimp_trigsimp),
+    ('sp-acj4-234-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261021-073907', sp_acj4_234_cond__satrefine_simplify),
     ('sp-acj4-234-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_234_cond__sympy_auto),
     ('sp-acj4-234-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_234_cond__sympy_ask),
     ('sp-acj4-234-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_234_cond__sympy_satask),
@@ -14437,10 +14437,10 @@ CASES = [
     ('sp-acj4-234-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_234_cond__sympy_extras_ask),
     ('sp-acj4-234-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_234_cond__sympy_extras_refine),
     ('sp-acj4-234-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_234_cond__sympy_extras_simplify),
-    ('sp-acj4-234-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_234_cond2__satassume_ask),
-    ('sp-acj4-234-cond2', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-122740', sp_acj4_234_cond2__satrefine_refine),
-    ('sp-acj4-234-cond2', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_234_cond2__satsimp_trigsimp),
-    ('sp-acj4-234-cond2', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-122830', sp_acj4_234_cond2__satrefine_simplify),
+    ('sp-acj4-234-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_234_cond2__satassume_ask),
+    ('sp-acj4-234-cond2', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261021-073817', sp_acj4_234_cond2__satrefine_refine),
+    ('sp-acj4-234-cond2', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_234_cond2__satsimp_trigsimp),
+    ('sp-acj4-234-cond2', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261021-073907', sp_acj4_234_cond2__satrefine_simplify),
     ('sp-acj4-234-cond2', 'sympy-auto', 'true', 'true', 'sympy-auto-20261020-064252', sp_acj4_234_cond2__sympy_auto),
     ('sp-acj4-234-cond2', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_234_cond2__sympy_ask),
     ('sp-acj4-234-cond2', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_234_cond2__sympy_satask),
@@ -14449,10 +14449,10 @@ CASES = [
     ('sp-acj4-234-cond2', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_234_cond2__sympy_extras_ask),
     ('sp-acj4-234-cond2', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261020-065818', sp_acj4_234_cond2__sympy_extras_refine),
     ('sp-acj4-234-cond2', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261020-070552', sp_acj4_234_cond2__sympy_extras_simplify),
-    ('sp-acj4-243-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_243_cond__satassume_ask),
-    ('sp-acj4-243-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-122740', sp_acj4_243_cond__satrefine_refine),
-    ('sp-acj4-243-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_243_cond__satsimp_trigsimp),
-    ('sp-acj4-243-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-122830', sp_acj4_243_cond__satrefine_simplify),
+    ('sp-acj4-243-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_243_cond__satassume_ask),
+    ('sp-acj4-243-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261021-073817', sp_acj4_243_cond__satrefine_refine),
+    ('sp-acj4-243-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_243_cond__satsimp_trigsimp),
+    ('sp-acj4-243-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261021-073907', sp_acj4_243_cond__satrefine_simplify),
     ('sp-acj4-243-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_243_cond__sympy_auto),
     ('sp-acj4-243-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_243_cond__sympy_ask),
     ('sp-acj4-243-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_243_cond__sympy_satask),
@@ -14461,10 +14461,10 @@ CASES = [
     ('sp-acj4-243-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_243_cond__sympy_extras_ask),
     ('sp-acj4-243-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_243_cond__sympy_extras_refine),
     ('sp-acj4-243-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_243_cond__sympy_extras_simplify),
-    ('sp-acj4-245-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_245_cond__satassume_ask),
-    ('sp-acj4-245-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-122740', sp_acj4_245_cond__satrefine_refine),
-    ('sp-acj4-245-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_245_cond__satsimp_trigsimp),
-    ('sp-acj4-245-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-122830', sp_acj4_245_cond__satrefine_simplify),
+    ('sp-acj4-245-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_245_cond__satassume_ask),
+    ('sp-acj4-245-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261021-073817', sp_acj4_245_cond__satrefine_refine),
+    ('sp-acj4-245-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_245_cond__satsimp_trigsimp),
+    ('sp-acj4-245-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261021-073907', sp_acj4_245_cond__satrefine_simplify),
     ('sp-acj4-245-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_245_cond__sympy_auto),
     ('sp-acj4-245-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_245_cond__sympy_ask),
     ('sp-acj4-245-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_245_cond__sympy_satask),
@@ -14473,10 +14473,10 @@ CASES = [
     ('sp-acj4-245-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_245_cond__sympy_extras_ask),
     ('sp-acj4-245-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_245_cond__sympy_extras_refine),
     ('sp-acj4-245-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_245_cond__sympy_extras_simplify),
-    ('sp-acj4-248-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_248_cond__satassume_ask),
-    ('sp-acj4-248-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_248_cond__satrefine_refine),
-    ('sp-acj4-248-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_248_cond__satsimp_trigsimp),
-    ('sp-acj4-248-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_248_cond__satrefine_simplify),
+    ('sp-acj4-248-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_248_cond__satassume_ask),
+    ('sp-acj4-248-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_248_cond__satrefine_refine),
+    ('sp-acj4-248-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_248_cond__satsimp_trigsimp),
+    ('sp-acj4-248-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_248_cond__satrefine_simplify),
     ('sp-acj4-248-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_248_cond__sympy_auto),
     ('sp-acj4-248-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_248_cond__sympy_ask),
     ('sp-acj4-248-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_248_cond__sympy_satask),
@@ -14485,10 +14485,10 @@ CASES = [
     ('sp-acj4-248-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_248_cond__sympy_extras_ask),
     ('sp-acj4-248-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_248_cond__sympy_extras_refine),
     ('sp-acj4-248-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_248_cond__sympy_extras_simplify),
-    ('sp-acj4-251-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_251_cond__satassume_ask),
-    ('sp-acj4-251-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_251_cond__satrefine_refine),
-    ('sp-acj4-251-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_251_cond__satsimp_trigsimp),
-    ('sp-acj4-251-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_251_cond__satrefine_simplify),
+    ('sp-acj4-251-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_251_cond__satassume_ask),
+    ('sp-acj4-251-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_251_cond__satrefine_refine),
+    ('sp-acj4-251-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_251_cond__satsimp_trigsimp),
+    ('sp-acj4-251-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_251_cond__satrefine_simplify),
     ('sp-acj4-251-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_251_cond__sympy_auto),
     ('sp-acj4-251-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_251_cond__sympy_ask),
     ('sp-acj4-251-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_251_cond__sympy_satask),
@@ -14497,10 +14497,10 @@ CASES = [
     ('sp-acj4-251-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_251_cond__sympy_extras_ask),
     ('sp-acj4-251-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_251_cond__sympy_extras_refine),
     ('sp-acj4-251-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_251_cond__sympy_extras_simplify),
-    ('sp-acj4-260-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_260_cond__satassume_ask),
-    ('sp-acj4-260-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_260_cond__satrefine_refine),
-    ('sp-acj4-260-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_260_cond__satsimp_trigsimp),
-    ('sp-acj4-260-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_260_cond__satrefine_simplify),
+    ('sp-acj4-260-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_260_cond__satassume_ask),
+    ('sp-acj4-260-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_260_cond__satrefine_refine),
+    ('sp-acj4-260-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_260_cond__satsimp_trigsimp),
+    ('sp-acj4-260-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_260_cond__satrefine_simplify),
     ('sp-acj4-260-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_260_cond__sympy_auto),
     ('sp-acj4-260-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_260_cond__sympy_ask),
     ('sp-acj4-260-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_260_cond__sympy_satask),
@@ -14509,10 +14509,10 @@ CASES = [
     ('sp-acj4-260-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_260_cond__sympy_extras_ask),
     ('sp-acj4-260-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_260_cond__sympy_extras_refine),
     ('sp-acj4-260-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_260_cond__sympy_extras_simplify),
-    ('sp-acj4-261-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261020-122819', sp_acj4_261_cond__satassume_ask),
-    ('sp-acj4-261-cond', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261020-122740', sp_acj4_261_cond__satrefine_refine),
-    ('sp-acj4-261-cond', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_261_cond__satsimp_trigsimp),
-    ('sp-acj4-261-cond', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_261_cond__satrefine_simplify),
+    ('sp-acj4-261-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261021-073857', sp_acj4_261_cond__satassume_ask),
+    ('sp-acj4-261-cond', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261021-073817', sp_acj4_261_cond__satrefine_refine),
+    ('sp-acj4-261-cond', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_261_cond__satsimp_trigsimp),
+    ('sp-acj4-261-cond', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_261_cond__satrefine_simplify),
     ('sp-acj4-261-cond', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261020-064252', sp_acj4_261_cond__sympy_auto),
     ('sp-acj4-261-cond', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261020-064258', sp_acj4_261_cond__sympy_ask),
     ('sp-acj4-261-cond', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261020-072057', sp_acj4_261_cond__sympy_satask),
@@ -14521,10 +14521,10 @@ CASES = [
     ('sp-acj4-261-cond', 'sympy-extras-ask', 'contingent', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_261_cond__sympy_extras_ask),
     ('sp-acj4-261-cond', 'sympy-extras-refine', 'contingent', 'true', 'sympy-extras-refine-20261020-065818', sp_acj4_261_cond__sympy_extras_refine),
     ('sp-acj4-261-cond', 'sympy-extras-simplify', 'contingent', 'true', 'sympy-extras-simplify-20261020-070552', sp_acj4_261_cond__sympy_extras_simplify),
-    ('sp-acj4-266-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_266_cond__satassume_ask),
-    ('sp-acj4-266-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-122740', sp_acj4_266_cond__satrefine_refine),
-    ('sp-acj4-266-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_266_cond__satsimp_trigsimp),
-    ('sp-acj4-266-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-122830', sp_acj4_266_cond__satrefine_simplify),
+    ('sp-acj4-266-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_266_cond__satassume_ask),
+    ('sp-acj4-266-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261021-073817', sp_acj4_266_cond__satrefine_refine),
+    ('sp-acj4-266-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_266_cond__satsimp_trigsimp),
+    ('sp-acj4-266-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261021-073907', sp_acj4_266_cond__satrefine_simplify),
     ('sp-acj4-266-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_266_cond__sympy_auto),
     ('sp-acj4-266-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_266_cond__sympy_ask),
     ('sp-acj4-266-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_266_cond__sympy_satask),
@@ -14533,10 +14533,10 @@ CASES = [
     ('sp-acj4-266-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_266_cond__sympy_extras_ask),
     ('sp-acj4-266-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_266_cond__sympy_extras_refine),
     ('sp-acj4-266-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_266_cond__sympy_extras_simplify),
-    ('sp-acj4-266-condf', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261020-122819', sp_acj4_266_condf__satassume_ask),
-    ('sp-acj4-266-condf', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261020-122740', sp_acj4_266_condf__satrefine_refine),
-    ('sp-acj4-266-condf', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_266_condf__satsimp_trigsimp),
-    ('sp-acj4-266-condf', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_266_condf__satrefine_simplify),
+    ('sp-acj4-266-condf', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261021-073857', sp_acj4_266_condf__satassume_ask),
+    ('sp-acj4-266-condf', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261021-073817', sp_acj4_266_condf__satrefine_refine),
+    ('sp-acj4-266-condf', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_266_condf__satsimp_trigsimp),
+    ('sp-acj4-266-condf', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_266_condf__satrefine_simplify),
     ('sp-acj4-266-condf', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261020-064252', sp_acj4_266_condf__sympy_auto),
     ('sp-acj4-266-condf', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261020-064258', sp_acj4_266_condf__sympy_ask),
     ('sp-acj4-266-condf', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261020-072057', sp_acj4_266_condf__sympy_satask),
@@ -14545,10 +14545,10 @@ CASES = [
     ('sp-acj4-266-condf', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_266_condf__sympy_extras_ask),
     ('sp-acj4-266-condf', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_266_condf__sympy_extras_refine),
     ('sp-acj4-266-condf', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_266_condf__sympy_extras_simplify),
-    ('sp-acj4-267-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_267_cond__satassume_ask),
-    ('sp-acj4-267-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-122740', sp_acj4_267_cond__satrefine_refine),
-    ('sp-acj4-267-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_267_cond__satsimp_trigsimp),
-    ('sp-acj4-267-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-122830', sp_acj4_267_cond__satrefine_simplify),
+    ('sp-acj4-267-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_267_cond__satassume_ask),
+    ('sp-acj4-267-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261021-073817', sp_acj4_267_cond__satrefine_refine),
+    ('sp-acj4-267-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_267_cond__satsimp_trigsimp),
+    ('sp-acj4-267-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261021-073907', sp_acj4_267_cond__satrefine_simplify),
     ('sp-acj4-267-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_267_cond__sympy_auto),
     ('sp-acj4-267-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_267_cond__sympy_ask),
     ('sp-acj4-267-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_267_cond__sympy_satask),
@@ -14557,10 +14557,10 @@ CASES = [
     ('sp-acj4-267-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_267_cond__sympy_extras_ask),
     ('sp-acj4-267-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_267_cond__sympy_extras_refine),
     ('sp-acj4-267-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_267_cond__sympy_extras_simplify),
-    ('sp-acj4-267-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261020-122819', sp_acj4_267_condf__satassume_ask),
-    ('sp-acj4-267-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261020-122740', sp_acj4_267_condf__satrefine_refine),
-    ('sp-acj4-267-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_267_condf__satsimp_trigsimp),
-    ('sp-acj4-267-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_267_condf__satrefine_simplify),
+    ('sp-acj4-267-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261021-073857', sp_acj4_267_condf__satassume_ask),
+    ('sp-acj4-267-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261021-073817', sp_acj4_267_condf__satrefine_refine),
+    ('sp-acj4-267-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_267_condf__satsimp_trigsimp),
+    ('sp-acj4-267-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_267_condf__satrefine_simplify),
     ('sp-acj4-267-condf', 'sympy-auto', 'false', 'null', 'sympy-auto-20261020-064252', sp_acj4_267_condf__sympy_auto),
     ('sp-acj4-267-condf', 'sympy-ask', 'false', 'null', 'sympy-ask-20261020-064258', sp_acj4_267_condf__sympy_ask),
     ('sp-acj4-267-condf', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-072057', sp_acj4_267_condf__sympy_satask),
@@ -14569,10 +14569,10 @@ CASES = [
     ('sp-acj4-267-condf', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_267_condf__sympy_extras_ask),
     ('sp-acj4-267-condf', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_267_condf__sympy_extras_refine),
     ('sp-acj4-267-condf', 'sympy-extras-simplify', 'false', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_267_condf__sympy_extras_simplify),
-    ('sp-acj4-283-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261020-122819', sp_acj4_283_condf__satassume_ask),
-    ('sp-acj4-283-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261020-122740', sp_acj4_283_condf__satrefine_refine),
-    ('sp-acj4-283-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_283_condf__satsimp_trigsimp),
-    ('sp-acj4-283-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_283_condf__satrefine_simplify),
+    ('sp-acj4-283-condf', 'satassume-ask', 'false', 'false', 'satassume-ask-20261021-073857', sp_acj4_283_condf__satassume_ask),
+    ('sp-acj4-283-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261021-073817', sp_acj4_283_condf__satrefine_refine),
+    ('sp-acj4-283-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_283_condf__satsimp_trigsimp),
+    ('sp-acj4-283-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_283_condf__satrefine_simplify),
     ('sp-acj4-283-condf', 'sympy-auto', 'false', 'null', 'sympy-auto-20261020-064252', sp_acj4_283_condf__sympy_auto),
     ('sp-acj4-283-condf', 'sympy-ask', 'false', 'null', 'sympy-ask-20261020-064258', sp_acj4_283_condf__sympy_ask),
     ('sp-acj4-283-condf', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-072057', sp_acj4_283_condf__sympy_satask),
@@ -14581,10 +14581,10 @@ CASES = [
     ('sp-acj4-283-condf', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_283_condf__sympy_extras_ask),
     ('sp-acj4-283-condf', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_283_condf__sympy_extras_refine),
     ('sp-acj4-283-condf', 'sympy-extras-simplify', 'false', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_283_condf__sympy_extras_simplify),
-    ('sp-acj4-287-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261020-122819', sp_acj4_287_condf__satassume_ask),
-    ('sp-acj4-287-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261020-122740', sp_acj4_287_condf__satrefine_refine),
-    ('sp-acj4-287-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_287_condf__satsimp_trigsimp),
-    ('sp-acj4-287-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_287_condf__satrefine_simplify),
+    ('sp-acj4-287-condf', 'satassume-ask', 'false', 'false', 'satassume-ask-20261021-073857', sp_acj4_287_condf__satassume_ask),
+    ('sp-acj4-287-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261021-073817', sp_acj4_287_condf__satrefine_refine),
+    ('sp-acj4-287-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_287_condf__satsimp_trigsimp),
+    ('sp-acj4-287-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_287_condf__satrefine_simplify),
     ('sp-acj4-287-condf', 'sympy-auto', 'false', 'null', 'sympy-auto-20261020-064252', sp_acj4_287_condf__sympy_auto),
     ('sp-acj4-287-condf', 'sympy-ask', 'false', 'null', 'sympy-ask-20261020-064258', sp_acj4_287_condf__sympy_ask),
     ('sp-acj4-287-condf', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-072057', sp_acj4_287_condf__sympy_satask),
@@ -14593,10 +14593,10 @@ CASES = [
     ('sp-acj4-287-condf', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_287_condf__sympy_extras_ask),
     ('sp-acj4-287-condf', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_287_condf__sympy_extras_refine),
     ('sp-acj4-287-condf', 'sympy-extras-simplify', 'false', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_287_condf__sympy_extras_simplify),
-    ('sp-acj4-289-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_289_cond__satassume_ask),
-    ('sp-acj4-289-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-122740', sp_acj4_289_cond__satrefine_refine),
-    ('sp-acj4-289-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_289_cond__satsimp_trigsimp),
-    ('sp-acj4-289-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-122830', sp_acj4_289_cond__satrefine_simplify),
+    ('sp-acj4-289-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_289_cond__satassume_ask),
+    ('sp-acj4-289-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261021-073817', sp_acj4_289_cond__satrefine_refine),
+    ('sp-acj4-289-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_289_cond__satsimp_trigsimp),
+    ('sp-acj4-289-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261021-073907', sp_acj4_289_cond__satrefine_simplify),
     ('sp-acj4-289-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_289_cond__sympy_auto),
     ('sp-acj4-289-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_289_cond__sympy_ask),
     ('sp-acj4-289-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_289_cond__sympy_satask),
@@ -14605,10 +14605,10 @@ CASES = [
     ('sp-acj4-289-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_289_cond__sympy_extras_ask),
     ('sp-acj4-289-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_289_cond__sympy_extras_refine),
     ('sp-acj4-289-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_289_cond__sympy_extras_simplify),
-    ('sp-acj4-29-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_29_cond__satassume_ask),
-    ('sp-acj4-29-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-122740', sp_acj4_29_cond__satrefine_refine),
-    ('sp-acj4-29-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_29_cond__satsimp_trigsimp),
-    ('sp-acj4-29-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-122830', sp_acj4_29_cond__satrefine_simplify),
+    ('sp-acj4-29-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_29_cond__satassume_ask),
+    ('sp-acj4-29-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261021-073817', sp_acj4_29_cond__satrefine_refine),
+    ('sp-acj4-29-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_29_cond__satsimp_trigsimp),
+    ('sp-acj4-29-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261021-073907', sp_acj4_29_cond__satrefine_simplify),
     ('sp-acj4-29-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_29_cond__sympy_auto),
     ('sp-acj4-29-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_29_cond__sympy_ask),
     ('sp-acj4-29-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_29_cond__sympy_satask),
@@ -14617,10 +14617,10 @@ CASES = [
     ('sp-acj4-29-cond', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_29_cond__sympy_extras_ask),
     ('sp-acj4-29-cond', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261020-065818', sp_acj4_29_cond__sympy_extras_refine),
     ('sp-acj4-29-cond', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261020-070552', sp_acj4_29_cond__sympy_extras_simplify),
-    ('sp-acj4-29-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261020-122819', sp_acj4_29_condf__satassume_ask),
-    ('sp-acj4-29-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261020-122740', sp_acj4_29_condf__satrefine_refine),
-    ('sp-acj4-29-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_29_condf__satsimp_trigsimp),
-    ('sp-acj4-29-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_29_condf__satrefine_simplify),
+    ('sp-acj4-29-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261021-073857', sp_acj4_29_condf__satassume_ask),
+    ('sp-acj4-29-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261021-073817', sp_acj4_29_condf__satrefine_refine),
+    ('sp-acj4-29-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_29_condf__satsimp_trigsimp),
+    ('sp-acj4-29-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_29_condf__satrefine_simplify),
     ('sp-acj4-29-condf', 'sympy-auto', 'false', 'null', 'sympy-auto-20261020-064252', sp_acj4_29_condf__sympy_auto),
     ('sp-acj4-29-condf', 'sympy-ask', 'false', 'null', 'sympy-ask-20261020-064258', sp_acj4_29_condf__sympy_ask),
     ('sp-acj4-29-condf', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-072057', sp_acj4_29_condf__sympy_satask),
@@ -14629,10 +14629,10 @@ CASES = [
     ('sp-acj4-29-condf', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_29_condf__sympy_extras_ask),
     ('sp-acj4-29-condf', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_29_condf__sympy_extras_refine),
     ('sp-acj4-29-condf', 'sympy-extras-simplify', 'false', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_29_condf__sympy_extras_simplify),
-    ('sp-acj4-334-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_334_cond__satassume_ask),
-    ('sp-acj4-334-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_334_cond__satrefine_refine),
-    ('sp-acj4-334-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_334_cond__satsimp_trigsimp),
-    ('sp-acj4-334-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_334_cond__satrefine_simplify),
+    ('sp-acj4-334-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_334_cond__satassume_ask),
+    ('sp-acj4-334-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_334_cond__satrefine_refine),
+    ('sp-acj4-334-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_334_cond__satsimp_trigsimp),
+    ('sp-acj4-334-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_334_cond__satrefine_simplify),
     ('sp-acj4-334-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_334_cond__sympy_auto),
     ('sp-acj4-334-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_334_cond__sympy_ask),
     ('sp-acj4-334-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_334_cond__sympy_satask),
@@ -14641,10 +14641,10 @@ CASES = [
     ('sp-acj4-334-cond', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_334_cond__sympy_extras_ask),
     ('sp-acj4-334-cond', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261020-065818', sp_acj4_334_cond__sympy_extras_refine),
     ('sp-acj4-334-cond', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261020-070552', sp_acj4_334_cond__sympy_extras_simplify),
-    ('sp-acj4-335-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_335_cond__satassume_ask),
-    ('sp-acj4-335-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_335_cond__satrefine_refine),
-    ('sp-acj4-335-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_335_cond__satsimp_trigsimp),
-    ('sp-acj4-335-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_335_cond__satrefine_simplify),
+    ('sp-acj4-335-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_335_cond__satassume_ask),
+    ('sp-acj4-335-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_335_cond__satrefine_refine),
+    ('sp-acj4-335-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_335_cond__satsimp_trigsimp),
+    ('sp-acj4-335-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_335_cond__satrefine_simplify),
     ('sp-acj4-335-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_335_cond__sympy_auto),
     ('sp-acj4-335-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_335_cond__sympy_ask),
     ('sp-acj4-335-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_335_cond__sympy_satask),
@@ -14653,10 +14653,10 @@ CASES = [
     ('sp-acj4-335-cond', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_335_cond__sympy_extras_ask),
     ('sp-acj4-335-cond', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261020-065818', sp_acj4_335_cond__sympy_extras_refine),
     ('sp-acj4-335-cond', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261020-070552', sp_acj4_335_cond__sympy_extras_simplify),
-    ('sp-acj4-336-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_336_cond__satassume_ask),
-    ('sp-acj4-336-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_336_cond__satrefine_refine),
-    ('sp-acj4-336-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_336_cond__satsimp_trigsimp),
-    ('sp-acj4-336-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_336_cond__satrefine_simplify),
+    ('sp-acj4-336-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_336_cond__satassume_ask),
+    ('sp-acj4-336-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_336_cond__satrefine_refine),
+    ('sp-acj4-336-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_336_cond__satsimp_trigsimp),
+    ('sp-acj4-336-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_336_cond__satrefine_simplify),
     ('sp-acj4-336-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_336_cond__sympy_auto),
     ('sp-acj4-336-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_336_cond__sympy_ask),
     ('sp-acj4-336-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_336_cond__sympy_satask),
@@ -14665,10 +14665,10 @@ CASES = [
     ('sp-acj4-336-cond', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_336_cond__sympy_extras_ask),
     ('sp-acj4-336-cond', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261020-065818', sp_acj4_336_cond__sympy_extras_refine),
     ('sp-acj4-336-cond', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261020-070552', sp_acj4_336_cond__sympy_extras_simplify),
-    ('sp-acj4-344-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_344_cond__satassume_ask),
-    ('sp-acj4-344-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-122740', sp_acj4_344_cond__satrefine_refine),
-    ('sp-acj4-344-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_344_cond__satsimp_trigsimp),
-    ('sp-acj4-344-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-122830', sp_acj4_344_cond__satrefine_simplify),
+    ('sp-acj4-344-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_344_cond__satassume_ask),
+    ('sp-acj4-344-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261021-073817', sp_acj4_344_cond__satrefine_refine),
+    ('sp-acj4-344-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_344_cond__satsimp_trigsimp),
+    ('sp-acj4-344-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261021-073907', sp_acj4_344_cond__satrefine_simplify),
     ('sp-acj4-344-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_344_cond__sympy_auto),
     ('sp-acj4-344-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_344_cond__sympy_ask),
     ('sp-acj4-344-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_344_cond__sympy_satask),
@@ -14677,10 +14677,10 @@ CASES = [
     ('sp-acj4-344-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_344_cond__sympy_extras_ask),
     ('sp-acj4-344-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_344_cond__sympy_extras_refine),
     ('sp-acj4-344-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_344_cond__sympy_extras_simplify),
-    ('sp-acj4-344-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_344_cond2__satassume_ask),
-    ('sp-acj4-344-cond2', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-122740', sp_acj4_344_cond2__satrefine_refine),
-    ('sp-acj4-344-cond2', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_344_cond2__satsimp_trigsimp),
-    ('sp-acj4-344-cond2', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-122830', sp_acj4_344_cond2__satrefine_simplify),
+    ('sp-acj4-344-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_344_cond2__satassume_ask),
+    ('sp-acj4-344-cond2', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261021-073817', sp_acj4_344_cond2__satrefine_refine),
+    ('sp-acj4-344-cond2', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_344_cond2__satsimp_trigsimp),
+    ('sp-acj4-344-cond2', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261021-073907', sp_acj4_344_cond2__satrefine_simplify),
     ('sp-acj4-344-cond2', 'sympy-auto', 'true', 'true', 'sympy-auto-20261020-064252', sp_acj4_344_cond2__sympy_auto),
     ('sp-acj4-344-cond2', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_344_cond2__sympy_ask),
     ('sp-acj4-344-cond2', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_344_cond2__sympy_satask),
@@ -14689,10 +14689,10 @@ CASES = [
     ('sp-acj4-344-cond2', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_344_cond2__sympy_extras_ask),
     ('sp-acj4-344-cond2', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261020-065818', sp_acj4_344_cond2__sympy_extras_refine),
     ('sp-acj4-344-cond2', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261020-070552', sp_acj4_344_cond2__sympy_extras_simplify),
-    ('sp-acj4-372-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261020-122819', sp_acj4_372_cond__satassume_ask),
-    ('sp-acj4-372-cond', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261020-122740', sp_acj4_372_cond__satrefine_refine),
-    ('sp-acj4-372-cond', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_372_cond__satsimp_trigsimp),
-    ('sp-acj4-372-cond', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_372_cond__satrefine_simplify),
+    ('sp-acj4-372-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261021-073857', sp_acj4_372_cond__satassume_ask),
+    ('sp-acj4-372-cond', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261021-073817', sp_acj4_372_cond__satrefine_refine),
+    ('sp-acj4-372-cond', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_372_cond__satsimp_trigsimp),
+    ('sp-acj4-372-cond', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_372_cond__satrefine_simplify),
     ('sp-acj4-372-cond', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261020-064252', sp_acj4_372_cond__sympy_auto),
     ('sp-acj4-372-cond', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261020-064258', sp_acj4_372_cond__sympy_ask),
     ('sp-acj4-372-cond', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261020-072057', sp_acj4_372_cond__sympy_satask),
@@ -14701,10 +14701,10 @@ CASES = [
     ('sp-acj4-372-cond', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_372_cond__sympy_extras_ask),
     ('sp-acj4-372-cond', 'sympy-extras-refine', 'contingent', 'true', 'sympy-extras-refine-20261020-065818', sp_acj4_372_cond__sympy_extras_refine),
     ('sp-acj4-372-cond', 'sympy-extras-simplify', 'contingent', 'true', 'sympy-extras-simplify-20261020-070552', sp_acj4_372_cond__sympy_extras_simplify),
-    ('sp-acj4-373-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261020-122819', sp_acj4_373_cond__satassume_ask),
-    ('sp-acj4-373-cond', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261020-122740', sp_acj4_373_cond__satrefine_refine),
-    ('sp-acj4-373-cond', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_373_cond__satsimp_trigsimp),
-    ('sp-acj4-373-cond', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_373_cond__satrefine_simplify),
+    ('sp-acj4-373-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261021-073857', sp_acj4_373_cond__satassume_ask),
+    ('sp-acj4-373-cond', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261021-073817', sp_acj4_373_cond__satrefine_refine),
+    ('sp-acj4-373-cond', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_373_cond__satsimp_trigsimp),
+    ('sp-acj4-373-cond', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_373_cond__satrefine_simplify),
     ('sp-acj4-373-cond', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261020-064252', sp_acj4_373_cond__sympy_auto),
     ('sp-acj4-373-cond', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261020-064258', sp_acj4_373_cond__sympy_ask),
     ('sp-acj4-373-cond', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261020-072057', sp_acj4_373_cond__sympy_satask),
@@ -14713,10 +14713,10 @@ CASES = [
     ('sp-acj4-373-cond', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_373_cond__sympy_extras_ask),
     ('sp-acj4-373-cond', 'sympy-extras-refine', 'contingent', 'true', 'sympy-extras-refine-20261020-065818', sp_acj4_373_cond__sympy_extras_refine),
     ('sp-acj4-373-cond', 'sympy-extras-simplify', 'contingent', 'true', 'sympy-extras-simplify-20261020-070552', sp_acj4_373_cond__sympy_extras_simplify),
-    ('sp-acj4-376-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_376_cond2__satassume_ask),
-    ('sp-acj4-376-cond2', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_376_cond2__satrefine_refine),
-    ('sp-acj4-376-cond2', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_376_cond2__satsimp_trigsimp),
-    ('sp-acj4-376-cond2', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_376_cond2__satrefine_simplify),
+    ('sp-acj4-376-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_376_cond2__satassume_ask),
+    ('sp-acj4-376-cond2', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_376_cond2__satrefine_refine),
+    ('sp-acj4-376-cond2', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_376_cond2__satsimp_trigsimp),
+    ('sp-acj4-376-cond2', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_376_cond2__satrefine_simplify),
     ('sp-acj4-376-cond2', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_376_cond2__sympy_auto),
     ('sp-acj4-376-cond2', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_376_cond2__sympy_ask),
     ('sp-acj4-376-cond2', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_376_cond2__sympy_satask),
@@ -14724,10 +14724,10 @@ CASES = [
     ('sp-acj4-376-cond2', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_376_cond2__sympy_extras_ask),
     ('sp-acj4-376-cond2', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261020-065818', sp_acj4_376_cond2__sympy_extras_refine),
     ('sp-acj4-376-cond2', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261020-070552', sp_acj4_376_cond2__sympy_extras_simplify),
-    ('sp-acj4-385-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261020-122819', sp_acj4_385_cond__satassume_ask),
-    ('sp-acj4-385-cond', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261020-122740', sp_acj4_385_cond__satrefine_refine),
-    ('sp-acj4-385-cond', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_385_cond__satsimp_trigsimp),
-    ('sp-acj4-385-cond', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_385_cond__satrefine_simplify),
+    ('sp-acj4-385-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261021-073857', sp_acj4_385_cond__satassume_ask),
+    ('sp-acj4-385-cond', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261021-073817', sp_acj4_385_cond__satrefine_refine),
+    ('sp-acj4-385-cond', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_385_cond__satsimp_trigsimp),
+    ('sp-acj4-385-cond', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_385_cond__satrefine_simplify),
     ('sp-acj4-385-cond', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261020-064252', sp_acj4_385_cond__sympy_auto),
     ('sp-acj4-385-cond', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261020-064258', sp_acj4_385_cond__sympy_ask),
     ('sp-acj4-385-cond', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261020-072057', sp_acj4_385_cond__sympy_satask),
@@ -14735,10 +14735,10 @@ CASES = [
     ('sp-acj4-385-cond', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_385_cond__sympy_extras_ask),
     ('sp-acj4-385-cond', 'sympy-extras-refine', 'contingent', 'true', 'sympy-extras-refine-20261020-065818', sp_acj4_385_cond__sympy_extras_refine),
     ('sp-acj4-385-cond', 'sympy-extras-simplify', 'contingent', 'true', 'sympy-extras-simplify-20261020-070552', sp_acj4_385_cond__sympy_extras_simplify),
-    ('sp-acj4-392-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_392_cond__satassume_ask),
-    ('sp-acj4-392-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_392_cond__satrefine_refine),
-    ('sp-acj4-392-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_392_cond__satsimp_trigsimp),
-    ('sp-acj4-392-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_392_cond__satrefine_simplify),
+    ('sp-acj4-392-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_392_cond__satassume_ask),
+    ('sp-acj4-392-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_392_cond__satrefine_refine),
+    ('sp-acj4-392-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_392_cond__satsimp_trigsimp),
+    ('sp-acj4-392-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_392_cond__satrefine_simplify),
     ('sp-acj4-392-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_392_cond__sympy_auto),
     ('sp-acj4-392-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_392_cond__sympy_ask),
     ('sp-acj4-392-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_392_cond__sympy_satask),
@@ -14747,10 +14747,10 @@ CASES = [
     ('sp-acj4-392-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_392_cond__sympy_extras_ask),
     ('sp-acj4-392-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_392_cond__sympy_extras_refine),
     ('sp-acj4-392-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_392_cond__sympy_extras_simplify),
-    ('sp-acj4-394-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261020-122819', sp_acj4_394_cond__satassume_ask),
-    ('sp-acj4-394-cond', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261020-122740', sp_acj4_394_cond__satrefine_refine),
-    ('sp-acj4-394-cond', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_394_cond__satsimp_trigsimp),
-    ('sp-acj4-394-cond', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_394_cond__satrefine_simplify),
+    ('sp-acj4-394-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261021-073857', sp_acj4_394_cond__satassume_ask),
+    ('sp-acj4-394-cond', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261021-073817', sp_acj4_394_cond__satrefine_refine),
+    ('sp-acj4-394-cond', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_394_cond__satsimp_trigsimp),
+    ('sp-acj4-394-cond', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_394_cond__satrefine_simplify),
     ('sp-acj4-394-cond', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261020-064252', sp_acj4_394_cond__sympy_auto),
     ('sp-acj4-394-cond', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261020-064258', sp_acj4_394_cond__sympy_ask),
     ('sp-acj4-394-cond', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261020-072057', sp_acj4_394_cond__sympy_satask),
@@ -14759,10 +14759,10 @@ CASES = [
     ('sp-acj4-394-cond', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_394_cond__sympy_extras_ask),
     ('sp-acj4-394-cond', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_394_cond__sympy_extras_refine),
     ('sp-acj4-394-cond', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_394_cond__sympy_extras_simplify),
-    ('sp-acj4-399-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_399_cond__satassume_ask),
-    ('sp-acj4-399-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_399_cond__satrefine_refine),
-    ('sp-acj4-399-cond', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261020-122909', sp_acj4_399_cond__satsimp_trigsimp),
-    ('sp-acj4-399-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_399_cond__satrefine_simplify),
+    ('sp-acj4-399-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_399_cond__satassume_ask),
+    ('sp-acj4-399-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_399_cond__satrefine_refine),
+    ('sp-acj4-399-cond', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261021-073947', sp_acj4_399_cond__satsimp_trigsimp),
+    ('sp-acj4-399-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_399_cond__satrefine_simplify),
     ('sp-acj4-399-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_399_cond__sympy_auto),
     ('sp-acj4-399-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_399_cond__sympy_ask),
     ('sp-acj4-399-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_399_cond__sympy_satask),
@@ -14771,10 +14771,10 @@ CASES = [
     ('sp-acj4-399-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_399_cond__sympy_extras_ask),
     ('sp-acj4-399-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_399_cond__sympy_extras_refine),
     ('sp-acj4-399-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_399_cond__sympy_extras_simplify),
-    ('sp-acj4-402-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261020-122819', sp_acj4_402_cond__satassume_ask),
-    ('sp-acj4-402-cond', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261020-122740', sp_acj4_402_cond__satrefine_refine),
-    ('sp-acj4-402-cond', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_402_cond__satsimp_trigsimp),
-    ('sp-acj4-402-cond', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_402_cond__satrefine_simplify),
+    ('sp-acj4-402-cond', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261021-073857', sp_acj4_402_cond__satassume_ask),
+    ('sp-acj4-402-cond', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261021-073817', sp_acj4_402_cond__satrefine_refine),
+    ('sp-acj4-402-cond', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_402_cond__satsimp_trigsimp),
+    ('sp-acj4-402-cond', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_402_cond__satrefine_simplify),
     ('sp-acj4-402-cond', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261020-064252', sp_acj4_402_cond__sympy_auto),
     ('sp-acj4-402-cond', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261020-064258', sp_acj4_402_cond__sympy_ask),
     ('sp-acj4-402-cond', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261020-072057', sp_acj4_402_cond__sympy_satask),
@@ -14783,10 +14783,10 @@ CASES = [
     ('sp-acj4-402-cond', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_402_cond__sympy_extras_ask),
     ('sp-acj4-402-cond', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_402_cond__sympy_extras_refine),
     ('sp-acj4-402-cond', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_402_cond__sympy_extras_simplify),
-    ('sp-acj4-403-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_403_cond__satassume_ask),
-    ('sp-acj4-403-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-122740', sp_acj4_403_cond__satrefine_refine),
-    ('sp-acj4-403-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_403_cond__satsimp_trigsimp),
-    ('sp-acj4-403-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-122830', sp_acj4_403_cond__satrefine_simplify),
+    ('sp-acj4-403-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_403_cond__satassume_ask),
+    ('sp-acj4-403-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261021-073817', sp_acj4_403_cond__satrefine_refine),
+    ('sp-acj4-403-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_403_cond__satsimp_trigsimp),
+    ('sp-acj4-403-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261021-073907', sp_acj4_403_cond__satrefine_simplify),
     ('sp-acj4-403-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_403_cond__sympy_auto),
     ('sp-acj4-403-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_403_cond__sympy_ask),
     ('sp-acj4-403-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_403_cond__sympy_satask),
@@ -14795,10 +14795,10 @@ CASES = [
     ('sp-acj4-403-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_403_cond__sympy_extras_ask),
     ('sp-acj4-403-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_403_cond__sympy_extras_refine),
     ('sp-acj4-403-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_403_cond__sympy_extras_simplify),
-    ('sp-acj4-403-condf', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261020-122819', sp_acj4_403_condf__satassume_ask),
-    ('sp-acj4-403-condf', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261020-122740', sp_acj4_403_condf__satrefine_refine),
-    ('sp-acj4-403-condf', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_403_condf__satsimp_trigsimp),
-    ('sp-acj4-403-condf', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_403_condf__satrefine_simplify),
+    ('sp-acj4-403-condf', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261021-073857', sp_acj4_403_condf__satassume_ask),
+    ('sp-acj4-403-condf', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261021-073817', sp_acj4_403_condf__satrefine_refine),
+    ('sp-acj4-403-condf', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_403_condf__satsimp_trigsimp),
+    ('sp-acj4-403-condf', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_403_condf__satrefine_simplify),
     ('sp-acj4-403-condf', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261020-064252', sp_acj4_403_condf__sympy_auto),
     ('sp-acj4-403-condf', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261020-064258', sp_acj4_403_condf__sympy_ask),
     ('sp-acj4-403-condf', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261020-072057', sp_acj4_403_condf__sympy_satask),
@@ -14807,10 +14807,10 @@ CASES = [
     ('sp-acj4-403-condf', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_403_condf__sympy_extras_ask),
     ('sp-acj4-403-condf', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_403_condf__sympy_extras_refine),
     ('sp-acj4-403-condf', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_403_condf__sympy_extras_simplify),
-    ('sp-acj4-412-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_412_cond__satassume_ask),
-    ('sp-acj4-412-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_412_cond__satrefine_refine),
-    ('sp-acj4-412-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_412_cond__satsimp_trigsimp),
-    ('sp-acj4-412-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_412_cond__satrefine_simplify),
+    ('sp-acj4-412-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_412_cond__satassume_ask),
+    ('sp-acj4-412-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_412_cond__satrefine_refine),
+    ('sp-acj4-412-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_412_cond__satsimp_trigsimp),
+    ('sp-acj4-412-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_412_cond__satrefine_simplify),
     ('sp-acj4-412-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_412_cond__sympy_auto),
     ('sp-acj4-412-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_412_cond__sympy_ask),
     ('sp-acj4-412-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_412_cond__sympy_satask),
@@ -14819,10 +14819,10 @@ CASES = [
     ('sp-acj4-412-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_412_cond__sympy_extras_ask),
     ('sp-acj4-412-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_412_cond__sympy_extras_refine),
     ('sp-acj4-412-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_412_cond__sympy_extras_simplify),
-    ('sp-acj4-416-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_416_cond__satassume_ask),
-    ('sp-acj4-416-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_416_cond__satrefine_refine),
-    ('sp-acj4-416-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_416_cond__satsimp_trigsimp),
-    ('sp-acj4-416-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_416_cond__satrefine_simplify),
+    ('sp-acj4-416-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_416_cond__satassume_ask),
+    ('sp-acj4-416-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_416_cond__satrefine_refine),
+    ('sp-acj4-416-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_416_cond__satsimp_trigsimp),
+    ('sp-acj4-416-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_416_cond__satrefine_simplify),
     ('sp-acj4-416-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_416_cond__sympy_auto),
     ('sp-acj4-416-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_416_cond__sympy_ask),
     ('sp-acj4-416-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_416_cond__sympy_satask),
@@ -14831,20 +14831,20 @@ CASES = [
     ('sp-acj4-416-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_416_cond__sympy_extras_ask),
     ('sp-acj4-416-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_416_cond__sympy_extras_refine),
     ('sp-acj4-416-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_416_cond__sympy_extras_simplify),
-    ('sp-acj4-417-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_417_cond__satassume_ask),
-    ('sp-acj4-417-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_417_cond__satrefine_refine),
-    ('sp-acj4-417-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_417_cond__satsimp_trigsimp),
-    ('sp-acj4-417-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_417_cond__satrefine_simplify),
+    ('sp-acj4-417-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_417_cond__satassume_ask),
+    ('sp-acj4-417-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_417_cond__satrefine_refine),
+    ('sp-acj4-417-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_417_cond__satsimp_trigsimp),
+    ('sp-acj4-417-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_417_cond__satrefine_simplify),
     ('sp-acj4-417-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_417_cond__sympy_auto),
     ('sp-acj4-417-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_417_cond__sympy_ask),
     ('sp-acj4-417-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_417_cond__sympy_satask),
     ('sp-acj4-417-cond', 'sympy-refine', 'true', 'null', 'sympy-refine-20261020-064447', sp_acj4_417_cond__sympy_refine),
     ('sp-acj4-417-cond', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261020-064757', sp_acj4_417_cond__sympy_simplify),
     ('sp-acj4-417-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_417_cond__sympy_extras_ask),
-    ('sp-acj4-420-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_420_cond__satassume_ask),
-    ('sp-acj4-420-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-122740', sp_acj4_420_cond__satrefine_refine),
-    ('sp-acj4-420-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_420_cond__satsimp_trigsimp),
-    ('sp-acj4-420-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-122830', sp_acj4_420_cond__satrefine_simplify),
+    ('sp-acj4-420-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_420_cond__satassume_ask),
+    ('sp-acj4-420-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261021-073817', sp_acj4_420_cond__satrefine_refine),
+    ('sp-acj4-420-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_420_cond__satsimp_trigsimp),
+    ('sp-acj4-420-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261021-073907', sp_acj4_420_cond__satrefine_simplify),
     ('sp-acj4-420-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_420_cond__sympy_auto),
     ('sp-acj4-420-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_420_cond__sympy_ask),
     ('sp-acj4-420-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_420_cond__sympy_satask),
@@ -14853,10 +14853,10 @@ CASES = [
     ('sp-acj4-420-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_420_cond__sympy_extras_ask),
     ('sp-acj4-420-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_420_cond__sympy_extras_refine),
     ('sp-acj4-420-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_420_cond__sympy_extras_simplify),
-    ('sp-acj4-420-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261020-122819', sp_acj4_420_condf__satassume_ask),
-    ('sp-acj4-420-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261020-122740', sp_acj4_420_condf__satrefine_refine),
-    ('sp-acj4-420-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_420_condf__satsimp_trigsimp),
-    ('sp-acj4-420-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_420_condf__satrefine_simplify),
+    ('sp-acj4-420-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261021-073857', sp_acj4_420_condf__satassume_ask),
+    ('sp-acj4-420-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261021-073817', sp_acj4_420_condf__satrefine_refine),
+    ('sp-acj4-420-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_420_condf__satsimp_trigsimp),
+    ('sp-acj4-420-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_420_condf__satrefine_simplify),
     ('sp-acj4-420-condf', 'sympy-auto', 'false', 'null', 'sympy-auto-20261020-064252', sp_acj4_420_condf__sympy_auto),
     ('sp-acj4-420-condf', 'sympy-ask', 'false', 'null', 'sympy-ask-20261020-064258', sp_acj4_420_condf__sympy_ask),
     ('sp-acj4-420-condf', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-072057', sp_acj4_420_condf__sympy_satask),
@@ -14865,10 +14865,10 @@ CASES = [
     ('sp-acj4-420-condf', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_420_condf__sympy_extras_ask),
     ('sp-acj4-420-condf', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_420_condf__sympy_extras_refine),
     ('sp-acj4-420-condf', 'sympy-extras-simplify', 'false', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_420_condf__sympy_extras_simplify),
-    ('sp-acj4-422-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261020-122819', sp_acj4_422_condf__satassume_ask),
-    ('sp-acj4-422-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261020-122740', sp_acj4_422_condf__satrefine_refine),
-    ('sp-acj4-422-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_422_condf__satsimp_trigsimp),
-    ('sp-acj4-422-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_422_condf__satrefine_simplify),
+    ('sp-acj4-422-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261021-073857', sp_acj4_422_condf__satassume_ask),
+    ('sp-acj4-422-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261021-073817', sp_acj4_422_condf__satrefine_refine),
+    ('sp-acj4-422-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_422_condf__satsimp_trigsimp),
+    ('sp-acj4-422-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_422_condf__satrefine_simplify),
     ('sp-acj4-422-condf', 'sympy-auto', 'false', 'null', 'sympy-auto-20261020-064252', sp_acj4_422_condf__sympy_auto),
     ('sp-acj4-422-condf', 'sympy-ask', 'false', 'null', 'sympy-ask-20261020-064258', sp_acj4_422_condf__sympy_ask),
     ('sp-acj4-422-condf', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-072057', sp_acj4_422_condf__sympy_satask),
@@ -14877,10 +14877,10 @@ CASES = [
     ('sp-acj4-422-condf', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_422_condf__sympy_extras_ask),
     ('sp-acj4-422-condf', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_422_condf__sympy_extras_refine),
     ('sp-acj4-422-condf', 'sympy-extras-simplify', 'false', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_422_condf__sympy_extras_simplify),
-    ('sp-acj4-424-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261020-122819', sp_acj4_424_condf__satassume_ask),
-    ('sp-acj4-424-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261020-122740', sp_acj4_424_condf__satrefine_refine),
-    ('sp-acj4-424-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_424_condf__satsimp_trigsimp),
-    ('sp-acj4-424-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_424_condf__satrefine_simplify),
+    ('sp-acj4-424-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261021-073857', sp_acj4_424_condf__satassume_ask),
+    ('sp-acj4-424-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261021-073817', sp_acj4_424_condf__satrefine_refine),
+    ('sp-acj4-424-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_424_condf__satsimp_trigsimp),
+    ('sp-acj4-424-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_424_condf__satrefine_simplify),
     ('sp-acj4-424-condf', 'sympy-auto', 'false', 'null', 'sympy-auto-20261020-064252', sp_acj4_424_condf__sympy_auto),
     ('sp-acj4-424-condf', 'sympy-ask', 'false', 'null', 'sympy-ask-20261020-064258', sp_acj4_424_condf__sympy_ask),
     ('sp-acj4-424-condf', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-072057', sp_acj4_424_condf__sympy_satask),
@@ -14889,10 +14889,10 @@ CASES = [
     ('sp-acj4-424-condf', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_424_condf__sympy_extras_ask),
     ('sp-acj4-424-condf', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_424_condf__sympy_extras_refine),
     ('sp-acj4-424-condf', 'sympy-extras-simplify', 'false', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_424_condf__sympy_extras_simplify),
-    ('sp-acj4-428-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_428_cond__satassume_ask),
-    ('sp-acj4-428-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_428_cond__satrefine_refine),
-    ('sp-acj4-428-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_428_cond__satsimp_trigsimp),
-    ('sp-acj4-428-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_428_cond__satrefine_simplify),
+    ('sp-acj4-428-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_428_cond__satassume_ask),
+    ('sp-acj4-428-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_428_cond__satrefine_refine),
+    ('sp-acj4-428-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_428_cond__satsimp_trigsimp),
+    ('sp-acj4-428-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_428_cond__satrefine_simplify),
     ('sp-acj4-428-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_428_cond__sympy_auto),
     ('sp-acj4-428-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_428_cond__sympy_ask),
     ('sp-acj4-428-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_428_cond__sympy_satask),
@@ -14901,10 +14901,10 @@ CASES = [
     ('sp-acj4-428-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_428_cond__sympy_extras_ask),
     ('sp-acj4-428-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_428_cond__sympy_extras_refine),
     ('sp-acj4-428-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_428_cond__sympy_extras_simplify),
-    ('sp-acj4-428-cond3', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_428_cond3__satassume_ask),
-    ('sp-acj4-428-cond3', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_428_cond3__satrefine_refine),
-    ('sp-acj4-428-cond3', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_428_cond3__satsimp_trigsimp),
-    ('sp-acj4-428-cond3', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_428_cond3__satrefine_simplify),
+    ('sp-acj4-428-cond3', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_428_cond3__satassume_ask),
+    ('sp-acj4-428-cond3', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_428_cond3__satrefine_refine),
+    ('sp-acj4-428-cond3', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_428_cond3__satsimp_trigsimp),
+    ('sp-acj4-428-cond3', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_428_cond3__satrefine_simplify),
     ('sp-acj4-428-cond3', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_428_cond3__sympy_auto),
     ('sp-acj4-428-cond3', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_428_cond3__sympy_ask),
     ('sp-acj4-428-cond3', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_428_cond3__sympy_satask),
@@ -14913,10 +14913,10 @@ CASES = [
     ('sp-acj4-428-cond3', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_428_cond3__sympy_extras_ask),
     ('sp-acj4-428-cond3', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_428_cond3__sympy_extras_refine),
     ('sp-acj4-428-cond3', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_428_cond3__sympy_extras_simplify),
-    ('sp-acj4-430-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_430_cond__satassume_ask),
-    ('sp-acj4-430-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-122740', sp_acj4_430_cond__satrefine_refine),
-    ('sp-acj4-430-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_430_cond__satsimp_trigsimp),
-    ('sp-acj4-430-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-122830', sp_acj4_430_cond__satrefine_simplify),
+    ('sp-acj4-430-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_430_cond__satassume_ask),
+    ('sp-acj4-430-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261021-073817', sp_acj4_430_cond__satrefine_refine),
+    ('sp-acj4-430-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_430_cond__satsimp_trigsimp),
+    ('sp-acj4-430-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261021-073907', sp_acj4_430_cond__satrefine_simplify),
     ('sp-acj4-430-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_430_cond__sympy_auto),
     ('sp-acj4-430-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_430_cond__sympy_ask),
     ('sp-acj4-430-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_430_cond__sympy_satask),
@@ -14925,10 +14925,10 @@ CASES = [
     ('sp-acj4-430-cond', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_430_cond__sympy_extras_ask),
     ('sp-acj4-430-cond', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261020-065818', sp_acj4_430_cond__sympy_extras_refine),
     ('sp-acj4-430-cond', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261020-070552', sp_acj4_430_cond__sympy_extras_simplify),
-    ('sp-acj4-430-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_430_cond2__satassume_ask),
-    ('sp-acj4-430-cond2', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_430_cond2__satrefine_refine),
-    ('sp-acj4-430-cond2', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_430_cond2__satsimp_trigsimp),
-    ('sp-acj4-430-cond2', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_430_cond2__satrefine_simplify),
+    ('sp-acj4-430-cond2', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_430_cond2__satassume_ask),
+    ('sp-acj4-430-cond2', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_430_cond2__satrefine_refine),
+    ('sp-acj4-430-cond2', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_430_cond2__satsimp_trigsimp),
+    ('sp-acj4-430-cond2', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_430_cond2__satrefine_simplify),
     ('sp-acj4-430-cond2', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_430_cond2__sympy_auto),
     ('sp-acj4-430-cond2', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_430_cond2__sympy_ask),
     ('sp-acj4-430-cond2', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_430_cond2__sympy_satask),
@@ -14937,10 +14937,10 @@ CASES = [
     ('sp-acj4-430-cond2', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_430_cond2__sympy_extras_ask),
     ('sp-acj4-430-cond2', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_430_cond2__sympy_extras_refine),
     ('sp-acj4-430-cond2', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_430_cond2__sympy_extras_simplify),
-    ('sp-acj4-432-cond3', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_432_cond3__satassume_ask),
-    ('sp-acj4-432-cond3', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_432_cond3__satrefine_refine),
-    ('sp-acj4-432-cond3', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_432_cond3__satsimp_trigsimp),
-    ('sp-acj4-432-cond3', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_432_cond3__satrefine_simplify),
+    ('sp-acj4-432-cond3', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_432_cond3__satassume_ask),
+    ('sp-acj4-432-cond3', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_432_cond3__satrefine_refine),
+    ('sp-acj4-432-cond3', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_432_cond3__satsimp_trigsimp),
+    ('sp-acj4-432-cond3', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_432_cond3__satrefine_simplify),
     ('sp-acj4-432-cond3', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_432_cond3__sympy_auto),
     ('sp-acj4-432-cond3', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_432_cond3__sympy_ask),
     ('sp-acj4-432-cond3', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_432_cond3__sympy_satask),
@@ -14949,10 +14949,10 @@ CASES = [
     ('sp-acj4-432-cond3', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_432_cond3__sympy_extras_ask),
     ('sp-acj4-432-cond3', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_432_cond3__sympy_extras_refine),
     ('sp-acj4-432-cond3', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_432_cond3__sympy_extras_simplify),
-    ('sp-acj4-433-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_433_cond__satassume_ask),
-    ('sp-acj4-433-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-122740', sp_acj4_433_cond__satrefine_refine),
-    ('sp-acj4-433-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_433_cond__satsimp_trigsimp),
-    ('sp-acj4-433-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-122830', sp_acj4_433_cond__satrefine_simplify),
+    ('sp-acj4-433-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_433_cond__satassume_ask),
+    ('sp-acj4-433-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261021-073817', sp_acj4_433_cond__satrefine_refine),
+    ('sp-acj4-433-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_433_cond__satsimp_trigsimp),
+    ('sp-acj4-433-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261021-073907', sp_acj4_433_cond__satrefine_simplify),
     ('sp-acj4-433-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_433_cond__sympy_auto),
     ('sp-acj4-433-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_433_cond__sympy_ask),
     ('sp-acj4-433-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_433_cond__sympy_satask),
@@ -14961,10 +14961,10 @@ CASES = [
     ('sp-acj4-433-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_433_cond__sympy_extras_ask),
     ('sp-acj4-433-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_433_cond__sympy_extras_refine),
     ('sp-acj4-433-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_433_cond__sympy_extras_simplify),
-    ('sp-acj4-433-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261020-122819', sp_acj4_433_condf__satassume_ask),
-    ('sp-acj4-433-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261020-122740', sp_acj4_433_condf__satrefine_refine),
-    ('sp-acj4-433-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_433_condf__satsimp_trigsimp),
-    ('sp-acj4-433-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_433_condf__satrefine_simplify),
+    ('sp-acj4-433-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261021-073857', sp_acj4_433_condf__satassume_ask),
+    ('sp-acj4-433-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261021-073817', sp_acj4_433_condf__satrefine_refine),
+    ('sp-acj4-433-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_433_condf__satsimp_trigsimp),
+    ('sp-acj4-433-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_433_condf__satrefine_simplify),
     ('sp-acj4-433-condf', 'sympy-auto', 'false', 'null', 'sympy-auto-20261020-064252', sp_acj4_433_condf__sympy_auto),
     ('sp-acj4-433-condf', 'sympy-ask', 'false', 'null', 'sympy-ask-20261020-064258', sp_acj4_433_condf__sympy_ask),
     ('sp-acj4-433-condf', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-072057', sp_acj4_433_condf__sympy_satask),
@@ -14973,10 +14973,10 @@ CASES = [
     ('sp-acj4-433-condf', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_433_condf__sympy_extras_ask),
     ('sp-acj4-433-condf', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_433_condf__sympy_extras_refine),
     ('sp-acj4-433-condf', 'sympy-extras-simplify', 'false', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_433_condf__sympy_extras_simplify),
-    ('sp-acj4-442-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_442_cond__satassume_ask),
-    ('sp-acj4-442-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_442_cond__satrefine_refine),
-    ('sp-acj4-442-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_442_cond__satsimp_trigsimp),
-    ('sp-acj4-442-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_442_cond__satrefine_simplify),
+    ('sp-acj4-442-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_442_cond__satassume_ask),
+    ('sp-acj4-442-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_442_cond__satrefine_refine),
+    ('sp-acj4-442-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_442_cond__satsimp_trigsimp),
+    ('sp-acj4-442-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_442_cond__satrefine_simplify),
     ('sp-acj4-442-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_442_cond__sympy_auto),
     ('sp-acj4-442-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_442_cond__sympy_ask),
     ('sp-acj4-442-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_442_cond__sympy_satask),
@@ -14985,10 +14985,10 @@ CASES = [
     ('sp-acj4-442-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_442_cond__sympy_extras_ask),
     ('sp-acj4-442-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_442_cond__sympy_extras_refine),
     ('sp-acj4-442-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_442_cond__sympy_extras_simplify),
-    ('sp-acj4-442-cond4', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_442_cond4__satassume_ask),
-    ('sp-acj4-442-cond4', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_442_cond4__satrefine_refine),
-    ('sp-acj4-442-cond4', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_442_cond4__satsimp_trigsimp),
-    ('sp-acj4-442-cond4', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_442_cond4__satrefine_simplify),
+    ('sp-acj4-442-cond4', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_442_cond4__satassume_ask),
+    ('sp-acj4-442-cond4', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_442_cond4__satrefine_refine),
+    ('sp-acj4-442-cond4', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_442_cond4__satsimp_trigsimp),
+    ('sp-acj4-442-cond4', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_442_cond4__satrefine_simplify),
     ('sp-acj4-442-cond4', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_442_cond4__sympy_auto),
     ('sp-acj4-442-cond4', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_442_cond4__sympy_ask),
     ('sp-acj4-442-cond4', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_442_cond4__sympy_satask),
@@ -14997,10 +14997,10 @@ CASES = [
     ('sp-acj4-442-cond4', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_442_cond4__sympy_extras_ask),
     ('sp-acj4-442-cond4', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_442_cond4__sympy_extras_refine),
     ('sp-acj4-442-cond4', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_442_cond4__sympy_extras_simplify),
-    ('sp-acj4-46-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_46_cond__satassume_ask),
-    ('sp-acj4-46-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_46_cond__satrefine_refine),
-    ('sp-acj4-46-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_46_cond__satsimp_trigsimp),
-    ('sp-acj4-46-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_46_cond__satrefine_simplify),
+    ('sp-acj4-46-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_46_cond__satassume_ask),
+    ('sp-acj4-46-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_46_cond__satrefine_refine),
+    ('sp-acj4-46-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_46_cond__satsimp_trigsimp),
+    ('sp-acj4-46-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_46_cond__satrefine_simplify),
     ('sp-acj4-46-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_46_cond__sympy_auto),
     ('sp-acj4-46-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_46_cond__sympy_ask),
     ('sp-acj4-46-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_46_cond__sympy_satask),
@@ -15009,10 +15009,10 @@ CASES = [
     ('sp-acj4-46-cond', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_46_cond__sympy_extras_ask),
     ('sp-acj4-46-cond', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261020-065818', sp_acj4_46_cond__sympy_extras_refine),
     ('sp-acj4-46-cond', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261020-070552', sp_acj4_46_cond__sympy_extras_simplify),
-    ('sp-acj4-5-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_5_cond__satassume_ask),
-    ('sp-acj4-5-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_5_cond__satrefine_refine),
-    ('sp-acj4-5-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_5_cond__satsimp_trigsimp),
-    ('sp-acj4-5-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_5_cond__satrefine_simplify),
+    ('sp-acj4-5-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_5_cond__satassume_ask),
+    ('sp-acj4-5-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_5_cond__satrefine_refine),
+    ('sp-acj4-5-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_5_cond__satsimp_trigsimp),
+    ('sp-acj4-5-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_5_cond__satrefine_simplify),
     ('sp-acj4-5-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_5_cond__sympy_auto),
     ('sp-acj4-5-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_5_cond__sympy_ask),
     ('sp-acj4-5-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_5_cond__sympy_satask),
@@ -15021,10 +15021,10 @@ CASES = [
     ('sp-acj4-5-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_5_cond__sympy_extras_ask),
     ('sp-acj4-5-cond', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_5_cond__sympy_extras_refine),
     ('sp-acj4-5-cond', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_5_cond__sympy_extras_simplify),
-    ('sp-acj4-55-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_55_cond__satassume_ask),
-    ('sp-acj4-55-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-122740', sp_acj4_55_cond__satrefine_refine),
-    ('sp-acj4-55-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_55_cond__satsimp_trigsimp),
-    ('sp-acj4-55-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-122830', sp_acj4_55_cond__satrefine_simplify),
+    ('sp-acj4-55-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_55_cond__satassume_ask),
+    ('sp-acj4-55-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261021-073817', sp_acj4_55_cond__satrefine_refine),
+    ('sp-acj4-55-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_55_cond__satsimp_trigsimp),
+    ('sp-acj4-55-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261021-073907', sp_acj4_55_cond__satrefine_simplify),
     ('sp-acj4-55-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_55_cond__sympy_auto),
     ('sp-acj4-55-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_55_cond__sympy_ask),
     ('sp-acj4-55-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_55_cond__sympy_satask),
@@ -15033,10 +15033,10 @@ CASES = [
     ('sp-acj4-55-cond', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_55_cond__sympy_extras_ask),
     ('sp-acj4-55-cond', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261020-065818', sp_acj4_55_cond__sympy_extras_refine),
     ('sp-acj4-55-cond', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261020-070552', sp_acj4_55_cond__sympy_extras_simplify),
-    ('sp-acj4-56-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_56_cond__satassume_ask),
-    ('sp-acj4-56-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261020-122740', sp_acj4_56_cond__satrefine_refine),
-    ('sp-acj4-56-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_56_cond__satsimp_trigsimp),
-    ('sp-acj4-56-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261020-122830', sp_acj4_56_cond__satrefine_simplify),
+    ('sp-acj4-56-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_56_cond__satassume_ask),
+    ('sp-acj4-56-cond', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261021-073817', sp_acj4_56_cond__satrefine_refine),
+    ('sp-acj4-56-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_56_cond__satsimp_trigsimp),
+    ('sp-acj4-56-cond', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261021-073907', sp_acj4_56_cond__satrefine_simplify),
     ('sp-acj4-56-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_56_cond__sympy_auto),
     ('sp-acj4-56-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_56_cond__sympy_ask),
     ('sp-acj4-56-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_56_cond__sympy_satask),
@@ -15045,10 +15045,10 @@ CASES = [
     ('sp-acj4-56-cond', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065223', sp_acj4_56_cond__sympy_extras_ask),
     ('sp-acj4-56-cond', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261020-065818', sp_acj4_56_cond__sympy_extras_refine),
     ('sp-acj4-56-cond', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261020-070552', sp_acj4_56_cond__sympy_extras_simplify),
-    ('sp-acj4-56-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261020-122819', sp_acj4_56_condf__satassume_ask),
-    ('sp-acj4-56-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261020-122740', sp_acj4_56_condf__satrefine_refine),
-    ('sp-acj4-56-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_56_condf__satsimp_trigsimp),
-    ('sp-acj4-56-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_56_condf__satrefine_simplify),
+    ('sp-acj4-56-condf', 'satassume-ask', 'false', 'null', 'satassume-ask-20261021-073857', sp_acj4_56_condf__satassume_ask),
+    ('sp-acj4-56-condf', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261021-073817', sp_acj4_56_condf__satrefine_refine),
+    ('sp-acj4-56-condf', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_56_condf__satsimp_trigsimp),
+    ('sp-acj4-56-condf', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_56_condf__satrefine_simplify),
     ('sp-acj4-56-condf', 'sympy-auto', 'false', 'null', 'sympy-auto-20261020-064252', sp_acj4_56_condf__sympy_auto),
     ('sp-acj4-56-condf', 'sympy-ask', 'false', 'null', 'sympy-ask-20261020-064258', sp_acj4_56_condf__sympy_ask),
     ('sp-acj4-56-condf', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-072057', sp_acj4_56_condf__sympy_satask),
@@ -15057,10 +15057,10 @@ CASES = [
     ('sp-acj4-56-condf', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261020-065223', sp_acj4_56_condf__sympy_extras_ask),
     ('sp-acj4-56-condf', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261020-065818', sp_acj4_56_condf__sympy_extras_refine),
     ('sp-acj4-56-condf', 'sympy-extras-simplify', 'false', 'null', 'sympy-extras-simplify-20261020-070552', sp_acj4_56_condf__sympy_extras_simplify),
-    ('sp-acj4-9-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261020-122819', sp_acj4_9_cond__satassume_ask),
-    ('sp-acj4-9-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261020-122740', sp_acj4_9_cond__satrefine_refine),
-    ('sp-acj4-9-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261020-122909', sp_acj4_9_cond__satsimp_trigsimp),
-    ('sp-acj4-9-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261020-122830', sp_acj4_9_cond__satrefine_simplify),
+    ('sp-acj4-9-cond', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073857', sp_acj4_9_cond__satassume_ask),
+    ('sp-acj4-9-cond', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261021-073817', sp_acj4_9_cond__satrefine_refine),
+    ('sp-acj4-9-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073947', sp_acj4_9_cond__satsimp_trigsimp),
+    ('sp-acj4-9-cond', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073907', sp_acj4_9_cond__satrefine_simplify),
     ('sp-acj4-9-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064252', sp_acj4_9_cond__sympy_auto),
     ('sp-acj4-9-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064258', sp_acj4_9_cond__sympy_ask),
     ('sp-acj4-9-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-072057', sp_acj4_9_cond__sympy_satask),
