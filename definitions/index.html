@@ -300,6 +300,8 @@ button.cpb{font:12px system-ui,sans-serif;border:1px solid var(--line);border-ra
 color:var(--fg);cursor:pointer;padding:0 6px;margin-left:4px}td button.cpb{color:var(--muted);font-size:11px}
 button.cpb.cps{float:right;margin:2px 0 0 8px}
 .bar select{font:12px system-ui,sans-serif;max-width:16em}
+th button.px{border:0;background:none;padding:0 2px;color:var(--muted)}th button.px[aria-pressed=true]{color:var(--accent)}
+th.pin{background:color-mix(in srgb,var(--accent) 10%,transparent)}
 details.setupfold>summary{cursor:pointer;color:var(--muted);font-size:12px;width:max-content;margin:4px 0}
 .cpmodal{position:fixed;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;z-index:50}
 .cpmodal>div{background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:12px;
@@ -789,7 +791,7 @@ body.querySelector('table.pts').classList.toggle('only',this.checked);});}
 document.addEventListener('toggle',function(e){var d=e.target;if(d.tagName==='DETAILS'&&d.open&&d.hasAttribute('data-pts'))fill(d);},true);
 document.querySelectorAll('details[data-pts][open]').forEach(fill);
 reveal(location.hash.slice(1),false);spy();
-})();</script><footer class=foot>assume-eval harness v0.1.0 (<code>7cfe655</code>) · no runs</footer></main><script>document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button.copy');if(!b)return;var ids=(b.getAttribute('data-target')||'').split(' '),parts=[];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el)parts.push(el.textContent);}if(!parts.length)return;var text=parts.join('\n');function sel(){var o=b.parentNode.querySelector('textarea');if(o)o.remove();var t=document.createElement('textarea');t.value=text;b.parentNode.appendChild(t);t.select();var ok=false;try{ok=document.execCommand('copy');}catch(x){}if(ok){t.remove();}b.textContent=ok?'Copied':'Selected: press Ctrl/Cmd+C';}if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(function(){b.textContent='Copied';},sel);}else{sel();}setTimeout(function(){b.textContent='Copy';},2500);});</script><script>(function(){
+})();</script><footer class=foot>assume-eval harness v0.1.0 (<code>15af309</code>) · no runs</footer></main><script>document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button.copy');if(!b)return;var ids=(b.getAttribute('data-target')||'').split(' '),parts=[];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el)parts.push(el.textContent);}if(!parts.length)return;var text=parts.join('\n');function sel(){var o=b.parentNode.querySelector('textarea');if(o)o.remove();var t=document.createElement('textarea');t.value=text;b.parentNode.appendChild(t);t.select();var ok=false;try{ok=document.execCommand('copy');}catch(x){}if(ok){t.remove();}b.textContent=ok?'Copied':'Selected: press Ctrl/Cmd+C';}if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(function(){b.textContent='Copied';},sel);}else{sel();}setTimeout(function(){b.textContent='Copy';},2500);});</script><script>(function(){
 function load(id){var el=document.getElementById(id);if(!el)return null;
 try{return JSON.parse(el.textContent);}catch(x){return null;}}
 var data=load('case-data')||{},rdata=load('res-data')||{},ndata=load('note-data')||{},tdata=load('tip-data')||{};
