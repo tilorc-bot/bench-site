@@ -124,7 +124,7 @@ import satsimp
 
 
 # ---- case trig-acos-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261028-000838 answered null (no verdict)
+# the run satrefine-refine-20261028-154901 answered null (no verdict)
 @_in(_SETUP1)
 def trig_acos_01__satrefine_refine():
     x = Symbol('x')
@@ -137,7 +137,7 @@ def trig_acos_01__satrefine_refine():
 
 
 # ---- case trig-asin-01 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261028-000838 answered null (declined correctly)
+# the run satrefine-refine-20261028-154901 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_asin_01__satrefine_refine():
     x = Symbol('x')
@@ -150,7 +150,7 @@ def trig_asin_01__satrefine_refine():
 
 
 # ---- case trig-asin-02 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261028-000838 answered null (no verdict)
+# the run satrefine-refine-20261028-154901 answered null (no verdict)
 @_in(_SETUP1)
 def trig_asin_02__satrefine_refine():
     x = Symbol('x')
@@ -163,7 +163,7 @@ def trig_asin_02__satrefine_refine():
 
 
 # ---- case trig-atan-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261028-000838 answered null (no verdict)
+# the run satrefine-refine-20261028-154901 answered null (no verdict)
 @_in(_SETUP1)
 def trig_atan_01__satrefine_refine():
     x = Symbol('x')
@@ -177,10 +177,10 @@ def trig_atan_01__satrefine_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-acos-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261028-000838', trig_acos_01__satrefine_refine),
-    ('trig-asin-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261028-000838', trig_asin_01__satrefine_refine),
-    ('trig-asin-02', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261028-000838', trig_asin_02__satrefine_refine),
-    ('trig-atan-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261028-000838', trig_atan_01__satrefine_refine),
+    ('trig-acos-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261028-154901', trig_acos_01__satrefine_refine),
+    ('trig-asin-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261028-154901', trig_asin_01__satrefine_refine),
+    ('trig-asin-02', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261028-154901', trig_asin_02__satrefine_refine),
+    ('trig-atan-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261028-154901', trig_atan_01__satrefine_refine),
 ]
 
 

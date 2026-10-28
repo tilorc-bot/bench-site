@@ -167,7 +167,7 @@ def demo_sign_03__satassume_ask():
 
 
 # ---- case demo-sign-03 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261028-000737 answered null (declined correctly)
+# the run satrefine-refine-20261028-154824 answered null (declined correctly)
 @_in(_SETUP2)
 def demo_sign_03__satrefine_refine():
     x = Symbol('x')
@@ -206,7 +206,7 @@ def demo_sign_03__satrefine_simplify():
 
 
 # ---- case demo-sign-03 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-000728 answered null (declined correctly)
+# the run sympy-auto-20261028-154815 answered null (declined correctly)
 @_in(_SETUP3)
 def demo_sign_03__sympy_auto():
     x = Symbol('x', complex=True, zero=False)
@@ -219,7 +219,7 @@ def demo_sign_03__sympy_auto():
 
 
 # ---- case demo-sign-03 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261028-000729 answered null (declined correctly)
+# the run sympy-ask-20261028-154816 answered null (declined correctly)
 @_in(_SETUP3)
 def demo_sign_03__sympy_ask():
     x = Symbol('x')
@@ -243,7 +243,7 @@ def demo_sign_03__sympy_satask():
 
 
 # ---- case demo-sign-03 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261028-000733 answered null (declined correctly)
+# the run sympy-refine-20261028-154820 answered null (declined correctly)
 @_in(_SETUP3)
 def demo_sign_03__sympy_refine():
     x = Symbol('x')
@@ -256,7 +256,7 @@ def demo_sign_03__sympy_refine():
 
 
 # ---- case demo-sign-03 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-000736 answered null (declined correctly)
+# the run sympy-simplify-20261028-154823 answered null (declined correctly)
 @_in(_SETUP3)
 def demo_sign_03__sympy_simplify():
     x = Symbol('x', complex=True, zero=False)
@@ -309,14 +309,14 @@ def demo_sign_03__sympy_extras_simplify():
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('demo-sign-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-002120', demo_sign_03__satassume_ask),
-    ('demo-sign-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261028-000737', demo_sign_03__satrefine_refine),
+    ('demo-sign-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261028-154824', demo_sign_03__satrefine_refine),
     ('demo-sign-03', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-002124', demo_sign_03__satsimp_trigsimp),
     ('demo-sign-03', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261028-002121', demo_sign_03__satrefine_simplify),
-    ('demo-sign-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-000728', demo_sign_03__sympy_auto),
-    ('demo-sign-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261028-000729', demo_sign_03__sympy_ask),
+    ('demo-sign-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-154815', demo_sign_03__sympy_auto),
+    ('demo-sign-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261028-154816', demo_sign_03__sympy_ask),
     ('demo-sign-03', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261028-002140', demo_sign_03__sympy_satask),
-    ('demo-sign-03', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-000733', demo_sign_03__sympy_refine),
-    ('demo-sign-03', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261028-000736', demo_sign_03__sympy_simplify),
+    ('demo-sign-03', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-154820', demo_sign_03__sympy_refine),
+    ('demo-sign-03', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261028-154823', demo_sign_03__sympy_simplify),
     ('demo-sign-03', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261028-002125', demo_sign_03__sympy_extras_ask),
     ('demo-sign-03', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261028-002131', demo_sign_03__sympy_extras_refine),
     ('demo-sign-03', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261028-002135', demo_sign_03__sympy_extras_simplify),

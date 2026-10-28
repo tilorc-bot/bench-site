@@ -167,7 +167,7 @@ def trig_period_03__satassume_ask():
 
 
 # ---- case trig-period-03 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261028-000838 answered null (declined correctly)
+# the run satrefine-refine-20261028-154901 answered null (declined correctly)
 @_in(_SETUP2)
 def trig_period_03__satrefine_refine():
     x = Symbol('x')
@@ -206,7 +206,7 @@ def trig_period_03__satrefine_simplify():
 
 
 # ---- case trig-period-03 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-000831 answered null (declined correctly)
+# the run sympy-auto-20261028-154854 answered null (declined correctly)
 @_in(_SETUP3)
 def trig_period_03__sympy_auto():
     x = Symbol('x', real=True, positive=True)
@@ -219,7 +219,7 @@ def trig_period_03__sympy_auto():
 
 
 # ---- case trig-period-03 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261028-000832 answered null (declined correctly)
+# the run sympy-ask-20261028-154855 answered null (declined correctly)
 @_in(_SETUP3)
 def trig_period_03__sympy_ask():
     x = Symbol('x')
@@ -243,7 +243,7 @@ def trig_period_03__sympy_satask():
 
 
 # ---- case trig-period-03 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261028-000835 answered null (declined correctly)
+# the run sympy-refine-20261028-154857 answered null (declined correctly)
 @_in(_SETUP3)
 def trig_period_03__sympy_refine():
     x = Symbol('x')
@@ -256,7 +256,7 @@ def trig_period_03__sympy_refine():
 
 
 # ---- case trig-period-03 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-000836 answered null (declined correctly)
+# the run sympy-simplify-20261028-154859 answered null (declined correctly)
 @_in(_SETUP3)
 def trig_period_03__sympy_simplify():
     x = Symbol('x', real=True, positive=True)
@@ -309,14 +309,14 @@ def trig_period_03__sympy_extras_simplify():
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('trig-period-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-002142', trig_period_03__satassume_ask),
-    ('trig-period-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261028-000838', trig_period_03__satrefine_refine),
+    ('trig-period-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261028-154901', trig_period_03__satrefine_refine),
     ('trig-period-03', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-002145', trig_period_03__satsimp_trigsimp),
     ('trig-period-03', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261028-002143', trig_period_03__satrefine_simplify),
-    ('trig-period-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-000831', trig_period_03__sympy_auto),
-    ('trig-period-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261028-000832', trig_period_03__sympy_ask),
+    ('trig-period-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-154854', trig_period_03__sympy_auto),
+    ('trig-period-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261028-154855', trig_period_03__sympy_ask),
     ('trig-period-03', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261028-002221', trig_period_03__sympy_satask),
-    ('trig-period-03', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-000835', trig_period_03__sympy_refine),
-    ('trig-period-03', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261028-000836', trig_period_03__sympy_simplify),
+    ('trig-period-03', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-154857', trig_period_03__sympy_refine),
+    ('trig-period-03', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261028-154859', trig_period_03__sympy_simplify),
     ('trig-period-03', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261028-002147', trig_period_03__sympy_extras_ask),
     ('trig-period-03', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261028-002159', trig_period_03__sympy_extras_refine),
     ('trig-period-03', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261028-002209', trig_period_03__sympy_extras_simplify),

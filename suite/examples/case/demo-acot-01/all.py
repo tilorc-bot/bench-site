@@ -167,7 +167,7 @@ def demo_acot_01__satassume_ask():
 
 
 # ---- case demo-acot-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261028-000737 answered null (no verdict)
+# the run satrefine-refine-20261028-154824 answered null (no verdict)
 @_in(_SETUP2)
 def demo_acot_01__satrefine_refine():
     x = Symbol('x')
@@ -206,7 +206,7 @@ def demo_acot_01__satrefine_simplify():
 
 
 # ---- case demo-acot-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-000728 answered null (no verdict)
+# the run sympy-auto-20261028-154815 answered null (no verdict)
 @_in(_SETUP3)
 def demo_acot_01__sympy_auto():
     x = Symbol('x', real=True, positive=True)
@@ -219,7 +219,7 @@ def demo_acot_01__sympy_auto():
 
 
 # ---- case demo-acot-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261028-000729 answered null (no verdict)
+# the run sympy-ask-20261028-154816 answered null (no verdict)
 @_in(_SETUP3)
 def demo_acot_01__sympy_ask():
     x = Symbol('x')
@@ -243,7 +243,7 @@ def demo_acot_01__sympy_satask():
 
 
 # ---- case demo-acot-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261028-000733 answered null (no verdict)
+# the run sympy-refine-20261028-154820 answered null (no verdict)
 @_in(_SETUP3)
 def demo_acot_01__sympy_refine():
     x = Symbol('x')
@@ -256,7 +256,7 @@ def demo_acot_01__sympy_refine():
 
 
 # ---- case demo-acot-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-000736 answered null (no verdict)
+# the run sympy-simplify-20261028-154823 answered null (no verdict)
 @_in(_SETUP3)
 def demo_acot_01__sympy_simplify():
     x = Symbol('x', real=True, positive=True)
@@ -309,14 +309,14 @@ def demo_acot_01__sympy_extras_simplify():
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('demo-acot-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-002120', demo_acot_01__satassume_ask),
-    ('demo-acot-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261028-000737', demo_acot_01__satrefine_refine),
+    ('demo-acot-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261028-154824', demo_acot_01__satrefine_refine),
     ('demo-acot-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-002124', demo_acot_01__satsimp_trigsimp),
     ('demo-acot-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261028-002121', demo_acot_01__satrefine_simplify),
-    ('demo-acot-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261028-000728', demo_acot_01__sympy_auto),
-    ('demo-acot-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261028-000729', demo_acot_01__sympy_ask),
+    ('demo-acot-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261028-154815', demo_acot_01__sympy_auto),
+    ('demo-acot-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261028-154816', demo_acot_01__sympy_ask),
     ('demo-acot-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261028-002140', demo_acot_01__sympy_satask),
-    ('demo-acot-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261028-000733', demo_acot_01__sympy_refine),
-    ('demo-acot-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261028-000736', demo_acot_01__sympy_simplify),
+    ('demo-acot-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261028-154820', demo_acot_01__sympy_refine),
+    ('demo-acot-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261028-154823', demo_acot_01__sympy_simplify),
     ('demo-acot-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261028-002125', demo_acot_01__sympy_extras_ask),
     ('demo-acot-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261028-002131', demo_acot_01__sympy_extras_refine),
     ('demo-acot-01', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261028-002135', demo_acot_01__sympy_extras_simplify),

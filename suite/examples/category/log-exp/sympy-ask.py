@@ -123,7 +123,7 @@ import sympy
 
 
 # ---- case demo-eq-log-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261028-000729 answered null (no verdict)
+# the run sympy-ask-20261028-154816 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_log_01__sympy_ask():
     x = Symbol('x')
@@ -135,7 +135,7 @@ def demo_eq_log_01__sympy_ask():
 
 
 # ---- case demo-eq-pow-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261028-000729 answered null (no verdict)
+# the run sympy-ask-20261028-154816 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_pow_01__sympy_ask():
     n = Symbol('n')
@@ -148,8 +148,8 @@ def demo_eq_pow_01__sympy_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-log-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261028-000729', demo_eq_log_01__sympy_ask),
-    ('demo-eq-pow-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261028-000729', demo_eq_pow_01__sympy_ask),
+    ('demo-eq-log-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261028-154816', demo_eq_log_01__sympy_ask),
+    ('demo-eq-pow-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261028-154816', demo_eq_pow_01__sympy_ask),
 ]
 
 

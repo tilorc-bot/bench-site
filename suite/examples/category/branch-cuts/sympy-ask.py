@@ -123,7 +123,7 @@ import sympy
 
 
 # ---- case demo-atan2-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261028-000729 answered null (no verdict)
+# the run sympy-ask-20261028-154816 answered null (no verdict)
 @_in(_SETUP1)
 def demo_atan2_01__sympy_ask():
     x = Symbol('x')
@@ -136,7 +136,7 @@ def demo_atan2_01__sympy_ask():
 
 
 # ---- case demo-atan2-02 · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261028-000729 answered null (no verdict)
+# the run sympy-ask-20261028-154816 answered null (no verdict)
 @_in(_SETUP1)
 def demo_atan2_02__sympy_ask():
     x = Symbol('x')
@@ -149,7 +149,7 @@ def demo_atan2_02__sympy_ask():
 
 
 # ---- case demo-log-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261028-000729 answered null (no verdict)
+# the run sympy-ask-20261028-154816 answered null (no verdict)
 @_in(_SETUP1)
 def demo_log_01__sympy_ask():
     x = Symbol('x')
@@ -162,7 +162,7 @@ def demo_log_01__sympy_ask():
 
 
 # ---- case demo-log-02 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261028-000729 answered null (declined correctly)
+# the run sympy-ask-20261028-154816 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_log_02__sympy_ask():
     z = Symbol('z')
@@ -175,7 +175,7 @@ def demo_log_02__sympy_ask():
 
 
 # ---- case demo-log-03 · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261028-000729 answered false (solved)
+# the run sympy-ask-20261028-154816 answered false (solved)
 @_in(_SETUP1)
 def demo_log_03__sympy_ask():
     x = Symbol('x')
@@ -188,11 +188,11 @@ def demo_log_03__sympy_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-atan2-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261028-000729', demo_atan2_01__sympy_ask),
-    ('demo-atan2-02', 'sympy-ask', 'false', 'null', 'sympy-ask-20261028-000729', demo_atan2_02__sympy_ask),
-    ('demo-log-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261028-000729', demo_log_01__sympy_ask),
-    ('demo-log-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261028-000729', demo_log_02__sympy_ask),
-    ('demo-log-03', 'sympy-ask', 'false', 'false', 'sympy-ask-20261028-000729', demo_log_03__sympy_ask),
+    ('demo-atan2-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261028-154816', demo_atan2_01__sympy_ask),
+    ('demo-atan2-02', 'sympy-ask', 'false', 'null', 'sympy-ask-20261028-154816', demo_atan2_02__sympy_ask),
+    ('demo-log-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261028-154816', demo_log_01__sympy_ask),
+    ('demo-log-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261028-154816', demo_log_02__sympy_ask),
+    ('demo-log-03', 'sympy-ask', 'false', 'false', 'sympy-ask-20261028-154816', demo_log_03__sympy_ask),
 ]
 
 

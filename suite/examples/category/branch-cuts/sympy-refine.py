@@ -123,7 +123,7 @@ import sympy
 
 
 # ---- case demo-atan2-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261028-000733 answered true (solved)
+# the run sympy-refine-20261028-154820 answered true (solved)
 @_in(_SETUP1)
 def demo_atan2_01__sympy_refine():
     x = Symbol('x')
@@ -137,7 +137,7 @@ def demo_atan2_01__sympy_refine():
 
 
 # ---- case demo-atan2-02 · expected false · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261028-000733 answered false (solved)
+# the run sympy-refine-20261028-154820 answered false (solved)
 @_in(_SETUP1)
 def demo_atan2_02__sympy_refine():
     x = Symbol('x')
@@ -151,7 +151,7 @@ def demo_atan2_02__sympy_refine():
 
 
 # ---- case demo-log-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261028-000733 answered null (no verdict)
+# the run sympy-refine-20261028-154820 answered null (no verdict)
 @_in(_SETUP1)
 def demo_log_01__sympy_refine():
     x = Symbol('x')
@@ -165,7 +165,7 @@ def demo_log_01__sympy_refine():
 
 
 # ---- case demo-log-02 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261028-000733 answered null (declined correctly)
+# the run sympy-refine-20261028-154820 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_log_02__sympy_refine():
     z = Symbol('z')
@@ -179,7 +179,7 @@ def demo_log_02__sympy_refine():
 
 
 # ---- case demo-log-03 · expected false · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261028-000733 answered null (no verdict)
+# the run sympy-refine-20261028-154820 answered null (no verdict)
 @_in(_SETUP1)
 def demo_log_03__sympy_refine():
     x = Symbol('x')
@@ -193,11 +193,11 @@ def demo_log_03__sympy_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-atan2-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261028-000733', demo_atan2_01__sympy_refine),
-    ('demo-atan2-02', 'sympy-refine', 'false', 'false', 'sympy-refine-20261028-000733', demo_atan2_02__sympy_refine),
-    ('demo-log-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261028-000733', demo_log_01__sympy_refine),
-    ('demo-log-02', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-000733', demo_log_02__sympy_refine),
-    ('demo-log-03', 'sympy-refine', 'false', 'null', 'sympy-refine-20261028-000733', demo_log_03__sympy_refine),
+    ('demo-atan2-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261028-154820', demo_atan2_01__sympy_refine),
+    ('demo-atan2-02', 'sympy-refine', 'false', 'false', 'sympy-refine-20261028-154820', demo_atan2_02__sympy_refine),
+    ('demo-log-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261028-154820', demo_log_01__sympy_refine),
+    ('demo-log-02', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-154820', demo_log_02__sympy_refine),
+    ('demo-log-03', 'sympy-refine', 'false', 'null', 'sympy-refine-20261028-154820', demo_log_03__sympy_refine),
 ]
 
 

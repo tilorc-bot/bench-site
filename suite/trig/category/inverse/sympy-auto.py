@@ -126,7 +126,7 @@ import sympy
 
 
 # ---- case trig-acos-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-000831 answered null (no verdict)
+# the run sympy-auto-20261028-154854 answered null (no verdict)
 @_in(_SETUP1)
 def trig_acos_01__sympy_auto():
     x = Symbol('x', real=True, positive=True)
@@ -139,7 +139,7 @@ def trig_acos_01__sympy_auto():
 
 
 # ---- case trig-asin-01 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-000831 answered null (declined correctly)
+# the run sympy-auto-20261028-154854 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_asin_01__sympy_auto():
     x = Symbol('x', real=True)
@@ -151,7 +151,7 @@ def trig_asin_01__sympy_auto():
 
 
 # ---- case trig-asin-02 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-000831 answered null (no verdict)
+# the run sympy-auto-20261028-154854 answered null (no verdict)
 @_in(_SETUP1)
 def trig_asin_02__sympy_auto():
     x = Symbol('x', real=True)
@@ -163,7 +163,7 @@ def trig_asin_02__sympy_auto():
 
 
 # ---- case trig-atan-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-000831 answered null (no verdict)
+# the run sympy-auto-20261028-154854 answered null (no verdict)
 @_in(_SETUP1)
 def trig_atan_01__sympy_auto():
     x = Symbol('x', real=True)
@@ -176,10 +176,10 @@ def trig_atan_01__sympy_auto():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-acos-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261028-000831', trig_acos_01__sympy_auto),
-    ('trig-asin-01', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-000831', trig_asin_01__sympy_auto),
-    ('trig-asin-02', 'sympy-auto', 'true', 'null', 'sympy-auto-20261028-000831', trig_asin_02__sympy_auto),
-    ('trig-atan-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261028-000831', trig_atan_01__sympy_auto),
+    ('trig-acos-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261028-154854', trig_acos_01__sympy_auto),
+    ('trig-asin-01', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-154854', trig_asin_01__sympy_auto),
+    ('trig-asin-02', 'sympy-auto', 'true', 'null', 'sympy-auto-20261028-154854', trig_asin_02__sympy_auto),
+    ('trig-atan-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261028-154854', trig_atan_01__sympy_auto),
 ]
 
 

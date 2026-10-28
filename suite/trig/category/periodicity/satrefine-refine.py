@@ -124,7 +124,7 @@ import satsimp
 
 
 # ---- case trig-period-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261028-000838 answered true (solved)
+# the run satrefine-refine-20261028-154901 answered true (solved)
 @_in(_SETUP1)
 def trig_period_01__satrefine_refine():
     z = Symbol('z')
@@ -137,7 +137,7 @@ def trig_period_01__satrefine_refine():
 
 
 # ---- case trig-period-02 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261028-000838 answered null (declined correctly)
+# the run satrefine-refine-20261028-154901 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_02__satrefine_refine():
     x = Symbol('x')
@@ -150,7 +150,7 @@ def trig_period_02__satrefine_refine():
 
 
 # ---- case trig-period-03 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261028-000838 answered null (declined correctly)
+# the run satrefine-refine-20261028-154901 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_03__satrefine_refine():
     x = Symbol('x')
@@ -163,7 +163,7 @@ def trig_period_03__satrefine_refine():
 
 
 # ---- case trig-shift-01 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261028-000838 answered null (declined correctly)
+# the run satrefine-refine-20261028-154901 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_shift_01__satrefine_refine():
     x = Symbol('x')
@@ -177,10 +177,10 @@ def trig_shift_01__satrefine_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-period-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261028-000838', trig_period_01__satrefine_refine),
-    ('trig-period-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261028-000838', trig_period_02__satrefine_refine),
-    ('trig-period-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261028-000838', trig_period_03__satrefine_refine),
-    ('trig-shift-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261028-000838', trig_shift_01__satrefine_refine),
+    ('trig-period-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261028-154901', trig_period_01__satrefine_refine),
+    ('trig-period-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261028-154901', trig_period_02__satrefine_refine),
+    ('trig-period-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261028-154901', trig_period_03__satrefine_refine),
+    ('trig-shift-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261028-154901', trig_shift_01__satrefine_refine),
 ]
 
 
