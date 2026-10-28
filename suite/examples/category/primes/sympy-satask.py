@@ -124,7 +124,7 @@ from sympy.assumptions.satask import satask
 
 
 # ---- case demo-prime-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261028-160233 answered null (no verdict)
+# the run sympy-satask-20261028-185847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_prime_01__sympy_satask():
     p = Symbol('p')
@@ -136,7 +136,7 @@ def demo_prime_01__sympy_satask():
 
 
 # ---- case demo-prime-02 · expected contingent · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261028-160233 answered null (declined correctly)
+# the run sympy-satask-20261028-185847 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_prime_02__sympy_satask():
     p = Symbol('p')
@@ -149,8 +149,8 @@ def demo_prime_02__sympy_satask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-prime-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261028-160233', demo_prime_01__sympy_satask),
-    ('demo-prime-02', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261028-160233', demo_prime_02__sympy_satask),
+    ('demo-prime-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261028-185847', demo_prime_01__sympy_satask),
+    ('demo-prime-02', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261028-185847', demo_prime_02__sympy_satask),
 ]
 
 

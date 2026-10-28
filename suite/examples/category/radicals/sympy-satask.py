@@ -124,7 +124,7 @@ from sympy.assumptions.satask import satask
 
 
 # ---- case demo-eq-abs-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261028-160233 answered null (no verdict)
+# the run sympy-satask-20261028-185847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_abs_01__sympy_satask():
     x = Symbol('x')
@@ -136,7 +136,7 @@ def demo_eq_abs_01__sympy_satask():
 
 
 # ---- case demo-eq-abs-02 · expected false · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261028-160233 answered null (no verdict)
+# the run sympy-satask-20261028-185847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_abs_02__sympy_satask():
     x = Symbol('x')
@@ -148,7 +148,7 @@ def demo_eq_abs_02__sympy_satask():
 
 
 # ---- case demo-eq-sqrt-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261028-160233 answered null (no verdict)
+# the run sympy-satask-20261028-185847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_sqrt_01__sympy_satask():
     x = Symbol('x')
@@ -160,7 +160,7 @@ def demo_eq_sqrt_01__sympy_satask():
 
 
 # ---- case demo-eq-sqrt-02 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261028-160233 answered null (no verdict)
+# the run sympy-satask-20261028-185847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_sqrt_02__sympy_satask():
     x = Symbol('x')
@@ -172,7 +172,7 @@ def demo_eq_sqrt_02__sympy_satask():
 
 
 # ---- case demo-eq-sqrt-03 · expected contingent · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261028-160233 answered null (declined correctly)
+# the run sympy-satask-20261028-185847 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_eq_sqrt_03__sympy_satask():
     x = Symbol('x')
@@ -184,7 +184,7 @@ def demo_eq_sqrt_03__sympy_satask():
 
 
 # ---- case demo-eq-sqrt-04 · expected false · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261028-160233 answered null (no verdict)
+# the run sympy-satask-20261028-185847 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_sqrt_04__sympy_satask():
     x = Symbol('x')
@@ -197,12 +197,12 @@ def demo_eq_sqrt_04__sympy_satask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-abs-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261028-160233', demo_eq_abs_01__sympy_satask),
-    ('demo-eq-abs-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261028-160233', demo_eq_abs_02__sympy_satask),
-    ('demo-eq-sqrt-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261028-160233', demo_eq_sqrt_01__sympy_satask),
-    ('demo-eq-sqrt-02', 'sympy-satask', 'true', 'null', 'sympy-satask-20261028-160233', demo_eq_sqrt_02__sympy_satask),
-    ('demo-eq-sqrt-03', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261028-160233', demo_eq_sqrt_03__sympy_satask),
-    ('demo-eq-sqrt-04', 'sympy-satask', 'false', 'null', 'sympy-satask-20261028-160233', demo_eq_sqrt_04__sympy_satask),
+    ('demo-eq-abs-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261028-185847', demo_eq_abs_01__sympy_satask),
+    ('demo-eq-abs-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261028-185847', demo_eq_abs_02__sympy_satask),
+    ('demo-eq-sqrt-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261028-185847', demo_eq_sqrt_01__sympy_satask),
+    ('demo-eq-sqrt-02', 'sympy-satask', 'true', 'null', 'sympy-satask-20261028-185847', demo_eq_sqrt_02__sympy_satask),
+    ('demo-eq-sqrt-03', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261028-185847', demo_eq_sqrt_03__sympy_satask),
+    ('demo-eq-sqrt-04', 'sympy-satask', 'false', 'null', 'sympy-satask-20261028-185847', demo_eq_sqrt_04__sympy_satask),
 ]
 
 

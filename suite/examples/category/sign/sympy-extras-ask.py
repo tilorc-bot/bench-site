@@ -131,7 +131,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-nonzero-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered null (no verdict)
+# the run sympy-extras-ask-20261028-185833 answered null (no verdict)
 @_in(_SETUP1)
 def demo_nonzero_01__sympy_extras_ask():
     z = Symbol('z')
@@ -143,7 +143,7 @@ def demo_nonzero_01__sympy_extras_ask():
 
 
 # ---- case demo-sign-02 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered null (no verdict)
+# the run sympy-extras-ask-20261028-185833 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_02__sympy_extras_ask():
     x = Symbol('x')
@@ -155,7 +155,7 @@ def demo_sign_02__sympy_extras_ask():
 
 
 # ---- case demo-sign-03 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered null (declined correctly)
+# the run sympy-extras-ask-20261028-185833 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_sign_03__sympy_extras_ask():
     x = Symbol('x')
@@ -167,7 +167,7 @@ def demo_sign_03__sympy_extras_ask():
 
 
 # ---- case demo-sign-04 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered null (no verdict)
+# the run sympy-extras-ask-20261028-185833 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_04__sympy_extras_ask():
     z = Symbol('z')
@@ -179,7 +179,7 @@ def demo_sign_04__sympy_extras_ask():
 
 
 # ---- case demo-sign-05 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered true (solved)
+# the run sympy-extras-ask-20261028-185833 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_05__sympy_extras_ask():
     x = Symbol('x')
@@ -193,11 +193,11 @@ def demo_sign_05__sympy_extras_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-nonzero-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-160219', demo_nonzero_01__sympy_extras_ask),
-    ('demo-sign-02', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-160219', demo_sign_02__sympy_extras_ask),
-    ('demo-sign-03', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261028-160219', demo_sign_03__sympy_extras_ask),
-    ('demo-sign-04', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-160219', demo_sign_04__sympy_extras_ask),
-    ('demo-sign-05', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261028-160219', demo_sign_05__sympy_extras_ask),
+    ('demo-nonzero-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-185833', demo_nonzero_01__sympy_extras_ask),
+    ('demo-sign-02', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-185833', demo_sign_02__sympy_extras_ask),
+    ('demo-sign-03', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261028-185833', demo_sign_03__sympy_extras_ask),
+    ('demo-sign-04', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-185833', demo_sign_04__sympy_extras_ask),
+    ('demo-sign-05', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261028-185833', demo_sign_05__sympy_extras_ask),
 ]
 
 

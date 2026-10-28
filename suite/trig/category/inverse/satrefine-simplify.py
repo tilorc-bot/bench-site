@@ -124,7 +124,7 @@ import satsimp
 
 
 # ---- case trig-acos-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261028-160237 answered null (no verdict)
+# the run satrefine-simplify-20261028-185851 answered null (no verdict)
 @_in(_SETUP1)
 def trig_acos_01__satrefine_simplify():
     x = Symbol('x')
@@ -137,7 +137,7 @@ def trig_acos_01__satrefine_simplify():
 
 
 # ---- case trig-asin-01 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261028-160237 answered null (declined correctly)
+# the run satrefine-simplify-20261028-185851 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_asin_01__satrefine_simplify():
     x = Symbol('x')
@@ -150,7 +150,7 @@ def trig_asin_01__satrefine_simplify():
 
 
 # ---- case trig-asin-02 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261028-160237 answered null (no verdict)
+# the run satrefine-simplify-20261028-185851 answered null (no verdict)
 @_in(_SETUP1)
 def trig_asin_02__satrefine_simplify():
     x = Symbol('x')
@@ -163,7 +163,7 @@ def trig_asin_02__satrefine_simplify():
 
 
 # ---- case trig-atan-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261028-160237 answered null (no verdict)
+# the run satrefine-simplify-20261028-185851 answered null (no verdict)
 @_in(_SETUP1)
 def trig_atan_01__satrefine_simplify():
     x = Symbol('x')
@@ -177,10 +177,10 @@ def trig_atan_01__satrefine_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-acos-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261028-160237', trig_acos_01__satrefine_simplify),
-    ('trig-asin-01', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261028-160237', trig_asin_01__satrefine_simplify),
-    ('trig-asin-02', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261028-160237', trig_asin_02__satrefine_simplify),
-    ('trig-atan-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261028-160237', trig_atan_01__satrefine_simplify),
+    ('trig-acos-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261028-185851', trig_acos_01__satrefine_simplify),
+    ('trig-asin-01', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261028-185851', trig_asin_01__satrefine_simplify),
+    ('trig-asin-02', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261028-185851', trig_asin_02__satrefine_simplify),
+    ('trig-atan-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261028-185851', trig_atan_01__satrefine_simplify),
 ]
 
 

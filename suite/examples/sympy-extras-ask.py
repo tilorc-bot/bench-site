@@ -131,7 +131,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-atan2-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered null (no verdict)
+# the run sympy-extras-ask-20261028-185833 answered null (no verdict)
 @_in(_SETUP1)
 def demo_atan2_01__sympy_extras_ask():
     x = Symbol('x')
@@ -144,7 +144,7 @@ def demo_atan2_01__sympy_extras_ask():
 
 
 # ---- case demo-atan2-02 · expected false · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered null (no verdict)
+# the run sympy-extras-ask-20261028-185833 answered null (no verdict)
 @_in(_SETUP1)
 def demo_atan2_02__sympy_extras_ask():
     x = Symbol('x')
@@ -157,7 +157,7 @@ def demo_atan2_02__sympy_extras_ask():
 
 
 # ---- case demo-eq-abs-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered true (solved)
+# the run sympy-extras-ask-20261028-185833 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_abs_01__sympy_extras_ask():
     x = Symbol('x')
@@ -169,7 +169,7 @@ def demo_eq_abs_01__sympy_extras_ask():
 
 
 # ---- case demo-eq-abs-02 · expected false · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered false (solved)
+# the run sympy-extras-ask-20261028-185833 answered false (solved)
 @_in(_SETUP1)
 def demo_eq_abs_02__sympy_extras_ask():
     x = Symbol('x')
@@ -181,7 +181,7 @@ def demo_eq_abs_02__sympy_extras_ask():
 
 
 # ---- case demo-eq-log-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered true (solved)
+# the run sympy-extras-ask-20261028-185833 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_log_01__sympy_extras_ask():
     x = Symbol('x')
@@ -193,7 +193,7 @@ def demo_eq_log_01__sympy_extras_ask():
 
 
 # ---- case demo-eq-pow-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered null (no verdict)
+# the run sympy-extras-ask-20261028-185833 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_pow_01__sympy_extras_ask():
     n = Symbol('n')
@@ -205,7 +205,7 @@ def demo_eq_pow_01__sympy_extras_ask():
 
 
 # ---- case demo-eq-sqrt-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered true (solved)
+# the run sympy-extras-ask-20261028-185833 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_01__sympy_extras_ask():
     x = Symbol('x')
@@ -217,7 +217,7 @@ def demo_eq_sqrt_01__sympy_extras_ask():
 
 
 # ---- case demo-eq-sqrt-02 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered true (solved)
+# the run sympy-extras-ask-20261028-185833 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_02__sympy_extras_ask():
     x = Symbol('x')
@@ -229,7 +229,7 @@ def demo_eq_sqrt_02__sympy_extras_ask():
 
 
 # ---- case demo-eq-sqrt-03 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered null (declined correctly)
+# the run sympy-extras-ask-20261028-185833 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_eq_sqrt_03__sympy_extras_ask():
     x = Symbol('x')
@@ -241,7 +241,7 @@ def demo_eq_sqrt_03__sympy_extras_ask():
 
 
 # ---- case demo-eq-sqrt-04 · expected false · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered null (no verdict)
+# the run sympy-extras-ask-20261028-185833 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_sqrt_04__sympy_extras_ask():
     x = Symbol('x')
@@ -253,7 +253,7 @@ def demo_eq_sqrt_04__sympy_extras_ask():
 
 
 # ---- case demo-eq-trig-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered true (solved)
+# the run sympy-extras-ask-20261028-185833 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_trig_01__sympy_extras_ask():
     x = Symbol('x')
@@ -265,7 +265,7 @@ def demo_eq_trig_01__sympy_extras_ask():
 
 
 # ---- case demo-eq-trig-02 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered true (solved)
+# the run sympy-extras-ask-20261028-185833 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_trig_02__sympy_extras_ask():
     x = Symbol('x')
@@ -277,7 +277,7 @@ def demo_eq_trig_02__sympy_extras_ask():
 
 
 # ---- case demo-log-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered true (solved)
+# the run sympy-extras-ask-20261028-185833 answered true (solved)
 @_in(_SETUP1)
 def demo_log_01__sympy_extras_ask():
     x = Symbol('x')
@@ -290,7 +290,7 @@ def demo_log_01__sympy_extras_ask():
 
 
 # ---- case demo-log-02 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered null (declined correctly)
+# the run sympy-extras-ask-20261028-185833 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_log_02__sympy_extras_ask():
     z = Symbol('z')
@@ -303,7 +303,7 @@ def demo_log_02__sympy_extras_ask():
 
 
 # ---- case demo-log-03 · expected false · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered null (no verdict)
+# the run sympy-extras-ask-20261028-185833 answered null (no verdict)
 @_in(_SETUP1)
 def demo_log_03__sympy_extras_ask():
     x = Symbol('x')
@@ -315,7 +315,7 @@ def demo_log_03__sympy_extras_ask():
 
 
 # ---- case demo-nonzero-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered null (no verdict)
+# the run sympy-extras-ask-20261028-185833 answered null (no verdict)
 @_in(_SETUP1)
 def demo_nonzero_01__sympy_extras_ask():
     z = Symbol('z')
@@ -327,7 +327,7 @@ def demo_nonzero_01__sympy_extras_ask():
 
 
 # ---- case demo-parity-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered null (no verdict)
+# the run sympy-extras-ask-20261028-185833 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_01__sympy_extras_ask():
     n = Symbol('n')
@@ -339,7 +339,7 @@ def demo_parity_01__sympy_extras_ask():
 
 
 # ---- case demo-parity-02 · expected false · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered false (solved)
+# the run sympy-extras-ask-20261028-185833 answered false (solved)
 @_in(_SETUP1)
 def demo_parity_02__sympy_extras_ask():
     n = Symbol('n')
@@ -352,7 +352,7 @@ def demo_parity_02__sympy_extras_ask():
 
 
 # ---- case demo-parity-03 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered null (no verdict)
+# the run sympy-extras-ask-20261028-185833 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_03__sympy_extras_ask():
     n = Symbol('n')
@@ -364,7 +364,7 @@ def demo_parity_03__sympy_extras_ask():
 
 
 # ---- case demo-parity-04 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered null (declined correctly)
+# the run sympy-extras-ask-20261028-185833 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_parity_04__sympy_extras_ask():
     n = Symbol('n')
@@ -376,7 +376,7 @@ def demo_parity_04__sympy_extras_ask():
 
 
 # ---- case demo-parity-05 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered null (no verdict)
+# the run sympy-extras-ask-20261028-185833 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_05__sympy_extras_ask():
     n = Symbol('n')
@@ -389,7 +389,7 @@ def demo_parity_05__sympy_extras_ask():
 
 
 # ---- case demo-prime-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered null (no verdict)
+# the run sympy-extras-ask-20261028-185833 answered null (no verdict)
 @_in(_SETUP1)
 def demo_prime_01__sympy_extras_ask():
     p = Symbol('p')
@@ -401,7 +401,7 @@ def demo_prime_01__sympy_extras_ask():
 
 
 # ---- case demo-prime-02 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered null (declined correctly)
+# the run sympy-extras-ask-20261028-185833 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_prime_02__sympy_extras_ask():
     p = Symbol('p')
@@ -413,7 +413,7 @@ def demo_prime_02__sympy_extras_ask():
 
 
 # ---- case demo-sign-02 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered null (no verdict)
+# the run sympy-extras-ask-20261028-185833 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_02__sympy_extras_ask():
     x = Symbol('x')
@@ -425,7 +425,7 @@ def demo_sign_02__sympy_extras_ask():
 
 
 # ---- case demo-sign-03 · expected contingent · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered null (declined correctly)
+# the run sympy-extras-ask-20261028-185833 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_sign_03__sympy_extras_ask():
     x = Symbol('x')
@@ -437,7 +437,7 @@ def demo_sign_03__sympy_extras_ask():
 
 
 # ---- case demo-sign-04 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered null (no verdict)
+# the run sympy-extras-ask-20261028-185833 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_04__sympy_extras_ask():
     z = Symbol('z')
@@ -449,7 +449,7 @@ def demo_sign_04__sympy_extras_ask():
 
 
 # ---- case demo-sign-05 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-160219 answered true (solved)
+# the run sympy-extras-ask-20261028-185833 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_05__sympy_extras_ask():
     x = Symbol('x')
@@ -463,33 +463,33 @@ def demo_sign_05__sympy_extras_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-atan2-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-160219', demo_atan2_01__sympy_extras_ask),
-    ('demo-atan2-02', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261028-160219', demo_atan2_02__sympy_extras_ask),
-    ('demo-eq-abs-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261028-160219', demo_eq_abs_01__sympy_extras_ask),
-    ('demo-eq-abs-02', 'sympy-extras-ask', 'false', 'false', 'sympy-extras-ask-20261028-160219', demo_eq_abs_02__sympy_extras_ask),
-    ('demo-eq-log-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261028-160219', demo_eq_log_01__sympy_extras_ask),
-    ('demo-eq-pow-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-160219', demo_eq_pow_01__sympy_extras_ask),
-    ('demo-eq-sqrt-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261028-160219', demo_eq_sqrt_01__sympy_extras_ask),
-    ('demo-eq-sqrt-02', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261028-160219', demo_eq_sqrt_02__sympy_extras_ask),
-    ('demo-eq-sqrt-03', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261028-160219', demo_eq_sqrt_03__sympy_extras_ask),
-    ('demo-eq-sqrt-04', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261028-160219', demo_eq_sqrt_04__sympy_extras_ask),
-    ('demo-eq-trig-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261028-160219', demo_eq_trig_01__sympy_extras_ask),
-    ('demo-eq-trig-02', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261028-160219', demo_eq_trig_02__sympy_extras_ask),
-    ('demo-log-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261028-160219', demo_log_01__sympy_extras_ask),
-    ('demo-log-02', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261028-160219', demo_log_02__sympy_extras_ask),
-    ('demo-log-03', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261028-160219', demo_log_03__sympy_extras_ask),
-    ('demo-nonzero-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-160219', demo_nonzero_01__sympy_extras_ask),
-    ('demo-parity-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-160219', demo_parity_01__sympy_extras_ask),
-    ('demo-parity-02', 'sympy-extras-ask', 'false', 'false', 'sympy-extras-ask-20261028-160219', demo_parity_02__sympy_extras_ask),
-    ('demo-parity-03', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-160219', demo_parity_03__sympy_extras_ask),
-    ('demo-parity-04', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261028-160219', demo_parity_04__sympy_extras_ask),
-    ('demo-parity-05', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-160219', demo_parity_05__sympy_extras_ask),
-    ('demo-prime-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-160219', demo_prime_01__sympy_extras_ask),
-    ('demo-prime-02', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261028-160219', demo_prime_02__sympy_extras_ask),
-    ('demo-sign-02', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-160219', demo_sign_02__sympy_extras_ask),
-    ('demo-sign-03', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261028-160219', demo_sign_03__sympy_extras_ask),
-    ('demo-sign-04', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-160219', demo_sign_04__sympy_extras_ask),
-    ('demo-sign-05', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261028-160219', demo_sign_05__sympy_extras_ask),
+    ('demo-atan2-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-185833', demo_atan2_01__sympy_extras_ask),
+    ('demo-atan2-02', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261028-185833', demo_atan2_02__sympy_extras_ask),
+    ('demo-eq-abs-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261028-185833', demo_eq_abs_01__sympy_extras_ask),
+    ('demo-eq-abs-02', 'sympy-extras-ask', 'false', 'false', 'sympy-extras-ask-20261028-185833', demo_eq_abs_02__sympy_extras_ask),
+    ('demo-eq-log-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261028-185833', demo_eq_log_01__sympy_extras_ask),
+    ('demo-eq-pow-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-185833', demo_eq_pow_01__sympy_extras_ask),
+    ('demo-eq-sqrt-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261028-185833', demo_eq_sqrt_01__sympy_extras_ask),
+    ('demo-eq-sqrt-02', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261028-185833', demo_eq_sqrt_02__sympy_extras_ask),
+    ('demo-eq-sqrt-03', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261028-185833', demo_eq_sqrt_03__sympy_extras_ask),
+    ('demo-eq-sqrt-04', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261028-185833', demo_eq_sqrt_04__sympy_extras_ask),
+    ('demo-eq-trig-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261028-185833', demo_eq_trig_01__sympy_extras_ask),
+    ('demo-eq-trig-02', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261028-185833', demo_eq_trig_02__sympy_extras_ask),
+    ('demo-log-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261028-185833', demo_log_01__sympy_extras_ask),
+    ('demo-log-02', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261028-185833', demo_log_02__sympy_extras_ask),
+    ('demo-log-03', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261028-185833', demo_log_03__sympy_extras_ask),
+    ('demo-nonzero-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-185833', demo_nonzero_01__sympy_extras_ask),
+    ('demo-parity-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-185833', demo_parity_01__sympy_extras_ask),
+    ('demo-parity-02', 'sympy-extras-ask', 'false', 'false', 'sympy-extras-ask-20261028-185833', demo_parity_02__sympy_extras_ask),
+    ('demo-parity-03', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-185833', demo_parity_03__sympy_extras_ask),
+    ('demo-parity-04', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261028-185833', demo_parity_04__sympy_extras_ask),
+    ('demo-parity-05', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-185833', demo_parity_05__sympy_extras_ask),
+    ('demo-prime-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-185833', demo_prime_01__sympy_extras_ask),
+    ('demo-prime-02', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261028-185833', demo_prime_02__sympy_extras_ask),
+    ('demo-sign-02', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-185833', demo_sign_02__sympy_extras_ask),
+    ('demo-sign-03', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261028-185833', demo_sign_03__sympy_extras_ask),
+    ('demo-sign-04', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-185833', demo_sign_04__sympy_extras_ask),
+    ('demo-sign-05', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261028-185833', demo_sign_05__sympy_extras_ask),
 ]
 
 
