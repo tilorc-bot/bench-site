@@ -123,7 +123,7 @@ import sympy
 
 
 # ---- case sp-acj4-0-real · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (no verdict)
+# the run sympy-refine-20261028-001510 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_0_real__sympy_refine():
     x = Symbol('x')
@@ -136,7 +136,7 @@ def sp_acj4_0_real__sympy_refine():
 
 
 # ---- case sp-acj4-115-real · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (no verdict)
+# the run sympy-refine-20261028-001510 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_115_real__sympy_refine():
     x = Symbol('x')
@@ -149,7 +149,7 @@ def sp_acj4_115_real__sympy_refine():
 
 
 # ---- case sp-acj4-116-real · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (no verdict)
+# the run sympy-refine-20261028-001510 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_116_real__sympy_refine():
     x = Symbol('x')
@@ -162,7 +162,7 @@ def sp_acj4_116_real__sympy_refine():
 
 
 # ---- case sp-acj4-130-real · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (declined correctly)
+# the run sympy-refine-20261028-001510 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_130_real__sympy_refine():
     x = Symbol('x')
@@ -175,7 +175,7 @@ def sp_acj4_130_real__sympy_refine():
 
 
 # ---- case sp-acj4-151-real · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (declined correctly)
+# the run sympy-refine-20261028-001510 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_151_real__sympy_refine():
     x = Symbol('x')
@@ -188,7 +188,7 @@ def sp_acj4_151_real__sympy_refine():
 
 
 # ---- case sp-acj4-154-real · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (no verdict)
+# the run sympy-refine-20261028-001510 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_154_real__sympy_refine():
     x = Symbol('x')
@@ -201,7 +201,7 @@ def sp_acj4_154_real__sympy_refine():
 
 
 # ---- case sp-acj4-156-real · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (declined correctly)
+# the run sympy-refine-20261028-001510 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_156_real__sympy_refine():
     x = Symbol('x')
@@ -214,7 +214,7 @@ def sp_acj4_156_real__sympy_refine():
 
 
 # ---- case sp-acj4-180-real · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (declined correctly)
+# the run sympy-refine-20261028-001510 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_180_real__sympy_refine():
     x = Symbol('x')
@@ -227,7 +227,7 @@ def sp_acj4_180_real__sympy_refine():
 
 
 # ---- case sp-acj4-183-real · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (declined correctly)
+# the run sympy-refine-20261028-001510 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_183_real__sympy_refine():
     x = Symbol('x')
@@ -240,7 +240,7 @@ def sp_acj4_183_real__sympy_refine():
 
 
 # ---- case sp-acj4-189-real · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (no verdict)
+# the run sympy-refine-20261028-001510 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_189_real__sympy_refine():
     x = Symbol('x')
@@ -253,7 +253,7 @@ def sp_acj4_189_real__sympy_refine():
 
 
 # ---- case sp-acj4-190-real · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (no verdict)
+# the run sympy-refine-20261028-001510 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_190_real__sympy_refine():
     x = Symbol('x')
@@ -266,7 +266,7 @@ def sp_acj4_190_real__sympy_refine():
 
 
 # ---- case sp-acj4-191-real · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (no verdict)
+# the run sympy-refine-20261028-001510 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_191_real__sympy_refine():
     x = Symbol('x')
@@ -279,7 +279,7 @@ def sp_acj4_191_real__sympy_refine():
 
 
 # ---- case sp-acj4-203-real · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (declined correctly)
+# the run sympy-refine-20261028-001510 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_203_real__sympy_refine():
     x = Symbol('x')
@@ -292,7 +292,7 @@ def sp_acj4_203_real__sympy_refine():
 
 
 # ---- case sp-acj4-229-real · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered true (solved)
+# the run sympy-refine-20261028-001510 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_229_real__sympy_refine():
     x = Symbol('x')
@@ -305,7 +305,7 @@ def sp_acj4_229_real__sympy_refine():
 
 
 # ---- case sp-acj4-234-real · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (declined correctly)
+# the run sympy-refine-20261028-001510 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_234_real__sympy_refine():
     x = Symbol('x')
@@ -318,7 +318,7 @@ def sp_acj4_234_real__sympy_refine():
 
 
 # ---- case sp-acj4-241-real · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (declined correctly)
+# the run sympy-refine-20261028-001510 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_241_real__sympy_refine():
     x = Symbol('x')
@@ -331,7 +331,7 @@ def sp_acj4_241_real__sympy_refine():
 
 
 # ---- case sp-acj4-247-real · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (declined correctly)
+# the run sympy-refine-20261028-001510 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_247_real__sympy_refine():
     x = Symbol('x')
@@ -344,7 +344,7 @@ def sp_acj4_247_real__sympy_refine():
 
 
 # ---- case sp-acj4-260-real · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (declined correctly)
+# the run sympy-refine-20261028-001510 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_260_real__sympy_refine():
     x = Symbol('x')
@@ -357,7 +357,7 @@ def sp_acj4_260_real__sympy_refine():
 
 
 # ---- case sp-acj4-261-real · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (no verdict)
+# the run sympy-refine-20261028-001510 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_261_real__sympy_refine():
     x = Symbol('x')
@@ -370,7 +370,7 @@ def sp_acj4_261_real__sympy_refine():
 
 
 # ---- case sp-acj4-266-real · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (declined correctly)
+# the run sympy-refine-20261028-001510 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_266_real__sympy_refine():
     x = Symbol('x')
@@ -383,7 +383,7 @@ def sp_acj4_266_real__sympy_refine():
 
 
 # ---- case sp-acj4-267-real · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (declined correctly)
+# the run sympy-refine-20261028-001510 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_267_real__sympy_refine():
     x = Symbol('x')
@@ -396,7 +396,7 @@ def sp_acj4_267_real__sympy_refine():
 
 
 # ---- case sp-acj4-29-real · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (declined correctly)
+# the run sympy-refine-20261028-001510 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_29_real__sympy_refine():
     x = Symbol('x')
@@ -409,7 +409,7 @@ def sp_acj4_29_real__sympy_refine():
 
 
 # ---- case sp-acj4-3-real · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (no verdict)
+# the run sympy-refine-20261028-001510 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_3_real__sympy_refine():
     x = Symbol('x')
@@ -422,7 +422,7 @@ def sp_acj4_3_real__sympy_refine():
 
 
 # ---- case sp-acj4-343-real · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered true (solved)
+# the run sympy-refine-20261028-001510 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_343_real__sympy_refine():
     x = Symbol('x')
@@ -435,7 +435,7 @@ def sp_acj4_343_real__sympy_refine():
 
 
 # ---- case sp-acj4-344-real · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (declined correctly)
+# the run sympy-refine-20261028-001510 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_344_real__sympy_refine():
     x = Symbol('x')
@@ -448,7 +448,7 @@ def sp_acj4_344_real__sympy_refine():
 
 
 # ---- case sp-acj4-378-real · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (no verdict)
+# the run sympy-refine-20261028-001510 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_378_real__sympy_refine():
     x = Symbol('x')
@@ -461,7 +461,7 @@ def sp_acj4_378_real__sympy_refine():
 
 
 # ---- case sp-acj4-380-real · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (no verdict)
+# the run sympy-refine-20261028-001510 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_380_real__sympy_refine():
     x = Symbol('x')
@@ -474,7 +474,7 @@ def sp_acj4_380_real__sympy_refine():
 
 
 # ---- case sp-acj4-392-real · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (declined correctly)
+# the run sympy-refine-20261028-001510 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_392_real__sympy_refine():
     x = Symbol('x')
@@ -487,7 +487,7 @@ def sp_acj4_392_real__sympy_refine():
 
 
 # ---- case sp-acj4-403-real · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (declined correctly)
+# the run sympy-refine-20261028-001510 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_403_real__sympy_refine():
     x = Symbol('x')
@@ -500,7 +500,7 @@ def sp_acj4_403_real__sympy_refine():
 
 
 # ---- case sp-acj4-410-real · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered true (solved)
+# the run sympy-refine-20261028-001510 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_410_real__sympy_refine():
     x = Symbol('x')
@@ -513,7 +513,7 @@ def sp_acj4_410_real__sympy_refine():
 
 
 # ---- case sp-acj4-416-real · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (declined correctly)
+# the run sympy-refine-20261028-001510 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_416_real__sympy_refine():
     x = Symbol('x')
@@ -526,7 +526,7 @@ def sp_acj4_416_real__sympy_refine():
 
 
 # ---- case sp-acj4-420-real · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (declined correctly)
+# the run sympy-refine-20261028-001510 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_420_real__sympy_refine():
     x = Symbol('x')
@@ -539,7 +539,7 @@ def sp_acj4_420_real__sympy_refine():
 
 
 # ---- case sp-acj4-430-real · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (declined correctly)
+# the run sympy-refine-20261028-001510 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_430_real__sympy_refine():
     x = Symbol('x')
@@ -552,7 +552,7 @@ def sp_acj4_430_real__sympy_refine():
 
 
 # ---- case sp-acj4-433-real · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (declined correctly)
+# the run sympy-refine-20261028-001510 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_433_real__sympy_refine():
     x = Symbol('x')
@@ -565,7 +565,7 @@ def sp_acj4_433_real__sympy_refine():
 
 
 # ---- case sp-acj4-442-real · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (declined correctly)
+# the run sympy-refine-20261028-001510 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_442_real__sympy_refine():
     x = Symbol('x')
@@ -578,7 +578,7 @@ def sp_acj4_442_real__sympy_refine():
 
 
 # ---- case sp-acj4-449-real · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (no verdict)
+# the run sympy-refine-20261028-001510 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_449_real__sympy_refine():
     x = Symbol('x')
@@ -591,7 +591,7 @@ def sp_acj4_449_real__sympy_refine():
 
 
 # ---- case sp-acj4-450-real · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered true (solved)
+# the run sympy-refine-20261028-001510 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_450_real__sympy_refine():
     x = Symbol('x')
@@ -604,7 +604,7 @@ def sp_acj4_450_real__sympy_refine():
 
 
 # ---- case sp-acj4-451-real · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered true (solved)
+# the run sympy-refine-20261028-001510 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_451_real__sympy_refine():
     x = Symbol('x')
@@ -617,7 +617,7 @@ def sp_acj4_451_real__sympy_refine():
 
 
 # ---- case sp-acj4-50-real · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (no verdict)
+# the run sympy-refine-20261028-001510 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_50_real__sympy_refine():
     x = Symbol('x')
@@ -630,7 +630,7 @@ def sp_acj4_50_real__sympy_refine():
 
 
 # ---- case sp-acj4-55-real · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (declined correctly)
+# the run sympy-refine-20261028-001510 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_55_real__sympy_refine():
     x = Symbol('x')
@@ -643,7 +643,7 @@ def sp_acj4_55_real__sympy_refine():
 
 
 # ---- case sp-acj4-56-real · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (declined correctly)
+# the run sympy-refine-20261028-001510 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_56_real__sympy_refine():
     x = Symbol('x')
@@ -656,7 +656,7 @@ def sp_acj4_56_real__sympy_refine():
 
 
 # ---- case sp-acj4-6-real · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered null (no verdict)
+# the run sympy-refine-20261028-001510 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_6_real__sympy_refine():
     x = Symbol('x')
@@ -669,7 +669,7 @@ def sp_acj4_6_real__sympy_refine():
 
 
 # ---- case sp-acj4-806-ground · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered true (solved)
+# the run sympy-refine-20261028-001510 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_806_ground__sympy_refine():
     Assum = And()
@@ -681,7 +681,7 @@ def sp_acj4_806_ground__sympy_refine():
 
 
 # ---- case sp-acj4-813-ground · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered true (solved)
+# the run sympy-refine-20261028-001510 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_813_ground__sympy_refine():
     Assum = And()
@@ -693,7 +693,7 @@ def sp_acj4_813_ground__sympy_refine():
 
 
 # ---- case sp-acj4-816-ground · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064447 answered true (solved)
+# the run sympy-refine-20261028-001510 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_816_ground__sympy_refine():
     Assum = And()
@@ -706,51 +706,51 @@ def sp_acj4_816_ground__sympy_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-0-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261020-064447', sp_acj4_0_real__sympy_refine),
-    ('sp-acj4-115-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261020-064447', sp_acj4_115_real__sympy_refine),
-    ('sp-acj4-116-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261020-064447', sp_acj4_116_real__sympy_refine),
-    ('sp-acj4-130-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261020-064447', sp_acj4_130_real__sympy_refine),
-    ('sp-acj4-151-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261020-064447', sp_acj4_151_real__sympy_refine),
-    ('sp-acj4-154-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261020-064447', sp_acj4_154_real__sympy_refine),
-    ('sp-acj4-156-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261020-064447', sp_acj4_156_real__sympy_refine),
-    ('sp-acj4-180-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261020-064447', sp_acj4_180_real__sympy_refine),
-    ('sp-acj4-183-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261020-064447', sp_acj4_183_real__sympy_refine),
-    ('sp-acj4-189-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261020-064447', sp_acj4_189_real__sympy_refine),
-    ('sp-acj4-190-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261020-064447', sp_acj4_190_real__sympy_refine),
-    ('sp-acj4-191-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261020-064447', sp_acj4_191_real__sympy_refine),
-    ('sp-acj4-203-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261020-064447', sp_acj4_203_real__sympy_refine),
-    ('sp-acj4-229-real', 'sympy-refine', 'true', 'true', 'sympy-refine-20261020-064447', sp_acj4_229_real__sympy_refine),
-    ('sp-acj4-234-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261020-064447', sp_acj4_234_real__sympy_refine),
-    ('sp-acj4-241-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261020-064447', sp_acj4_241_real__sympy_refine),
-    ('sp-acj4-247-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261020-064447', sp_acj4_247_real__sympy_refine),
-    ('sp-acj4-260-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261020-064447', sp_acj4_260_real__sympy_refine),
-    ('sp-acj4-261-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261020-064447', sp_acj4_261_real__sympy_refine),
-    ('sp-acj4-266-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261020-064447', sp_acj4_266_real__sympy_refine),
-    ('sp-acj4-267-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261020-064447', sp_acj4_267_real__sympy_refine),
-    ('sp-acj4-29-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261020-064447', sp_acj4_29_real__sympy_refine),
-    ('sp-acj4-3-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261020-064447', sp_acj4_3_real__sympy_refine),
-    ('sp-acj4-343-real', 'sympy-refine', 'true', 'true', 'sympy-refine-20261020-064447', sp_acj4_343_real__sympy_refine),
-    ('sp-acj4-344-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261020-064447', sp_acj4_344_real__sympy_refine),
-    ('sp-acj4-378-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261020-064447', sp_acj4_378_real__sympy_refine),
-    ('sp-acj4-380-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261020-064447', sp_acj4_380_real__sympy_refine),
-    ('sp-acj4-392-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261020-064447', sp_acj4_392_real__sympy_refine),
-    ('sp-acj4-403-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261020-064447', sp_acj4_403_real__sympy_refine),
-    ('sp-acj4-410-real', 'sympy-refine', 'true', 'true', 'sympy-refine-20261020-064447', sp_acj4_410_real__sympy_refine),
-    ('sp-acj4-416-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261020-064447', sp_acj4_416_real__sympy_refine),
-    ('sp-acj4-420-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261020-064447', sp_acj4_420_real__sympy_refine),
-    ('sp-acj4-430-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261020-064447', sp_acj4_430_real__sympy_refine),
-    ('sp-acj4-433-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261020-064447', sp_acj4_433_real__sympy_refine),
-    ('sp-acj4-442-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261020-064447', sp_acj4_442_real__sympy_refine),
-    ('sp-acj4-449-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261020-064447', sp_acj4_449_real__sympy_refine),
-    ('sp-acj4-450-real', 'sympy-refine', 'true', 'true', 'sympy-refine-20261020-064447', sp_acj4_450_real__sympy_refine),
-    ('sp-acj4-451-real', 'sympy-refine', 'true', 'true', 'sympy-refine-20261020-064447', sp_acj4_451_real__sympy_refine),
-    ('sp-acj4-50-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261020-064447', sp_acj4_50_real__sympy_refine),
-    ('sp-acj4-55-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261020-064447', sp_acj4_55_real__sympy_refine),
-    ('sp-acj4-56-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261020-064447', sp_acj4_56_real__sympy_refine),
-    ('sp-acj4-6-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261020-064447', sp_acj4_6_real__sympy_refine),
-    ('sp-acj4-806-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261020-064447', sp_acj4_806_ground__sympy_refine),
-    ('sp-acj4-813-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261020-064447', sp_acj4_813_ground__sympy_refine),
-    ('sp-acj4-816-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261020-064447', sp_acj4_816_ground__sympy_refine),
+    ('sp-acj4-0-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261028-001510', sp_acj4_0_real__sympy_refine),
+    ('sp-acj4-115-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261028-001510', sp_acj4_115_real__sympy_refine),
+    ('sp-acj4-116-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261028-001510', sp_acj4_116_real__sympy_refine),
+    ('sp-acj4-130-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-001510', sp_acj4_130_real__sympy_refine),
+    ('sp-acj4-151-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-001510', sp_acj4_151_real__sympy_refine),
+    ('sp-acj4-154-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261028-001510', sp_acj4_154_real__sympy_refine),
+    ('sp-acj4-156-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-001510', sp_acj4_156_real__sympy_refine),
+    ('sp-acj4-180-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-001510', sp_acj4_180_real__sympy_refine),
+    ('sp-acj4-183-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-001510', sp_acj4_183_real__sympy_refine),
+    ('sp-acj4-189-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261028-001510', sp_acj4_189_real__sympy_refine),
+    ('sp-acj4-190-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261028-001510', sp_acj4_190_real__sympy_refine),
+    ('sp-acj4-191-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261028-001510', sp_acj4_191_real__sympy_refine),
+    ('sp-acj4-203-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-001510', sp_acj4_203_real__sympy_refine),
+    ('sp-acj4-229-real', 'sympy-refine', 'true', 'true', 'sympy-refine-20261028-001510', sp_acj4_229_real__sympy_refine),
+    ('sp-acj4-234-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-001510', sp_acj4_234_real__sympy_refine),
+    ('sp-acj4-241-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-001510', sp_acj4_241_real__sympy_refine),
+    ('sp-acj4-247-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-001510', sp_acj4_247_real__sympy_refine),
+    ('sp-acj4-260-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-001510', sp_acj4_260_real__sympy_refine),
+    ('sp-acj4-261-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261028-001510', sp_acj4_261_real__sympy_refine),
+    ('sp-acj4-266-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-001510', sp_acj4_266_real__sympy_refine),
+    ('sp-acj4-267-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-001510', sp_acj4_267_real__sympy_refine),
+    ('sp-acj4-29-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-001510', sp_acj4_29_real__sympy_refine),
+    ('sp-acj4-3-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261028-001510', sp_acj4_3_real__sympy_refine),
+    ('sp-acj4-343-real', 'sympy-refine', 'true', 'true', 'sympy-refine-20261028-001510', sp_acj4_343_real__sympy_refine),
+    ('sp-acj4-344-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-001510', sp_acj4_344_real__sympy_refine),
+    ('sp-acj4-378-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261028-001510', sp_acj4_378_real__sympy_refine),
+    ('sp-acj4-380-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261028-001510', sp_acj4_380_real__sympy_refine),
+    ('sp-acj4-392-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-001510', sp_acj4_392_real__sympy_refine),
+    ('sp-acj4-403-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-001510', sp_acj4_403_real__sympy_refine),
+    ('sp-acj4-410-real', 'sympy-refine', 'true', 'true', 'sympy-refine-20261028-001510', sp_acj4_410_real__sympy_refine),
+    ('sp-acj4-416-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-001510', sp_acj4_416_real__sympy_refine),
+    ('sp-acj4-420-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-001510', sp_acj4_420_real__sympy_refine),
+    ('sp-acj4-430-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-001510', sp_acj4_430_real__sympy_refine),
+    ('sp-acj4-433-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-001510', sp_acj4_433_real__sympy_refine),
+    ('sp-acj4-442-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-001510', sp_acj4_442_real__sympy_refine),
+    ('sp-acj4-449-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261028-001510', sp_acj4_449_real__sympy_refine),
+    ('sp-acj4-450-real', 'sympy-refine', 'true', 'true', 'sympy-refine-20261028-001510', sp_acj4_450_real__sympy_refine),
+    ('sp-acj4-451-real', 'sympy-refine', 'true', 'true', 'sympy-refine-20261028-001510', sp_acj4_451_real__sympy_refine),
+    ('sp-acj4-50-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261028-001510', sp_acj4_50_real__sympy_refine),
+    ('sp-acj4-55-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-001510', sp_acj4_55_real__sympy_refine),
+    ('sp-acj4-56-real', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-001510', sp_acj4_56_real__sympy_refine),
+    ('sp-acj4-6-real', 'sympy-refine', 'true', 'null', 'sympy-refine-20261028-001510', sp_acj4_6_real__sympy_refine),
+    ('sp-acj4-806-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261028-001510', sp_acj4_806_ground__sympy_refine),
+    ('sp-acj4-813-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261028-001510', sp_acj4_813_ground__sympy_refine),
+    ('sp-acj4-816-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261028-001510', sp_acj4_816_ground__sympy_refine),
 ]
 
 

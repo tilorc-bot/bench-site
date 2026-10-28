@@ -124,7 +124,7 @@ from sympy.assumptions.satask import satask
 
 
 # ---- case trig-period-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261020-065122 answered true (solved)
+# the run sympy-satask-20261028-002221 answered true (solved)
 @_in(_SETUP1)
 def trig_period_01__sympy_satask():
     z = Symbol('z')
@@ -136,7 +136,7 @@ def trig_period_01__sympy_satask():
 
 
 # ---- case trig-period-02 · expected contingent · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261020-065122 answered null (declined correctly)
+# the run sympy-satask-20261028-002221 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_02__sympy_satask():
     x = Symbol('x')
@@ -148,7 +148,7 @@ def trig_period_02__sympy_satask():
 
 
 # ---- case trig-period-03 · expected contingent · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261020-065122 answered null (declined correctly)
+# the run sympy-satask-20261028-002221 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_03__sympy_satask():
     x = Symbol('x')
@@ -160,7 +160,7 @@ def trig_period_03__sympy_satask():
 
 
 # ---- case trig-shift-01 · expected contingent · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261020-065122 answered null (declined correctly)
+# the run sympy-satask-20261028-002221 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_shift_01__sympy_satask():
     x = Symbol('x')
@@ -173,10 +173,10 @@ def trig_shift_01__sympy_satask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-period-01', 'sympy-satask', 'true', 'true', 'sympy-satask-20261020-065122', trig_period_01__sympy_satask),
-    ('trig-period-02', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261020-065122', trig_period_02__sympy_satask),
-    ('trig-period-03', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261020-065122', trig_period_03__sympy_satask),
-    ('trig-shift-01', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261020-065122', trig_shift_01__sympy_satask),
+    ('trig-period-01', 'sympy-satask', 'true', 'true', 'sympy-satask-20261028-002221', trig_period_01__sympy_satask),
+    ('trig-period-02', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261028-002221', trig_period_02__sympy_satask),
+    ('trig-period-03', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261028-002221', trig_period_03__sympy_satask),
+    ('trig-shift-01', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261028-002221', trig_shift_01__sympy_satask),
 ]
 
 

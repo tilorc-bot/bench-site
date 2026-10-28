@@ -155,7 +155,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-heaviside-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261021-073846 answered null (no verdict)
+# the run satassume-ask-20261028-002120 answered null (no verdict)
 @_in(_SETUP1)
 def demo_heaviside_01__satassume_ask():
     x = Symbol('x')
@@ -180,7 +180,7 @@ def demo_heaviside_01__satrefine_refine():
 
 
 # ---- case demo-heaviside-01 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261021-073850 answered null (no verdict)
+# the run satsimp-trigsimp-20261028-002124 answered null (no verdict)
 @_in(_SETUP2)
 def demo_heaviside_01__satsimp_trigsimp():
     x = Symbol('x')
@@ -193,7 +193,7 @@ def demo_heaviside_01__satsimp_trigsimp():
 
 
 # ---- case demo-heaviside-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261021-073848 answered null (no verdict)
+# the run satrefine-simplify-20261028-002121 answered null (no verdict)
 @_in(_SETUP2)
 def demo_heaviside_01__satrefine_simplify():
     x = Symbol('x')
@@ -231,7 +231,7 @@ def demo_heaviside_01__sympy_ask():
 
 
 # ---- case demo-heaviside-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261020-065041 answered null (no verdict)
+# the run sympy-satask-20261028-002140 answered null (no verdict)
 @_in(_SETUP4)
 def demo_heaviside_01__sympy_satask():
     x = Symbol('x')
@@ -268,7 +268,7 @@ def demo_heaviside_01__sympy_simplify():
 
 
 # ---- case demo-heaviside-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261020-065027 answered null (no verdict)
+# the run sympy-extras-ask-20261028-002125 answered null (no verdict)
 @_in(_SETUP5)
 def demo_heaviside_01__sympy_extras_ask():
     x = Symbol('x')
@@ -281,7 +281,7 @@ def demo_heaviside_01__sympy_extras_ask():
 
 
 # ---- case demo-heaviside-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261020-065033 answered null (no verdict)
+# the run sympy-extras-refine-20261028-002131 answered null (no verdict)
 @_in(_SETUP5)
 def demo_heaviside_01__sympy_extras_refine():
     x = Symbol('x')
@@ -294,7 +294,7 @@ def demo_heaviside_01__sympy_extras_refine():
 
 
 # ---- case demo-heaviside-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261020-065037 answered null (no verdict)
+# the run sympy-extras-simplify-20261028-002135 answered null (no verdict)
 @_in(_SETUP5)
 def demo_heaviside_01__sympy_extras_simplify():
     x = Symbol('x')
@@ -308,18 +308,18 @@ def demo_heaviside_01__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-heaviside-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073846', demo_heaviside_01__satassume_ask),
+    ('demo-heaviside-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-002120', demo_heaviside_01__satassume_ask),
     ('demo-heaviside-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261028-000737', demo_heaviside_01__satrefine_refine),
-    ('demo-heaviside-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073850', demo_heaviside_01__satsimp_trigsimp),
-    ('demo-heaviside-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261021-073848', demo_heaviside_01__satrefine_simplify),
+    ('demo-heaviside-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-002124', demo_heaviside_01__satsimp_trigsimp),
+    ('demo-heaviside-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261028-002121', demo_heaviside_01__satrefine_simplify),
     ('demo-heaviside-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261028-000728', demo_heaviside_01__sympy_auto),
     ('demo-heaviside-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261028-000729', demo_heaviside_01__sympy_ask),
-    ('demo-heaviside-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-065041', demo_heaviside_01__sympy_satask),
+    ('demo-heaviside-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261028-002140', demo_heaviside_01__sympy_satask),
     ('demo-heaviside-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261028-000733', demo_heaviside_01__sympy_refine),
     ('demo-heaviside-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261028-000736', demo_heaviside_01__sympy_simplify),
-    ('demo-heaviside-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065027', demo_heaviside_01__sympy_extras_ask),
-    ('demo-heaviside-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261020-065033', demo_heaviside_01__sympy_extras_refine),
-    ('demo-heaviside-01', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261020-065037', demo_heaviside_01__sympy_extras_simplify),
+    ('demo-heaviside-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-002125', demo_heaviside_01__sympy_extras_ask),
+    ('demo-heaviside-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261028-002131', demo_heaviside_01__sympy_extras_refine),
+    ('demo-heaviside-01', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261028-002135', demo_heaviside_01__sympy_extras_simplify),
 ]
 
 

@@ -124,7 +124,7 @@ from sympy.assumptions.satask import satask
 
 
 # ---- case demo-parity-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261020-065041 answered null (no verdict)
+# the run sympy-satask-20261028-002140 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_01__sympy_satask():
     n = Symbol('n')
@@ -136,7 +136,7 @@ def demo_parity_01__sympy_satask():
 
 
 # ---- case demo-parity-02 · expected false · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261020-065041 answered null (no verdict)
+# the run sympy-satask-20261028-002140 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_02__sympy_satask():
     n = Symbol('n')
@@ -149,7 +149,7 @@ def demo_parity_02__sympy_satask():
 
 
 # ---- case demo-parity-03 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261020-065041 answered null (no verdict)
+# the run sympy-satask-20261028-002140 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_03__sympy_satask():
     n = Symbol('n')
@@ -161,7 +161,7 @@ def demo_parity_03__sympy_satask():
 
 
 # ---- case demo-parity-04 · expected contingent · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261020-065041 answered null (declined correctly)
+# the run sympy-satask-20261028-002140 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_parity_04__sympy_satask():
     n = Symbol('n')
@@ -173,7 +173,7 @@ def demo_parity_04__sympy_satask():
 
 
 # ---- case demo-parity-05 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261020-065041 answered null (no verdict)
+# the run sympy-satask-20261028-002140 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_05__sympy_satask():
     n = Symbol('n')
@@ -187,11 +187,11 @@ def demo_parity_05__sympy_satask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-parity-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-065041', demo_parity_01__sympy_satask),
-    ('demo-parity-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-065041', demo_parity_02__sympy_satask),
-    ('demo-parity-03', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-065041', demo_parity_03__sympy_satask),
-    ('demo-parity-04', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261020-065041', demo_parity_04__sympy_satask),
-    ('demo-parity-05', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-065041', demo_parity_05__sympy_satask),
+    ('demo-parity-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261028-002140', demo_parity_01__sympy_satask),
+    ('demo-parity-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261028-002140', demo_parity_02__sympy_satask),
+    ('demo-parity-03', 'sympy-satask', 'true', 'null', 'sympy-satask-20261028-002140', demo_parity_03__sympy_satask),
+    ('demo-parity-04', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261028-002140', demo_parity_04__sympy_satask),
+    ('demo-parity-05', 'sympy-satask', 'true', 'null', 'sympy-satask-20261028-002140', demo_parity_05__sympy_satask),
 ]
 
 

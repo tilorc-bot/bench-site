@@ -155,7 +155,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-parity-03 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261021-073846 answered null (no verdict)
+# the run satassume-ask-20261028-002120 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_03__satassume_ask():
     n = Symbol('n')
@@ -180,7 +180,7 @@ def demo_parity_03__satrefine_refine():
 
 
 # ---- case demo-parity-03 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261021-073850 answered null (no verdict)
+# the run satsimp-trigsimp-20261028-002124 answered null (no verdict)
 @_in(_SETUP2)
 def demo_parity_03__satsimp_trigsimp():
     n = Symbol('n')
@@ -193,7 +193,7 @@ def demo_parity_03__satsimp_trigsimp():
 
 
 # ---- case demo-parity-03 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261021-073848 answered true (solved)
+# the run satrefine-simplify-20261028-002121 answered true (solved)
 @_in(_SETUP2)
 def demo_parity_03__satrefine_simplify():
     n = Symbol('n')
@@ -231,7 +231,7 @@ def demo_parity_03__sympy_ask():
 
 
 # ---- case demo-parity-03 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261020-065041 answered null (no verdict)
+# the run sympy-satask-20261028-002140 answered null (no verdict)
 @_in(_SETUP4)
 def demo_parity_03__sympy_satask():
     n = Symbol('n')
@@ -268,7 +268,7 @@ def demo_parity_03__sympy_simplify():
 
 
 # ---- case demo-parity-03 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261020-065027 answered null (no verdict)
+# the run sympy-extras-ask-20261028-002125 answered null (no verdict)
 @_in(_SETUP5)
 def demo_parity_03__sympy_extras_ask():
     n = Symbol('n')
@@ -281,7 +281,7 @@ def demo_parity_03__sympy_extras_ask():
 
 
 # ---- case demo-parity-03 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261020-065033 answered true (solved)
+# the run sympy-extras-refine-20261028-002131 answered true (solved)
 @_in(_SETUP5)
 def demo_parity_03__sympy_extras_refine():
     n = Symbol('n')
@@ -294,7 +294,7 @@ def demo_parity_03__sympy_extras_refine():
 
 
 # ---- case demo-parity-03 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261020-065037 answered true (solved)
+# the run sympy-extras-simplify-20261028-002135 answered true (solved)
 @_in(_SETUP5)
 def demo_parity_03__sympy_extras_simplify():
     n = Symbol('n')
@@ -308,18 +308,18 @@ def demo_parity_03__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-parity-03', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073846', demo_parity_03__satassume_ask),
+    ('demo-parity-03', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-002120', demo_parity_03__satassume_ask),
     ('demo-parity-03', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261028-000737', demo_parity_03__satrefine_refine),
-    ('demo-parity-03', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073850', demo_parity_03__satsimp_trigsimp),
-    ('demo-parity-03', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261021-073848', demo_parity_03__satrefine_simplify),
+    ('demo-parity-03', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-002124', demo_parity_03__satsimp_trigsimp),
+    ('demo-parity-03', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261028-002121', demo_parity_03__satrefine_simplify),
     ('demo-parity-03', 'sympy-auto', 'true', 'true', 'sympy-auto-20261028-000728', demo_parity_03__sympy_auto),
     ('demo-parity-03', 'sympy-ask', 'true', 'null', 'sympy-ask-20261028-000729', demo_parity_03__sympy_ask),
-    ('demo-parity-03', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-065041', demo_parity_03__sympy_satask),
+    ('demo-parity-03', 'sympy-satask', 'true', 'null', 'sympy-satask-20261028-002140', demo_parity_03__sympy_satask),
     ('demo-parity-03', 'sympy-refine', 'true', 'true', 'sympy-refine-20261028-000733', demo_parity_03__sympy_refine),
     ('demo-parity-03', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-000736', demo_parity_03__sympy_simplify),
-    ('demo-parity-03', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261020-065027', demo_parity_03__sympy_extras_ask),
-    ('demo-parity-03', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261020-065033', demo_parity_03__sympy_extras_refine),
-    ('demo-parity-03', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261020-065037', demo_parity_03__sympy_extras_simplify),
+    ('demo-parity-03', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-002125', demo_parity_03__sympy_extras_ask),
+    ('demo-parity-03', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261028-002131', demo_parity_03__sympy_extras_refine),
+    ('demo-parity-03', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261028-002135', demo_parity_03__sympy_extras_simplify),
 ]
 
 
