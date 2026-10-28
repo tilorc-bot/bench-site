@@ -232,7 +232,7 @@ def sp_acj4_216_complex__sympy_ask():
 
 
 # ---- case sp-acj4-216-complex · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261020-072057 answered true (solved)
+# the run sympy-satask-20261028-005139 answered true (solved)
 @_in(_SETUP4)
 def sp_acj4_216_complex__sympy_satask():
     x = Symbol('x')
@@ -315,7 +315,7 @@ CASES = [
     ('sp-acj4-216-complex', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261028-002233', sp_acj4_216_complex__satrefine_simplify),
     ('sp-acj4-216-complex', 'sympy-auto', 'true', 'true', 'sympy-auto-20261028-001315', sp_acj4_216_complex__sympy_auto),
     ('sp-acj4-216-complex', 'sympy-ask', 'true', 'true', 'sympy-ask-20261028-001321', sp_acj4_216_complex__sympy_ask),
-    ('sp-acj4-216-complex', 'sympy-satask', 'true', 'true', 'sympy-satask-20261020-072057', sp_acj4_216_complex__sympy_satask),
+    ('sp-acj4-216-complex', 'sympy-satask', 'true', 'true', 'sympy-satask-20261028-005139', sp_acj4_216_complex__sympy_satask),
     ('sp-acj4-216-complex', 'sympy-refine', 'true', 'true', 'sympy-refine-20261028-001510', sp_acj4_216_complex__sympy_refine),
     ('sp-acj4-216-complex', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-001834', sp_acj4_216_complex__sympy_simplify),
     ('sp-acj4-216-complex', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261028-002324', sp_acj4_216_complex__sympy_extras_ask),

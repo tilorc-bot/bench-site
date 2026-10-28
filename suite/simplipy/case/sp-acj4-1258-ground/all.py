@@ -225,7 +225,7 @@ def sp_acj4_1258_ground__sympy_ask():
 
 
 # ---- case sp-acj4-1258-ground · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261020-072057 answered true (solved)
+# the run sympy-satask-20261028-005139 answered true (solved)
 @_in(_SETUP4)
 def sp_acj4_1258_ground__sympy_satask():
     Assum = And()
@@ -302,7 +302,7 @@ CASES = [
     ('sp-acj4-1258-ground', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261028-002233', sp_acj4_1258_ground__satrefine_simplify),
     ('sp-acj4-1258-ground', 'sympy-auto', 'true', 'true', 'sympy-auto-20261028-001315', sp_acj4_1258_ground__sympy_auto),
     ('sp-acj4-1258-ground', 'sympy-ask', 'true', 'true', 'sympy-ask-20261028-001321', sp_acj4_1258_ground__sympy_ask),
-    ('sp-acj4-1258-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261020-072057', sp_acj4_1258_ground__sympy_satask),
+    ('sp-acj4-1258-ground', 'sympy-satask', 'true', 'true', 'sympy-satask-20261028-005139', sp_acj4_1258_ground__sympy_satask),
     ('sp-acj4-1258-ground', 'sympy-refine', 'true', 'true', 'sympy-refine-20261028-001510', sp_acj4_1258_ground__sympy_refine),
     ('sp-acj4-1258-ground', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-001834', sp_acj4_1258_ground__sympy_simplify),
     ('sp-acj4-1258-ground', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261028-002324', sp_acj4_1258_ground__sympy_extras_ask),
