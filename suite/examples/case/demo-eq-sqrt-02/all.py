@@ -167,7 +167,7 @@ def demo_eq_sqrt_02__satassume_ask():
 
 
 # ---- case demo-eq-sqrt-02 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261021-073341 answered true (solved)
+# the run satrefine-refine-20261028-000737 answered true (solved)
 @_in(_SETUP2)
 def demo_eq_sqrt_02__satrefine_refine():
     x = Symbol('x')
@@ -206,7 +206,7 @@ def demo_eq_sqrt_02__satrefine_simplify():
 
 
 # ---- case demo-eq-sqrt-02 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261020-064150 answered true (solved)
+# the run sympy-auto-20261028-000728 answered true (solved)
 @_in(_SETUP3)
 def demo_eq_sqrt_02__sympy_auto():
     x = Symbol('x', real=True)
@@ -219,7 +219,7 @@ def demo_eq_sqrt_02__sympy_auto():
 
 
 # ---- case demo-eq-sqrt-02 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261020-064151 answered null (no verdict)
+# the run sympy-ask-20261028-000729 answered null (no verdict)
 @_in(_SETUP3)
 def demo_eq_sqrt_02__sympy_ask():
     x = Symbol('x')
@@ -243,7 +243,7 @@ def demo_eq_sqrt_02__sympy_satask():
 
 
 # ---- case demo-eq-sqrt-02 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064155 answered true (solved)
+# the run sympy-refine-20261028-000733 answered true (solved)
 @_in(_SETUP3)
 def demo_eq_sqrt_02__sympy_refine():
     x = Symbol('x')
@@ -256,7 +256,7 @@ def demo_eq_sqrt_02__sympy_refine():
 
 
 # ---- case demo-eq-sqrt-02 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261020-064157 answered true (solved)
+# the run sympy-simplify-20261028-000736 answered true (solved)
 @_in(_SETUP3)
 def demo_eq_sqrt_02__sympy_simplify():
     x = Symbol('x', real=True)
@@ -309,14 +309,14 @@ def demo_eq_sqrt_02__sympy_extras_simplify():
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('demo-eq-sqrt-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261021-073846', demo_eq_sqrt_02__satassume_ask),
-    ('demo-eq-sqrt-02', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261021-073341', demo_eq_sqrt_02__satrefine_refine),
+    ('demo-eq-sqrt-02', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261028-000737', demo_eq_sqrt_02__satrefine_refine),
     ('demo-eq-sqrt-02', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261021-073850', demo_eq_sqrt_02__satsimp_trigsimp),
     ('demo-eq-sqrt-02', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261021-073848', demo_eq_sqrt_02__satrefine_simplify),
-    ('demo-eq-sqrt-02', 'sympy-auto', 'true', 'true', 'sympy-auto-20261020-064150', demo_eq_sqrt_02__sympy_auto),
-    ('demo-eq-sqrt-02', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064151', demo_eq_sqrt_02__sympy_ask),
+    ('demo-eq-sqrt-02', 'sympy-auto', 'true', 'true', 'sympy-auto-20261028-000728', demo_eq_sqrt_02__sympy_auto),
+    ('demo-eq-sqrt-02', 'sympy-ask', 'true', 'null', 'sympy-ask-20261028-000729', demo_eq_sqrt_02__sympy_ask),
     ('demo-eq-sqrt-02', 'sympy-satask', 'true', 'null', 'sympy-satask-20261020-065041', demo_eq_sqrt_02__sympy_satask),
-    ('demo-eq-sqrt-02', 'sympy-refine', 'true', 'true', 'sympy-refine-20261020-064155', demo_eq_sqrt_02__sympy_refine),
-    ('demo-eq-sqrt-02', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261020-064157', demo_eq_sqrt_02__sympy_simplify),
+    ('demo-eq-sqrt-02', 'sympy-refine', 'true', 'true', 'sympy-refine-20261028-000733', demo_eq_sqrt_02__sympy_refine),
+    ('demo-eq-sqrt-02', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-000736', demo_eq_sqrt_02__sympy_simplify),
     ('demo-eq-sqrt-02', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261020-065027', demo_eq_sqrt_02__sympy_extras_ask),
     ('demo-eq-sqrt-02', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261020-065033', demo_eq_sqrt_02__sympy_extras_refine),
     ('demo-eq-sqrt-02', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261020-065037', demo_eq_sqrt_02__sympy_extras_simplify),

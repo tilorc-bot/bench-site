@@ -123,7 +123,7 @@ import sympy
 
 
 # ---- case demo-eq-trig-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064155 answered null (no verdict)
+# the run sympy-refine-20261028-000733 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_trig_01__sympy_refine():
     x = Symbol('x')
@@ -136,7 +136,7 @@ def demo_eq_trig_01__sympy_refine():
 
 
 # ---- case demo-eq-trig-02 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064155 answered null (no verdict)
+# the run sympy-refine-20261028-000733 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_trig_02__sympy_refine():
     x = Symbol('x')
@@ -150,8 +150,8 @@ def demo_eq_trig_02__sympy_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-trig-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261020-064155', demo_eq_trig_01__sympy_refine),
-    ('demo-eq-trig-02', 'sympy-refine', 'true', 'null', 'sympy-refine-20261020-064155', demo_eq_trig_02__sympy_refine),
+    ('demo-eq-trig-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261028-000733', demo_eq_trig_01__sympy_refine),
+    ('demo-eq-trig-02', 'sympy-refine', 'true', 'null', 'sympy-refine-20261028-000733', demo_eq_trig_02__sympy_refine),
 ]
 
 

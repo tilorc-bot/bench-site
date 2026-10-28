@@ -167,7 +167,7 @@ def demo_log_03__satassume_ask():
 
 
 # ---- case demo-log-03 · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261021-073341 answered false (solved)
+# the run satrefine-refine-20261028-000737 answered false (solved)
 @_in(_SETUP2)
 def demo_log_03__satrefine_refine():
     x = Symbol('x')
@@ -206,7 +206,7 @@ def demo_log_03__satrefine_simplify():
 
 
 # ---- case demo-log-03 · expected false · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261020-064150 answered null (no verdict)
+# the run sympy-auto-20261028-000728 answered null (no verdict)
 @_in(_SETUP3)
 def demo_log_03__sympy_auto():
     x = Symbol('x', real=True, negative=True)
@@ -219,7 +219,7 @@ def demo_log_03__sympy_auto():
 
 
 # ---- case demo-log-03 · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261020-064151 answered false (solved)
+# the run sympy-ask-20261028-000729 answered false (solved)
 @_in(_SETUP3)
 def demo_log_03__sympy_ask():
     x = Symbol('x')
@@ -243,7 +243,7 @@ def demo_log_03__sympy_satask():
 
 
 # ---- case demo-log-03 · expected false · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261020-064155 answered null (no verdict)
+# the run sympy-refine-20261028-000733 answered null (no verdict)
 @_in(_SETUP3)
 def demo_log_03__sympy_refine():
     x = Symbol('x')
@@ -256,7 +256,7 @@ def demo_log_03__sympy_refine():
 
 
 # ---- case demo-log-03 · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261020-064157 answered false (solved)
+# the run sympy-simplify-20261028-000736 answered false (solved)
 @_in(_SETUP3)
 def demo_log_03__sympy_simplify():
     x = Symbol('x', real=True, negative=True)
@@ -309,14 +309,14 @@ def demo_log_03__sympy_extras_simplify():
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('demo-log-03', 'satassume-ask', 'false', 'false', 'satassume-ask-20261021-073846', demo_log_03__satassume_ask),
-    ('demo-log-03', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261021-073341', demo_log_03__satrefine_refine),
+    ('demo-log-03', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261028-000737', demo_log_03__satrefine_refine),
     ('demo-log-03', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261021-073850', demo_log_03__satsimp_trigsimp),
     ('demo-log-03', 'satrefine-simplify', 'false', 'false', 'satrefine-simplify-20261021-073848', demo_log_03__satrefine_simplify),
-    ('demo-log-03', 'sympy-auto', 'false', 'null', 'sympy-auto-20261020-064150', demo_log_03__sympy_auto),
-    ('demo-log-03', 'sympy-ask', 'false', 'false', 'sympy-ask-20261020-064151', demo_log_03__sympy_ask),
+    ('demo-log-03', 'sympy-auto', 'false', 'null', 'sympy-auto-20261028-000728', demo_log_03__sympy_auto),
+    ('demo-log-03', 'sympy-ask', 'false', 'false', 'sympy-ask-20261028-000729', demo_log_03__sympy_ask),
     ('demo-log-03', 'sympy-satask', 'false', 'null', 'sympy-satask-20261020-065041', demo_log_03__sympy_satask),
-    ('demo-log-03', 'sympy-refine', 'false', 'null', 'sympy-refine-20261020-064155', demo_log_03__sympy_refine),
-    ('demo-log-03', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261020-064157', demo_log_03__sympy_simplify),
+    ('demo-log-03', 'sympy-refine', 'false', 'null', 'sympy-refine-20261028-000733', demo_log_03__sympy_refine),
+    ('demo-log-03', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261028-000736', demo_log_03__sympy_simplify),
     ('demo-log-03', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261020-065027', demo_log_03__sympy_extras_ask),
     ('demo-log-03', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261020-065033', demo_log_03__sympy_extras_refine),
     ('demo-log-03', 'sympy-extras-simplify', 'false', 'false', 'sympy-extras-simplify-20261020-065037', demo_log_03__sympy_extras_simplify),

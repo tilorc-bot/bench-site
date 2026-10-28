@@ -123,7 +123,7 @@ import sympy
 
 
 # ---- case trig-acos-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261020-064231 answered null (no verdict)
+# the run sympy-ask-20261028-000832 answered null (no verdict)
 @_in(_SETUP1)
 def trig_acos_01__sympy_ask():
     x = Symbol('x')
@@ -135,7 +135,7 @@ def trig_acos_01__sympy_ask():
 
 
 # ---- case trig-asin-01 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261020-064231 answered null (declined correctly)
+# the run sympy-ask-20261028-000832 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_asin_01__sympy_ask():
     x = Symbol('x')
@@ -147,7 +147,7 @@ def trig_asin_01__sympy_ask():
 
 
 # ---- case trig-asin-02 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261020-064231 answered null (no verdict)
+# the run sympy-ask-20261028-000832 answered null (no verdict)
 @_in(_SETUP1)
 def trig_asin_02__sympy_ask():
     x = Symbol('x')
@@ -159,7 +159,7 @@ def trig_asin_02__sympy_ask():
 
 
 # ---- case trig-atan-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261020-064231 answered null (no verdict)
+# the run sympy-ask-20261028-000832 answered null (no verdict)
 @_in(_SETUP1)
 def trig_atan_01__sympy_ask():
     x = Symbol('x')
@@ -172,10 +172,10 @@ def trig_atan_01__sympy_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-acos-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064231', trig_acos_01__sympy_ask),
-    ('trig-asin-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261020-064231', trig_asin_01__sympy_ask),
-    ('trig-asin-02', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064231', trig_asin_02__sympy_ask),
-    ('trig-atan-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261020-064231', trig_atan_01__sympy_ask),
+    ('trig-acos-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261028-000832', trig_acos_01__sympy_ask),
+    ('trig-asin-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261028-000832', trig_asin_01__sympy_ask),
+    ('trig-asin-02', 'sympy-ask', 'true', 'null', 'sympy-ask-20261028-000832', trig_asin_02__sympy_ask),
+    ('trig-atan-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261028-000832', trig_atan_01__sympy_ask),
 ]
 
 

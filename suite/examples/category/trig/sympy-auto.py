@@ -124,7 +124,7 @@ import sympy
 
 
 # ---- case demo-eq-trig-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261020-064150 answered null (no verdict)
+# the run sympy-auto-20261028-000728 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_trig_01__sympy_auto():
     x = Symbol('x', complex=True)
@@ -136,7 +136,7 @@ def demo_eq_trig_01__sympy_auto():
 
 
 # ---- case demo-eq-trig-02 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261020-064150 answered null (no verdict)
+# the run sympy-auto-20261028-000728 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_trig_02__sympy_auto():
     x = Symbol('x', complex=True)
@@ -149,8 +149,8 @@ def demo_eq_trig_02__sympy_auto():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-trig-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064150', demo_eq_trig_01__sympy_auto),
-    ('demo-eq-trig-02', 'sympy-auto', 'true', 'null', 'sympy-auto-20261020-064150', demo_eq_trig_02__sympy_auto),
+    ('demo-eq-trig-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261028-000728', demo_eq_trig_01__sympy_auto),
+    ('demo-eq-trig-02', 'sympy-auto', 'true', 'null', 'sympy-auto-20261028-000728', demo_eq_trig_02__sympy_auto),
 ]
 
 
