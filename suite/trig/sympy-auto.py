@@ -126,7 +126,7 @@ import sympy
 
 
 # ---- case trig-acos-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-154854 answered null (no verdict)
+# the run sympy-auto-20261028-184518 answered null (no verdict)
 @_in(_SETUP1)
 def trig_acos_01__sympy_auto():
     x = Symbol('x', real=True, positive=True)
@@ -139,7 +139,7 @@ def trig_acos_01__sympy_auto():
 
 
 # ---- case trig-asin-01 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-154854 answered null (declined correctly)
+# the run sympy-auto-20261028-184518 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_asin_01__sympy_auto():
     x = Symbol('x', real=True)
@@ -151,7 +151,7 @@ def trig_asin_01__sympy_auto():
 
 
 # ---- case trig-asin-02 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-154854 answered null (no verdict)
+# the run sympy-auto-20261028-184518 answered null (no verdict)
 @_in(_SETUP1)
 def trig_asin_02__sympy_auto():
     x = Symbol('x', real=True)
@@ -163,7 +163,7 @@ def trig_asin_02__sympy_auto():
 
 
 # ---- case trig-atan-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-154854 answered null (no verdict)
+# the run sympy-auto-20261028-184518 answered null (no verdict)
 @_in(_SETUP1)
 def trig_atan_01__sympy_auto():
     x = Symbol('x', real=True)
@@ -175,7 +175,7 @@ def trig_atan_01__sympy_auto():
 
 
 # ---- case trig-double-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-154854 answered null (no verdict)
+# the run sympy-auto-20261028-184518 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_01__sympy_auto():
     z = Symbol('z', complex=True)
@@ -187,7 +187,7 @@ def trig_double_01__sympy_auto():
 
 
 # ---- case trig-double-02 · expected false · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-154854 answered null (no verdict)
+# the run sympy-auto-20261028-184518 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_02__sympy_auto():
     x = Symbol('x', real=True, positive=True)
@@ -199,7 +199,7 @@ def trig_double_02__sympy_auto():
 
 
 # ---- case trig-period-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-154854 answered true (solved)
+# the run sympy-auto-20261028-184518 answered true (solved)
 @_in(_SETUP1)
 def trig_period_01__sympy_auto():
     z = Symbol('z', complex=True)
@@ -211,7 +211,7 @@ def trig_period_01__sympy_auto():
 
 
 # ---- case trig-period-02 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-154854 answered null (declined correctly)
+# the run sympy-auto-20261028-184518 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_02__sympy_auto():
     x = Symbol('x', real=True)
@@ -223,7 +223,7 @@ def trig_period_02__sympy_auto():
 
 
 # ---- case trig-period-03 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-154854 answered null (declined correctly)
+# the run sympy-auto-20261028-184518 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_03__sympy_auto():
     x = Symbol('x', real=True, positive=True)
@@ -235,7 +235,7 @@ def trig_period_03__sympy_auto():
 
 
 # ---- case trig-pyth-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-154854 answered null (no verdict)
+# the run sympy-auto-20261028-184518 answered null (no verdict)
 @_in(_SETUP1)
 def trig_pyth_01__sympy_auto():
     z = Symbol('z', complex=True)
@@ -247,7 +247,7 @@ def trig_pyth_01__sympy_auto():
 
 
 # ---- case trig-shift-01 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-154854 answered null (declined correctly)
+# the run sympy-auto-20261028-184518 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_shift_01__sympy_auto():
     x = Symbol('x', real=True)
@@ -259,7 +259,7 @@ def trig_shift_01__sympy_auto():
 
 
 # ---- case trig-sqrt-01 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-154854 answered null (declined correctly)
+# the run sympy-auto-20261028-184518 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_sqrt_01__sympy_auto():
     x = Symbol('x', real=True)
@@ -271,7 +271,7 @@ def trig_sqrt_01__sympy_auto():
 
 
 # ---- case trig-tan-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-154854 answered null (no verdict)
+# the run sympy-auto-20261028-184518 answered null (no verdict)
 @_in(_SETUP1)
 def trig_tan_01__sympy_auto():
     x = Symbol('x', real=True)
@@ -285,19 +285,19 @@ def trig_tan_01__sympy_auto():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-acos-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261028-154854', trig_acos_01__sympy_auto),
-    ('trig-asin-01', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-154854', trig_asin_01__sympy_auto),
-    ('trig-asin-02', 'sympy-auto', 'true', 'null', 'sympy-auto-20261028-154854', trig_asin_02__sympy_auto),
-    ('trig-atan-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261028-154854', trig_atan_01__sympy_auto),
-    ('trig-double-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261028-154854', trig_double_01__sympy_auto),
-    ('trig-double-02', 'sympy-auto', 'false', 'null', 'sympy-auto-20261028-154854', trig_double_02__sympy_auto),
-    ('trig-period-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261028-154854', trig_period_01__sympy_auto),
-    ('trig-period-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-154854', trig_period_02__sympy_auto),
-    ('trig-period-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-154854', trig_period_03__sympy_auto),
-    ('trig-pyth-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261028-154854', trig_pyth_01__sympy_auto),
-    ('trig-shift-01', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-154854', trig_shift_01__sympy_auto),
-    ('trig-sqrt-01', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-154854', trig_sqrt_01__sympy_auto),
-    ('trig-tan-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261028-154854', trig_tan_01__sympy_auto),
+    ('trig-acos-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261028-184518', trig_acos_01__sympy_auto),
+    ('trig-asin-01', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-184518', trig_asin_01__sympy_auto),
+    ('trig-asin-02', 'sympy-auto', 'true', 'null', 'sympy-auto-20261028-184518', trig_asin_02__sympy_auto),
+    ('trig-atan-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261028-184518', trig_atan_01__sympy_auto),
+    ('trig-double-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261028-184518', trig_double_01__sympy_auto),
+    ('trig-double-02', 'sympy-auto', 'false', 'null', 'sympy-auto-20261028-184518', trig_double_02__sympy_auto),
+    ('trig-period-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261028-184518', trig_period_01__sympy_auto),
+    ('trig-period-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-184518', trig_period_02__sympy_auto),
+    ('trig-period-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-184518', trig_period_03__sympy_auto),
+    ('trig-pyth-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261028-184518', trig_pyth_01__sympy_auto),
+    ('trig-shift-01', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-184518', trig_shift_01__sympy_auto),
+    ('trig-sqrt-01', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-184518', trig_sqrt_01__sympy_auto),
+    ('trig-tan-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261028-184518', trig_tan_01__sympy_auto),
 ]
 
 

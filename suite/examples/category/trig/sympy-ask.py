@@ -123,7 +123,7 @@ import sympy
 
 
 # ---- case demo-eq-trig-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261028-154816 answered null (no verdict)
+# the run sympy-ask-20261028-184441 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_trig_01__sympy_ask():
     x = Symbol('x')
@@ -135,7 +135,7 @@ def demo_eq_trig_01__sympy_ask():
 
 
 # ---- case demo-eq-trig-02 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261028-154816 answered null (no verdict)
+# the run sympy-ask-20261028-184441 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_trig_02__sympy_ask():
     x = Symbol('x')
@@ -148,8 +148,8 @@ def demo_eq_trig_02__sympy_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-trig-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261028-154816', demo_eq_trig_01__sympy_ask),
-    ('demo-eq-trig-02', 'sympy-ask', 'true', 'null', 'sympy-ask-20261028-154816', demo_eq_trig_02__sympy_ask),
+    ('demo-eq-trig-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261028-184441', demo_eq_trig_01__sympy_ask),
+    ('demo-eq-trig-02', 'sympy-ask', 'true', 'null', 'sympy-ask-20261028-184441', demo_eq_trig_02__sympy_ask),
 ]
 
 

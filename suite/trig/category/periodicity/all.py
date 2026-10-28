@@ -169,7 +169,7 @@ def trig_period_01__satassume_ask():
 
 
 # ---- case trig-period-01 · expected true · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261028-154901 answered true (solved)
+# the run satrefine-refine-20261028-184525 answered true (solved)
 @_in(_SETUP2)
 def trig_period_01__satrefine_refine():
     z = Symbol('z')
@@ -208,7 +208,7 @@ def trig_period_01__satrefine_simplify():
 
 
 # ---- case trig-period-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-154854 answered true (solved)
+# the run sympy-auto-20261028-184518 answered true (solved)
 @_in(_SETUP3)
 def trig_period_01__sympy_auto():
     z = Symbol('z', complex=True)
@@ -220,7 +220,7 @@ def trig_period_01__sympy_auto():
 
 
 # ---- case trig-period-01 · expected true · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261028-154855 answered true (solved)
+# the run sympy-ask-20261028-184519 answered true (solved)
 @_in(_SETUP3)
 def trig_period_01__sympy_ask():
     z = Symbol('z')
@@ -244,7 +244,7 @@ def trig_period_01__sympy_satask():
 
 
 # ---- case trig-period-01 · expected true · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261028-154857 answered true (solved)
+# the run sympy-refine-20261028-184522 answered true (solved)
 @_in(_SETUP3)
 def trig_period_01__sympy_refine():
     z = Symbol('z')
@@ -257,7 +257,7 @@ def trig_period_01__sympy_refine():
 
 
 # ---- case trig-period-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154859 answered true (solved)
+# the run sympy-simplify-20261028-184524 answered true (solved)
 @_in(_SETUP3)
 def trig_period_01__sympy_simplify():
     z = Symbol('z', complex=True)
@@ -319,7 +319,7 @@ def trig_period_02__satassume_ask():
 
 
 # ---- case trig-period-02 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261028-154901 answered null (declined correctly)
+# the run satrefine-refine-20261028-184525 answered null (declined correctly)
 @_in(_SETUP2)
 def trig_period_02__satrefine_refine():
     x = Symbol('x')
@@ -358,7 +358,7 @@ def trig_period_02__satrefine_simplify():
 
 
 # ---- case trig-period-02 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-154854 answered null (declined correctly)
+# the run sympy-auto-20261028-184518 answered null (declined correctly)
 @_in(_SETUP3)
 def trig_period_02__sympy_auto():
     x = Symbol('x', real=True)
@@ -370,7 +370,7 @@ def trig_period_02__sympy_auto():
 
 
 # ---- case trig-period-02 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261028-154855 answered null (declined correctly)
+# the run sympy-ask-20261028-184519 answered null (declined correctly)
 @_in(_SETUP3)
 def trig_period_02__sympy_ask():
     x = Symbol('x')
@@ -394,7 +394,7 @@ def trig_period_02__sympy_satask():
 
 
 # ---- case trig-period-02 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261028-154857 answered null (declined correctly)
+# the run sympy-refine-20261028-184522 answered null (declined correctly)
 @_in(_SETUP3)
 def trig_period_02__sympy_refine():
     x = Symbol('x')
@@ -407,7 +407,7 @@ def trig_period_02__sympy_refine():
 
 
 # ---- case trig-period-02 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154859 answered null (declined correctly)
+# the run sympy-simplify-20261028-184524 answered null (declined correctly)
 @_in(_SETUP3)
 def trig_period_02__sympy_simplify():
     x = Symbol('x', real=True)
@@ -469,7 +469,7 @@ def trig_period_03__satassume_ask():
 
 
 # ---- case trig-period-03 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261028-154901 answered null (declined correctly)
+# the run satrefine-refine-20261028-184525 answered null (declined correctly)
 @_in(_SETUP2)
 def trig_period_03__satrefine_refine():
     x = Symbol('x')
@@ -508,7 +508,7 @@ def trig_period_03__satrefine_simplify():
 
 
 # ---- case trig-period-03 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-154854 answered null (declined correctly)
+# the run sympy-auto-20261028-184518 answered null (declined correctly)
 @_in(_SETUP3)
 def trig_period_03__sympy_auto():
     x = Symbol('x', real=True, positive=True)
@@ -520,7 +520,7 @@ def trig_period_03__sympy_auto():
 
 
 # ---- case trig-period-03 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261028-154855 answered null (declined correctly)
+# the run sympy-ask-20261028-184519 answered null (declined correctly)
 @_in(_SETUP3)
 def trig_period_03__sympy_ask():
     x = Symbol('x')
@@ -544,7 +544,7 @@ def trig_period_03__sympy_satask():
 
 
 # ---- case trig-period-03 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261028-154857 answered null (declined correctly)
+# the run sympy-refine-20261028-184522 answered null (declined correctly)
 @_in(_SETUP3)
 def trig_period_03__sympy_refine():
     x = Symbol('x')
@@ -557,7 +557,7 @@ def trig_period_03__sympy_refine():
 
 
 # ---- case trig-period-03 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154859 answered null (declined correctly)
+# the run sympy-simplify-20261028-184524 answered null (declined correctly)
 @_in(_SETUP3)
 def trig_period_03__sympy_simplify():
     x = Symbol('x', real=True, positive=True)
@@ -619,7 +619,7 @@ def trig_shift_01__satassume_ask():
 
 
 # ---- case trig-shift-01 · expected contingent · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261028-154901 answered null (declined correctly)
+# the run satrefine-refine-20261028-184525 answered null (declined correctly)
 @_in(_SETUP2)
 def trig_shift_01__satrefine_refine():
     x = Symbol('x')
@@ -658,7 +658,7 @@ def trig_shift_01__satrefine_simplify():
 
 
 # ---- case trig-shift-01 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-154854 answered null (declined correctly)
+# the run sympy-auto-20261028-184518 answered null (declined correctly)
 @_in(_SETUP3)
 def trig_shift_01__sympy_auto():
     x = Symbol('x', real=True)
@@ -670,7 +670,7 @@ def trig_shift_01__sympy_auto():
 
 
 # ---- case trig-shift-01 · expected contingent · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261028-154855 answered null (declined correctly)
+# the run sympy-ask-20261028-184519 answered null (declined correctly)
 @_in(_SETUP3)
 def trig_shift_01__sympy_ask():
     x = Symbol('x')
@@ -694,7 +694,7 @@ def trig_shift_01__sympy_satask():
 
 
 # ---- case trig-shift-01 · expected contingent · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261028-154857 answered null (declined correctly)
+# the run sympy-refine-20261028-184522 answered null (declined correctly)
 @_in(_SETUP3)
 def trig_shift_01__sympy_refine():
     x = Symbol('x')
@@ -707,7 +707,7 @@ def trig_shift_01__sympy_refine():
 
 
 # ---- case trig-shift-01 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154859 answered null (declined correctly)
+# the run sympy-simplify-20261028-184524 answered null (declined correctly)
 @_in(_SETUP3)
 def trig_shift_01__sympy_simplify():
     x = Symbol('x', real=True)
@@ -759,50 +759,50 @@ def trig_shift_01__sympy_extras_simplify():
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('trig-period-01', 'satassume-ask', 'true', 'true', 'satassume-ask-20261028-160235', trig_period_01__satassume_ask),
-    ('trig-period-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261028-154901', trig_period_01__satrefine_refine),
+    ('trig-period-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261028-184525', trig_period_01__satrefine_refine),
     ('trig-period-01', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-160239', trig_period_01__satsimp_trigsimp),
     ('trig-period-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261028-160237', trig_period_01__satrefine_simplify),
-    ('trig-period-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261028-154854', trig_period_01__sympy_auto),
-    ('trig-period-01', 'sympy-ask', 'true', 'true', 'sympy-ask-20261028-154855', trig_period_01__sympy_ask),
+    ('trig-period-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261028-184518', trig_period_01__sympy_auto),
+    ('trig-period-01', 'sympy-ask', 'true', 'true', 'sympy-ask-20261028-184519', trig_period_01__sympy_ask),
     ('trig-period-01', 'sympy-satask', 'true', 'true', 'sympy-satask-20261028-160315', trig_period_01__sympy_satask),
-    ('trig-period-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261028-154857', trig_period_01__sympy_refine),
-    ('trig-period-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-154859', trig_period_01__sympy_simplify),
+    ('trig-period-01', 'sympy-refine', 'true', 'true', 'sympy-refine-20261028-184522', trig_period_01__sympy_refine),
+    ('trig-period-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-184524', trig_period_01__sympy_simplify),
     ('trig-period-01', 'sympy-extras-ask', 'true', 'true', 'sympy-extras-ask-20261028-160240', trig_period_01__sympy_extras_ask),
     ('trig-period-01', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261028-160252', trig_period_01__sympy_extras_refine),
     ('trig-period-01', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261028-160303', trig_period_01__sympy_extras_simplify),
     ('trig-period-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-160235', trig_period_02__satassume_ask),
-    ('trig-period-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261028-154901', trig_period_02__satrefine_refine),
+    ('trig-period-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261028-184525', trig_period_02__satrefine_refine),
     ('trig-period-02', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-160239', trig_period_02__satsimp_trigsimp),
     ('trig-period-02', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261028-160237', trig_period_02__satrefine_simplify),
-    ('trig-period-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-154854', trig_period_02__sympy_auto),
-    ('trig-period-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261028-154855', trig_period_02__sympy_ask),
+    ('trig-period-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-184518', trig_period_02__sympy_auto),
+    ('trig-period-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261028-184519', trig_period_02__sympy_ask),
     ('trig-period-02', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261028-160315', trig_period_02__sympy_satask),
-    ('trig-period-02', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-154857', trig_period_02__sympy_refine),
-    ('trig-period-02', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261028-154859', trig_period_02__sympy_simplify),
+    ('trig-period-02', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-184522', trig_period_02__sympy_refine),
+    ('trig-period-02', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261028-184524', trig_period_02__sympy_simplify),
     ('trig-period-02', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261028-160240', trig_period_02__sympy_extras_ask),
     ('trig-period-02', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261028-160252', trig_period_02__sympy_extras_refine),
     ('trig-period-02', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261028-160303', trig_period_02__sympy_extras_simplify),
     ('trig-period-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-160235', trig_period_03__satassume_ask),
-    ('trig-period-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261028-154901', trig_period_03__satrefine_refine),
+    ('trig-period-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261028-184525', trig_period_03__satrefine_refine),
     ('trig-period-03', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-160239', trig_period_03__satsimp_trigsimp),
     ('trig-period-03', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261028-160237', trig_period_03__satrefine_simplify),
-    ('trig-period-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-154854', trig_period_03__sympy_auto),
-    ('trig-period-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261028-154855', trig_period_03__sympy_ask),
+    ('trig-period-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-184518', trig_period_03__sympy_auto),
+    ('trig-period-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261028-184519', trig_period_03__sympy_ask),
     ('trig-period-03', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261028-160315', trig_period_03__sympy_satask),
-    ('trig-period-03', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-154857', trig_period_03__sympy_refine),
-    ('trig-period-03', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261028-154859', trig_period_03__sympy_simplify),
+    ('trig-period-03', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-184522', trig_period_03__sympy_refine),
+    ('trig-period-03', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261028-184524', trig_period_03__sympy_simplify),
     ('trig-period-03', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261028-160240', trig_period_03__sympy_extras_ask),
     ('trig-period-03', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261028-160252', trig_period_03__sympy_extras_refine),
     ('trig-period-03', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261028-160303', trig_period_03__sympy_extras_simplify),
     ('trig-shift-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-160235', trig_shift_01__satassume_ask),
-    ('trig-shift-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261028-154901', trig_shift_01__satrefine_refine),
+    ('trig-shift-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261028-184525', trig_shift_01__satrefine_refine),
     ('trig-shift-01', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-160239', trig_shift_01__satsimp_trigsimp),
     ('trig-shift-01', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261028-160237', trig_shift_01__satrefine_simplify),
-    ('trig-shift-01', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-154854', trig_shift_01__sympy_auto),
-    ('trig-shift-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261028-154855', trig_shift_01__sympy_ask),
+    ('trig-shift-01', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-184518', trig_shift_01__sympy_auto),
+    ('trig-shift-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261028-184519', trig_shift_01__sympy_ask),
     ('trig-shift-01', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261028-160315', trig_shift_01__sympy_satask),
-    ('trig-shift-01', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-154857', trig_shift_01__sympy_refine),
-    ('trig-shift-01', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261028-154859', trig_shift_01__sympy_simplify),
+    ('trig-shift-01', 'sympy-refine', 'contingent', 'null', 'sympy-refine-20261028-184522', trig_shift_01__sympy_refine),
+    ('trig-shift-01', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261028-184524', trig_shift_01__sympy_simplify),
     ('trig-shift-01', 'sympy-extras-ask', 'contingent', 'null', 'sympy-extras-ask-20261028-160240', trig_shift_01__sympy_extras_ask),
     ('trig-shift-01', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261028-160252', trig_shift_01__sympy_extras_refine),
     ('trig-shift-01', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261028-160303', trig_shift_01__sympy_extras_simplify),

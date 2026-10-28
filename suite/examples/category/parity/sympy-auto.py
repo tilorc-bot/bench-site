@@ -124,7 +124,7 @@ import sympy
 
 
 # ---- case demo-parity-01 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-154815 answered true (solved)
+# the run sympy-auto-20261028-184439 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_01__sympy_auto():
     n = Symbol('n', integer=True, odd=True)
@@ -136,7 +136,7 @@ def demo_parity_01__sympy_auto():
 
 
 # ---- case demo-parity-02 · expected false · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-154815 answered false (solved)
+# the run sympy-auto-20261028-184439 answered false (solved)
 @_in(_SETUP1)
 def demo_parity_02__sympy_auto():
     n = Symbol('n', integer=True, odd=True)
@@ -149,7 +149,7 @@ def demo_parity_02__sympy_auto():
 
 
 # ---- case demo-parity-03 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-154815 answered true (solved)
+# the run sympy-auto-20261028-184439 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_03__sympy_auto():
     n = Symbol('n', integer=True)
@@ -161,7 +161,7 @@ def demo_parity_03__sympy_auto():
 
 
 # ---- case demo-parity-04 · expected contingent · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-154815 answered null (declined correctly)
+# the run sympy-auto-20261028-184439 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_parity_04__sympy_auto():
     n = Symbol('n', integer=True, even=True)
@@ -173,7 +173,7 @@ def demo_parity_04__sympy_auto():
 
 
 # ---- case demo-parity-05 · expected true · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-154815 answered true (solved)
+# the run sympy-auto-20261028-184439 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_05__sympy_auto():
     n = Symbol('n', integer=True, odd=True)
@@ -187,11 +187,11 @@ def demo_parity_05__sympy_auto():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-parity-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261028-154815', demo_parity_01__sympy_auto),
-    ('demo-parity-02', 'sympy-auto', 'false', 'false', 'sympy-auto-20261028-154815', demo_parity_02__sympy_auto),
-    ('demo-parity-03', 'sympy-auto', 'true', 'true', 'sympy-auto-20261028-154815', demo_parity_03__sympy_auto),
-    ('demo-parity-04', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-154815', demo_parity_04__sympy_auto),
-    ('demo-parity-05', 'sympy-auto', 'true', 'true', 'sympy-auto-20261028-154815', demo_parity_05__sympy_auto),
+    ('demo-parity-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261028-184439', demo_parity_01__sympy_auto),
+    ('demo-parity-02', 'sympy-auto', 'false', 'false', 'sympy-auto-20261028-184439', demo_parity_02__sympy_auto),
+    ('demo-parity-03', 'sympy-auto', 'true', 'true', 'sympy-auto-20261028-184439', demo_parity_03__sympy_auto),
+    ('demo-parity-04', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-184439', demo_parity_04__sympy_auto),
+    ('demo-parity-05', 'sympy-auto', 'true', 'true', 'sympy-auto-20261028-184439', demo_parity_05__sympy_auto),
 ]
 
 

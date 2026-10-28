@@ -168,7 +168,7 @@ def trig_double_02__satassume_ask():
 
 
 # ---- case trig-double-02 · expected false · system satrefine-refine (satsimp 0.1.0)
-# the run satrefine-refine-20261028-154901 answered null (no verdict)
+# the run satrefine-refine-20261028-184525 answered null (no verdict)
 @_in(_SETUP2)
 def trig_double_02__satrefine_refine():
     x = Symbol('x')
@@ -207,7 +207,7 @@ def trig_double_02__satrefine_simplify():
 
 
 # ---- case trig-double-02 · expected false · system sympy-auto (sympy 1.14.0)
-# the run sympy-auto-20261028-154854 answered null (no verdict)
+# the run sympy-auto-20261028-184518 answered null (no verdict)
 @_in(_SETUP3)
 def trig_double_02__sympy_auto():
     x = Symbol('x', real=True, positive=True)
@@ -220,7 +220,7 @@ def trig_double_02__sympy_auto():
 
 
 # ---- case trig-double-02 · expected false · system sympy-ask (sympy 1.14.0)
-# the run sympy-ask-20261028-154855 answered null (no verdict)
+# the run sympy-ask-20261028-184519 answered null (no verdict)
 @_in(_SETUP3)
 def trig_double_02__sympy_ask():
     x = Symbol('x')
@@ -244,7 +244,7 @@ def trig_double_02__sympy_satask():
 
 
 # ---- case trig-double-02 · expected false · system sympy-refine (sympy 1.14.0)
-# the run sympy-refine-20261028-154857 answered null (no verdict)
+# the run sympy-refine-20261028-184522 answered null (no verdict)
 @_in(_SETUP3)
 def trig_double_02__sympy_refine():
     x = Symbol('x')
@@ -257,7 +257,7 @@ def trig_double_02__sympy_refine():
 
 
 # ---- case trig-double-02 · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154859 answered null (no verdict)
+# the run sympy-simplify-20261028-184524 answered null (no verdict)
 @_in(_SETUP3)
 def trig_double_02__sympy_simplify():
     x = Symbol('x', real=True, positive=True)
@@ -310,14 +310,14 @@ def trig_double_02__sympy_extras_simplify():
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
     ('trig-double-02', 'satassume-ask', 'false', 'null', 'satassume-ask-20261028-160235', trig_double_02__satassume_ask),
-    ('trig-double-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261028-154901', trig_double_02__satrefine_refine),
+    ('trig-double-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261028-184525', trig_double_02__satrefine_refine),
     ('trig-double-02', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261028-160239', trig_double_02__satsimp_trigsimp),
     ('trig-double-02', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261028-160237', trig_double_02__satrefine_simplify),
-    ('trig-double-02', 'sympy-auto', 'false', 'null', 'sympy-auto-20261028-154854', trig_double_02__sympy_auto),
-    ('trig-double-02', 'sympy-ask', 'false', 'null', 'sympy-ask-20261028-154855', trig_double_02__sympy_ask),
+    ('trig-double-02', 'sympy-auto', 'false', 'null', 'sympy-auto-20261028-184518', trig_double_02__sympy_auto),
+    ('trig-double-02', 'sympy-ask', 'false', 'null', 'sympy-ask-20261028-184519', trig_double_02__sympy_ask),
     ('trig-double-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261028-160315', trig_double_02__sympy_satask),
-    ('trig-double-02', 'sympy-refine', 'false', 'null', 'sympy-refine-20261028-154857', trig_double_02__sympy_refine),
-    ('trig-double-02', 'sympy-simplify', 'false', 'null', 'sympy-simplify-20261028-154859', trig_double_02__sympy_simplify),
+    ('trig-double-02', 'sympy-refine', 'false', 'null', 'sympy-refine-20261028-184522', trig_double_02__sympy_refine),
+    ('trig-double-02', 'sympy-simplify', 'false', 'null', 'sympy-simplify-20261028-184524', trig_double_02__sympy_simplify),
     ('trig-double-02', 'sympy-extras-ask', 'false', 'null', 'sympy-extras-ask-20261028-160240', trig_double_02__sympy_extras_ask),
     ('trig-double-02', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261028-160252', trig_double_02__sympy_extras_refine),
     ('trig-double-02', 'sympy-extras-simplify', 'false', 'null', 'sympy-extras-simplify-20261028-160303', trig_double_02__sympy_extras_simplify),

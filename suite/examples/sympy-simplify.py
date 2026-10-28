@@ -123,7 +123,7 @@ import sympy
 
 
 # ---- case demo-atan2-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered true (solved)
+# the run sympy-simplify-20261028-184447 answered true (solved)
 @_in(_SETUP1)
 def demo_atan2_01__sympy_simplify():
     x = Symbol('x', real=True, positive=True)
@@ -136,7 +136,7 @@ def demo_atan2_01__sympy_simplify():
 
 
 # ---- case demo-atan2-02 · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered false (solved)
+# the run sympy-simplify-20261028-184447 answered false (solved)
 @_in(_SETUP1)
 def demo_atan2_02__sympy_simplify():
     x = Symbol('x', real=True, negative=True)
@@ -149,7 +149,7 @@ def demo_atan2_02__sympy_simplify():
 
 
 # ---- case demo-eq-abs-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered true (solved)
+# the run sympy-simplify-20261028-184447 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_abs_01__sympy_simplify():
     x = Symbol('x', real=True, negative=True)
@@ -161,7 +161,7 @@ def demo_eq_abs_01__sympy_simplify():
 
 
 # ---- case demo-eq-abs-02 · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered null (no verdict)
+# the run sympy-simplify-20261028-184447 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_abs_02__sympy_simplify():
     x = Symbol('x', real=True, negative=True)
@@ -173,7 +173,7 @@ def demo_eq_abs_02__sympy_simplify():
 
 
 # ---- case demo-eq-log-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered true (solved)
+# the run sympy-simplify-20261028-184447 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_log_01__sympy_simplify():
     x = Symbol('x', real=True, positive=True)
@@ -185,7 +185,7 @@ def demo_eq_log_01__sympy_simplify():
 
 
 # ---- case demo-eq-pow-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered true (solved)
+# the run sympy-simplify-20261028-184447 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_pow_01__sympy_simplify():
     n = Symbol('n', integer=True)
@@ -197,7 +197,7 @@ def demo_eq_pow_01__sympy_simplify():
 
 
 # ---- case demo-eq-sqrt-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered true (solved)
+# the run sympy-simplify-20261028-184447 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_01__sympy_simplify():
     x = Symbol('x', real=True, positive=True)
@@ -209,7 +209,7 @@ def demo_eq_sqrt_01__sympy_simplify():
 
 
 # ---- case demo-eq-sqrt-02 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered true (solved)
+# the run sympy-simplify-20261028-184447 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_02__sympy_simplify():
     x = Symbol('x', real=True)
@@ -221,7 +221,7 @@ def demo_eq_sqrt_02__sympy_simplify():
 
 
 # ---- case demo-eq-sqrt-03 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered null (declined correctly)
+# the run sympy-simplify-20261028-184447 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_eq_sqrt_03__sympy_simplify():
     x = Symbol('x', real=True)
@@ -233,7 +233,7 @@ def demo_eq_sqrt_03__sympy_simplify():
 
 
 # ---- case demo-eq-sqrt-04 · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered false (solved)
+# the run sympy-simplify-20261028-184447 answered false (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_04__sympy_simplify():
     x = Symbol('x', real=True, positive=True)
@@ -245,7 +245,7 @@ def demo_eq_sqrt_04__sympy_simplify():
 
 
 # ---- case demo-eq-trig-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered true (solved)
+# the run sympy-simplify-20261028-184447 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_trig_01__sympy_simplify():
     x = Symbol('x', complex=True)
@@ -257,7 +257,7 @@ def demo_eq_trig_01__sympy_simplify():
 
 
 # ---- case demo-eq-trig-02 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered true (solved)
+# the run sympy-simplify-20261028-184447 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_trig_02__sympy_simplify():
     x = Symbol('x', complex=True)
@@ -269,7 +269,7 @@ def demo_eq_trig_02__sympy_simplify():
 
 
 # ---- case demo-log-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered true (solved)
+# the run sympy-simplify-20261028-184447 answered true (solved)
 @_in(_SETUP1)
 def demo_log_01__sympy_simplify():
     x = Symbol('x', real=True, positive=True)
@@ -282,7 +282,7 @@ def demo_log_01__sympy_simplify():
 
 
 # ---- case demo-log-02 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered null (declined correctly)
+# the run sympy-simplify-20261028-184447 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_log_02__sympy_simplify():
     z = Symbol('z', complex=True, zero=False)
@@ -295,7 +295,7 @@ def demo_log_02__sympy_simplify():
 
 
 # ---- case demo-log-03 · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered false (solved)
+# the run sympy-simplify-20261028-184447 answered false (solved)
 @_in(_SETUP1)
 def demo_log_03__sympy_simplify():
     x = Symbol('x', real=True, negative=True)
@@ -307,7 +307,7 @@ def demo_log_03__sympy_simplify():
 
 
 # ---- case demo-nonzero-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered true (solved)
+# the run sympy-simplify-20261028-184447 answered true (solved)
 @_in(_SETUP1)
 def demo_nonzero_01__sympy_simplify():
     z = Symbol('z', complex=True, imaginary=True)
@@ -319,7 +319,7 @@ def demo_nonzero_01__sympy_simplify():
 
 
 # ---- case demo-parity-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered true (solved)
+# the run sympy-simplify-20261028-184447 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_01__sympy_simplify():
     n = Symbol('n', integer=True, odd=True)
@@ -331,7 +331,7 @@ def demo_parity_01__sympy_simplify():
 
 
 # ---- case demo-parity-02 · expected false · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered false (solved)
+# the run sympy-simplify-20261028-184447 answered false (solved)
 @_in(_SETUP1)
 def demo_parity_02__sympy_simplify():
     n = Symbol('n', integer=True, odd=True)
@@ -344,7 +344,7 @@ def demo_parity_02__sympy_simplify():
 
 
 # ---- case demo-parity-03 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered true (solved)
+# the run sympy-simplify-20261028-184447 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_03__sympy_simplify():
     n = Symbol('n', integer=True)
@@ -356,7 +356,7 @@ def demo_parity_03__sympy_simplify():
 
 
 # ---- case demo-parity-04 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered null (declined correctly)
+# the run sympy-simplify-20261028-184447 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_parity_04__sympy_simplify():
     n = Symbol('n', integer=True, even=True)
@@ -368,7 +368,7 @@ def demo_parity_04__sympy_simplify():
 
 
 # ---- case demo-parity-05 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered true (solved)
+# the run sympy-simplify-20261028-184447 answered true (solved)
 @_in(_SETUP1)
 def demo_parity_05__sympy_simplify():
     n = Symbol('n', integer=True, odd=True)
@@ -381,7 +381,7 @@ def demo_parity_05__sympy_simplify():
 
 
 # ---- case demo-prime-01 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered null (no verdict)
+# the run sympy-simplify-20261028-184447 answered null (no verdict)
 @_in(_SETUP1)
 def demo_prime_01__sympy_simplify():
     p = Symbol('p', integer=True, prime=True)
@@ -394,7 +394,7 @@ def demo_prime_01__sympy_simplify():
 
 
 # ---- case demo-prime-02 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered null (declined correctly)
+# the run sympy-simplify-20261028-184447 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_prime_02__sympy_simplify():
     p = Symbol('p', integer=True, prime=True)
@@ -406,7 +406,7 @@ def demo_prime_02__sympy_simplify():
 
 
 # ---- case demo-sign-02 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered true (solved)
+# the run sympy-simplify-20261028-184447 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_02__sympy_simplify():
     x = Symbol('x', real=True, zero=False)
@@ -418,7 +418,7 @@ def demo_sign_02__sympy_simplify():
 
 
 # ---- case demo-sign-03 · expected contingent · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered null (declined correctly)
+# the run sympy-simplify-20261028-184447 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_sign_03__sympy_simplify():
     x = Symbol('x', complex=True, zero=False)
@@ -430,7 +430,7 @@ def demo_sign_03__sympy_simplify():
 
 
 # ---- case demo-sign-04 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered null (no verdict)
+# the run sympy-simplify-20261028-184447 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_04__sympy_simplify():
     z = Symbol('z', complex=True)
@@ -442,7 +442,7 @@ def demo_sign_04__sympy_simplify():
 
 
 # ---- case demo-sign-05 · expected true · system sympy-simplify (sympy 1.14.0)
-# the run sympy-simplify-20261028-154823 answered true (solved)
+# the run sympy-simplify-20261028-184447 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_05__sympy_simplify():
     x = Symbol('x', real=True, positive=True)
@@ -456,33 +456,33 @@ def demo_sign_05__sympy_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-atan2-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-154823', demo_atan2_01__sympy_simplify),
-    ('demo-atan2-02', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261028-154823', demo_atan2_02__sympy_simplify),
-    ('demo-eq-abs-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-154823', demo_eq_abs_01__sympy_simplify),
-    ('demo-eq-abs-02', 'sympy-simplify', 'false', 'null', 'sympy-simplify-20261028-154823', demo_eq_abs_02__sympy_simplify),
-    ('demo-eq-log-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-154823', demo_eq_log_01__sympy_simplify),
-    ('demo-eq-pow-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-154823', demo_eq_pow_01__sympy_simplify),
-    ('demo-eq-sqrt-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-154823', demo_eq_sqrt_01__sympy_simplify),
-    ('demo-eq-sqrt-02', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-154823', demo_eq_sqrt_02__sympy_simplify),
-    ('demo-eq-sqrt-03', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261028-154823', demo_eq_sqrt_03__sympy_simplify),
-    ('demo-eq-sqrt-04', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261028-154823', demo_eq_sqrt_04__sympy_simplify),
-    ('demo-eq-trig-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-154823', demo_eq_trig_01__sympy_simplify),
-    ('demo-eq-trig-02', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-154823', demo_eq_trig_02__sympy_simplify),
-    ('demo-log-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-154823', demo_log_01__sympy_simplify),
-    ('demo-log-02', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261028-154823', demo_log_02__sympy_simplify),
-    ('demo-log-03', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261028-154823', demo_log_03__sympy_simplify),
-    ('demo-nonzero-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-154823', demo_nonzero_01__sympy_simplify),
-    ('demo-parity-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-154823', demo_parity_01__sympy_simplify),
-    ('demo-parity-02', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261028-154823', demo_parity_02__sympy_simplify),
-    ('demo-parity-03', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-154823', demo_parity_03__sympy_simplify),
-    ('demo-parity-04', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261028-154823', demo_parity_04__sympy_simplify),
-    ('demo-parity-05', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-154823', demo_parity_05__sympy_simplify),
-    ('demo-prime-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261028-154823', demo_prime_01__sympy_simplify),
-    ('demo-prime-02', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261028-154823', demo_prime_02__sympy_simplify),
-    ('demo-sign-02', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-154823', demo_sign_02__sympy_simplify),
-    ('demo-sign-03', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261028-154823', demo_sign_03__sympy_simplify),
-    ('demo-sign-04', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261028-154823', demo_sign_04__sympy_simplify),
-    ('demo-sign-05', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-154823', demo_sign_05__sympy_simplify),
+    ('demo-atan2-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-184447', demo_atan2_01__sympy_simplify),
+    ('demo-atan2-02', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261028-184447', demo_atan2_02__sympy_simplify),
+    ('demo-eq-abs-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-184447', demo_eq_abs_01__sympy_simplify),
+    ('demo-eq-abs-02', 'sympy-simplify', 'false', 'null', 'sympy-simplify-20261028-184447', demo_eq_abs_02__sympy_simplify),
+    ('demo-eq-log-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-184447', demo_eq_log_01__sympy_simplify),
+    ('demo-eq-pow-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-184447', demo_eq_pow_01__sympy_simplify),
+    ('demo-eq-sqrt-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-184447', demo_eq_sqrt_01__sympy_simplify),
+    ('demo-eq-sqrt-02', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-184447', demo_eq_sqrt_02__sympy_simplify),
+    ('demo-eq-sqrt-03', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261028-184447', demo_eq_sqrt_03__sympy_simplify),
+    ('demo-eq-sqrt-04', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261028-184447', demo_eq_sqrt_04__sympy_simplify),
+    ('demo-eq-trig-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-184447', demo_eq_trig_01__sympy_simplify),
+    ('demo-eq-trig-02', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-184447', demo_eq_trig_02__sympy_simplify),
+    ('demo-log-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-184447', demo_log_01__sympy_simplify),
+    ('demo-log-02', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261028-184447', demo_log_02__sympy_simplify),
+    ('demo-log-03', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261028-184447', demo_log_03__sympy_simplify),
+    ('demo-nonzero-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-184447', demo_nonzero_01__sympy_simplify),
+    ('demo-parity-01', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-184447', demo_parity_01__sympy_simplify),
+    ('demo-parity-02', 'sympy-simplify', 'false', 'false', 'sympy-simplify-20261028-184447', demo_parity_02__sympy_simplify),
+    ('demo-parity-03', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-184447', demo_parity_03__sympy_simplify),
+    ('demo-parity-04', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261028-184447', demo_parity_04__sympy_simplify),
+    ('demo-parity-05', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-184447', demo_parity_05__sympy_simplify),
+    ('demo-prime-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261028-184447', demo_prime_01__sympy_simplify),
+    ('demo-prime-02', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261028-184447', demo_prime_02__sympy_simplify),
+    ('demo-sign-02', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-184447', demo_sign_02__sympy_simplify),
+    ('demo-sign-03', 'sympy-simplify', 'contingent', 'null', 'sympy-simplify-20261028-184447', demo_sign_03__sympy_simplify),
+    ('demo-sign-04', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261028-184447', demo_sign_04__sympy_simplify),
+    ('demo-sign-05', 'sympy-simplify', 'true', 'true', 'sympy-simplify-20261028-184447', demo_sign_05__sympy_simplify),
 ]
 
 
