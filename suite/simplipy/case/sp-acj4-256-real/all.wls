@@ -13,7 +13,7 @@ verdict[out_, expected_String, stored_String] := Module[{answer, got, outcome},
 End[];
 
 (* ---- case sp-acj4-256-real · expected true · system wolfram-fullsimplify (wolfram 14.3.0) *)
-(* the run wolfram-fullsimplify-20261028-001958 answered true (solved) *)
+(* the run wolfram-fullsimplify-20261028-160039 answered true (solved) *)
 Print["== sp-acj4-256-real · wolfram-fullsimplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -25,10 +25,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261028-001958 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-fullsimplify-20261028-160039 answered true (solved)"];
 
 (* ---- case sp-acj4-256-real · expected true · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261028-001942 answered true (solved) *)
+(* the run wolfram-refine-20261028-160022 answered true (solved) *)
 Print["== sp-acj4-256-real · wolfram-refine · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -40,10 +40,10 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261028-001942 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-refine-20261028-160022 answered true (solved)"];
 
 (* ---- case sp-acj4-256-real · expected true · system wolfram-simplify (wolfram 14.3.0) *)
-(* the run wolfram-simplify-20261028-001921 answered true (solved) *)
+(* the run wolfram-simplify-20261028-160001 answered true (solved) *)
 Print["== sp-acj4-256-real · wolfram-simplify · expected true"];
 Quiet[Remove["Global`*"]];
 AEScript`out = Quiet[Check[
@@ -55,4 +55,4 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261028-001921 answered true (solved)"];
+AEScript`verdict[AEScript`out, "true", "the run wolfram-simplify-20261028-160001 answered true (solved)"];

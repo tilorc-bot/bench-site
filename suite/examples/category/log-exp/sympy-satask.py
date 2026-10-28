@@ -124,7 +124,7 @@ from sympy.assumptions.satask import satask
 
 
 # ---- case demo-eq-log-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261028-002140 answered null (no verdict)
+# the run sympy-satask-20261028-160233 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_log_01__sympy_satask():
     x = Symbol('x')
@@ -136,7 +136,7 @@ def demo_eq_log_01__sympy_satask():
 
 
 # ---- case demo-eq-pow-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261028-002140 answered null (no verdict)
+# the run sympy-satask-20261028-160233 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_pow_01__sympy_satask():
     n = Symbol('n')
@@ -149,8 +149,8 @@ def demo_eq_pow_01__sympy_satask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-log-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261028-002140', demo_eq_log_01__sympy_satask),
-    ('demo-eq-pow-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261028-002140', demo_eq_pow_01__sympy_satask),
+    ('demo-eq-log-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261028-160233', demo_eq_log_01__sympy_satask),
+    ('demo-eq-pow-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261028-160233', demo_eq_pow_01__sympy_satask),
 ]
 
 

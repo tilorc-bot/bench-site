@@ -124,7 +124,7 @@ import satsimp
 
 
 # ---- case demo-nonzero-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261028-002121 answered true (solved)
+# the run satrefine-simplify-20261028-160215 answered true (solved)
 @_in(_SETUP1)
 def demo_nonzero_01__satrefine_simplify():
     z = Symbol('z')
@@ -137,7 +137,7 @@ def demo_nonzero_01__satrefine_simplify():
 
 
 # ---- case demo-sign-02 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261028-002121 answered true (solved)
+# the run satrefine-simplify-20261028-160215 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_02__satrefine_simplify():
     x = Symbol('x')
@@ -150,7 +150,7 @@ def demo_sign_02__satrefine_simplify():
 
 
 # ---- case demo-sign-03 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261028-002121 answered null (declined correctly)
+# the run satrefine-simplify-20261028-160215 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_sign_03__satrefine_simplify():
     x = Symbol('x')
@@ -163,7 +163,7 @@ def demo_sign_03__satrefine_simplify():
 
 
 # ---- case demo-sign-04 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261028-002121 answered true (solved)
+# the run satrefine-simplify-20261028-160215 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_04__satrefine_simplify():
     z = Symbol('z')
@@ -176,7 +176,7 @@ def demo_sign_04__satrefine_simplify():
 
 
 # ---- case demo-sign-05 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261028-002121 answered true (solved)
+# the run satrefine-simplify-20261028-160215 answered true (solved)
 @_in(_SETUP1)
 def demo_sign_05__satrefine_simplify():
     x = Symbol('x')
@@ -191,11 +191,11 @@ def demo_sign_05__satrefine_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-nonzero-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261028-002121', demo_nonzero_01__satrefine_simplify),
-    ('demo-sign-02', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261028-002121', demo_sign_02__satrefine_simplify),
-    ('demo-sign-03', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261028-002121', demo_sign_03__satrefine_simplify),
-    ('demo-sign-04', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261028-002121', demo_sign_04__satrefine_simplify),
-    ('demo-sign-05', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261028-002121', demo_sign_05__satrefine_simplify),
+    ('demo-nonzero-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261028-160215', demo_nonzero_01__satrefine_simplify),
+    ('demo-sign-02', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261028-160215', demo_sign_02__satrefine_simplify),
+    ('demo-sign-03', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261028-160215', demo_sign_03__satrefine_simplify),
+    ('demo-sign-04', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261028-160215', demo_sign_04__satrefine_simplify),
+    ('demo-sign-05', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261028-160215', demo_sign_05__satrefine_simplify),
 ]
 
 

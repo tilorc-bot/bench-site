@@ -131,7 +131,7 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 
 
 # ---- case demo-eq-abs-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261028-002131 answered true (solved)
+# the run sympy-extras-refine-20261028-160225 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_abs_01__sympy_extras_refine():
     x = Symbol('x')
@@ -144,7 +144,7 @@ def demo_eq_abs_01__sympy_extras_refine():
 
 
 # ---- case demo-eq-abs-02 · expected false · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261028-002131 answered null (no verdict)
+# the run sympy-extras-refine-20261028-160225 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_abs_02__sympy_extras_refine():
     x = Symbol('x')
@@ -157,7 +157,7 @@ def demo_eq_abs_02__sympy_extras_refine():
 
 
 # ---- case demo-eq-sqrt-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261028-002131 answered true (solved)
+# the run sympy-extras-refine-20261028-160225 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_01__sympy_extras_refine():
     x = Symbol('x')
@@ -170,7 +170,7 @@ def demo_eq_sqrt_01__sympy_extras_refine():
 
 
 # ---- case demo-eq-sqrt-02 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261028-002131 answered true (solved)
+# the run sympy-extras-refine-20261028-160225 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_02__sympy_extras_refine():
     x = Symbol('x')
@@ -183,7 +183,7 @@ def demo_eq_sqrt_02__sympy_extras_refine():
 
 
 # ---- case demo-eq-sqrt-03 · expected contingent · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261028-002131 answered null (declined correctly)
+# the run sympy-extras-refine-20261028-160225 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_eq_sqrt_03__sympy_extras_refine():
     x = Symbol('x')
@@ -196,7 +196,7 @@ def demo_eq_sqrt_03__sympy_extras_refine():
 
 
 # ---- case demo-eq-sqrt-04 · expected false · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261028-002131 answered false (solved)
+# the run sympy-extras-refine-20261028-160225 answered false (solved)
 @_in(_SETUP1)
 def demo_eq_sqrt_04__sympy_extras_refine():
     x = Symbol('x')
@@ -210,12 +210,12 @@ def demo_eq_sqrt_04__sympy_extras_refine():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-abs-01', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261028-002131', demo_eq_abs_01__sympy_extras_refine),
-    ('demo-eq-abs-02', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261028-002131', demo_eq_abs_02__sympy_extras_refine),
-    ('demo-eq-sqrt-01', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261028-002131', demo_eq_sqrt_01__sympy_extras_refine),
-    ('demo-eq-sqrt-02', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261028-002131', demo_eq_sqrt_02__sympy_extras_refine),
-    ('demo-eq-sqrt-03', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261028-002131', demo_eq_sqrt_03__sympy_extras_refine),
-    ('demo-eq-sqrt-04', 'sympy-extras-refine', 'false', 'false', 'sympy-extras-refine-20261028-002131', demo_eq_sqrt_04__sympy_extras_refine),
+    ('demo-eq-abs-01', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261028-160225', demo_eq_abs_01__sympy_extras_refine),
+    ('demo-eq-abs-02', 'sympy-extras-refine', 'false', 'null', 'sympy-extras-refine-20261028-160225', demo_eq_abs_02__sympy_extras_refine),
+    ('demo-eq-sqrt-01', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261028-160225', demo_eq_sqrt_01__sympy_extras_refine),
+    ('demo-eq-sqrt-02', 'sympy-extras-refine', 'true', 'true', 'sympy-extras-refine-20261028-160225', demo_eq_sqrt_02__sympy_extras_refine),
+    ('demo-eq-sqrt-03', 'sympy-extras-refine', 'contingent', 'null', 'sympy-extras-refine-20261028-160225', demo_eq_sqrt_03__sympy_extras_refine),
+    ('demo-eq-sqrt-04', 'sympy-extras-refine', 'false', 'false', 'sympy-extras-refine-20261028-160225', demo_eq_sqrt_04__sympy_extras_refine),
 ]
 
 

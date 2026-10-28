@@ -121,7 +121,7 @@ import satassume.sympy_api
 
 
 # ---- case demo-atan2-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-002120 answered null (no verdict)
+# the run satassume-ask-20261028-160213 answered null (no verdict)
 @_in(_SETUP1)
 def demo_atan2_01__satassume_ask():
     x = Symbol('x')
@@ -134,7 +134,7 @@ def demo_atan2_01__satassume_ask():
 
 
 # ---- case demo-atan2-02 · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-002120 answered null (no verdict)
+# the run satassume-ask-20261028-160213 answered null (no verdict)
 @_in(_SETUP1)
 def demo_atan2_02__satassume_ask():
     x = Symbol('x')
@@ -147,7 +147,7 @@ def demo_atan2_02__satassume_ask():
 
 
 # ---- case demo-log-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-002120 answered null (no verdict)
+# the run satassume-ask-20261028-160213 answered null (no verdict)
 @_in(_SETUP1)
 def demo_log_01__satassume_ask():
     x = Symbol('x')
@@ -160,7 +160,7 @@ def demo_log_01__satassume_ask():
 
 
 # ---- case demo-log-02 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-002120 answered null (declined correctly)
+# the run satassume-ask-20261028-160213 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_log_02__satassume_ask():
     z = Symbol('z')
@@ -173,7 +173,7 @@ def demo_log_02__satassume_ask():
 
 
 # ---- case demo-log-03 · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-002120 answered false (solved)
+# the run satassume-ask-20261028-160213 answered false (solved)
 @_in(_SETUP1)
 def demo_log_03__satassume_ask():
     x = Symbol('x')
@@ -186,11 +186,11 @@ def demo_log_03__satassume_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-atan2-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-002120', demo_atan2_01__satassume_ask),
-    ('demo-atan2-02', 'satassume-ask', 'false', 'null', 'satassume-ask-20261028-002120', demo_atan2_02__satassume_ask),
-    ('demo-log-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-002120', demo_log_01__satassume_ask),
-    ('demo-log-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-002120', demo_log_02__satassume_ask),
-    ('demo-log-03', 'satassume-ask', 'false', 'false', 'satassume-ask-20261028-002120', demo_log_03__satassume_ask),
+    ('demo-atan2-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-160213', demo_atan2_01__satassume_ask),
+    ('demo-atan2-02', 'satassume-ask', 'false', 'null', 'satassume-ask-20261028-160213', demo_atan2_02__satassume_ask),
+    ('demo-log-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-160213', demo_log_01__satassume_ask),
+    ('demo-log-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-160213', demo_log_02__satassume_ask),
+    ('demo-log-03', 'satassume-ask', 'false', 'false', 'satassume-ask-20261028-160213', demo_log_03__satassume_ask),
 ]
 
 

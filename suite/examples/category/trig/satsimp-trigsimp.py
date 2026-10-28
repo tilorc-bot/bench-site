@@ -124,7 +124,7 @@ import satsimp
 
 
 # ---- case demo-eq-trig-01 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-002124 answered true (solved)
+# the run satsimp-trigsimp-20261028-160217 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_trig_01__satsimp_trigsimp():
     x = Symbol('x')
@@ -137,7 +137,7 @@ def demo_eq_trig_01__satsimp_trigsimp():
 
 
 # ---- case demo-eq-trig-02 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-002124 answered true (solved)
+# the run satsimp-trigsimp-20261028-160217 answered true (solved)
 @_in(_SETUP1)
 def demo_eq_trig_02__satsimp_trigsimp():
     x = Symbol('x')
@@ -151,8 +151,8 @@ def demo_eq_trig_02__satsimp_trigsimp():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-trig-01', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-002124', demo_eq_trig_01__satsimp_trigsimp),
-    ('demo-eq-trig-02', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-002124', demo_eq_trig_02__satsimp_trigsimp),
+    ('demo-eq-trig-01', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-160217', demo_eq_trig_01__satsimp_trigsimp),
+    ('demo-eq-trig-02', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-160217', demo_eq_trig_02__satsimp_trigsimp),
 ]
 
 

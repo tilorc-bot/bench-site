@@ -1,5 +1,5 @@
 (* assume-eval: case sp-acj4-415-complex · expected contingent · system wolfram-refine (wolfram 14.3.0) *)
-(* the run wolfram-refine-20261028-001942 answered null (declined correctly) *)
+(* the run wolfram-refine-20261028-160022 answered null (declined correctly) *)
 (* Run: wolframscript -file this-file.wls.  The harness's setup only warms up the kernel and silences messages: left out. *)
 
 Begin["AEScript`"];
@@ -23,4 +23,4 @@ AEScript`out = Quiet[Check[
   {Residual, Result, Answer}
 )
 , $Failed]];
-AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261028-001942 answered null (declined correctly)"];
+AEScript`verdict[AEScript`out, "contingent", "the run wolfram-refine-20261028-160022 answered null (declined correctly)"];

@@ -124,7 +124,7 @@ import satsimp
 
 
 # ---- case demo-eq-abs-01 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-002124 answered null (no verdict)
+# the run satsimp-trigsimp-20261028-160217 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_abs_01__satsimp_trigsimp():
     x = Symbol('x')
@@ -137,7 +137,7 @@ def demo_eq_abs_01__satsimp_trigsimp():
 
 
 # ---- case demo-eq-abs-02 · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-002124 answered null (no verdict)
+# the run satsimp-trigsimp-20261028-160217 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_abs_02__satsimp_trigsimp():
     x = Symbol('x')
@@ -150,7 +150,7 @@ def demo_eq_abs_02__satsimp_trigsimp():
 
 
 # ---- case demo-eq-sqrt-01 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-002124 answered null (no verdict)
+# the run satsimp-trigsimp-20261028-160217 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_sqrt_01__satsimp_trigsimp():
     x = Symbol('x')
@@ -163,7 +163,7 @@ def demo_eq_sqrt_01__satsimp_trigsimp():
 
 
 # ---- case demo-eq-sqrt-02 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-002124 answered null (no verdict)
+# the run satsimp-trigsimp-20261028-160217 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_sqrt_02__satsimp_trigsimp():
     x = Symbol('x')
@@ -176,7 +176,7 @@ def demo_eq_sqrt_02__satsimp_trigsimp():
 
 
 # ---- case demo-eq-sqrt-03 · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-002124 answered null (declined correctly)
+# the run satsimp-trigsimp-20261028-160217 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_eq_sqrt_03__satsimp_trigsimp():
     x = Symbol('x')
@@ -189,7 +189,7 @@ def demo_eq_sqrt_03__satsimp_trigsimp():
 
 
 # ---- case demo-eq-sqrt-04 · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-002124 answered null (no verdict)
+# the run satsimp-trigsimp-20261028-160217 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_sqrt_04__satsimp_trigsimp():
     x = Symbol('x')
@@ -203,12 +203,12 @@ def demo_eq_sqrt_04__satsimp_trigsimp():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-eq-abs-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-002124', demo_eq_abs_01__satsimp_trigsimp),
-    ('demo-eq-abs-02', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261028-002124', demo_eq_abs_02__satsimp_trigsimp),
-    ('demo-eq-sqrt-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-002124', demo_eq_sqrt_01__satsimp_trigsimp),
-    ('demo-eq-sqrt-02', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-002124', demo_eq_sqrt_02__satsimp_trigsimp),
-    ('demo-eq-sqrt-03', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-002124', demo_eq_sqrt_03__satsimp_trigsimp),
-    ('demo-eq-sqrt-04', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261028-002124', demo_eq_sqrt_04__satsimp_trigsimp),
+    ('demo-eq-abs-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-160217', demo_eq_abs_01__satsimp_trigsimp),
+    ('demo-eq-abs-02', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261028-160217', demo_eq_abs_02__satsimp_trigsimp),
+    ('demo-eq-sqrt-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-160217', demo_eq_sqrt_01__satsimp_trigsimp),
+    ('demo-eq-sqrt-02', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-160217', demo_eq_sqrt_02__satsimp_trigsimp),
+    ('demo-eq-sqrt-03', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-160217', demo_eq_sqrt_03__satsimp_trigsimp),
+    ('demo-eq-sqrt-04', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261028-160217', demo_eq_sqrt_04__satsimp_trigsimp),
 ]
 
 
