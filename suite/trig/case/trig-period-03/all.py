@@ -179,19 +179,6 @@ def trig_period_03__satrefine_refine():
     return Answer
 
 
-# ---- case trig-period-03 · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185853 answered null (declined correctly)
-@_in(_SETUP2)
-def trig_period_03__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.real(x), Q.positive(x))
-    Residual = cos(x + pi) - cos(x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case trig-period-03 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
 # the run satrefine-simplify-20261028-185851 answered null (declined correctly)
 @_in(_SETUP2)
@@ -200,6 +187,19 @@ def trig_period_03__satrefine_simplify():
     Assum = And(Q.real(x), Q.positive(x))
     Residual = cos(x + pi) - cos(x)
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case trig-period-03 · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
+# the run satsimp-trigsimp-20261028-185853 answered null (declined correctly)
+@_in(_SETUP2)
+def trig_period_03__satsimp_trigsimp():
+    x = Symbol('x')
+    Assum = And(Q.real(x), Q.positive(x))
+    Residual = cos(x + pi) - cos(x)
+    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -310,8 +310,8 @@ def trig_period_03__sympy_extras_simplify():
 CASES = [
     ('trig-period-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185849', trig_period_03__satassume_ask),
     ('trig-period-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261028-184525', trig_period_03__satrefine_refine),
-    ('trig-period-03', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-185853', trig_period_03__satsimp_trigsimp),
     ('trig-period-03', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261028-185851', trig_period_03__satrefine_simplify),
+    ('trig-period-03', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-185853', trig_period_03__satsimp_trigsimp),
     ('trig-period-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-184518', trig_period_03__sympy_auto),
     ('trig-period-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261028-184519', trig_period_03__sympy_ask),
     ('trig-period-03', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261028-185929', trig_period_03__sympy_satask),

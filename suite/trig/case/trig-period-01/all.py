@@ -179,19 +179,6 @@ def trig_period_01__satrefine_refine():
     return Answer
 
 
-# ---- case trig-period-01 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185853 answered true (solved)
-@_in(_SETUP2)
-def trig_period_01__satsimp_trigsimp():
-    z = Symbol('z')
-    Assum = And(Q.complex(z))
-    Residual = sin(z + 2 * pi) - sin(z)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case trig-period-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
 # the run satrefine-simplify-20261028-185851 answered true (solved)
 @_in(_SETUP2)
@@ -200,6 +187,19 @@ def trig_period_01__satrefine_simplify():
     Assum = And(Q.complex(z))
     Residual = sin(z + 2 * pi) - sin(z)
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case trig-period-01 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
+# the run satsimp-trigsimp-20261028-185853 answered true (solved)
+@_in(_SETUP2)
+def trig_period_01__satsimp_trigsimp():
+    z = Symbol('z')
+    Assum = And(Q.complex(z))
+    Residual = sin(z + 2 * pi) - sin(z)
+    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -310,8 +310,8 @@ def trig_period_01__sympy_extras_simplify():
 CASES = [
     ('trig-period-01', 'satassume-ask', 'true', 'true', 'satassume-ask-20261028-185849', trig_period_01__satassume_ask),
     ('trig-period-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261028-184525', trig_period_01__satrefine_refine),
-    ('trig-period-01', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-185853', trig_period_01__satsimp_trigsimp),
     ('trig-period-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261028-185851', trig_period_01__satrefine_simplify),
+    ('trig-period-01', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-185853', trig_period_01__satsimp_trigsimp),
     ('trig-period-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261028-184518', trig_period_01__sympy_auto),
     ('trig-period-01', 'sympy-ask', 'true', 'true', 'sympy-ask-20261028-184519', trig_period_01__sympy_ask),
     ('trig-period-01', 'sympy-satask', 'true', 'true', 'sympy-satask-20261028-185929', trig_period_01__sympy_satask),

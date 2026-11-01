@@ -181,20 +181,6 @@ def demo_parity_02__satrefine_refine():
     return Answer
 
 
-# ---- case demo-parity-02 · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185831 answered null (no verdict)
-@_in(_SETUP2)
-def demo_parity_02__satsimp_trigsimp():
-    n = Symbol('n')
-    m = Symbol('m')
-    Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
-    Residual = Pow(-1, n * m) - 1
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case demo-parity-02 · expected false · system satrefine-simplify (satsimp 0.1.0)
 # the run satrefine-simplify-20261028-185829 answered false (solved)
 @_in(_SETUP2)
@@ -204,6 +190,20 @@ def demo_parity_02__satrefine_simplify():
     Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
     Residual = Pow(-1, n * m) - 1
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-parity-02 · expected false · system satsimp-trigsimp (satsimp 0.1.0)
+# the run satsimp-trigsimp-20261028-185831 answered null (no verdict)
+@_in(_SETUP2)
+def demo_parity_02__satsimp_trigsimp():
+    n = Symbol('n')
+    m = Symbol('m')
+    Assum = And(Q.integer(n), Q.integer(m), Q.odd(n), Q.odd(m))
+    Residual = Pow(-1, n * m) - 1
+    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -322,8 +322,8 @@ def demo_parity_02__sympy_extras_simplify():
 CASES = [
     ('demo-parity-02', 'satassume-ask', 'false', 'false', 'satassume-ask-20261028-185827', demo_parity_02__satassume_ask),
     ('demo-parity-02', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261028-184449', demo_parity_02__satrefine_refine),
-    ('demo-parity-02', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261028-185831', demo_parity_02__satsimp_trigsimp),
     ('demo-parity-02', 'satrefine-simplify', 'false', 'false', 'satrefine-simplify-20261028-185829', demo_parity_02__satrefine_simplify),
+    ('demo-parity-02', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261028-185831', demo_parity_02__satsimp_trigsimp),
     ('demo-parity-02', 'sympy-auto', 'false', 'false', 'sympy-auto-20261028-184439', demo_parity_02__sympy_auto),
     ('demo-parity-02', 'sympy-ask', 'false', 'false', 'sympy-ask-20261028-184441', demo_parity_02__sympy_ask),
     ('demo-parity-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261028-185847', demo_parity_02__sympy_satask),

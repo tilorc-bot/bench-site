@@ -182,19 +182,6 @@ def sp_acj4_179_real__satrefine_refine():
     return Answer
 
 
-# ---- case sp-acj4-179-real · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_179_real__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.real(x), Ne(sinh(acos(x)), I, evaluate=False), Ne(sinh(acos(x)), -I, evaluate=False), ~Q.zero(cosh(acos(x))))
-    Residual = atan(sinh(acos(x))) - asin(tanh(acos(x)))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-179-real · expected contingent · system satrefine-simplify (satsimp 0.1.0)
 # the run satrefine-simplify-20261028-185941 answered null (declined correctly)
 @_in(_SETUP2)
@@ -203,6 +190,19 @@ def sp_acj4_179_real__satrefine_simplify():
     Assum = And(Q.real(x), Ne(sinh(acos(x)), I, evaluate=False), Ne(sinh(acos(x)), -I, evaluate=False), ~Q.zero(cosh(acos(x))))
     Residual = atan(sinh(acos(x))) - asin(tanh(acos(x)))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case sp-acj4-179-real · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
+# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
+@_in(_SETUP2)
+def sp_acj4_179_real__satsimp_trigsimp():
+    x = Symbol('x')
+    Assum = And(Q.real(x), Ne(sinh(acos(x)), I, evaluate=False), Ne(sinh(acos(x)), -I, evaluate=False), ~Q.zero(cosh(acos(x))))
+    Residual = atan(sinh(acos(x))) - asin(tanh(acos(x)))
+    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -313,8 +313,8 @@ def sp_acj4_179_real__sympy_extras_simplify():
 CASES = [
     ('sp-acj4-179-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185930', sp_acj4_179_real__satassume_ask),
     ('sp-acj4-179-real', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261028-185603', sp_acj4_179_real__satrefine_refine),
-    ('sp-acj4-179-real', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_179_real__satsimp_trigsimp),
     ('sp-acj4-179-real', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261028-185941', sp_acj4_179_real__satrefine_simplify),
+    ('sp-acj4-179-real', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_179_real__satsimp_trigsimp),
     ('sp-acj4-179-real', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-185041', sp_acj4_179_real__sympy_auto),
     ('sp-acj4-179-real', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261028-185047', sp_acj4_179_real__sympy_ask),
     ('sp-acj4-179-real', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261028-193021', sp_acj4_179_real__sympy_satask),

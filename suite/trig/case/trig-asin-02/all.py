@@ -181,19 +181,6 @@ def trig_asin_02__satrefine_refine():
     return Answer
 
 
-# ---- case trig-asin-02 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185853 answered true (solved)
-@_in(_SETUP2)
-def trig_asin_02__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.real(x), x > -1, x < 1)
-    Residual = asin(sin(x)) - x
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case trig-asin-02 · expected true · system satrefine-simplify (satsimp 0.1.0)
 # the run satrefine-simplify-20261028-185851 answered null (no verdict)
 @_in(_SETUP2)
@@ -202,6 +189,19 @@ def trig_asin_02__satrefine_simplify():
     Assum = And(Q.real(x), x > -1, x < 1)
     Residual = asin(sin(x)) - x
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case trig-asin-02 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
+# the run satsimp-trigsimp-20261028-185853 answered true (solved)
+@_in(_SETUP2)
+def trig_asin_02__satsimp_trigsimp():
+    x = Symbol('x')
+    Assum = And(Q.real(x), x > -1, x < 1)
+    Residual = asin(sin(x)) - x
+    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -312,8 +312,8 @@ def trig_asin_02__sympy_extras_simplify():
 CASES = [
     ('trig-asin-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185849', trig_asin_02__satassume_ask),
     ('trig-asin-02', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261028-184525', trig_asin_02__satrefine_refine),
-    ('trig-asin-02', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-185853', trig_asin_02__satsimp_trigsimp),
     ('trig-asin-02', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261028-185851', trig_asin_02__satrefine_simplify),
+    ('trig-asin-02', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-185853', trig_asin_02__satsimp_trigsimp),
     ('trig-asin-02', 'sympy-auto', 'true', 'null', 'sympy-auto-20261028-184518', trig_asin_02__sympy_auto),
     ('trig-asin-02', 'sympy-ask', 'true', 'null', 'sympy-ask-20261028-184519', trig_asin_02__sympy_ask),
     ('trig-asin-02', 'sympy-satask', 'true', 'null', 'sympy-satask-20261028-185929', trig_asin_02__sympy_satask),

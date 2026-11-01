@@ -179,19 +179,6 @@ def trig_sqrt_01__satrefine_refine():
     return Answer
 
 
-# ---- case trig-sqrt-01 · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185853 answered null (declined correctly)
-@_in(_SETUP2)
-def trig_sqrt_01__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.real(x))
-    Residual = sqrt(1 - sin(x) * sin(x)) - cos(x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case trig-sqrt-01 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
 # the run satrefine-simplify-20261028-185851 answered null (declined correctly)
 @_in(_SETUP2)
@@ -200,6 +187,19 @@ def trig_sqrt_01__satrefine_simplify():
     Assum = And(Q.real(x))
     Residual = sqrt(1 - sin(x) * sin(x)) - cos(x)
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case trig-sqrt-01 · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
+# the run satsimp-trigsimp-20261028-185853 answered null (declined correctly)
+@_in(_SETUP2)
+def trig_sqrt_01__satsimp_trigsimp():
+    x = Symbol('x')
+    Assum = And(Q.real(x))
+    Residual = sqrt(1 - sin(x) * sin(x)) - cos(x)
+    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -310,8 +310,8 @@ def trig_sqrt_01__sympy_extras_simplify():
 CASES = [
     ('trig-sqrt-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185849', trig_sqrt_01__satassume_ask),
     ('trig-sqrt-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261028-184525', trig_sqrt_01__satrefine_refine),
-    ('trig-sqrt-01', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-185853', trig_sqrt_01__satsimp_trigsimp),
     ('trig-sqrt-01', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261028-185851', trig_sqrt_01__satrefine_simplify),
+    ('trig-sqrt-01', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-185853', trig_sqrt_01__satsimp_trigsimp),
     ('trig-sqrt-01', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-184518', trig_sqrt_01__sympy_auto),
     ('trig-sqrt-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261028-184519', trig_sqrt_01__sympy_ask),
     ('trig-sqrt-01', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261028-185929', trig_sqrt_01__sympy_satask),

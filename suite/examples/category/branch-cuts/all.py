@@ -183,20 +183,6 @@ def demo_atan2_01__satrefine_refine():
     return Answer
 
 
-# ---- case demo-atan2-01 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185831 answered null (no verdict)
-@_in(_SETUP2)
-def demo_atan2_01__satsimp_trigsimp():
-    x = Symbol('x')
-    y = Symbol('y')
-    Assum = And(Q.real(x), Q.real(y), Q.positive(x))
-    Residual = atan2(y, x) - atan(y / x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case demo-atan2-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
 # the run satrefine-simplify-20261028-185829 answered true (solved)
 @_in(_SETUP2)
@@ -206,6 +192,20 @@ def demo_atan2_01__satrefine_simplify():
     Assum = And(Q.real(x), Q.real(y), Q.positive(x))
     Residual = atan2(y, x) - atan(y / x)
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-atan2-01 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
+# the run satsimp-trigsimp-20261028-185831 answered null (no verdict)
+@_in(_SETUP2)
+def demo_atan2_01__satsimp_trigsimp():
+    x = Symbol('x')
+    y = Symbol('y')
+    Assum = And(Q.real(x), Q.real(y), Q.positive(x))
+    Residual = atan2(y, x) - atan(y / x)
+    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -345,20 +345,6 @@ def demo_atan2_02__satrefine_refine():
     return Answer
 
 
-# ---- case demo-atan2-02 · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185831 answered null (no verdict)
-@_in(_SETUP2)
-def demo_atan2_02__satsimp_trigsimp():
-    x = Symbol('x')
-    y = Symbol('y')
-    Assum = And(Q.real(x), Q.real(y), Q.negative(x), Q.positive(y))
-    Residual = atan2(y, x) - atan(y / x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case demo-atan2-02 · expected false · system satrefine-simplify (satsimp 0.1.0)
 # the run satrefine-simplify-20261028-185829 answered false (solved)
 @_in(_SETUP2)
@@ -368,6 +354,20 @@ def demo_atan2_02__satrefine_simplify():
     Assum = And(Q.real(x), Q.real(y), Q.negative(x), Q.positive(y))
     Residual = atan2(y, x) - atan(y / x)
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-atan2-02 · expected false · system satsimp-trigsimp (satsimp 0.1.0)
+# the run satsimp-trigsimp-20261028-185831 answered null (no verdict)
+@_in(_SETUP2)
+def demo_atan2_02__satsimp_trigsimp():
+    x = Symbol('x')
+    y = Symbol('y')
+    Assum = And(Q.real(x), Q.real(y), Q.negative(x), Q.positive(y))
+    Residual = atan2(y, x) - atan(y / x)
+    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -507,20 +507,6 @@ def demo_log_01__satrefine_refine():
     return Answer
 
 
-# ---- case demo-log-01 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185831 answered null (no verdict)
-@_in(_SETUP2)
-def demo_log_01__satsimp_trigsimp():
-    x = Symbol('x')
-    y = Symbol('y')
-    Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
-    Residual = log(x * y) - (log(x) + log(y))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case demo-log-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
 # the run satrefine-simplify-20261028-185829 answered true (solved)
 @_in(_SETUP2)
@@ -530,6 +516,20 @@ def demo_log_01__satrefine_simplify():
     Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
     Residual = log(x * y) - (log(x) + log(y))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-log-01 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
+# the run satsimp-trigsimp-20261028-185831 answered null (no verdict)
+@_in(_SETUP2)
+def demo_log_01__satsimp_trigsimp():
+    x = Symbol('x')
+    y = Symbol('y')
+    Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.positive(y))
+    Residual = log(x * y) - (log(x) + log(y))
+    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -669,20 +669,6 @@ def demo_log_02__satrefine_refine():
     return Answer
 
 
-# ---- case demo-log-02 · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185831 answered null (declined correctly)
-@_in(_SETUP2)
-def demo_log_02__satsimp_trigsimp():
-    z = Symbol('z')
-    w = Symbol('w')
-    Assum = And(Q.complex(z), Q.complex(w), ~Q.zero(z), ~Q.zero(w))
-    Residual = log(z * w) - (log(z) + log(w))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case demo-log-02 · expected contingent · system satrefine-simplify (satsimp 0.1.0)
 # the run satrefine-simplify-20261028-185829 answered null (declined correctly)
 @_in(_SETUP2)
@@ -692,6 +678,20 @@ def demo_log_02__satrefine_simplify():
     Assum = And(Q.complex(z), Q.complex(w), ~Q.zero(z), ~Q.zero(w))
     Residual = log(z * w) - (log(z) + log(w))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-log-02 · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
+# the run satsimp-trigsimp-20261028-185831 answered null (declined correctly)
+@_in(_SETUP2)
+def demo_log_02__satsimp_trigsimp():
+    z = Symbol('z')
+    w = Symbol('w')
+    Assum = And(Q.complex(z), Q.complex(w), ~Q.zero(z), ~Q.zero(w))
+    Residual = log(z * w) - (log(z) + log(w))
+    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -829,19 +829,6 @@ def demo_log_03__satrefine_refine():
     return Answer
 
 
-# ---- case demo-log-03 · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185831 answered null (no verdict)
-@_in(_SETUP2)
-def demo_log_03__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.real(x), Q.negative(x))
-    Residual = log(x) - log(-x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case demo-log-03 · expected false · system satrefine-simplify (satsimp 0.1.0)
 # the run satrefine-simplify-20261028-185829 answered false (solved)
 @_in(_SETUP2)
@@ -850,6 +837,19 @@ def demo_log_03__satrefine_simplify():
     Assum = And(Q.real(x), Q.negative(x))
     Residual = log(x) - log(-x)
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
+    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
+    print(Result, Answer, sep='\n')
+    return Answer
+
+
+# ---- case demo-log-03 · expected false · system satsimp-trigsimp (satsimp 0.1.0)
+# the run satsimp-trigsimp-20261028-185831 answered null (no verdict)
+@_in(_SETUP2)
+def demo_log_03__satsimp_trigsimp():
+    x = Symbol('x')
+    Assum = And(Q.real(x), Q.negative(x))
+    Residual = log(x) - log(-x)
+    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -958,8 +958,8 @@ def demo_log_03__sympy_extras_simplify():
 CASES = [
     ('demo-atan2-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185827', demo_atan2_01__satassume_ask),
     ('demo-atan2-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261028-184449', demo_atan2_01__satrefine_refine),
-    ('demo-atan2-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-185831', demo_atan2_01__satsimp_trigsimp),
     ('demo-atan2-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261028-185829', demo_atan2_01__satrefine_simplify),
+    ('demo-atan2-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-185831', demo_atan2_01__satsimp_trigsimp),
     ('demo-atan2-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261028-184439', demo_atan2_01__sympy_auto),
     ('demo-atan2-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261028-184441', demo_atan2_01__sympy_ask),
     ('demo-atan2-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261028-185847', demo_atan2_01__sympy_satask),
@@ -970,8 +970,8 @@ CASES = [
     ('demo-atan2-01', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261028-185843', demo_atan2_01__sympy_extras_simplify),
     ('demo-atan2-02', 'satassume-ask', 'false', 'null', 'satassume-ask-20261028-185827', demo_atan2_02__satassume_ask),
     ('demo-atan2-02', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261028-184449', demo_atan2_02__satrefine_refine),
-    ('demo-atan2-02', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261028-185831', demo_atan2_02__satsimp_trigsimp),
     ('demo-atan2-02', 'satrefine-simplify', 'false', 'false', 'satrefine-simplify-20261028-185829', demo_atan2_02__satrefine_simplify),
+    ('demo-atan2-02', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261028-185831', demo_atan2_02__satsimp_trigsimp),
     ('demo-atan2-02', 'sympy-auto', 'false', 'false', 'sympy-auto-20261028-184439', demo_atan2_02__sympy_auto),
     ('demo-atan2-02', 'sympy-ask', 'false', 'null', 'sympy-ask-20261028-184441', demo_atan2_02__sympy_ask),
     ('demo-atan2-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261028-185847', demo_atan2_02__sympy_satask),
@@ -982,8 +982,8 @@ CASES = [
     ('demo-atan2-02', 'sympy-extras-simplify', 'false', 'false', 'sympy-extras-simplify-20261028-185843', demo_atan2_02__sympy_extras_simplify),
     ('demo-log-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185827', demo_log_01__satassume_ask),
     ('demo-log-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261028-184449', demo_log_01__satrefine_refine),
-    ('demo-log-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-185831', demo_log_01__satsimp_trigsimp),
     ('demo-log-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261028-185829', demo_log_01__satrefine_simplify),
+    ('demo-log-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-185831', demo_log_01__satsimp_trigsimp),
     ('demo-log-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261028-184439', demo_log_01__sympy_auto),
     ('demo-log-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261028-184441', demo_log_01__sympy_ask),
     ('demo-log-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261028-185847', demo_log_01__sympy_satask),
@@ -994,8 +994,8 @@ CASES = [
     ('demo-log-01', 'sympy-extras-simplify', 'true', 'true', 'sympy-extras-simplify-20261028-185843', demo_log_01__sympy_extras_simplify),
     ('demo-log-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185827', demo_log_02__satassume_ask),
     ('demo-log-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261028-184449', demo_log_02__satrefine_refine),
-    ('demo-log-02', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-185831', demo_log_02__satsimp_trigsimp),
     ('demo-log-02', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261028-185829', demo_log_02__satrefine_simplify),
+    ('demo-log-02', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-185831', demo_log_02__satsimp_trigsimp),
     ('demo-log-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261028-184439', demo_log_02__sympy_auto),
     ('demo-log-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261028-184441', demo_log_02__sympy_ask),
     ('demo-log-02', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261028-185847', demo_log_02__sympy_satask),
@@ -1006,8 +1006,8 @@ CASES = [
     ('demo-log-02', 'sympy-extras-simplify', 'contingent', 'null', 'sympy-extras-simplify-20261028-185843', demo_log_02__sympy_extras_simplify),
     ('demo-log-03', 'satassume-ask', 'false', 'false', 'satassume-ask-20261028-185827', demo_log_03__satassume_ask),
     ('demo-log-03', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261028-184449', demo_log_03__satrefine_refine),
-    ('demo-log-03', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261028-185831', demo_log_03__satsimp_trigsimp),
     ('demo-log-03', 'satrefine-simplify', 'false', 'false', 'satrefine-simplify-20261028-185829', demo_log_03__satrefine_simplify),
+    ('demo-log-03', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261028-185831', demo_log_03__satsimp_trigsimp),
     ('demo-log-03', 'sympy-auto', 'false', 'null', 'sympy-auto-20261028-184439', demo_log_03__sympy_auto),
     ('demo-log-03', 'sympy-ask', 'false', 'false', 'sympy-ask-20261028-184441', demo_log_03__sympy_ask),
     ('demo-log-03', 'sympy-satask', 'false', 'null', 'sympy-satask-20261028-185847', demo_log_03__sympy_satask),
