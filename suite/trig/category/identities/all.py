@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite trig · category identities · all Python systems (5 cases listed)
-# 60 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 55 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -196,19 +196,6 @@ def trig_double_01__satrefine_simplify():
     return Answer
 
 
-# ---- case trig-double-01 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185853 answered true (solved)
-@_in(_SETUP2)
-def trig_double_01__satsimp_trigsimp():
-    z = Symbol('z')
-    Assum = And(Q.complex(z))
-    Residual = sin(2 * z) - (2 * (sin(z) * cos(z)))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case trig-double-01 · expected true · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090340 answered null (no verdict)
 @_in(_SETUP3)
@@ -341,19 +328,6 @@ def trig_double_02__satrefine_simplify():
     Assum = And(Q.real(x), Q.positive(x), x < 1)
     Residual = sin(2 * x) - (2 * sin(x))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case trig-double-02 · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185853 answered null (no verdict)
-@_in(_SETUP2)
-def trig_double_02__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.real(x), Q.positive(x), x < 1)
-    Residual = sin(2 * x) - (2 * sin(x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -496,19 +470,6 @@ def trig_pyth_01__satrefine_simplify():
     return Answer
 
 
-# ---- case trig-pyth-01 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185853 answered true (solved)
-@_in(_SETUP2)
-def trig_pyth_01__satsimp_trigsimp():
-    z = Symbol('z')
-    Assum = And(Q.complex(z))
-    Residual = sin(z) * sin(z) + cos(z) * cos(z) - 1
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case trig-pyth-01 · expected true · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090340 answered null (no verdict)
 @_in(_SETUP3)
@@ -641,19 +602,6 @@ def trig_sqrt_01__satrefine_simplify():
     Assum = And(Q.real(x))
     Residual = sqrt(1 - sin(x) * sin(x)) - cos(x)
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case trig-sqrt-01 · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185853 answered null (declined correctly)
-@_in(_SETUP2)
-def trig_sqrt_01__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.real(x))
-    Residual = sqrt(1 - sin(x) * sin(x)) - cos(x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -796,19 +744,6 @@ def trig_tan_01__satrefine_simplify():
     return Answer
 
 
-# ---- case trig-tan-01 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185853 answered true (solved)
-@_in(_SETUP2)
-def trig_tan_01__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.real(x), ~Q.zero(cos(x)))
-    Residual = tan(x) - (sin(x) / cos(x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case trig-tan-01 · expected true · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090340 answered null (no verdict)
 @_in(_SETUP3)
@@ -913,7 +848,6 @@ CASES = [
     ('trig-double-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091719', trig_double_01__satassume_ask),
     ('trig-double-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261101-090347', trig_double_01__satrefine_refine),
     ('trig-double-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091720', trig_double_01__satrefine_simplify),
-    ('trig-double-01', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-185853', trig_double_01__satsimp_trigsimp),
     ('trig-double-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261101-090340', trig_double_01__sympy_auto),
     ('trig-double-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261101-090341', trig_double_01__sympy_ask),
     ('trig-double-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261101-091757', trig_double_01__sympy_satask),
@@ -925,7 +859,6 @@ CASES = [
     ('trig-double-02', 'satassume-ask', 'false', 'null', 'satassume-ask-20261101-091719', trig_double_02__satassume_ask),
     ('trig-double-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261101-090347', trig_double_02__satrefine_refine),
     ('trig-double-02', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261101-091720', trig_double_02__satrefine_simplify),
-    ('trig-double-02', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261028-185853', trig_double_02__satsimp_trigsimp),
     ('trig-double-02', 'sympy-auto', 'false', 'null', 'sympy-auto-20261101-090340', trig_double_02__sympy_auto),
     ('trig-double-02', 'sympy-ask', 'false', 'null', 'sympy-ask-20261101-090341', trig_double_02__sympy_ask),
     ('trig-double-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261101-091757', trig_double_02__sympy_satask),
@@ -937,7 +870,6 @@ CASES = [
     ('trig-pyth-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091719', trig_pyth_01__satassume_ask),
     ('trig-pyth-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261101-090347', trig_pyth_01__satrefine_refine),
     ('trig-pyth-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091720', trig_pyth_01__satrefine_simplify),
-    ('trig-pyth-01', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-185853', trig_pyth_01__satsimp_trigsimp),
     ('trig-pyth-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261101-090340', trig_pyth_01__sympy_auto),
     ('trig-pyth-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261101-090341', trig_pyth_01__sympy_ask),
     ('trig-pyth-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261101-091757', trig_pyth_01__sympy_satask),
@@ -949,7 +881,6 @@ CASES = [
     ('trig-sqrt-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091719', trig_sqrt_01__satassume_ask),
     ('trig-sqrt-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-090347', trig_sqrt_01__satrefine_refine),
     ('trig-sqrt-01', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091720', trig_sqrt_01__satrefine_simplify),
-    ('trig-sqrt-01', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-185853', trig_sqrt_01__satsimp_trigsimp),
     ('trig-sqrt-01', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090340', trig_sqrt_01__sympy_auto),
     ('trig-sqrt-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090341', trig_sqrt_01__sympy_ask),
     ('trig-sqrt-01', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-091757', trig_sqrt_01__sympy_satask),
@@ -961,7 +892,6 @@ CASES = [
     ('trig-tan-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091719', trig_tan_01__satassume_ask),
     ('trig-tan-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261101-090347', trig_tan_01__satrefine_refine),
     ('trig-tan-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091720', trig_tan_01__satrefine_simplify),
-    ('trig-tan-01', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-185853', trig_tan_01__satsimp_trigsimp),
     ('trig-tan-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261101-090340', trig_tan_01__sympy_auto),
     ('trig-tan-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261101-090341', trig_tan_01__sympy_ask),
     ('trig-tan-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261101-091757', trig_tan_01__sympy_satask),

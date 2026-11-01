@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite trig · case trig-tan-01 · all Python systems
-# 12 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 11 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -193,19 +193,6 @@ def trig_tan_01__satrefine_simplify():
     return Answer
 
 
-# ---- case trig-tan-01 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185853 answered true (solved)
-@_in(_SETUP2)
-def trig_tan_01__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.real(x), ~Q.zero(cos(x)))
-    Residual = tan(x) - (sin(x) / cos(x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case trig-tan-01 · expected true · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090340 answered null (no verdict)
 @_in(_SETUP3)
@@ -312,7 +299,6 @@ CASES = [
     ('trig-tan-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091719', trig_tan_01__satassume_ask),
     ('trig-tan-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261101-090347', trig_tan_01__satrefine_refine),
     ('trig-tan-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091720', trig_tan_01__satrefine_simplify),
-    ('trig-tan-01', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-185853', trig_tan_01__satsimp_trigsimp),
     ('trig-tan-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261101-090340', trig_tan_01__sympy_auto),
     ('trig-tan-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261101-090341', trig_tan_01__sympy_ask),
     ('trig-tan-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261101-091757', trig_tan_01__sympy_satask),

@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite examples · case demo-sign-05 · all Python systems
-# 12 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 11 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -195,20 +195,6 @@ def demo_sign_05__satrefine_simplify():
     return Answer
 
 
-# ---- case demo-sign-05 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185831 answered null (no verdict)
-@_in(_SETUP2)
-def demo_sign_05__satsimp_trigsimp():
-    x = Symbol('x')
-    y = Symbol('y')
-    Assum = And(Q.real(x), Q.real(y), Q.positive(x), Q.negative(y))
-    Residual = Abs(x - y) - (x - y)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case demo-sign-05 · expected true · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090155 answered true (solved)
 @_in(_SETUP3)
@@ -323,7 +309,6 @@ CASES = [
     ('demo-sign-05', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_sign_05__satassume_ask),
     ('demo-sign-05', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261101-090205', demo_sign_05__satrefine_refine),
     ('demo-sign-05', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091659', demo_sign_05__satrefine_simplify),
-    ('demo-sign-05', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-185831', demo_sign_05__satsimp_trigsimp),
     ('demo-sign-05', 'sympy-auto', 'true', 'true', 'sympy-auto-20261101-090155', demo_sign_05__sympy_auto),
     ('demo-sign-05', 'sympy-ask', 'true', 'null', 'sympy-ask-20261101-090157', demo_sign_05__sympy_ask),
     ('demo-sign-05', 'sympy-satask', 'true', 'null', 'sympy-satask-20261101-091717', demo_sign_05__sympy_satask),

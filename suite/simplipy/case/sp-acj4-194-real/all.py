@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite simplipy · case sp-acj4-194-real · all Python systems
-# 12 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 11 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -195,19 +195,6 @@ def sp_acj4_194_real__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-194-real · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (no verdict)
-@_in(_SETUP2)
-def sp_acj4_194_real__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.real(x), Ne(sin(cos(x)), 1, evaluate=False), Ne(sin(cos(x)), -1, evaluate=False), ~Q.zero(cos(cos(x))))
-    Residual = atanh(sin(cos(x))) - asinh(tan(cos(x)))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-194-real · expected true · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (no verdict)
 @_in(_SETUP3)
@@ -314,7 +301,6 @@ CASES = [
     ('sp-acj4-194-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091758', sp_acj4_194_real__satassume_ask),
     ('sp-acj4-194-real', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261101-091426', sp_acj4_194_real__satrefine_refine),
     ('sp-acj4-194-real', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_194_real__satrefine_simplify),
-    ('sp-acj4-194-real', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_194_real__satsimp_trigsimp),
     ('sp-acj4-194-real', 'sympy-auto', 'true', 'null', 'sympy-auto-20261101-090919', sp_acj4_194_real__sympy_auto),
     ('sp-acj4-194-real', 'sympy-ask', 'true', 'null', 'sympy-ask-20261101-090925', sp_acj4_194_real__sympy_ask),
     ('sp-acj4-194-real', 'sympy-satask', 'true', 'null', 'sympy-satask-20261101-094904', sp_acj4_194_real__sympy_satask),

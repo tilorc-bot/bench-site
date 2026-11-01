@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite examples · case demo-eq-abs-02 · all Python systems
-# 12 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 11 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -192,19 +192,6 @@ def demo_eq_abs_02__satrefine_simplify():
     return Answer
 
 
-# ---- case demo-eq-abs-02 · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185831 answered null (no verdict)
-@_in(_SETUP2)
-def demo_eq_abs_02__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.real(x), Q.negative(x))
-    Residual = Abs(x) - x
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case demo-eq-abs-02 · expected false · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090155 answered null (no verdict)
 @_in(_SETUP3)
@@ -311,7 +298,6 @@ CASES = [
     ('demo-eq-abs-02', 'satassume-ask', 'false', 'false', 'satassume-ask-20261101-091658', demo_eq_abs_02__satassume_ask),
     ('demo-eq-abs-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261101-090205', demo_eq_abs_02__satrefine_refine),
     ('demo-eq-abs-02', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261101-091659', demo_eq_abs_02__satrefine_simplify),
-    ('demo-eq-abs-02', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261028-185831', demo_eq_abs_02__satsimp_trigsimp),
     ('demo-eq-abs-02', 'sympy-auto', 'false', 'null', 'sympy-auto-20261101-090155', demo_eq_abs_02__sympy_auto),
     ('demo-eq-abs-02', 'sympy-ask', 'false', 'false', 'sympy-ask-20261101-090157', demo_eq_abs_02__sympy_ask),
     ('demo-eq-abs-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261101-091717', demo_eq_abs_02__sympy_satask),

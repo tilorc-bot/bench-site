@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite trig · category periodicity · all Python systems (4 cases listed)
-# 48 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 44 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -194,19 +194,6 @@ def trig_period_01__satrefine_simplify():
     return Answer
 
 
-# ---- case trig-period-01 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185853 answered true (solved)
-@_in(_SETUP2)
-def trig_period_01__satsimp_trigsimp():
-    z = Symbol('z')
-    Assum = And(Q.complex(z))
-    Residual = sin(z + 2 * pi) - sin(z)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case trig-period-01 · expected true · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090340 answered true (solved)
 @_in(_SETUP3)
@@ -339,19 +326,6 @@ def trig_period_02__satrefine_simplify():
     Assum = And(Q.real(x))
     Residual = cos(x + pi) - cos(x)
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case trig-period-02 · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185853 answered null (declined correctly)
-@_in(_SETUP2)
-def trig_period_02__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.real(x))
-    Residual = cos(x + pi) - cos(x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -494,19 +468,6 @@ def trig_period_03__satrefine_simplify():
     return Answer
 
 
-# ---- case trig-period-03 · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185853 answered null (declined correctly)
-@_in(_SETUP2)
-def trig_period_03__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.real(x), Q.positive(x))
-    Residual = cos(x + pi) - cos(x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case trig-period-03 · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090340 answered null (declined correctly)
 @_in(_SETUP3)
@@ -644,19 +605,6 @@ def trig_shift_01__satrefine_simplify():
     return Answer
 
 
-# ---- case trig-shift-01 · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185853 answered null (declined correctly)
-@_in(_SETUP2)
-def trig_shift_01__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.real(x))
-    Residual = sin(x + pi) - sin(x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case trig-shift-01 · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090340 answered null (declined correctly)
 @_in(_SETUP3)
@@ -761,7 +709,6 @@ CASES = [
     ('trig-period-01', 'satassume-ask', 'true', 'true', 'satassume-ask-20261101-091719', trig_period_01__satassume_ask),
     ('trig-period-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261101-090347', trig_period_01__satrefine_refine),
     ('trig-period-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091720', trig_period_01__satrefine_simplify),
-    ('trig-period-01', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-185853', trig_period_01__satsimp_trigsimp),
     ('trig-period-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261101-090340', trig_period_01__sympy_auto),
     ('trig-period-01', 'sympy-ask', 'true', 'true', 'sympy-ask-20261101-090341', trig_period_01__sympy_ask),
     ('trig-period-01', 'sympy-satask', 'true', 'true', 'sympy-satask-20261101-091757', trig_period_01__sympy_satask),
@@ -773,7 +720,6 @@ CASES = [
     ('trig-period-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091719', trig_period_02__satassume_ask),
     ('trig-period-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-090347', trig_period_02__satrefine_refine),
     ('trig-period-02', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091720', trig_period_02__satrefine_simplify),
-    ('trig-period-02', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-185853', trig_period_02__satsimp_trigsimp),
     ('trig-period-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090340', trig_period_02__sympy_auto),
     ('trig-period-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090341', trig_period_02__sympy_ask),
     ('trig-period-02', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-091757', trig_period_02__sympy_satask),
@@ -785,7 +731,6 @@ CASES = [
     ('trig-period-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091719', trig_period_03__satassume_ask),
     ('trig-period-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-090347', trig_period_03__satrefine_refine),
     ('trig-period-03', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091720', trig_period_03__satrefine_simplify),
-    ('trig-period-03', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-185853', trig_period_03__satsimp_trigsimp),
     ('trig-period-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090340', trig_period_03__sympy_auto),
     ('trig-period-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090341', trig_period_03__sympy_ask),
     ('trig-period-03', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-091757', trig_period_03__sympy_satask),
@@ -797,7 +742,6 @@ CASES = [
     ('trig-shift-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091719', trig_shift_01__satassume_ask),
     ('trig-shift-01', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-090347', trig_shift_01__satrefine_refine),
     ('trig-shift-01', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091720', trig_shift_01__satrefine_simplify),
-    ('trig-shift-01', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-185853', trig_shift_01__satsimp_trigsimp),
     ('trig-shift-01', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090340', trig_shift_01__sympy_auto),
     ('trig-shift-01', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090341', trig_shift_01__sympy_ask),
     ('trig-shift-01', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-091757', trig_shift_01__sympy_satask),

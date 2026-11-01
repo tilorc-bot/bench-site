@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite examples · category primes · all Python systems (2 cases listed)
-# 24 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 22 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -195,19 +195,6 @@ def demo_prime_01__satrefine_simplify():
     return Answer
 
 
-# ---- case demo-prime-01 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185831 answered null (no verdict)
-@_in(_SETUP2)
-def demo_prime_01__satsimp_trigsimp():
-    p = Symbol('p')
-    Assum = And(Q.integer(p), Q.prime(p), p > 2)
-    Residual = Pow(-1, p) - (-1)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case demo-prime-01 · expected true · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090155 answered null (no verdict)
 @_in(_SETUP3)
@@ -345,19 +332,6 @@ def demo_prime_02__satrefine_simplify():
     return Answer
 
 
-# ---- case demo-prime-02 · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185831 answered null (declined correctly)
-@_in(_SETUP2)
-def demo_prime_02__satsimp_trigsimp():
-    p = Symbol('p')
-    Assum = And(Q.integer(p), Q.prime(p))
-    Residual = Pow(-1, p) - (-1)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case demo-prime-02 · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090155 answered null (declined correctly)
 @_in(_SETUP3)
@@ -462,7 +436,6 @@ CASES = [
     ('demo-prime-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_prime_01__satassume_ask),
     ('demo-prime-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261101-090205', demo_prime_01__satrefine_refine),
     ('demo-prime-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261101-091659', demo_prime_01__satrefine_simplify),
-    ('demo-prime-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-185831', demo_prime_01__satsimp_trigsimp),
     ('demo-prime-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261101-090155', demo_prime_01__sympy_auto),
     ('demo-prime-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261101-090157', demo_prime_01__sympy_ask),
     ('demo-prime-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261101-091717', demo_prime_01__sympy_satask),
@@ -474,7 +447,6 @@ CASES = [
     ('demo-prime-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091658', demo_prime_02__satassume_ask),
     ('demo-prime-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-090205', demo_prime_02__satrefine_refine),
     ('demo-prime-02', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091659', demo_prime_02__satrefine_simplify),
-    ('demo-prime-02', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-185831', demo_prime_02__satsimp_trigsimp),
     ('demo-prime-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090155', demo_prime_02__sympy_auto),
     ('demo-prime-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090157', demo_prime_02__sympy_ask),
     ('demo-prime-02', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-091717', demo_prime_02__sympy_satask),

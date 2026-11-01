@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite examples · category radicals · all Python systems (6 cases listed)
-# 72 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 66 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -194,19 +194,6 @@ def demo_eq_abs_01__satrefine_simplify():
     return Answer
 
 
-# ---- case demo-eq-abs-01 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185831 answered null (no verdict)
-@_in(_SETUP2)
-def demo_eq_abs_01__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.real(x), Q.negative(x))
-    Residual = Abs(x) - (-x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case demo-eq-abs-01 · expected true · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090155 answered true (solved)
 @_in(_SETUP3)
@@ -339,19 +326,6 @@ def demo_eq_abs_02__satrefine_simplify():
     Assum = And(Q.real(x), Q.negative(x))
     Residual = Abs(x) - x
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case demo-eq-abs-02 · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185831 answered null (no verdict)
-@_in(_SETUP2)
-def demo_eq_abs_02__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.real(x), Q.negative(x))
-    Residual = Abs(x) - x
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -494,19 +468,6 @@ def demo_eq_sqrt_01__satrefine_simplify():
     return Answer
 
 
-# ---- case demo-eq-sqrt-01 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185831 answered null (no verdict)
-@_in(_SETUP2)
-def demo_eq_sqrt_01__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.real(x), Q.positive(x))
-    Residual = sqrt(Pow(x, 2)) - x
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case demo-eq-sqrt-01 · expected true · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090155 answered true (solved)
 @_in(_SETUP3)
@@ -639,19 +600,6 @@ def demo_eq_sqrt_02__satrefine_simplify():
     Assum = And(Q.real(x))
     Residual = sqrt(Pow(x, 2)) - Abs(x)
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case demo-eq-sqrt-02 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185831 answered null (no verdict)
-@_in(_SETUP2)
-def demo_eq_sqrt_02__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.real(x))
-    Residual = sqrt(Pow(x, 2)) - Abs(x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -794,19 +742,6 @@ def demo_eq_sqrt_03__satrefine_simplify():
     return Answer
 
 
-# ---- case demo-eq-sqrt-03 · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185831 answered null (declined correctly)
-@_in(_SETUP2)
-def demo_eq_sqrt_03__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.real(x))
-    Residual = sqrt(Pow(x, 2)) - x
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case demo-eq-sqrt-03 · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090155 answered null (declined correctly)
 @_in(_SETUP3)
@@ -944,19 +879,6 @@ def demo_eq_sqrt_04__satrefine_simplify():
     return Answer
 
 
-# ---- case demo-eq-sqrt-04 · expected false · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185831 answered null (no verdict)
-@_in(_SETUP2)
-def demo_eq_sqrt_04__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.real(x), Q.positive(x))
-    Residual = sqrt(Pow(x, 2)) + 1 - x
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case demo-eq-sqrt-04 · expected false · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090155 answered false (solved)
 @_in(_SETUP3)
@@ -1061,7 +983,6 @@ CASES = [
     ('demo-eq-abs-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_eq_abs_01__satassume_ask),
     ('demo-eq-abs-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261101-090205', demo_eq_abs_01__satrefine_refine),
     ('demo-eq-abs-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091659', demo_eq_abs_01__satrefine_simplify),
-    ('demo-eq-abs-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-185831', demo_eq_abs_01__satsimp_trigsimp),
     ('demo-eq-abs-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261101-090155', demo_eq_abs_01__sympy_auto),
     ('demo-eq-abs-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261101-090157', demo_eq_abs_01__sympy_ask),
     ('demo-eq-abs-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261101-091717', demo_eq_abs_01__sympy_satask),
@@ -1073,7 +994,6 @@ CASES = [
     ('demo-eq-abs-02', 'satassume-ask', 'false', 'false', 'satassume-ask-20261101-091658', demo_eq_abs_02__satassume_ask),
     ('demo-eq-abs-02', 'satrefine-refine', 'false', 'null', 'satrefine-refine-20261101-090205', demo_eq_abs_02__satrefine_refine),
     ('demo-eq-abs-02', 'satrefine-simplify', 'false', 'null', 'satrefine-simplify-20261101-091659', demo_eq_abs_02__satrefine_simplify),
-    ('demo-eq-abs-02', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261028-185831', demo_eq_abs_02__satsimp_trigsimp),
     ('demo-eq-abs-02', 'sympy-auto', 'false', 'null', 'sympy-auto-20261101-090155', demo_eq_abs_02__sympy_auto),
     ('demo-eq-abs-02', 'sympy-ask', 'false', 'false', 'sympy-ask-20261101-090157', demo_eq_abs_02__sympy_ask),
     ('demo-eq-abs-02', 'sympy-satask', 'false', 'null', 'sympy-satask-20261101-091717', demo_eq_abs_02__sympy_satask),
@@ -1085,7 +1005,6 @@ CASES = [
     ('demo-eq-sqrt-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_eq_sqrt_01__satassume_ask),
     ('demo-eq-sqrt-01', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261101-090205', demo_eq_sqrt_01__satrefine_refine),
     ('demo-eq-sqrt-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091659', demo_eq_sqrt_01__satrefine_simplify),
-    ('demo-eq-sqrt-01', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-185831', demo_eq_sqrt_01__satsimp_trigsimp),
     ('demo-eq-sqrt-01', 'sympy-auto', 'true', 'true', 'sympy-auto-20261101-090155', demo_eq_sqrt_01__sympy_auto),
     ('demo-eq-sqrt-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261101-090157', demo_eq_sqrt_01__sympy_ask),
     ('demo-eq-sqrt-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261101-091717', demo_eq_sqrt_01__sympy_satask),
@@ -1097,7 +1016,6 @@ CASES = [
     ('demo-eq-sqrt-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_eq_sqrt_02__satassume_ask),
     ('demo-eq-sqrt-02', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261101-090205', demo_eq_sqrt_02__satrefine_refine),
     ('demo-eq-sqrt-02', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091659', demo_eq_sqrt_02__satrefine_simplify),
-    ('demo-eq-sqrt-02', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-185831', demo_eq_sqrt_02__satsimp_trigsimp),
     ('demo-eq-sqrt-02', 'sympy-auto', 'true', 'true', 'sympy-auto-20261101-090155', demo_eq_sqrt_02__sympy_auto),
     ('demo-eq-sqrt-02', 'sympy-ask', 'true', 'null', 'sympy-ask-20261101-090157', demo_eq_sqrt_02__sympy_ask),
     ('demo-eq-sqrt-02', 'sympy-satask', 'true', 'null', 'sympy-satask-20261101-091717', demo_eq_sqrt_02__sympy_satask),
@@ -1109,7 +1027,6 @@ CASES = [
     ('demo-eq-sqrt-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091658', demo_eq_sqrt_03__satassume_ask),
     ('demo-eq-sqrt-03', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-090205', demo_eq_sqrt_03__satrefine_refine),
     ('demo-eq-sqrt-03', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091659', demo_eq_sqrt_03__satrefine_simplify),
-    ('demo-eq-sqrt-03', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-185831', demo_eq_sqrt_03__satsimp_trigsimp),
     ('demo-eq-sqrt-03', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090155', demo_eq_sqrt_03__sympy_auto),
     ('demo-eq-sqrt-03', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090157', demo_eq_sqrt_03__sympy_ask),
     ('demo-eq-sqrt-03', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-091717', demo_eq_sqrt_03__sympy_satask),
@@ -1121,7 +1038,6 @@ CASES = [
     ('demo-eq-sqrt-04', 'satassume-ask', 'false', 'null', 'satassume-ask-20261101-091658', demo_eq_sqrt_04__satassume_ask),
     ('demo-eq-sqrt-04', 'satrefine-refine', 'false', 'false', 'satrefine-refine-20261101-090205', demo_eq_sqrt_04__satrefine_refine),
     ('demo-eq-sqrt-04', 'satrefine-simplify', 'false', 'false', 'satrefine-simplify-20261101-091659', demo_eq_sqrt_04__satrefine_simplify),
-    ('demo-eq-sqrt-04', 'satsimp-trigsimp', 'false', 'null', 'satsimp-trigsimp-20261028-185831', demo_eq_sqrt_04__satsimp_trigsimp),
     ('demo-eq-sqrt-04', 'sympy-auto', 'false', 'false', 'sympy-auto-20261101-090155', demo_eq_sqrt_04__sympy_auto),
     ('demo-eq-sqrt-04', 'sympy-ask', 'false', 'null', 'sympy-ask-20261101-090157', demo_eq_sqrt_04__sympy_ask),
     ('demo-eq-sqrt-04', 'sympy-satask', 'false', 'null', 'sympy-satask-20261101-091717', demo_eq_sqrt_04__sympy_satask),

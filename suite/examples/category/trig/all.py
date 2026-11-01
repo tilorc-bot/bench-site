@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite examples · category trig · all Python systems (2 cases listed)
-# 24 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 22 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -194,19 +194,6 @@ def demo_eq_trig_01__satrefine_simplify():
     return Answer
 
 
-# ---- case demo-eq-trig-01 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185831 answered true (solved)
-@_in(_SETUP2)
-def demo_eq_trig_01__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x))
-    Residual = Pow(sin(x), 2) + Pow(cos(x), 2) - 1
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case demo-eq-trig-01 · expected true · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090155 answered null (no verdict)
 @_in(_SETUP3)
@@ -344,19 +331,6 @@ def demo_eq_trig_02__satrefine_simplify():
     return Answer
 
 
-# ---- case demo-eq-trig-02 · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185831 answered true (solved)
-@_in(_SETUP2)
-def demo_eq_trig_02__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x))
-    Residual = 2 * sin(x) * cos(x) - sin(2 * x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case demo-eq-trig-02 · expected true · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090155 answered null (no verdict)
 @_in(_SETUP3)
@@ -461,7 +435,6 @@ CASES = [
     ('demo-eq-trig-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_eq_trig_01__satassume_ask),
     ('demo-eq-trig-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261101-090205', demo_eq_trig_01__satrefine_refine),
     ('demo-eq-trig-01', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091659', demo_eq_trig_01__satrefine_simplify),
-    ('demo-eq-trig-01', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-185831', demo_eq_trig_01__satsimp_trigsimp),
     ('demo-eq-trig-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261101-090155', demo_eq_trig_01__sympy_auto),
     ('demo-eq-trig-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261101-090157', demo_eq_trig_01__sympy_ask),
     ('demo-eq-trig-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261101-091717', demo_eq_trig_01__sympy_satask),
@@ -473,7 +446,6 @@ CASES = [
     ('demo-eq-trig-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_eq_trig_02__satassume_ask),
     ('demo-eq-trig-02', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261101-090205', demo_eq_trig_02__satrefine_refine),
     ('demo-eq-trig-02', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091659', demo_eq_trig_02__satrefine_simplify),
-    ('demo-eq-trig-02', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-185831', demo_eq_trig_02__satsimp_trigsimp),
     ('demo-eq-trig-02', 'sympy-auto', 'true', 'null', 'sympy-auto-20261101-090155', demo_eq_trig_02__sympy_auto),
     ('demo-eq-trig-02', 'sympy-ask', 'true', 'null', 'sympy-ask-20261101-090157', demo_eq_trig_02__sympy_ask),
     ('demo-eq-trig-02', 'sympy-satask', 'true', 'null', 'sympy-satask-20261101-091717', demo_eq_trig_02__sympy_satask),

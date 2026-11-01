@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite trig · case trig-period-02 · all Python systems
-# 12 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 11 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -192,19 +192,6 @@ def trig_period_02__satrefine_simplify():
     return Answer
 
 
-# ---- case trig-period-02 · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-185853 answered null (declined correctly)
-@_in(_SETUP2)
-def trig_period_02__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.real(x))
-    Residual = cos(x + pi) - cos(x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case trig-period-02 · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090340 answered null (declined correctly)
 @_in(_SETUP3)
@@ -311,7 +298,6 @@ CASES = [
     ('trig-period-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091719', trig_period_02__satassume_ask),
     ('trig-period-02', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-090347', trig_period_02__satrefine_refine),
     ('trig-period-02', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091720', trig_period_02__satrefine_simplify),
-    ('trig-period-02', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-185853', trig_period_02__satsimp_trigsimp),
     ('trig-period-02', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090340', trig_period_02__sympy_auto),
     ('trig-period-02', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090341', trig_period_02__sympy_ask),
     ('trig-period-02', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-091757', trig_period_02__sympy_satask),

@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite simplipy · category simplipy-complex-branch · all Python systems (80 cases listed)
-# 960 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 880 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -259,19 +259,6 @@ def sp_acj4_0_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-0-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_0_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x))
-    Residual = acosh(cosh(x)) - Abs(x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-0-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -404,19 +391,6 @@ def sp_acj4_102_complex__satrefine_simplify():
     Assum = And(Q.complex(x))
     Residual = Abs(x) / 6 - Abs(x / -6)
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-102-complex · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered true (solved)
-@_in(_SETUP2)
-def sp_acj4_102_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x))
-    Residual = Abs(x) / 6 - Abs(x / -6)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -559,19 +533,6 @@ def sp_acj4_108_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-108-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_108_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(x), ~Q.zero(Abs(x)))
-    Residual = Abs(x) / x - (x / Abs(x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-108-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -704,19 +665,6 @@ def sp_acj4_120_complex__satrefine_simplify():
     Assum = And(Q.complex(x), ~Q.zero(Abs(x)), ~Q.zero(x))
     Residual = pi / Abs(x) - Abs(pi / x)
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-120-complex · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered true (solved)
-@_in(_SETUP2)
-def sp_acj4_120_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(Abs(x)), ~Q.zero(x))
-    Residual = pi / Abs(x) - Abs(pi / x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -859,19 +807,6 @@ def sp_acj4_130_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-130-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_130_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(cos(x)), ~Q.zero(1 / cos(x)))
-    Residual = Abs(log(cos(x))) - log(1 / cos(x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-130-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -1004,19 +939,6 @@ def sp_acj4_131_complex__satrefine_simplify():
     Assum = And(Q.complex(x), ~Q.zero(cosh(x)))
     Residual = Abs(log(cosh(x))) - log(cosh(x))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-131-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_131_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(cosh(x)))
-    Residual = Abs(log(cosh(x))) - log(cosh(x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -1159,19 +1081,6 @@ def sp_acj4_132_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-132-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_132_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(sin(x)))
-    Residual = Abs(log(sin(x))) - (-log(sin(x)))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-132-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -1304,19 +1213,6 @@ def sp_acj4_133_complex__satrefine_simplify():
     Assum = And(Q.complex(x), ~Q.zero(cosh(x)), ~Q.zero(tanh(x)))
     Residual = Abs(log(tanh(x))) - (-log(tanh(x)))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-133-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_133_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(cosh(x)), ~Q.zero(tanh(x)))
-    Residual = Abs(log(tanh(x))) - (-log(tanh(x)))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -1459,19 +1355,6 @@ def sp_acj4_137_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-137-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_137_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), Or(~Q.zero(x), re(pi) > 0))
-    Residual = Abs(Pow(x, pi)) - Pow(x, pi)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-137-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -1604,19 +1487,6 @@ def sp_acj4_147_complex__satrefine_simplify():
     Assum = And(Q.complex(x), ~Q.zero(cosh(asinh(x))), ~Q.zero(x), Ne(1 / x, I, evaluate=False), Ne(1 / x, -I, evaluate=False))
     Residual = Abs(tanh(asinh(x))) - cos(atan(1 / x))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-147-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_147_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(cosh(asinh(x))), ~Q.zero(x), Ne(1 / x, I, evaluate=False), Ne(1 / x, -I, evaluate=False))
-    Residual = Abs(tanh(asinh(x))) - cos(atan(1 / x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -1759,19 +1629,6 @@ def sp_acj4_151_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-151-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_151_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x))
-    Residual = acos(cos(asin(x))) - Abs(asin(x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-151-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -1904,19 +1761,6 @@ def sp_acj4_153_complex__satrefine_simplify():
     Assum = And(Q.complex(x))
     Residual = acos(cos(cos(x))) - Abs(cos(x))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-153-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_153_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x))
-    Residual = acos(cos(cos(x))) - Abs(cos(x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -2059,19 +1903,6 @@ def sp_acj4_154_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-154-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_154_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x))
-    Residual = acos(cos(sin(x))) - Abs(sin(x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-154-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -2204,19 +2035,6 @@ def sp_acj4_165_complex__satrefine_simplify():
     Assum = And(Q.complex(x), Ne(x, I, evaluate=False), Ne(x, -I, evaluate=False), ~Q.zero(x), Ne(1 / x, I, evaluate=False), Ne(1 / x, -I, evaluate=False))
     Residual = asin(cos(atan(x))) - Abs(atan(1 / x))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-165-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_165_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), Ne(x, I, evaluate=False), Ne(x, -I, evaluate=False), ~Q.zero(x), Ne(1 / x, I, evaluate=False), Ne(1 / x, -I, evaluate=False))
-    Residual = asin(cos(atan(x))) - Abs(atan(1 / x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -2359,19 +2177,6 @@ def sp_acj4_173_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-173-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_173_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(cosh(x)))
-    Residual = asin(tanh(Abs(x))) - acos(1 / cosh(x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-173-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -2504,19 +2309,6 @@ def sp_acj4_176_complex__satrefine_simplify():
     Assum = And(Q.complex(x), ~Q.zero(cosh(x)))
     Residual = atan(Abs(sinh(x))) - acos(1 / cosh(x))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-176-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_176_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(cosh(x)))
-    Residual = atan(Abs(sinh(x))) - acos(1 / cosh(x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -2659,19 +2451,6 @@ def sp_acj4_177_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-177-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_177_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(cos(x)))
-    Residual = atan(Abs(tan(x))) - Abs(asin(sin(x)))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-177-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -2804,19 +2583,6 @@ def sp_acj4_180_complex__satrefine_simplify():
     Assum = And(Q.complex(x), Ne(sinh(acosh(x)), I, evaluate=False), Ne(sinh(acosh(x)), -I, evaluate=False), ~Q.zero(cosh(acosh(x))))
     Residual = atan(sinh(acosh(x))) - asin(tanh(acosh(x)))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-180-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_180_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), Ne(sinh(acosh(x)), I, evaluate=False), Ne(sinh(acosh(x)), -I, evaluate=False), ~Q.zero(cosh(acosh(x))))
-    Residual = atan(sinh(acosh(x))) - asin(tanh(acosh(x)))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -2959,19 +2725,6 @@ def sp_acj4_183_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-183-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_183_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(x), Ne(sinh(log(x)), I, evaluate=False), Ne(sinh(log(x)), -I, evaluate=False), ~Q.zero(cosh(log(x))))
-    Residual = atan(sinh(log(x))) - asin(tanh(log(x)))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-183-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -3104,19 +2857,6 @@ def sp_acj4_189_complex__satrefine_simplify():
     Assum = And(Q.complex(x), Ne(cos(asin(x)), 1, evaluate=False), Ne(cos(asin(x)), -1, evaluate=False), ~Q.zero(x))
     Residual = atanh(cos(asin(x))) - acosh(Abs(1 / x))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-189-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_189_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), Ne(cos(asin(x)), 1, evaluate=False), Ne(cos(asin(x)), -1, evaluate=False), ~Q.zero(x))
-    Residual = atanh(cos(asin(x))) - acosh(Abs(1 / x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -3259,19 +2999,6 @@ def sp_acj4_190_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-190-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_190_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), Ne(x, I, evaluate=False), Ne(x, -I, evaluate=False), Ne(cos(atan(x)), 1, evaluate=False), Ne(cos(atan(x)), -1, evaluate=False), ~Q.zero(x))
-    Residual = atanh(cos(atan(x))) - Abs(asinh(1 / x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-190-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -3404,19 +3131,6 @@ def sp_acj4_191_complex__satrefine_simplify():
     Assum = And(Q.complex(x), Ne(sin(acos(x)), 1, evaluate=False), Ne(sin(acos(x)), -1, evaluate=False), ~Q.zero(x))
     Residual = atanh(sin(acos(x))) - acosh(Abs(1 / x))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-191-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_191_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), Ne(sin(acos(x)), 1, evaluate=False), Ne(sin(acos(x)), -1, evaluate=False), ~Q.zero(x))
-    Residual = atanh(sin(acos(x))) - acosh(Abs(1 / x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -3559,19 +3273,6 @@ def sp_acj4_20_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-20-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_20_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x))
-    Residual = sinh(Abs(x)) - Abs(sinh(x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-20-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -3704,19 +3405,6 @@ def sp_acj4_203_complex__satrefine_simplify():
     Assum = And(Q.complex(x), ~Q.zero(x), ~Q.zero(1 / x))
     Residual = cos(log(1 / x)) - cos(log(x))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-203-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_203_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(x), ~Q.zero(1 / x))
-    Residual = cos(log(1 / x)) - cos(log(x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -3859,19 +3547,6 @@ def sp_acj4_213_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-213-complex · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered true (solved)
-@_in(_SETUP2)
-def sp_acj4_213_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(x), ~Q.zero(-10 / x))
-    Residual = 1 / (-10 / x) - (x / -10)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-213-complex · expected true · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered true (solved)
 @_in(_SETUP3)
@@ -4004,19 +3679,6 @@ def sp_acj4_216_complex__satrefine_simplify():
     Assum = And(Q.complex(x), ~Q.zero(x), ~Q.zero(-4 / x))
     Residual = 1 / (-4 / x) - (x / -4)
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-216-complex · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered true (solved)
-@_in(_SETUP2)
-def sp_acj4_216_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(x), ~Q.zero(-4 / x))
-    Residual = 1 / (-4 / x) - (x / -4)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -4159,19 +3821,6 @@ def sp_acj4_22_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-22-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_22_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(cosh(x)))
-    Residual = tanh(Abs(x)) - Abs(tanh(x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-22-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -4304,19 +3953,6 @@ def sp_acj4_234_complex__satrefine_simplify():
     Assum = And(Q.complex(x), Or(~Q.zero(x), re(x) > 0), ~Q.zero(Pow(x, x)), ~Q.zero(x), Or(~Q.zero(1 / x), re(x) > 0))
     Residual = 1 / Pow(x, x) - Pow(1 / x, x)
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-234-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_234_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), Or(~Q.zero(x), re(x) > 0), ~Q.zero(Pow(x, x)), ~Q.zero(x), Or(~Q.zero(1 / x), re(x) > 0))
-    Residual = 1 / Pow(x, x) - Pow(1 / x, x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -4459,19 +4095,6 @@ def sp_acj4_252_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-252-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_252_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x))
-    Residual = -Abs(sinh(x)) - sinh(-Abs(x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-252-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -4604,19 +4227,6 @@ def sp_acj4_253_complex__satrefine_simplify():
     Assum = And(Q.complex(x), ~Q.zero(cosh(x)))
     Residual = -Abs(tanh(x)) - tanh(-Abs(x))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-253-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_253_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(cosh(x)))
-    Residual = -Abs(tanh(x)) - tanh(-Abs(x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -4759,19 +4369,6 @@ def sp_acj4_260_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-260-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_260_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(cos(x)), ~Q.zero(1 / cos(x)))
-    Residual = -log(cos(x)) - log(1 / cos(x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-260-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -4904,19 +4501,6 @@ def sp_acj4_261_complex__satrefine_simplify():
     Assum = And(Q.complex(x), ~Q.zero(cosh(x)), ~Q.zero(1 / cosh(x)))
     Residual = -log(cosh(x)) - log(1 / cosh(x))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-261-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_261_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(cosh(x)), ~Q.zero(1 / cosh(x)))
-    Residual = -log(cosh(x)) - log(1 / cosh(x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -5059,19 +4643,6 @@ def sp_acj4_266_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-266-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_266_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(x), ~Q.zero(1 / x))
-    Residual = -sin(log(x)) - sin(log(1 / x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-266-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -5204,19 +4775,6 @@ def sp_acj4_267_complex__satrefine_simplify():
     Assum = And(Q.complex(x), ~Q.zero(x), ~Q.zero(cos(log(x))), ~Q.zero(1 / x), ~Q.zero(cos(log(1 / x))))
     Residual = -tan(log(x)) - tan(log(1 / x))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-267-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_267_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(x), ~Q.zero(cos(log(x))), ~Q.zero(1 / x), ~Q.zero(cos(log(1 / x))))
-    Residual = -tan(log(x)) - tan(log(1 / x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -5359,19 +4917,6 @@ def sp_acj4_274_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-274-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_274_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(Abs(x)), ~Q.zero(x))
-    Residual = Pow(Abs(x), -2) - Pow(x, -2)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-274-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -5504,19 +5049,6 @@ def sp_acj4_278_complex__satrefine_simplify():
     Assum = And(Q.complex(x), ~Q.zero(Abs(x)), ~Q.zero(x))
     Residual = Pow(Abs(x), -6) - Pow(x, -6)
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-278-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_278_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(Abs(x)), ~Q.zero(x))
-    Residual = Pow(Abs(x), -6) - Pow(x, -6)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -5659,19 +5191,6 @@ def sp_acj4_283_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-283-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_283_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x))
-    Residual = Pow(Abs(x), 2) - (x * x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-283-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -5804,19 +5323,6 @@ def sp_acj4_284_complex__satrefine_simplify():
     Assum = And(Q.complex(x))
     Residual = Pow(Abs(x), 3) - Abs(Pow(x, 3))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-284-complex · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (no verdict)
-@_in(_SETUP2)
-def sp_acj4_284_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x))
-    Residual = Pow(Abs(x), 3) - Abs(Pow(x, 3))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -5959,19 +5465,6 @@ def sp_acj4_288_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-288-complex · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (no verdict)
-@_in(_SETUP2)
-def sp_acj4_288_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x))
-    Residual = Pow(Abs(x), 7) - Abs(Pow(x, 7))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-288-complex · expected true · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (no verdict)
 @_in(_SETUP3)
@@ -6104,19 +5597,6 @@ def sp_acj4_30_complex__satrefine_simplify():
     Assum = And(Q.complex(x))
     Residual = 4 * Abs(x) - Abs(-4 * x)
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-30-complex · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered true (solved)
-@_in(_SETUP2)
-def sp_acj4_30_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x))
-    Residual = 4 * Abs(x) - Abs(-4 * x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -6259,19 +5739,6 @@ def sp_acj4_334_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-334-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_334_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), Or(~Q.zero(exp(x)), re(exp(1)) > 0))
-    Residual = Pow(exp(x), exp(1)) - exp(exp(1) * x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-334-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -6404,19 +5871,6 @@ def sp_acj4_335_complex__satrefine_simplify():
     Assum = And(Q.complex(x), Or(~Q.zero(exp(x)), re(pi) > 0))
     Residual = Pow(exp(x), pi) - exp(pi * x)
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-335-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_335_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), Or(~Q.zero(exp(x)), re(pi) > 0))
-    Residual = Pow(exp(x), pi) - exp(pi * x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -6559,19 +6013,6 @@ def sp_acj4_336_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-336-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_336_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), Or(~Q.zero(exp(x)), re(x) > 0))
-    Residual = Pow(exp(x), x) - exp(x * x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-336-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -6704,19 +6145,6 @@ def sp_acj4_343_complex__satrefine_simplify():
     Assum = And(Q.complex(x))
     Residual = Pow(1 / pi, x) - Pow(pi, -x)
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-343-complex · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered true (solved)
-@_in(_SETUP2)
-def sp_acj4_343_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x))
-    Residual = Pow(1 / pi, x) - Pow(pi, -x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -6859,19 +6287,6 @@ def sp_acj4_344_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-344-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_344_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(x), Or(~Q.zero(1 / x), re(x) > 0), Or(~Q.zero(x), re(-x) > 0))
-    Residual = Pow(1 / x, x) - Pow(x, -x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-344-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -7004,19 +6419,6 @@ def sp_acj4_368_complex__satrefine_simplify():
     Assum = And(Q.complex(x), Q.real(acos(x)), ~Q.zero(acos(x)))
     Residual = real_root(acos(x), -5) - Pow(acos(x), Rational(-1, 5))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-368-complex · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (no verdict)
-@_in(_SETUP2)
-def sp_acj4_368_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), Q.real(acos(x)), ~Q.zero(acos(x)))
-    Residual = real_root(acos(x), -5) - Pow(acos(x), Rational(-1, 5))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -7159,19 +6561,6 @@ def sp_acj4_369_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-369-complex · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (no verdict)
-@_in(_SETUP2)
-def sp_acj4_369_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), Q.real(acos(x)))
-    Residual = real_root(acos(x), 5) - Pow(acos(x), Rational(1, 5))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-369-complex · expected true · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (no verdict)
 @_in(_SETUP3)
@@ -7304,19 +6693,6 @@ def sp_acj4_370_complex__satrefine_simplify():
     Assum = And(Q.complex(x), Q.real(acosh(x)), ~Q.zero(acosh(x)))
     Residual = real_root(acosh(x), -5) - Pow(acosh(x), Rational(-1, 5))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-370-complex · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (no verdict)
-@_in(_SETUP2)
-def sp_acj4_370_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), Q.real(acosh(x)), ~Q.zero(acosh(x)))
-    Residual = real_root(acosh(x), -5) - Pow(acosh(x), Rational(-1, 5))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -7459,19 +6835,6 @@ def sp_acj4_371_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-371-complex · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (no verdict)
-@_in(_SETUP2)
-def sp_acj4_371_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), Q.real(acosh(x)))
-    Residual = real_root(acosh(x), 5) - Pow(acosh(x), Rational(1, 5))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-371-complex · expected true · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (no verdict)
 @_in(_SETUP3)
@@ -7604,19 +6967,6 @@ def sp_acj4_372_complex__satrefine_simplify():
     Assum = And(Q.complex(x), Q.real(cosh(x)), ~Q.zero(cosh(x)))
     Residual = real_root(cosh(x), -5) - Pow(cosh(x), Rational(-1, 5))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-372-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_372_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), Q.real(cosh(x)), ~Q.zero(cosh(x)))
-    Residual = real_root(cosh(x), -5) - Pow(cosh(x), Rational(-1, 5))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -7759,19 +7109,6 @@ def sp_acj4_373_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-373-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_373_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), Q.real(cosh(x)))
-    Residual = real_root(cosh(x), 5) - Pow(cosh(x), Rational(1, 5))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-373-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -7904,19 +7241,6 @@ def sp_acj4_387_complex__satrefine_simplify():
     Assum = And(Q.complex(x), Q.real(exp(x)))
     Residual = real_root(exp(x), 5) - exp(x / 5)
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-387-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_387_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), Q.real(exp(x)))
-    Residual = real_root(exp(x), 5) - exp(x / 5)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -8059,19 +7383,6 @@ def sp_acj4_389_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-389-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_389_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), Q.real(exp(x)))
-    Residual = real_root(exp(x), 7) - exp(x / 7)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-389-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -8204,19 +7515,6 @@ def sp_acj4_396_complex__satrefine_simplify():
     Assum = And(Q.complex(x))
     Residual = sin(Abs(sin(x))) - Abs(sin(sin(x)))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-396-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_396_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x))
-    Residual = sin(Abs(sin(x))) - Abs(sin(sin(x)))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -8359,19 +7657,6 @@ def sp_acj4_40_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-40-complex · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered true (solved)
-@_in(_SETUP2)
-def sp_acj4_40_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x))
-    Residual = Abs(x) * pi - Abs(pi * x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-40-complex · expected true · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered true (solved)
 @_in(_SETUP3)
@@ -8504,19 +7789,6 @@ def sp_acj4_403_complex__satrefine_simplify():
     Assum = And(Q.complex(x), ~Q.zero(x), ~Q.zero(1 / x))
     Residual = sin(-log(x)) - sin(log(1 / x))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-403-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_403_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(x), ~Q.zero(1 / x))
-    Residual = sin(-log(x)) - sin(log(1 / x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -8659,19 +7931,6 @@ def sp_acj4_404_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-404-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_404_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(cosh(x)))
-    Residual = sin(tanh(Abs(x))) - Abs(sin(tanh(x)))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-404-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -8804,19 +8063,6 @@ def sp_acj4_414_complex__satrefine_simplify():
     Assum = And(Q.complex(x), ~Q.zero(cos(Abs(sin(x)))), ~Q.zero(cos(sin(x))))
     Residual = tan(Abs(sin(x))) - Abs(tan(sin(x)))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-414-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_414_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(cos(Abs(sin(x)))), ~Q.zero(cos(sin(x))))
-    Residual = tan(Abs(sin(x))) - Abs(tan(sin(x)))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -8959,19 +8205,6 @@ def sp_acj4_415_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-415-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_415_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(cosh(x)), ~Q.zero(cos(Abs(tanh(x)))), ~Q.zero(cos(tanh(x))))
-    Residual = tan(Abs(tanh(x))) - Abs(tan(tanh(x)))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-415-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -9104,19 +8337,6 @@ def sp_acj4_420_complex__satrefine_simplify():
     Assum = And(Q.complex(x), ~Q.zero(x), ~Q.zero(cos(-log(x))), ~Q.zero(1 / x), ~Q.zero(cos(log(1 / x))))
     Residual = tan(-log(x)) - tan(log(1 / x))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-420-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_420_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(x), ~Q.zero(cos(-log(x))), ~Q.zero(1 / x), ~Q.zero(cos(log(1 / x))))
-    Residual = tan(-log(x)) - tan(log(1 / x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -9259,19 +8479,6 @@ def sp_acj4_421_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-421-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_421_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(cos(tanh(Abs(x)))), ~Q.zero(cosh(x)), ~Q.zero(cos(tanh(x))))
-    Residual = tan(tanh(Abs(x))) - Abs(tan(tanh(x)))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-421-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -9404,19 +8611,6 @@ def sp_acj4_422_complex__satrefine_simplify():
     Assum = And(Q.complex(x), ~Q.zero(x), Ne(1 / x, I, evaluate=False), Ne(1 / x, -I, evaluate=False))
     Residual = tanh(Abs(asinh(x))) - cos(atan(1 / x))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-422-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_422_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(x), Ne(1 / x, I, evaluate=False), Ne(1 / x, -I, evaluate=False))
-    Residual = tanh(Abs(asinh(x))) - cos(atan(1 / x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -9559,19 +8753,6 @@ def sp_acj4_423_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-423-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_423_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(cosh(acosh(Abs(x)))), ~Q.zero(x))
-    Residual = tanh(acosh(Abs(x))) - cos(asin(1 / x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-423-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -9704,19 +8885,6 @@ def sp_acj4_424_complex__satrefine_simplify():
     Assum = And(Q.complex(x), ~Q.zero(x), Ne(1 / x, I, evaluate=False), Ne(1 / x, -I, evaluate=False))
     Residual = tanh(asinh(Abs(x))) - cos(atan(1 / x))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-424-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_424_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(x), Ne(1 / x, I, evaluate=False), Ne(1 / x, -I, evaluate=False))
-    Residual = tanh(asinh(Abs(x))) - cos(atan(1 / x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -9859,19 +9027,6 @@ def sp_acj4_430_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-430-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_430_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(x), Or(~Q.zero(x), re(x) > 0), ~Q.zero(Pow(x, x)))
-    Residual = log(x) * x - log(Pow(x, x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-430-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -10004,19 +9159,6 @@ def sp_acj4_433_complex__satrefine_simplify():
     Assum = And(Q.complex(x), ~Q.zero(x), Ne(-log(x), I, evaluate=False), Ne(-log(x), -I, evaluate=False), ~Q.zero(1 / x), Ne(log(1 / x), I, evaluate=False), Ne(log(1 / x), -I, evaluate=False))
     Residual = atan(-log(x)) - atan(log(1 / x))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-433-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_433_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(x), Ne(-log(x), I, evaluate=False), Ne(-log(x), -I, evaluate=False), ~Q.zero(1 / x), Ne(log(1 / x), I, evaluate=False), Ne(log(1 / x), -I, evaluate=False))
-    Residual = atan(-log(x)) - atan(log(1 / x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -10159,19 +9301,6 @@ def sp_acj4_442_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-442-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_442_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(x), ~Q.zero(log(x)), ~Q.zero(1 / log(x)))
-    Residual = -log(log(x)) - log(1 / log(x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-442-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -10304,19 +9433,6 @@ def sp_acj4_446_complex__satrefine_simplify():
     Assum = And(Q.complex(x), Ne(x, I, evaluate=False), Ne(x, -I, evaluate=False), ~Q.zero(cos(Abs(atan(x)))))
     Residual = tan(Abs(atan(x))) - Abs(x)
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-446-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_446_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), Ne(x, I, evaluate=False), Ne(x, -I, evaluate=False), ~Q.zero(cos(Abs(atan(x)))))
-    Residual = tan(Abs(atan(x))) - Abs(x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -10459,19 +9575,6 @@ def sp_acj4_450_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-450-complex · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered true (solved)
-@_in(_SETUP2)
-def sp_acj4_450_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(x))
-    Residual = x / x - 1
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-450-complex · expected true · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered true (solved)
 @_in(_SETUP3)
@@ -10604,19 +9707,6 @@ def sp_acj4_451_complex__satrefine_simplify():
     Assum = And(Q.complex(x), ~Q.zero(x))
     Residual = 0 / x - 0
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-451-complex · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered true (solved)
-@_in(_SETUP2)
-def sp_acj4_451_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(x))
-    Residual = 0 / x - 0
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -10759,19 +9849,6 @@ def sp_acj4_50_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-50-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_50_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(Pow(6, x)))
-    Residual = log(6) * x - log(Pow(6, x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-50-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -10904,19 +9981,6 @@ def sp_acj4_51_complex__satrefine_simplify():
     Assum = And(Q.complex(x), ~Q.zero(Pow(7, x)))
     Residual = log(7) * x - log(Pow(7, x))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-51-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_51_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(Pow(7, x)))
-    Residual = log(7) * x - log(Pow(7, x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -11059,19 +10123,6 @@ def sp_acj4_55_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-55-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_55_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(x), Or(~Q.zero(x), re(exp(1)) > 0), ~Q.zero(Pow(x, exp(1))))
-    Residual = log(x) * exp(1) - log(Pow(x, exp(1)))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-55-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -11204,19 +10255,6 @@ def sp_acj4_56_complex__satrefine_simplify():
     Assum = And(Q.complex(x), ~Q.zero(x), Or(~Q.zero(x), re(pi) > 0), ~Q.zero(Pow(x, pi)))
     Residual = log(x) * pi - log(Pow(x, pi))
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-56-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_56_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(x), Or(~Q.zero(x), re(pi) > 0), ~Q.zero(Pow(x, pi)))
-    Residual = log(x) * pi - log(Pow(x, pi))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -11359,19 +10397,6 @@ def sp_acj4_6_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-6-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_6_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(cosh(x)), Ne(tanh(x), 1, evaluate=False), Ne(tanh(x), -1, evaluate=False))
-    Residual = atanh(tanh(x)) - x
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-6-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -11504,19 +10529,6 @@ def sp_acj4_7_complex__satrefine_simplify():
     Assum = And(Q.complex(x), ~Q.zero(Abs(x)), ~Q.zero(x))
     Residual = 1 / Abs(x) - Abs(1 / x)
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-7-complex · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered true (solved)
-@_in(_SETUP2)
-def sp_acj4_7_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(Abs(x)), ~Q.zero(x))
-    Residual = 1 / Abs(x) - Abs(1 / x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -11659,19 +10671,6 @@ def sp_acj4_9_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-9-complex · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_9_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(exp(x)))
-    Residual = log(exp(x)) - x
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-9-complex · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -11804,19 +10803,6 @@ def sp_acj4_90_complex__satrefine_simplify():
     Assum = And(Q.complex(x), ~Q.zero(Abs(x)), ~Q.zero(x))
     Residual = 3 / Abs(x) - Abs(-3 / x)
     Result = simplify(satsimp.refine(Residual, Assum, strict=True))
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
-# ---- case sp-acj4-90-complex · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered true (solved)
-@_in(_SETUP2)
-def sp_acj4_90_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(Abs(x)), ~Q.zero(x))
-    Residual = 3 / Abs(x) - Abs(-3 / x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
     Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
     print(Result, Answer, sep='\n')
     return Answer
@@ -11959,19 +10945,6 @@ def sp_acj4_94_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-94-complex · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered true (solved)
-@_in(_SETUP2)
-def sp_acj4_94_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x), ~Q.zero(Abs(x)), ~Q.zero(x))
-    Residual = 7 / Abs(x) - Abs(-7 / x)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-94-complex · expected true · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered true (solved)
 @_in(_SETUP3)
@@ -12109,19 +11082,6 @@ def sp_acj4_99_complex__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-99-complex · expected true · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered true (solved)
-@_in(_SETUP2)
-def sp_acj4_99_complex__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.complex(x))
-    Residual = Abs(x) / 3 - Abs(x / -3)
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-99-complex · expected true · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered true (solved)
 @_in(_SETUP3)
@@ -12226,7 +11186,6 @@ CASES = [
     ('sp-acj4-0-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_0_complex__satassume_ask),
     ('sp-acj4-0-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_0_complex__satrefine_refine),
     ('sp-acj4-0-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_0_complex__satrefine_simplify),
-    ('sp-acj4-0-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_0_complex__satsimp_trigsimp),
     ('sp-acj4-0-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_0_complex__sympy_auto),
     ('sp-acj4-0-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_0_complex__sympy_ask),
     ('sp-acj4-0-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_0_complex__sympy_satask),
@@ -12238,7 +11197,6 @@ CASES = [
     ('sp-acj4-102-complex', 'satassume-ask', 'true', 'true', 'satassume-ask-20261101-091758', sp_acj4_102_complex__satassume_ask),
     ('sp-acj4-102-complex', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261101-091426', sp_acj4_102_complex__satrefine_refine),
     ('sp-acj4-102-complex', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091810', sp_acj4_102_complex__satrefine_simplify),
-    ('sp-acj4-102-complex', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-190021', sp_acj4_102_complex__satsimp_trigsimp),
     ('sp-acj4-102-complex', 'sympy-auto', 'true', 'true', 'sympy-auto-20261101-090919', sp_acj4_102_complex__sympy_auto),
     ('sp-acj4-102-complex', 'sympy-ask', 'true', 'true', 'sympy-ask-20261101-090925', sp_acj4_102_complex__sympy_ask),
     ('sp-acj4-102-complex', 'sympy-satask', 'true', 'true', 'sympy-satask-20261101-094904', sp_acj4_102_complex__sympy_satask),
@@ -12250,7 +11208,6 @@ CASES = [
     ('sp-acj4-108-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_108_complex__satassume_ask),
     ('sp-acj4-108-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_108_complex__satrefine_refine),
     ('sp-acj4-108-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_108_complex__satrefine_simplify),
-    ('sp-acj4-108-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_108_complex__satsimp_trigsimp),
     ('sp-acj4-108-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_108_complex__sympy_auto),
     ('sp-acj4-108-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_108_complex__sympy_ask),
     ('sp-acj4-108-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_108_complex__sympy_satask),
@@ -12262,7 +11219,6 @@ CASES = [
     ('sp-acj4-120-complex', 'satassume-ask', 'true', 'true', 'satassume-ask-20261101-091758', sp_acj4_120_complex__satassume_ask),
     ('sp-acj4-120-complex', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261101-091426', sp_acj4_120_complex__satrefine_refine),
     ('sp-acj4-120-complex', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091810', sp_acj4_120_complex__satrefine_simplify),
-    ('sp-acj4-120-complex', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-190021', sp_acj4_120_complex__satsimp_trigsimp),
     ('sp-acj4-120-complex', 'sympy-auto', 'true', 'true', 'sympy-auto-20261101-090919', sp_acj4_120_complex__sympy_auto),
     ('sp-acj4-120-complex', 'sympy-ask', 'true', 'true', 'sympy-ask-20261101-090925', sp_acj4_120_complex__sympy_ask),
     ('sp-acj4-120-complex', 'sympy-satask', 'true', 'true', 'sympy-satask-20261101-094904', sp_acj4_120_complex__sympy_satask),
@@ -12274,7 +11230,6 @@ CASES = [
     ('sp-acj4-130-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_130_complex__satassume_ask),
     ('sp-acj4-130-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_130_complex__satrefine_refine),
     ('sp-acj4-130-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_130_complex__satrefine_simplify),
-    ('sp-acj4-130-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_130_complex__satsimp_trigsimp),
     ('sp-acj4-130-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_130_complex__sympy_auto),
     ('sp-acj4-130-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_130_complex__sympy_ask),
     ('sp-acj4-130-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_130_complex__sympy_satask),
@@ -12286,7 +11241,6 @@ CASES = [
     ('sp-acj4-131-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_131_complex__satassume_ask),
     ('sp-acj4-131-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_131_complex__satrefine_refine),
     ('sp-acj4-131-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_131_complex__satrefine_simplify),
-    ('sp-acj4-131-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_131_complex__satsimp_trigsimp),
     ('sp-acj4-131-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_131_complex__sympy_auto),
     ('sp-acj4-131-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_131_complex__sympy_ask),
     ('sp-acj4-131-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_131_complex__sympy_satask),
@@ -12298,7 +11252,6 @@ CASES = [
     ('sp-acj4-132-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_132_complex__satassume_ask),
     ('sp-acj4-132-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_132_complex__satrefine_refine),
     ('sp-acj4-132-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_132_complex__satrefine_simplify),
-    ('sp-acj4-132-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_132_complex__satsimp_trigsimp),
     ('sp-acj4-132-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_132_complex__sympy_auto),
     ('sp-acj4-132-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_132_complex__sympy_ask),
     ('sp-acj4-132-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_132_complex__sympy_satask),
@@ -12310,7 +11263,6 @@ CASES = [
     ('sp-acj4-133-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_133_complex__satassume_ask),
     ('sp-acj4-133-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_133_complex__satrefine_refine),
     ('sp-acj4-133-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_133_complex__satrefine_simplify),
-    ('sp-acj4-133-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_133_complex__satsimp_trigsimp),
     ('sp-acj4-133-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_133_complex__sympy_auto),
     ('sp-acj4-133-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_133_complex__sympy_ask),
     ('sp-acj4-133-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_133_complex__sympy_satask),
@@ -12322,7 +11274,6 @@ CASES = [
     ('sp-acj4-137-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_137_complex__satassume_ask),
     ('sp-acj4-137-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_137_complex__satrefine_refine),
     ('sp-acj4-137-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_137_complex__satrefine_simplify),
-    ('sp-acj4-137-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_137_complex__satsimp_trigsimp),
     ('sp-acj4-137-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_137_complex__sympy_auto),
     ('sp-acj4-137-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_137_complex__sympy_ask),
     ('sp-acj4-137-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_137_complex__sympy_satask),
@@ -12334,7 +11285,6 @@ CASES = [
     ('sp-acj4-147-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_147_complex__satassume_ask),
     ('sp-acj4-147-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_147_complex__satrefine_refine),
     ('sp-acj4-147-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_147_complex__satrefine_simplify),
-    ('sp-acj4-147-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_147_complex__satsimp_trigsimp),
     ('sp-acj4-147-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_147_complex__sympy_auto),
     ('sp-acj4-147-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_147_complex__sympy_ask),
     ('sp-acj4-147-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_147_complex__sympy_satask),
@@ -12346,7 +11296,6 @@ CASES = [
     ('sp-acj4-151-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_151_complex__satassume_ask),
     ('sp-acj4-151-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_151_complex__satrefine_refine),
     ('sp-acj4-151-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_151_complex__satrefine_simplify),
-    ('sp-acj4-151-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_151_complex__satsimp_trigsimp),
     ('sp-acj4-151-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_151_complex__sympy_auto),
     ('sp-acj4-151-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_151_complex__sympy_ask),
     ('sp-acj4-151-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_151_complex__sympy_satask),
@@ -12358,7 +11307,6 @@ CASES = [
     ('sp-acj4-153-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_153_complex__satassume_ask),
     ('sp-acj4-153-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_153_complex__satrefine_refine),
     ('sp-acj4-153-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_153_complex__satrefine_simplify),
-    ('sp-acj4-153-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_153_complex__satsimp_trigsimp),
     ('sp-acj4-153-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_153_complex__sympy_auto),
     ('sp-acj4-153-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_153_complex__sympy_ask),
     ('sp-acj4-153-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_153_complex__sympy_satask),
@@ -12370,7 +11318,6 @@ CASES = [
     ('sp-acj4-154-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_154_complex__satassume_ask),
     ('sp-acj4-154-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_154_complex__satrefine_refine),
     ('sp-acj4-154-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_154_complex__satrefine_simplify),
-    ('sp-acj4-154-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_154_complex__satsimp_trigsimp),
     ('sp-acj4-154-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_154_complex__sympy_auto),
     ('sp-acj4-154-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_154_complex__sympy_ask),
     ('sp-acj4-154-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_154_complex__sympy_satask),
@@ -12382,7 +11329,6 @@ CASES = [
     ('sp-acj4-165-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_165_complex__satassume_ask),
     ('sp-acj4-165-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_165_complex__satrefine_refine),
     ('sp-acj4-165-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_165_complex__satrefine_simplify),
-    ('sp-acj4-165-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_165_complex__satsimp_trigsimp),
     ('sp-acj4-165-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_165_complex__sympy_auto),
     ('sp-acj4-165-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_165_complex__sympy_ask),
     ('sp-acj4-165-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_165_complex__sympy_satask),
@@ -12394,7 +11340,6 @@ CASES = [
     ('sp-acj4-173-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_173_complex__satassume_ask),
     ('sp-acj4-173-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_173_complex__satrefine_refine),
     ('sp-acj4-173-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_173_complex__satrefine_simplify),
-    ('sp-acj4-173-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_173_complex__satsimp_trigsimp),
     ('sp-acj4-173-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_173_complex__sympy_auto),
     ('sp-acj4-173-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_173_complex__sympy_ask),
     ('sp-acj4-173-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_173_complex__sympy_satask),
@@ -12406,7 +11351,6 @@ CASES = [
     ('sp-acj4-176-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_176_complex__satassume_ask),
     ('sp-acj4-176-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_176_complex__satrefine_refine),
     ('sp-acj4-176-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_176_complex__satrefine_simplify),
-    ('sp-acj4-176-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_176_complex__satsimp_trigsimp),
     ('sp-acj4-176-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_176_complex__sympy_auto),
     ('sp-acj4-176-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_176_complex__sympy_ask),
     ('sp-acj4-176-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_176_complex__sympy_satask),
@@ -12418,7 +11362,6 @@ CASES = [
     ('sp-acj4-177-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_177_complex__satassume_ask),
     ('sp-acj4-177-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_177_complex__satrefine_refine),
     ('sp-acj4-177-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_177_complex__satrefine_simplify),
-    ('sp-acj4-177-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_177_complex__satsimp_trigsimp),
     ('sp-acj4-177-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_177_complex__sympy_auto),
     ('sp-acj4-177-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_177_complex__sympy_ask),
     ('sp-acj4-177-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_177_complex__sympy_satask),
@@ -12430,7 +11373,6 @@ CASES = [
     ('sp-acj4-180-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_180_complex__satassume_ask),
     ('sp-acj4-180-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_180_complex__satrefine_refine),
     ('sp-acj4-180-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_180_complex__satrefine_simplify),
-    ('sp-acj4-180-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_180_complex__satsimp_trigsimp),
     ('sp-acj4-180-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_180_complex__sympy_auto),
     ('sp-acj4-180-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_180_complex__sympy_ask),
     ('sp-acj4-180-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_180_complex__sympy_satask),
@@ -12442,7 +11384,6 @@ CASES = [
     ('sp-acj4-183-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_183_complex__satassume_ask),
     ('sp-acj4-183-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_183_complex__satrefine_refine),
     ('sp-acj4-183-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_183_complex__satrefine_simplify),
-    ('sp-acj4-183-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_183_complex__satsimp_trigsimp),
     ('sp-acj4-183-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_183_complex__sympy_auto),
     ('sp-acj4-183-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_183_complex__sympy_ask),
     ('sp-acj4-183-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_183_complex__sympy_satask),
@@ -12454,7 +11395,6 @@ CASES = [
     ('sp-acj4-189-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_189_complex__satassume_ask),
     ('sp-acj4-189-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_189_complex__satrefine_refine),
     ('sp-acj4-189-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_189_complex__satrefine_simplify),
-    ('sp-acj4-189-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_189_complex__satsimp_trigsimp),
     ('sp-acj4-189-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_189_complex__sympy_auto),
     ('sp-acj4-189-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_189_complex__sympy_ask),
     ('sp-acj4-189-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_189_complex__sympy_satask),
@@ -12466,7 +11406,6 @@ CASES = [
     ('sp-acj4-190-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_190_complex__satassume_ask),
     ('sp-acj4-190-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_190_complex__satrefine_refine),
     ('sp-acj4-190-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_190_complex__satrefine_simplify),
-    ('sp-acj4-190-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_190_complex__satsimp_trigsimp),
     ('sp-acj4-190-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_190_complex__sympy_auto),
     ('sp-acj4-190-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_190_complex__sympy_ask),
     ('sp-acj4-190-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_190_complex__sympy_satask),
@@ -12478,7 +11417,6 @@ CASES = [
     ('sp-acj4-191-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_191_complex__satassume_ask),
     ('sp-acj4-191-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_191_complex__satrefine_refine),
     ('sp-acj4-191-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_191_complex__satrefine_simplify),
-    ('sp-acj4-191-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_191_complex__satsimp_trigsimp),
     ('sp-acj4-191-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_191_complex__sympy_auto),
     ('sp-acj4-191-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_191_complex__sympy_ask),
     ('sp-acj4-191-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_191_complex__sympy_satask),
@@ -12490,7 +11428,6 @@ CASES = [
     ('sp-acj4-20-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_20_complex__satassume_ask),
     ('sp-acj4-20-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_20_complex__satrefine_refine),
     ('sp-acj4-20-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_20_complex__satrefine_simplify),
-    ('sp-acj4-20-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_20_complex__satsimp_trigsimp),
     ('sp-acj4-20-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_20_complex__sympy_auto),
     ('sp-acj4-20-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_20_complex__sympy_ask),
     ('sp-acj4-20-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_20_complex__sympy_satask),
@@ -12502,7 +11439,6 @@ CASES = [
     ('sp-acj4-203-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_203_complex__satassume_ask),
     ('sp-acj4-203-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_203_complex__satrefine_refine),
     ('sp-acj4-203-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_203_complex__satrefine_simplify),
-    ('sp-acj4-203-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_203_complex__satsimp_trigsimp),
     ('sp-acj4-203-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_203_complex__sympy_auto),
     ('sp-acj4-203-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_203_complex__sympy_ask),
     ('sp-acj4-203-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_203_complex__sympy_satask),
@@ -12514,7 +11450,6 @@ CASES = [
     ('sp-acj4-213-complex', 'satassume-ask', 'true', 'true', 'satassume-ask-20261101-091758', sp_acj4_213_complex__satassume_ask),
     ('sp-acj4-213-complex', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261101-091426', sp_acj4_213_complex__satrefine_refine),
     ('sp-acj4-213-complex', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091810', sp_acj4_213_complex__satrefine_simplify),
-    ('sp-acj4-213-complex', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-190021', sp_acj4_213_complex__satsimp_trigsimp),
     ('sp-acj4-213-complex', 'sympy-auto', 'true', 'true', 'sympy-auto-20261101-090919', sp_acj4_213_complex__sympy_auto),
     ('sp-acj4-213-complex', 'sympy-ask', 'true', 'true', 'sympy-ask-20261101-090925', sp_acj4_213_complex__sympy_ask),
     ('sp-acj4-213-complex', 'sympy-satask', 'true', 'true', 'sympy-satask-20261101-094904', sp_acj4_213_complex__sympy_satask),
@@ -12526,7 +11461,6 @@ CASES = [
     ('sp-acj4-216-complex', 'satassume-ask', 'true', 'true', 'satassume-ask-20261101-091758', sp_acj4_216_complex__satassume_ask),
     ('sp-acj4-216-complex', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261101-091426', sp_acj4_216_complex__satrefine_refine),
     ('sp-acj4-216-complex', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091810', sp_acj4_216_complex__satrefine_simplify),
-    ('sp-acj4-216-complex', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-190021', sp_acj4_216_complex__satsimp_trigsimp),
     ('sp-acj4-216-complex', 'sympy-auto', 'true', 'true', 'sympy-auto-20261101-090919', sp_acj4_216_complex__sympy_auto),
     ('sp-acj4-216-complex', 'sympy-ask', 'true', 'true', 'sympy-ask-20261101-090925', sp_acj4_216_complex__sympy_ask),
     ('sp-acj4-216-complex', 'sympy-satask', 'true', 'true', 'sympy-satask-20261101-094904', sp_acj4_216_complex__sympy_satask),
@@ -12538,7 +11472,6 @@ CASES = [
     ('sp-acj4-22-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_22_complex__satassume_ask),
     ('sp-acj4-22-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_22_complex__satrefine_refine),
     ('sp-acj4-22-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_22_complex__satrefine_simplify),
-    ('sp-acj4-22-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_22_complex__satsimp_trigsimp),
     ('sp-acj4-22-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_22_complex__sympy_auto),
     ('sp-acj4-22-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_22_complex__sympy_ask),
     ('sp-acj4-22-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_22_complex__sympy_satask),
@@ -12550,7 +11483,6 @@ CASES = [
     ('sp-acj4-234-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_234_complex__satassume_ask),
     ('sp-acj4-234-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_234_complex__satrefine_refine),
     ('sp-acj4-234-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_234_complex__satrefine_simplify),
-    ('sp-acj4-234-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_234_complex__satsimp_trigsimp),
     ('sp-acj4-234-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_234_complex__sympy_auto),
     ('sp-acj4-234-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_234_complex__sympy_ask),
     ('sp-acj4-234-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_234_complex__sympy_satask),
@@ -12562,7 +11494,6 @@ CASES = [
     ('sp-acj4-252-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_252_complex__satassume_ask),
     ('sp-acj4-252-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_252_complex__satrefine_refine),
     ('sp-acj4-252-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_252_complex__satrefine_simplify),
-    ('sp-acj4-252-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_252_complex__satsimp_trigsimp),
     ('sp-acj4-252-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_252_complex__sympy_auto),
     ('sp-acj4-252-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_252_complex__sympy_ask),
     ('sp-acj4-252-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_252_complex__sympy_satask),
@@ -12574,7 +11505,6 @@ CASES = [
     ('sp-acj4-253-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_253_complex__satassume_ask),
     ('sp-acj4-253-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_253_complex__satrefine_refine),
     ('sp-acj4-253-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_253_complex__satrefine_simplify),
-    ('sp-acj4-253-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_253_complex__satsimp_trigsimp),
     ('sp-acj4-253-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_253_complex__sympy_auto),
     ('sp-acj4-253-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_253_complex__sympy_ask),
     ('sp-acj4-253-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_253_complex__sympy_satask),
@@ -12586,7 +11516,6 @@ CASES = [
     ('sp-acj4-260-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_260_complex__satassume_ask),
     ('sp-acj4-260-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_260_complex__satrefine_refine),
     ('sp-acj4-260-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_260_complex__satrefine_simplify),
-    ('sp-acj4-260-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_260_complex__satsimp_trigsimp),
     ('sp-acj4-260-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_260_complex__sympy_auto),
     ('sp-acj4-260-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_260_complex__sympy_ask),
     ('sp-acj4-260-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_260_complex__sympy_satask),
@@ -12598,7 +11527,6 @@ CASES = [
     ('sp-acj4-261-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_261_complex__satassume_ask),
     ('sp-acj4-261-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_261_complex__satrefine_refine),
     ('sp-acj4-261-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_261_complex__satrefine_simplify),
-    ('sp-acj4-261-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_261_complex__satsimp_trigsimp),
     ('sp-acj4-261-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_261_complex__sympy_auto),
     ('sp-acj4-261-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_261_complex__sympy_ask),
     ('sp-acj4-261-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_261_complex__sympy_satask),
@@ -12610,7 +11538,6 @@ CASES = [
     ('sp-acj4-266-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_266_complex__satassume_ask),
     ('sp-acj4-266-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_266_complex__satrefine_refine),
     ('sp-acj4-266-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_266_complex__satrefine_simplify),
-    ('sp-acj4-266-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_266_complex__satsimp_trigsimp),
     ('sp-acj4-266-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_266_complex__sympy_auto),
     ('sp-acj4-266-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_266_complex__sympy_ask),
     ('sp-acj4-266-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_266_complex__sympy_satask),
@@ -12622,7 +11549,6 @@ CASES = [
     ('sp-acj4-267-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_267_complex__satassume_ask),
     ('sp-acj4-267-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_267_complex__satrefine_refine),
     ('sp-acj4-267-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_267_complex__satrefine_simplify),
-    ('sp-acj4-267-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_267_complex__satsimp_trigsimp),
     ('sp-acj4-267-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_267_complex__sympy_auto),
     ('sp-acj4-267-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_267_complex__sympy_ask),
     ('sp-acj4-267-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_267_complex__sympy_satask),
@@ -12634,7 +11560,6 @@ CASES = [
     ('sp-acj4-274-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_274_complex__satassume_ask),
     ('sp-acj4-274-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_274_complex__satrefine_refine),
     ('sp-acj4-274-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_274_complex__satrefine_simplify),
-    ('sp-acj4-274-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_274_complex__satsimp_trigsimp),
     ('sp-acj4-274-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_274_complex__sympy_auto),
     ('sp-acj4-274-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_274_complex__sympy_ask),
     ('sp-acj4-274-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_274_complex__sympy_satask),
@@ -12646,7 +11571,6 @@ CASES = [
     ('sp-acj4-278-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_278_complex__satassume_ask),
     ('sp-acj4-278-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_278_complex__satrefine_refine),
     ('sp-acj4-278-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_278_complex__satrefine_simplify),
-    ('sp-acj4-278-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_278_complex__satsimp_trigsimp),
     ('sp-acj4-278-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_278_complex__sympy_auto),
     ('sp-acj4-278-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_278_complex__sympy_ask),
     ('sp-acj4-278-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_278_complex__sympy_satask),
@@ -12658,7 +11582,6 @@ CASES = [
     ('sp-acj4-283-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_283_complex__satassume_ask),
     ('sp-acj4-283-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_283_complex__satrefine_refine),
     ('sp-acj4-283-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_283_complex__satrefine_simplify),
-    ('sp-acj4-283-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_283_complex__satsimp_trigsimp),
     ('sp-acj4-283-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_283_complex__sympy_auto),
     ('sp-acj4-283-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_283_complex__sympy_ask),
     ('sp-acj4-283-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_283_complex__sympy_satask),
@@ -12670,7 +11593,6 @@ CASES = [
     ('sp-acj4-284-complex', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091758', sp_acj4_284_complex__satassume_ask),
     ('sp-acj4-284-complex', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261101-091426', sp_acj4_284_complex__satrefine_refine),
     ('sp-acj4-284-complex', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091810', sp_acj4_284_complex__satrefine_simplify),
-    ('sp-acj4-284-complex', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_284_complex__satsimp_trigsimp),
     ('sp-acj4-284-complex', 'sympy-auto', 'true', 'null', 'sympy-auto-20261101-090919', sp_acj4_284_complex__sympy_auto),
     ('sp-acj4-284-complex', 'sympy-ask', 'true', 'null', 'sympy-ask-20261101-090925', sp_acj4_284_complex__sympy_ask),
     ('sp-acj4-284-complex', 'sympy-satask', 'true', 'null', 'sympy-satask-20261101-094904', sp_acj4_284_complex__sympy_satask),
@@ -12682,7 +11604,6 @@ CASES = [
     ('sp-acj4-288-complex', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091758', sp_acj4_288_complex__satassume_ask),
     ('sp-acj4-288-complex', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261101-091426', sp_acj4_288_complex__satrefine_refine),
     ('sp-acj4-288-complex', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091810', sp_acj4_288_complex__satrefine_simplify),
-    ('sp-acj4-288-complex', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_288_complex__satsimp_trigsimp),
     ('sp-acj4-288-complex', 'sympy-auto', 'true', 'null', 'sympy-auto-20261101-090919', sp_acj4_288_complex__sympy_auto),
     ('sp-acj4-288-complex', 'sympy-ask', 'true', 'null', 'sympy-ask-20261101-090925', sp_acj4_288_complex__sympy_ask),
     ('sp-acj4-288-complex', 'sympy-satask', 'true', 'null', 'sympy-satask-20261101-094904', sp_acj4_288_complex__sympy_satask),
@@ -12694,7 +11615,6 @@ CASES = [
     ('sp-acj4-30-complex', 'satassume-ask', 'true', 'true', 'satassume-ask-20261101-091758', sp_acj4_30_complex__satassume_ask),
     ('sp-acj4-30-complex', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261101-091426', sp_acj4_30_complex__satrefine_refine),
     ('sp-acj4-30-complex', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091810', sp_acj4_30_complex__satrefine_simplify),
-    ('sp-acj4-30-complex', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-190021', sp_acj4_30_complex__satsimp_trigsimp),
     ('sp-acj4-30-complex', 'sympy-auto', 'true', 'true', 'sympy-auto-20261101-090919', sp_acj4_30_complex__sympy_auto),
     ('sp-acj4-30-complex', 'sympy-ask', 'true', 'true', 'sympy-ask-20261101-090925', sp_acj4_30_complex__sympy_ask),
     ('sp-acj4-30-complex', 'sympy-satask', 'true', 'true', 'sympy-satask-20261101-094904', sp_acj4_30_complex__sympy_satask),
@@ -12706,7 +11626,6 @@ CASES = [
     ('sp-acj4-334-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_334_complex__satassume_ask),
     ('sp-acj4-334-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_334_complex__satrefine_refine),
     ('sp-acj4-334-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_334_complex__satrefine_simplify),
-    ('sp-acj4-334-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_334_complex__satsimp_trigsimp),
     ('sp-acj4-334-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_334_complex__sympy_auto),
     ('sp-acj4-334-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_334_complex__sympy_ask),
     ('sp-acj4-334-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_334_complex__sympy_satask),
@@ -12718,7 +11637,6 @@ CASES = [
     ('sp-acj4-335-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_335_complex__satassume_ask),
     ('sp-acj4-335-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_335_complex__satrefine_refine),
     ('sp-acj4-335-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_335_complex__satrefine_simplify),
-    ('sp-acj4-335-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_335_complex__satsimp_trigsimp),
     ('sp-acj4-335-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_335_complex__sympy_auto),
     ('sp-acj4-335-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_335_complex__sympy_ask),
     ('sp-acj4-335-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_335_complex__sympy_satask),
@@ -12730,7 +11648,6 @@ CASES = [
     ('sp-acj4-336-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_336_complex__satassume_ask),
     ('sp-acj4-336-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_336_complex__satrefine_refine),
     ('sp-acj4-336-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_336_complex__satrefine_simplify),
-    ('sp-acj4-336-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_336_complex__satsimp_trigsimp),
     ('sp-acj4-336-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_336_complex__sympy_auto),
     ('sp-acj4-336-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_336_complex__sympy_ask),
     ('sp-acj4-336-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_336_complex__sympy_satask),
@@ -12742,7 +11659,6 @@ CASES = [
     ('sp-acj4-343-complex', 'satassume-ask', 'true', 'true', 'satassume-ask-20261101-091758', sp_acj4_343_complex__satassume_ask),
     ('sp-acj4-343-complex', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261101-091426', sp_acj4_343_complex__satrefine_refine),
     ('sp-acj4-343-complex', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091810', sp_acj4_343_complex__satrefine_simplify),
-    ('sp-acj4-343-complex', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-190021', sp_acj4_343_complex__satsimp_trigsimp),
     ('sp-acj4-343-complex', 'sympy-auto', 'true', 'true', 'sympy-auto-20261101-090919', sp_acj4_343_complex__sympy_auto),
     ('sp-acj4-343-complex', 'sympy-ask', 'true', 'true', 'sympy-ask-20261101-090925', sp_acj4_343_complex__sympy_ask),
     ('sp-acj4-343-complex', 'sympy-satask', 'true', 'true', 'sympy-satask-20261101-094904', sp_acj4_343_complex__sympy_satask),
@@ -12754,7 +11670,6 @@ CASES = [
     ('sp-acj4-344-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_344_complex__satassume_ask),
     ('sp-acj4-344-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_344_complex__satrefine_refine),
     ('sp-acj4-344-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_344_complex__satrefine_simplify),
-    ('sp-acj4-344-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_344_complex__satsimp_trigsimp),
     ('sp-acj4-344-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_344_complex__sympy_auto),
     ('sp-acj4-344-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_344_complex__sympy_ask),
     ('sp-acj4-344-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_344_complex__sympy_satask),
@@ -12766,7 +11681,6 @@ CASES = [
     ('sp-acj4-368-complex', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091758', sp_acj4_368_complex__satassume_ask),
     ('sp-acj4-368-complex', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261101-091426', sp_acj4_368_complex__satrefine_refine),
     ('sp-acj4-368-complex', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091810', sp_acj4_368_complex__satrefine_simplify),
-    ('sp-acj4-368-complex', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_368_complex__satsimp_trigsimp),
     ('sp-acj4-368-complex', 'sympy-auto', 'true', 'null', 'sympy-auto-20261101-090919', sp_acj4_368_complex__sympy_auto),
     ('sp-acj4-368-complex', 'sympy-ask', 'true', 'null', 'sympy-ask-20261101-090925', sp_acj4_368_complex__sympy_ask),
     ('sp-acj4-368-complex', 'sympy-satask', 'true', 'null', 'sympy-satask-20261101-094904', sp_acj4_368_complex__sympy_satask),
@@ -12778,7 +11692,6 @@ CASES = [
     ('sp-acj4-369-complex', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091758', sp_acj4_369_complex__satassume_ask),
     ('sp-acj4-369-complex', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261101-091426', sp_acj4_369_complex__satrefine_refine),
     ('sp-acj4-369-complex', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_369_complex__satrefine_simplify),
-    ('sp-acj4-369-complex', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_369_complex__satsimp_trigsimp),
     ('sp-acj4-369-complex', 'sympy-auto', 'true', 'null', 'sympy-auto-20261101-090919', sp_acj4_369_complex__sympy_auto),
     ('sp-acj4-369-complex', 'sympy-ask', 'true', 'null', 'sympy-ask-20261101-090925', sp_acj4_369_complex__sympy_ask),
     ('sp-acj4-369-complex', 'sympy-satask', 'true', 'null', 'sympy-satask-20261101-094904', sp_acj4_369_complex__sympy_satask),
@@ -12790,7 +11703,6 @@ CASES = [
     ('sp-acj4-370-complex', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091758', sp_acj4_370_complex__satassume_ask),
     ('sp-acj4-370-complex', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261101-091426', sp_acj4_370_complex__satrefine_refine),
     ('sp-acj4-370-complex', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_370_complex__satrefine_simplify),
-    ('sp-acj4-370-complex', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_370_complex__satsimp_trigsimp),
     ('sp-acj4-370-complex', 'sympy-auto', 'true', 'null', 'sympy-auto-20261101-090919', sp_acj4_370_complex__sympy_auto),
     ('sp-acj4-370-complex', 'sympy-ask', 'true', 'null', 'sympy-ask-20261101-090925', sp_acj4_370_complex__sympy_ask),
     ('sp-acj4-370-complex', 'sympy-satask', 'true', 'null', 'sympy-satask-20261101-094904', sp_acj4_370_complex__sympy_satask),
@@ -12802,7 +11714,6 @@ CASES = [
     ('sp-acj4-371-complex', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091758', sp_acj4_371_complex__satassume_ask),
     ('sp-acj4-371-complex', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261101-091426', sp_acj4_371_complex__satrefine_refine),
     ('sp-acj4-371-complex', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_371_complex__satrefine_simplify),
-    ('sp-acj4-371-complex', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_371_complex__satsimp_trigsimp),
     ('sp-acj4-371-complex', 'sympy-auto', 'true', 'null', 'sympy-auto-20261101-090919', sp_acj4_371_complex__sympy_auto),
     ('sp-acj4-371-complex', 'sympy-ask', 'true', 'null', 'sympy-ask-20261101-090925', sp_acj4_371_complex__sympy_ask),
     ('sp-acj4-371-complex', 'sympy-satask', 'true', 'null', 'sympy-satask-20261101-094904', sp_acj4_371_complex__sympy_satask),
@@ -12814,7 +11725,6 @@ CASES = [
     ('sp-acj4-372-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_372_complex__satassume_ask),
     ('sp-acj4-372-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_372_complex__satrefine_refine),
     ('sp-acj4-372-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_372_complex__satrefine_simplify),
-    ('sp-acj4-372-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_372_complex__satsimp_trigsimp),
     ('sp-acj4-372-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_372_complex__sympy_auto),
     ('sp-acj4-372-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_372_complex__sympy_ask),
     ('sp-acj4-372-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_372_complex__sympy_satask),
@@ -12826,7 +11736,6 @@ CASES = [
     ('sp-acj4-373-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_373_complex__satassume_ask),
     ('sp-acj4-373-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_373_complex__satrefine_refine),
     ('sp-acj4-373-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_373_complex__satrefine_simplify),
-    ('sp-acj4-373-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_373_complex__satsimp_trigsimp),
     ('sp-acj4-373-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_373_complex__sympy_auto),
     ('sp-acj4-373-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_373_complex__sympy_ask),
     ('sp-acj4-373-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_373_complex__sympy_satask),
@@ -12838,7 +11747,6 @@ CASES = [
     ('sp-acj4-387-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_387_complex__satassume_ask),
     ('sp-acj4-387-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_387_complex__satrefine_refine),
     ('sp-acj4-387-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_387_complex__satrefine_simplify),
-    ('sp-acj4-387-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_387_complex__satsimp_trigsimp),
     ('sp-acj4-387-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_387_complex__sympy_auto),
     ('sp-acj4-387-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_387_complex__sympy_ask),
     ('sp-acj4-387-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_387_complex__sympy_satask),
@@ -12850,7 +11758,6 @@ CASES = [
     ('sp-acj4-389-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_389_complex__satassume_ask),
     ('sp-acj4-389-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_389_complex__satrefine_refine),
     ('sp-acj4-389-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_389_complex__satrefine_simplify),
-    ('sp-acj4-389-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_389_complex__satsimp_trigsimp),
     ('sp-acj4-389-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_389_complex__sympy_auto),
     ('sp-acj4-389-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_389_complex__sympy_ask),
     ('sp-acj4-389-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_389_complex__sympy_satask),
@@ -12862,7 +11769,6 @@ CASES = [
     ('sp-acj4-396-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_396_complex__satassume_ask),
     ('sp-acj4-396-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_396_complex__satrefine_refine),
     ('sp-acj4-396-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_396_complex__satrefine_simplify),
-    ('sp-acj4-396-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_396_complex__satsimp_trigsimp),
     ('sp-acj4-396-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_396_complex__sympy_auto),
     ('sp-acj4-396-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_396_complex__sympy_ask),
     ('sp-acj4-396-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_396_complex__sympy_satask),
@@ -12874,7 +11780,6 @@ CASES = [
     ('sp-acj4-40-complex', 'satassume-ask', 'true', 'true', 'satassume-ask-20261101-091758', sp_acj4_40_complex__satassume_ask),
     ('sp-acj4-40-complex', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261101-091426', sp_acj4_40_complex__satrefine_refine),
     ('sp-acj4-40-complex', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091810', sp_acj4_40_complex__satrefine_simplify),
-    ('sp-acj4-40-complex', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-190021', sp_acj4_40_complex__satsimp_trigsimp),
     ('sp-acj4-40-complex', 'sympy-auto', 'true', 'true', 'sympy-auto-20261101-090919', sp_acj4_40_complex__sympy_auto),
     ('sp-acj4-40-complex', 'sympy-ask', 'true', 'true', 'sympy-ask-20261101-090925', sp_acj4_40_complex__sympy_ask),
     ('sp-acj4-40-complex', 'sympy-satask', 'true', 'true', 'sympy-satask-20261101-094904', sp_acj4_40_complex__sympy_satask),
@@ -12886,7 +11791,6 @@ CASES = [
     ('sp-acj4-403-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_403_complex__satassume_ask),
     ('sp-acj4-403-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_403_complex__satrefine_refine),
     ('sp-acj4-403-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_403_complex__satrefine_simplify),
-    ('sp-acj4-403-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_403_complex__satsimp_trigsimp),
     ('sp-acj4-403-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_403_complex__sympy_auto),
     ('sp-acj4-403-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_403_complex__sympy_ask),
     ('sp-acj4-403-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_403_complex__sympy_satask),
@@ -12898,7 +11802,6 @@ CASES = [
     ('sp-acj4-404-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_404_complex__satassume_ask),
     ('sp-acj4-404-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_404_complex__satrefine_refine),
     ('sp-acj4-404-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_404_complex__satrefine_simplify),
-    ('sp-acj4-404-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_404_complex__satsimp_trigsimp),
     ('sp-acj4-404-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_404_complex__sympy_auto),
     ('sp-acj4-404-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_404_complex__sympy_ask),
     ('sp-acj4-404-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_404_complex__sympy_satask),
@@ -12910,7 +11813,6 @@ CASES = [
     ('sp-acj4-414-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_414_complex__satassume_ask),
     ('sp-acj4-414-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_414_complex__satrefine_refine),
     ('sp-acj4-414-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_414_complex__satrefine_simplify),
-    ('sp-acj4-414-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_414_complex__satsimp_trigsimp),
     ('sp-acj4-414-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_414_complex__sympy_auto),
     ('sp-acj4-414-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_414_complex__sympy_ask),
     ('sp-acj4-414-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_414_complex__sympy_satask),
@@ -12922,7 +11824,6 @@ CASES = [
     ('sp-acj4-415-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_415_complex__satassume_ask),
     ('sp-acj4-415-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_415_complex__satrefine_refine),
     ('sp-acj4-415-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_415_complex__satrefine_simplify),
-    ('sp-acj4-415-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_415_complex__satsimp_trigsimp),
     ('sp-acj4-415-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_415_complex__sympy_auto),
     ('sp-acj4-415-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_415_complex__sympy_ask),
     ('sp-acj4-415-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_415_complex__sympy_satask),
@@ -12934,7 +11835,6 @@ CASES = [
     ('sp-acj4-420-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_420_complex__satassume_ask),
     ('sp-acj4-420-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_420_complex__satrefine_refine),
     ('sp-acj4-420-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_420_complex__satrefine_simplify),
-    ('sp-acj4-420-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_420_complex__satsimp_trigsimp),
     ('sp-acj4-420-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_420_complex__sympy_auto),
     ('sp-acj4-420-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_420_complex__sympy_ask),
     ('sp-acj4-420-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_420_complex__sympy_satask),
@@ -12946,7 +11846,6 @@ CASES = [
     ('sp-acj4-421-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_421_complex__satassume_ask),
     ('sp-acj4-421-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_421_complex__satrefine_refine),
     ('sp-acj4-421-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_421_complex__satrefine_simplify),
-    ('sp-acj4-421-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_421_complex__satsimp_trigsimp),
     ('sp-acj4-421-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_421_complex__sympy_auto),
     ('sp-acj4-421-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_421_complex__sympy_ask),
     ('sp-acj4-421-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_421_complex__sympy_satask),
@@ -12958,7 +11857,6 @@ CASES = [
     ('sp-acj4-422-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_422_complex__satassume_ask),
     ('sp-acj4-422-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_422_complex__satrefine_refine),
     ('sp-acj4-422-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_422_complex__satrefine_simplify),
-    ('sp-acj4-422-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_422_complex__satsimp_trigsimp),
     ('sp-acj4-422-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_422_complex__sympy_auto),
     ('sp-acj4-422-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_422_complex__sympy_ask),
     ('sp-acj4-422-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_422_complex__sympy_satask),
@@ -12970,7 +11868,6 @@ CASES = [
     ('sp-acj4-423-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_423_complex__satassume_ask),
     ('sp-acj4-423-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_423_complex__satrefine_refine),
     ('sp-acj4-423-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_423_complex__satrefine_simplify),
-    ('sp-acj4-423-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_423_complex__satsimp_trigsimp),
     ('sp-acj4-423-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_423_complex__sympy_auto),
     ('sp-acj4-423-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_423_complex__sympy_ask),
     ('sp-acj4-423-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_423_complex__sympy_satask),
@@ -12982,7 +11879,6 @@ CASES = [
     ('sp-acj4-424-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_424_complex__satassume_ask),
     ('sp-acj4-424-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_424_complex__satrefine_refine),
     ('sp-acj4-424-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_424_complex__satrefine_simplify),
-    ('sp-acj4-424-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_424_complex__satsimp_trigsimp),
     ('sp-acj4-424-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_424_complex__sympy_auto),
     ('sp-acj4-424-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_424_complex__sympy_ask),
     ('sp-acj4-424-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_424_complex__sympy_satask),
@@ -12994,7 +11890,6 @@ CASES = [
     ('sp-acj4-430-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_430_complex__satassume_ask),
     ('sp-acj4-430-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_430_complex__satrefine_refine),
     ('sp-acj4-430-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_430_complex__satrefine_simplify),
-    ('sp-acj4-430-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_430_complex__satsimp_trigsimp),
     ('sp-acj4-430-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_430_complex__sympy_auto),
     ('sp-acj4-430-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_430_complex__sympy_ask),
     ('sp-acj4-430-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_430_complex__sympy_satask),
@@ -13006,7 +11901,6 @@ CASES = [
     ('sp-acj4-433-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_433_complex__satassume_ask),
     ('sp-acj4-433-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_433_complex__satrefine_refine),
     ('sp-acj4-433-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_433_complex__satrefine_simplify),
-    ('sp-acj4-433-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_433_complex__satsimp_trigsimp),
     ('sp-acj4-433-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_433_complex__sympy_auto),
     ('sp-acj4-433-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_433_complex__sympy_ask),
     ('sp-acj4-433-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_433_complex__sympy_satask),
@@ -13018,7 +11912,6 @@ CASES = [
     ('sp-acj4-442-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_442_complex__satassume_ask),
     ('sp-acj4-442-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_442_complex__satrefine_refine),
     ('sp-acj4-442-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_442_complex__satrefine_simplify),
-    ('sp-acj4-442-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_442_complex__satsimp_trigsimp),
     ('sp-acj4-442-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_442_complex__sympy_auto),
     ('sp-acj4-442-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_442_complex__sympy_ask),
     ('sp-acj4-442-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_442_complex__sympy_satask),
@@ -13030,7 +11923,6 @@ CASES = [
     ('sp-acj4-446-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_446_complex__satassume_ask),
     ('sp-acj4-446-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_446_complex__satrefine_refine),
     ('sp-acj4-446-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_446_complex__satrefine_simplify),
-    ('sp-acj4-446-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_446_complex__satsimp_trigsimp),
     ('sp-acj4-446-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_446_complex__sympy_auto),
     ('sp-acj4-446-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_446_complex__sympy_ask),
     ('sp-acj4-446-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_446_complex__sympy_satask),
@@ -13042,7 +11934,6 @@ CASES = [
     ('sp-acj4-450-complex', 'satassume-ask', 'true', 'true', 'satassume-ask-20261101-091758', sp_acj4_450_complex__satassume_ask),
     ('sp-acj4-450-complex', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261101-091426', sp_acj4_450_complex__satrefine_refine),
     ('sp-acj4-450-complex', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091810', sp_acj4_450_complex__satrefine_simplify),
-    ('sp-acj4-450-complex', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-190021', sp_acj4_450_complex__satsimp_trigsimp),
     ('sp-acj4-450-complex', 'sympy-auto', 'true', 'true', 'sympy-auto-20261101-090919', sp_acj4_450_complex__sympy_auto),
     ('sp-acj4-450-complex', 'sympy-ask', 'true', 'true', 'sympy-ask-20261101-090925', sp_acj4_450_complex__sympy_ask),
     ('sp-acj4-450-complex', 'sympy-satask', 'true', 'true', 'sympy-satask-20261101-094904', sp_acj4_450_complex__sympy_satask),
@@ -13054,7 +11945,6 @@ CASES = [
     ('sp-acj4-451-complex', 'satassume-ask', 'true', 'true', 'satassume-ask-20261101-091758', sp_acj4_451_complex__satassume_ask),
     ('sp-acj4-451-complex', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261101-091426', sp_acj4_451_complex__satrefine_refine),
     ('sp-acj4-451-complex', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091810', sp_acj4_451_complex__satrefine_simplify),
-    ('sp-acj4-451-complex', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-190021', sp_acj4_451_complex__satsimp_trigsimp),
     ('sp-acj4-451-complex', 'sympy-auto', 'true', 'true', 'sympy-auto-20261101-090919', sp_acj4_451_complex__sympy_auto),
     ('sp-acj4-451-complex', 'sympy-ask', 'true', 'true', 'sympy-ask-20261101-090925', sp_acj4_451_complex__sympy_ask),
     ('sp-acj4-451-complex', 'sympy-satask', 'true', 'true', 'sympy-satask-20261101-094904', sp_acj4_451_complex__sympy_satask),
@@ -13066,7 +11956,6 @@ CASES = [
     ('sp-acj4-50-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_50_complex__satassume_ask),
     ('sp-acj4-50-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_50_complex__satrefine_refine),
     ('sp-acj4-50-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_50_complex__satrefine_simplify),
-    ('sp-acj4-50-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_50_complex__satsimp_trigsimp),
     ('sp-acj4-50-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_50_complex__sympy_auto),
     ('sp-acj4-50-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_50_complex__sympy_ask),
     ('sp-acj4-50-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_50_complex__sympy_satask),
@@ -13078,7 +11967,6 @@ CASES = [
     ('sp-acj4-51-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_51_complex__satassume_ask),
     ('sp-acj4-51-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_51_complex__satrefine_refine),
     ('sp-acj4-51-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_51_complex__satrefine_simplify),
-    ('sp-acj4-51-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_51_complex__satsimp_trigsimp),
     ('sp-acj4-51-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_51_complex__sympy_auto),
     ('sp-acj4-51-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_51_complex__sympy_ask),
     ('sp-acj4-51-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_51_complex__sympy_satask),
@@ -13090,7 +11978,6 @@ CASES = [
     ('sp-acj4-55-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_55_complex__satassume_ask),
     ('sp-acj4-55-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_55_complex__satrefine_refine),
     ('sp-acj4-55-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_55_complex__satrefine_simplify),
-    ('sp-acj4-55-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_55_complex__satsimp_trigsimp),
     ('sp-acj4-55-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_55_complex__sympy_auto),
     ('sp-acj4-55-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_55_complex__sympy_ask),
     ('sp-acj4-55-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_55_complex__sympy_satask),
@@ -13102,7 +11989,6 @@ CASES = [
     ('sp-acj4-56-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_56_complex__satassume_ask),
     ('sp-acj4-56-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_56_complex__satrefine_refine),
     ('sp-acj4-56-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_56_complex__satrefine_simplify),
-    ('sp-acj4-56-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_56_complex__satsimp_trigsimp),
     ('sp-acj4-56-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_56_complex__sympy_auto),
     ('sp-acj4-56-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_56_complex__sympy_ask),
     ('sp-acj4-56-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_56_complex__sympy_satask),
@@ -13114,7 +12000,6 @@ CASES = [
     ('sp-acj4-6-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_6_complex__satassume_ask),
     ('sp-acj4-6-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_6_complex__satrefine_refine),
     ('sp-acj4-6-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_6_complex__satrefine_simplify),
-    ('sp-acj4-6-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_6_complex__satsimp_trigsimp),
     ('sp-acj4-6-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_6_complex__sympy_auto),
     ('sp-acj4-6-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_6_complex__sympy_ask),
     ('sp-acj4-6-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_6_complex__sympy_satask),
@@ -13126,7 +12011,6 @@ CASES = [
     ('sp-acj4-7-complex', 'satassume-ask', 'true', 'true', 'satassume-ask-20261101-091758', sp_acj4_7_complex__satassume_ask),
     ('sp-acj4-7-complex', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261101-091426', sp_acj4_7_complex__satrefine_refine),
     ('sp-acj4-7-complex', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091810', sp_acj4_7_complex__satrefine_simplify),
-    ('sp-acj4-7-complex', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-190021', sp_acj4_7_complex__satsimp_trigsimp),
     ('sp-acj4-7-complex', 'sympy-auto', 'true', 'true', 'sympy-auto-20261101-090919', sp_acj4_7_complex__sympy_auto),
     ('sp-acj4-7-complex', 'sympy-ask', 'true', 'true', 'sympy-ask-20261101-090925', sp_acj4_7_complex__sympy_ask),
     ('sp-acj4-7-complex', 'sympy-satask', 'true', 'true', 'sympy-satask-20261101-094904', sp_acj4_7_complex__sympy_satask),
@@ -13138,7 +12022,6 @@ CASES = [
     ('sp-acj4-9-complex', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_9_complex__satassume_ask),
     ('sp-acj4-9-complex', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_9_complex__satrefine_refine),
     ('sp-acj4-9-complex', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_9_complex__satrefine_simplify),
-    ('sp-acj4-9-complex', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_9_complex__satsimp_trigsimp),
     ('sp-acj4-9-complex', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_9_complex__sympy_auto),
     ('sp-acj4-9-complex', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_9_complex__sympy_ask),
     ('sp-acj4-9-complex', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_9_complex__sympy_satask),
@@ -13150,7 +12033,6 @@ CASES = [
     ('sp-acj4-90-complex', 'satassume-ask', 'true', 'true', 'satassume-ask-20261101-091758', sp_acj4_90_complex__satassume_ask),
     ('sp-acj4-90-complex', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261101-091426', sp_acj4_90_complex__satrefine_refine),
     ('sp-acj4-90-complex', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091810', sp_acj4_90_complex__satrefine_simplify),
-    ('sp-acj4-90-complex', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-190021', sp_acj4_90_complex__satsimp_trigsimp),
     ('sp-acj4-90-complex', 'sympy-auto', 'true', 'true', 'sympy-auto-20261101-090919', sp_acj4_90_complex__sympy_auto),
     ('sp-acj4-90-complex', 'sympy-ask', 'true', 'true', 'sympy-ask-20261101-090925', sp_acj4_90_complex__sympy_ask),
     ('sp-acj4-90-complex', 'sympy-satask', 'true', 'true', 'sympy-satask-20261101-094904', sp_acj4_90_complex__sympy_satask),
@@ -13162,7 +12044,6 @@ CASES = [
     ('sp-acj4-94-complex', 'satassume-ask', 'true', 'true', 'satassume-ask-20261101-091758', sp_acj4_94_complex__satassume_ask),
     ('sp-acj4-94-complex', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261101-091426', sp_acj4_94_complex__satrefine_refine),
     ('sp-acj4-94-complex', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091810', sp_acj4_94_complex__satrefine_simplify),
-    ('sp-acj4-94-complex', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-190021', sp_acj4_94_complex__satsimp_trigsimp),
     ('sp-acj4-94-complex', 'sympy-auto', 'true', 'true', 'sympy-auto-20261101-090919', sp_acj4_94_complex__sympy_auto),
     ('sp-acj4-94-complex', 'sympy-ask', 'true', 'true', 'sympy-ask-20261101-090925', sp_acj4_94_complex__sympy_ask),
     ('sp-acj4-94-complex', 'sympy-satask', 'true', 'true', 'sympy-satask-20261101-094904', sp_acj4_94_complex__sympy_satask),
@@ -13174,7 +12055,6 @@ CASES = [
     ('sp-acj4-99-complex', 'satassume-ask', 'true', 'true', 'satassume-ask-20261101-091758', sp_acj4_99_complex__satassume_ask),
     ('sp-acj4-99-complex', 'satrefine-refine', 'true', 'true', 'satrefine-refine-20261101-091426', sp_acj4_99_complex__satrefine_refine),
     ('sp-acj4-99-complex', 'satrefine-simplify', 'true', 'true', 'satrefine-simplify-20261101-091810', sp_acj4_99_complex__satrefine_simplify),
-    ('sp-acj4-99-complex', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-190021', sp_acj4_99_complex__satsimp_trigsimp),
     ('sp-acj4-99-complex', 'sympy-auto', 'true', 'true', 'sympy-auto-20261101-090919', sp_acj4_99_complex__sympy_auto),
     ('sp-acj4-99-complex', 'sympy-ask', 'true', 'true', 'sympy-ask-20261101-090925', sp_acj4_99_complex__sympy_ask),
     ('sp-acj4-99-complex', 'sympy-satask', 'true', 'true', 'sympy-satask-20261101-094904', sp_acj4_99_complex__sympy_satask),

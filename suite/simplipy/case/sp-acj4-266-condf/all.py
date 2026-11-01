@@ -1,7 +1,7 @@
 # assume-eval: a runnable script from the results browser
 # Run: python3 this-file.py (or paste it into python or Jupyter).
 # suite simplipy · case sp-acj4-266-condf · all Python systems
-# 12 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
+# 11 case run(s), a function each (listed in CASES).  Each runs in a fresh copy of
 # its setup's namespace, so no variable carries over (module state other than SymPy's
 # cache does), and an error in one is printed and the rest still run.
 # Arguments, if any: the case ids to run (only those; pasted into python or Jupyter: all).
@@ -193,19 +193,6 @@ def sp_acj4_266_condf__satrefine_simplify():
     return Answer
 
 
-# ---- case sp-acj4-266-condf · expected contingent · system satsimp-trigsimp (satsimp 0.1.0)
-# the run satsimp-trigsimp-20261028-190021 answered null (declined correctly)
-@_in(_SETUP2)
-def sp_acj4_266_condf__satsimp_trigsimp():
-    x = Symbol('x')
-    Assum = And(Q.real(x), Q.negative(x), ~Q.zero(x), ~Q.zero(1 / x))
-    Residual = -sin(log(x)) - sin(log(1 / x))
-    Result = satsimp.trigsimp(Residual, Assum, strict=True)
-    Answer = True if Result == 0 else False if (Result.is_number and Result.is_finite and Result.is_zero is False) else None
-    print(Result, Answer, sep='\n')
-    return Answer
-
-
 # ---- case sp-acj4-266-condf · expected contingent · system sympy-auto (sympy 1.14.0)
 # the run sympy-auto-20261101-090919 answered null (declined correctly)
 @_in(_SETUP3)
@@ -312,7 +299,6 @@ CASES = [
     ('sp-acj4-266-condf', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_266_condf__satassume_ask),
     ('sp-acj4-266-condf', 'satrefine-refine', 'contingent', 'null', 'satrefine-refine-20261101-091426', sp_acj4_266_condf__satrefine_refine),
     ('sp-acj4-266-condf', 'satrefine-simplify', 'contingent', 'null', 'satrefine-simplify-20261101-091810', sp_acj4_266_condf__satrefine_simplify),
-    ('sp-acj4-266-condf', 'satsimp-trigsimp', 'contingent', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_266_condf__satsimp_trigsimp),
     ('sp-acj4-266-condf', 'sympy-auto', 'contingent', 'null', 'sympy-auto-20261101-090919', sp_acj4_266_condf__sympy_auto),
     ('sp-acj4-266-condf', 'sympy-ask', 'contingent', 'null', 'sympy-ask-20261101-090925', sp_acj4_266_condf__sympy_ask),
     ('sp-acj4-266-condf', 'sympy-satask', 'contingent', 'null', 'sympy-satask-20261101-094904', sp_acj4_266_condf__sympy_satask),
