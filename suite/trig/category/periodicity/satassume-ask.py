@@ -117,11 +117,11 @@ def _fresh():
 _SETUP1 = _Setup(r'''from sympy import *
 import sympy
 import satassume.sympy_api
-''', ('satassume', '0.0.1'))
+''', ('satassume', '0.0.2'))
 
 
-# ---- case trig-period-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185849 answered true (solved)
+# ---- case trig-period-01 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091719 answered true (solved)
 @_in(_SETUP1)
 def trig_period_01__satassume_ask():
     z = Symbol('z')
@@ -132,8 +132,8 @@ def trig_period_01__satassume_ask():
     return Answer
 
 
-# ---- case trig-period-02 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185849 answered null (declined correctly)
+# ---- case trig-period-02 · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091719 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_02__satassume_ask():
     x = Symbol('x')
@@ -144,8 +144,8 @@ def trig_period_02__satassume_ask():
     return Answer
 
 
-# ---- case trig-period-03 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185849 answered null (declined correctly)
+# ---- case trig-period-03 · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091719 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_03__satassume_ask():
     x = Symbol('x')
@@ -156,8 +156,8 @@ def trig_period_03__satassume_ask():
     return Answer
 
 
-# ---- case trig-shift-01 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185849 answered null (declined correctly)
+# ---- case trig-shift-01 · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091719 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_shift_01__satassume_ask():
     x = Symbol('x')
@@ -170,10 +170,10 @@ def trig_shift_01__satassume_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-period-01', 'satassume-ask', 'true', 'true', 'satassume-ask-20261028-185849', trig_period_01__satassume_ask),
-    ('trig-period-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185849', trig_period_02__satassume_ask),
-    ('trig-period-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185849', trig_period_03__satassume_ask),
-    ('trig-shift-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185849', trig_shift_01__satassume_ask),
+    ('trig-period-01', 'satassume-ask', 'true', 'true', 'satassume-ask-20261101-091719', trig_period_01__satassume_ask),
+    ('trig-period-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091719', trig_period_02__satassume_ask),
+    ('trig-period-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091719', trig_period_03__satassume_ask),
+    ('trig-shift-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091719', trig_shift_01__satassume_ask),
 ]
 
 

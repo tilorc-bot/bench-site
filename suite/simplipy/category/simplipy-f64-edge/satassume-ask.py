@@ -117,11 +117,11 @@ def _fresh():
 _SETUP1 = _Setup(r'''from sympy import *
 import sympy
 import satassume.sympy_api
-''', ('satassume', '0.0.1'))
+''', ('satassume', '0.0.2'))
 
 
-# ---- case sp-acj4-0-real · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (no verdict)
+# ---- case sp-acj4-0-real · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_0_real__satassume_ask():
     x = Symbol('x')
@@ -132,8 +132,8 @@ def sp_acj4_0_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-115-real · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (no verdict)
+# ---- case sp-acj4-115-real · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_115_real__satassume_ask():
     x = Symbol('x')
@@ -144,8 +144,8 @@ def sp_acj4_115_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-116-real · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (no verdict)
+# ---- case sp-acj4-116-real · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_116_real__satassume_ask():
     x = Symbol('x')
@@ -156,8 +156,8 @@ def sp_acj4_116_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-130-real · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (declined correctly)
+# ---- case sp-acj4-130-real · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_130_real__satassume_ask():
     x = Symbol('x')
@@ -168,8 +168,8 @@ def sp_acj4_130_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-151-real · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (declined correctly)
+# ---- case sp-acj4-151-real · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_151_real__satassume_ask():
     x = Symbol('x')
@@ -180,8 +180,8 @@ def sp_acj4_151_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-154-real · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (no verdict)
+# ---- case sp-acj4-154-real · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_154_real__satassume_ask():
     x = Symbol('x')
@@ -192,8 +192,8 @@ def sp_acj4_154_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-156-real · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (declined correctly)
+# ---- case sp-acj4-156-real · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_156_real__satassume_ask():
     x = Symbol('x')
@@ -204,8 +204,8 @@ def sp_acj4_156_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-180-real · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (declined correctly)
+# ---- case sp-acj4-180-real · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_180_real__satassume_ask():
     x = Symbol('x')
@@ -216,8 +216,8 @@ def sp_acj4_180_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-183-real · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (declined correctly)
+# ---- case sp-acj4-183-real · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_183_real__satassume_ask():
     x = Symbol('x')
@@ -228,8 +228,8 @@ def sp_acj4_183_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-189-real · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (no verdict)
+# ---- case sp-acj4-189-real · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_189_real__satassume_ask():
     x = Symbol('x')
@@ -240,8 +240,8 @@ def sp_acj4_189_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-190-real · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (no verdict)
+# ---- case sp-acj4-190-real · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_190_real__satassume_ask():
     x = Symbol('x')
@@ -252,8 +252,8 @@ def sp_acj4_190_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-191-real · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (no verdict)
+# ---- case sp-acj4-191-real · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_191_real__satassume_ask():
     x = Symbol('x')
@@ -264,8 +264,8 @@ def sp_acj4_191_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-203-real · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (declined correctly)
+# ---- case sp-acj4-203-real · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_203_real__satassume_ask():
     x = Symbol('x')
@@ -276,8 +276,8 @@ def sp_acj4_203_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-229-real · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered true (solved)
+# ---- case sp-acj4-229-real · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_229_real__satassume_ask():
     x = Symbol('x')
@@ -288,8 +288,8 @@ def sp_acj4_229_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-234-real · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (declined correctly)
+# ---- case sp-acj4-234-real · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_234_real__satassume_ask():
     x = Symbol('x')
@@ -300,8 +300,8 @@ def sp_acj4_234_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-241-real · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (declined correctly)
+# ---- case sp-acj4-241-real · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_241_real__satassume_ask():
     x = Symbol('x')
@@ -312,8 +312,8 @@ def sp_acj4_241_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-247-real · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (declined correctly)
+# ---- case sp-acj4-247-real · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_247_real__satassume_ask():
     x = Symbol('x')
@@ -324,8 +324,8 @@ def sp_acj4_247_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-260-real · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (declined correctly)
+# ---- case sp-acj4-260-real · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_260_real__satassume_ask():
     x = Symbol('x')
@@ -336,8 +336,8 @@ def sp_acj4_260_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-261-real · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (no verdict)
+# ---- case sp-acj4-261-real · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_261_real__satassume_ask():
     x = Symbol('x')
@@ -348,8 +348,8 @@ def sp_acj4_261_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-266-real · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (declined correctly)
+# ---- case sp-acj4-266-real · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_266_real__satassume_ask():
     x = Symbol('x')
@@ -360,8 +360,8 @@ def sp_acj4_266_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-267-real · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (declined correctly)
+# ---- case sp-acj4-267-real · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_267_real__satassume_ask():
     x = Symbol('x')
@@ -372,8 +372,8 @@ def sp_acj4_267_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-29-real · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (declined correctly)
+# ---- case sp-acj4-29-real · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_29_real__satassume_ask():
     x = Symbol('x')
@@ -384,8 +384,8 @@ def sp_acj4_29_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-3-real · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (no verdict)
+# ---- case sp-acj4-3-real · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_3_real__satassume_ask():
     x = Symbol('x')
@@ -396,8 +396,8 @@ def sp_acj4_3_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-343-real · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered true (solved)
+# ---- case sp-acj4-343-real · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_343_real__satassume_ask():
     x = Symbol('x')
@@ -408,8 +408,8 @@ def sp_acj4_343_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-344-real · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (declined correctly)
+# ---- case sp-acj4-344-real · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_344_real__satassume_ask():
     x = Symbol('x')
@@ -420,8 +420,8 @@ def sp_acj4_344_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-378-real · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (no verdict)
+# ---- case sp-acj4-378-real · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_378_real__satassume_ask():
     x = Symbol('x')
@@ -432,8 +432,8 @@ def sp_acj4_378_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-380-real · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (no verdict)
+# ---- case sp-acj4-380-real · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_380_real__satassume_ask():
     x = Symbol('x')
@@ -444,8 +444,8 @@ def sp_acj4_380_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-392-real · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (declined correctly)
+# ---- case sp-acj4-392-real · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_392_real__satassume_ask():
     x = Symbol('x')
@@ -456,8 +456,8 @@ def sp_acj4_392_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-403-real · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (declined correctly)
+# ---- case sp-acj4-403-real · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_403_real__satassume_ask():
     x = Symbol('x')
@@ -468,8 +468,8 @@ def sp_acj4_403_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-410-real · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered true (solved)
+# ---- case sp-acj4-410-real · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_410_real__satassume_ask():
     x = Symbol('x')
@@ -480,8 +480,8 @@ def sp_acj4_410_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-416-real · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (declined correctly)
+# ---- case sp-acj4-416-real · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_416_real__satassume_ask():
     x = Symbol('x')
@@ -492,8 +492,8 @@ def sp_acj4_416_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-420-real · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (declined correctly)
+# ---- case sp-acj4-420-real · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_420_real__satassume_ask():
     x = Symbol('x')
@@ -504,8 +504,8 @@ def sp_acj4_420_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-430-real · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (declined correctly)
+# ---- case sp-acj4-430-real · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_430_real__satassume_ask():
     x = Symbol('x')
@@ -516,8 +516,8 @@ def sp_acj4_430_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-433-real · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (declined correctly)
+# ---- case sp-acj4-433-real · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_433_real__satassume_ask():
     x = Symbol('x')
@@ -528,8 +528,8 @@ def sp_acj4_433_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-442-real · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (declined correctly)
+# ---- case sp-acj4-442-real · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_442_real__satassume_ask():
     x = Symbol('x')
@@ -540,8 +540,8 @@ def sp_acj4_442_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-449-real · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (no verdict)
+# ---- case sp-acj4-449-real · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_449_real__satassume_ask():
     x = Symbol('x')
@@ -552,8 +552,8 @@ def sp_acj4_449_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-450-real · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered true (solved)
+# ---- case sp-acj4-450-real · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_450_real__satassume_ask():
     x = Symbol('x')
@@ -564,8 +564,8 @@ def sp_acj4_450_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-451-real · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered true (solved)
+# ---- case sp-acj4-451-real · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_451_real__satassume_ask():
     x = Symbol('x')
@@ -576,8 +576,8 @@ def sp_acj4_451_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-50-real · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (no verdict)
+# ---- case sp-acj4-50-real · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_50_real__satassume_ask():
     x = Symbol('x')
@@ -588,8 +588,8 @@ def sp_acj4_50_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-55-real · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (declined correctly)
+# ---- case sp-acj4-55-real · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_55_real__satassume_ask():
     x = Symbol('x')
@@ -600,8 +600,8 @@ def sp_acj4_55_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-56-real · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (declined correctly)
+# ---- case sp-acj4-56-real · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (declined correctly)
 @_in(_SETUP1)
 def sp_acj4_56_real__satassume_ask():
     x = Symbol('x')
@@ -612,8 +612,8 @@ def sp_acj4_56_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-6-real · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered null (no verdict)
+# ---- case sp-acj4-6-real · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered null (no verdict)
 @_in(_SETUP1)
 def sp_acj4_6_real__satassume_ask():
     x = Symbol('x')
@@ -624,8 +624,8 @@ def sp_acj4_6_real__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-806-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered true (solved)
+# ---- case sp-acj4-806-ground · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_806_ground__satassume_ask():
     Assum = And()
@@ -635,8 +635,8 @@ def sp_acj4_806_ground__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-813-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered true (solved)
+# ---- case sp-acj4-813-ground · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_813_ground__satassume_ask():
     Assum = And()
@@ -646,8 +646,8 @@ def sp_acj4_813_ground__satassume_ask():
     return Answer
 
 
-# ---- case sp-acj4-816-ground · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185930 answered true (solved)
+# ---- case sp-acj4-816-ground · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091758 answered true (solved)
 @_in(_SETUP1)
 def sp_acj4_816_ground__satassume_ask():
     Assum = And()
@@ -659,51 +659,51 @@ def sp_acj4_816_ground__satassume_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('sp-acj4-0-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185930', sp_acj4_0_real__satassume_ask),
-    ('sp-acj4-115-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185930', sp_acj4_115_real__satassume_ask),
-    ('sp-acj4-116-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185930', sp_acj4_116_real__satassume_ask),
-    ('sp-acj4-130-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185930', sp_acj4_130_real__satassume_ask),
-    ('sp-acj4-151-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185930', sp_acj4_151_real__satassume_ask),
-    ('sp-acj4-154-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185930', sp_acj4_154_real__satassume_ask),
-    ('sp-acj4-156-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185930', sp_acj4_156_real__satassume_ask),
-    ('sp-acj4-180-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185930', sp_acj4_180_real__satassume_ask),
-    ('sp-acj4-183-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185930', sp_acj4_183_real__satassume_ask),
-    ('sp-acj4-189-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185930', sp_acj4_189_real__satassume_ask),
-    ('sp-acj4-190-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185930', sp_acj4_190_real__satassume_ask),
-    ('sp-acj4-191-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185930', sp_acj4_191_real__satassume_ask),
-    ('sp-acj4-203-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185930', sp_acj4_203_real__satassume_ask),
-    ('sp-acj4-229-real', 'satassume-ask', 'true', 'true', 'satassume-ask-20261028-185930', sp_acj4_229_real__satassume_ask),
-    ('sp-acj4-234-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185930', sp_acj4_234_real__satassume_ask),
-    ('sp-acj4-241-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185930', sp_acj4_241_real__satassume_ask),
-    ('sp-acj4-247-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185930', sp_acj4_247_real__satassume_ask),
-    ('sp-acj4-260-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185930', sp_acj4_260_real__satassume_ask),
-    ('sp-acj4-261-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185930', sp_acj4_261_real__satassume_ask),
-    ('sp-acj4-266-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185930', sp_acj4_266_real__satassume_ask),
-    ('sp-acj4-267-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185930', sp_acj4_267_real__satassume_ask),
-    ('sp-acj4-29-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185930', sp_acj4_29_real__satassume_ask),
-    ('sp-acj4-3-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185930', sp_acj4_3_real__satassume_ask),
-    ('sp-acj4-343-real', 'satassume-ask', 'true', 'true', 'satassume-ask-20261028-185930', sp_acj4_343_real__satassume_ask),
-    ('sp-acj4-344-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185930', sp_acj4_344_real__satassume_ask),
-    ('sp-acj4-378-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185930', sp_acj4_378_real__satassume_ask),
-    ('sp-acj4-380-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185930', sp_acj4_380_real__satassume_ask),
-    ('sp-acj4-392-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185930', sp_acj4_392_real__satassume_ask),
-    ('sp-acj4-403-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185930', sp_acj4_403_real__satassume_ask),
-    ('sp-acj4-410-real', 'satassume-ask', 'true', 'true', 'satassume-ask-20261028-185930', sp_acj4_410_real__satassume_ask),
-    ('sp-acj4-416-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185930', sp_acj4_416_real__satassume_ask),
-    ('sp-acj4-420-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185930', sp_acj4_420_real__satassume_ask),
-    ('sp-acj4-430-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185930', sp_acj4_430_real__satassume_ask),
-    ('sp-acj4-433-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185930', sp_acj4_433_real__satassume_ask),
-    ('sp-acj4-442-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185930', sp_acj4_442_real__satassume_ask),
-    ('sp-acj4-449-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185930', sp_acj4_449_real__satassume_ask),
-    ('sp-acj4-450-real', 'satassume-ask', 'true', 'true', 'satassume-ask-20261028-185930', sp_acj4_450_real__satassume_ask),
-    ('sp-acj4-451-real', 'satassume-ask', 'true', 'true', 'satassume-ask-20261028-185930', sp_acj4_451_real__satassume_ask),
-    ('sp-acj4-50-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185930', sp_acj4_50_real__satassume_ask),
-    ('sp-acj4-55-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185930', sp_acj4_55_real__satassume_ask),
-    ('sp-acj4-56-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185930', sp_acj4_56_real__satassume_ask),
-    ('sp-acj4-6-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185930', sp_acj4_6_real__satassume_ask),
-    ('sp-acj4-806-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261028-185930', sp_acj4_806_ground__satassume_ask),
-    ('sp-acj4-813-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261028-185930', sp_acj4_813_ground__satassume_ask),
-    ('sp-acj4-816-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261028-185930', sp_acj4_816_ground__satassume_ask),
+    ('sp-acj4-0-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091758', sp_acj4_0_real__satassume_ask),
+    ('sp-acj4-115-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091758', sp_acj4_115_real__satassume_ask),
+    ('sp-acj4-116-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091758', sp_acj4_116_real__satassume_ask),
+    ('sp-acj4-130-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_130_real__satassume_ask),
+    ('sp-acj4-151-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_151_real__satassume_ask),
+    ('sp-acj4-154-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091758', sp_acj4_154_real__satassume_ask),
+    ('sp-acj4-156-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_156_real__satassume_ask),
+    ('sp-acj4-180-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_180_real__satassume_ask),
+    ('sp-acj4-183-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_183_real__satassume_ask),
+    ('sp-acj4-189-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091758', sp_acj4_189_real__satassume_ask),
+    ('sp-acj4-190-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091758', sp_acj4_190_real__satassume_ask),
+    ('sp-acj4-191-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091758', sp_acj4_191_real__satassume_ask),
+    ('sp-acj4-203-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_203_real__satassume_ask),
+    ('sp-acj4-229-real', 'satassume-ask', 'true', 'true', 'satassume-ask-20261101-091758', sp_acj4_229_real__satassume_ask),
+    ('sp-acj4-234-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_234_real__satassume_ask),
+    ('sp-acj4-241-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_241_real__satassume_ask),
+    ('sp-acj4-247-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_247_real__satassume_ask),
+    ('sp-acj4-260-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_260_real__satassume_ask),
+    ('sp-acj4-261-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091758', sp_acj4_261_real__satassume_ask),
+    ('sp-acj4-266-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_266_real__satassume_ask),
+    ('sp-acj4-267-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_267_real__satassume_ask),
+    ('sp-acj4-29-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_29_real__satassume_ask),
+    ('sp-acj4-3-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091758', sp_acj4_3_real__satassume_ask),
+    ('sp-acj4-343-real', 'satassume-ask', 'true', 'true', 'satassume-ask-20261101-091758', sp_acj4_343_real__satassume_ask),
+    ('sp-acj4-344-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_344_real__satassume_ask),
+    ('sp-acj4-378-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091758', sp_acj4_378_real__satassume_ask),
+    ('sp-acj4-380-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091758', sp_acj4_380_real__satassume_ask),
+    ('sp-acj4-392-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_392_real__satassume_ask),
+    ('sp-acj4-403-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_403_real__satassume_ask),
+    ('sp-acj4-410-real', 'satassume-ask', 'true', 'true', 'satassume-ask-20261101-091758', sp_acj4_410_real__satassume_ask),
+    ('sp-acj4-416-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_416_real__satassume_ask),
+    ('sp-acj4-420-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_420_real__satassume_ask),
+    ('sp-acj4-430-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_430_real__satassume_ask),
+    ('sp-acj4-433-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_433_real__satassume_ask),
+    ('sp-acj4-442-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_442_real__satassume_ask),
+    ('sp-acj4-449-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091758', sp_acj4_449_real__satassume_ask),
+    ('sp-acj4-450-real', 'satassume-ask', 'true', 'true', 'satassume-ask-20261101-091758', sp_acj4_450_real__satassume_ask),
+    ('sp-acj4-451-real', 'satassume-ask', 'true', 'true', 'satassume-ask-20261101-091758', sp_acj4_451_real__satassume_ask),
+    ('sp-acj4-50-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091758', sp_acj4_50_real__satassume_ask),
+    ('sp-acj4-55-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_55_real__satassume_ask),
+    ('sp-acj4-56-real', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091758', sp_acj4_56_real__satassume_ask),
+    ('sp-acj4-6-real', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091758', sp_acj4_6_real__satassume_ask),
+    ('sp-acj4-806-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261101-091758', sp_acj4_806_ground__satassume_ask),
+    ('sp-acj4-813-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261101-091758', sp_acj4_813_ground__satassume_ask),
+    ('sp-acj4-816-ground', 'satassume-ask', 'true', 'true', 'satassume-ask-20261101-091758', sp_acj4_816_ground__satassume_ask),
 ]
 
 

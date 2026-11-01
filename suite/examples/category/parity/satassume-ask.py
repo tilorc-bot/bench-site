@@ -117,11 +117,11 @@ def _fresh():
 _SETUP1 = _Setup(r'''from sympy import *
 import sympy
 import satassume.sympy_api
-''', ('satassume', '0.0.1'))
+''', ('satassume', '0.0.2'))
 
 
-# ---- case demo-parity-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (no verdict)
+# ---- case demo-parity-01 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_01__satassume_ask():
     n = Symbol('n')
@@ -132,8 +132,8 @@ def demo_parity_01__satassume_ask():
     return Answer
 
 
-# ---- case demo-parity-02 · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered false (solved)
+# ---- case demo-parity-02 · expected false · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered false (solved)
 @_in(_SETUP1)
 def demo_parity_02__satassume_ask():
     n = Symbol('n')
@@ -145,8 +145,8 @@ def demo_parity_02__satassume_ask():
     return Answer
 
 
-# ---- case demo-parity-03 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (no verdict)
+# ---- case demo-parity-03 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_03__satassume_ask():
     n = Symbol('n')
@@ -157,8 +157,8 @@ def demo_parity_03__satassume_ask():
     return Answer
 
 
-# ---- case demo-parity-04 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (declined correctly)
+# ---- case demo-parity-04 · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_parity_04__satassume_ask():
     n = Symbol('n')
@@ -169,8 +169,8 @@ def demo_parity_04__satassume_ask():
     return Answer
 
 
-# ---- case demo-parity-05 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (no verdict)
+# ---- case demo-parity-05 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_05__satassume_ask():
     n = Symbol('n')
@@ -184,11 +184,11 @@ def demo_parity_05__satassume_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-parity-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185827', demo_parity_01__satassume_ask),
-    ('demo-parity-02', 'satassume-ask', 'false', 'false', 'satassume-ask-20261028-185827', demo_parity_02__satassume_ask),
-    ('demo-parity-03', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185827', demo_parity_03__satassume_ask),
-    ('demo-parity-04', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185827', demo_parity_04__satassume_ask),
-    ('demo-parity-05', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185827', demo_parity_05__satassume_ask),
+    ('demo-parity-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_parity_01__satassume_ask),
+    ('demo-parity-02', 'satassume-ask', 'false', 'false', 'satassume-ask-20261101-091658', demo_parity_02__satassume_ask),
+    ('demo-parity-03', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_parity_03__satassume_ask),
+    ('demo-parity-04', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091658', demo_parity_04__satassume_ask),
+    ('demo-parity-05', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_parity_05__satassume_ask),
 ]
 
 

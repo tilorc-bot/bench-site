@@ -117,11 +117,11 @@ def _fresh():
 _SETUP1 = _Setup(r'''from sympy import *
 import sympy
 import satassume.sympy_api
-''', ('satassume', '0.0.1'))
+''', ('satassume', '0.0.2'))
 
 
-# ---- case trig-acos-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185849 answered null (no verdict)
+# ---- case trig-acos-01 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091719 answered null (no verdict)
 @_in(_SETUP1)
 def trig_acos_01__satassume_ask():
     x = Symbol('x')
@@ -132,8 +132,8 @@ def trig_acos_01__satassume_ask():
     return Answer
 
 
-# ---- case trig-asin-01 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185849 answered null (declined correctly)
+# ---- case trig-asin-01 · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091719 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_asin_01__satassume_ask():
     x = Symbol('x')
@@ -144,8 +144,8 @@ def trig_asin_01__satassume_ask():
     return Answer
 
 
-# ---- case trig-asin-02 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185849 answered null (no verdict)
+# ---- case trig-asin-02 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091719 answered null (no verdict)
 @_in(_SETUP1)
 def trig_asin_02__satassume_ask():
     x = Symbol('x')
@@ -156,8 +156,8 @@ def trig_asin_02__satassume_ask():
     return Answer
 
 
-# ---- case trig-atan-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185849 answered null (no verdict)
+# ---- case trig-atan-01 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091719 answered null (no verdict)
 @_in(_SETUP1)
 def trig_atan_01__satassume_ask():
     x = Symbol('x')
@@ -170,10 +170,10 @@ def trig_atan_01__satassume_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-acos-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185849', trig_acos_01__satassume_ask),
-    ('trig-asin-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185849', trig_asin_01__satassume_ask),
-    ('trig-asin-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185849', trig_asin_02__satassume_ask),
-    ('trig-atan-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185849', trig_atan_01__satassume_ask),
+    ('trig-acos-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091719', trig_acos_01__satassume_ask),
+    ('trig-asin-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091719', trig_asin_01__satassume_ask),
+    ('trig-asin-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091719', trig_asin_02__satassume_ask),
+    ('trig-atan-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091719', trig_atan_01__satassume_ask),
 ]
 
 

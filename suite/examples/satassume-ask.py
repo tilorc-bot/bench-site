@@ -117,11 +117,11 @@ def _fresh():
 _SETUP1 = _Setup(r'''from sympy import *
 import sympy
 import satassume.sympy_api
-''', ('satassume', '0.0.1'))
+''', ('satassume', '0.0.2'))
 
 
-# ---- case demo-atan2-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (no verdict)
+# ---- case demo-atan2-01 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (no verdict)
 @_in(_SETUP1)
 def demo_atan2_01__satassume_ask():
     x = Symbol('x')
@@ -133,8 +133,8 @@ def demo_atan2_01__satassume_ask():
     return Answer
 
 
-# ---- case demo-atan2-02 · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (no verdict)
+# ---- case demo-atan2-02 · expected false · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (no verdict)
 @_in(_SETUP1)
 def demo_atan2_02__satassume_ask():
     x = Symbol('x')
@@ -146,8 +146,8 @@ def demo_atan2_02__satassume_ask():
     return Answer
 
 
-# ---- case demo-eq-abs-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (no verdict)
+# ---- case demo-eq-abs-01 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_abs_01__satassume_ask():
     x = Symbol('x')
@@ -158,8 +158,8 @@ def demo_eq_abs_01__satassume_ask():
     return Answer
 
 
-# ---- case demo-eq-abs-02 · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered false (solved)
+# ---- case demo-eq-abs-02 · expected false · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered false (solved)
 @_in(_SETUP1)
 def demo_eq_abs_02__satassume_ask():
     x = Symbol('x')
@@ -170,8 +170,8 @@ def demo_eq_abs_02__satassume_ask():
     return Answer
 
 
-# ---- case demo-eq-log-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (no verdict)
+# ---- case demo-eq-log-01 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_log_01__satassume_ask():
     x = Symbol('x')
@@ -182,8 +182,8 @@ def demo_eq_log_01__satassume_ask():
     return Answer
 
 
-# ---- case demo-eq-pow-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (no verdict)
+# ---- case demo-eq-pow-01 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_pow_01__satassume_ask():
     n = Symbol('n')
@@ -194,8 +194,8 @@ def demo_eq_pow_01__satassume_ask():
     return Answer
 
 
-# ---- case demo-eq-sqrt-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (no verdict)
+# ---- case demo-eq-sqrt-01 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_sqrt_01__satassume_ask():
     x = Symbol('x')
@@ -206,8 +206,8 @@ def demo_eq_sqrt_01__satassume_ask():
     return Answer
 
 
-# ---- case demo-eq-sqrt-02 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (no verdict)
+# ---- case demo-eq-sqrt-02 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_sqrt_02__satassume_ask():
     x = Symbol('x')
@@ -218,8 +218,8 @@ def demo_eq_sqrt_02__satassume_ask():
     return Answer
 
 
-# ---- case demo-eq-sqrt-03 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (declined correctly)
+# ---- case demo-eq-sqrt-03 · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_eq_sqrt_03__satassume_ask():
     x = Symbol('x')
@@ -230,8 +230,8 @@ def demo_eq_sqrt_03__satassume_ask():
     return Answer
 
 
-# ---- case demo-eq-sqrt-04 · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (no verdict)
+# ---- case demo-eq-sqrt-04 · expected false · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_sqrt_04__satassume_ask():
     x = Symbol('x')
@@ -242,8 +242,8 @@ def demo_eq_sqrt_04__satassume_ask():
     return Answer
 
 
-# ---- case demo-eq-trig-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (no verdict)
+# ---- case demo-eq-trig-01 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_trig_01__satassume_ask():
     x = Symbol('x')
@@ -254,8 +254,8 @@ def demo_eq_trig_01__satassume_ask():
     return Answer
 
 
-# ---- case demo-eq-trig-02 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (no verdict)
+# ---- case demo-eq-trig-02 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (no verdict)
 @_in(_SETUP1)
 def demo_eq_trig_02__satassume_ask():
     x = Symbol('x')
@@ -266,8 +266,8 @@ def demo_eq_trig_02__satassume_ask():
     return Answer
 
 
-# ---- case demo-log-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (no verdict)
+# ---- case demo-log-01 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (no verdict)
 @_in(_SETUP1)
 def demo_log_01__satassume_ask():
     x = Symbol('x')
@@ -279,8 +279,8 @@ def demo_log_01__satassume_ask():
     return Answer
 
 
-# ---- case demo-log-02 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (declined correctly)
+# ---- case demo-log-02 · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_log_02__satassume_ask():
     z = Symbol('z')
@@ -292,8 +292,8 @@ def demo_log_02__satassume_ask():
     return Answer
 
 
-# ---- case demo-log-03 · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered false (solved)
+# ---- case demo-log-03 · expected false · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered false (solved)
 @_in(_SETUP1)
 def demo_log_03__satassume_ask():
     x = Symbol('x')
@@ -304,8 +304,8 @@ def demo_log_03__satassume_ask():
     return Answer
 
 
-# ---- case demo-nonzero-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (no verdict)
+# ---- case demo-nonzero-01 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (no verdict)
 @_in(_SETUP1)
 def demo_nonzero_01__satassume_ask():
     z = Symbol('z')
@@ -316,8 +316,8 @@ def demo_nonzero_01__satassume_ask():
     return Answer
 
 
-# ---- case demo-parity-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (no verdict)
+# ---- case demo-parity-01 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_01__satassume_ask():
     n = Symbol('n')
@@ -328,8 +328,8 @@ def demo_parity_01__satassume_ask():
     return Answer
 
 
-# ---- case demo-parity-02 · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered false (solved)
+# ---- case demo-parity-02 · expected false · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered false (solved)
 @_in(_SETUP1)
 def demo_parity_02__satassume_ask():
     n = Symbol('n')
@@ -341,8 +341,8 @@ def demo_parity_02__satassume_ask():
     return Answer
 
 
-# ---- case demo-parity-03 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (no verdict)
+# ---- case demo-parity-03 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_03__satassume_ask():
     n = Symbol('n')
@@ -353,8 +353,8 @@ def demo_parity_03__satassume_ask():
     return Answer
 
 
-# ---- case demo-parity-04 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (declined correctly)
+# ---- case demo-parity-04 · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_parity_04__satassume_ask():
     n = Symbol('n')
@@ -365,8 +365,8 @@ def demo_parity_04__satassume_ask():
     return Answer
 
 
-# ---- case demo-parity-05 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (no verdict)
+# ---- case demo-parity-05 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (no verdict)
 @_in(_SETUP1)
 def demo_parity_05__satassume_ask():
     n = Symbol('n')
@@ -378,8 +378,8 @@ def demo_parity_05__satassume_ask():
     return Answer
 
 
-# ---- case demo-prime-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (no verdict)
+# ---- case demo-prime-01 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (no verdict)
 @_in(_SETUP1)
 def demo_prime_01__satassume_ask():
     p = Symbol('p')
@@ -390,8 +390,8 @@ def demo_prime_01__satassume_ask():
     return Answer
 
 
-# ---- case demo-prime-02 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (declined correctly)
+# ---- case demo-prime-02 · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_prime_02__satassume_ask():
     p = Symbol('p')
@@ -402,8 +402,8 @@ def demo_prime_02__satassume_ask():
     return Answer
 
 
-# ---- case demo-sign-02 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (no verdict)
+# ---- case demo-sign-02 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_02__satassume_ask():
     x = Symbol('x')
@@ -414,8 +414,8 @@ def demo_sign_02__satassume_ask():
     return Answer
 
 
-# ---- case demo-sign-03 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (declined correctly)
+# ---- case demo-sign-03 · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (declined correctly)
 @_in(_SETUP1)
 def demo_sign_03__satassume_ask():
     x = Symbol('x')
@@ -426,8 +426,8 @@ def demo_sign_03__satassume_ask():
     return Answer
 
 
-# ---- case demo-sign-04 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (no verdict)
+# ---- case demo-sign-04 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_04__satassume_ask():
     z = Symbol('z')
@@ -438,8 +438,8 @@ def demo_sign_04__satassume_ask():
     return Answer
 
 
-# ---- case demo-sign-05 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185827 answered null (no verdict)
+# ---- case demo-sign-05 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091658 answered null (no verdict)
 @_in(_SETUP1)
 def demo_sign_05__satassume_ask():
     x = Symbol('x')
@@ -453,33 +453,33 @@ def demo_sign_05__satassume_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('demo-atan2-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185827', demo_atan2_01__satassume_ask),
-    ('demo-atan2-02', 'satassume-ask', 'false', 'null', 'satassume-ask-20261028-185827', demo_atan2_02__satassume_ask),
-    ('demo-eq-abs-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185827', demo_eq_abs_01__satassume_ask),
-    ('demo-eq-abs-02', 'satassume-ask', 'false', 'false', 'satassume-ask-20261028-185827', demo_eq_abs_02__satassume_ask),
-    ('demo-eq-log-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185827', demo_eq_log_01__satassume_ask),
-    ('demo-eq-pow-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185827', demo_eq_pow_01__satassume_ask),
-    ('demo-eq-sqrt-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185827', demo_eq_sqrt_01__satassume_ask),
-    ('demo-eq-sqrt-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185827', demo_eq_sqrt_02__satassume_ask),
-    ('demo-eq-sqrt-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185827', demo_eq_sqrt_03__satassume_ask),
-    ('demo-eq-sqrt-04', 'satassume-ask', 'false', 'null', 'satassume-ask-20261028-185827', demo_eq_sqrt_04__satassume_ask),
-    ('demo-eq-trig-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185827', demo_eq_trig_01__satassume_ask),
-    ('demo-eq-trig-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185827', demo_eq_trig_02__satassume_ask),
-    ('demo-log-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185827', demo_log_01__satassume_ask),
-    ('demo-log-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185827', demo_log_02__satassume_ask),
-    ('demo-log-03', 'satassume-ask', 'false', 'false', 'satassume-ask-20261028-185827', demo_log_03__satassume_ask),
-    ('demo-nonzero-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185827', demo_nonzero_01__satassume_ask),
-    ('demo-parity-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185827', demo_parity_01__satassume_ask),
-    ('demo-parity-02', 'satassume-ask', 'false', 'false', 'satassume-ask-20261028-185827', demo_parity_02__satassume_ask),
-    ('demo-parity-03', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185827', demo_parity_03__satassume_ask),
-    ('demo-parity-04', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185827', demo_parity_04__satassume_ask),
-    ('demo-parity-05', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185827', demo_parity_05__satassume_ask),
-    ('demo-prime-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185827', demo_prime_01__satassume_ask),
-    ('demo-prime-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185827', demo_prime_02__satassume_ask),
-    ('demo-sign-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185827', demo_sign_02__satassume_ask),
-    ('demo-sign-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185827', demo_sign_03__satassume_ask),
-    ('demo-sign-04', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185827', demo_sign_04__satassume_ask),
-    ('demo-sign-05', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185827', demo_sign_05__satassume_ask),
+    ('demo-atan2-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_atan2_01__satassume_ask),
+    ('demo-atan2-02', 'satassume-ask', 'false', 'null', 'satassume-ask-20261101-091658', demo_atan2_02__satassume_ask),
+    ('demo-eq-abs-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_eq_abs_01__satassume_ask),
+    ('demo-eq-abs-02', 'satassume-ask', 'false', 'false', 'satassume-ask-20261101-091658', demo_eq_abs_02__satassume_ask),
+    ('demo-eq-log-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_eq_log_01__satassume_ask),
+    ('demo-eq-pow-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_eq_pow_01__satassume_ask),
+    ('demo-eq-sqrt-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_eq_sqrt_01__satassume_ask),
+    ('demo-eq-sqrt-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_eq_sqrt_02__satassume_ask),
+    ('demo-eq-sqrt-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091658', demo_eq_sqrt_03__satassume_ask),
+    ('demo-eq-sqrt-04', 'satassume-ask', 'false', 'null', 'satassume-ask-20261101-091658', demo_eq_sqrt_04__satassume_ask),
+    ('demo-eq-trig-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_eq_trig_01__satassume_ask),
+    ('demo-eq-trig-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_eq_trig_02__satassume_ask),
+    ('demo-log-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_log_01__satassume_ask),
+    ('demo-log-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091658', demo_log_02__satassume_ask),
+    ('demo-log-03', 'satassume-ask', 'false', 'false', 'satassume-ask-20261101-091658', demo_log_03__satassume_ask),
+    ('demo-nonzero-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_nonzero_01__satassume_ask),
+    ('demo-parity-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_parity_01__satassume_ask),
+    ('demo-parity-02', 'satassume-ask', 'false', 'false', 'satassume-ask-20261101-091658', demo_parity_02__satassume_ask),
+    ('demo-parity-03', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_parity_03__satassume_ask),
+    ('demo-parity-04', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091658', demo_parity_04__satassume_ask),
+    ('demo-parity-05', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_parity_05__satassume_ask),
+    ('demo-prime-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_prime_01__satassume_ask),
+    ('demo-prime-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091658', demo_prime_02__satassume_ask),
+    ('demo-sign-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_sign_02__satassume_ask),
+    ('demo-sign-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091658', demo_sign_03__satassume_ask),
+    ('demo-sign-04', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_sign_04__satassume_ask),
+    ('demo-sign-05', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091658', demo_sign_05__satassume_ask),
 ]
 
 

@@ -117,11 +117,11 @@ def _fresh():
 _SETUP1 = _Setup(r'''from sympy import *
 import sympy
 import satassume.sympy_api
-''', ('satassume', '0.0.1'))
+''', ('satassume', '0.0.2'))
 
 
-# ---- case trig-acos-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185849 answered null (no verdict)
+# ---- case trig-acos-01 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091719 answered null (no verdict)
 @_in(_SETUP1)
 def trig_acos_01__satassume_ask():
     x = Symbol('x')
@@ -132,8 +132,8 @@ def trig_acos_01__satassume_ask():
     return Answer
 
 
-# ---- case trig-asin-01 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185849 answered null (declined correctly)
+# ---- case trig-asin-01 · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091719 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_asin_01__satassume_ask():
     x = Symbol('x')
@@ -144,8 +144,8 @@ def trig_asin_01__satassume_ask():
     return Answer
 
 
-# ---- case trig-asin-02 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185849 answered null (no verdict)
+# ---- case trig-asin-02 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091719 answered null (no verdict)
 @_in(_SETUP1)
 def trig_asin_02__satassume_ask():
     x = Symbol('x')
@@ -156,8 +156,8 @@ def trig_asin_02__satassume_ask():
     return Answer
 
 
-# ---- case trig-atan-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185849 answered null (no verdict)
+# ---- case trig-atan-01 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091719 answered null (no verdict)
 @_in(_SETUP1)
 def trig_atan_01__satassume_ask():
     x = Symbol('x')
@@ -168,8 +168,8 @@ def trig_atan_01__satassume_ask():
     return Answer
 
 
-# ---- case trig-double-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185849 answered null (no verdict)
+# ---- case trig-double-01 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091719 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_01__satassume_ask():
     z = Symbol('z')
@@ -180,8 +180,8 @@ def trig_double_01__satassume_ask():
     return Answer
 
 
-# ---- case trig-double-02 · expected false · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185849 answered null (no verdict)
+# ---- case trig-double-02 · expected false · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091719 answered null (no verdict)
 @_in(_SETUP1)
 def trig_double_02__satassume_ask():
     x = Symbol('x')
@@ -192,8 +192,8 @@ def trig_double_02__satassume_ask():
     return Answer
 
 
-# ---- case trig-period-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185849 answered true (solved)
+# ---- case trig-period-01 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091719 answered true (solved)
 @_in(_SETUP1)
 def trig_period_01__satassume_ask():
     z = Symbol('z')
@@ -204,8 +204,8 @@ def trig_period_01__satassume_ask():
     return Answer
 
 
-# ---- case trig-period-02 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185849 answered null (declined correctly)
+# ---- case trig-period-02 · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091719 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_02__satassume_ask():
     x = Symbol('x')
@@ -216,8 +216,8 @@ def trig_period_02__satassume_ask():
     return Answer
 
 
-# ---- case trig-period-03 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185849 answered null (declined correctly)
+# ---- case trig-period-03 · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091719 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_period_03__satassume_ask():
     x = Symbol('x')
@@ -228,8 +228,8 @@ def trig_period_03__satassume_ask():
     return Answer
 
 
-# ---- case trig-pyth-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185849 answered null (no verdict)
+# ---- case trig-pyth-01 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091719 answered null (no verdict)
 @_in(_SETUP1)
 def trig_pyth_01__satassume_ask():
     z = Symbol('z')
@@ -240,8 +240,8 @@ def trig_pyth_01__satassume_ask():
     return Answer
 
 
-# ---- case trig-shift-01 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185849 answered null (declined correctly)
+# ---- case trig-shift-01 · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091719 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_shift_01__satassume_ask():
     x = Symbol('x')
@@ -252,8 +252,8 @@ def trig_shift_01__satassume_ask():
     return Answer
 
 
-# ---- case trig-sqrt-01 · expected contingent · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185849 answered null (declined correctly)
+# ---- case trig-sqrt-01 · expected contingent · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091719 answered null (declined correctly)
 @_in(_SETUP1)
 def trig_sqrt_01__satassume_ask():
     x = Symbol('x')
@@ -264,8 +264,8 @@ def trig_sqrt_01__satassume_ask():
     return Answer
 
 
-# ---- case trig-tan-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185849 answered null (no verdict)
+# ---- case trig-tan-01 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091719 answered null (no verdict)
 @_in(_SETUP1)
 def trig_tan_01__satassume_ask():
     x = Symbol('x')
@@ -278,19 +278,19 @@ def trig_tan_01__satassume_ask():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-acos-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185849', trig_acos_01__satassume_ask),
-    ('trig-asin-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185849', trig_asin_01__satassume_ask),
-    ('trig-asin-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185849', trig_asin_02__satassume_ask),
-    ('trig-atan-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185849', trig_atan_01__satassume_ask),
-    ('trig-double-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185849', trig_double_01__satassume_ask),
-    ('trig-double-02', 'satassume-ask', 'false', 'null', 'satassume-ask-20261028-185849', trig_double_02__satassume_ask),
-    ('trig-period-01', 'satassume-ask', 'true', 'true', 'satassume-ask-20261028-185849', trig_period_01__satassume_ask),
-    ('trig-period-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185849', trig_period_02__satassume_ask),
-    ('trig-period-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185849', trig_period_03__satassume_ask),
-    ('trig-pyth-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185849', trig_pyth_01__satassume_ask),
-    ('trig-shift-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185849', trig_shift_01__satassume_ask),
-    ('trig-sqrt-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261028-185849', trig_sqrt_01__satassume_ask),
-    ('trig-tan-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185849', trig_tan_01__satassume_ask),
+    ('trig-acos-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091719', trig_acos_01__satassume_ask),
+    ('trig-asin-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091719', trig_asin_01__satassume_ask),
+    ('trig-asin-02', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091719', trig_asin_02__satassume_ask),
+    ('trig-atan-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091719', trig_atan_01__satassume_ask),
+    ('trig-double-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091719', trig_double_01__satassume_ask),
+    ('trig-double-02', 'satassume-ask', 'false', 'null', 'satassume-ask-20261101-091719', trig_double_02__satassume_ask),
+    ('trig-period-01', 'satassume-ask', 'true', 'true', 'satassume-ask-20261101-091719', trig_period_01__satassume_ask),
+    ('trig-period-02', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091719', trig_period_02__satassume_ask),
+    ('trig-period-03', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091719', trig_period_03__satassume_ask),
+    ('trig-pyth-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091719', trig_pyth_01__satassume_ask),
+    ('trig-shift-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091719', trig_shift_01__satassume_ask),
+    ('trig-sqrt-01', 'satassume-ask', 'contingent', 'null', 'satassume-ask-20261101-091719', trig_sqrt_01__satassume_ask),
+    ('trig-tan-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091719', trig_tan_01__satassume_ask),
 ]
 
 

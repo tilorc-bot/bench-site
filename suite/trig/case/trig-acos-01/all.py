@@ -117,7 +117,7 @@ def _fresh():
 _SETUP1 = _Setup(r'''from sympy import *
 import sympy
 import satassume.sympy_api
-''', ('satassume', '0.0.1'))
+''', ('satassume', '0.0.2'))
 
 # setup 2 (the harness's warm-up, version capture and cache clearing left out)
 _SETUP2 = _Setup(r'''from sympy import *
@@ -155,8 +155,8 @@ Settings = f'{sympy_extras.settings.settings!r}, time_scale={sympy_extras.settin
 # not Q.eq: in SymPy 1.14 ask(Q.eq(x**2, x), Q.real(x)) is wrongly False
 
 
-# ---- case trig-acos-01 · expected true · system satassume-ask (satassume 0.0.1)
-# the run satassume-ask-20261028-185849 answered null (no verdict)
+# ---- case trig-acos-01 · expected true · system satassume-ask (satassume 0.0.2)
+# the run satassume-ask-20261101-091719 answered null (no verdict)
 @_in(_SETUP1)
 def trig_acos_01__satassume_ask():
     x = Symbol('x')
@@ -181,7 +181,7 @@ def trig_acos_01__satrefine_refine():
 
 
 # ---- case trig-acos-01 · expected true · system satrefine-simplify (satsimp 0.1.0)
-# the run satrefine-simplify-20261028-185851 answered null (no verdict)
+# the run satrefine-simplify-20261101-091720 answered null (no verdict)
 @_in(_SETUP2)
 def trig_acos_01__satrefine_simplify():
     x = Symbol('x')
@@ -232,7 +232,7 @@ def trig_acos_01__sympy_ask():
 
 
 # ---- case trig-acos-01 · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261028-185929 answered null (no verdict)
+# the run sympy-satask-20261101-091757 answered null (no verdict)
 @_in(_SETUP4)
 def trig_acos_01__sympy_satask():
     x = Symbol('x')
@@ -269,7 +269,7 @@ def trig_acos_01__sympy_simplify():
 
 
 # ---- case trig-acos-01 · expected true · system sympy-extras-ask (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-ask-20261028-185855 answered null (no verdict)
+# the run sympy-extras-ask-20261101-091723 answered null (no verdict)
 @_in(_SETUP5)
 def trig_acos_01__sympy_extras_ask():
     x = Symbol('x')
@@ -282,7 +282,7 @@ def trig_acos_01__sympy_extras_ask():
 
 
 # ---- case trig-acos-01 · expected true · system sympy-extras-refine (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-refine-20261028-185906 answered null (no verdict)
+# the run sympy-extras-refine-20261101-091734 answered null (no verdict)
 @_in(_SETUP5)
 def trig_acos_01__sympy_extras_refine():
     x = Symbol('x')
@@ -295,7 +295,7 @@ def trig_acos_01__sympy_extras_refine():
 
 
 # ---- case trig-acos-01 · expected true · system sympy-extras-simplify (sympy-extras 0.0.3 (commit 2d60199620ac))
-# the run sympy-extras-simplify-20261028-185917 answered null (no verdict)
+# the run sympy-extras-simplify-20261101-091745 answered null (no verdict)
 @_in(_SETUP5)
 def trig_acos_01__sympy_extras_simplify():
     x = Symbol('x')
@@ -309,18 +309,18 @@ def trig_acos_01__sympy_extras_simplify():
 
 # (case, system, expected, the stored run's answer, that run, its function)
 CASES = [
-    ('trig-acos-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261028-185849', trig_acos_01__satassume_ask),
+    ('trig-acos-01', 'satassume-ask', 'true', 'null', 'satassume-ask-20261101-091719', trig_acos_01__satassume_ask),
     ('trig-acos-01', 'satrefine-refine', 'true', 'null', 'satrefine-refine-20261101-090347', trig_acos_01__satrefine_refine),
-    ('trig-acos-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261028-185851', trig_acos_01__satrefine_simplify),
+    ('trig-acos-01', 'satrefine-simplify', 'true', 'null', 'satrefine-simplify-20261101-091720', trig_acos_01__satrefine_simplify),
     ('trig-acos-01', 'satsimp-trigsimp', 'true', 'true', 'satsimp-trigsimp-20261028-185853', trig_acos_01__satsimp_trigsimp),
     ('trig-acos-01', 'sympy-auto', 'true', 'null', 'sympy-auto-20261101-090340', trig_acos_01__sympy_auto),
     ('trig-acos-01', 'sympy-ask', 'true', 'null', 'sympy-ask-20261101-090341', trig_acos_01__sympy_ask),
-    ('trig-acos-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261028-185929', trig_acos_01__sympy_satask),
+    ('trig-acos-01', 'sympy-satask', 'true', 'null', 'sympy-satask-20261101-091757', trig_acos_01__sympy_satask),
     ('trig-acos-01', 'sympy-refine', 'true', 'null', 'sympy-refine-20261101-090344', trig_acos_01__sympy_refine),
     ('trig-acos-01', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261101-090345', trig_acos_01__sympy_simplify),
-    ('trig-acos-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261028-185855', trig_acos_01__sympy_extras_ask),
-    ('trig-acos-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261028-185906', trig_acos_01__sympy_extras_refine),
-    ('trig-acos-01', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261028-185917', trig_acos_01__sympy_extras_simplify),
+    ('trig-acos-01', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261101-091723', trig_acos_01__sympy_extras_ask),
+    ('trig-acos-01', 'sympy-extras-refine', 'true', 'null', 'sympy-extras-refine-20261101-091734', trig_acos_01__sympy_extras_refine),
+    ('trig-acos-01', 'sympy-extras-simplify', 'true', 'null', 'sympy-extras-simplify-20261101-091745', trig_acos_01__sympy_extras_simplify),
 ]
 
 
