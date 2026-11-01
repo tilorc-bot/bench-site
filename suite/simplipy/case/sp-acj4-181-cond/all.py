@@ -235,7 +235,7 @@ def sp_acj4_181_cond__sympy_ask():
 
 
 # ---- case sp-acj4-181-cond · expected true · system sympy-satask (sympy 1.14.0)
-# the run sympy-satask-20261028-193021 answered null (no verdict)
+# the run sympy-satask-20261101-094904 answered null (no verdict)
 @_in(_SETUP4)
 def sp_acj4_181_cond__sympy_satask():
     x = Symbol('x')
@@ -318,7 +318,7 @@ CASES = [
     ('sp-acj4-181-cond', 'satsimp-trigsimp', 'true', 'null', 'satsimp-trigsimp-20261028-190021', sp_acj4_181_cond__satsimp_trigsimp),
     ('sp-acj4-181-cond', 'sympy-auto', 'true', 'null', 'sympy-auto-20261101-090919', sp_acj4_181_cond__sympy_auto),
     ('sp-acj4-181-cond', 'sympy-ask', 'true', 'null', 'sympy-ask-20261101-090925', sp_acj4_181_cond__sympy_ask),
-    ('sp-acj4-181-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261028-193021', sp_acj4_181_cond__sympy_satask),
+    ('sp-acj4-181-cond', 'sympy-satask', 'true', 'null', 'sympy-satask-20261101-094904', sp_acj4_181_cond__sympy_satask),
     ('sp-acj4-181-cond', 'sympy-refine', 'true', 'null', 'sympy-refine-20261101-091114', sp_acj4_181_cond__sympy_refine),
     ('sp-acj4-181-cond', 'sympy-simplify', 'true', 'null', 'sympy-simplify-20261101-091409', sp_acj4_181_cond__sympy_simplify),
     ('sp-acj4-181-cond', 'sympy-extras-ask', 'true', 'null', 'sympy-extras-ask-20261101-091850', sp_acj4_181_cond__sympy_extras_ask),
